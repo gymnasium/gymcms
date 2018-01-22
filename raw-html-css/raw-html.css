@@ -1,0 +1,44 @@
+/* Raw HTML XBlock style overrides */
+
+/* `h2` */
+
+.xmodule_display.xmodule_HtmlModule h2 {
+  font-weight: 900;
+  font-size: 2.125em;
+  line-height: 1.2;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+
+.xmodule_display.xmodule_HtmlModule p + h2 {
+  margin-top: 1em;
+}
+
+/* `h2 a.download` */
+
+.xmodule_display.xmodule_HtmlModule h2 a.download {
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.xmodule_display.xmodule_HtmlModule h2 a.download:after {
+  display: block;
+  content: "Download ⇣";
+  font-size: 60%;
+  color: #f8971d;
+  margin-top: -.25em;
+  margin-bottom: -.4em;
+}
+
+.xmodule_display.xmodule_HtmlModule h2 a.download:hover:after {
+  text-decoration: underline;
+}
+
+/* `p` */
+
+section.course-content .xmodule_display.xmodule_HtmlModule p {
+  font: 1.2em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: .75em 0;
+}

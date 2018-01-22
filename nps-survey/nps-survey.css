@@ -1,0 +1,50 @@
+#gym-nps-survey {
+  overflow: hidden !important;
+}
+
+#gym-nps-survey header {
+  position: relative;
+  z-index: 1;
+  margin-left: 20px;
+}
+
+#gym-nps-survey h1 {
+  font: bold 1.8em/1.1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+}
+
+#gym-nps-form {
+  position: relative;
+  top: -16px;
+  margin-right: -16px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+
+.smcx-iframe-form {
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+@media (min-width: 22em) {
+
+  #gym-nps-survey {
+    max-width: 640px;
+  }
+
+  #gym-nps-form {
+    height: 450px;
+  }
+
+}
+
+.smcx-widget {
+  border: 0 !important;
+}
+
+.smcx-widget-footer {
+  visibility: hidden !important;
+}
