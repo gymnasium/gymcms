@@ -1,0 +1,11 @@
+# Setup
+title: Gymnasium Static Content
+baseurl:
+
+exclude:
+  - 'docker-compose.yml'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'README.md'
+
+repository: gymnasium/gymstatic
