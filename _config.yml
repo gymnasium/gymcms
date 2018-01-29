@@ -8,4 +8,4 @@ exclude:
   - 'Gemfile.lock'
   - 'README.md'
 
-repository: gymnasium/gymstatic
+repository: gymnasium/gymcms
