@@ -1,5 +1,5 @@
 {% if site.github != true %}
-- hostname: `{{ site.url }}`
+- hostname: {% if site.url !='' %}`{{ site.url }}`{% else %}`NULL` {% endif %}
 - timezone: `{{ site.timezone }}`
 - build time: `{{ site.time }}`
 - build environment: `{{ jekyll.environment }}`
