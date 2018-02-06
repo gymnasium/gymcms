@@ -2,7 +2,7 @@
 - hostname: `{{ site.url }}`
 - timezone: `{{ site.timezone }}`
 - build time: `{{ site.time }}`
-- environment: `{{ jekyll.environment }}`
+- build environment: `{{ jekyll.environment }}`
 
 
 {% else %}
