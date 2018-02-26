@@ -3,6 +3,12 @@ title: Gymnasium Static Content
 baseurl:
 timezone: America/New_York
 
+
+collections:
+    events:
+        output: true
+        permalink: /static/events/
+        
 # Building
 
 exclude:
