@@ -1,7 +1,11 @@
 ---
 layout: raw
 permalink: /static/home/hero/
-current_course_promo:
-current_event_promo:
+live_coding: true
+current_promo: hero-fwl-live-event.html
 ---
-{% include hero_livecoding.html %}
+{% if page.live_coding == true %}
+{% include hero-livecoding.html %}
+{% else %}
+{% include {{page.current_promo}} %}
+{% endif %}
