@@ -28,6 +28,16 @@
   margin-left: 0;
   }
 
+#live-coding .home .container-fluid:nth-of-type(odd) * {
+  color: white;
+}
+#live-coding .home .container-fluid:nth-of-type(odd) {
+  background-color: transparent;
+}
+#live-coding .home .container-fluid {
+  padding-bottom: 0em;
+}
+
 @media (min-width: 36em) {
 
 #live-coding header h2,
