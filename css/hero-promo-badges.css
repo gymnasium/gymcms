@@ -58,7 +58,7 @@ a.gym-button-shrink-wrap {
 
 .hero-promo {
   position: relative;
-  padding: 2.5% 5%;
+  padding: 2.5em 5%;
   overflow: hidden;
   }
 
@@ -71,7 +71,6 @@ a.gym-button-shrink-wrap {
   position: relative;
   left: -7.6em;
   padding: 0 2.4em;
-  !border: 1px solid #000;
   margin: 0 auto;
   }
 
