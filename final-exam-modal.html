@@ -64,7 +64,7 @@ permalink: /static/final-exam-modal/
     color: #fff;
     letter-spacing: .025em;
     vertical-align: normal;
-    background: #a6a6a6;
+    background: #f8971d;
     padding: 1em 2em;
     border: 0;
     border-radius: 2px;
@@ -76,6 +76,10 @@ permalink: /static/final-exam-modal/
     -moz-appearance: none;
     appearance: none;
     }
+
+  .gym-button-primary:hover {
+    background: #a6a6a6;
+  }
 
   a.gym-button-secondary {
     color: #333;
@@ -95,11 +99,11 @@ permalink: /static/final-exam-modal/
   <div class="message hidden passed_modal final-exam-status" aria-hidden="true" id="course_passed_message">
     <h2>Congratulations!</h2>
     <p>Congrats on completing the course and passing the final exam.</p>
-    <p><strong>You really know your stuff!</strong> Now show off to your network by sharing your badge on LinkedIn. You can access it right from your <a href="#">Dashboard</a>.</p>
-    <a class="gym-button gym-button-primary" href="#">View Your Badge</a>
+    <p><strong>You really know your stuff!</strong> Now show off to your network by sharing your badge on LinkedIn. You can access it right from your <a href="/dashboard">Dashboard</a>.</p>
+    <a class="gym-button-primary" href="/dashboard">View Your Badge</a>
     <div class="survey">
       <p>Before you go, would you mind taking a sec to fill out our quick survey? Your feedback will help shape future courses and let us know how <em>we’re</em> doing.</p>
-      <a class="gym-button gym-button-secondary" href="#">Take Our Survey</a>
+      <a class="gym-button-secondary" href="https://www.surveymonkey.com/s/JYJPMSS" target="_blank">Take Our Survey</a>
     </div>
   </div>
 
