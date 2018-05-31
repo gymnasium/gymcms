@@ -2,73 +2,166 @@
 layout: raw
 permalink: /static/final-exam-modal/
 ---
-<div class="passed_modal hidden final-exam-status" aria-hidden="true" id="course_passed_message">
-  <div class="row">
-    <div class="col-md-12">
-      <br />
-      <h2>Congratulations!</h2>
-      <p>Congratulations on completing the course and passing the final exam with flying colors. You really know your stuff!</p>
+<style>
+  /* --- links / text/ a --- */
 
-      <p>Show off to your friends and colleagues by downloading your Certificate of Excellence from your <a href="/dashboard">Dashboard</a>.</p>
+  a {
+    color: #f8971d;
+    }
 
+  a:hover {
+    text-decoration: underline;
+    }
 
-      <div class="survey">
-        <p>Before you head on to your next achievement, could you please take a moment to share your thoughts with us on a quick survey? Your feedback will help shape our future course offerings and let us know how <b>we’re</b> doing.</p>
+  a:focus,
+  a:active {
+    border-bottom-color: #444;
+    }
+
+  .message {
+    color: #333;
+    text-align: center;
+    padding: 1.8em;
+    border: 1.2em solid #444;
+    border-radius: 2px;
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
+    }
+
+  .message h2 {
+    font: 900 1.8em/1.1 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    text-align: center;
+    margin-bottom: .8em;
+    }
+
+  .message p {
+    font-family: brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+    }
+
+  .message h2 + p {
+    font-size: 1.4em;
+    }
+
+  .message p {
+    text-align: left;
+    margin-top: .6em;
+    }
+
+  .message hr {
+    height: 0;
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin-top: 1.4em;
+    }
+
+  .message .survey {
+    background: #ebebeb;
+    padding: 1.2em;
+    border: 1px solid #ccc;
+    margin-top: 1.4em;
+    }
+
+  .message .survey p {
+    margin-top: 0;
+    }
+
+  .message .gym-button {
+    margin-top: 1.2em;
+    }
+
+  .gym-button {
+    display: inline-block;
+    font: bold 1.2em/1 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+    color: #fff;
+    letter-spacing: .025em;
+    vertical-align: normal;
+    background: #a6a6a6;
+    padding: 1em 2em;
+    border: 0;
+    border-radius: 2px;
+    margin-top: .5em;
+    margin-right: .84em;
+    margin-bottom: .5em;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }
+
+  a.gym-button-secondary {
+    color: #333;
+    background: none;
+    border: 2px solid #333;
+    }
+
+  a.gym-button-secondary:hover,
+  a.gym-button-secondary:focus {
+    color: #fff;
+    border: 2px solid #333;
+    }
+
+  .gym-button:hover {
+    text-decoration: none;
+    background: #a6a6a6;
+    border: 0;
+    }
+
+  .gym-button {
+    background: #f8971d;
+    }
+
+</style>
+
+<main role="main">
+  <div class="message hidden passed_modal final-exam-status" aria-hidden="true" id="course_passed_message">
+    <h2>Congratulations!</h2>
+    <p>Congrats on completing the course and passing the final exam.</p>
+    <p><strong>You really know your stuff!</strong> Now show off to your network by sharing your badge on LinkedIn. You can access it right from your <a href="#">Dashboard</a>.</p>
+    <a class="gym-button" href="#">View Your Badge</a>
+    <div class="survey">
+      <p>Before you go, would you mind taking a sec to fill out our quick survey? Your feedback will help shape future courses and let us know how <em>we’re</em> doing.</p>
+      <a class="gym-button gym-button-secondary" href="#">Take Our Survey</a>
+    </div>
+  </div>
+
+  <div class="message hidden try_again_modal final-exam-status GYM_SHORT" aria-hidden="true">
+    <h2>YOU'RE CLOSE!</h2>
+    <p>We're thrilled you’ve made it this far. You’ve scored a <span class="exam-score-container"></span> on the exam. To pass you need to get greater than an 80.</p>
+
+    <p>Lucky for you, you've still got one more chance to pass. This would be a great time to go back and review the course material. Take a look at things you may have struggled with and have another go when you feel prepared. </p>
+
+    <p>Good luck!</p>
+  </div>
+
+  <div class="message hidden try_again_modal final-exam-status FULL_COURSE" aria-hidden="true">
+    <h2>YOU'RE CLOSE!</h2>
+    <p>We're thrilled you’ve made it this far. You’ve scored a <span class="exam-score-container"></span> on the exam. To pass you need to get greater than an 80.</p>
+
+    <p>Lucky for you, you've still got one more chance to pass. This would be a great time to go back and review the course material. Take a look at things you may have struggled with and have another go when you feel prepared. </p>
+
+    <p>Good luck!</p>
+  </div>
+
+  <div class="message hidden failed_modal final-exam-status" aria-hidden="true">
+    <div class="row">
+      <div class="col-md-12">
+        <br />
+        <h2>AW, SHUCKS.</h2>
+        <p>Don’t worry, you deserve a lot of credit for finishing the course! Only 1 in 10 students who takes an online course like this actually ever finishes, so your commitment puts you in an elite crowd.</p>
+  
+        <div class="survey">
+          <p>We’re thrilled you’ve joined us and would love your feedback to make our courses even better. If you could take a moment to share your thoughts with us on a quick survey, it would help shape our future offerings.</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <a class="gym-button text-center col-md-2 col-md-offset-5" href="https://www.surveymonkey.com/s/JYJPMSS" target="_blank">
-      Take Our Survey
-    </a>
-  </div>
-</div>
-
-<div class="try_again_modal hidden final-exam-status GYM_SHORT" aria-hidden"true">
-  <div class="row">
-    <div class="col-md-12">
-      <br />
-      <h2>YOU'RE CLOSE!</h2>
-      <p>We're thrilled you’ve made it this far. You’ve scored a <span class="exam-score-container"></span> on the exam. To pass you need to get greater than an 80.</p>
-
-      <p>Lucky for you, you've still got one more chance to pass. This would be a great time to go back and review the course material. Take a look at things you may have struggled with and have another go when you feel prepared. </p>
-
-      <p>Good luck!</p>
-
+    <div class="row">
+      <a class="gym-button text-center col-md-2 col-md-offset-5" href="https://www.surveymonkey.com/s/JYJPMSS" target="_blank">
+        Take Our Survey
+      </a>
     </div>
   </div>
-</div>
-
-<div class="try_again_modal hidden final-exam-status FULL_COURSE" aria-hidden"true">
-  <div class="row">
-    <div class="col-md-12">
-      <br />
-      <h2>YOU'RE CLOSE!</h2>
-      <p>We're thrilled you’ve made it this far. You’ve scored a <span class="exam-score-container"></span> on the exam. To pass you need to get greater than an 85.</p>
-
-      <p>Lucky for you, you've still got one more chance to pass. This would be a great time to go back and review the course material. Take a look at things you may have struggled with and have another go when you feel prepared. </p>
-
-      <p>Good luck!</p>
-
-    </div>
-  </div>
-</div>
-
-<div class="failed_modal hidden final-exam-status" aria-hidden="true">
-  <div class="row">
-    <div class="col-md-12">
-      <br />
-      <h2>AW, SHUCKS.</h2>
-      <p>Don’t worry, you deserve a lot of credit for finishing the course! Only 1 in 10 students who takes an online course like this actually ever finishes, so your commitment puts you in an elite crowd.</p>
-
-      <div class="survey">
-        <p>We’re thrilled you’ve joined us and would love your feedback to make our courses even better. If you could take a moment to share your thoughts with us on a quick survey, it would help shape our future offerings.</p>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <a class="gym-button text-center col-md-2 col-md-offset-5" href="https://www.surveymonkey.com/s/JYJPMSS" target="_blank">
-      Take Our Survey
-    </a>
-  </div>
-</div>
+</main>
