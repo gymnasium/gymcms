@@ -143,8 +143,17 @@
 /* --- about / featured courses --- */
 
 .about-featured-courses {
-  margin: .6em 7% 0;
+  margin: .6em 5% 0;
   }
+
+@media (min-width: 75em) {
+
+.about-featured-courses {
+  margin-left: 10%;
+  margin-right: 10%;
+  }
+
+}
 
 .about-featured-courses p {
   font: bold 1.6em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
