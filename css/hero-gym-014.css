@@ -50,7 +50,7 @@
 
 .ux-design p a {
   padding-bottom: 2px;
-  border-bottom: 2px solid #f8971d;
+  border-bottom: 2px solid #f8971d !important; /* dangerous override */
 }
 
 .ux-design p a:hover,
