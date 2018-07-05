@@ -85,7 +85,7 @@
   padding: 3.4em;
   border: 1em solid #fff;
   border-radius: 50%;
-  margin: 1em auto;
+  margin: 1em auto .8em;
 }
 
 #atomic-design-atom::before {
@@ -125,6 +125,7 @@
   width: auto;
   max-width: 100%;
   height: auto;
+  min-height: 11.125em;
   vertical-align: middle;
   border-radius: 50%;
 }
