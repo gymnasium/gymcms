@@ -2,14 +2,6 @@ version: '3.2'
 services:
   jekyll:
     image: jekyll/jekyll:latest
-
-    # Build for staging
-    #command: jekyll build --config _config.yml
-
-    # Build for production
-    #command: jekyll build --config _production_config.yml
-
-    # Serve locally for development
     command: jekyll serve --watch --force_polling
     ports:
         - 4000:4000
