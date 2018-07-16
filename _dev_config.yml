@@ -1,9 +1,9 @@
 # Setup
 title: Gymnasium Static Content
-url: https://staging.gymcms.xyz
+url: https://dev--gymcms.netlify.com
 baseurl: /
 timezone: America/New_York
-environment: staging
+environment: dev
 
 
 collections:
