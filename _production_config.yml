@@ -1,0 +1,42 @@
+# Setup
+title: Gymnasium Static Content
+url: https://gymcms.xyz
+baseurl: /
+timezone: America/New_York
+environment: production
+
+collections:
+    events:
+        output: true
+        permalink: /static/events/
+
+# Building
+
+exclude:
+  - 'docker-compose.yml'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'README.md'
+
+repository: gymnasium/gymcms
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+
+# Serving (local)
+detach: false
+port: 4000
+host: 127.0.0.1
+baseurl: ''
+
+# Markdown Processing
+kramdown:
+  auto_ids:       true
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
+  show_warnings:  false
