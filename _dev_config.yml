@@ -1,6 +1,6 @@
 # Setup
 title: Gymnasium Static Content
-url: https://dev--gymcms.netlify.com/
+url: https://dev--gymcms.netlify.com
 baseurl: /
 timezone: America/New_York
 environment: dev
