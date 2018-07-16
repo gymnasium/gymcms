@@ -1,0 +1,12 @@
+# dev branch build
+# https://dev--gymcms.netlify.com/
+[context.dev]
+  command = "JEKYLL_ENV=development jekyll build --config _dev_config.yml"
+# staging branch build
+# https://staging.gymcms.xyz/
+[context.staging]
+  command = "JEKYLL_ENV=staging jekyll build --config _config.yml"
+# production branch build
+# https://gymcms.xyz/
+[context.production]
+  command = "JEKYLL_ENV=production jekyll build --config _production_config.yml"
