@@ -5,7 +5,7 @@
 # staging branch build
 # https://staging.gymcms.xyz/
 [context.staging]
-  command = "JEKYLL_ENV=stage jekyll build --config _config.yml"
+  command = "JEKYLL_ENV=development jekyll build --config _config.yml"
 # production branch build
 # https://gymcms.xyz/
 [context.production]
