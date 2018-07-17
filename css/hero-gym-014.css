@@ -1,36 +1,3 @@
-/* --- charity banner / raices-texas --- */
-
-.hero-message {
-  background-color: #f4f9f8;
-  padding: 1.2em 5% 1.3em;
-}
-
-.hero-message .container {
-  width: auto;
-  max-width: 80em;
-}
-
-.hero-message h2,
-.hero-message p {
-  font: normal 1em/1.45 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.hero-message h2 {
-  font-weight: bold;
-  text-transform: none;
-  letter-spacing: 0;
-  margin-bottom: .2em;
-}
-
-.hero-message code {
-  font-size: inherit;
-  color: inherit;
-  padding: 0;
-  background: none;
-}
-
 /* --- hero banner / gym-014 / atomic design --- */
 
 .ux-design {
