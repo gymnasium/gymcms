@@ -1,7 +1,7 @@
 # Setup
 title: Gymnasium Static Content
 url: https://staging.gymcms.xyz
-baseurl: /
+baseurl:
 timezone: America/New_York
 environment: staging
 
@@ -24,12 +24,6 @@ repository: gymnasium/gymcms
 # Conversion
 markdown: kramdown
 highlighter: rouge
-
-# Serving (local)
-  # detach: false
-  # port: 4000
-  # host: 127.0.0.1
-  # baseurl: ''
 
 # Markdown Processing
 kramdown:
