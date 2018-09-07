@@ -12,3 +12,8 @@ This repo serves as cms for some of the static content on our Open EdX site.  Co
 - `static-pages-sidebar-content.html` appears on the right hand side of faq/about pages on thegymnasium.com.
 - `privacy-policy.html` content which appears on the [privacy policy](https://thegymnasium.com/privacy) page on thegymnasium.com.
 - `final-exam-modal.html` content which appears when the exam score is calculated.
+
+
+### Courses Page
+- `courses/full-courses-description.html` is shown on the `/courses` page as the title and description used for the full courses subheader
+- `courses/gym-shorts-description.html` is shown on the `/courses` page as the title and description used for the Gym Shorts subheader
