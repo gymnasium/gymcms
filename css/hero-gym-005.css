@@ -1,0 +1,137 @@
+---
+---
+
+.dark-mode-sketch {
+  background-color: #263441;
+  padding: 0;
+}
+
+.ux-design-text {
+  color: #5ca5a0;
+}
+
+.block {
+  display: block;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.hero-promo .container {
+  max-width: 76em;
+  padding: 1.2em 0 2.8em;
+}
+
+.hero-promo .row {
+  margin: 1.2% 5%;
+}
+
+.hero-promo header h1 {
+  color: #fff;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 34em) {
+
+  .hero-promo header h1 > .no-wrap {
+    white-space: normal;
+  }
+
+}
+
+.hero-promo figure {
+  position: relative;
+  height: 0;
+  background-color: #ebebeb;
+  padding-bottom: 42.6%;
+  border-radius: .375em;
+  margin-top: 1.8em;
+}
+
+.hero-promo img {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.hero-promo img.fragment {
+  position: absolute;
+  z-index: 0;
+  top: 7.5%;
+  height: 85%;
+  opacity: .65;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  }
+
+.hero-promo img.fragment-l {
+  left: -4%;
+  }
+
+.hero-promo img.fragment-r {
+  right: -4%;
+  }
+
+.hero-promo .cta {
+  margin-top: 1.2em;
+}
+
+@media (min-width: 48em) {
+
+  .hero-promo header {
+    overflow: hidden;
+  }
+
+  .hero-promo header h1 {
+    float: left;
+    width: 66.666666666666667%;
+  }
+
+  .hero-promo .cta {
+    float: right;
+    position: relative;
+    top: 4.05em;
+    margin-top: 0;
+  }
+
+  .hero-promo figure {
+    margin-top: 1.2em;
+  }
+
+}
+
+@media (min-width: 80em) {
+
+  .hero-promo header h1 {
+    width: auto;
+  }
+
+  .hero-promo .cta {
+    top: 1em;
+  }
+
+}
+
+a.gym-button-shrink-wrap {
+  bottom: 0;
+  width: auto !important;
+  color: #75b3af !important;
+  background-color: transparent !important;
+  border: 2px solid #75b3af !important;
+  padding: 1.2em 1.6em !important;
+  vertical-align: bottom;
+}
+
+a.gym-button-shrink-wrap:hover,
+a.gym-button-shrink-wrap:focus {
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+
