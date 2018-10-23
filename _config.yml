@@ -3,7 +3,6 @@ title: Gymnasium Static Content
 url: https://staging.gymcms.xyz
 baseurl:
 timezone: America/New_York
-environment: staging
 
 
 collections:
