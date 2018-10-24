@@ -1,0 +1,23 @@
+---
+layout: raw
+permalink: /static/jobmodule/
+---
+
+{% case jekyll.environment %}
+
+{% when "development" %}
+{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com//10"  %}
+
+{% when "staging" %}
+{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com//10"  %}
+
+{% when "production" %}
+{% assign include_url = "https://gym-jobs-microservice-prod.herokuapp.com//10"  %}
+
+{% endcase %}
+<!-- Environment: {{ jekyll.environment }} -->
+<iframe src="{{ include_url }}"
+  id="jobs-microservice-frame"
+  class="gymnasium-resizable-iframe gymnasium-jobs-microservice-iframe"
+  style="width: 1px;min-width: 100%;border:0;"
+></iframe>
