@@ -14,17 +14,22 @@
   display: block;
 }
 
+[hidden] {
+  display: none;
+}
+
 .no-wrap {
   white-space: nowrap;
 }
 
 .hero-promo .container {
   max-width: 76em;
-  padding: 1.2em 0 2.8em;
+  padding: 1.2em 0 0;
+  overflow: hidden;
 }
 
 .hero-promo .row {
-  margin: 1.2% 5%;
+  margin: 1.2% 5% 0;
 }
 
 .hero-promo header h1 {
@@ -46,14 +51,25 @@
   position: relative;
   height: 0;
   background-color: #ebebeb;
-  padding-bottom: 42.6%;
+  padding-bottom: 60%;
   border-radius: .375em;
   margin-top: 1.8em;
+  margin-left: -6%;
+  margin-right: -6%;
+  overflow: hidden;
+}
+
+.hero-promo figure::before {
+  display: block;
+  bottom: -70%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: linear-gradient(to bottom, transparent, #263441 100%);
 }
 
 .hero-promo img {
-  position: relative;
-  z-index: 1;
   display: inline-block;
   width: auto;
   max-width: 100%;
@@ -61,23 +77,84 @@
   vertical-align: middle;
 }
 
-.hero-promo img.fragment {
-  position: absolute;
-  z-index: 0;
-  top: 7.5%;
-  height: 85%;
-  opacity: .65;
-  mix-blend-mode: overlay;
-  pointer-events: none;
-  }
+.hero-promo .hero-image {
+  width: 160%;
+  max-width: none;
+  margin-left: -30%;
+}
 
-.hero-promo img.fragment-l {
-  left: -4%;
-  }
-
+.hero-promo img.fragment-l,
 .hero-promo img.fragment-r {
-  right: -4%;
+  display: none;
+}
+
+
+@media (min-width: 48em) {
+
+  .hero-promo .container {
+    padding: 1.2em 0 2.8em;
+    overflow: visible;
   }
+
+  .hero-promo .row {
+    margin: 1.2% 5%;
+  }
+
+  .hero-promo figure {
+    padding-bottom: 42.6%;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: visible;
+  }
+
+  .hero-promo figure::before {
+    display: none;
+  }
+
+  .hero-promo img {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  .hero-promo .hero-image {
+    width: auto;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .hero-promo img.fragment {
+    display: inherit;
+    position: absolute;
+    z-index: 0;
+    top: 7.5%;
+    height: 85%;
+    opacity: .65;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    }
+
+  .hero-promo img.fragment-l {
+    left: -4%;
+    }
+
+  .hero-promo img.fragment-r {
+    right: -4%;
+    }
+
+}
+
+@media (max-width: 30em) {
+
+  .dark-mode-sketch a.gym-button-secondary {
+    width: 100% !important;
+  }
+
+}
 
 .hero-promo .cta {
   margin-top: 1.2em;
@@ -92,6 +169,7 @@
   .hero-promo header h1 {
     float: left;
     width: 66.666666666666667%;
+    !border: 1px solid #fff;
   }
 
   .hero-promo .cta {
@@ -119,9 +197,8 @@
 
 }
 
-a.gym-button-shrink-wrap {
-  bottom: 0;
-  width: auto !important;
+.dark-mode-sketch a.gym-button-secondary {
+  width: auto;
   color: #75b3af !important;
   background-color: transparent !important;
   border: 2px solid #75b3af !important;
@@ -129,9 +206,9 @@ a.gym-button-shrink-wrap {
   vertical-align: bottom;
 }
 
-a.gym-button-shrink-wrap:hover,
-a.gym-button-shrink-wrap:focus {
+a.gym-button-secondary:hover,
+a.gym-button-secondary:focus,
+a.gym-button-secondary:active {
   color: #fff !important;
   border: 2px solid #fff !important;
 }
-
