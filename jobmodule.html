@@ -6,13 +6,13 @@ permalink: /static/jobmodule/
 {% case jekyll.environment %}
 
 {% when "development" %}
-{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com//10"  %}
+{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com"  %}
 
 {% when "staging" %}
-{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com//10"  %}
+{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com"  %}
 
 {% when "production" %}
-{% assign include_url = "https://gym-jobs-microservice-prod.herokuapp.com//10"  %}
+{% assign include_url = "https://gym-jobs-microservice-prod.herokuapp.com"  %}
 
 {% endcase %}
 <!-- Environment: {{ jekyll.environment }} -->
