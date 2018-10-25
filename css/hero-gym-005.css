@@ -3,7 +3,6 @@
 
 .dark-mode-sketch {
   background-color: #263441;
-  padding: 0;
 }
 
 .ux-design-text {
@@ -169,7 +168,6 @@
   .hero-promo header h1 {
     float: left;
     width: 66.666666666666667%;
-    !border: 1px solid #fff;
   }
 
   .hero-promo .cta {
