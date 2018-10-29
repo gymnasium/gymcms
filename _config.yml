@@ -6,9 +6,6 @@ timezone: America/New_York
 
 
 collections:
-    events:
-        output: true
-        permalink: /static/events/
     webinars:
         output: true
         permalink: /static/webinars

@@ -7,9 +7,9 @@ environment: development
 
 
 collections:
-    events:
+    webinars:
         output: true
-        permalink: /static/events/
+        permalink: /static/webinars/
 
 # Building
 
