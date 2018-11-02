@@ -1,0 +1,32 @@
+<svg width="574" height="488" viewBox="0 0 574 488" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>(GYM 013) 3D Modeling for Virtual Reality Creation</title>
+  <desc>An intro to Autodesk Maya for use in virtual reality productions.</desc>
+  <defs>
+    <path d="M.86809763 94l6-94H194.868098c4 21.0193682 6 36.6764048 6 46.9711096 0 10.2947049-2 22.6376683-6 37.0288904L.86809763 94z" id="a"/>
+    <path d="M4.21818182 80L0 0h227.868098C230.622699 17.9052157 232 31.2385491 232 40s-1.377301 19.4281176-4.131902 32L4.21818182 80z" id="c"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#5CA5A0" d="M0 0h574v488H0z"/>
+    <g transform="translate(305.131902 248)">
+      <mask id="b" fill="#fff">
+        <use xlink:href="#a"/>
+      </mask>
+      <use fill="#CCC" xlink:href="#a"/>
+      <path d="M.86809763 0v93.9435692H201.868098c-19.249854-29.5121156-43.934064-51.4322817-74.052632-65.7604984C97.6968985 13.8548541 58.9074248 4.46049716 11.447045 0" fill="#B7B7B7" mask="url(#b)"/>
+    </g>
+    <g transform="translate(120.131902 140)">
+      <mask id="d" fill="#fff">
+        <use xlink:href="#c"/>
+      </mask>
+      <use fill="#C9C9C9" xlink:href="#c"/>
+      <path d="M-.13190237 0l8 80H235.488093c-22.565425-25.1317814-51.501214-43.7984481-86.807367-56C113.374573 11.7984481 67.9040478 3.79844811 12.26915 0H-.13190237z" fill="#B7B7B7" mask="url(#d)"/>
+    </g>
+    <path fill="#1D2631" d="M119.99999963 140l79.99999997 46L312 248l-6 94-90.0000004-48-16-66-8 48-67.99999997-48z"/>
+    <path d="M374 230H252" stroke="#E1E1E1" stroke-width="9" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="16 28"/>
+    <path d="M244 402V234M244 236V76" stroke="#FFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="16 28"/>
+    <path d="M410 340L70.2194624 148.5602281" stroke="#EBEBEB" stroke-width="9" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="16 24"/>
+    <path fill="#1D2631" d="M200 186l112 62-6 94-90-48-16-66-8 48z"/>
+    <path fill="#1D2631" d="M120 140l80 46v38l-8 52-68-48z"/>
+    <path d="M180 230H58" stroke="#E1E1E1" stroke-width="9" stroke-linecap="round" stroke-linejoin="bevel" stroke-dasharray="16 28"/>
+  </g>
+</svg>
