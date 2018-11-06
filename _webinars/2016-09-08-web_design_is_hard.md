@@ -1,11 +1,11 @@
 ---
 event_title: "Web Design is Hard"
 event_guests: "with Jeffrey Zeldman and <span class=\"nowrap\">Aaron Gustafson</span>"
-page_title: "Live Event Recording | Gymnasium"
+page_title: "Webinar Recording | Gymnasium"
 layout: raw
 #layout: gym-event-simple
-permalink: /static/events/web_design_is_hard/
-collection: events
+permalink: /static/webinars/web_design_is_hard/
+collection: webinars
 date: 2016-09-08
 event_date: 2016-09-21
 event_time: "2PM EDT"
@@ -23,5 +23,5 @@ video: true
 webinar_ID:
 video_ID: HiuLq8FAk0Q
 ---
-# Live Event Placeholder
+# Live Webinar Placeholder
 ## {{ page.event_title }}
