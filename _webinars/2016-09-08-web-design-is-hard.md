@@ -4,7 +4,7 @@ event_guests: "with Jeffrey Zeldman and <span class=\"nowrap\">Aaron Gustafson</
 page_title: "Webinar Recording | Gymnasium"
 layout: raw
 #layout: gym-event-simple
-permalink: /static/webinars/web_design_is_hard/
+permalink: /static/webinars/web-design-is-hard/
 collection: webinars
 date: 2016-09-08
 event_date: 2016-09-21
