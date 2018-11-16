@@ -1,0 +1,27 @@
+---
+layout: default
+permalink: tests/file-index
+---
+
+<h3>site.pages</h3>
+<ul>
+{% for page in site.pages %}
+<li><code> <a href="{{page.url | absolute_url }}">{{page.url}}</a> </code></li>
+{% endfor %}
+</ul>
+
+<h3>site.static_files</h3>
+<ul>
+{% for staticpage in site.static_files %}
+<li><code> <a href="{{staticpage.path}}">{{staticpage.path}}</a> </code></li>
+{% endfor %}
+</ul>
+
+<h3>site.static_files[images]</h3>
+<ul>
+{% for staticpage in site.static_files %}
+{% if staticpage.extname == ".jpg" or staticpage.extname == ".png" or staticpage.extname == ".gif" or staticpage.extname == ".svg"%}
+<li><code> <a href="{{staticpage.path}}">{{staticpage.path}}</a> </code></li>
+{% endif %}
+{% endfor %}
+</ul>
