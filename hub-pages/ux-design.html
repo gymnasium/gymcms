@@ -3,12 +3,25 @@ layout: raw
 permalink: /static/ux-design/
 ---
 
-<iframe src="https://gym-jobs-microservice-staging.herokuapp.com/table"
+<h1>Gymnasium for UX Designers</h1>
+<p>This is a placeholder for the UX Design landing page.</p>
+
+
+{% case jekyll.environment %}
+
+{% when "development" %}
+{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com/table?major_segment=03&minor_segment=20" %}
+
+{% when "staging" %}
+{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com/table?major_segment=03&minor_segment=20" %}
+
+{% when "production" %}
+{% assign include_url = "https://gym-jobs-microservice-prod.herokuapp.com/table?major_segment=03&minor_segment=20" %}
+
+{% endcase %}
+<!-- Environment: {{ jekyll.environment }} -->
+<iframe src="{{ include_url }}"
   id="jobs-microservice-frame"
   class="gymnasium-resizable-iframe gymnasium-jobs-microservice-iframe"
   style="width: 1px;min-width: 100%;border:0;"
 ></iframe>
-
-
-<h1>Gymnasium for UX Designers</h1>
-<p>This is a placeholder for the UX Design landing page.</p>
