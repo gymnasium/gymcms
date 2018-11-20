@@ -2,20 +2,3 @@
 layout: raw
 permalink: /static/system-status/
 ---
-<style>
-  main.course .hero-banner img {
-    max-width: 100%;
-  }
-</style>
-
-<script>
-  $(function() {
-    // track an event for each view of a course page
-    var courseNum = $('#__course_number__').text();
-    if (courseNum.length > 0) {
-      if (typeof Intercom === 'function') {
-        Intercom('trackEvent', 'visited-gym-' + courseNum);
-      }
-    }
-  })
-</script>
