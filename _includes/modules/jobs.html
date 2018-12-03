@@ -1,33 +1,51 @@
 
 {%- comment -%}
+  Check to see that this include was called with a major segment
+  @@todo: Needs a sensible default
+{%- endcomment -%}
 
+{% if include.major != null %}
+  {% assign major_segment = include.major %}
+{% else %}
+  {% assign major_segment = '00000' %}
+{% endif %}
 
-To Do:
-Set defaults in case this include is called without the correct argumnents
+{%- comment -%}
+  Check to see that this include was called with a minor segment
+  @@todo: Needs a sensible default
+{%- endcomment -%}
 
+{% if include.minor != null %}
+  {% assign minor_segment = include.minor %}
+{% else %}
+  {% assign minor_segment = '00000' %}
+{% endif %}
 
+{%- comment -%}
+  Assemble the URL for the correct job module
 {%- endcomment -%}
 
 {%- capture url_args -%}
-?major_segment={{ include.major }}&minor_segment={{ include.minor }}
+?major_segment={{ major_segment }}&minor_segment={{ minor_segment }}
 {%- endcapture -%}
 
 {% case jekyll.environment %}
 
-{% when "development" %}
-{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com/table" %}
+    {% when "development" %}
+    {% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com/table" %}
 
-{% when "staging" %}
-{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com/table" %}
+    {% when "staging" %}
+    {% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com/table" %}
 
-{% when "production" %}
-{% assign include_url = "https://gym-jobs-microservice-prod.herokuapp.com/table" %}
+    {% when "production" %}
+    {% assign include_url = "https://gym-jobs-microservice-prod.herokuapp.com/table" %}
 
 {% endcase %}
+
 <!-- Environment: {{ jekyll.environment }} -->
 <!-- Args: {{ url_args }} -->
-<!-- Major Segment: {{ include.major }} -->
-<!-- Minor Segment: {{ include.minor }} -->
+<!-- Major Segment: {{ major_segment }} -->
+<!-- Minor Segment: {{ minor_segment }} -->
 <iframe src="{{ include_url }}{{ url_args }}"
   id="jobs-microservice-frame"
   class="gymnasium-resizable-iframe gymnasium-jobs-microservice-iframe"
