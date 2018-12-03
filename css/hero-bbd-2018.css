@@ -43,6 +43,24 @@
   letter-spacing: .05em;
 }
 
+.blue-beanie-day header s {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+.blue-beanie-day header s:after {
+  display: inline-block;
+  position: absolute;
+  top: 54%;
+  left: -11.5%;
+  content: "";
+  width: 120%;
+  border-top: .15em solid #f8971d;
+  margin-top: -.15em;
+  transform: rotate(10deg);
+}
+
 .blue-beanie-day header p {
   font: normal 1em/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
@@ -72,30 +90,25 @@
 @keyframes sway {
 
   0% {
-    top: 0;
     left: 0;
   }
 
   20% {
-    top: -2.5%;
     left: 7.5%;
     max-width: 68%;
   }
 
   50% {
-    top: 0;
     left: 0;
     max-width: 66.666666666666667%;
   }
 
   80% {
-    top: -2.5%;
     left: -7.5%;
     max-width: 68%;
   }
 
   100% {
-    top: 0;
     left: 0;
     max-width: 66.666666666666667%;
   }
