@@ -11,7 +11,7 @@
 
 .webinar-12-2018 {
   position: relative;
-  background: #2C9959 url("{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w.png") no-repeat center center;
+  background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w.png") no-repeat center center;
   background-size: cover;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -26,7 +26,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #2C9959 url("{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-64px.png") no-repeat center center;
+  background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-64px.png") no-repeat center center;
   background-size: cover;
   animation: fade 6s ease-in-out 3s forwards;
 }
@@ -34,29 +34,29 @@
 @keyframes fade {
 
   0% {
-    background: #2C9959 url("{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-64px.png") no-repeat center center;
+    background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-64px.png") no-repeat center center;
   }
 
   20% {
-    background: #2C9959 url("{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-48px.png") no-repeat center center;
+    background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-48px.png") no-repeat center center;
   }
 
   40% {
-    background: #2C9959 url("{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-48px.png") no-repeat center center;
+    background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-48px.png") no-repeat center center;
   }
 
   60% {
-    background: #2C9959 url("{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
+    background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
     opacity: 1;
   }
 
   80% {
-    background: #2C9959 url("{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
+    background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
     opacity: .5;
   }
 
   100% {
-    background: #2C9959 url("{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
+    background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
     opacity: 0;
   }
 
