@@ -1,0 +1,135 @@
+---
+---
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.webinar-12-2018 {
+  position: relative;
+  background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w.png") no-repeat center center;
+  background-size: cover;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  overflow: hidden;
+}
+
+.webinar-12-2018::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-64px.png") no-repeat center center;
+  background-size: cover;
+  animation: fade 6s ease-in-out 3s forwards;
+}
+
+@keyframes fade {
+
+  0% {
+    background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-64px.png") no-repeat center center;
+  }
+
+  20% {
+    background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-48px.png") no-repeat center center;
+  }
+
+  40% {
+    background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-48px.png") no-repeat center center;
+  }
+
+  60% {
+    background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
+    opacity: 1;
+  }
+
+  80% {
+    background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
+    opacity: .5;
+  }
+
+  100% {
+    background: #2C9959 url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
+    opacity: 0;
+  }
+
+}
+
+.webinar-12-2018 .content {
+  font-size: 114.2857142857143%;
+}
+
+.webinar-12-2018 header {
+  position: relative;
+  z-index: 1;
+  max-width: 40em;
+  padding: 15px 15px 2.8em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.webinar-12-2018 header h1,
+.webinar-12-2018 header h2,
+.webinar-12-2018 header h3,
+.webinar-12-2018 header p {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.webinar-12-2018 header h1 {
+  font-size: 2.5em;
+  color: #fff;
+  margin-top: -.05em;
+}
+
+.webinar-12-2018 header h2,
+.webinar-12-2018 header h3 {
+  font: 900 1.6em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+  letter-spacing: .05em;
+  margin-bottom: .8em;
+}
+
+.webinar-12-2018 header p {
+  font: normal 1em/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+  margin-top: 1.4em;
+  margin-bottom: 1.4em;
+}
+
+.webinar-12-2018 header p.presenters {
+  font: bold 1.6em/1.6 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #e1e1e1;
+  margin-top: .6em;
+  margin-bottom: .6em;
+}
+
+.webinar-12-2018 .cta {
+  text-align: center;
+  margin-top: 1.6em;
+}
+
+.webinar-12-2018 a.gym-button-secondary {
+  width: auto;
+  color: #fff !important;
+  background-color: transparent !important;
+  border: 2px solid #fff !important;
+  padding: 1.2em 1.6em !important;
+  vertical-align: bottom;
+}
+
+a.gym-button-secondary:hover,
+a.gym-button-secondary:focus,
+a.gym-button-secondary:active {
+  color: #fff !important;
+  background-color: #a6a6a6 !important;
+  border: 2px solid #fff !important;
+}
