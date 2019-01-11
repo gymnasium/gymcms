@@ -3,25 +3,351 @@ layout: raw
 permalink: /static/ux-design/
 ---
 
-<h1>Gymnasium for UX Designers</h1>
-<p>This is a placeholder for the UX Design landing page.</p>
+<main id="main" role="main">
 
+<link rel="preload" href="https://thegymnasium.com/static/gymnasium/fonts/brandon_blk-webfont.aeb559fb9125.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/ux-design.css">
 
-{% case jekyll.environment %}
+<section id="about">
+  <div class="banner-content container-fluid" role="presentation">
+    <div class="container" role="presentation">
+      <div class="row" role="presentation">
+        <div class="col-md-12" role="presentation">
+          <header>
+            <h1>UX Design</h1>
+            <p>Gymnasium offers free online <span class="no-wrap">UX <a class="gym-link-secondary" href="#courses"><b>courses</b></a></span>, <a class="gym-link-secondary" href="#webinars"><b>webinars</b></a>, <a class="gym-link-secondary" href="#articles"><b>articles</b></a>, and <a class="gym-link-secondary" href="#jobs"><b><span class="visuallyhidden">UX</span> jobs</b></a> through Aquent.</p>
+          </header>
+          <div class="cols cols-max-3" id="featured" role="presentation">
+            <ul>
+              <li>
+                <article class="card">
+                  <div class="card-content featured" role="presentation">
+                    <div class="card-main bg-ux-design equal-h" role="presentation">
+                      <header class="full-width">
+                       <h2 class="all-caps"><span class="visuallyhidden">UX</span> Courses</h2>
+                      </header>
+                        <figure class="course-artwork">
+                          <img alt="UX Fundamentals" srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-103.svg" src="{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-103.png">
+                      </figure>
+                    <h3 class="all-caps">UX Fundamentals</h3>
+                    </div>
+                    <div class="card-cta card-cta-button" role="presentation">
+                      <a class="gym-button" href="https://thegymnasium.com/courses/GYM/103/0/about"><b>Get Started</b></a>
+                    </div>
+                  </div>
+                  <footer class="card-cta">
+                    <a class="gym-link-secondary" href="#courses"><b>View More Courses</b></a>
+                  </footer>
+                </article>
+              </li>
+              <li>
+                <article class="card">
+                  <div class="card-content featured" role="presentation">
+                    <div class="card-main equal-h" role="presentation">
+                      <header class="full-width">
+                        <h2 class="all-caps"><span class="visuallyhidden">UX</span> Webinars</h2>
+                      </header>
+                      <figure class="full-width">
+                        <img alt="Erin Young of UX Slide" src="{{ site.url }}{{ site.baseurl }}/img/webinars/featured-webinar/ux-slide-erin-young.jpg">
+                      </figure>
+                      <h3 class="all-caps">Right-Sizing Your Rapid Prototypes for Web & Mobile</h3>
+                    </div>
+                    <div class="card-cta card-cta-button" role="presentation">
+                      <a class="gym-button" href="https://www.youtube.com/watch?v=m3az0D8mUV4" title="Watch Now" target="_blank" rel="noopener"><b>Watch Now</b></a>
+                    </div>
+                  </div>
+                  <footer class="card-cta">
+                    <a class="gym-link-secondary" href="#webinars"><b>View More Webinars</b></a>
+                  </footer>
+                </article>
+              </li>
+              <li>
+                <article class="card">
+                  <div class="card-content featured" role="presentation">
+                    <div class="card-main equal-h" role="presentation">
+                      <header class="full-width">
+                        <h2 class="all-caps"><span class="visuallyhidden">UX</span> Articles</h2>
+                      </header>
+                      <h3 class="all-caps">Approaches to Successful Rapid Prototyping</h3>
+                    </div>
+                    <div class="card-cta card-cta-button" role="presentation">
+                      <a class="gym-button" href="https://medium.com/gymnasium/https-medium-com-gymnasiumtweets-approaches-to-successful-rapid-prototyping-320361571f83" title="Learn More" target="_blank" rel="noopener"><b>Learn More</b></a>
+                    </div>
+                  </div>
+                  <footer class="card-cta">
+                    <a class="gym-link-secondary" href="#articles"><b>View More Articles</b></a>
+                  </footer>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-{% when "development" %}
-{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com/table?major_segment=03&minor_segment=20" %}
+<div class="main-content container-fluid" role="presentation">
+  <div class="container" role="presentation">
+    <div class="row" role="presentation">
+      <div class="col-md-12" role="presentation">
 
-{% when "staging" %}
-{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com/table?major_segment=03&minor_segment=20" %}
+<section class="section" id="jobs">
+  <div class="section-content" role="presentation">
+<!-- jobs mobule -->
+{% comment %}
+{%- include modules/jobs.html major='03' minor='20' -%}
+{% endcomment %}
+    <div class="cta" role="presentation">
+      <a class="gym-button" href="https://aquent.com/find-work/?k=&l=all&ux=on#content" title="Find Work — Aquent" target="_blank" rel="noopener"><b>View More Jobs</b></a>
+    </div>
+  </div>
+  <div class="to-top-link" role="presentation">
+    <a href="#main"><b>Back to top</b></a>
+  </div>
+</section>
 
-{% when "production" %}
-{% assign include_url = "https://gym-jobs-microservice-prod.herokuapp.com/table?major_segment=03&minor_segment=20" %}
+<section class="section" id="courses">
+  <div class="section-content" role="presentation">
+    <script type="application/ld+json">
+      {
+        "@context":"http://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "Course",
+            "name": "UX Fundamentals",
+            "description": "Learn how to apply user-centered design principles to improve your website and mobile app design. A must-take course for anyone working in web design and development.",
+            "image": "http://gymnasium.github.io/static-site-content/artwork/production/courses/gym-103-social.png",
+            "url": "https://thegymnasium.com/courses/GYM/103/0/about",
+            "position": 1,
+            "provider": {
+              "@type": "School",
+              "name": "Gymnasium",
+              "sameAs": "https://thegymnasium.com"
+            }
+          },
+          {
+            "@type": "Course",
+            "name": "Introducing Sketch for UX and UI",
+            "description": "Learn how to use Sketch tools and features to build an interactive prototype for a mobile website.",
+            "image": "http://gymnasium.github.io/static-site-content/artwork/production/courses/gym-005-social.png",
+            "url": "https://thegymnasium.com/courses/GYM/005/0/about",
+            "position": 2,
+            "provider": {
+              "@type": "School",
+              "name": "Gymnasium",
+              "sameAs": "https://thegymnasium.com"
+            }
+          },
+          {
+            "@type": "Course",
+            "name": "Advanced Rapid Prototyping with Axure",
+            "description": "Learn how to use the conditional logic features in Axure in order to quickly create an interactive prototype.",
+            "image": "http://gymnasium.github.io/static-site-content/artwork/production/courses/gym-008-social.png",
+            "url": "https://thegymnasium.com/courses/GYM/008/0/about",
+            "position": 3,
+            "provider": {
+              "@type": "School",
+              "name": "Gymnasium",
+              "sameAs": "https://thegymnasium.com"
+            }
+          },
+          {
+            "@type": "Course",
+            "name": "Working with Atomic Design and Pattern Lab",
+            "description": "Learn how to use Atomic Design methodology within Pattern Lab in order to create reusable user interface components.",
+            "image": "http://gymnasium.github.io/static-site-content/artwork/production/courses/gym-014-social.png",
+            "url": "https://thegymnasium.com/courses/course-v1:GYM+014+0/about",
+            "position": 4,
+            "provider": {
+              "@type": "School",
+              "name": "Gymnasium",
+              "sameAs": "https://thegymnasium.com"
+            }
+          },
+          {
+            "@type": "Course",
+            "name": "Writing for Web & Mobile",
+            "description": "Learn how to write compelling content through meaningful audience research and find the right words to attract and engage users.",
+            "image": "http://gymnasium.github.io/static-site-content/artwork/production/courses/gym-105-social.png",
+            "url": "https://thegymnasium.com/courses/GYM/105/0/about",
+            "position": 5,
+            "provider": {
+              "@type": "School",
+              "name": "Gymnasium",
+              "sameAs": "https://thegymnasium.com"
+            }
+          },
+          {
+            "@type": "Course",
+            "name": "Information Design and Visualization Fundamentals",
+            "description": "Learn the design and visual principles needed to create effective information graphics and data visualizations.",
+            "image": "http://gymnasium.github.io/static-site-content/artwork/production/courses/gym-106-social.png",
+            "url": "https://thegymnasium.com/courses/GYM/106/0/about",
+            "position": 6,
+            "provider": {
+              "@type": "School",
+              "name": "Gymnasium",
+              "sameAs": "https://thegymnasium.com"
+            }
+          }
+        ]
+      }
+    </script>
+    <header>
+      <h2 class="all-caps">UX Courses</h2>
+      <p>Learn UX design with industry experts from Capital One to <cite>The New York Times</cite>.</p>
+    </header>
+    <div class="cols cols-max-2 cols-hr" role="presentation">
+      <ul>
+        <li>
+          <figure class="course-artwork bg-ux-design">
+            <a href="https://thegymnasium.com/courses/GYM/103/0/about" title="Get Started">
+              <img alt="UX Fundamentals" srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-103.svg" src="{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-103.png">
+            </a>
+          </figure>
+          <h3><a class="gymlink" href="https://thegymnasium.com/courses/GYM/103/0/about" title="Get Started">UX Fundamentals</a></h3>
+        </li>
+        <li>
+          <figure class="course-artwork bg-ux-design">
+            <a class="img-link" href="https://thegymnasium.com/courses/GYM/005/0/about" title="Get Started">
+              <img alt="Introducing Sketch for UX and UI" srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-005.svg" src="{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-005.png">
+            </a>
+          </figure>
+          <h3><a class="gymlink" href="https://thegymnasium.com/courses/GYM/005/0/about" title="Get Started">Introducing Sketch for UX <span class="no-wrap">and UI</span></a></h3>
+        </li>
+        <li>
+          <figure class="course-artwork bg-ux-design">
+            <a class="img-link" href="https://thegymnasium.com/courses/GYM/008/0/about" title="Get Started">
+              <img alt="Advanced Rapid Prototyping with Axure" srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-008.svg" src="{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-008.png">
+            </a>
+          </figure>
+          <h3><a class="gymlink" href="https://thegymnasium.com/courses/GYM/008/0/about" title="Get Started">Advanced Rapid Prototyping <span class="no-wrap">with Axure</span></a></h3>
+        </li>
+        <li>
+          <figure class="course-artwork bg-ux-design">
+            <a class="img-link" href="https://thegymnasium.com/courses/course-v1:GYM+014+0/about" title="Get Started">
+              <img alt="Working with Atomic Design and Pattern Lab" srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-014.svg" src="{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-014.png">
+            </a>
+          </figure>
+          <h3><a class="gymlink" href="https://thegymnasium.com/courses/course-v1:GYM+014+0/about" title="Get Started">Working with Atomic Design and <span class="no-wrap">Pattern Lab</span></a></h3>
+        </li>
+        <li>
+          <figure class="course-artwork bg-ux-content">
+            <a class="img-link" href="https://thegymnasium.com/courses/GYM/105/0/about" title="Get Started">
+              <img alt="Writing for Web & Mobile" srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-105.svg" src="{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-105.png">
+            </a>
+          </figure>
+          <h3><a class="gymlink" href="https://thegymnasium.com/courses/GYM/105/0/about" title="Get Started">Writing for Web & Mobile</a></h3>
+        </li>
+        <li>
+          <figure class="course-artwork bg-ux-content">
+            <a class="img-link" href="https://thegymnasium.com/courses/GYM/106/0/about" title="Get Started">
+              <img alt="Information Design and Visualization Fundamentals" srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-106.svg" src="{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-106.png">
+            </a>
+          </figure>
+          <h3><a class="gymlink" href="https://thegymnasium.com/courses/GYM/106/0/about" title="Get Started">Information Design and Visualization Fundamentals</a></h3>
+        </li>
+      </ul>
+    </div>
+    <div class="cta" role="presentation">
+      <a class="gym-button" href="https://thegymnasium.com/courses" title="Free Online Courses"><b>View More Courses</b></a>
+    </div>
+  </div>
+  <div class="to-top-link" role="presentation">
+    <a href="#main"><b>Back to top</b></a>
+  </div>
+</section>
 
-{% endcase %}
-<!-- Environment: {{ jekyll.environment }} -->
-<iframe src="{{ include_url }}"
-  id="jobs-microservice-frame"
-  class="gymnasium-resizable-iframe gymnasium-jobs-microservice-iframe"
-  style="width: 1px;min-width: 100%;border:0;"
-></iframe>
+<section class="section" id="webinars">
+  <div class="section-content" role="presentation">
+    <header>
+      <h2 class="all-caps">UX Webinars</h2>
+      <p>Insightful conversation with trailblazers in the web community.</p>
+    </header>
+    <div class="cols cols-max-3" role="presentation">
+      <ul>
+      <li>
+        <section class="webinar">
+          <figure>
+            <div class="poster-mask">
+              <a href="https://www.youtube.com/watch?v=m3az0D8mUV4" title="Watch Now" target="_blank" rel="noopener"><img alt="Right-Sizing Your Rapid Prototypes for Web & Mobile" src="{{ site.url }}{{ site.baseurl }}/img/webinars/video-poster/right-sizing-rapid-prototypes.jpg"></a>
+            </div>
+          </figure>
+          <header>
+            <h3 class="gymlink"><a href="https://www.youtube.com/watch?v=m3az0D8mUV4" title="Watch Now" target="_blank" rel="noopener">Right-Sizing Your Rapid Prototypes for Web & Mobile</a></h3>
+          </header>
+        </section>
+      </li>
+      <li>
+        <section class="webinar">
+          <figure>
+            <div class="poster-mask">
+              <a href="https://www.youtube.com/watch?v=ytt0RmoQy5Q" title="Watch Now" target="_blank" rel="noopener"><img alt="Designing for Real People" src="{{ site.url }}{{ site.baseurl }}/img/webinars/video-poster/designing-for-real-people.jpg"></a>
+            </div>
+          </figure>
+          <header>
+            <h3 class="gymlink"><a href="https://www.youtube.com/watch?v=ytt0RmoQy5Q" title="Watch Now" target="_blank" rel="noopener">Designing for Real People</a></h3>
+          </header>
+        </section>
+      </li>
+      <li>
+        <section class="webinar">
+          <figure>
+            <div class="poster-mask">
+              <a href="https://www.youtube.com/watch?v=5W7sJzfPwjQ" title="Watch Now" target="_blank" rel="noopener"><img alt="Designing for Understanding" src="{{ site.url }}{{ site.baseurl }}/img/webinars/video-poster/designing-for-understanding.jpg"></a>
+            </div>
+          </figure>
+          <header>
+            <h3 class="gymlink"><a href="https://www.youtube.com/watch?v=5W7sJzfPwjQ" title="Watch Now" target="_blank" rel="noopener">Designing for Understanding</a></h3>
+          </header>
+        </section>
+      </li>
+    </ul>
+    </div>
+  </div>
+  <div class="to-top-link" role="presentation">
+    <a href="#main"><b>Back to top</b></a>
+  </div>
+</section>
+
+<section class="section" id="articles">
+  <div class="section-content" role="presentation">
+    <header>
+      <h2 class="all-caps">UX Articles</h2>
+    </header>
+    <div class="list-hr" role="presentation">
+      <ul>
+        <li>
+          <h3 class="gymlink"><a href="https://medium.com/gymnasium/https-medium-com-gymnasiumtweets-approaches-to-successful-rapid-prototyping-320361571f83" title="Learn More" target="_blank" rel="noopener">Approaches to Successful Rapid Prototyping</a></h3>
+        </li>
+        <li>
+          <h3 class="gymlink"><a href="https://medium.com/gymnasium/are-you-designing-for-real-people-or-just-personas-2ffdb6c3cd9b" title="Learn More" target="_blank" rel="noopener">Are You Designing for Real People or Just Personas?</a></h3>
+        </li>
+        <li>
+          <h3 class="gymlink"><a href="https://medium.com/gymnasium/creating-a-vector-logo-in-sketch-3-6d67e72a1449" title="Learn More" target="_blank" rel="noopener">Creating a Vector Logo in Sketch</a></h3>
+        </li>
+      </ul>
+    </div>
+    <div class="cta" role="presentation">
+      <a class="gym-button" href="https://medium.com/gymnasium" title="The Gymnasium Blog — Medium" target="_blank" rel="noopener"><b>View More Articles</b></a>
+    </div>
+  </div>
+  <div class="to-top-link" role="presentation">
+    <a href="#main"><b>Back to top</b></a>
+  </div>
+</section>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- polyfills -->
+<script async nomodule src="{{ site.url }}{{ site.baseurl }}/js/polyfills/prefixfree.min.js"></script>
+<script async nomodule src="{{ site.url }}{{ site.baseurl }}/js/polyfills/grid-equal-height.js"></script>
+<script async src="{{ site.url }}{{ site.baseurl }}/js/polyfills/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+<script async src="{{ site.url }}{{ site.baseurl }}/js/polyfills/smooth-scroll/smooth-scroll.fn.js"></script>
+
+</main>
