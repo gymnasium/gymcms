@@ -376,6 +376,11 @@ footer.card-cta {
 
 /* --- #webinars --- */
 
+#webinars .cols-hr ul {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
 #webinars figure {
   margin-bottom: 1.2em;
 }
@@ -384,7 +389,8 @@ footer.card-cta {
   position: relative;
   height: 0;
   background-color: #000;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 55.95%; /* pseudo 16:9 aspect ratio */
+  border: 1px solid #dedede;
   overflow: hidden;
 }
 
@@ -419,6 +425,26 @@ footer.card-cta {
   overflow: hidden;
 }
 
+.cols-hr ul {
+  grid-gap: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-top: 0;
+}
+
+.cols-hr li {
+  position: relative;
+  top: -1px;
+  border-top: 1px solid #ddd;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+}
+
+#webinars .cols-hr ul {
+  margin-bottom: -1.2em;
+}
+
+#webinars .cols-hr li,
 #courses .cols-hr li {
   margin-top: 0;
 }
@@ -535,6 +561,14 @@ footer.card-cta {
 
   #courses .cols-hr li {
     display: block;
+  }
+
+  #webinars .cols-hr ul {
+    margin-bottom: 0;
+  }
+
+  #webinars .cols-hr li {
+    padding-bottom: 0;
   }
 
   /* override -- legacy layout -- end */
