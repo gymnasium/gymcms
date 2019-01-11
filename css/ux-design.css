@@ -491,12 +491,16 @@ footer.card-cta {
     grid-gap: 1.2em;
   }
 
-  .cols-max-2 ul {
-    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
-  }
+  @media (min-width: 36em) {
 
-  .cols-max-3 ul {
-    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    .cols-max-2 ul {
+      grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+    }
+
+    .cols-max-3 ul {
+      grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    }
+
   }
 
 /* override -- legacy layout -- start */
