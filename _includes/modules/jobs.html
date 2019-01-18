@@ -1,32 +1,24 @@
 
-{%- comment -%}
-  Check to see that this include was called with a major segment
-  @@todo: Needs a sensible default
-{%- endcomment -%}
-
 {% if include.major != null %}
-  {% assign major_segment = include.major %}
-{% else %}
-  {% assign major_segment = '00000' %}
+{%- capture majorSegment -%}
+  ?majorSegment={{ include.major }}
+{%- endcapture -%}
 {% endif %}
-
-{%- comment -%}
-  Check to see that this include was called with a minor segment
-  @@todo: Needs a sensible default
-{%- endcomment -%}
 
 {% if include.minor != null %}
-  {% assign minor_segment = include.minor %}
-{% else %}
-  {% assign minor_segment = '00000' %}
+  {% if include.major != null %}
+    {%- capture minorSegment -%}
+      &minorSegment={{ include.minor }}
+    {%- endcapture -%}
+    {% else %}
+    {%- capture minorSegment -%}
+      minorSegment={{ include.minor }}
+    {%- endcapture -%}
+  {% endif %}
 {% endif %}
 
-{%- comment -%}
-  Assemble the URL for the correct job module
-{%- endcomment -%}
-
 {%- capture url_args -%}
-?major_segment={{ major_segment }}&minor_segment={{ minor_segment }}
+{{ majorSegment }}{{ minorSegment }}
 {%- endcapture -%}
 
 {% case jekyll.environment %}
@@ -44,8 +36,8 @@
 
 <!-- Environment: {{ jekyll.environment }} -->
 <!-- Args: {{ url_args }} -->
-<!-- Major Segment: {{ major_segment }} -->
-<!-- Minor Segment: {{ minor_segment }} -->
+<!-- Major Segment: {{ majorSegment }} -->
+<!-- Minor Segment: {{ minorSegment }} -->
 <iframe src="{{ include_url }}{{ url_args }}"
   id="jobs-microservice-frame"
   class="gymnasium-resizable-iframe gymnasium-jobs-microservice-iframe"
