@@ -454,12 +454,14 @@ footer.card-cta {
   padding-left: 0;
 }
 
+div.list-hr,
 .list-hr li {
   border-bottom: 1px solid #ddd;
   padding-top: 1.2em;
   padding-bottom: 1.2em;
 }
 
+div.list-hr,
 .list-hr li:first-child {
   border-top: 1px solid #ddd;
 }
