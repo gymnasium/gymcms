@@ -335,6 +335,12 @@ footer.card-cta {
   margin: -1.2em -1.2em 1.2em;
 }
 
+/* --- #jobs --- */
+
+#jobs .content-hr {
+  padding-bottom: 0;
+}
+
 /* --- #courses --- */
 
 #courses .cols-hr ul {
@@ -454,18 +460,22 @@ footer.card-cta {
   padding-left: 0;
 }
 
-div.list-hr,
 .list-hr li {
   border-bottom: 1px solid #ddd;
   padding-top: 1.2em;
   padding-bottom: 1.2em;
 }
 
-div.list-hr,
 .list-hr li:first-child {
   border-top: 1px solid #ddd;
 }
 
+.content-hr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+}
 
 @media (min-width: 40em) {
 
