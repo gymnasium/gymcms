@@ -1,25 +1,12 @@
 
-{% if include.major != null %}
-{%- capture majorSegment -%}
-  ?majorSegment={{ include.major }}
+{% if include.cwid != null %}
+{%- capture cwid -%}
+  {{ include.cwid }}
 {%- endcapture -%}
-{% endif %}
-
-{% if include.minor != null %}
-  {% if include.major != null %}
-    {%- capture minorSegment -%}
-      &minorSegment={{ include.minor }}
-    {%- endcapture -%}
-    {% else %}
-    {%- capture minorSegment -%}
-      minorSegment={{ include.minor }}
-    {%- endcapture -%}
-  {% endif %}
-{% endif %}
-
 {%- capture url_args -%}
-{{ majorSegment }}{{ minorSegment }}
+?cwid={{ cwid }}
 {%- endcapture -%}
+{% endif %}
 
 {% case jekyll.environment %}
 
@@ -35,11 +22,10 @@
 {% endcase %}
 
 <!-- Environment: {{ jekyll.environment }} -->
-<!-- Args: {{ url_args }} -->
-<!-- Major Segment: {{ majorSegment }} -->
-<!-- Minor Segment: {{ minorSegment }} -->
+<!-- CWID: {{ cwid}} -->
+<!-- url_args: {{ url_args }} -->
+
 <iframe src="{{ include_url }}{{ url_args }}"
   id="jobs-microservice-frame"
   class="gymnasium-resizable-iframe gymnasium-jobs-microservice-iframe"
-  style="width: 1px;min-width: 100%;border:0;"
-></iframe>
+  style="width: 1px;min-width: 100%;border:0;"></iframe>
