@@ -1,0 +1,31 @@
+
+{% if include.cwid != null %}
+{%- capture cwid -%}
+  {{ include.cwid }}
+{%- endcapture -%}
+{%- capture url_args -%}
+?cwid={{ cwid }}
+{%- endcapture -%}
+{% endif %}
+
+{% case jekyll.environment %}
+
+    {% when "development" %}
+    {% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com/table" %}
+
+    {% when "staging" %}
+    {% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com/table" %}
+
+    {% when "production" %}
+    {% assign include_url = "https://gym-jobs-microservice-prod.herokuapp.com/table" %}
+
+{% endcase %}
+
+<!-- Environment: {{ jekyll.environment }} -->
+<!-- CWID: {{ cwid}} -->
+<!-- url_args: {{ url_args }} -->
+
+<iframe src="{{ include_url }}{{ url_args }}"
+  id="jobs-microservice-frame"
+  class="gymnasium-resizable-iframe gymnasium-jobs-microservice-iframe"
+  style="width: 1px;min-width: 100%;border:0;"></iframe>
