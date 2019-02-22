@@ -1,0 +1,195 @@
+.ux-design {
+  background-color: #5ca5a0;
+}
+
+#hero-gym-015 {
+  background: radial-gradient(
+    200% 100% at top left,
+    #5ca5a0  92%,
+    #46807c 25%
+  )
+}
+
+@media (min-width: 62em) {
+
+  #hero-gym-015 {
+    background: radial-gradient(
+      200% 100% at top left,
+      #5ca5a0  75%,
+      #46807c 25%
+    )
+  }
+
+}
+
+/* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
+
+.hero-promo {
+  font-size: 16px;
+}
+
+/* structural spacing */
+
+.hero-promo .container {
+  max-width: 76em;
+  padding: 1.2em 0 3em;
+  overflow: hidden;
+}
+
+.hero-promo .row {
+  margin: 1.2% 5%;
+}
+
+/* flexible images */
+
+.hero-promo img {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* content / art */
+
+.hero-promo .content-art img {
+  width: 100%;
+  color: #222;
+}
+
+@media (min-width: 40em) {
+
+  .hero-promo .content-art {
+    float: left;
+    width: 28.5em;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 2em;
+    overflow: hidden;
+  }
+
+}
+
+@media (min-width: 60em) {
+
+  .hero-promo .content-art {
+    margin-left: 2%;
+  }
+
+}
+
+@media (min-width: 80em) {
+
+  .hero-promo .content-art {
+    margin-left: 6%;
+  }
+
+  .hero-promo .content-art img {
+    width: 200%;
+  }
+
+}
+
+/* content / copy */
+
+.hero-promo .content-copy {
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+.hero-promo header {
+  padding-top: 1.5em;
+}
+
+.hero-promo header h2 {
+  font-size: 2.25em;
+  line-height: 1.15;
+  letter-spacing: .025em;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero-promo .subhead {
+  font: 900 1.35em/1.15 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .015em;
+  margin-bottom: .75em;
+}
+
+.hero-promo .subhead strong {
+  font-weight: inherit;
+}
+
+.hero-promo .description {
+  font-size: 1em;
+  margin-top: .75em;
+}
+
+@media (min-width: 40em) {
+
+  .hero-promo .content-copy {
+    max-width: none;
+  }
+
+  .hero-promo header {
+    padding-top: 2.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .hero-promo header h2 {
+    font-size: 2.35em;
+  }
+
+  .hero-promo .description {
+    font-size: 1.2em;
+  }
+
+}
+
+@media (min-width: 62em) {
+
+  .hero-promo .content-copy {
+    clear: none;
+  }
+
+}
+
+@media (min-width: 75em) {
+
+  .hero-promo header h2 {
+    font-size: 2.5em;
+    width: 92%;
+  }
+
+}
+
+/* cta */
+
+.hero-promo .cta {
+  margin-top: 1em;
+}
+
+/* !override / reset/rescale font-size adjustment */
+
+.hero-promo .gym-button {
+  width: auto !important;
+  font-size: 105% !important;
+  padding: 1.2em 1.6em !important;
+  border: 2px solid #fff !important;
+}
+
+/* misc details */
+
+[hidden] {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
