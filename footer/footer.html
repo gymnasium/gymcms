@@ -1,48 +1,80 @@
-
 ---
 layout: raw
 permalink: /static/footer/
 ---
 
+<link rel="preload stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/footer.css">
+
 <div class="wrapper-footer">
-  <footer class="container">
+  <footer class="container" id="contentinfo">
     <div class="row">
       <nav>
-        <div class="col-md-2">
-          <a href="/">
-            <img class="gymnasium-logo"  src="/static/gymnasium/images/gymnasiumLogo.png" alt="Aquent Gymnasium" >
-          </a>
+        <div class="col-md-3">
+          <div class="gym-brand">
+            <a href="/" title="Gymnasium Homepage">
+              <img class="gymnasium-logo" alt="Aquent Gymnasium" srcset="{{ site.url }}{{ site.baseurl }}/img/brand/gymnasium-logo-white.svg" src="{{ site.url }}{{ site.baseurl }}/img/brand/gymnasium-logo-white-4x.png" width="200" height="23">
+            </a>
+            <p>Gymnasium offers free online courses on web development, design, user experience, and content creation.</p>
+          </div>
         </div>
-        <div class="col-md-8">
-          <ol class="list-inline text-center footer-link-list">
-            <li><a href="https://medium.com/gymnasium" target="_blank">Blog</a></li>
-            <li><a href="/jobs">Jobs</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/faq">FAQ</a></li>
-            <li><a href="/support">Support</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/csr-policy">Corporate Social Responsibility</a></li>
-            <li id="headway-changelog-anchor">
-              <a href="https://headwayapp.co/the-gymnasium-changelog" target="_blank">Changelog</a>
-            </li>
-          </ol>
-          <div class="copyright">&copy; 2019 Aquent Gymnasium</div>
+        <div class="col-md-2">
+          <section class="footer-link-list">
+            <h2>What We Do</h2>
+            <ul>
+              <li><a href="/courses">Courses</a></li>
+              <li><a href="https://medium.com/gymnasium" target="_blank">Articles</a></li>
+              <li><a href="/jobs">Jobs</a></li>
+              <li><a href="/about">About</a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="col-md-3">
+          <section class="footer-link-list">
+            <h2>Our Focus</h2>
+            <ul>
+              <li><a href="/ux-design">UX Design</a></li>
+              <li><a href="/prototyping">Prototyping</a></li>
+              <li><a href="/front-end-development">Front-End Development</a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="col-md-3">
+          <section class="footer-link-list">
+            <h2>Resources</h2>
+            <ul>
+              <li><a href="/faq">FAQ</a></li>
+              <li><a href="/support">Support</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/csr-policy">Corporate Social Responsibility</a></li>
+              <li id="headway-changelog-anchor">
+                <a href="https://headwayapp.co/the-gymnasium-changelog" target="_blank">Changelog</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="col-md-1">
+          <section class="footer-link-list">
+            <h2>Social</h2>
+            <ul>
+              <li><a title="Twitter" href="https://twitter.com/AquentGymnasium" target="_blank"><img alt="Twitter" srcset="{{ site.url }}{{ site.baseurl }}/img/social/icons/icon-twitter.svg" src="{{ site.url }}{{ site.baseurl }}/img/social/icons/icon-twitter-4x.png" width="24" height="24"></a></li>
+              <li><a title="Instagram" href="https://www.instagram.com/aquent_gymnasium/" target="_blank"><img alt="Instagram" srcset="{{ site.url }}{{ site.baseurl }}/img/social/icons/icon-instagram.svg" src="{{ site.url }}{{ site.baseurl }}/img/social/icons/icon-instagram-4x.png" width="24" height="24"></a></li>
+              <li><a  title="YouTube" href="https://www.youtube.com/channel/UCsAAa0dL-ZJpq4gN1zEcXYw" target="_blank"><img alt="YouTube" srcset="{{ site.url }}{{ site.baseurl }}/img/social/icons/icon-youtube.svg" src="{{ site.url }}{{ site.baseurl }}/img/social/icons/icon-youtube-4x.png" width="24" height="24"></a></li>
+              <li><a title="LinkedIn" href="https://www.linkedin.com/school/gymnasium/" target="_blank"><img alt="LinkedIn" srcset="{{ site.url }}{{ site.baseurl }}/img/social/icons/icon-linkedin.svg" src="{{ site.url }}{{ site.baseurl }}/img/social/icons/icon-linkedin-4x.png" width="24" height="24"></a></li>
+              <li><a title="Medium" href="https://medium.com/gymnasium" target="_blank"><img alt="Medium" srcset="{{ site.url }}{{ site.baseurl }}/img/social/icons/icon-medium.svg" src="{{ site.url }}{{ site.baseurl }}/img/social/icons/icon-medium-4x.png" width="24" height="24"></a></li>
+              <li><a title="GitHub" href="https://github.com/gymnasium" target="_blank"><img alt="GitHub" srcset="{{ site.url }}{{ site.baseurl }}/img/social/icons/icon-github.svg" src="{{ site.url }}{{ site.baseurl }}/img/social/icons/icon-github-4x.png" width="24" height="24"></a></li>
+            </ul>
+          </section>
         </div>
       </nav>
-
-      <div class="built-on col-md-2 text-center">
-        <span>
-          <a href="http://openedx.org" target="_blank">
-            <img
-              src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag-light.png"
-              width="150" height="50" alt="Powered by Open edX" />
-          </a>
-
-        </span>
-      </div>
     </div>
     <div class="row">
-
+      <div class="col-md-3">
+        <a title="Open edX" href="http://openedx.org" target="_blank">
+          <img class="open-edx-logo" alt="Powered by Open edX" src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag-light.png"
+            width="150" height="50">
+        </a>
+        <div class="copyright"><small>@ {{ 'now' | date: "%Y" }}  <a href="https://thegymnasium.com">Aquent Gymnasium</a></small></div>
+      </div>
     </div>
   </footer>
 </div>
