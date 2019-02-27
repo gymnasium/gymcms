@@ -19,8 +19,9 @@
 }
 
 #contentinfo .gym-brand p {
+  width: 95%;
   font-size: 1em;
-  line-height: 1.45;
+  line-height: 1.55;
   margin-top: 1.2em;
 }
 
