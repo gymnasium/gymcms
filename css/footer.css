@@ -24,6 +24,18 @@
   margin-top: 1.2em;
 }
 
+#contentinfo .resources {
+  clear: left;
+}
+
+@media (min-width: 62em) {
+
+  #contentinfo .resources {
+    clear: none;
+  }
+
+}
+
 #contentinfo h2 {
   font-size: 1em;
   margin-top: 0;
@@ -37,6 +49,7 @@
 }
 
 #contentinfo .footer-link-list ul {
+  list-style: none url();
   margin-top: .95em;
 }
 
