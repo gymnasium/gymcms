@@ -137,8 +137,8 @@
 
   .webinar-05-2019 .placeholder-image div {
      background:
-      linear-gradient(to top right, transparent 49.7%, #222 49.78%, #222 50.3%, transparent 50.2%),
-      linear-gradient(to bottom right, transparent 49.7%, #222 49.7%, #222 50.3%, transparent 50.2%);
+      linear-gradient(to top right, transparent 49.7%, #222 49.7%, #222 50.3%, transparent 50.3%),
+      linear-gradient(to bottom right, transparent 49.7%, #222 49.7%, #222 50.3%, transparent 50.3%);
   }
 
   .webinar-05-2019 .placeholder-text::after {
