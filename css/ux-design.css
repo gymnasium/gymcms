@@ -547,7 +547,7 @@ footer.card-cta {
 
   .cols ul {
     display: grid;
-    grid-template-rows: auto;
+    grid-auto-rows: 1fr;
     grid-template-columns: auto;
     grid-gap: 1.2em;
   }
