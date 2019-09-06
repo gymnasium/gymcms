@@ -1,0 +1,19 @@
+<h1>{{ page.title }}</h1>
+
+
+<p>{{ page.short_description }}</p>
+
+<hr>
+
+<!-- Implementation Note                                                               //-->
+<!-- This directive pulls in the html fragment with the transcript                     //-->
+<!-- Each Take5 has an associated transcript file in _includes/take5/transcripts/      //-->
+{%- include {{ page.gym_ID | prepend: 'take5/transcripts/GYM-' | append: '-transcript.html' }} -%}
+
+
+
+<!-- //
+Generated at: {{ site.time }}
+Served from: {{ page.url | absolute_url }}
+Git Hash: {{ site.data['hash']}}
+// -->
