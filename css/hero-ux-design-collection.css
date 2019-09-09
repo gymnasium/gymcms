@@ -1,0 +1,209 @@
+.all-caps {
+  text-transform: uppercase;
+}
+
+.break {
+  display: block;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.hero-promo {
+  font-size: 16px;
+  background-color: #263441;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.hero-promo .container {
+  padding-bottom: 45px;
+}
+
+.hero-promo img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.hero-promo .hero-text-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.hero-promo .ux-display-text {
+  display: inline-block;
+  margin-left: -6px;
+}
+
+.hero-promo .ux-display-text::before {
+  display: inline-block;
+  content: "UX";
+  font-weight: 900;
+  line-height: .85;
+  font-size: 12em;
+  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #5ca5a0;
+  text-shadow: .075em 0 0 #222;
+}
+
+.hero-promo header {
+  max-width: 40em;
+}
+
+.hero-promo header h1,
+.hero-promo header h2,
+.hero-promo header h3,
+.hero-promo header p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero-promo header h1 {
+  font-size: 2.5em;
+  color: #5ca5a0;
+  margin-top: -.05em;
+  margin-bottom: -.05em;
+}
+
+.hero-promo header h2,
+.hero-promo header h3 {
+  font: 900 1.6em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+  letter-spacing: .05em;
+  margin-bottom: .8em;
+}
+
+.hero-promo header h3 {
+  margin-top: .8em;
+}
+
+.hero-promo header p {
+  font: normal 1.4em/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ebebeb;
+  margin-top: 1em;
+}
+
+.hero-promo header p b {
+  color: #fff;
+}
+
+@media (min-width: 22em) {
+
+  .hero-promo .ux-display-text::before {
+    font-size: 14em;
+  }
+
+}
+
+@media (min-width: 26em) {
+
+  .hero-promo .ux-display-text::before {
+    font-size: 16em;
+  }
+
+}
+
+@media (min-width: 32em) {
+
+  .hero-promo .ux-display-text {
+    margin-bottom: -12px;
+  }
+
+  .hero-promo .ux-display-text::before {
+    font-size: 20em;
+  }
+
+}
+
+@media (min-width: 62em) {
+
+  .hero-promo .container {
+    padding-top: 2%;
+    padding-bottom: 2.5%;
+  }
+
+  .hero-promo .hero-text-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero-promo .v-center {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -4px;
+  }
+
+  .hero-promo .ux-display-text {
+    margin-left: -2em;
+  }
+
+  .hero-promo .ux-display-text::before {
+    font-size: 22em;
+  }
+
+  .hero-promo header {
+    margin-top: -30px;
+  }
+
+}
+
+@media (min-width: 62em) and (max-width: 75em) {
+
+  .hero-promo .ux-display-text {
+    margin-bottom: 0;
+  }
+
+  .hero-promo .col-md-5 {
+    width: 50%;
+  }
+
+  .hero-promo .col-md-7 {
+    width: 50%;
+  }
+
+}
+
+@media (min-width: 75em) {
+
+  .hero-promo .container {
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+
+  .hero-promo .hero-text-content {
+    margin-left: 1.2em;
+  }
+
+  .hero-promo .ux-display-text::before {
+    font-size: 32em;
+  }
+
+  .hero-promo header {
+    margin-top: -45px;
+  }
+
+}
+
+.hero-promo .cta {
+  margin-top: 2em;
+}
+
+.hero-promo a.gym-button-secondary {
+  font-size: 105%;
+  width: auto;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+  padding: 1.2em 1.6em !important;
+  vertical-align: bottom;
+}
+
+a.gym-button-secondary:hover,
+a.gym-button-secondary:focus,
+a.gym-button-secondary:active {
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
