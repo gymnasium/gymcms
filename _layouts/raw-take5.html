@@ -1,15 +1,44 @@
+<div style="width: 70%">
+{% include take5/video.html %}
+
 <h1>{{ page.title }}</h1>
+<p>With {{ page.instructor }}</p>
+<!-- Just a hack to keep things sane while hacking -->
+
 
 
 <p>{{ page.short_description }}</p>
 
-<hr>
+<hr> <!-- Just an ugly delimiter for debugging -->
+<h3>Resources</h3>
+<ul>
+    <li>To do... </li>
+    <li>To do... </li>
+    <li>To do... </li>
+</ul>
+
+<hr> <!-- Just an ugly delimiter for debugging -->
+
 
 <!-- Implementation Note                                                               //-->
 <!-- This directive pulls in the html fragment with the transcript                     //-->
 <!-- Each Take5 has an associated transcript file in _includes/take5/transcripts/      //-->
-{%- include {{ page.gym_ID | prepend: 'take5/transcripts/GYM-' | append: '-transcript.html' }} -%}
 
+<!-- Checks that the transcript exists for this lesson before attempting the include   //-->
+{% assign transcript = page.gym_ID | prepend: '/take5/transcripts/GYM-' | append: '-transcript.html' %}
+{% capture transcript_test %}{% file_exists {{transcript | prepend: '_includes/'}} %}{% endcapture %}
+
+{% if transcript_test =="true" %}
+<details>
+    <summary>View Transcript</summary>
+
+    {%- include {{transcript}} -%}
+
+</details>
+{% else %}
+<h3><mark>No transcript found!</mark></h3>
+{% endif %}
+</div>
 
 
 <!-- //
