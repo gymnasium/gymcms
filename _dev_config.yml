@@ -7,10 +7,11 @@ environment: development
 
 
 collections:
-    webinars:
-        output: true
-        permalink: /static/webinars/
-
+  take5s:
+    output: true
+    sort_by: topic
+    permalink: /static/take5/:name
+    
 # Building
 
 exclude:
