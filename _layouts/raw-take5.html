@@ -9,11 +9,28 @@
 <p>{{ page.short_description }}</p>
 
 <hr> <!-- Just an ugly delimiter for debugging -->
+
 <h3>Resources</h3>
+
+{% if page.project_files !=null %}
+<h4>Project Files</h4> 
+{% if page.project_file_source !=null %}
+<p>On {{ page.project_file_source }}</p>
+{% endif %}
 <ul>
-    <li>To do... </li>
-    <li>To do... </li>
-    <li>To do... </li>
+{% for item in page.project_files %}
+    <li><a href="{{ item.url}}">{{item.label}}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% if page.related_content !=null %}
+<h4>Related Content</h4>
+{% endif %}
+<ul>
+{% for item in page.related_content %}
+    <li><a href="{{ item.url}}">{{item.label}}</a></li>
+{% endfor %}
 </ul>
 
 <hr> <!-- Just an ugly delimiter for debugging -->
