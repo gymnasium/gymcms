@@ -1,7 +1,72 @@
-<p>Hi there and welcome to Aquent Gymnasium’s Take 5 Series, where we show you in five minutes or less — a tip, trick, or technique that we think you’ll find useful. Today’s Take 5 is all about using sticks in your user research.</p>
-<p>My name’s Heather O'Neill and I’m a user researcher person who researches users and people.</p>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta doloremque facilis laudantium quidem cumque pariatur inventore veniam? Magni nam molestias dolore cupiditate porro autem iure mollitia fugit amet, perspiciatis harum.</p>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta doloremque facilis laudantium quidem cumque pariatur inventore veniam? Magni nam molestias dolore cupiditate porro autem iure mollitia fugit amet, perspiciatis harum.</p>    
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta doloremque facilis laudantium quidem cumque pariatur inventore veniam? Magni nam molestias dolore cupiditate porro autem iure mollitia fugit amet, perspiciatis harum.</p>    
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta doloremque facilis laudantium quidem cumque pariatur inventore veniam? Magni nam molestias dolore cupiditate porro autem iure mollitia fugit amet, perspiciatis harum.</p>    
-<p>That’s it for now, thanks for watching I hope you found it useful. If you like this Take Five clip be sure to check out the rest of the series and also check out our entire course catalog at Gymnasium where we feature more in-depth classes such as this one <a href="https://thegymnasium.com/courses/GYM/107/0/about"><cite>Modern Web Design</cite></a> where instructor Aaron Gustafson shows you what it takes to be a modern front end developer these days. <em>I hope to see you there! Take care.</em></p>
+<p>In today’s Take 5 you’re going to take a plain heading as seen here and add a “knockout” effect, which means you can take any image you’d like and make it appear inside the outline of your text, the example you’ll be using is an image of clouds and the text you’ll be using are the words “The Cloud”.</p>
+
+<p>This is the project on Codepen you’ll be working with and here is the URL which you can also find linked within the Resources section for this video.</p>
+
+<p>In the HTML, there’s a Heading 1 with the class of “clip” and your content. In the CSS there is an h1 style with the font-family, size and color.</p>
+
+<p>There’s also this section here which is a CSS Feature Query. If you haven’t familiar with this syntax, don’t worry, I’ll explain in more detail shortly, for now, just note the class selector named “clip” located here is empty. To save you some typing, I put the first two styles right here in the comments, all you need to do is cut both of them and then paste them into the clip class like so: </p>
+
+<pre>
+<code>
+@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+ 
+  .clip{
+	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/76301/clouds_800x200.jpg');
+	background-repeat: no-repeat;
+  }
+ 
+}
+</code>
+</pre>
+
+<p>So you’ll see a background image of clouds appear behind your heading, this image is 800 pixels wide by 200 pixels high and right now the whole thing looks terrible, but now you’ll use the outline of your text to clip the image.  So go ahead and type:
+  <pre>
+    <code>
+-webkit-background-clip :text;
+    </code>
+  </pre>
+</p>
+
+Your background image disappears, which means clip is working, but the text is still being affected by your h1 color, so you’ll now force this color to be transparent,so type:
+
+
+<pre>
+  <code>
+-webkit-text-fill-color: transparent;
+  </code>
+  </pre>
+
+
+<p>That’s the effect! (PAUSE) The outline of your text is now clipping the image and you could use this as is: However, I promised you a quick explanation: this clip class is nested inside a CSS Feature Query and what this syntax does is test a browser to see if it supports these two features <code><pre>(-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) </code></pre>. Both of these are actually well supported in most modern browsers. However there are some exceptions, and older browsers definitely don’t support this CSS. So it’s important you have a fallback style and in this case the fallback is that the first h1 style is what those users see. So, no clipping effect, in fact no image: just the plain h1 style that we saw at the beginning. </p>
+
+<p>Now, if you want to learn more about how CSS feature queries actually work, be sure to check out the Resources section for this video.</p>
+
+<p>Ok, back to our effect, a few things to realize here, if you wanted to reposition this image, you could do so with background-position, here I’m toggling the the vertical offset between 0 and 80% so you can see how the image moves. In this particular image the background position doesn’t really change much so just delete the whole line, but it may come in useful for future projects.</p>
+
+<p>So this is the main effect and you could just stop here, but you’re not going to do that, you’re going to go a little further! </p>
+
+<p>Let’s swap the background image for a background gradient. Luckily, wow, I happen to have one here in my clipboard! I don’t expect you to type all this so you can just sit back an watch. What we have here is a linear gradient that transitions from light green to dark green and back to light green. </p>
+
+<pre><code>background-image: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(77,161,87,1) 28%, rgba(101,207,68,1) 69%, rgba(255,255,255,1) 79%);</code></pre>
+
+<p>But what else could we do here? Let’s try an SVG background image. That’s novel! Again, I happen to have something handy in my clipboard and I’m going to add this big mess of code here which is a vector SVG. We don’t really have enough time to talk about the details here, but you can experiment with adding your own patterns using a site like heropatterns.com/ or svgbackgrounds.com/ </p>
+
+<p>One thing you’ll notice is that with a transparent SVG such as this one you can also add a different background color like so to make things more interesting.</p>
+
+<p>Now at this point it’s possible that some of you might be thinking “Jeremy, man is there anyway you could take this further?” could you, for example, add a text shadow? Um, that’s really a terrible idea, for multiple reasons.</p>
+
+<p>So we should do it.</p>
+
+<p>Let’s see what happens.In our clip class if you add the text-shadow property and give it some values here: 8 pixel, 8 pixel, 2 pixel and the color blue, that looks, umm not great? 
+<code>text-shadow: 8px 8px 2px rgba(0,0,255, 1);</code>
+</p>
+
+<p>Let’s try changing the opacity value from 1 to 0.2 like so
+<code>
+text-shadow: 8px 8px 2px rgba(0,0,255, 0.2);
+  </code>
+</p>
+<p>There might be some potential there if you keep playing around? Honestly I’m not so sure so I’m just going to delete it all. The point I wanted to make is you can experiment with all sorts of background images and effects until you end up with something that you like.</p>
+
+<p>That’s it for now, thanks for watching. I hope you found it useful. If you like this Take Five clip be sure to check out the rest of the series and also check out our entire course catalog at Gymnasium. I hope to see you there! Take care.</p>
+
