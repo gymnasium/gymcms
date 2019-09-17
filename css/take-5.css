@@ -1,0 +1,622 @@
+/* --- !override / reset / all initial --- */
+
+#content > .container,
+#content > .container > .row,
+#content > .container > .row > .col-md-12 {
+align-content:stretch;align-items:stretch;align-self:auto;animation-delay:0s;animation-direction:normal;animation-duration:0s;animation-fill-mode:none;animation-iteration-count:1;animation-name:none;animation-play-state:running;animation-timing-function:ease;backface-visibility:visible;background-blend-mode:normal;block-size:auto;border-block-end-color:currentcolor;border-block-end-style:none;border-block-end-width:medium;border-block-start-color:currentcolor;border-block-start-style:none;border-block-start-width:medium;border-collapse:separate;border-image-outset:0s;border-image-repeat:stretch;border-image-slice:100%;border-image-source:none;border-image-width:1;border-inline-end-color:currentcolor;border-inline-end-style:none;border-inline-end-width:medium;border-inline-start-color:currentcolor;border-inline-start-style:none;border-inline-start-width:medium;border-spacing:0;bottom:auto;box-decoration-break:slice;box-shadow:none;box-sizing:content-box;break-after:auto;break-before:auto;break-inside:auto;caption-side:top;caret-color:auto;clear:none;clip:auto;clip-path:none;color:initial;column-count:auto;column-fill:balance;column-gap:normal;column-rule-color:currentcolor;column-rule-style:none;column-rule-width:medium;column-span:none;column-width:auto;content:normal;counter-increment:none;counter-reset:none;cursor:auto;display:inline;empty-cells:show;filter:none;flex-basis:auto;flex-direction:row;flex-grow:0;flex-shrink:1;flex-wrap:nowrap;float:none;font-family:initial;font-feature-settings:normal;font-kerning:auto;font-language-override:normal;font-size:medium;font-size-adjust:none;font-stretch:normal;font-style:normal;font-synthesis:weight style;font-variant:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-weight:400;grid-auto-columns:auto;grid-auto-flow:row;grid-auto-rows:auto;grid-column-end:auto;grid-column-gap:0;grid-column-start:auto;grid-row-end:auto;grid-row-gap:0;grid-row-start:auto;grid-template-areas:none;grid-template-columns:none;grid-template-rows:none;height:auto;hyphens:manual;image-orientation:0deg;image-rendering:auto;image-resolution:1dppx;ime-mode:auto;inline-size:auto;isolation:auto;justify-content:flex-start;left:auto;letter-spacing:normal;line-break:auto;line-height:normal;margin-block-end:0;margin-block-start:0;margin-inline-end:0;margin-inline-start:0;mask-clip:border-box;mask-composite:add;mask-image:none;mask-mode:match-source;mask-origin:border-box;mask-position:0 0;mask-repeat:repeat;mask-size:auto;mask-type:luminance;max-height:none;max-width:none;min-block-size:0;min-height:0;min-inline-size:0;min-width:0;mix-blend-mode:normal;object-fit:fill;object-position:50% 50%;offset-block-end:auto;offset-block-start:auto;offset-inline-end:auto;offset-inline-start:auto;opacity:1;order:0;orphans:2;outline-color:initial;outline-offset:0;outline-style:none;outline-width:medium;overflow:visible;overflow-wrap:normal;overflow-x:visible;overflow-y:visible;padding-block-end:0;padding-block-start:0;padding-inline-end:0;padding-inline-start:0;page-break-after:auto;page-break-before:auto;page-break-inside:auto;perspective:none;perspective-origin:50% 50%;pointer-events:auto;position:static;quotes:initial;resize:none;right:auto;ruby-align:space-around;ruby-merge:separate;ruby-position:over;scroll-behavior:auto;scroll-snap-coordinate:none;scroll-snap-destination:0 0;scroll-snap-points-x:none;scroll-snap-points-y:none;scroll-snap-type:none;shape-image-threshold:0;shape-margin:0;shape-outside:none;tab-size:8;table-layout:auto;text-align:initial;text-align-last:auto;text-combine-upright:none;text-decoration-color:currentcolor;text-decoration-line:none;text-decoration-style:solid;text-emphasis-color:currentcolor;text-emphasis-position:over right;text-emphasis-style:none;text-indent:0;text-justify:auto;text-orientation:mixed;text-overflow:clip;text-rendering:auto;text-shadow:none;text-transform:none;text-underline-position:auto;top:auto;touch-action:auto;transform:none;transform-box:border-box;transform-origin:50% 50% 0;transform-style:flat;transition-delay:0s;transition-duration:0s;transition-property:all;transition-timing-function:ease;vertical-align:baseline;visibility:visible;white-space:normal;widows:2;width:auto;will-change:auto;word-break:normal;word-spacing:normal;word-wrap:normal;writing-mode:horizontal-tb;z-index:auto;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;background:0 0;border-color:currentcolor;border-radius:0;border-style:none;border-width:medium;list-style:disc;margin:0;padding:0;
+}
+
+/* --- smooth scrolling --- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- flexible images --- */
+
+main img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+main figure {
+  text-align: center;
+  overflow: hidden;
+}
+
+main figcaption {
+  text-align: left;
+}
+
+/* remove border from linked images  */
+
+[role="main"] a.img-link:hover {
+  border-bottom: none;
+}
+
+/* gym button */
+
+[role="main"] .gym-button {
+  width: auto !important; /* !override / shrink-wrap */
+  padding: 1.2em 2.2em !important; /* !override */
+  border-radius: 3px;
+}
+
+/* gym text */
+
+[role="main"] a.gym-link-secondary {
+  color: inherit;
+  border-bottom: 2px solid #f8971d;
+}
+
+[role="main"] a.gym-link-secondary:hover,
+[role="main"] a.gym-link-secondary:focus {
+  color: inherit;
+  border-bottom: 2px solid #444 !important; /* ! */
+}
+
+/* --- #main --- */
+
+/* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
+
+#main {
+  font-size: 16px;
+}
+
+[role="main"] .main-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* !override / reset/rescale font-size adjustment */
+
+#main .gym-button {
+  font-size: 105%;
+}
+
+/* !override / color */
+
+#main .gym-button b {
+  color: #fff;
+}
+
+#main .gymlink,
+#main .gymlink * {
+  color: #f8971d;
+}
+
+/* !override / remove padding-bottom  */
+
+#main .container-fluid {
+  padding-bottom: 0;
+}
+
+
+/* --- typography --- */
+
+/* headings / margin reset */
+
+[role="main"] h1,
+[role="main"] h2,
+[role="main"] h3,
+[role="main"] h4,
+[role="main"] h5,
+[role="main"] h6 {
+  color: #222;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+[role="main"] h1 {
+  letter-spacing: .025em;
+}
+
+[role="main"] h2 {
+  letter-spacing: .015em;
+}
+
+#featured h3 {
+  letter-spacing: .035em;
+}
+
+[role="main"] h3 {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* paragraphs */
+
+[role="main"] p {
+  font: normal 1.15em/1.45 "Helvetica Neue", Helvetica, sans-serif;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+/* typographical details */
+
+#main .all-caps {
+  text-transform: uppercase;
+}
+
+#main .no-wrap {
+  color: inherit;
+  white-space: nowrap;
+}
+
+/* --- take-5 catalog --- */
+
+/* --- #about --- */
+
+/* !override background-color w/ ID selector/combinator */
+
+#about {
+  background-color: #d2d2d2;
+  padding-top: 1.6em;
+  padding-bottom: 1.6em;
+  border-bottom: 1px dashed #bbb;
+}
+
+#about * {
+  color: #222;
+}
+
+#about .banner-content {
+  background-color: inherit;
+  padding-bottom: 0;
+}
+
+#main h1,
+#main h2 {
+  font-weight: 900;
+}
+
+#main h1 {
+  font-size: 2.25em;
+}
+
+#about p {
+  font: normal 1.25em/1.45 "Helvetica Neue", Helvetica, sans-serif;
+  margin-top: .6em;
+}
+
+#main h2 {
+  font-size: 1.8em;
+  color: #222;
+}
+
+main h3 {
+  font-size: 1.4em;
+  line-height: 1.35;
+}
+
+#main .section header p {
+  color: #444;
+}
+
+/* --- section --- */
+
+.section {
+  padding-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.section header p {
+  font: normal 1.25em/1.45 "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.section-content {
+  background: #fff;
+  padding: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.section-content > header {
+  margin-bottom: 1.6em;
+}
+
+.section header {
+  margin-top: .6em;
+}
+
+.tutorial {
+  position: relative;
+  overflow: hidden;
+}
+
+#main .inactive-tutorial .artwork img {
+  visibility: hidden;
+}
+
+#main .inactive-tutorial a {
+  color: #ccc;
+}
+
+#main .inactive-tutorial header {
+  position: relative;
+}
+
+#main .inactive-tutorial header:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.tutorial figcaption {
+  display: none;
+}
+
+.inactive-tutorial figcaption {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.2em;
+}
+
+/* --- take-5 tutorial --- */
+
+.take-5--main {
+  background-color: #fff;
+}
+
+.take-5--main .embed-full-width {
+  background-color: #d2d2d2;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #bbb;
+}
+
+.take-5--info {
+  padding-top: 1.6em;
+  padding-bottom: 1.6em;
+}
+
+.take-5--info .title {
+  font-size: 2.05em;
+}
+
+.take-5--info .desscription {
+  font-size: 1.15em;
+}
+
+.take-5--info .instructor {
+  font-size: 1em;
+}
+
+.take-5--resources {
+  margin-top: 1.2em;
+}
+
+/* add #main for specificity override */
+
+#main .take-5--resources h2,
+#main .take-5--related h2 {
+  font-size: 1.55em;
+}
+
+#tutorial-resources p {
+  font-size: 1em;
+  margin-top: .5rem;
+}
+
+.take-5--resources-list {
+  padding-top: 1.2em;
+  border-top: 1px dashed #ccc;
+  margin-top: 1.4em;
+}
+
+.take-5--resources-list ul {
+  padding-left: 1.2em;
+  margin-top: 1em;
+}
+
+.take-5--resources-list li {
+  margin-top: .5em;
+}
+
+details.take-5--transcript {
+  margin-top: 1.2em;
+}
+
+.take-5--main summary {
+  cursor: pointer;
+}
+
+.take-5--main summary:focus {
+  outline: none;
+}
+
+.take-5--main summary b {
+  font-weight: normal;
+  font-family: sans-serif;
+  color: #f8971d;
+  vertical-align: -.05em;
+}
+
+.take-5--main summary:hover b,
+.take-5--main summary:focus b,
+.take-5--main summary:active b {
+  border-bottom: 1px solid #f8971d;
+}
+
+@media (max-width: 62em) {
+
+  .take-5--details {
+    margin-bottom: 1.2em;
+  }
+
+  .take-5--resources {
+    margin-top: 1em;
+  }
+
+  #tutorial-resources[open] {
+    padding-bottom: 1em;
+    border-bottom: 1px dashed #ccc;
+  }
+
+}
+
+@media (min-width: 62em) {
+
+  .take-5--main .col-md-4 {
+    float: right;
+  }
+
+  #tutorial-resources {
+    margin-top: 0;
+  }
+
+  #tutorial-resources summary {
+    pointer-events: none;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  #tutorial-resources summary b {
+    float: left;
+    font: 900 1.55em/1.2 "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
+    color: #222;
+    letter-spacing: .015em;
+    text-transform: uppercase;
+    visibility: visible;
+  }
+
+  #tutorial-resources summary:hover b,
+  #tutorial-resources summary:focus b,
+  #tutorial-resources summary:active b {
+    border-bottom: 0 none;
+  }
+
+}
+
+.take-5--related-content {
+  padding-bottom: 1.2em;
+  border-bottom: 1px dashed #ccc;
+  border-top: 1px dashed #ccc;
+}
+
+.take-5--related {
+  padding-top: 1.8em;
+  padding-bottom: 1em;
+}
+
+.take-5--related header:first-child {
+  margin-bottom: 1em;
+}
+
+.take-5--related section header {
+  margin-top: .6em;
+}
+
+.tutorial .artwork,
+.take-5--related .artwork {
+  text-align: center;
+  height: 0;
+  background-color: #d2d2d2;
+  padding-bottom: 44.444444444444444%;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.tutorial .artwork img,
+.take-5--related .artwork img {
+  display: inline-block;
+  margin-top: -5%;
+}
+
+/* --- links / buttons --- */
+
+/* cta / structure */
+
+.cta-message {
+  background-color: #fff;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.cta,
+.cta-message,
+.cta-message h2 {
+  text-align: center;
+}
+
+.cta {
+  margin-top: 1.2em;
+}
+
+/* back to top */
+
+.to-top-link {
+  margin-top: 1.2em;
+}
+
+.to-top-link b {
+  color: #444;
+}
+
+.to-top-link b::before {
+  display: inline-block;
+  content: "↑";
+  font-family: monospace, monospace;
+  vertical-align: baseline;
+  margin-right: .25em;
+}
+
+/* --- grid layout --- */
+
+/* --- legacy columns (inline-block) w/ breakpoints --- */
+
+.cols ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: -1.2em;
+  margin-bottom: 0;
+}
+
+.cols li {
+  margin-top: 1.2em;
+  overflow: hidden;
+}
+
+.cols-hr ul {
+  grid-gap: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.cols-hr li {
+  position: relative;
+  top: -1px;
+  border-top: 1px solid #ddd;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+}
+
+.cols-hr li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  width: 300%;
+  border-top: 1px solid #ddd;
+}
+
+
+@media (min-width: 40em) {
+
+  .cols {
+    padding-bottom: 1px; /* overflow height adjustment (hack) -- useful when nested content has border */
+    overflow: hidden;
+  }
+
+  .cols ul {
+    margin-left: -.6em;
+    margin-right: -.6em;
+  }
+
+  .cols ul li {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding-left: .6em;
+    padding-right: .6em;
+    margin-right: -4px;
+  }
+
+}
+
+@media (min-width: 58em) {
+
+  .cols ul li {
+    width: 50%;
+  }
+
+}
+
+@media (min-width: 64em) {
+
+  .cols ul li {
+    width: 33.333333333333333%;
+  }
+
+}
+
+/* --- modern columns (grid) --- */
+
+@supports (display: grid) {
+
+  .cols ul {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 0 1.2em;
+  }
+
+  @media (min-width: 36em) {
+
+    .cols-max-2 ul {
+      grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+    }
+
+    .cols-max-3 ul {
+      grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    }
+
+  }
+
+  @media (min-width: 48em) {
+
+    .cols ul {
+      grid-auto-rows: 1fr;
+    }
+
+  }
+
+/* override -- legacy layout -- start */
+
+  .cols {
+    padding-bottom: 0;
+  }
+
+  .cols,
+  .cols ul li {
+    overflow: visible;
+  }
+
+  .cols ul,
+  .cols ul li {
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .cols ul {
+    margin-left: 0;
+  }
+
+  .cols ul li {
+    display: inherit;
+    width: auto;
+    box-sizing: content-box;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* override -- legacy layout -- end */
+
+  /* --- cards (grid) --- */
+
+  .cols li {
+    display: inherit;
+  }
+
+}
