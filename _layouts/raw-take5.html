@@ -10,8 +10,11 @@
 
 <hr> <!-- Just an ugly delimiter for debugging -->
 
+{% if page.project_files == null and page.related_content == null  %}
+<h3><mark>No resources found!</mark></h3>
+{% else %}
 <h3>Resources</h3>
-
+{% endif %}
 {% if page.project_files !=null %}
 <h4>Project Files</h4> 
 {% if page.project_file_source !=null %}
@@ -25,6 +28,7 @@
 {% endif %}
 
 {% if page.related_content !=null %}
+{% if page.project_files !=null %}
 <h4>Related Content</h4>
 {% endif %}
 <ul>
@@ -32,6 +36,7 @@
     <li><a href="{{ item.url}}">{{item.label}}</a></li>
 {% endfor %}
 </ul>
+{% endif %}
 
 <hr> <!-- Just an ugly delimiter for debugging -->
 
@@ -54,6 +59,12 @@
 {% else %}
 <h3><mark>No transcript found!</mark></h3>
 {% endif %}
+
+<!-- Show related Take 5s -->
+{%- include /take5/related-take5s.html -%}
+<!-- Show related courses -->
+{%- include /take5/related-courses.html -%}
+
 </div>
 
 
