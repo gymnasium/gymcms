@@ -1,14 +1,16 @@
-{% include take5/video.html %}
-
-<div style="width: 70%"> <!-- a primitive constrainer to keep things sane while hacking -->
-<h1>{{ page.title }}</h1>
-<p>With {{ page.instructor }}</p>
+<link rel="stylesheet" href="https://deploy-preview-109--gymcms.netlify.com/css/take-5.css/">
+<main id="main" role="main">
 
 
+    {% include take5/video.html %}
 
-<p>{{ page.short_description }}</p>
 
-<hr> <!-- Just an ugly delimiter for debugging -->
+<h1 class="title all-caps">{{ page.title }}</h1>
+<p class="instructor">With {{ page.instructor }}</p>
+
+
+
+<p class="description">{{ page.short_description }}</p>
 
 {% if page.project_files == null and page.related_content == null  %}
 <h3><mark>No resources found!</mark></h3>
@@ -38,7 +40,6 @@
 </ul>
 {% endif %}
 
-<hr> <!-- Just an ugly delimiter for debugging -->
 
 
 <!-- Implementation Note                                                               //-->
@@ -62,11 +63,11 @@
 
 <!-- Show related Take 5s -->
 {%- include /take5/related-take5s.html -%}
+
 <!-- Show related courses -->
 {%- include /take5/related-courses.html -%}
 
-</div>
-
+</main>
 
 <!-- //
 Generated at: {{ site.time }}
