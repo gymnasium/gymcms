@@ -1,55 +1,39 @@
-<p>What’s up cool cats, welcome to a very special edition of our Take 5 tutorials where you’re you’re going to have a gas, chill out and turn this grayscale image of the famous jazz musician Thelonious Monk into a duotone like this. In honor of Monk, we’re recording this in our favorite hangout spot, so I encourage you to get a refreshing beverage of your own and follow along as we blow your mind with CSS mix-blend modes.</p>
-
-<p>Blend modes are something you might be familiar with from Photoshop where two layers can be blended together to create a new image. This method is similar but uses plain old HTML and CSS, no software required, you dig?</p>
-
-<p>This is the project on Codepen you’ll be working with and my workspace looks different because I’m using the DuoTone Dark theme, which our main daddy-o at Codepen Chris Coyier has conveniently added for us and here is the URL so you can follow along. You can also find the project link in the Resources section for this video.</p>
-
-<p>Unlike Photoshop, in CSS you don’t have layers, so you’ll see the image is nested in a div with the class of “duotone”. The styles for that class and the image declare the width of the div to 600 x 600 and the image to 100% width.</p>
-
-<p>I’ve grouped these styles together for you: duotone::before and duotone::after. These are pseudo elements, special selectors that allow you to insert content into a page using CSS. Typically you would insert content inside these quotes but you’re leaving it blank and the rest of the code fills the entire width and height of your div with an empty style that you can add a color to. The first color will be the highlight of your duotone. So type the following and pause the video if you have to, there ain’t no rush today</p>
-<pre><code>
-.duotone::after {
-	background-color: hsla(164, 50%, 50%, 1);
-  }
-</pre></code>
-<p>So check it out in hsla the value 164 is a blue-green hue, the first 50% is the saturation, the second 50% is the luminance and this 1 for transparency or alpha. The color covers your image, now you’ll blend it by typing:</p>
-<pre><code>
-mix-blend-mode: darken;
-</pre></code>
-<p>Can you dig it, man, that's crazy! It’s all about the maths my friends: The darken blend mode checks to see if the pixels in your color are darker than the ones in the image. If they *are* darker: then they stay.</p>
-
-<p>So try changing the effect with the luminance value. Try 20% luminance and your color affects more of the highlights, now try 80% and your color affects less of the highlights. Go ahead the luminance back to the original 50%, you can always mess around with it later.</p>
-
-<p>I want you now to turn this effect off temporarily by cutting the last bit of commenting code and pasting it at the end of this line. Now you’ll add a second color so type the following:</p>
-<pre><code>
-.duotone::before {
-	background-color: hsla(291, 50%, 50%, 1);
-  }
-</pre></code>
-<p>291 is a purple-pink hue, the saturation and lightness values are both 50%, and the alpha remains 1. Now type</p>
-<pre><code>
-mix-blend-mode: lighten;
-</pre></code>
-<p>This is the opposite effect of the first example. Here, all of the pixels in your color that are lighter than the background are retained which means the color primarily affects the shadows.</p>
-
-<p>Now what you’re about to do is really something else, man, cut and paste this commenting code back to the first line and you’ll see both colors and blend modes interacting with each other. There’s your duotone and now you’re swinging. </p>
-
-<p>Now you can just play around and see what happens, it’s like Jazz baby, a little improvisation never hurt noone: so try changing the lightness value of your highlight from 50 to 76%. </p>
-<pre><code>
-background-color: hsla(164, 50%, 76%, 1);
-</pre></code>
-<p>Out of sight right?, if that’s too much you can bring the lightness of your shadows down to 25%, for a more subtle duotone. It’s all up to you, just do your thing!</p>
-
-<p>One more thing you need to do which is kind of a drag: we gotta add some browser support for browsers that don’t support this cool effect. Type the following line above your highlight code</p>
-<pre><code>
-@supports (mix-blend-mode: darken) {
-</pre></code>
-<p>Be sure to add a closing curly brace at the very end</p>
-
-<p>For the second style add</p>
-<pre><code>
-@supports (mix-blend-mode: lighten) { and be sure to add the closing curly brace.
-</pre></code>
-<p>What it does is give browsers that don’t support the CSS mix-blend modes the original grayscale image, which is a bit of a bummer but at least they will get something, you dig?</p>
-
-<p>Thanks for watching, if you liked this video and want to learn more tips and tricks, check out our other Take 5 videos as well as the rest of the course catalog at Gymnasium.</p>
+<p>
+What's up, cool cats? Welcome to a very special edition of our "Take Five" tutorials, where you're going to have a gas. Chill out. Turn this grayscale image of the famous jazz musician Thelonious Monk into a duotone. Now, in honor of Monk, we're recording this in our favorite hangout spot. I encourage you to get a refreshing beverage of your own and follow along as we blow your mind. 
+</p>
+<p>
+The CSS mix-blend-modes-- blend-modes are something you might be familiar with from Photoshop, where two layers can be blended together to create a new image. This method is similar but uses straight-ahead HTML and CSS. No software required, you dig? 
+</p>
+<p>
+This is the project on CodePen you'll be working with. And my workspace, well, it looks a little different because I'm using the DuoTone Dark theme, which our mean daddy-o at CodePen, Chris Coyier, has conveniently added for us. So thank you, Chris. And here is the URL so you can follow along. You can also find the project link in the resources section for this video. 
+</p>
+<p>
+Now, unlike Photoshop, in CSS you don't have layers. So you'll see the images nested in the div, in the class of duotone. The styles for that class and the image declare the width of the div to 600 by 600. The image is 100% width. 
+</p>
+<p>
+I've grouped these styles together for you-- duotone before and duotone after. These are pseudo elements-- special selectors that allow you to insert content into a page using CSS. Typically, you would insert content inside these quotes. But you are leaving it blank. And the rest of this code fills the entire width and height of your div with an empty style so you can add a color to it. 
+</p>
+<p>
+The first color will be the highlight of your duotone. So type the following. Pause the video if you need to, because there ain't no rush, baby. So check it out. In HSLA, the value 164 is a blue green hue. The first 50% is the saturation. The second 50% is the luminance. And this 1, well, that's the transparency. This color now covers your image, and you're going to blend it by typing mix blend mode darken. Can you dig it, man? That is crazy. It's all about the maths, my friends. The Darken blend-mode checks to see if the pixels in your color are darker than the ones in the image. If they are darker, then they stay. You see what I'm saying? 
+</p>
+<p>
+So try changing the effect with the luminance value. Try 20% luminance and your color affects more of the highlights. Now try 80% and your color affects less. But just go ahead and put that luminance back to the original 50%. And you can always mess around with it later. 
+</p>
+<p>
+I want you to turn off this effect temporarily by cutting the last bit of commenting code, and pasting it here at the end of this line. You're going to add a second color by typing the following. 
+</p>
+<p>
+Now, 291 is just a purple-pink kind of color. The saturation and lightness are both 50%. Alpha remains 1. And now go ahead and type mix-blend-mode Lighten. This is the opposite effect. Here, all the pixels in your color that are lighter than the background are retained, which means the color primarily affects the shadows. 
+</p>
+<p>
+Now, what you're about to do is really something else, man. Cut and paste this comment and go back to the first line, and you'll see both colors and blend-modes interacting with each other. There's your duotone, and now you're swinging. 
+</p>
+<p>
+Try changing the lightness value of your highlight from 50% to 76%. Out of sight, right? If that's too much, you can bring the lightness of your shadows down to 25% for a more chill duotone. It's all up to you. Just do your thing. 
+</p>
+<p>
+One more thing you've got to do, which is kind of a drag-- we've got to add some browser support for browsers that don't support this cool effect. Type the following line above your highlight code. Be sure to add that closing curly brace at the very end. And then for the second one, type the following. And again, be sure to add that closing curly brace. All this does is give browsers that don't support CSS mix-blend-modes the original grayscale image. Yeah, it's a bit of a bummer. But at least they'll get something, right? 
+</p>
+<p>
+Thanks for watching. If you like this video and want to learn more, well, check out our other "Take Five" videos as well as the rest of our gig at Gymnasium. 
+</p>

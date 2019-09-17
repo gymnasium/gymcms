@@ -1,27 +1,27 @@
-<p>Hi there and welcome to Aquent Gymnasium’s Take 5 Series, where we show you in five minutes or less — a tip, trick, or technique that we think you’ll find useful. Today’s Take 5 is “How to Create a CSS Knockout Effect”.</p>
-
-<p>My name’s Jeremy Osborn and I’m the academic director of Gymnasium.</p>
-
-<p>So this is the effect you’ll be learning how to do and its known a “knockout” effect because it’s using the outline or shape of your text to knock out or mask an image giving it the effect of appearing within the characters.</p>
-
-<p>I’m going to be working on a <a href="https://codepen.io/josborn/pen/vMyyxg">CodePen project</a> and you can <a href="https://codepen.io/josborn/pen/vMyyxg">join me by visiting this URL</a>. To save time, I’ve already created a heading in HTML, and in the CSS there are a few simple rules which you should look over: so we have the <code>font-family</code>, <code>font-size</code>, a <code>background-image</code> which is 800 by 200 pixels, and note that the image is set to no-repeat, if that wasn’t there, the image would be tiling or repeating by default. Finally we have our text color set to darkblue.</p>
-
-<p>About that darkblue color: I want to point out that this effect I’m about to show you would work without this color, but we need it it here as a fallback for browsers that don’t support this effect. So for your own projects just make sure to choose a color that works well with the color scheme of your design.</p>
-
-<p>In the HTML you should add a css class named “clip” to your heading and now create a CSS class called <code>.clip</code> and now add the property <code>-webkit-background-clip</code> with the value of “text”. So now you will see a change in the image as the background image disappears, so this means the text is indeed clipping, but we’re not finished. Notice that the darkblue color is still visible, not the image, so the next step is make that color transparent and this can be accomplished with this style rule: <code>-webkit-text-fill-color: transparent;</code></p>
-
-<p>That’s the final effect, pretty cool right? The advantage we have now over an image editor is that it’s trivial to update the content like so: I’ll change the content here from the “The Web” to “The Cloud” like so.</p>
-
-<p>So that’s it, we could stop here, but we’re not going to do that, we’re going to go a little further and what if we wanted to use something different than a background image, sucha as a background gradient? Luckily, I happen to have one here in my clipboard and I’m going to add a linear gradient and you can see it goes from light blue to dark blue back to light blue. If you ever want to see what this looks like without the clipping effect you can remove the clip class like so and you can see the original non-clipped version. So that’s pretty useful.</p>
-
-<p>But what else could we do in there? Let’s try an SVG background image. That’s novel! Again, I happen to have something handy in my clipboard and I’m going to add this big mess of code here and this an SVG background image. We don’t really have enough time to talk about what that is, it’s just a cool thing you can use as a web graphic.</p>
-
-<p>Let’s go ahead and again see what this looks like without being clipped, so we’re going to remove the clip class and you can see it’s a just a big graphic with a pattern and if we wanted it to repeat, remember how we talked about that, we could choose background-repeat:repeat and this gives us a tiling background image. But let’s put that clip back and there’s our final effect.</p>
-
-<p>So at this point it’s possible that some of you might be thinking “How could I take this further?” could you, for example, add a text shadow to this? That’s actually a really terrible idea, for multiple reasons.</p>
-
-<p>So we should do it.</p>
-
-<p>Let’s just see what happens. So in our clip class if we add <code>text-shadow</code> and give it some values here: 8 pixel, 8 pixel, 2 pixel and the color blue, that looks, ok? I don’t actually it looks a little weird and you could probably do this without the clipping mask at all, but what if we played around with the opacity values. Let’s change that last value from <code>1</code> to <code>0.2</code>. That’s kind of cool. Maybe that’s something? I don’t know, I don’t recommend you do it, this is probably a really bad idea. (But if you do do it, let me know, I want to see it.)</p>
-
-<p>That’s it for now, thanks for watching I hope you found it useful. If you like this Take Five clip be sure to check out the rest of the series and also check out our entire course catalog at Gymnasium where we feature more in-depth classes such as this one <a href="https://thegymnasium.com/courses/GYM/107/0/about"><cite>Modern Web Design</cite></a> where instructor Aaron Gustafson shows you what it takes to be a modern front end developer these days. <em>I hope to see you there! Take care.</em></p>
+<p>
+In today's Take Five, you're going to make a scrolling background image effect as seen here. This effect is similar to the parallax effect that can be found on many places across the web, such as this one. Your version will be using the CSS background size cover and background attachment fixed features, as well as a sprinkling of viewport height, or vh units. Here's the project on CodePen you'll be working with, and here's the URL, which you can also find linked within the resources section for this video. 
+</p>
+<p>
+In your HTML, you'll see three divs, each has the class of bg and an individual ID name-- bg-1, bg-2, and bg-3. And there's also a fourth div with the class of content. In the CSS, the div style has a thin black border to help you visualize the divs, and the height is set to 200 pixels. The bg class has this background-repeat value set to no-repeat, which means the images only show up once. And then last, notice that each ID points to a background image. 
+</p>
+<p>
+Now I set the div height to 200 pixels on purpose. I wanted to show you that it's not obvious that the height of all background images are actually 550 pixels. Increase the height of the divs to 300 pixels to reveal more image. Increase it to 600 pixels, and you'll see the entire image, as well as an extra 50 pixels of space. Now you'll be revisiting that height in a second. But first, center the images in the bg style by typing background position center center. 
+</p>
+<p>
+Next, add the background size property and give it a value of cover. The background size property with the value of cover scales the image as large as possible without stretching the width or height. Now, if you're using this technique, here's some things to be careful of. If you take a small postage stamp image like this one and scale it up to full page, it's going to look like garbage. On the flip side, if you use a high resolution image, it's going to look great at full size but your user pays a performance penalty by being forced to download unnecessarily large images. So please take the time to find the right balance between image quality and image size for your projects. 
+</p>
+<p>
+Now back in your project, you can see how the images now cover the entire span of the div to the degree possible. Go ahead and add this additional height property and value after the original one-- height, 90vh. So the 600 pixel value is being left for fallback reasons. A modern browser will use the vh unit because its last in order. An older browser that doesn't support vh units will ignore the vh unit and use the 600 pixel value. You may not be used to vh units, so save your project and go into the full-view mode while I explain. 
+</p>
+<p>
+One vh unit is equal to 1% of the viewports initial containing block. This means that 90 vh forces the height of your divs to 90% of the viewport or browser window. You can actually see this in the full page view. If you scroll all the way to the top, you can see the bottom of the first div ends here at 90% height. This remaining 10% here is the top of your second div. Scrolling down, you can see all your divs will be the exact same height. 
+</p>
+<p>
+So now, change your view back to the editor. And you'll add the real star of the show. Go ahead and type background-attachment fixed. So the fixed value forces the background images to stay where they are. If you save your document and go into the full-view mode, you can see this happening. So it's kind of disorienting but also kind of cool. What's effectively happening is the divs are moving but the background images don't. Keep in mind these are just decorative background images. There's no content inside your divs. 
+</p>
+<p>
+We don't have time to explore what else you could do with that. But as a quick example, copy the very last div and paste it between divs 2 and 3. And then go ahead and save and preview in full view. Now one major catch to be aware of, there's a big problem with most mobile browsers and this effect. On canIuse. com, you can see that the combination of background attachment fixed and background size cover simply don't work on iOS. 
+</p>
+<p>
+There are some workarounds to address this, but we don't have time to cover them in this video. If you need to dive into those fixes, however, check our resources section for help. And that's it for now. Thanks for watching. If you like this video and want to learn more CSS skills, be sure to check out our other Take Five videos, as well as the rest of the course catalog at Gymnasium. 
+</p>
