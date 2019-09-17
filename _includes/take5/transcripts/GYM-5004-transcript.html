@@ -1,59 +1,36 @@
-<p>In today’s Take 5, “Working with CSS Feature Queries” you’re going to learn how to use cutting edge CSS  features for modern browsers while simultaneously making sure that older browsers have a decent visual fallback. </p>
-
-<p>This is the project on Codepen you’ll be working with and here is the URL which you can also find linked within the Resources section for this video.</p>
-
-<p>In the html there is a h1 tag with the class of clip, and in the CSS you have the styles for this heading as well as the clip class. This CSS uses webkit-background-clip and webkit-text-fill-color to create this cool effect where we see a background image being clipped by the word “Feature Queries”. However, this tutorial isn’t about making that effect, it is about testing whether a browser supports those two webkit features, which are relatively new. Here’s this page in IE9. I think you’ll agree that this is not a good look: the fallback appearance is pretty bad,  almost unreadable. </p>
-
-<p>Back in our code we can see why, IE is fine with all the styles inside the h1, but when it hits the clip class selector, it freaks out and ignores it. </p>
-
-<p>Just to be clear, older versions of Chrome, Firefox, Safari will have similar problems with, not just IE. Enter the feature query! Which works like this:
-First, it tests whether a browser supports a specific feature (or features). And then: If the feature or features are supported, specific CSS rules are applied.
+<p>
+In today's Take Five, Working with CSS Feature Queries, you're going to learn how to use cutting edge CSS features for modern browsers while simultaneously making sure that older browsers have a decent visual fallback. 
 </p>
-<p>So now you’ll write one:</p>
-<p>Immediately above the clip class selector type the following</p>
-<pre><code>
-@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent)
-</pre></code>
-<p>You’ll  also need to type a left curly brace like so. If your code editor automatically adds a closing curly brace, cut and paste it to the very end and now your original style is nested inside a feature query. Congratulations, you’re almost done!</p>
-<pre><code>
-@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent){
-.clip {
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  }
-}
-</pre></code>
-<p>This syntax can be interpreted like so:  if the support for both this feature and this feature are true, then go ahead and apply whatever CSS styles are inside.</p>
-
-<p>Yet, if you tested this page right now, it would still look like this because the h1 has a background image style applied to it. You simply need to cut and paste this style into your feature query and it will be ignored by a browser that doesn’t support the two features or simply doesn’t understand what a feature query is, which is the case with IE9</p>
-<pre><code>
-.clip {
-	background: white url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/76301/grunge-bg.png');
-  	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  }
-}
-</pre></code>
-<p>If you’re using a modern browser absolutely nothing has changed visually: Awesome tutorial right? You’ve done nothing! Well, notice that I put this background style before the two webkit styles, but if I were to put it here at the end, I’m in a world of hurt, my text and effect disappears. That’s because your background style is now overriding these two, which you dont want that, so put it back.</p>
-
-<p>The big idea here, is that the typical cascade and inheritance you are used to is still important inside your feature query. So pay attention to the order of your style rules.</p>
-
-<p>The real test is to see how this works in an older browser.  I’m using an online browser testing service of which there many out there. However, you shouldn’t test your Codepen, I recommend putting your code into standard HTML document hosted elsewhere. Although Codepen is great, it’s not really designed for cross-browser testing.</p>
-
-<p>Here is the original HTML & CSS and here is the final HTML and CSS which uses the feature query. In this final version, sure, the IE9 user doesn’t get the fancy background-clip effect, however,  feature query version is much more readable and the color of the heading would still fit into the page design.</p>
-
-<p>You might also be wondering where else feature queries come in useful, one popular use at the moment is for CSS Grid Layout. In this scenario you could test to see if a browser supports display:grid. If it does, then go ahead and use all this cool new grid code. If the browser doesn’t support display:grid, then use some sort of fallback code.</p>
-<pre><code>
-  @supports (display: grid) {
-.card {
-   	 display: grid;
-   	 grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
-    }
-</pre></code>
-<p>Meanwhile, just like our tutorial we have some fallback code sitting above our supports code</p>
-<pre><code>
-.card {
-*/Some fallback code here/*
-}
-</pre></code>
-<p>CSS Feature Queries will likely become more and more useful as the web continues to become more complex. I hope you learned a little about how they worked, if you like this video and want to learn more stuff, be sure to check out our other Take 5 videos as well as the rest of the course catalog at Gymnasium.</p>
+<p>
+This is the project on Code Pen you'll be working with. And here's the URL, which you can also find linked within the Resources section for this video. In the HTML, there is an H1 tag with the class of clip. And in the CSS, you have the styles for this heading as well as the clip class. 
+</p>
+<p>
+Now the CSS uses WebKit background clip and WebKit text fill color to create this cool effect where we see the background image being clipped by the word Feature Queries. However, this tutorial isn't about making that effect. It's about testing whether a browser supports these two WebKit features, which are relatively new. 
+</p>
+<p>
+So here's this page in IE9, and I think you'll agree this is not a good look. The fallback appearance here is pretty bad, in fact, almost unreadable. Back in our code, we can see why. IE9 is fine with all the styles inside the H1, but when it hits the Clip Class Selector, it freaks out and simply ignores it. So just to be clear, older versions of Chrome, Firefox, Safari will all have similar problems, not just IE. 
+</p>
+<p>
+Enter the Feature Query, which works like this. First, it tests whether a browser supports a specific feature or features. And then if the feature or features are supported, specific CSS rules are applied. 
+</p>
+<p>
+So now you're going to write one. Immediately above the Clip Class Selector, type the following. @supports WebKit Background Clip Text and WebKit Text Fil Color Transparent. You'll also need to type a left curly brace like so. If your Code Editor automatically adds one, simply cut and paste it to the very end. And now your original style is nested inside a feature query. Congratulations, you are almost done. 
+</p>
+<p>
+The syntax can be interpreted like so. If the support for both this feature and this feature are true, then go ahead and apply whatever CSS styles are inside. And yet if you tested this page right now, it would still look like this because the H1 has a background image style applied to it. You simply need to cut and paste this style into your feature query, and it will be ignored by a browser that does not support these features or simply doesn't understand what a feature query is. 
+</p>
+<p>
+So if you're using a modern browser, absolutely nothing has changed visually at this point. Awesome tutorial, right? You've done nothing. Well, actually, you have. Notice that I put this background style before the two WebKit styles. But if I were to put it here at the end, I'm in a world of hurt. My text, in effect, disappears. That's because your background style is now overriding these two, which you don't want. So go ahead and put it back. 
+</p>
+<p>
+The big idea here is that cascade and inheritance is still important inside your feature query, so pay attention to the order of your style rules. The real test is to see how this works in an older browser. I'm using an online browser testing service, of which there are many out there. However, you shouldn't test your Code Pen. I recommend putting your code into standard HTML and host that elsewhere. Code Pen is great. It's not really designed for cross-browser testing. 
+</p>
+<p>
+Here's the original HTML and CSS, and here is the final HTML and CSS, which uses the feature query. In this final version, sure, the IE9 user does not get that fancy background clip effect. However, the feature query version is much more readable, and the color of the heading would still fit into the page design. 
+</p>
+<p>
+So you might be wondering where else feature queries come in useful. One popular use at the moment is for CSS grid layout. In this scenario, you could test to see if a browser supports display grid. If it does, then go ahead and use all this cool new grid code. If the browser doesn't support display grid, then use the fallback. 
+</p>
+<p>
+So that's it. CSS Feature Queries will likely become more and more useful as the web continues to become more complex. I hope you learned a little bit about how they worked. If you like this video and want to learn more stuff, be sure to check out our other Take Five videos as well as the rest of the course catalog at Gymnasium. 
+</p>
