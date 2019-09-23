@@ -264,41 +264,41 @@ main h3 {
 
 /* --- take-5 tutorial --- */
 
-.take-5--main {
+.take5--main {
   background-color: #fff;
 }
 
-.take-5--main .embed-full-width {
+.take5--main .embed-full-width {
   background-color: #d2d2d2;
   border-top: 1px solid #444;
   border-bottom: 1px solid #bbb;
 }
 
-.take-5--info {
+.take5--info {
   padding-top: 1.6em;
   padding-bottom: 1.6em;
 }
 
-.take-5--info .title {
+.take5--info .title {
   font-size: 2.05em;
 }
 
-.take-5--info .desscription {
+.take5--info .desscription {
   font-size: 1.15em;
 }
 
-.take-5--info .instructor {
+.take5--info .instructor {
   font-size: 1em;
 }
 
-.take-5--resources {
+.take5--resources {
   margin-top: 1.2em;
 }
 
 /* add #main for specificity override */
 
-#main .take-5--resources h2,
-#main .take-5--related h2 {
+#main .take5--resources h2,
+#main .take5--recommended h2 {
   font-size: 1.55em;
 }
 
@@ -307,53 +307,54 @@ main h3 {
   margin-top: .5rem;
 }
 
-.take-5--resources-list {
+.take5--resources-list {
   padding-top: 1.2em;
   border-top: 1px dashed #ccc;
   margin-top: 1.4em;
 }
 
-.take-5--resources-list ul {
+.take5--resources-list ul {
+  list-style: disc;
   padding-left: 1.2em;
   margin-top: 1em;
 }
 
-.take-5--resources-list li {
+.take5--resources-list li {
   margin-top: .5em;
 }
 
-details.take-5--transcript {
+details.take5--transcript {
   margin-top: 1.2em;
 }
 
-.take-5--main summary {
+.take5--main summary {
   cursor: pointer;
 }
 
-.take-5--main summary:focus {
+.take5--main summary:focus {
   outline: none;
 }
 
-.take-5--main summary b {
+.take5--main summary b {
   font-weight: normal;
   font-family: sans-serif;
   color: #f8971d;
   vertical-align: -.05em;
 }
 
-.take-5--main summary:hover b,
-.take-5--main summary:focus b,
-.take-5--main summary:active b {
+.take5--main summary:hover b,
+.take5--main summary:focus b,
+.take5--main summary:active b {
   border-bottom: 1px solid #f8971d;
 }
 
 @media (max-width: 62em) {
 
-  .take-5--details {
+  .take5--details {
     margin-bottom: 1.2em;
   }
 
-  .take-5--resources {
+  .take5--resources {
     margin-top: 1em;
   }
 
@@ -366,7 +367,7 @@ details.take-5--transcript {
 
 @media (min-width: 62em) {
 
-  .take-5--main .col-md-4 {
+  .take5--main .col-md-4 {
     float: right;
   }
 
@@ -397,27 +398,27 @@ details.take-5--transcript {
 
 }
 
-.take-5--related-content {
+.take5--recommended-content {
   padding-bottom: 1.2em;
   border-bottom: 1px dashed #ccc;
   border-top: 1px dashed #ccc;
 }
 
-.take-5--related {
+.take5--recommended {
   padding-top: 1.8em;
   padding-bottom: 1em;
 }
 
-.take-5--related header:first-child {
+.take5--recommended header:first-child {
   margin-bottom: 1em;
 }
 
-.take-5--related section header {
+.take5--recommended section header {
   margin-top: .6em;
 }
 
 .tutorial .artwork,
-.take-5--related .artwork {
+.take5--recommended .artwork {
   text-align: center;
   height: 0;
   background-color: #d2d2d2;
@@ -427,7 +428,7 @@ details.take-5--transcript {
 }
 
 .tutorial .artwork img,
-.take-5--related .artwork img {
+.take5--recommended .artwork img {
   display: inline-block;
   margin-top: -5%;
 }
