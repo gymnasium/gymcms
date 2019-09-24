@@ -1,0 +1,140 @@
+<!-- 👇THESE ARE JUST HERE FOR TESTING! -->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://thegymnasium.com/static/gymnasium/css/lms-style-vendor.css">
+<link rel="stylesheet" href="https://thegymnasium.com/static/gymnasium/css/lms-main-v1.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://jgagne.github.io/gym-take-5/details-page/css/fonts.css">
+<link rel="stylesheet" href="https://deploy-preview-109--gymcms.netlify.com/css/take-5.css">
+
+<!-- ☝️THESE ARE JUST HERE FOR TESTING! -->
+
+
+{% for take5_hash in site.data.take5s %}
+    {% assign take5s = take5_hash[1] %}
+
+        {% for item in take5s %}
+
+            {% if item.course_ID == page.course_ID %}
+                {% assign course = item %}
+            {% endif %}    
+
+        {% endfor %}
+{% endfor %}
+
+<main id="main" role="main">
+
+{%- comment -%}
+//
+// VIDEO
+//
+{%- endcomment -%}
+
+{% include take5/video.html video_ID=course.video_ID %}
+
+
+<h1 class="title all-caps">{{ course.title }}</h1>
+
+<p class="instructor">With {{ course.instructor }}</p>
+
+<p class="description">{{ course.short_description }}</p>
+
+{%- comment -%}
+//
+// RELATED CONTENT
+// (Code and other links)
+//
+{%- endcomment -%}
+
+{% if course.project_files == null and course.related_content == null  %}
+<h3><mark>No resources found!</mark></h3>
+{% else %}
+<h3>Resources</h3>
+{% endif %}
+{% if course.project_files !=null %}
+<h4>Project Files</h4> 
+{% if course.project_file_source !=null %}
+<p>On {{ course.project_file_source }}</p>
+{% endif %}
+<ul>
+{% for item in course.project_files %}
+    <li><a href="{{ item.url}}">{{item.label}}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% if course.related_content !=null %}
+{% if course.project_files !=null %}
+<h4>Related Content</h4>
+{% endif %}
+<ul>
+{% for item in course.related_content %}
+    <li><a href="{{ item.url}}">{{item.label}}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
+
+
+{%- comment -%}
+//
+// TRANSCRIPT
+//
+// Implementation Note
+//
+// This directive pulls in the html fragment with the transcript
+// Each Take5 has an associated transcript file in _includes/take5/transcripts/
+{%- endcomment -%}
+
+{%- comment -%}
+// Constructs the path to the associated transcript file
+// Checks that the transcript exists for this lesson before attempting the include
+{%- endcomment -%}
+
+{% assign transcript = course.course_ID | prepend: '/take5/transcripts/' | append: '-transcript.md' %}
+{% capture transcript_test %}{% file_exists {{transcript | prepend: '_includes/'}} %}{% endcapture %}
+
+{% if transcript_test =="true" %}
+
+{%- comment -%}
+// Gets the content of the transcript (markdown) and renders it in HTML
+{%- endcomment -%}
+
+{% capture this_transcript %}
+{%- include {{transcript}} -%}
+{% endcapture %}
+
+{%- comment -%}
+// Includes the transcript — rendered in HTML
+{%- endcomment -%}
+<details>
+    <summary>View Transcript</summary>
+    {{this_transcript | markdownify}}
+</details>
+{% else %}
+<h3><mark>No transcript found!</mark></h3>
+{% endif %}
+
+{%- comment -%}
+//
+// RECOMMENDED COURSES
+//
+// Show recommended content modules (Take 5s and courses)
+// Set rec-take5 and rec-courses to true/false to toggle the display
+{%- endcomment -%}
+{% capture rec_content_test %}{% file_exists _includes/take5/recommended-content.html %}{% endcapture %}
+
+{% if rec_content_test =="true" %}
+{%- include /take5/recommended-content.html rec-take5=true rec-courses=true -%}
+{% else %}
+<h3><mark>No recommended content found!</mark></h3>
+{% endif %}
+
+
+</main>
+
+<!-- //
+Generated at: {{ site.time }}
+Served from: {{ page.url | absolute_url }}
+Git Hash: {{ site.data['hash']}}
+// -->
