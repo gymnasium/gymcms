@@ -1,30 +1,31 @@
 ---
-- course_ID: GYM-5002
-  title: "Creating a CSS Knockout Text Effect"
-  course_type: take5
-  url: /static/take5/GYM-5002/
-  art: https://jgagne.github.io/gym-take-5/catalog-page/img/video-posters/web-design/gym-take-5-007.png
-  topic: 'Web Design & Development'
-  live: true
-  instructor: "Jeremy Osborn"
-  video_ID: Q66-TDbHiIs
-  poster_art:
-  featured: false
-  short_description: "<strong>In this video tutorial, you’ll learn how to lorem your ipsum with CSS.</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-  project_file_source: Codepen
-  project_files:
-  - label: Starting Project
-    url: https://codepen.io/josborn/pen/vMyyxg
-  - label: Completed Project
-    url: https://codepen.io/josborn/pen/YMVdVe
-  related_content:
-  - label: 'heropatterns.com'
-    url: 'https://heropatterns.com'
-  - label: 'svgbackgrounds.com'
-    url: 'https://svgbackgrounds.com'
-  - label: 'https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/'
-    url: 'https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/'
-  - label: 'Can I Use: CSS3 Background-image options'
-    url: 'https://caniuse.com/#feat=background-img-opts'
+course_ID: GYM-5002
+title: "Creating a CSS Knockout Text Effect"
+course_type: take5
+url: /static/take5/GYM-5002/
+art: https://jgagne.github.io/gym-take-5/catalog-page/img/video-posters/web-design/gym-take-5-007.png
+og_art: https://jgagne.github.io/gym-take-5/catalog-page/img/video-posters/web-design/gym-take-5-007.png
+poster_art: https://jgagne.github.io/gym-take-5/catalog-page/img/video-posters/web-design/gym-take-5-007.png
+topic: 'Web Design & Development'
+live: true
+instructor: "Jeremy Osborn"
+video_ID: Q66-TDbHiIs
+featured: false
+short_description: "<strong>In this video tutorial, you’ll learn how to lorem your ipsum with CSS.</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+project_file_source: Codepen
+project_files:
+- label: Starting Project
+  url: https://codepen.io/josborn/pen/vMyyxg
+- label: Completed Project
+  url: https://codepen.io/josborn/pen/YMVdVe
+related_content:
+- label: 'heropatterns.com'
+  url: 'https://heropatterns.com'
+- label: 'svgbackgrounds.com'
+  url: 'https://svgbackgrounds.com'
+- label: 'https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/'
+  url: 'https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/'
+- label: 'Can I Use: CSS3 Background-image options'
+  url: 'https://caniuse.com/#feat=background-img-opts'
 
 ---

@@ -1,20 +1,21 @@
 ---
-- course_ID: GYM-5004
-  title: "Working with CSS Feature Queries"
-  course_type: take5
-  url: /static/take5/GYM-5004/
-  art: https://jgagne.github.io/gym-take-5/catalog-page/img/video-posters/web-design/gym-take-5-004.png
-  topic: "Web Design & Development"
-  live: true
-  instructor: 'Jeremy Osborn'
-  video_ID: VaHkQQ5xgac
-  poster_art:
-  featured: false
-  short_description: "<strong>In this video tutorial, you’ll learn how to lorem your ipsum with CSS.</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-  project_file_source: Codepen
-  project_files:
-  - label: Starting Project
-    url: https://codepen.io/josborn/pen/vwPoYE
-  - label: Completed Project
-    url: https://codepen.io/josborn/pen/oRVrOR
+course_ID: GYM-5004
+title: "Working with CSS Feature Queries"
+course_type: take5
+url: /static/take5/GYM-5004/
+art: https://jgagne.github.io/gym-take-5/catalog-page/img/video-posters/web-design/gym-take-5-004.png
+og_art: https://jgagne.github.io/gym-take-5/catalog-page/img/video-posters/web-design/gym-take-5-004.png
+topic: "Web Design & Development"
+live: true
+instructor: 'Jeremy Osborn'
+video_ID: VaHkQQ5xgac
+poster_art:
+featured: false
+short_description: "<strong>In this video tutorial, you’ll learn how to lorem your ipsum with CSS.</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+project_file_source: Codepen
+project_files:
+- label: Starting Project
+  url: https://codepen.io/josborn/pen/vwPoYE
+- label: Completed Project
+  url: https://codepen.io/josborn/pen/oRVrOR
 ---

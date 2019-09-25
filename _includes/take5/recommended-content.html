@@ -1,21 +1,24 @@
-{% if page.topic == "Web Design & Development" %}
 
-{% assign tutorial1 = site.data[GYM-5001.yml] %}
-{% assign tutorial2 = site.data[GYM-5002.yml] %}
-{% assign tutorial3 = site.data[GYM-5003.yml] %}
-{% assign course1 = site.data[GYM-109.yml] %}
-{% assign course2 = site.data[GYM-107.yml] %}
-{% assign course3 = site.data[GYM-011.yml] %}
+{% if course.topic == "Web Design & Development" %}
 
-{% else if page.topic == "User Experience" %}
+{% assign tutorial1 = site.data.take5s.GYM-5001 %}
+{% assign tutorial2 = site.data.take5s.GYM-5002 %}
+{% assign tutorial3 = site.data.take5s.GYM-5003 %}
+{% assign course1 = site.data.courses.GYM-109 %}
+{% assign course2 = site.data.courses.GYM-107 %}
+{% assign course3 = site.data.courses.GYM-011 %}
 
-{% assign tutorial1 = site.data[GYM-5001] %}
-{% assign tutorial2 = site.data[GYM-5002] %}
-{% assign tutorial3 = site.data[GYM-5003] %}
-{% assign course1 = site.data[GYM-103] %}
-{% assign course2 = site.data[GYM-015] %}
-{% assign course3 = site.data[GYM-105] %}
+{% else if course.topic == "User Experience" %}
 
+{% assign tutorial1 = site.data.take5s.GYM-5001 %}
+{% assign tutorial2 = site.data.take5s.GYM-5002 %}
+{% assign tutorial3 = site.data.take5s.GYM-5003 %}
+{% assign course1 = site.data.courses.GYM-103 %}
+{% assign course2 = site.data.courses.GYM-015 %}
+{% assign course3 = site.data.courses.GYM-105 %}
+
+{% else %}
+<mark><strong>Error: </strong>Did not receive a topic.</mark>
 {% endif %}
 
 <div class="take5--recommended-content">

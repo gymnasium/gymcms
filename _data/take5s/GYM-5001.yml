@@ -1,20 +1,21 @@
 ---
-- course_ID: GYM-5001
-  title: "Making a CSS Parallax Effect"
-  course_type: take5
-  url: /static/take5/GYM-5001/
-  art: https://jgagne.github.io/gym-take-5/details-page/img/video-posters/gym-5001-1920w.jpg
-  live: true
-  instructor: "Jeremy Osborn"
-  topic: "Web Design & Development"
-  video_ID: zRNUPU2dujU
-  poster_art:
-  featured: false
-  short_description: "<strong>In this video tutorial, you’ll learn how to lorem your ipsum with CSS.</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
-  project_file_source: Codepen
-  project_files:
-  - label: Starting Project
-    url: https://codepen.io/josborn/pen/BebXer
-  - label: Completed Project
-    url: https://codepen.io/josborn/pen/joNmyO
+course_ID: GYM-5001
+title: "Making a CSS Parallax Effect"
+course_type: take5
+url: /static/take5/GYM-5001/
+art: https://jgagne.github.io/gym-take-5/details-page/img/video-posters/gym-5001-1920w.jpg
+og_art: https://jgagne.github.io/gym-take-5/details-page/img/video-posters/gym-5001-1920w.jpg
+poster_art: https://jgagne.github.io/gym-take-5/details-page/img/video-posters/gym-5001-1920w.jpg
+live: true
+instructor: "Jeremy Osborn"
+topic: "Web Design & Development"
+video_ID: zRNUPU2dujU
+featured: false
+short_description: "<strong>In this video tutorial, you’ll learn how to lorem your ipsum with CSS.</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+project_file_source: Codepen
+project_files:
+- label: Starting Project
+  url: https://codepen.io/josborn/pen/BebXer
+- label: Completed Project
+  url: https://codepen.io/josborn/pen/joNmyO
 ---
