@@ -6,22 +6,26 @@ permalink: /static/take5/
 <main id="main" role="main">
 <h1 class="title all-caps">Take 5 Catalog Page</h1>
 
-{% for take5_hash in site.data.take5s %}
-{% assign take5s = take5_hash[1] %}
 
-{% for item in take5s %}
-<h2>{{ item.title}} </h2>
+{% assign sorted_catalog = site.data.take5s | sort %}
+
+{% for take5_hash in sorted_catalog %}
+{% assign item = take5_hash[1] %}
+
+
+<h2>{{ item.title }} </h2>
 <ul>
     <li>URL: <a href="{{ item.url | relative_url }}">{{ item.url | relative_url }}</a></li>
     <li>Date: {{ item.date }}</li>
     <li>Live: {{ item.live }}</li>
-    <li>Gym ID: {{ item.gym_ID }}</li>
+    <li>Course ID: {{ item.course_ID }}</li>
     <li>Video ID: {{ item.video_ID }}</li>
     <li>Instructor: {{ item.instructor }}</li>
     <li>Topic: {{ item.topic }}</li>
     <li>Short Description: {{ item.short_description | strip_html }}</li>
 </ul>
 
+
 {% endfor %}
-{% endfor %}
+
 </main>
