@@ -8,7 +8,7 @@ og_art: https://jgagne.github.io/gym-take-5/details-page/img/video-posters/gym-5
 poster_art: https://jgagne.github.io/gym-take-5/details-page/img/video-posters/gym-5003-1920w.jpg
 topic: "Web Design & Development"
 permalink: /static/take5/:name
-live: false
+live: true
 instructor: "Jeremy Osborn"
 video_ID: SaO2hO-4yEY
 
