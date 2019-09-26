@@ -1,9 +1,9 @@
 ---
 layout: raw
-permalink: /tests/take5/
+permalink: /tests/take5-content/
 ---
 
-<title>Take 5: Test Overview</title>
+<title>Take 5 Testing: Content Overview</title>
 
 
 <!-- Styles for the Take 5 testing table -->
@@ -35,7 +35,7 @@ td.success {
 
 {% assign sorted_catalog = site.data.take5s | sort %}
 
-<h1>Take 5 Testing</h1>
+<h1>Take 5 Testing: Content Overview</h1>
 <p>Found: <strong>{{sorted_catalog | size }}</strong> Take 5 tutorials</p>
 
 <table border="0" style="width:100%">
@@ -127,7 +127,6 @@ td.success {
     {% if item.poster_art ==null %}<td class="error">MISSING VALUE</td>{% else %}
     <td class="success"><a href="{{item.poster_art}}" target="_blank">true</a></td>
     {% endif %}
-
 </tr>
 {% endfor %}
 </table>

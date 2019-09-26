@@ -1,0 +1,85 @@
+---
+layout: raw
+permalink: /tests/take5-urls/
+---
+
+<title>Take 5 Testing: Gymnasium Production URLs</title>
+
+
+<!-- Styles for the Take 5 testing table -->
+<style>
+a, a:active, a:link, a:visited { 
+    color: black;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+td.error {
+    font-weight: bold;
+    background-color:red;
+    color: white; 
+}
+
+td.warn {
+    background-color: yellow;
+}
+
+td.success {
+    background-color: limegreen;
+}
+</style>
+
+{% assign sorted_catalog = site.data.take5s | sort %}
+
+<h1>Take 5 Testing: Gymnasium Production URLs</h1>
+<p>Found: <strong>{{sorted_catalog | size }}</strong> Take 5 tutorials</p>
+
+<table border="0" style="width:100%">
+    <thead>
+        <th>Course ID</th>
+        <th>Title</th>
+        <th>Live?</th>
+        <th>Meta Partial?</th>
+        <th>Gymnasium URL</th>
+    </thead>
+
+    {% for take5_hash in sorted_catalog %}
+    {% assign item = take5_hash[1] %}
+
+<tr>
+    <!-- Course ID -->
+    <td>{{ item.course_ID }}</td>
+    
+    <!-- Title -->
+    {% if item.title ==null %}<td class="error">MISSING VALUE</td>{% else %}
+    <td>{{ item.title }}</td>
+    {% endif %}
+
+    <!-- Publish status - Live? -->
+    {% if item.live ==null %}<td class="error">MISSING VALUE</td>{% else %}
+    {% if item.live ==false %}<td class="warn">{{ item.live }}</td>{% else %}
+    <td class="success">{{ item.live }}</td>
+    {% endif %}
+    {% endif %}
+
+    <!-- Meta tag partial -->
+    {% assign meta_partial = item.course_ID | prepend: '/take5/meta/' | append: '-meta.md' | downcase %}
+    {% capture meta_partial_test %}{% file_exists {{ meta_partial }} %}{% endcapture %}
+    {% if meta_partial_test =="false" %}<td class="error">MISSING FILE</td>{% else %}
+    <td class="success">
+        <a href="/static/take5/meta/{{ item.course_ID | append: '-meta/' | downcase }}" target="_blank">{{ meta_partial_test }}</a>
+    </td>
+    {% endif %}
+
+    <!-- Gymnasium URL -->
+    {% assign gym_url = item.title | slugify | prepend: 'https://thegymnasium.com/take5/' %}
+    <td><a href="{{gym_url}}" target="_blank"><pre>{{gym_url}}</pre></a></td>
+</tr>
+{% endfor %}
+</table>
+
+
