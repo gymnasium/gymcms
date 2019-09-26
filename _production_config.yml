@@ -5,11 +5,6 @@ baseurl: /
 timezone: America/New_York
 environment: production
 
-collections:
-  take5s:
-    output: true
-    sort_by: topic
-    permalink: /static/take5/:name
 # Building
 
 exclude:
