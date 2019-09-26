@@ -14,12 +14,12 @@
 }
 
 footer#contentinfo {
-  margin: 0 auto;
-  color: #fff;
-  font-size: 16px;
-  background-color: var(--gym-black);
   min-height: 170px;
+  font-size: 16px;
+  color: var(--gym-white);
+  background-color: var(--gym-black);
   padding: 5px 10px 30px 10px;
+  margin: 0 auto;
 }
 
 #contentinfo h2 {
@@ -35,11 +35,6 @@ footer#contentinfo {
 
 #contentinfo .gym-brand {
   margin-bottom: 1em;
-}
-
-#contentinfo a:focus,
-#contentinfo a:active {
-  border-bottom: 0 none !important;
 }
 
 #contentinfo .gymnasium-logo {
@@ -74,8 +69,8 @@ footer#contentinfo {
 
 #contentinfo ul {
   list-style: none url();
+  padding-left: 0;
   margin-top: 0.95em;
-  padding: 0;
 }
 
 #contentinfo li {
@@ -91,11 +86,9 @@ footer#contentinfo {
 
 #contentinfo a:hover,
 #contentinfo a:focus,
-#contentinfo .copyright a:hover,
-#contentinfo .copyright a:focus {
-  text-decoration: none;
+#contentinfo a:active {
   color: var(--gym-orange);
-  border-bottom: none;
+  border-bottom: 0;
 }
 
 #contentinfo .open-edx-logo {
