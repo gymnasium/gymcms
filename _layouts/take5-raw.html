@@ -19,10 +19,11 @@
 //
 // VIDEO
 //
+// Note: video duration is available with {{course.video_duration}}
 {%- endcomment -%}
 
 {% include take5/video.html video_ID=course.video_ID %}
-
+<!-- The duration of this video is {{course.video_duration}} -->
 
 <h1 class="title all-caps">{{ course.title }}</h1>
 

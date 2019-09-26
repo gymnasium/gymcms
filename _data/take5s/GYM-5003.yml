@@ -11,7 +11,7 @@ permalink: /static/take5/:name
 live: true
 instructor: "Jeremy Osborn"
 video_ID: SaO2hO-4yEY
-
+video_duration: "4:13"
 featured: false
 short_description: "<strong>In this video tutorial, you’ll learn how to lorem your ipsum with CSS.</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
 project_file_source: Codepen
