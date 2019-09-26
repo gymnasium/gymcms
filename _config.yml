@@ -4,13 +4,6 @@ url: https://staging.gymcms.xyz
 baseurl:
 timezone: America/New_York
 
-
-# collections:
-#   take5s:
-#     output: true
-#     sort_by: topic
-#     permalink: /static/take5/:name
-    
 # Building
 
 exclude:
