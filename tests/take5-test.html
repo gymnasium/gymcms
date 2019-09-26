@@ -111,7 +111,6 @@ td.success {
 
     <!-- Meta tag partial -->
     {% assign meta_partial = item.course_ID | prepend: '/take5/meta/' | append: '-meta.md' | downcase %}
-    <pre>{{meta_partial}}</pre>
     {% capture meta_partial_test %}{% file_exists {{ meta_partial }} %}{% endcapture %}
     {% if meta_partial_test =="false" %}<td class="error">MISSING FILE</td>{% else %}
     <td class="success">
