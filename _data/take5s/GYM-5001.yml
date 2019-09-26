@@ -10,6 +10,7 @@ live: true
 instructor: "Jeremy Osborn"
 topic: "Web Design & Development"
 video_ID: zRNUPU2dujU
+video_duration: "4:59"
 featured: false
 short_description: "<strong>In this video tutorial, you’ll learn how to lorem your ipsum with CSS.</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
 project_file_source: Codepen
