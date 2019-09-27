@@ -13,125 +13,93 @@
   --gym-font-stack-text: 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-
 footer#contentinfo {
-  margin: 0 auto;
-  color: #fff;
-  font-size: 16px;
-
-  background-color: var(--gym-black);
   min-height: 170px;
-  padding: 0px 10px 30px 10px;
+  font-size: 16px;
+  color: var(--gym-white);
+  background-color: var(--gym-black);
+  padding: 5px 10px 30px 10px;
+  margin: 0 auto;
 }
 
-h2 {
+#contentinfo h2 {
   font-family: var(--gym-font-stack);
   font-size: 1em;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.gym-brand {
+#contentinfo .all-caps {
+  text-transform: uppercase;
+}
+
+#contentinfo .gym-brand {
   margin-bottom: 1em;
 }
 
-a:focus,
-a:active {
-  border-bottom: 0 none !important;
-}
-
-.gymnasium-logo {
+#contentinfo .gymnasium-logo {
   width: 12.5em;
   height: auto;
   margin-top: 0;
   margin-left: 0;
 }
 
-.gym-brand p {
+#contentinfo .gym-brand p {
   width: 95%;
   font-size: 1em;
   line-height: 1.55;
   margin-top: 1.2em;
 }
 
-.resources {
+#contentinfo .resources {
   clear: left;
 }
 
 @media (min-width: 62em) {
-  .resources {
+  #contentinfo .resources {
     clear: none;
   }
 }
 
-h2 {
-  font-size: 1em;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.footer-link-list {
+#contentinfo .footer-link-list {
   padding-top: 0.625em;
   margin-top: 0;
   margin-bottom: 1.2em;
 }
 
-ul {
+#contentinfo ul {
   list-style: none url();
+  padding-left: 0;
   margin-top: 0.95em;
-  padding: 0;
 }
 
-li {
+#contentinfo li {
   height: auto;
   padding-right: 0;
   border-right: 0;
   margin-top: 0.4em;
 }
 
-a {
+#contentinfo li a {
+  color: var(--gym-white);
+}
+
+#contentinfo a:hover,
+#contentinfo a:focus,
+#contentinfo a:active {
   color: var(--gym-orange);
+  border-bottom: 0;
 }
 
-a:hover,
-a:focus,
-.copyright a:hover,
-.copyright a:focus {
-  text-decoration: underline;
-  color: var(--gym-orange);
-  border-bottom: none;
-}
-
-#headway-changelog-anchor {
-  height: 1.6em !important;
-}
-
-#HW_badge_cont {
-  margin-left: 0.6em;
-}
-
-.open-edx-logo {
+#contentinfo .open-edx-logo {
   width: 8.5em;
   height: auto;
 }
 
-.copyright {
+#contentinfo .copyright {
   text-align: left;
 }
 
-.copyright small {
+#contentinfo .copyright small {
   font-size: 80%;
-}
-
-.all-caps {
-  text-transform: uppercase;
-}
-
-div.wrapper-footer {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-div.wrapper-footer footer .footer-link-list li {
-  border: none;
 }
