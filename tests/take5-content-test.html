@@ -47,8 +47,8 @@ td.success {
         <th>Live?</th>
         <th>Date</th>
         <th>Video ID</th>
-        <th>Transcript?</th>
         <th>Short Description</th>
+        <th>OG Description</th>
         <th>Meta Partial?</th>
         <th>OG Art</th>
         <th>Poster Art</th>
@@ -56,7 +56,6 @@ td.success {
 
     {% for take5_hash in sorted_catalog %}
     {% assign item = take5_hash[1] %}
-
 <tr>
     <!-- Course ID -->
     <td>{{ item.course_ID }}</td>
@@ -93,19 +92,25 @@ td.success {
     <td><a href="https://www.youtube.com/watch?v={{ item.video_ID }}" target="_blank">{{ item.video_ID }}</td>
     {% endif %}
 
-    <!-- Transcript -->
-    {% assign transcript = item.course_ID | prepend: '_includes/take5/transcripts/' | append: '-transcript.md' %}
-    {% capture transcript_test %}{% file_exists {{ transcript }} %}{% endcapture %}
-    {% if transcript_test =="false" %}<td class="error">MISSING FILE</td>{% else %}
-    <td class="success">{{ transcript_test }}</td>
-    {% endif %}
-
     <!-- Short Description -->
     {% if item.short_description ==null %}<td class="error">MISSING VALUE</td>{% else %}
     {% assign this_description = item.short_description | strip_html %}
     {% if this_description contains "lorem" or this_description contains "ipsum" %}
     <td class="warn" title="{{this_description}}">May contain placeholder text! ({{this_description | size }} chars)</td>{% else %}
     <td class="success" title="{{this_description}}">true ({{this_description | size }} chars)</td>
+    {% endif %}
+    {% endif %}
+
+    <!-- OG Description -->
+    {% if item.og_description ==null %}<td class="error">MISSING VALUE</td>{% else %}
+    {% assign this_og_length = item.og_description | size %}
+    {% assign this_og_description = item.og_description %}
+    {% if this_og_description contains "lorem" or this_og_description contains "ipsum" %}
+    <td class="warn" title="{{this_og_description}}">May contain placeholder text! ({{this_og_length }} chars)</td>
+    {%- elsif this_og_length >= 161 -%}
+    <td class="warn" title="{{this_og_description}}">Too long!! ({{this_og_length }} chars)</td>
+    {% else %}
+    <td class="success" title="{{this_og_description}}">true ({{this_og_length}} chars)</td>
     {% endif %}
     {% endif %}
 

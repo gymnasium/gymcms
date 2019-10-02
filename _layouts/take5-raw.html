@@ -68,44 +68,10 @@
 {% endif %}
 
 
-{%- comment -%}
-//
-// TRANSCRIPT
-//
-// Implementation Note
-//
-// This directive pulls in the html fragment with the transcript
-// Each Take5 has an associated transcript file in _includes/take5/transcripts/
-{%- endcomment -%}
-
-{%- comment -%}
-// Constructs the path to the associated transcript file
-// Checks that the transcript exists for this lesson before attempting the include
-{%- endcomment -%}
-
-{% assign transcript = course.course_ID | prepend: '/take5/transcripts/' | append: '-transcript.md' %}
-{% capture transcript_test %}{% file_exists {{transcript | prepend: '_includes/'}} %}{% endcapture %}
-
-{% if transcript_test =="true" %}
-
-{%- comment -%}
-// Gets the content of the transcript (markdown) and renders it in HTML
-{%- endcomment -%}
-
-{% capture this_transcript %}
-{%- include {{transcript}} -%}
-{% endcapture %}
-
-{%- comment -%}
-// Includes the transcript — rendered in HTML
-{%- endcomment -%}
 <details>
     <summary>View Transcript</summary>
-    {{this_transcript | markdownify}}
+    {{content}}
 </details>
-{% else %}
-<h3><mark>No transcript found!</mark></h3>
-{% endif %}
 
 {%- comment -%}
 //

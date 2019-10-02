@@ -1,6 +1,7 @@
 ---
 course_ID: GYM-5001
 title: "Making a CSS Parallax Effect"
+date: 2019-10-28
 course_type: take5
 url: /static/take5/GYM-5001/
 art: https://jgagne.github.io/gym-take-5/details-page/img/video-posters/gym-5001-1920w.jpg
@@ -12,7 +13,8 @@ topic: "Web Design & Development"
 video_ID: zRNUPU2dujU
 video_duration: "4:59"
 featured: false
-short_description: "<strong>In this video tutorial, you’ll learn how to lorem your ipsum with CSS.</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+short_description: "In this tutorial, Jeremy Osborn, Academic Director of Aquent Gymnasium, will teach you how to create a scrolling background effect using CSS." 
+og_description: "In this tutorial, Jeremy Osborn will teach you how to create a scrolling background effect using CSS."
 project_file_source: Codepen
 project_files:
 - label: Starting Project
