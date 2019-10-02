@@ -62,7 +62,11 @@
 {% endif %}
 <ul>
 {% for item in course.related_content %}
-    <li><a href="{{ item.url}}">{{item.label}}</a></li>
+    {%- if item.url contains "thegymnasium.com" -%}
+        <li><a href="{{ item.url}}">{{item.label}}</a></li>
+        {%- else -%}
+        <li><a href="{{ item.url}}" target="_blank">{{item.label}}</a></li>
+    {%- endif -%}    
 {% endfor %}
 </ul>
 {% endif %}
