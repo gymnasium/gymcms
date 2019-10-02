@@ -47,6 +47,7 @@ td.success {
         <th>Live?</th>
         <th>Date</th>
         <th>Video ID</th>
+        <th>Video Duration</th>
         <th>Short Description</th>
         <th>OG Description</th>
         <th>Meta Partial?</th>
@@ -90,6 +91,14 @@ td.success {
     <!-- Video ID -->
     {% if item.video_ID ==null %}<td class="error">MISSING VALUE</td>{% else %}
     <td><a href="https://www.youtube.com/watch?v={{ item.video_ID }}" target="_blank">{{ item.video_ID }}</td>
+    {% endif %}
+    
+    <!-- Video Duration -->
+    {% if item.video_duration == null %}<td class="error">MISSING VALUE</td>
+    {% elsif item.video_duration contains "0:00" %}
+    <td class="warn">{{ item.video_duration }}</td>
+    {% else %}
+    <td>{{ item.video_duration }}</td>
     {% endif %}
 
     <!-- Short Description -->
