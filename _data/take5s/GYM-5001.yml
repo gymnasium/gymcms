@@ -17,8 +17,15 @@ short_description: "In this tutorial, Jeremy Osborn, Academic Director of Aquent
 og_description: "In this tutorial, Jeremy Osborn will teach you how to create a scrolling background effect using CSS."
 project_file_source: Codepen
 project_files:
-- label: Starting Project
-  url: https://codepen.io/josborn/pen/BebXer
-- label: Completed Project
-  url: https://codepen.io/josborn/pen/joNmyO
+- label: "Starting Project"
+  url: "https://codepen.io/josborn/pen/BebXer"
+- label: "Completed Project"
+  url: "https://codepen.io/josborn/pen/joNmyO"
+related_content:
+- label: "Can I Use: Background Attachment"
+  url: "https://caniuse.com/#feat=background-attachment"
+- label: "Stack Overflow: Background size on iOS"
+  url: "https://stackoverflow.com/questions/21476380/background-size-on-ios"
+- label: "MDN web docs: Viewport concepts"
+  url: "https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts"  
 ---
