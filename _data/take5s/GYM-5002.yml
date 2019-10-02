@@ -13,21 +13,21 @@ instructor: "Jeremy Osborn"
 video_ID: Q66-TDbHiIs
 video_duration: "4:48"
 featured: false
-short_description: "<strong>In this video tutorial, you’ll learn how to lorem your ipsum with CSS.</strong> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+short_description: "In this tutorial, Jeremy Osborn, Academic Director of Aquent Gymnasium, will teach you how to make an image appear inside the outline of plain text using CSS."
+og_description: "In this tutorial, Jeremy Osborn will teach you how to make an image appear inside the outline of plain text using CSS."
 project_file_source: Codepen
 project_files:
-- label: Starting Project
-  url: https://codepen.io/josborn/pen/vMyyxg
-- label: Completed Project
-  url: https://codepen.io/josborn/pen/YMVdVe
+- label: "Starting Project"
+  url: "https://codepen.io/josborn/pen/vMyyxg"
+- label: "Completed Project"
+  url: "https://codepen.io/josborn/pen/YMVdVe"
 related_content:
-- label: 'heropatterns.com'
-  url: 'https://heropatterns.com'
-- label: 'svgbackgrounds.com'
-  url: 'https://svgbackgrounds.com'
-- label: 'https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/'
-  url: 'https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/'
-- label: 'Can I Use: CSS3 Background-image options'
-  url: 'https://caniuse.com/#feat=background-img-opts'
-
+- label: "heropatterns.com"
+  url: "https://heropatterns.com"
+- label: "svgbackgrounds.com"
+  url: "https://svgbackgrounds.com"
+- label: "Using Feature Queries in CSS by Jen Simmons"
+  url: "https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/"
+- label: "Can I Use: CSS3 Background-image options"
+  url: "https://caniuse.com/#feat=background-img-opts"
 ---
