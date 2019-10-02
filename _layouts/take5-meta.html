@@ -12,12 +12,11 @@
 <h3>Data available for META tags</h3>
 
 <ul>
-<li>{% raw %}<strong><code>{{ course.course_ID }}</strong></code>{% endraw %} <pre>{{course.course_ID}}</pre></li>
-<li>{% raw %}<strong><code>{{ course.title }}</strong></code>{% endraw %} <pre>{{course.title}}</pre></li>
-<li>{% raw %}<strong><code>{{ course.url }}</strong></code>{% endraw %} <pre>{{course.url}}</pre></li>
-<li>{% raw %}<strong><code>{{ course.art }}</strong></code>{% endraw %} <pre>{{course.art}}</pre></li>
-<li>{% raw %}<strong><code>{{ course.short_description | strip_html }}</strong></code>{% endraw %} <pre>{{course.short_description | strip_html}}</pre></li>
-<li>{% raw %}<strong><code>{{ course.short_description | strip_html | truncate: 160 }}</strong> </code>{% endraw %} <pre>{{course.short_description | strip_html | truncate: 160 }}</pre></li>
+<li>{% raw %}<strong><code>{{ course.course_ID }}</strong></code>{% endraw %} <pre>{{ course.course_ID }}</pre></li>
+<li>{% raw %}<strong><code>{{ course.title }}</strong></code>{% endraw %} <pre>{{ course.title }}</pre></li>
+<li>{% raw %}<strong><code>{{ course.url }}</strong></code>{% endraw %} <pre>{{ course.url }}</pre></li>
+<li>{% raw %}<strong><code>{{ course.art }}</strong></code>{% endraw %} <pre>{{ course.art }}</pre></li>
+<li>{% raw %}<strong><code>{{ course.og_short_description }}</strong></code>{% endraw %} <pre>{{ course.og_short_description }}</pre></li>
 </ul>
 
 <h3>Constructing URLs/paths</h3>
@@ -34,7 +33,7 @@
 <meta name="twitter:url" property="og:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/take5/'}}">
 <meta name="twitter:title" property="og:title" content="{{ course.title }}">
 <meta name="twitter:image" property="og:image" content="{{ course.og_art }}">
-<meta name="twitter:description" property="og:description" content="{{ course.short_description | strip_html | truncate: 160 }}">
+<meta name="twitter:description" property="og:description" content="{{ course.og_short_description}}">
 <link rel="apple-touch-icon" sizes="57x57" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-72x72.png">
