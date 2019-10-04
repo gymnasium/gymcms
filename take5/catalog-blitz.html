@@ -75,7 +75,7 @@ permalink: /static/take5/blitz
 {%- for item in upcoming -%}
 {%- assign upcoming_take5 = site.data.take5s[item] -%}
 <pre>
-{{ upcoming_take5.date | date: "%a %-m/%-d" }}
+{{ upcoming_take5.date | date: "%a %b %-d" }}
 {{ upcoming_take5.title }}
 </pre>
 {%- endfor -%}
