@@ -1,0 +1,82 @@
+---
+layout: raw
+permalink: /static/take5/blitz
+---
+{%- comment -%}
+//
+// This catalog page is to be used for the Take 5 blitz
+//
+{%- endcomment -%}
+
+<link rel="stylesheet" href="https://deploy-preview-109--gymcms.netlify.com/css/take-5.css/">
+<main id="main" role="main">
+<h1 class="title all-caps">Take 5 Catalog Page</h1>
+
+{%- assign recent = ""  | split: ", " -%}
+{%- assign upcoming = ""  | split: ", " -%}
+
+{% assign catalog = site.data.take5s | sort %}
+{% for take5_hash in catalog %}
+{% assign item = take5_hash[1] %}
+
+
+{%- if item.live == true -%}
+
+
+    {%- if item.featured == true -%}
+        {% assign featured = item.course_ID %}
+        {% assign featured_title = item.title %}
+        {% assign featured_description = item.short_description %}
+        {% assign featured_url = item.url %}
+        {% assign featured_poster_art = item.poster_art %}
+    {%- else -%}
+    {%- comment -%} Not featured, but live? Add the course_ID to the RECENT list {%- endcomment -%}
+    {%- assign recent = recent | push: item.course_ID -%}
+    {%- endif -%}
+{%- else -%}
+    {%- comment -%} Not live? Add the course_ID to the UPCOMING list {%- endcomment -%}
+    {%- assign upcoming = upcoming | push: item.course_ID -%}
+{%- endif -%}
+{%- endfor -%} 
+
+{%- if featured != null -%}
+<h2>Featured: {{featured}} </h2>
+<pre>
+{{featured_title}}
+{{featured_url}}
+{{featured_description |truncatewords: 10 }}
+{{featured_poster_art}}
+</pre>
+{%- endif -%}
+
+
+{%- comment -%} Reverse the order of the recents (most recent = highest course_ID) {%- endcomment -%}
+
+<h3>Recent ({{ recent | size }})</h3>
+{%- assign recent = recent | reverse -%}
+
+{%- for item in recent -%}
+{%- assign recent_take5 = site.data.take5s[item] -%}
+<h4>{{ recent_take5.title }}</h4>
+<pre>
+{{ recent_take5.url }}
+{{ recent_take5.poster_art }}
+{{ recent_take5.video_duration }}
+</pre>
+{%- endfor -%}
+
+{%- comment -%} 
+//
+// TODO: Limit this to the 5 items
+//
+{%- endcomment -%}
+<h3>Upcoming ({{ upcoming | size }})</h3>
+
+{%- for item in upcoming -%}
+{%- assign upcoming_take5 = site.data.take5s[item] -%}
+<pre>
+{{ upcoming_take5.date | date: "%a %-m/%-d" }}
+{{ upcoming_take5.title }}
+</pre>
+{%- endfor -%}
+</main>
