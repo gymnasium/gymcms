@@ -17,7 +17,7 @@
 
 {% assign sorted_catalog = site.data.take5s | sort %}
 
-{% for take5_hash in sorted_catalog %}
+{% for take5_hash in sorted_catalog reversed %}
 
 {% assign item = take5_hash[1] %}
 

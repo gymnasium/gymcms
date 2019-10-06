@@ -65,14 +65,9 @@ permalink: /static/take5/blitz
 </pre>
 {%- endfor -%}
 
-{%- comment -%} 
-//
-// TODO: Limit this to the 5 items
-//
-{%- endcomment -%}
 <h3>Upcoming ({{ upcoming | size }})</h3>
 
-{%- for item in upcoming -%}
+{%- for item in upcoming limit: 5 -%}
 {%- assign upcoming_take5 = site.data.take5s[item] -%}
 <pre>
 {{ upcoming_take5.date | date: "%a %b %-d" }}
