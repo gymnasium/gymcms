@@ -63,12 +63,16 @@ td.success {
     <td>{{ item.course_ID }}</td>
     
     <!-- Title -->
-    {% if item.title ==null %}<td class="error">MISSING VALUE</td>{% else %}
-    <td>{{ item.title }}</td>
+    {% if item.title == null %}<td class="error">MISSING VALUE</td>{% else %}
+    {%- assign this_title = item.title | downcase -%}
+    {% if this_title contains "lorem" or this_title contains "ipsum" %}
+    <td class="warn" title="{{item.title}}">May contain placeholder text!</td>{% else %}
+    <td >{{item.title}}</td>
+    {% endif %}
     {% endif %}
    
    <!-- Featured -->
-   {% if item.featured ==null %}<td class="error">MISSING VALUE</td>
+   {% if item.featured == null %}<td class="error">MISSING VALUE</td>
    {% elsif item.featured ==false %}
    <td>{{ item.featured }}</td>
    {%- else -%}
@@ -76,7 +80,7 @@ td.success {
    {% endif %}
    
     <!-- Topic -->
-    {% if item.topic ==null %}<td class="error">MISSING VALUE</td>{% else %}
+    {% if item.topic == null %}<td class="error">MISSING VALUE</td>{% else %}
     <td>{{ item.topic }}</td>
     {% endif %}
 
