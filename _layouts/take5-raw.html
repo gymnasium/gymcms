@@ -101,9 +101,8 @@
             <h1>{{ course.title }}</h1>
             <p>with {{ course.instructor }}</p>
         </header>
-        
-        {{content}}
-        
+        {{ content }}
+        <!-- Transcript word count: {{ page.content | number_of_words }} -->
         <div class="to-top-link">
             <a href="#tutorial-info"><b>Back to top</b></a>
         </div>
