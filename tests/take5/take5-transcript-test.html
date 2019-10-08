@@ -1,0 +1,83 @@
+---
+layout: raw
+permalink: /tests/take5-transcripts/
+---
+
+<title>Take 5 Testing: Transcripts</title>
+
+
+
+
+<!-- Styles for the Take 5 testing table -->
+<style>
+a, a:active, a:link, a:visited { 
+    color: black;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+td.error {
+    font-weight: bold;
+    background-color:red;
+    color: white; 
+}
+
+td.warn {
+    background-color: yellow;
+}
+
+td.success {
+    background-color: limegreen;
+}
+</style>
+
+{% assign sorted_catalog = site.data.take5s | sort %}
+
+<h1>Take 5 Testing: Transcripts</h1>
+<p>Found: <strong>{{sorted_catalog | size }}</strong> Take 5 tutorials</p>
+
+<table border="0" style="width:100%">
+    <thead>
+        <th>Course ID</th>
+        <th>Title</th>
+        <th>Live?</th>
+        <th>Transcript?</th>
+    </thead>
+
+    {% for take5_hash in sorted_catalog %}
+    {% assign item = take5_hash[1] %}
+
+<tr>
+    <!-- Course ID -->
+    <td>{{ item.course_ID }}</td>
+    
+    <!-- Title -->
+    {% if item.title ==null %}<td class="error">MISSING VALUE</td>{% else %}
+    <td>{{ item.title }}</td>
+    {% endif %}
+
+    <!-- Publish status - Live? -->
+    {% if item.live ==null %}<td class="error">MISSING VALUE</td>{% else %}
+    {% if item.live ==false %}<td class="warn">{{ item.live }}</td>{% else %}
+    <td class="success">{{ item.live }}</td>
+    {% endif %}
+    {% endif %}
+
+    <!-- Transcript -->
+    {% assign this_transcript = item.course_ID | prepend: 'take5/' | append: '.md' | downcase %}
+    {%- capture transcript_test -%}
+    {%- include_relative {{this_transcript}} -%}
+    {%- endcapture -%}
+    {% assign transcript_test = transcript_test | number_of_words %}
+    {% if transcript_test <= 10 %}<td class="error">Error likely ({{ transcript_test }} words)</td>{% else %}
+    <td class="success">
+        true ({{ transcript_test }} words)
+    </td>
+    {% endif %}
+</tr>
+{% endfor %}
+</table>
