@@ -34,13 +34,14 @@
           <ul>
             <li>
               <section class="tutorial">
-                  <a href="{{ tutorial1.url }}">
-                    <div class="artwork">
-                      <img alt="{{ tutorial1.title }}" src="{{ tutorial1.art }}">
+                  <a href="{{ tutorial1.url }}" title="Watch Video">
+                    <div class="artwork" data-duration="{{ tutorial1.video_duration }}">
+                      <img alt="{{ tutorial1.title }}" src="{{ tutorial1.poster_art }}">
                     </div>
                   </a>
                 <header>
-                  <h3 class="gymlink">
+                <b class="all-caps">{{ tutorial1.topic }}</b>
+                  <h3 class="gymlink all-caps">
                     <a href="{{ tutorial1.url }}">{{ tutorial1.title }}</a>
                   </h3>
                 </header>
@@ -48,13 +49,14 @@
             </li>
             <li>
               <section class="tutorial">
-                  <a href="{{ tutorial2.url }}">
-                    <div class="artwork">
-                      <img alt="{{ tutorial2.title }}" src="{{ tutorial2.art }}">
+                  <a href="{{ tutorial2.url }}" title="Watch Video">
+                    <div class="artwork" data-duration="{{ tutorial2.video_duration }}">
+                      <img alt="{{ tutorial2.title }}" src="{{ tutorial2.poster_art }}">
                     </div>
                   </a>
                 <header>
-                  <h3 class="gymlink">
+                  <b class="all-caps">{{ tutorial2.topic }}</b>
+                  <h3 class="gymlink all-caps">
                     <a href="{{ tutorial2.url }}">{{ tutorial2.title }}</a>
                   </h3>
                 </header>
@@ -62,13 +64,14 @@
             </li>
             <li>
               <section class="tutorial">
-                  <a href="{{ tutorial3.url }}">
-                    <div class="artwork">
-                      <img alt="{{ tutorial3.title }}" src="{{ tutorial3.art }}">
+                  <a href="{{ tutorial3.url }}" title="Watch Video">
+                    <div class="artwork" data-duration="{{ tutorial3.video_duration }}">
+                      <img alt="{{ tutorial3.title }}" src="{{ tutorial3.poster_art }}">
                     </div>
                   </a>
                 <header>
-                  <h3 class="gymlink">
+                <b class="all-caps">{{ tutorial3.topic }}</b>
+                  <h3 class="gymlink all-caps">
                     <a href="{{ tutorial3.url }}">{{ tutorial3.title }}</a>
                   </h3>
                 </header>
@@ -77,7 +80,7 @@
           </ul>
         </div>
         <div class="cta">
-          <a class="gym-button" href="https://thegymnasium.com/take-5"><b>View Take 5 Catalog</b></a>
+          <a class="gym-button" href="https://thegymnasium.com/take5"><b>View Take 5 Catalog</b></a>
         </div>
       </section>
 
