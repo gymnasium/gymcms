@@ -1,6 +1,6 @@
 ---
 course_ID: GYM-5015
-title: "Using Smart Animate in Figma"
+title: "Creating Advanced Animations in Figma"
 date: 2019-11-15 00:00:00 -0400
 course_type: take5
 url: /static/take5/GYM-5015/
@@ -11,16 +11,14 @@ live: false
 instructor: "Jeremy Osborn"
 topic: "Prototyping"
 video_ID:
-video_duration:
+video_duration: "4:57"
 featured: false
 short_description: "In this lorem ipsum" 
 og_description: "In this lorem ipsum"
-project_file_source:
-project_files:
-- label: 
-  url: 
-- label: 
-  url:
+project_file_source: GitHub
+project_files: 
+- label: "Lesson Files"
+  url: "https://gymnasium.github.io/take5/gym-5015.zip"
 related_content:
 - label: 
   url: 
