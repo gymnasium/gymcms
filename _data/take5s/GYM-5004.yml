@@ -5,6 +5,7 @@ date: 2019-11-01 00:00:00 -0400
 course_type: take5
 url: /static/take5/GYM-5004/
 art: https://jgagne.github.io/gym-take-5/catalog-page/img/video-posters/web-design/gym-take-5-004.png
+poster_art: /img/take5/posters/gym-5004.jpg
 og_art: https://jgagne.github.io/gym-take-5/catalog-page/img/video-posters/web-design/gym-take-5-004.png
 topic: "Web Design & Development"
 live: true
