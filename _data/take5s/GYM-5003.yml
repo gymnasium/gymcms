@@ -6,7 +6,7 @@ course_type: take5
 url: /static/take5/GYM-5003/
 art: https://jgagne.github.io/gym-take-5/details-page/img/video-posters/gym-5003-1920w.jpg
 og_art: https://jgagne.github.io/gym-take-5/details-page/img/video-posters/gym-5003-1920w.jpg
-poster_art: https://jgagne.github.io/gym-take-5/details-page/img/video-posters/gym-5003-1920w.jpg
+poster_art: /img/take5/posters/gym-5003.jpg
 topic: "Web Design & Development"
 permalink: /static/take5/:name
 live: true
