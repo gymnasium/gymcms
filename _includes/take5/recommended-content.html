@@ -23,8 +23,8 @@
 {% assign tutorial2 = site.data.take5s.GYM-5007 %}
 {% assign tutorial3 = site.data.take5s.GYM-5008 %}
 {% assign course1 = site.data.courses.GYM-015 %}
-{% assign course2 = site.data.courses.GYM-103 %}
-{% assign course3 = site.data.courses.GYM-105 %}
+{% assign course2 = site.data.courses.GYM-005 %}
+{% assign course3 = site.data.courses.GYM-008 %}
 
 
 {% else %}
@@ -115,7 +115,7 @@
               <section class="course">
                   <a href="{{ course1.url }}">
                     <div class="artwork">
-                      <img alt="{{ course1.title }}" src="{{ course1.art }}" srcset="{{ course1.art }}">
+                      <img alt="{{ course1.title }}" src="{{ course1.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ course1.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
                     </div>
                   </a>
                 <header>
@@ -127,7 +127,7 @@
               <section class="course">
                     <a href="{{ course2.url }}">
                     <div class="artwork">
-                      <img alt="{{ course2.title }}" src="{{ course2.art }}" srcset="{{ course2.art }}">
+                        <img alt="{{ course1.title }}" src="{{ course2.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ course2.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
                     </div>
                     </a>
                 <header>
@@ -139,7 +139,7 @@
               <section class="course">
                     <a href="{{ course3.url }}">
                       <div class="artwork">
-                        <img alt="{{ course3.title }}" src="{{ course3.art }}" srcset="{{ course3.art }}">
+                          <img alt="{{ course1.title }}" src="{{ course3.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ course3.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
                       </div>
                     </a>
                 <header>
