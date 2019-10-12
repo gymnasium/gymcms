@@ -1,0 +1,21 @@
+<script>
+
+    // Media query event handler
+    if (matchMedia) {
+      var details = document.querySelector('#tutorial-resources');
+      var mq = window.matchMedia('(min-width: 62em)');
+      mq.addListener(mm);
+      mm(mq);
+    }
+    
+    // Media query change
+    function mm(mq) {
+      if (mq.matches) {
+        details.setAttribute('open', 'open');
+      }
+      else {
+        details.removeAttribute('open');
+      }
+    }
+    
+    </script>
