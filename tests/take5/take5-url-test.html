@@ -42,8 +42,8 @@ td.success {
     <thead>
         <th>Course ID</th>
         <th>Title</th>
-        <th>Live?</th>
-        <th>Meta Partial?</th>
+        <th>Page Include URL</th>
+        <th>Meta Include URL</th>
         <th>Gymnasium URL</th>
     </thead>
 
@@ -59,21 +59,14 @@ td.success {
     <td>{{ item.title }}</td>
     {% endif %}
 
-    <!-- Publish status - Live? -->
-    {% if item.live ==null %}<td class="error">MISSING VALUE</td>{% else %}
-    {% if item.live ==false %}<td class="warn">{{ item.live }}</td>{% else %}
-    <td class="success">{{ item.live }}</td>
-    {% endif %}
-    {% endif %}
-
+<!-- Include URL -->
+    <td><pre><a href="{{ item.url | absolute_url }}">{{ item.url | absolute_url }}</a></pre></td>
+    
     <!-- Meta tag partial -->
-    {% assign meta_partial = item.course_ID | prepend: '/take5/meta/' | append: '-meta.md' | downcase %}
-    {% capture meta_partial_test %}{% file_exists {{ meta_partial }} %}{% endcapture %}
-    {% if meta_partial_test =="false" %}<td class="error">MISSING FILE</td>{% else %}
-    <td class="success">
-        <a href="/static/take5/meta/{{ item.course_ID | append: '-meta/' | downcase }}" target="_blank">{{ meta_partial_test }}</a>
+    {% assign meta_url = item.course_ID | prepend: '/static/take5/meta/' | append: '-meta/' | downcase %}
+    <td>
+        <a href="{{ meta_url | absolute_url }}"><pre>{{ meta_url | absolute_url }}</pre></a>
     </td>
-    {% endif %}
 
     <!-- Gymnasium URL -->
     {% assign gym_url = item.title | slugify | prepend: 'https://thegymnasium.com/take5/' %}
