@@ -140,7 +140,7 @@ permalink: /static/take5/blitz
 {%- for item in upcoming limit: 5 -%}
 {%- assign upcoming_take5 = site.data.take5s[item] -%}
 
-<time class="subhead-datetime" datetime="2019-11-04">
+<time class="subhead-datetime" datetime="{{ upcoming_take5.date | date: '%Y-%m-%d' }}">
 <b>{{ upcoming_take5.date | date: "%a" }}</b>
 {{ upcoming_take5.date | date: "%b %-d" }}
 <h4>{{ upcoming_take5.title }}</h4>
