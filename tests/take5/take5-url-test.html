@@ -47,6 +47,14 @@ td.success {
         <th>Gymnasium URL</th>
     </thead>
 
+<tr><!-- Course Catalog -->
+    <td>N/A</td><!-- Course ID -->
+    <td>Take 5 Catalog</td><!-- Title -->
+    <td><pre><a href="{{ 'static/take5/' | absolute_url }}">{{ 'static/take5/' | absolute_url }}</a></pre></td><!-- Include URL -->
+    <td><pre><a href="{{ 'static/take5/meta/catalog-meta/' | absolute_url }}">{{ 'static/take5/meta/catalog-meta/' | absolute_url }}</a></pre></td><!-- Meta tag partial -->
+    <td><a href="https://thegymnasium.com/take5/"><pre>https://thegymnasium.com/take5/</pre></a></td><!-- Gymnasium URL -->
+</tr>
+
     {% for take5_hash in sorted_catalog %}
     {% assign item = take5_hash[1] %}
 
