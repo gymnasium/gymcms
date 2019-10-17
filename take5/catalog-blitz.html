@@ -1,6 +1,6 @@
 ---
 layout: raw
-permalink: /static/take5/blitz
+permalink: /static/take5/
 ---
 {%- comment -%}
 //
@@ -20,10 +20,6 @@ permalink: /static/take5/blitz
     <p><a class="gym-link-secondary" href="https://twitter.com/aquentgymnasium" target="_blank" rel="noopener"><b>Follow us each day</b></a> for <strong>20 days</strong> of <strong>5-minute tutorials</strong> on web design and development, user experience, prototyping, and career skills. After the 20-day-tutorial-a-thon, join us each week for a new, free Take 5 tutorial.</p>
   </div>
 </header>
-
-<div class="take5--main">
-
-
 
 {%- assign recent = ""  | split: ", " -%}
 {%- assign upcoming = ""  | split: ", " -%}
@@ -56,7 +52,8 @@ permalink: /static/take5/blitz
 {%- endfor -%} 
 
 {% if featured != null %}
-
+<div class="take5--main">
+    
 <div class="take5--hero-content">
     <div class="container">
         <div class="row">
@@ -83,9 +80,33 @@ permalink: /static/take5/blitz
                 </div>
             </div>
         </div>
+        {% endif %}
+        <div class="col-md-4">
+            <!-- Upcoming Courses: Display 5 (max) of {{ upcoming | size }} Take 5s-->
+
+<details open class="take5--resources" id="tutorial-resources">
+        <summary aria-expanded="true/false" tabindex="0" role="button"><b role="heading">Upcoming</b></summary>
+            <div class="take5--resources-list take5--upcoming-list">
+            <ul>    
+    {%- for item in upcoming limit: 5 -%}
+    {%- assign upcoming_take5 = site.data.take5s[item] -%}
+
+    <li><time class="subhead-datetime" datetime="{{ upcoming_take5.date | date: '%Y-%m-%d' }}">
+    <b>{{ upcoming_take5.date | date: "%a" }} </b>
+    {{ upcoming_take5.date | date: "%b %-d" }}</time>
+    <h4>{{ upcoming_take5.title }}</h4>
+    </li>
+    
+    
+    {%- endfor -%}
+            </ul>
+        <p><strong>Stay Up-To-Date</strong><br><a class="gymlink" href="https://twitter.com/aquentgymnasium" target="_blank" rel="noopener">Follow Gymnasium on Twitter</a></p>
+        </div>
+    </details>
+        </div>
     </div>
 </div>
-{% endif %}
+
 
 
 
@@ -131,26 +152,7 @@ permalink: /static/take5/blitz
     </div>
 </div>
 
-<!-- Upcoming Courses: Display 5 (max) of {{ upcoming | size }} Take 5s-->
 
-<details open class="take5--resources" id="tutorial-resources">
-    <summary aria-expanded="true/false" tabindex="0" role="button"><b role="heading">Upcoming</b></summary>
-        <div class="take5--resources-list take5--upcoming-list">
-
-{%- for item in upcoming limit: 5 -%}
-{%- assign upcoming_take5 = site.data.take5s[item] -%}
-
-<time class="subhead-datetime" datetime="{{ upcoming_take5.date | date: '%Y-%m-%d' }}">
-<b>{{ upcoming_take5.date | date: "%a" }}</b>
-{{ upcoming_take5.date | date: "%b %-d" }}
-<h4>{{ upcoming_take5.title }}</h4>
-
-
-{%- endfor -%}
-
-    <p><strong>Stay Up-To-Date</strong><br><a class="gymlink" href="https://twitter.com/aquentgymnasium" target="_blank" rel="noopener">Follow Gymnasium on Twitter</a></p>
-    </div>
-</details>
 </main>
 
 
