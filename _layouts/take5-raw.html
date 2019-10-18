@@ -1,135 +1,134 @@
-<!-- 👇THIS IS JUST HERE FOR TESTING! -->
-{% include take5/test-top.html %}
-<!-- ☝️THIS IS JUST HERE FOR TESTING! -->
+<link rel="stylesheet" href="/css/take5.css" />
 
-<link rel="stylesheet" href="/css/take5.css">
-
-{% include take5/detail-opener-js.html %}
-
-{% assign course = site.data.take5s[page.course_ID] %}
+{% include take5/detail-opener-js.html %} {% assign course =
+site.data.take5s[page.course_ID] %}
 
 <main id="main" role="main">
-    <article class="take5--main" id="{{ course.course_ID }}">
-{%- comment -%}
-//
-// VIDEO
-//
-// Note: video duration is available with {{course.video_duration}}
-{%- endcomment -%}
-<div class="embed-full-width" id="tutorial-video">
-    <div class="embed-responsive embed-responsive-16by9">
-    {% include take5/video.html video_ID=course.video_ID %}      
+  <article class="take5--main" id="{{ course.course_ID }}">
+    {%- comment -%} // // VIDEO // // Note: video duration is available with
+    {{ course.video_duration }}
+    {%- endcomment -%}
+    <div class="embed-full-width" id="tutorial-video">
+      <div class="embed-responsive embed-responsive-16by9">
+        {% include take5/video.html video_ID=course.video_ID %}
+      </div>
     </div>
-  </div>
 
-<!-- The duration of this video is {{course.video_duration}} -->
+    <!-- The duration of this video is {{course.video_duration}} -->
 
+    <div class="take5--info" id="tutorial-info">
+      <!-- Tutorial container-->
+      <header>
+        <h1 class="title all-caps">{{ course.title }}</h1>
 
-<div class="take5--info" id="tutorial-info"><!-- Tutorial container-->
-<header>
-    <h1 class="title all-caps">{{ course.title }}</h1>
-
-    {% if course.instructor !=null %}
-    <p class="instructor">With {{ course.instructor }}</p>
-    {% endif %}
-</header>
-<p class="description">{{ course.short_description }}</p>
-
-{%- comment -%}
-//
-// RELATED CONTENT
-// (Code and other links)
-//
-{%- endcomment -%}
-<div><!-- Resources -->
-    
-{% if course.project_files == null and course.related_content == null  %}
-<!-- No resources found! -->
-{% else %}
-    <details open class="take5--resources" id="tutorial-resources">
-        <summary aria-expanded="true/false" tabindex="0" role="button"><b role="heading">Resources</b></summary>
-        <div class="take5--resources-list"> <!-- Project Files -->
-{% endif %}
-
-{% if course.project_files !=null %}
-    <header>
-        <h3>Project Files</h3> 
-        {% if course.project_file_source !=null %}
-        <p>on {{ course.project_file_source }}</p>
+        {% if course.instructor !=null %}
+        <p class="instructor">With {{ course.instructor }}</p>
         {% endif %}
-    </header>
-<ul>
-    {% for item in course.project_files %}
-        {%- if item.url contains ".zip" -%}
-        <li><a href="{{ item.url}}" rel="noopener">{{item.label}}</a></li>{%- else -%}
-        <li><a href="{{ item.url}}"  target="_blank" rel="noopener">{{item.label}}</a></li>
-        {% endif %}
-    {% endfor %}
-</ul>
-{% endif %}
-</div><!-- /Project Files -->
+      </header>
+      <p class="description">{{ course.short_description }}</p>
 
-<div class="take5--resources-list"><!-- Related Content -->
-{% if course.related_content !=null %}
-{% if course.project_files !=null %}
-    <h3>Related Content</h3>
-    {% endif %}
-    <ul>
-    {% for item in course.related_content %}
-        {%- if item.url contains "thegymnasium.com" -%}
-            <li><a href="{{ item.url}}">{{item.label}}</a></li>
-            {%- else -%}
-            <li><a href="{{ item.url}}" target="_blank" rel="noopener">{{item.label}}</a></li>
-        {%- endif -%}    
-    {% endfor %}
-    </ul>
-{% endif %}
-</div><!-- Related Content -->
-</details>
-</div><!-- /Resources -->
+      {%- comment -%} // // RELATED CONTENT // (Code and other links) // {%-
+      endcomment -%}
+      <div>
+        <!-- Resources -->
 
-<div><!-- Transcript -->
-    <details class="take5--resources" id="tutorial-transcript">
-        <summary aria-expanded="true/false" tabindex="0" role="button"><b>Transcript</b></summary>
-        <article class="take5--transcript" id="{{ course.course_ID }}-transcript">
-        <header class="visuallyhidden">
-            <h1>{{ course.title }}</h1>
-            <p>with {{ course.instructor }}</p>
-        </header>
-        {{ content }}
-        <!-- Transcript word count: {{ page.content | number_of_words }} -->
-        <div class="to-top-link">
-            <a href="#tutorial-info"><b>Back to top</b></a>
-        </div>
-        </article>
-    </details>
-</div><!-- /Transcript -->
+        {% if course.project_files == null and course.related_content == null %}
+        <!-- No resources found! -->
+        {% else %}
+        <details open class="take5--resources" id="tutorial-resources">
+          <summary aria-expanded="true/false" tabindex="0" role="button"
+            ><b role="heading">Resources</b></summary
+          >
+          <div class="take5--resources-list">
+            <!-- Project Files -->
+            {% endif %} {% if course.project_files !=null %}
+            <header>
+              <h3>Project Files</h3>
+              {% if course.project_file_source !=null %}
+              <p>on {{ course.project_file_source }}</p>
+              {% endif %}
+            </header>
+            <ul>
+              {% for item in course.project_files %} {%- if item.url contains
+              ".zip" -%}
+              <li>
+                <a href="{{ item.url }}" rel="noopener">{{ item.label }}</a>
+              </li>
+              {%- else -%}
+              <li>
+                <a href="{{ item.url }}" target="_blank" rel="noopener">{{
+                  item.label
+                }}</a>
+              </li>
+              {% endif %} {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+          <!-- /Project Files -->
 
-</div><!-- /Tutorial container -->
-</article>
+          <div class="take5--resources-list">
+            <!-- Related Content -->
+            {% if course.related_content !=null %} {% if course.project_files
+            !=null %}
+            <h3>Related Content</h3>
+            {% endif %}
+            <ul>
+              {% for item in course.related_content %} {%- if item.url contains
+              "thegymnasium.com" -%}
+              <li>
+                <a href="{{ item.url }}">{{ item.label }}</a>
+              </li>
+              {%- else -%}
+              <li>
+                <a href="{{ item.url }}" target="_blank" rel="noopener">{{
+                  item.label
+                }}</a>
+              </li>
+              {%- endif -%} {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+          <!-- Related Content -->
+        </details>
+      </div>
+      <!-- /Resources -->
 
-{%- comment -%}
-//
-// RECOMMENDED COURSES
-//
-// Show recommended content modules (Take 5s and courses)
-// Set rec-take5 and rec-courses to true/false to toggle the display
-{%- endcomment -%}
-{% capture rec_content_test %}{% file_exists _includes/take5/recommended-content.html %}{% endcapture %}
+      <div>
+        <!-- Transcript -->
+        <details class="take5--resources" id="tutorial-transcript">
+          <summary aria-expanded="true/false" tabindex="0" role="button"
+            ><b>Transcript</b></summary
+          >
+          <article
+            class="take5--transcript"
+            id="{{ course.course_ID }}-transcript"
+          >
+            <header class="visuallyhidden">
+              <h1>{{ course.title }}</h1>
+              <p>with {{ course.instructor }}</p>
+            </header>
+            {{ content }}
+            <!-- Transcript word count: {{ page.content | number_of_words }} -->
+            <div class="to-top-link">
+              <a href="#tutorial-info"><b>Back to top</b></a>
+            </div>
+          </article>
+        </details>
+      </div>
+      <!-- /Transcript -->
+    </div>
+    <!-- /Tutorial container -->
+  </article>
 
-{% if rec_content_test =="true" %}
-{%- include /take5/recommended-content.html rec-take5=true rec-courses=true -%}
-{% else %}
-<h3><mark>No recommended content found!</mark></h3>
-{% endif %}
-
-
+  {%- comment -%} // // RECOMMENDED COURSES // // Show recommended content
+  modules (Take 5s and courses) // Set rec-take5 and rec-courses to true/false
+  to toggle the display {%- endcomment -%} {% capture rec_content_test %}{%
+  file_exists _includes/take5/recommended-content.html %}{% endcapture %} {% if
+  rec_content_test =="true" %} {%- include /take5/recommended-content.html
+  rec-take5=true rec-courses=true -%} {% else %}
+  <h3><mark>No recommended content found!</mark></h3>
+  {% endif %}
 </main>
-
-
-<!-- 👇THIS IS JUST HERE FOR TESTING! -->
-{% include take5/test-bottom.html %}
-<!-- ☝️THIS IS JUST HERE FOR TESTING! -->
 
 <!-- //
 Generated at: {{ site.time }}
