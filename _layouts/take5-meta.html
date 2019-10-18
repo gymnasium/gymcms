@@ -1,39 +1,27 @@
-
-
 {% assign course = site.data.take5s[page.course_ID] %}
-
-<!-- 👇THESE ARE JUST HERE FOR TESTING! -->
-
-<h2>THIS IS JUST FOR TESTING!</h2>
-<p><mark>View the page source to see the meta tags</mark> 😉
-
-</p>
-
-<h3>Data available for META tags</h3>
-
-<ul>
-<li>{% raw %}<strong><code>{{ course.course_ID }}</strong></code>{% endraw %} <pre>{{ course.course_ID }}</pre></li>
-<li>{% raw %}<strong><code>{{ course.title }}</strong></code>{% endraw %} <pre>{{ course.title }}</pre></li>
-<li>{% raw %}<strong><code>{{ course.url }}</strong></code>{% endraw %} <pre>{{ course.url }}</pre></li>
-<li>{% raw %}<strong><code>{{ course.art }}</strong></code>{% endraw %} <pre>{{ course.art }}</pre></li>
-<li>{% raw %}<strong><code>{{ course.og_short_description }}</strong></code>{% endraw %} <pre>{{ course.og_short_description }}</pre></li>
-</ul>
-
-<h3>Constructing URLs/paths</h3>
-<ul>
-<li>{% raw %}<strong><code>{{ course.title | slugify }}</strong></code> {% endraw %}<pre>{{course.title | slugify}}</pre></li>
-<li>{% raw %}<strong><code>{{ course.title | slugify  | prepend: "http://thegymnasium.com/take5/" }}</code></strong>{% endraw %} <pre>{{course.title | slugify | prepend: "http://thegymnasium.com/take5/" }}</pre></li>
-</ul>
-<!-- ☝️THESE ARE JUST HERE FOR TESTING! -->
-
-<meta name="description" content="{{ course.short_description | strip_html }}">
-<meta name="author" content="Aquent Gymnasium">
-<meta name="twitter:card" content="summary">
+<meta property="og:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/take5/'}}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<!-- "og:site_name" content="Needs review?" -->
+<meta property="og:site_name" content="Take 5 | Gymnasium">
+<meta property="og:title" content="{{ course.title }}">
+<meta property="og:description" content="{{ course.og_description}}">
+<!-- 1.91:1 aspect ratio supported by LinkedIn/Twitter -->
+<meta property="og:image" content="{{ course.course_ID | downcase | append: '-og.png' | prepend: '/img/take5/og/' | absolute_url }}">
+<!-- Reuse Title or something more descriptive? -->
+<meta property="og:image:alt" content="{{ course.title | prepend: 'Video poster for tutorial titled '}}">
+<!-- /*/ Twitter Card / Summary with large image /*/ -->
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@AquentGymnasium">
-<meta name="twitter:url" property="og:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/take5/'}}">
-<meta name="twitter:title" property="og:title" content="{{ course.title }}">
-<meta name="twitter:image" property="og:image" content="{{ course.og_art }}">
-<meta name="twitter:description" property="og:description" content="{{ course.og_short_description}}">
+<meta name="twitter:creator" content="@AquentGymnasium">
+<meta name="twitter:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/take5/'}}">
+<meta name="twitter:title" content="{{ course.title }}">
+<meta name="twitter:description" content="{{ course.og_description }}">
+<!-- 1.91:1 aspect ratio supported by LinkedIn/Twitter -->
+<meta name="twitter:image" content="{{ course.course_ID | downcase | append: '-og.png' | prepend: '/img/take5/og/' | absolute_url }}">
+<!-- Reuse Title or something more descriptive? -->
+<meta name="twitter:image:alt" content="{{ course.title | prepend: 'Video poster for tutorial titled '}}">
+
 <link rel="apple-touch-icon" sizes="57x57" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-72x72.png">
@@ -51,6 +39,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="https://gymnasium.github.io/cms/favicon.ico/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
+
 
 <!-- //
 Generated at: {{ site.time }}
