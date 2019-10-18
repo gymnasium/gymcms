@@ -1,0 +1,39 @@
+---
+layout: raw
+permalink: /static/take5/debug
+---
+
+{%- comment -%}
+//
+// This page is just for debugging -- It will eventually go away
+//
+{%- endcomment -%}
+
+<link rel="stylesheet" href="https://deploy-preview-109--gymcms.netlify.com/css/take-5.css/">
+<main id="main" role="main">
+<h1 class="title all-caps">Take 5 Catalog Page</h1>
+
+
+{% assign sorted_catalog = site.data.take5s | sort %}
+
+{% for take5_hash in sorted_catalog %}
+{% assign item = take5_hash[1] %}
+
+
+<h2>{{ item.title }} </h2>
+<ul>
+    <li>URL: <a href="{{ item.url | relative_url }}">{{ item.url | relative_url }}</a></li>
+    <li>Date: {{ item.date }}</li>
+    <li>Live: {{ item.live }}</li>
+    <li>Course ID: {{ item.course_ID }}</li>
+    <li>Video ID: {{ item.video_ID }}</li>
+    <li>Video Duration: {{ item.video_duration }}</li>
+    <li>Instructor: {{ item.instructor }}</li>
+    <li>Topic: {{ item.topic }}</li>
+    <li>Short Description: {{ item.short_description | strip_html }}</li>
+</ul>
+
+
+{% endfor %}
+
+</main>

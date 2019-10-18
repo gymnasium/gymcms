@@ -1,0 +1,59 @@
+
+
+{% assign course = site.data.take5s[page.course_ID] %}
+
+<!-- 👇THESE ARE JUST HERE FOR TESTING! -->
+
+<h2>THIS IS JUST FOR TESTING!</h2>
+<p><mark>View the page source to see the meta tags</mark> 😉
+
+</p>
+
+<h3>Data available for META tags</h3>
+
+<ul>
+<li>{% raw %}<strong><code>{{ course.course_ID }}</strong></code>{% endraw %} <pre>{{ course.course_ID }}</pre></li>
+<li>{% raw %}<strong><code>{{ course.title }}</strong></code>{% endraw %} <pre>{{ course.title }}</pre></li>
+<li>{% raw %}<strong><code>{{ course.url }}</strong></code>{% endraw %} <pre>{{ course.url }}</pre></li>
+<li>{% raw %}<strong><code>{{ course.art }}</strong></code>{% endraw %} <pre>{{ course.art }}</pre></li>
+<li>{% raw %}<strong><code>{{ course.og_short_description }}</strong></code>{% endraw %} <pre>{{ course.og_short_description }}</pre></li>
+</ul>
+
+<h3>Constructing URLs/paths</h3>
+<ul>
+<li>{% raw %}<strong><code>{{ course.title | slugify }}</strong></code> {% endraw %}<pre>{{course.title | slugify}}</pre></li>
+<li>{% raw %}<strong><code>{{ course.title | slugify  | prepend: "http://thegymnasium.com/take5/" }}</code></strong>{% endraw %} <pre>{{course.title | slugify | prepend: "http://thegymnasium.com/take5/" }}</pre></li>
+</ul>
+<!-- ☝️THESE ARE JUST HERE FOR TESTING! -->
+
+<meta name="description" content="{{ course.short_description | strip_html }}">
+<meta name="author" content="Aquent Gymnasium">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@AquentGymnasium">
+<meta name="twitter:url" property="og:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/take5/'}}">
+<meta name="twitter:title" property="og:title" content="{{ course.title }}">
+<meta name="twitter:image" property="og:image" content="{{ course.og_art }}">
+<meta name="twitter:description" property="og:description" content="{{ course.og_short_description}}">
+<link rel="apple-touch-icon" sizes="57x57" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://gymnasium.github.io/cms/favicon.ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gymnasium.github.io/cms/favicon.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://gymnasium.github.io/cms/favicon.ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gymnasium.github.io/cms/favicon.ico/favicon-16x16.png">
+<link rel="manifest" href="https://gymnasium.github.io/cms/favicon.ico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://gymnasium.github.io/cms/favicon.ico/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- //
+Generated at: {{ site.time }}
+Served from: {{ page.url | absolute_url }}
+Git Hash: {{ site.data['hash']}}
+// -->
