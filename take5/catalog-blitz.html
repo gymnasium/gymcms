@@ -1,0 +1,159 @@
+---
+layout: raw
+permalink: /static/take5/
+---
+{%- comment -%}
+//
+// This catalog page is to be used for the Take 5 blitz
+//
+{%- endcomment -%}
+
+<link rel="stylesheet" href="/css/take5.css/">
+
+{% include take5/detail-opener-js.html %}
+{% include take5/test-top.html %}
+
+<main id="main" role="main">
+<header class="take5--about" id="about">
+  <div class="container">
+    <h1>Take 5</h1>
+    <p><a class="gym-link-secondary" href="https://twitter.com/aquentgymnasium" target="_blank" rel="noopener"><b>Follow us each day</b></a> for <strong>20 days</strong> of <strong>5-minute tutorials</strong> on web design and development, user experience, prototyping, and career skills. After the 20-day-tutorial-a-thon, join us each week for a new, free Take 5 tutorial.</p>
+  </div>
+</header>
+
+{%- assign recent = ""  | split: ", " -%}
+{%- assign upcoming = ""  | split: ", " -%}
+
+{% assign catalog = site.data.take5s | sort %}
+{% for take5_hash in catalog %}
+{% assign item = take5_hash[1] %}
+
+
+{%- if item.live == true -%}
+
+
+    {%- if item.featured == true -%}
+        {% assign featured = item.course_ID %}
+        {% assign featured_title = item.title %}
+        {% assign featured_description = item.short_description %}
+        {% assign featured_url = item.url %}
+        {% assign featured_instructor = item.instructor %}
+        {% assign featured_topic = item.topic %}
+        {% assign featured_poster_art = item.poster_art %}
+        {% assign featured_video_duration = item.video_duration %}
+    {%- else -%}
+    {%- comment -%} Not featured, but live? Add the course_ID to the RECENT list {%- endcomment -%}
+    {%- assign recent = recent | push: item.course_ID -%}
+    {%- endif -%}
+{%- else -%}
+    {%- comment -%} Not live? Add the course_ID to the UPCOMING list {%- endcomment -%}
+    {%- assign upcoming = upcoming | push: item.course_ID -%}
+{%- endif -%}
+{%- endfor -%} 
+
+{% if featured != null %}
+<div class="take5--main">
+    
+<div class="take5--hero-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="take5--featured" id="featured-tutorial">
+                <header>
+                    <h2>New</h2>
+                </header>
+                    <div class="tutorial">
+                        <div class="artwork" data-duration="{{ featured_video_duration }}">
+                        <a href="{{ featured_url }}" title="Watch Video">
+                        <img alt="{{ featured_description }}" src="{{ featured_poster_art }}">
+                        </a>
+                    </div>
+                    <header>
+                        <h2 class="all-caps subhead-topic">{{ featured_topic }}</h2>
+                        <h1 class="title all-caps"><a href="{{ featured_url }}">{{ featured_title }}</a></h1>
+                        <p class="instructor">with {{ featured_instructor }}</p>
+                    </header>
+                    <p class="description">{{ featured_description }}</p>
+                    <div class="cta cta-left">
+                        <a class="gym-button" href="{{ featured_url }}"><b>Watch Video</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        <div class="col-md-4">
+            <!-- Upcoming Courses: Display 5 (max) of {{ upcoming | size }} Take 5s-->
+
+<details open class="take5--resources" id="tutorial-resources">
+        <summary aria-expanded="true/false" tabindex="0" role="button"><b role="heading">Upcoming</b></summary>
+            <div class="take5--resources-list take5--upcoming-list">
+            <ul>    
+    {%- for item in upcoming limit: 5 -%}
+    {%- assign upcoming_take5 = site.data.take5s[item] -%}
+
+    <li><time class="subhead-datetime" datetime="{{ upcoming_take5.date | date: '%Y-%m-%d' }}">
+    <b>{{ upcoming_take5.date | date: "%a" }} </b>
+    {{ upcoming_take5.date | date: "%b %-d" }}</time>
+    <h4>{{ upcoming_take5.title }}</h4>
+    </li>
+    
+    
+    {%- endfor -%}
+            </ul>
+        <p><strong>Stay Up-To-Date</strong><br><a class="gymlink" href="https://twitter.com/aquentgymnasium" target="_blank" rel="noopener">Follow Gymnasium on Twitter</a></p>
+        </div>
+    </details>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Display {{ recent | size }} (of 19) recent Take 5s -->
+
+<div class="take5--recent-content">
+    <div class="container">
+      <section class="take5--recent-tutorials" id="recent-tutorials">
+        <header>
+          <h2 class="all-caps">Recent</h2>
+        </header>
+        <div class="cols cols-max-3">
+{%- comment -%} Reverse the order of the recents (most recent = highest course_ID) {%- endcomment -%}
+<ul>
+{%- assign recent = recent | reverse -%}
+
+{%- for item in recent -%}
+{%- assign recent_take5 = site.data.take5s[item] -%}
+
+    <li>
+        <article class="tutorial">
+            <div class="artwork" data-duration="{{ recent_take5.video_duration }}">
+                <a href="{{ recent_take5.url }}" title="Watch Video">
+                <img alt="{{ recent_take5.title }}" src="{{ recent_take5.poster_art }}">
+                </a>
+            </div>
+            <header>
+                <h4 class="all-caps subhead-topic">{{ recent_take5.topic }}</h4>
+                <h3 class="all-caps">
+                <a href="{{ recent_take5.url }}">{{ recent_take5.title }}</a>
+                </h3>
+            </header>
+        </article>
+    </li>
+{%- endfor -%}
+</ul>
+        </div>
+      </section>
+      <div class="to-top-link">
+        <a href="#main"><b>Back to top</b></a>
+      </div>
+    </div>
+</div>
+
+
+</main>
+
+
+{% include take5/test-bottom.html %}

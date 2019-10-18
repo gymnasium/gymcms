@@ -1,0 +1,165 @@
+
+{% if course.topic == "Web Design & Development" %}
+
+{% assign tutorial1 = site.data.take5s.GYM-5001 %}
+{% assign tutorial2 = site.data.take5s.GYM-5002 %}
+{% assign tutorial3 = site.data.take5s.GYM-5003 %}
+{% assign course1 = site.data.courses.GYM-109 %}
+{% assign course2 = site.data.courses.GYM-107 %}
+{% assign course3 = site.data.courses.GYM-011 %}
+
+{% elsif course.topic == "User Experience" %}
+
+{% assign tutorial1 = site.data.take5s.GYM-5001 %}
+{% assign tutorial2 = site.data.take5s.GYM-5002 %}
+{% assign tutorial3 = site.data.take5s.GYM-5003 %}
+{% assign course1 = site.data.courses.GYM-103 %}
+{% assign course2 = site.data.courses.GYM-015 %}
+{% assign course3 = site.data.courses.GYM-105 %}
+
+{% elsif course.topic == "Prototyping" %}
+
+{% assign tutorial1 = site.data.take5s.GYM-5006 %}
+{% assign tutorial2 = site.data.take5s.GYM-5007 %}
+{% assign tutorial3 = site.data.take5s.GYM-5008 %}
+{% assign course1 = site.data.courses.GYM-015 %}
+{% assign course2 = site.data.courses.GYM-005 %}
+{% assign course3 = site.data.courses.GYM-008 %}
+
+
+{% else %}
+{% assign tutorial1 = "" %}
+{% assign tutorial2 = "" %}
+{% assign tutorial3 = "" %}
+{% assign course1 = "" %}
+{% assign course2 = "" %}
+{% assign course3 = "" %}
+{% endif %}
+
+{%- if tutorial1 != "" -%}
+
+<div class="take5--recommended-content">
+  <div class="container">
+
+{% if include.rec-take5 %}
+
+    <section class="take5--recommended" id="recommended-tutorials">
+      <header>
+        <h2 class="all-caps">More Take 5 Tutorials</h2>
+      </header>
+      <div class="cols cols-max-3 cols-hr">
+        <ul>
+          <li>
+            <section class="tutorial">
+                <a href="{{ tutorial1.url }}" title="Watch Video">
+                  <div class="artwork" data-duration="{{ tutorial1.video_duration }}">
+                    <img alt="{{ tutorial1.title }}" src="{{ tutorial1.poster_art }}">
+                  </div>
+                </a>
+              <header>
+              <b class="all-caps">{{ tutorial1.topic }}</b>
+                <h3 class="gymlink all-caps">
+                  <a href="{{ tutorial1.url }}">{{ tutorial1.title }}</a>
+                </h3>
+              </header>
+            </section>
+          </li>
+          <li>
+            <section class="tutorial">
+                <a href="{{ tutorial2.url }}" title="Watch Video">
+                  <div class="artwork" data-duration="{{ tutorial2.video_duration }}">
+                    <img alt="{{ tutorial2.title }}" src="{{ tutorial2.poster_art }}">
+                  </div>
+                </a>
+              <header>
+                <b class="all-caps">{{ tutorial2.topic }}</b>
+                <h3 class="gymlink all-caps">
+                  <a href="{{ tutorial2.url }}">{{ tutorial2.title }}</a>
+                </h3>
+              </header>
+            </section>
+          </li>
+          <li>
+            <section class="tutorial">
+                <a href="{{ tutorial3.url }}" title="Watch Video">
+                  <div class="artwork" data-duration="{{ tutorial3.video_duration }}">
+                    <img alt="{{ tutorial3.title }}" src="{{ tutorial3.poster_art }}">
+                  </div>
+                </a>
+              <header>
+              <b class="all-caps">{{ tutorial3.topic }}</b>
+                <h3 class="gymlink all-caps">
+                  <a href="{{ tutorial3.url }}">{{ tutorial3.title }}</a>
+                </h3>
+              </header>
+            </section>
+          </li>
+        </ul>
+      </div>
+      <div class="cta">
+        <a class="gym-button" href="https://thegymnasium.com/take5"><b>View Take 5 Catalog</b></a>
+      </div>
+    </section>
+
+{% endif %}
+
+{% if include.rec-courses %}
+
+    <section class="take5--recommended" id="recommended-courses">
+      <header>
+        <h2 class="all-caps">Courses We Recommend</h2>
+      </header>
+      <div class="cols cols-max-3 cols-hr">
+        <ul>
+          <li>
+            <section class="course">
+                <a href="{{ course1.url }}">
+                  <div class="artwork">
+                    <img alt="{{ course1.title }}" src="{{ course1.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ course1.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
+                  </div>
+                </a>
+              <header>
+                <h3 class="gymlink"><a href="{{ course1.url }}">{{ course1.title }}</a></h3>
+              </header>
+            </section>
+          </li>
+          <li>
+            <section class="course">
+                  <a href="{{ course2.url }}">
+                  <div class="artwork">
+                      <img alt="{{ course2.title }}" src="{{ course2.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ course2.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
+                  </div>
+                  </a>
+              <header>
+                <h3 class="gymlink"><a href="{{ course2.url }}">{{ course2.title }}</a></h3>
+              </header>
+            </section>
+          </li>
+          <li>
+            <section class="course">
+                  <a href="{{ course3.url }}">
+                    <div class="artwork">
+                        <img alt="{{ course3.title }}" src="{{ course3.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ course3.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
+                    </div>
+                  </a>
+              <header>
+                <h3 class="gymlink"><a href="{{ course3.url }}">{{ course3.title }}</a></h3>
+              </header>
+            </section>
+          </li>
+        </ul>
+      </div>
+      <div class="cta">
+        <a class="gym-button" href="https://thegymnasium.com/courses"><b>View Course Catalog</b></a>
+      </div>
+    </section>
+    <div class="to-top-link">
+      <a href="#main"><b>Back to top</b></a>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+{%- else -%}
+<!-- There is no recommended courses module here -->
+{%- endif -%}

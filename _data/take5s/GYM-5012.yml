@@ -1,0 +1,31 @@
+---
+course_ID: GYM-5012
+title: "Prototyping in the Browser with CSS Grid Layout"
+date: 2019-11-12 00:00:00 -0400
+course_type: take5
+url: /static/take5/GYM-5012/
+art: 
+og_art:
+poster_art:
+live: false
+instructor: "Jeremy Osborn"
+topic: "Prototyping"
+video_ID:
+video_duration:
+featured: false
+short_description: "In this lorem ipsum" 
+og_description: "In this lorem ipsum"
+project_file_source:
+project_files:
+- label: 
+  url: 
+- label: 
+  url:
+related_content:
+- label: 
+  url: 
+- label:
+  url:
+- label:
+  url:
+---

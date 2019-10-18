@@ -1,0 +1,59 @@
+---
+layout: raw
+permalink: /static/take5/catalog
+---
+<link rel="stylesheet" href="https://deploy-preview-109--gymcms.netlify.com/css/take-5.css/">
+<main id="main" role="main">
+<h1 class="title all-caps">Take 5 Catalog Page</h1>
+
+{%- comment -%}
+//
+// This page creates a catalog view that is grouped by topic
+// It should only display topics that have at least one live tutorial
+//
+{%- endcomment -%}
+
+{%- comment -%}
+//
+// Loop through all take 5s
+//
+{%- endcomment -%}
+
+{% assign topics = ""  | split: ', '%} 
+{% assign sorted_catalog = site.data.take5s | sort %}
+
+{% for take5_hash in sorted_catalog %}
+
+{% assign item = take5_hash[1] %}
+
+{%- comment -%}
+//
+// If there's a live tutorial, add the topic to an array of topics
+//
+{%- endcomment -%}
+
+{% if item.live == true %}
+{% assign topics = topics | push: item.topic  %}
+{% endif %}
+{% endfor %}
+
+{%- comment -%}
+//
+// Remove duplicates in the array of topics
+// Since each live tutorial found in the loop will add a separate entry to the array
+// there will likely be duplicates.
+// Note: to count the number of live items per group, count the full array, not the de-duped
+//
+{%- endcomment -%}
+
+{% assign unique_topics = topics | uniq | join: ', '|split: ', ' %}
+
+<!-- Found {{topics | size}} topic(s) with live content -->
+
+{% for catalog_topic in unique_topics %}
+{% include /take5/catalog-topic-group.html topic=catalog_topic %}
+{% endfor %}
+
+
+
+</main>

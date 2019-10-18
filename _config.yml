@@ -4,12 +4,6 @@ url: https://staging.gymcms.xyz
 baseurl:
 timezone: America/New_York
 
-
-collections:
-    webinars:
-        output: true
-        permalink: /static/webinars
-
 # Building
 
 exclude:
