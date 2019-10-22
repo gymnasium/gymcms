@@ -9,18 +9,14 @@ permalink: /tests/take5/dates/
 //
 {%- endcomment -%}
 
-<link rel="stylesheet" href="https://deploy-preview-109--gymcms.netlify.com/css/take-5.css/">
-<main id="main" role="main">
-<h1 class="title all-caps">Take 5 Catalog Page</h1>
-
 {%- assign pubdates = ""  | split: ", " -%}
 {%- assign publish_order = ""  | split: ", " -%}
 
 {% assign catalog = site.data.take5s | sort %}
 
 {% for take5_hash in catalog %}
-{% assign item = take5_hash[1] %}
-{%- assign pubdates = pubdates | push: item.date -%}
+    {% assign item = take5_hash[1] %}
+    {%- assign pubdates = pubdates | push: item.date -%}
 {% endfor %}
 
 {%- assign pubdates_sorted = pubdates | sort -%}
@@ -42,8 +38,7 @@ permalink: /tests/take5/dates/
 <pre>
 Course ID: {{site.data.take5s[item].course_ID}}
 Title: {{site.data.take5s[item].title}}
+Publish Date: {{site.data.take5s[item].date }}
 Publish Date: {{site.data.take5s[item].date | date_to_string }}
 </pre>
 {%- endfor -%}
-
-</main>
