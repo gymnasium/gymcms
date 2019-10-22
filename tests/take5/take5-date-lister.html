@@ -36,9 +36,9 @@ permalink: /tests/take5/dates/
 
 {%- for item in publish_order -%}
 <pre>
-Course ID: {{site.data.take5s[item].course_ID}}
-Title: {{site.data.take5s[item].title}}
-Publish Date: {{site.data.take5s[item].date }}
-Publish Date: {{site.data.take5s[item].date | date_to_string }}
+Course ID: {{ site.data.take5s[item].course_ID }}
+Title: {{ site.data.take5s[item].title }}
+Publish Date: {{ site.data.take5s[item].date }}
+Publish Date: {{ site.data.take5s[item].date | date_to_string }}
 </pre>
 {%- endfor -%}

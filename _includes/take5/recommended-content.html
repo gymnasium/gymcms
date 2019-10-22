@@ -1,4 +1,17 @@
 
+{% case jekyll.environment %}
+
+{% when "development" %}
+{% assign domain_link = "https://courses.gymna.si/take5/" %}
+
+{% when "staging" %}
+{% assign domain_link = "https://courses.gymna.si/take5/" %}
+
+{% when "production" %}
+{% assign domain_link = "https://thegymnasium.com/take5/" %}
+
+{% endcase %}
+
 {% if course.topic == "Web Design & Development" %}
 
 {% assign tutorial1 = site.data.take5s.GYM-5001 %}
@@ -40,7 +53,7 @@
 
 <div class="take5--recommended-content">
   <div class="container">
-
+    
 {% if include.rec-take5 %}
 
     <section class="take5--recommended" id="recommended-tutorials">
@@ -51,7 +64,7 @@
         <ul>
           <li>
             <section class="tutorial">
-                <a href="{{ tutorial1.url }}" title="Watch Video">
+                <a href="{{ tutorial1.title | slugify | prepend: domain_link  }}" title="Watch Video">
                   <div class="artwork" data-duration="{{ tutorial1.video_duration }}">
                     <img alt="{{ tutorial1.title }}" src="{{ tutorial1.poster_art }}">
                   </div>
@@ -59,14 +72,14 @@
               <header>
               <b class="all-caps">{{ tutorial1.topic }}</b>
                 <h3 class="gymlink all-caps">
-                  <a href="{{ tutorial1.url }}">{{ tutorial1.title }}</a>
+                  <a href="{{ tutorial1.title | slugify | prepend: domain_link  }}">{{ tutorial1.title }}</a>
                 </h3>
               </header>
             </section>
           </li>
           <li>
             <section class="tutorial">
-                <a href="{{ tutorial2.url }}" title="Watch Video">
+                <a href="{{ tutorial2.title | slugify | prepend: domain_link  }}" title="Watch Video">
                   <div class="artwork" data-duration="{{ tutorial2.video_duration }}">
                     <img alt="{{ tutorial2.title }}" src="{{ tutorial2.poster_art }}">
                   </div>
@@ -74,14 +87,14 @@
               <header>
                 <b class="all-caps">{{ tutorial2.topic }}</b>
                 <h3 class="gymlink all-caps">
-                  <a href="{{ tutorial2.url }}">{{ tutorial2.title }}</a>
+                  <a href="{{ tutorial2.title | slugify | prepend: domain_link  }}">{{ tutorial2.title }}</a>
                 </h3>
               </header>
             </section>
           </li>
           <li>
             <section class="tutorial">
-                <a href="{{ tutorial3.url }}" title="Watch Video">
+                <a href="{{ tutorial3.title | slugify | prepend: domain_link  }}" title="Watch Video">
                   <div class="artwork" data-duration="{{ tutorial3.video_duration }}">
                     <img alt="{{ tutorial3.title }}" src="{{ tutorial3.poster_art }}">
                   </div>
@@ -89,7 +102,7 @@
               <header>
               <b class="all-caps">{{ tutorial3.topic }}</b>
                 <h3 class="gymlink all-caps">
-                  <a href="{{ tutorial3.url }}">{{ tutorial3.title }}</a>
+                  <a href="{{ tutorial3.title | slugify | prepend: domain_link  }}">{{ tutorial3.title }}</a>
                 </h3>
               </header>
             </section>
