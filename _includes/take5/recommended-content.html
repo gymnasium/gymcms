@@ -66,7 +66,7 @@
             <section class="tutorial">
                 <a href="{{ tutorial1.title | slugify | prepend: domain_link  }}" title="Watch Video">
                   <div class="artwork" data-duration="{{ tutorial1.video_duration }}">
-                    <img alt="{{ tutorial1.title }}" src="{{ tutorial1.poster_art }}">
+                    <img alt="{{ tutorial1.title }}" src="{{ site.url }}{{ site.baseurl }}{{ tutorial1.poster_art }}">
                   </div>
                 </a>
               <header>
@@ -81,7 +81,7 @@
             <section class="tutorial">
                 <a href="{{ tutorial2.title | slugify | prepend: domain_link  }}" title="Watch Video">
                   <div class="artwork" data-duration="{{ tutorial2.video_duration }}">
-                    <img alt="{{ tutorial2.title }}" src="{{ tutorial2.poster_art }}">
+                    <img alt="{{ tutorial2.title }}" src="{{ site.url }}{{ site.baseurl }}{{ tutorial2.poster_art }}">
                   </div>
                 </a>
               <header>
@@ -96,7 +96,7 @@
             <section class="tutorial">
                 <a href="{{ tutorial3.title | slugify | prepend: domain_link  }}" title="Watch Video">
                   <div class="artwork" data-duration="{{ tutorial3.video_duration }}">
-                    <img alt="{{ tutorial3.title }}" src="{{ tutorial3.poster_art }}">
+                    <img alt="{{ tutorial3.title }}" src="{{ site.url }}{{ site.baseurl }}{{ tutorial3.poster_art }}">
                   </div>
                 </a>
               <header>
@@ -110,7 +110,7 @@
         </ul>
       </div>
       <div class="cta">
-        <a class="gym-button" href="https://thegymnasium.com/take5"><b>View Take 5 Catalog</b></a>
+        <a class="gym-button" href="{{ domain_link }}"><b>View Take 5 Catalog</b></a>
       </div>
     </section>
 
@@ -128,7 +128,7 @@
             <section class="course">
                 <a href="{{ course1.url }}">
                   <div class="artwork">
-                    <img alt="{{ course1.title }}" src="{{ course1.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ course1.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
+                    <img alt="{{ course1.title }}" src="{{ site.url }}{{ site.baseurl }}{{ course1.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ site.baseurl }}{{ course1.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
                   </div>
                 </a>
               <header>
@@ -140,7 +140,7 @@
             <section class="course">
                   <a href="{{ course2.url }}">
                   <div class="artwork">
-                      <img alt="{{ course2.title }}" src="{{ course2.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ course2.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
+                      <img alt="{{ course2.title }}" src="{{ site.url }}{{ site.baseurl }}{{ course2.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ site.baseurl }}{{ course2.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
                   </div>
                   </a>
               <header>
@@ -152,7 +152,7 @@
             <section class="course">
                   <a href="{{ course3.url }}">
                     <div class="artwork">
-                        <img alt="{{ course3.title }}" src="{{ course3.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ course3.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
+                        <img alt="{{ course3.title }}" src="{{ site.url }}{{ site.baseurl }}{{ course3.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ site.baseurl }}{{ course3.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
                     </div>
                   </a>
               <header>
