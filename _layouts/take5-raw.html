@@ -1,13 +1,16 @@
 <link rel="stylesheet" href="/css/take5.css" />
 
-{% include take5/detail-opener-js.html %} {% assign course =
-site.data.take5s[page.course_ID] %}
+{% include take5/detail-opener-js.html %} 
+{% assign course = site.data.take5s[page.course_ID] %}
 
 <main id="main" role="main">
   <article class="take5--main" id="{{ course.course_ID }}">
-    {%- comment -%} // // VIDEO // // Note: video duration is available with
-    {{ course.video_duration }}
+    {%- comment -%} 
+    // 
+    // VIDEO 
+    // 
     {%- endcomment -%}
+
     <div class="embed-full-width" id="tutorial-video">
       <div class="embed-responsive embed-responsive-16by9">
         {% include take5/video.html video_ID=course.video_ID %}
@@ -27,8 +30,13 @@ site.data.take5s[page.course_ID] %}
       </header>
       <p class="description">{{ course.short_description }}</p>
 
-      {%- comment -%} // // RELATED CONTENT // (Code and other links) // {%-
-      endcomment -%}
+      {%- comment -%} 
+      // 
+      // RELATED CONTENT 
+      // 
+      (Code and other links) 
+      // 
+      {%- endcomment -%}
       <div>
         <!-- Resources -->
 
@@ -41,7 +49,8 @@ site.data.take5s[page.course_ID] %}
           >
           <div class="take5--resources-list">
             <!-- Project Files -->
-            {% endif %} {% if course.project_files !=null %}
+            {% endif %} 
+            {% if course.project_files !=null %}
             <header>
               <h3>Project Files</h3>
               {% if course.project_file_source !=null %}
@@ -49,8 +58,8 @@ site.data.take5s[page.course_ID] %}
               {% endif %}
             </header>
             <ul>
-              {% for item in course.project_files %} {%- if item.url contains
-              ".zip" -%}
+              {% for item in course.project_files %} 
+              {%- if item.url contains ".zip" -%}
               <li>
                 <a href="{{ item.url }}" rel="noopener">{{ item.label }}</a>
               </li>
@@ -68,13 +77,13 @@ site.data.take5s[page.course_ID] %}
 
           <div class="take5--resources-list">
             <!-- Related Content -->
-            {% if course.related_content !=null %} {% if course.project_files
-            !=null %}
+            {% if course.related_content !=null %} 
+            {% if course.project_files !=null %}
             <h3>Related Content</h3>
             {% endif %}
             <ul>
-              {% for item in course.related_content %} {%- if item.url contains
-              "thegymnasium.com" -%}
+              {% for item in course.related_content %} 
+              {%- if item.url contains "thegymnasium.com" -%}
               <li>
                 <a href="{{ item.url }}">{{ item.label }}</a>
               </li>
@@ -120,14 +129,19 @@ site.data.take5s[page.course_ID] %}
     <!-- /Tutorial container -->
   </article>
 
-  {%- comment -%} // // RECOMMENDED COURSES // // Show recommended content
-  modules (Take 5s and courses) // Set rec-take5 and rec-courses to true/false
-  to toggle the display {%- endcomment -%} {% capture rec_content_test %}{%
-  file_exists _includes/take5/recommended-content.html %}{% endcapture %} {% if
-  rec_content_test =="true" %} {%- include /take5/recommended-content.html
-  rec-take5=true rec-courses=true -%} {% else %}
-  <h3><mark>No recommended content found!</mark></h3>
-  {% endif %}
+  {%- comment -%} 
+  // 
+  // RECOMMENDED COURSES 
+  // 
+  // Show recommended content modules (Take 5s and courses) 
+  // Set rec-take5 and rec-courses to true/false to toggle the display 
+  {%- endcomment -%} 
+  
+  {% capture rec_content_test %}{% file_exists _includes/take5/recommended-content.html %}{% endcapture %} 
+    {% if rec_content_test =="true" %} 
+    {%- include /take5/recommended-content.html rec-take5=true rec-courses=true -%} {% else %}
+      <h3><mark>No recommended content found!</mark></h3>
+    {% endif %}
 </main>
 
 <!-- //
