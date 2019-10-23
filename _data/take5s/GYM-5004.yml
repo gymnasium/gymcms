@@ -6,7 +6,6 @@ course_type: take5
 url: /static/take5/GYM-5004/
 art:
 poster_art: /img/take5/posters/gym-5004.jpg
-og_art:
 topic: "Web Design & Development"
 live: true
 instructor: 'Jeremy Osborn'
