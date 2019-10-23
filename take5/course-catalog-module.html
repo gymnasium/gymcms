@@ -2,3 +2,92 @@
 layout: raw
 permalink: /static/take5-catalog-module/
 ---
+{% case jekyll.environment %}
+
+{% when "development" %}
+{% assign domain_link = "https://courses.gymna.si/take5/" %}
+
+{% when "staging" %}
+{% assign domain_link = "https://courses.gymna.si/take5/" %}
+
+{% when "production" %}
+{% assign domain_link = "https://thegymnasium.com/take5/" %}
+
+{% endcase %}
+
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/take5-course-catalog.css">
+
+{%- assign pubdates = ""  | split: ", " -%}
+{%- assign publish_order = ""  | split: ", " -%}
+
+{%- assign recent = ""  | split: ", " -%}
+{%- assign upcoming = ""  | split: ", " -%}
+
+{% assign catalog = site.data.take5s | sort %}
+
+{% for take5_hash in catalog %}
+    {% assign item = take5_hash[1] %}
+    {%- assign pubdates = pubdates | push: item.date -%}
+{% endfor %}
+
+{%- assign pubdates_sorted = pubdates | sort -%}
+
+{%- for pubdate in pubdates_sorted -%}
+    
+    {% for take5_hash in catalog %}
+        {% assign item = take5_hash[1] %}
+        {%- if item.date == pubdate -%}
+            {%- assign publish_order = publish_order | push: item.course_ID -%}
+        {%- endif -%}
+    {% endfor %}
+
+{%- endfor -%}
+
+{%- assign publish_order = publish_order | uniq | join: ', '|split: ', '  -%}
+
+{%- for item in publish_order -%}
+
+{%- if site.data.take5s[item].live == true -%}
+
+    {%- assign recent = recent | push: site.data.take5s[item].course_ID -%}
+    {%- endif -%}
+{%- endfor -%}
+
+ {%- assign recent = recent | reverse -%}
+
+<h1 id="take5">Take 5</h1>
+{%- include take5/course-catalog-description.html -%}
+
+
+
+<ul class="listing-courses" id="take5-list">
+
+{%- for item in recent -%}
+{%- assign recent_take5 = site.data.take5s[item] -%}
+
+<li class="course-item" data-course-id="{{ recent_take5.course_ID | remove: 'GYM-' }}">
+  <article class="row">
+    <figure class="col-md-4">
+      <a href="{{ recent_take5.title | slugify | prepend: domain_link }}">
+        <img class="img-responsive" src="{{ site.url }}{{ site.baseurl }}{{ recent_take5.poster_art }}" alt="{{ recent_take5.course_ID | remove: 'gym-' }} {{ recent_take5.title }} Cover Image">
+      </a>
+      <figcaption>
+        <a href="{{ recent_take5.title | slugify | prepend: domain_link }}" class="gym-button"><b>Watch Now</b></a>
+      </figcaption>
+    </figure>
+    <div class="col-md-8 course-description">
+      <header>
+        <h2>{{ recent_take5.topic }}</h2>
+        <h1>{{ recent_take5.title }}</h1>
+      </header>
+      <p>
+        {{ recent_take5.short_description }}
+      </p>
+    </div>
+  </article>
+</li>
+
+
+{%- endfor -%}
+
+</ul>
