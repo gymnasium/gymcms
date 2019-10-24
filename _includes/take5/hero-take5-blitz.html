@@ -1,0 +1,60 @@
+{%- case jekyll.environment -%}
+
+{%- when "development" -%}
+{%- assign domain_link = "https://courses.gymna.si/take5/" -%}
+
+{%- when "staging" -%}
+{%- assign domain_link = "https://courses.gymna.si/take5/" -%}
+
+{%- when "production" -%}
+{%- assign domain_link = "https://thegymnasium.com/take5/" -%}
+
+{%- endcase -%}
+
+{%- assign catalog = site.data.take5s | sort -%}
+{%- for take5_hash in catalog -%}
+    {%- assign item = take5_hash[1] -%}
+    {%- if item.featured == true -%}
+    {%- assign hero_ID = item.course_ID | downcase -%}
+    {%- assign hero_topic = item.topic -%}
+    {%- assign hero_title = item.title -%}
+    {%- assign hero_utm = "" -%}
+    {%- assign hero_link = item.title | downcase | slugify | append: hero_utm | prepend: domain_link -%}
+    {%- endif -%}
+{%- endfor -%}
+
+
+
+{%- case hero_topic -%}
+    {%- when "Web Design & Development" -%}
+    {%- assign hero_style = "topic-web-design-development" -%}
+
+    {%- when "Prototyping" -%}
+    {%- assign hero_style = "topic-prototyping" -%}
+
+    {%- when "Career Skills" -%}
+    {%- assign hero_style = "topic-career-skills" -%}
+
+    {%- when "User Experience" -%}
+    {%- assign hero_style = "topic-user-experience" -%}
+
+{%- endcase -%}
+
+
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/hero-gym-take5.css">
+  <div class="{{ hero_style }}" id="hero-{{ hero_ID }}">
+  <div class="container">
+    <div class="hero-content-art" style="background-color: #333; background-image: url('{{ site.url }}{{ site.baseurl }}/img/take5/posters/{{ hero_ID }}-hero.jpg'); background-size: cover; border-right: 2px solid #ccc;"></div>
+    <div class="hero-content-copy">
+      <header>
+        <h3 class="subhead-topic">{{ hero_topic }}</h3>
+        <h2><span class="take5-brand-kern">Take 5</span></h2>
+        <h1>{{ hero_title }}</h1>
+        <p class="description"><strong>Take 5 minutes to learn a practical skill for free.</strong></p>
+      </header>
+      <div class="cta">
+        <a class="gym-button gym-button-secondary" href="{{ hero_link }}"><b>Watch and Learn</b></a>
+      </div>
+    </div>
+  </div>
+</div>
