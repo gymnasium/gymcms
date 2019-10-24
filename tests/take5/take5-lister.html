@@ -1,0 +1,37 @@
+---
+layout: raw
+permalink: /tests/take5/lister/
+---
+
+<title>Take 5 Testing: List Utility</title>
+
+
+{% assign sorted_catalog = site.data.take5s | sort %}
+
+<p>Found: <strong>{{sorted_catalog | size }}</strong> Take 5 tutorials</p>
+
+<table border="0">
+    <thead>
+        <th>Course ID</th>
+        <th>Title</th>
+        <!-- <th>Page Include URL</th> -->
+        <!-- <th>Meta Include URL</th> -->
+        <!-- <th>Gymnasium URL</th> -->
+    </thead>
+
+    {% for take5_hash in sorted_catalog %}
+    {% assign item = take5_hash[1] %}
+
+<tr>
+    <!-- Course ID -->
+    <td>{{ item.course_ID }}</td>
+    
+    <!-- Title -->
+    {% if item.title ==null %}<td class="error">MISSING VALUE</td>{% else %}
+    <td>{{ item.title }}</td>
+    {% endif %}
+</tr>
+{% endfor %}
+</table>
+
+

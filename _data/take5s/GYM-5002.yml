@@ -11,8 +11,7 @@ instructor: "Jeremy Osborn"
 video_ID: Q66-TDbHiIs
 video_duration: "4:48"
 featured: false
-short_description: "In this tutorial, Jeremy Osborn, Academic Director of Aquent Gymnasium, will teach you how to make an image appear inside the outline of plain text using CSS."
-og_description: "In this tutorial, Jeremy Osborn will teach you how to make an image appear inside the outline of plain text using CSS."
+short_description: "Learn how to make an image appear inside the outline of plain text using CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: Codepen
 project_files:
 - label: "Starting Project"

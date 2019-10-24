@@ -11,8 +11,7 @@ instructor: "Jeremy Osborn"
 video_ID: _12cCrECCdY
 video_duration: "4:59"
 featured: true
-short_description: "In this tutorial, Jeremy Osborn, Academic Director of Aquent Gymnasium, will teach you how to turn a grayscale image into a duotone using CSS blend modes."
-og_description: "In this tutorial, Jeremy Osborn will teach you how to turn a grayscale image into a duotone using CSS blend modes."
+short_description: "Learn how to turn a grayscale image into a duotone using CSS blend modes in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: Codepen
 project_files:
 - label: "Starting Project"
