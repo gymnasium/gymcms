@@ -1,0 +1,26 @@
+---
+course_ID: GYM-5011
+title: "Using Smart Layout in Sketch"
+date: 2019-11-04T00:00:00-04:00
+course_type: take5
+url: /static/take5/GYM-5011/
+poster_art:
+live: false
+instructor: "Jeremy Osborn"
+topic: "Prototyping"
+video_ID:
+video_duration: "4:59"
+featured: false
+short_description: "Learn how to use Smart Layout in Sketch in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
+project_file_source: GitHub
+project_files:
+- label: "Lesson Files"
+  url: "https://gymnasium.github.io/take5/gym-5011.zip"
+related_content:
+- label: 
+  url: 
+- label:
+  url:
+- label:
+  url:
+---
