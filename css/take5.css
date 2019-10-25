@@ -661,11 +661,11 @@ details.take5--transcript {
   @media (min-width: 36em) {
 
     .cols-max-2 ul {
-      grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(24em, 1fr));
     }
 
     .cols-max-3 ul {
-      grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
     }
 
   }
