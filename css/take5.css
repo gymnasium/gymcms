@@ -412,6 +412,7 @@ details.take5--transcript {
 }
 
 .take5--main summary {
+  display: list-item;
   cursor: pointer;
 }
 
