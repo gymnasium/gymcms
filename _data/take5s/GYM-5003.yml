@@ -7,7 +7,7 @@ url: /static/take5/GYM-5003/
 poster_art: /img/take5/posters/gym-5003.jpg
 topic: "Web Design & Development"
 permalink: /static/take5/:name
-live: true
+live: false
 instructor: "Jeremy Osborn"
 video_ID: SaO2hO-4yEY
 video_duration: "4:13"
