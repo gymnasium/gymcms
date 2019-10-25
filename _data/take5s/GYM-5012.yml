@@ -11,8 +11,7 @@ topic: "Prototyping"
 video_ID:
 video_duration:
 featured: false
-short_description: "In this lorem ipsum" 
-og_description: "In this lorem ipsum"
+short_description: "Learn the benefits of prototyping web page layouts using CSS Grid Layout in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source:
 project_files:
 - label: 

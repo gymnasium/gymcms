@@ -6,13 +6,12 @@ course_type: take5
 url: /static/take5/GYM-5004/
 poster_art: /img/take5/posters/gym-5004.jpg
 topic: "Web Design & Development"
-live: true
+live: false
 instructor: 'Jeremy Osborn'
 video_ID: VaHkQQ5xgac
 video_duration: "4:34"
 featured: false
-short_description: "In this tutorial, Jeremy Osborn, Academic Director of Aquent Gymnasium, will teach you how to use new CSS features made for modern browsers without sacrificing accessibility."
-og_description: "In this tutorial, Jeremy Osborn will teach you how to use new CSS features made for modern browsers without sacrificing accessibility."
+short_description: "Learn how to use new CSS features made for modern browsers in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: Codepen
 project_files:
 - label: "Starting Project"
