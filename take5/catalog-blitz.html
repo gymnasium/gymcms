@@ -147,9 +147,12 @@ permalink: /static/take5/
 
 
 
-
+{%- assign recent_count = recent | size -%}
+{%- if  recent_count  != 0 -%}
 
 <!-- Display {{ recent | size }} (of 19) recent Take 5s -->
+
+
 
 <div class="take5--recent-content">
     <div class="container">
@@ -188,10 +191,10 @@ permalink: /static/take5/
       </div>
     </div>
 </div>
-
+{%- endif -%}
 
 </main>
 
 {%- if jekyll.environment == "development" -%}
-    {%- include take5/test-top.html -%}
+    {%- include take5/test-bottom.html -%}
 {%- endif -%}
