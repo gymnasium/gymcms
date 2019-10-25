@@ -7,13 +7,12 @@ url: /static/take5/GYM-5003/
 poster_art: /img/take5/posters/gym-5003.jpg
 topic: "Web Design & Development"
 permalink: /static/take5/:name
-live: true
+live: false
 instructor: "Jeremy Osborn"
 video_ID: SaO2hO-4yEY
 video_duration: "4:13"
 featured: false
-short_description: "In this tutorial, Jeremy Osborn, Academic Director of Aquent Gymnasium, will teach you how to add a gradient overlay to an image more efficiently using only CSS."
-og_description: "In this tutorial, Jeremy Osborn will teach you how to add a gradient overlay to an image more efficiently using only CSS."
+short_description: "Learn how to add a gradient overlay to an image more efficiently using only CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: Codepen
 project_files:
 - label: "Starting Project"
