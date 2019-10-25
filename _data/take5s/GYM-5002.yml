@@ -1,0 +1,30 @@
+---
+course_ID: GYM-5002
+title: "Creating a CSS Knockout Text Effect"
+date: 2019-10-29T00:00:00-04:00
+course_type: take5
+url: /static/take5/GYM-5002/
+poster_art: /img/take5/posters/gym-5002.jpg
+topic: "Web Design & Development"
+live: false
+instructor: "Jeremy Osborn"
+video_ID: Q66-TDbHiIs
+video_duration: "4:48"
+featured: false
+short_description: "Learn how to make an image appear inside the outline of plain text using CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
+project_file_source: Codepen
+project_files:
+- label: "Starting Project"
+  url: "https://codepen.io/josborn/pen/vMyyxg"
+- label: "Completed Project"
+  url: "https://codepen.io/josborn/pen/YMVdVe"
+related_content:
+- label: "heropatterns.com"
+  url: "https://heropatterns.com"
+- label: "svgbackgrounds.com"
+  url: "https://svgbackgrounds.com"
+- label: "Using Feature Queries in CSS by Jen Simmons"
+  url: "https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/"
+- label: "Can I Use: CSS3 Background-image options"
+  url: "https://caniuse.com/#feat=background-img-opts"
+---

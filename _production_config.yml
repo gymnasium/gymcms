@@ -5,10 +5,6 @@ baseurl: /
 timezone: America/New_York
 environment: production
 
-collections:
-    webinars:
-        output: true
-        permalink: /static/webinars/
 # Building
 
 exclude:
