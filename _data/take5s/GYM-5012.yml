@@ -4,25 +4,25 @@ title: "Prototyping in the Browser with CSS Grid Layout"
 date: 2019-11-05T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5012/
-poster_art:
+poster_art: /img/take5/posters/gym-5012.jpg
 live: false
 instructor: "Jeremy Osborn"
 topic: "Prototyping"
-video_ID:
-video_duration:
+video_ID: IqAizKPCC9U
+video_duration: "4:59"
 featured: false
 short_description: "Learn the benefits of prototyping web page layouts using CSS Grid Layout in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
-project_file_source:
+project_file_source: CodePen
 project_files:
-- label: 
-  url: 
-- label: 
-  url:
+- label: "Starting project" 
+  url: https://codepen.io/josborn/pen/VwwvaVq
+- label: "Completed project" 
+  url: https://codepen.io/josborn/pen/bGGVPep
 related_content:
-- label: 
-  url: 
-- label:
-  url:
-- label:
-  url:
+- label: "CSS Grid for Designers by Johna Paolino"
+  url: https://open.nytimes.com/css-grid-for-designers-f74a883b98f5
+- label: "CSS Grid Layout: A Cornucopia of Options"
+  url: https://medium.com/gymnasium/css-grid-layout-a-cornucopia-of-options-90a5ee10ad9f
+- label: "Get Ready for CSS Grid Layout by Rachel Andrew"
+  url: https://abookapart.com/products/get-ready-for-css-grid-layout
 ---
