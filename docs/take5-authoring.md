@@ -1,3 +1,8 @@
+---
+layout: docs
+permalink: /docs/authoring/
+---
+
 # Take 5 Authoring
 
 To create a new Take 5 tutorial, several files and assets need to be created and placed in specific directories in the gymcms repository.
@@ -48,7 +53,6 @@ related_content:
 - label: "MDN web docs: Viewport concepts"
   url: "https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts"
 ---
-
 ```
 </details>
 
@@ -103,7 +107,7 @@ Stub files are additional files that Jekyll uses to generate the tutorial page a
 
 - `take5/gym-5000.md`
 
-The Take 5 stub page contains frontmatter and the full text from the video transcript as `{{ content }}`
+The Take 5 stub page contains frontmatter and the full text from the video transcript as {% raw %}`{{ content }}`{% endraw %}
 
 ```yaml
 ---
