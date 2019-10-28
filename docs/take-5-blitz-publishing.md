@@ -1,3 +1,7 @@
+---
+layout: docs
+permalink: /docs/blitz/
+---
 # Take 5 Publishing - Blitz Edition
 
 **Important Note:** This documentation describes the sequence of tasks required to publish GYM-5002 (i.e. GYM-5001 is currently live)
@@ -22,3 +26,5 @@
 ## Step 4: Make a PR to merge the patch branch into staging
 
 ## Step 5: Merge staging into production
+
+---
