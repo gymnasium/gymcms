@@ -11,7 +11,7 @@ live: true
 instructor: "Jeremy Osborn"
 video_ID: SaO2hO-4yEY
 video_duration: "4:13"
-featured: true
+featured: false
 short_description: "Learn how to add a gradient overlay to an image more efficiently using only CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: CodePen
 project_files:
