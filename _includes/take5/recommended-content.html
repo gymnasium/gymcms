@@ -53,7 +53,7 @@
 
 <div class="take5--recommended-content">
   <div class="container">
-    
+
 {% if include.rec-take5 %}
 
     <section class="take5--recommended" id="recommended-tutorials">
@@ -64,14 +64,14 @@
         <ul>
           <li>
             <section class="tutorial">
+              <div class="artwork" data-duration="{{ tutorial1.video_duration }}">
                 <a href="{{ tutorial1.title | slugify | prepend: domain_link  }}" title="Watch Video">
-                  <div class="artwork" data-duration="{{ tutorial1.video_duration }}">
-                    <img alt="{{ tutorial1.title }}" src="{{ site.url }}{{ site.baseurl }}{{ tutorial1.poster_art }}">
-                  </div>
+                  <img alt="{{ tutorial1.title }}" src="{{ site.url }}{{ site.baseurl }}{{ tutorial1.poster_art }}">
                 </a>
+              </div>
               <header>
-              <b class="all-caps">{{ tutorial1.topic }}</b>
-                <h3 class="gymlink all-caps">
+                <b class="all-caps">{{ tutorial1.topic }}</b>
+                <h3 class="all-caps">
                   <a href="{{ tutorial1.title | slugify | prepend: domain_link  }}">{{ tutorial1.title }}</a>
                 </h3>
               </header>
@@ -79,14 +79,14 @@
           </li>
           <li>
             <section class="tutorial">
+              <div class="artwork" data-duration="{{ tutorial2.video_duration }}">
                 <a href="{{ tutorial2.title | slugify | prepend: domain_link  }}" title="Watch Video">
-                  <div class="artwork" data-duration="{{ tutorial2.video_duration }}">
-                    <img alt="{{ tutorial2.title }}" src="{{ site.url }}{{ site.baseurl }}{{ tutorial2.poster_art }}">
-                  </div>
+                  <img alt="{{ tutorial2.title }}" src="{{ site.url }}{{ site.baseurl }}{{ tutorial2.poster_art }}">
                 </a>
+              </div>
               <header>
                 <b class="all-caps">{{ tutorial2.topic }}</b>
-                <h3 class="gymlink all-caps">
+                <h3 class="all-caps">
                   <a href="{{ tutorial2.title | slugify | prepend: domain_link  }}">{{ tutorial2.title }}</a>
                 </h3>
               </header>
@@ -94,14 +94,14 @@
           </li>
           <li>
             <section class="tutorial">
+              <div class="artwork" data-duration="{{ tutorial3.video_duration }}">
                 <a href="{{ tutorial3.title | slugify | prepend: domain_link  }}" title="Watch Video">
-                  <div class="artwork" data-duration="{{ tutorial3.video_duration }}">
-                    <img alt="{{ tutorial3.title }}" src="{{ site.url }}{{ site.baseurl }}{{ tutorial3.poster_art }}">
-                  </div>
+                  <img alt="{{ tutorial3.title }}" src="{{ site.url }}{{ site.baseurl }}{{ tutorial3.poster_art }}">
                 </a>
+              </div>
               <header>
-              <b class="all-caps">{{ tutorial3.topic }}</b>
-                <h3 class="gymlink all-caps">
+                <b class="all-caps">{{ tutorial3.topic }}</b>
+                <h3 class="all-caps">
                   <a href="{{ tutorial3.title | slugify | prepend: domain_link  }}">{{ tutorial3.title }}</a>
                 </h3>
               </header>
@@ -126,37 +126,43 @@
         <ul>
           <li>
             <section class="course">
+              <div class="artwork">
                 <a href="{{ course1.url }}">
-                  <div class="artwork">
-                    <img alt="{{ course1.title }}" src="{{ site.url }}{{ site.baseurl }}{{ course1.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ site.baseurl }}{{ course1.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
-                  </div>
+                  <img alt="{{ course1.title }}" src="{{ site.url }}{{ site.baseurl }}{{ course1.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ site.baseurl }}{{ course1.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
                 </a>
+              </div>
               <header>
-                <h3 class="gymlink"><a href="{{ course1.url }}">{{ course1.title }}</a></h3>
+                <h3 class="all-caps">
+                  <a href="{{ course1.url }}">{{ course1.title }}</a>
+                </h3>
               </header>
             </section>
           </li>
           <li>
             <section class="course">
-                  <a href="{{ course2.url }}">
-                  <div class="artwork">
-                      <img alt="{{ course2.title }}" src="{{ site.url }}{{ site.baseurl }}{{ course2.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ site.baseurl }}{{ course2.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
-                  </div>
-                  </a>
+              <div class="artwork">
+                <a href="{{ course2.url }}">
+                  <img alt="{{ course2.title }}" src="{{ site.url }}{{ site.baseurl }}{{ course2.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ site.baseurl }}{{ course2.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
+                </a>
+              </div>
               <header>
-                <h3 class="gymlink"><a href="{{ course2.url }}">{{ course2.title }}</a></h3>
+                <h3 class="all-caps">
+                  <a href="{{ course2.url }}">{{ course2.title }}</a>
+                </h3>
               </header>
             </section>
           </li>
           <li>
             <section class="course">
-                  <a href="{{ course3.url }}">
-                    <div class="artwork">
-                        <img alt="{{ course3.title }}" src="{{ site.url }}{{ site.baseurl }}{{ course3.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ site.baseurl }}{{ course3.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
-                    </div>
-                  </a>
+              <div class="artwork">
+                <a href="{{ course3.url }}">
+                  <img alt="{{ course3.title }}" src="{{ site.url }}{{ site.baseurl }}{{ course3.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ site.baseurl }}{{ course3.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
+                </a>
+              </div>
               <header>
-                <h3 class="gymlink"><a href="{{ course3.url }}">{{ course3.title }}</a></h3>
+                <h3 class="all-caps">
+                  <a href="{{ course3.url }}">{{ course3.title }}</a>
+                </h3>
               </header>
             </section>
           </li>
@@ -168,6 +174,19 @@
     </section>
     <div class="to-top-link">
       <a href="#main"><b>Back to top</b></a>
+    </div>
+  </div>
+</div>
+
+<!-- Courses CTA -->
+<div class="cta-message">
+  <div class="container">
+    <section>
+      <h2 class="all-caps">Keep Learning <span class="no-wrap">with Gymnasium</span></h2>
+      <p>Learn new skills from expert instructors at your own pace.</p>
+    </section>
+    <div class="cta">
+      <a class="gym-button" href="https://thegymnasium.com/courses"><b>Take a Free Course</b></a>
     </div>
   </div>
 </div>
