@@ -10,7 +10,7 @@ live: true
 instructor: 'Jeremy Osborn'
 video_ID: VaHkQQ5xgac
 video_duration: "4:34"
-featured: true
+featured: false
 short_description: "Learn how to use new CSS features for modern browsers without worrying about browser incompatibilities in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: CodePen
 project_files:

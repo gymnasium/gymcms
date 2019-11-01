@@ -6,11 +6,11 @@ course_type: take5
 url: /static/take5/GYM-5005/
 poster_art: /img/take5/posters/gym-5005.jpg
 topic: "Web Design & Development"
-live: false
+live: true
 instructor: "Jeremy Osborn"
 video_ID: _12cCrECCdY
 video_duration: "4:59"
-featured: false
+featured: true
 short_description: "Learn how to turn a grayscale image into a duotone using CSS blend modes in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: CodePen
 project_files:
