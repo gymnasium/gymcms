@@ -23,4 +23,6 @@ related_content:
   url: "https://www.behance.net/gallery/72065227/Auto-Animate-UI-Kit-for-Adobe-XD"
 - label: "Auto-Animate Tips & Tricks"
   url: "https://www.youtube.com/watch?v=RNXpEQqbWRM"
+- label: "The Basics of Easing by Paul Lewis"
+  url: "https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing"
 ---
