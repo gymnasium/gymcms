@@ -9,18 +9,18 @@ live: false
 instructor: "Jeremy Osborn"
 topic: "Prototyping"
 video_ID: TJqqgchPraE
-video_duration: "4:56"
+video_duration: "4:57"
 featured: false
-short_description: "Learn how to use Auto-Animate in Adobe XD in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium." 
+short_description: "Learn how to use Auto-Animate in Adobe XD in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: GitHub
-project_files: 
+project_files:
 - label: "Lesson Files"
   url: "https://gymnasium.github.io/take5/gym-5014.zip"
 related_content:
 - label: "Official Adobe XD documentation for Auto-Animate"
-  url: https://helpx.adobe.com/xd/help/animate-prototypes.html
-- label: "Auto-Animate UI Kit"
-  url: https://www.behance.net/gallery/72065227/Auto-Animate-UI-Kit-for-Adobe-XD
+  url: "https://helpx.adobe.com/xd/help/animate-prototypes.html"
+- label: "Official Adobe XD documentation for Auto-Animate"
+  url: "https://www.behance.net/gallery/72065227/Auto-Animate-UI-Kit-for-Adobe-XD"
 - label: "Auto-Animate Tips & Tricks"
-  url: https://www.youtube.com/watch?v=RNXpEQqbWRM&t=481s
+  url: "https://www.youtube.com/watch?v=RNXpEQqbWRM"
 ---
