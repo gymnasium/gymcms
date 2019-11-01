@@ -79,7 +79,12 @@
               {% endif %}
               {% if course.project_files !=null %}
               <header>
+                {% if course.project_file_source == "GitHub" %}
+                <h3>Lesson Files</h3>
+                {% endif %}
+                {% if course.project_file_source == "CodePen" %}
                 <h3>Project Files</h3>
+                {% endif %}
                 {% if course.project_file_source !=null %}
                 <p>on {{ course.project_file_source }}</p>
                 {% endif %}
