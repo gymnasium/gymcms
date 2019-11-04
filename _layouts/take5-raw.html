@@ -71,15 +71,20 @@
           <!-- No resources found! -->
           {% else %}
           <details open class="take5--resources" id="tutorial-resources">
-            <summary aria-expanded="true/false" tabindex="0" role="button"
-              ><b role="heading">Resources</b></summary
-            >
+            <summary aria-expanded="true/false" tabindex="0" role="button">
+              <b role="heading">Resources</b>
+            </summary>
             <div class="take5--resources-list">
               <!-- Project Files -->
               {% endif %}
               {% if course.project_files !=null %}
               <header>
+                {% if course.project_file_source == "GitHub" %}
+                <h3>Lesson Files</h3>
+                {% endif %}
+                {% if course.project_file_source == "CodePen" %}
                 <h3>Project Files</h3>
+                {% endif %}
                 {% if course.project_file_source !=null %}
                 <p>on {{ course.project_file_source }}</p>
                 {% endif %}

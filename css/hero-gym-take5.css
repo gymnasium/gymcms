@@ -50,12 +50,16 @@
     background-position: left center;
   }
 
+  .hero-content-copy {
+    padding-left: 1.4em;
+  }
+
 }
 
 /* content / copy */
 
 .hero-content-copy {
-  padding-left: 1.4em;
+  padding-left: .4em;
   margin-top: 6%;
   margin-bottom: 4%;
 }
