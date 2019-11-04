@@ -14,15 +14,17 @@ featured: false
 short_description: "Learn the benefits of prototyping web page layouts using CSS Grid Layout in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: CodePen
 project_files:
-- label: "Starting project" 
-  url: https://codepen.io/josborn/pen/VwwvaVq
-- label: "Completed project" 
-  url: https://codepen.io/josborn/pen/bGGVPep
+- label: "Starting Project"
+  url: "https://codepen.io/josborn/pen/VwwvaVq"
+- label: "Completed Project"
+  url: "https://codepen.io/josborn/pen/bGGVPep"
 related_content:
 - label: "CSS Grid for Designers by Johna Paolino"
-  url: https://open.nytimes.com/css-grid-for-designers-f74a883b98f5
+  url: "https://open.nytimes.com/css-grid-for-designers-f74a883b98f5"
+- label: "Build Prototypes That Spark Joy - an interview with Dave Rupert"
+  url: "https://www.youtube.com/watch?v=BmvqN_S69CQ"
 - label: "CSS Grid Layout: A Cornucopia of Options"
-  url: https://medium.com/gymnasium/css-grid-layout-a-cornucopia-of-options-90a5ee10ad9f
+  url: "https://medium.com/gymnasium/css-grid-layout-a-cornucopia-of-options-90a5ee10ad9f"
 - label: "Get Ready for CSS Grid Layout by Rachel Andrew"
-  url: https://abookapart.com/products/get-ready-for-css-grid-layout
+  url: "https://abookapart.com/products/get-ready-for-css-grid-layout"
 ---
