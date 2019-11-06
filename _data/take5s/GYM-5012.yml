@@ -10,7 +10,7 @@ instructor: "Jeremy Osborn"
 topic: "Prototyping"
 video_ID: IqAizKPCC9U
 video_duration: "4:59"
-featured: true
+featured: false
 short_description: "Learn the benefits of prototyping web page layouts using CSS Grid Layout in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: CodePen
 project_files:
