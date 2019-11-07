@@ -366,8 +366,8 @@ main h3 {
   margin-top: 1.4em;
 }
 
-.take5--resources-list header + ul {
-  margin-top: 1em;
+.take5--resources-list header {
+  margin-bottom: 1em;
 }
 
 .take5--resources-list ul {
