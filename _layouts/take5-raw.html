@@ -74,10 +74,10 @@
             <summary aria-expanded="true/false" tabindex="0" role="button">
               <b role="heading">Resources</b>
             </summary>
+            <!-- Project Files -->
+            {% endif %}
+            {% if course.project_files !=null %}
             <div class="take5--resources-list">
-              <!-- Project Files -->
-              {% endif %}
-              {% if course.project_files !=null %}
               <header>
                 {% if course.project_file_source == "GitHub" %}
                 <h3>Lesson Files</h3>
@@ -103,8 +103,8 @@
                 </li>
                 {% endif %} {% endfor %}
               </ul>
-              {% endif %}
             </div>
+            {% endif %}
             <!-- /Project Files -->
 
             <div class="take5--resources-list">
