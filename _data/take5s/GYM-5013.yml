@@ -10,7 +10,7 @@ instructor: "Jeremy Osborn"
 topic: "Prototyping"
 video_ID: QxN2wVlBTTw
 video_duration: "4:51"
-featured: true
+featured: false
 short_description: "Learn how to create animated micro-interactions using InVision Studio’s timeline feature in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: GitHub
 project_files:
