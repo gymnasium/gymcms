@@ -111,7 +111,9 @@
               <!-- Related Content -->
               {% if course.related_content !=null %}
               {% if course.project_files !=null %}
-              <h3>Related Content</h3>
+              <header>
+                <h3>Related Content</h3>
+              </header>
               {% endif %}
               <ul>
                 {% for item in course.related_content %}
