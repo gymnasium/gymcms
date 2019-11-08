@@ -3,22 +3,26 @@ course_ID: GYM-5017
 title: "How to Tell the Story of a Mid-Career Pivot"
 date: 2019-11-12T00:00:00-04:00
 course_type: take5
-url: /static/take5/GYM-5020/
-poster_art:
+url: /static/take5/GYM-5017/
+poster_art: /img/take5/posters/gym-5017.jpg
 live: false
 instructor: "Anne Ditmeyer"
 topic: "Career Skills"
-video_ID:
-video_duration:
+video_ID: ycCdyR-Oohs
+video_duration: "4:18"
 featured: false
-short_description: "In this lorem ipsum"
-project_file_source:
-project_files:
+short_description: "Learn how to have confidence in the stories you tell after making a career change in this tutorial with Anne Ditmeyer, creative coach."
+#project_file_source:
+#project_files:
+#- label:
+#  url:
+#- label:
+#  url:
 related_content:
-- label: 
-  url: 
-- label:
-  url:
-- label:
-  url:
+- label: "Story Map by James Buckhouse"
+  url: "https://medium.com/design-story/story-map-3cc64033128e"
+- label: "Lucidchart"
+  url: "https://www.lucidchart.com"
+- label: "Coggle"
+  url: "https://coggle.it"
 ---
