@@ -5,12 +5,12 @@ date: 2019-11-11T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5016/
 poster_art: /img/take5/posters/gym-5016.jpg
-live: false
+live: true
 instructor: "Lee Andrese"
 topic: "Career Skills"
 video_ID: 3WVDdGssP6Y
 video_duration: "4:35"
-featured: false
+featured: true
 short_description: "Learn how to tell your story in a compelling way in order to advance your career in this tutorial with Lee Andrese, Principal of Akatheme."
 related_content:
 - label: "The Psychological Power of Storytelling by Pamela B. Rutledge"
