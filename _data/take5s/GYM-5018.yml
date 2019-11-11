@@ -4,25 +4,19 @@ title: "Crafting Your Story"
 date: 2019-11-13T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5018/
-poster_art:
+poster_art: /img/take5/posters/gym-5018.jpg
 live: false
 instructor: "Lee Andrese"
 topic: "Career Skills"
-video_ID:
-video_duration:
+video_ID: iLI4I2XnjpU
+video_duration: "5:00"
 featured: false
-short_description: "Learn how to create compelling stories for projects you’ve made in this tutorial with Lee Andrese, Principal of Akatheme." 
-project_file_source:
-project_files:
-- label: 
-  url: 
-- label: 
-  url:
+short_description: "Learn how to create compelling stories for projects you’ve made in this tutorial with Lee Andrese, Principal of Akatheme."
 related_content:
-- label: 
-  url: 
-- label:
-  url:
-- label:
-  url:
+- label: "Finding, Crafting and Telling a Great Story - Nicole Kahn"
+  url: "https://gsbmedia.stanford.edu/media/GuestA+Nicole+Kahn/0_jagtf4n5"
+- label: "From Storytelling to Storylistening - John Maeda"
+  url: "https://futureofstorytelling.org/video/john-maeda-from-storytelling-to-storylistening"
+- label: "Build your design portfolio around one awesome story by Jake Knappl"
+  url: "https://medium.com/@jakek/build-your-design-portfolio-around-one-and-only-one-awesome-story-d3995f74cf47"
 ---
