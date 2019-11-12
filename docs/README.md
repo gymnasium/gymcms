@@ -1,17 +1,13 @@
----
-layout: docs
-permalink: /docs/authoring/
----
-
 # Take 5 Authoring
 
-To create a new Take 5 tutorial, several files and assets need to be created and placed in specific directories in the gymcms repository.
+To create a new Take 5 tutorial, several files and assets need to be created and placed in specific directories in the gymcms repository. Every Take 5 tutorial is comprised of a **tutorial data file**, two **stub files**, and three **image files**.
 
-## Authoring Steps
+## Authoring Steps {docsify-ignore}
 
 1. Create the tutorial data file in `_data/take5/`
 2. Create the stub files in `take5/` and `take5/meta/`
 3. Add image assets to `img/take5/posters/` and `img/take5/og/`
+4. Publish the Take 5 tutorial
 
 ---
 
@@ -19,7 +15,7 @@ To create a new Take 5 tutorial, several files and assets need to be created and
 
 This YAML file defines the key paramters for a Take 5.
 
-- `_data/take5/GYM-5000.yml`
+- **File location:** `_data/take5/GYM-5000.yml`
 
 <details>
 <summary>View Annotated Sample</summary>
@@ -56,18 +52,19 @@ related_content:
 ```
 </details>
 
-### About Project Files
+### About Project Files {docsify-ignore}
 
-- Project files _must_ have a file source specified (e.g. Codepen)
+- Project files are optional
+- Project files _must_ have a file source specified (e.g. CodePen)
 - Each project file has a label (the link text) and a URL
-- Links to pages (like Codepen) open in a new browser window/tab
+- Links to pages (like CodePen) open in a new browser window/tab
 - Links to zip files (like on GitHub) download without creating a new window/tab
-- There is no limit to the number of Project Files
+- There is no limit to the number of project files
 
 Example Usage:
 
 ```yaml
-project_file_source: Codepen
+project_file_source: CodePen
 project_files:
 - label: "Starting Project"
   url: "https://codepen.io/josborn/pen/BebXer"
@@ -82,9 +79,10 @@ project_files:
   url: "https://gymnasium.github.io/take5/gym-5011.zip"
 ```
 
-### About Related Content
+### About Related Content {docsify-ignore}
 
-- Each in the Related Content list has a label (the link text) and a URL
+- Related content is optional
+- Each item in the Related Content list has a label (the link text) and a URL
 - Links to items hosted on Gymnasium open the same browser window
 - Links to items outside of the Gymnasium open in a new window/tab
 - There is no limit to the number of Related Content items
@@ -105,9 +103,9 @@ Stub files are additional files that Jekyll uses to generate the tutorial page a
 
 ### Take 5 Page
 
-- `take5/gym-5000.md`
+- **File location:** `take5/gym-5000.md`
 
-The Take 5 stub page contains frontmatter and the full text from the video transcript as {% raw %}`{{ content }}`{% endraw %}
+The Take 5 stub page contains frontmatter and the full text from the video transcript as `{{ content }}`
 
 ```yaml
 ---
@@ -116,12 +114,15 @@ course_ID: GYM-5001
 permalink: /static/take5/gym-5001
 ---
 
-In today’s Take 5, you’re going to make a scrolling background image effect [as seen here](https://codepen.io/josborn/pen/joNmyO){: target="_blank" rel="noopener"}. This effect is similar to the parallax effect that can be found on many places across the web, such as this one.
+In today’s Take 5, you’re going to make a scrolling background image effect 
+[as seen here](https://codepen.io/josborn/pen/joNmyO){: target="_blank" rel="noopener"}. 
+This effect is similar to the parallax effect that can be found on many places across 
+the web, such as this one.
 ```
 
 ### Take 5 Meta Include
 
-- `take5/meta/gym-5000-meta.md`
+- **File location:** `take5/meta/gym-5000-meta.md`
 
 The meta include stub file only contains frontmatter.
 
@@ -137,16 +138,17 @@ permalink: /static/take5/meta/gym-5001-meta/    # Pay attention: Lots of "metas"
 
 ### OG Image
 
-- `img/take5/og/gym-5000-og.png`
+- **File location:** `img/take5/og/gym-5000-og.png`
+
 <details>
 <summary>View Sample</summary>
 
-![img/take5/og/gym-5001-og.png](img/take5/og/gym-5001-og.png)
+![img/take5/og/gym-5001-og.png](https://gymcms.xyz/img/take5/og/gym-5001-og.png)
 </details>
 
 ### Video Poster Image
 
-- `img/take5/posters/gym-5000.jpg`
+- **File location:** `img/take5/posters/gym-5000.jpg`
   - This is the poster frame image that is used in the following contexts:
     - Featured tutorial on the Take 5 catalog page
     - Thumbnails for other "Recent" Take 5s on the Take 5 catalog page
@@ -156,16 +158,35 @@ permalink: /static/take5/meta/gym-5001-meta/    # Pay attention: Lots of "metas"
 <details>
 <summary>View Sample</summary>
 
-![img/take5/posters/gym-5001.png](img/take5/posters/gym-5001.jpg)
+![img/take5/posters/gym-5001.png](https://gymcms.xyz/img/take5/posters/gym-5001.jpg)
 </details>
 
 ### Hero Poster Image
 
-- `img/take5/posters/gym-5000-hero.jpg`
+- **File location:** `img/take5/posters/gym-5000-hero.jpg`
   - This is the hero-sized version of the video poster image that is used when the specific tutorial is featured in the homepage hero component
 
 <details>
 <summary>View Sample</summary>
 
-![img/take5/posters/gym-5001-hero.png](img/take5/posters/gym-5001-hero.jpg)
+![img/take5/posters/gym-5001-hero.png](https://gymcms.xyz/img/take5/posters/gym-5001-hero.jpg)
 </details>
+
+
+## 4. Publish the Tutorial
+
+**Important Note:** This documentation describes the sequence of tasks required to publish GYM-5002 (i.e. GYM-5001 is currently live)
+
+1. **Create a new branch from staging**
+    - `git checkout staging`
+    - `git branch patch/launch-gym-5002`
+2. **Configure the (new) Take 5 Tutorial**
+    - Edit `_data/take5/GYM-5002.yml` and make the following revisions:
+        - Verify that the `date` is in the appropriate format (i.e. `2019-10-28T00:00:00-04:00`)
+        - Set `live: true`
+        - Set `featured: true`
+3. **_Un-Feature_ the previous Take 5 Tutorial**
+    - Edit `_data/take5/GYM-5001.yml` and make the following revisions:
+        - Set `featured: false`
+4. **Create a PR to merge the patch branch into staging**
+5. **Create a PR to merge staging into production**
