@@ -5,12 +5,12 @@ date: 2019-11-13T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5018/
 poster_art: /img/take5/posters/gym-5018.jpg
-live: false
+live: true
 instructor: "Lee Andrese"
 topic: "Career Skills"
 video_ID: iLI4I2XnjpU
 video_duration: "5:00"
-featured: false
+featured: true
 short_description: "Learn how to create compelling stories for projects you’ve made in this tutorial with Lee Andrese, Principal of Akatheme."
 related_content:
 - label: "Finding, Crafting and Telling a Great Story - Nicole Kahn"
