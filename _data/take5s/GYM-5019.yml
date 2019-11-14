@@ -5,12 +5,12 @@ date: 2019-11-14T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5019/
 poster_art: /img/take5/posters/gym-5019.jpg
-live: false
+live: true
 instructor: "Anne Ditmeyer"
 topic: "Career Skills"
 video_ID: m1vO-v2UGmk
 video_duration: "4:13"
-featured: false
+featured: true
 short_description: "Learn how to promote yourself via your website and social media in this tutorial with Anne Ditmeyer, creative coach."
 related_content:
 - label: "Owltastic -  Portfolio site by Meagan Fisher"
