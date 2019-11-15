@@ -19,7 +19,7 @@ project_files:
 - label: "Completed Project"
   url: "https://codepen.io/josborn/pen/oRVrOR"
 related_content:
-- label: "How @supports works by Chris Coyier "
+- label: "How @supports works by Chris Coyier"
   url: "https://css-tricks.com/how-supports-works/"
 - label: "Using Feature Queries in CSS by Jen Simmons"
   url: "https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/"
