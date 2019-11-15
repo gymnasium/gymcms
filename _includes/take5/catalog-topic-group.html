@@ -1,20 +1,8 @@
-<h3>{{ include.topic }}</h3>
-
-{%- comment -%}
-//
-// This include will produce a group of take 5 tutorials 
-// (based on the topic passed to the include)
-//
-{%- endcomment -%}
-
-
-{%- comment -%}
-//
-// Loop through all the take 5s
-//
-{%- endcomment -%}
-
-
+<header>
+        <h2 class="all-caps">{{ include.topic }}</h2>
+    </header>
+    <div class="cols cols-max-3">
+<ul>
 {% assign sorted_catalog = site.data.take5s | sort %}
 
 {% for take5_hash in sorted_catalog reversed %}
@@ -23,22 +11,26 @@
 
 {% if item.topic == include.topic %}
 
-{%- comment -%}
-//
-// Only list items if they their live status is true... i.e. if they're live 😉
-//
-{%- endcomment -%}
-
 {% if item.live == true %}
-<h4>{{ item.title }} </h4>
-    <!-- Topic: {{ item.topic }} -->
-    <!-- Live: {{ item.live }} -->
-<ul>
-    <li>URL: <a href="{{ item.url | relative_url }}">{{ item.url | relative_url }}</a></li>
-    <li>Art: {{ item.art }}</li>
-    <li>Video Duration: {{ item.video_duration }}</li>
-</ul>
+
+<li>
+    <article class="tutorial">
+        <div class="artwork" data-duration="{{ item.video_duration }}">
+            <a href="{{ item.title | slugify | prepend: domain_link }}" title="Watch Video">
+            <img alt="{{ item.title }}" src="{{ site.url }}{{ site.baseurl }}{{ item.poster_art }}"></a>
+        </div>
+        <header>
+            <h4 class="all-caps subhead-topic">{{ item.topic }}</h4>
+            <h3 class="all-caps">
+            <a href="{{ item.title | slugify | prepend: domain_link }}">{{ item.title }}</a>
+            </h3>
+        </header>
+    </article>
+</li>
+
 {% endif %}
 {% endif %}
 
 {% endfor %}
+</ul>
+  </div>
