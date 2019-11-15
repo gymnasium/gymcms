@@ -15,9 +15,9 @@ permalink: /static/take5/catalog
 
 {% endcase %}
 
-{%- if jekyll.environment == "development" -%}
+{%- comment -%} {%- if jekyll.environment == "development" -%} {%- endcomment -%}
     {%- include take5/test-top.html -%}
-{%- endif -%}
+{%- comment -%} {%- endif -%} {%- endcomment -%}
 
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/take5.css">
 
@@ -162,6 +162,6 @@ permalink: /static/take5/catalog
 
 </main>
 
-{%- if jekyll.environment == "development" -%}
+{%- comment -%} {%- if jekyll.environment == "development" -%} {%- endcomment -%}
     {%- include take5/test-bottom.html -%}
-{%- endif -%}
+{%- comment -%} {%- endif -%} {%- endcomment -%}
