@@ -13,8 +13,8 @@ video_duration: "0:00"
 featured: false
 short_description: "Learn how to silently collaborate with a team to analyze feedback in this tutorial with Heather O’Neill, CEO of Pixels for Humans."
 related_content:
-- label: "18F Methods instructions on the KJ method "
+- label: "18F Methods instructions on the KJ method"
   url: "https://methods.18f.gov/discover/kj-method/"
-- label: "The KJ-Technique: A Group Process for Establishing Priorities an article by Jared Spool "
+- label: "The KJ-Technique: A Group Process for Establishing Priorities an article by Jared Spool"
   url: "https://articles.uie.com/kj_technique/"
 ---
