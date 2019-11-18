@@ -1,19 +1,18 @@
 ---
 course_ID: GYM-5007
+title: "Conducting Customer Interviews"
 date: 2019-11-19T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5007/
-title: "Conducting Customer Interviews"
-poster_art:
+poster_art: /img/take5/posters/gym-5007.jpg
 topic: "User Experience"
 live: false
 instructor: "Heather O'Neill"
-video_ID:
-video_duration: "00:00"
-poster_art:
+video_ID: UDekSJsMOC8
+video_duration: "4:05"
 featured: false
 short_description: "Learn how to conduct a successful customer interview in this tutorial with Heather O’Neill, CEO of Pixels for Humans."
-project_file_source:
-project_files:
 related_content:
+- label: "Listening deeply. An article by Indi Young"
+  url: "https://indiyoung.com/listening-deeply/"
 ---
