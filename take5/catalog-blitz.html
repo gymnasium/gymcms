@@ -27,8 +27,6 @@ permalink: /static/take5/
 
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/take5.css">
 
-{% include take5/detail-opener-js.html %}
-
 <main id="main" role="main">
 <header class="take5--about" id="about">
   <div class="container">
@@ -53,7 +51,7 @@ permalink: /static/take5/
 {%- assign pubdates_sorted = pubdates | sort -%}
 
 {%- for pubdate in pubdates_sorted -%}
-    
+
     {% for take5_hash in catalog %}
         {% assign item = take5_hash[1] %}
         {%- if item.date == pubdate -%}
@@ -89,11 +87,11 @@ permalink: /static/take5/
 {%- endif -%}
 {%- endfor -%}
 
- 
+
 
 {% if featured != null %}
 <div class="take5--main">
-    
+
 <div class="take5--hero-content">
     <div class="container">
         <div class="row">
@@ -125,7 +123,7 @@ permalink: /static/take5/
 <details open class="take5--resources" id="tutorial-resources">
         <summary aria-expanded="true/false" tabindex="0" role="button"><b role="heading">Upcoming</b></summary>
             <div class="take5--resources-list take5--upcoming-list">
-            <ul>    
+            <ul>
     {%- for item in upcoming limit: 5 -%}
     {%- assign upcoming_take5 = site.data.take5s[item] -%}
 
@@ -134,8 +132,8 @@ permalink: /static/take5/
     {{ upcoming_take5.date | date: "%b %-d" }}</time>
     <h4>{{ upcoming_take5.title }}</h4>
     </li>
-    
-    
+
+
     {%- endfor -%}
             </ul>
         <p><strong>Stay Up-To-Date</strong><br><a class="gymlink" href="https://twitter.com/aquentgymnasium" target="_blank" rel="noopener">Follow Gymnasium on Twitter</a></p>
@@ -194,6 +192,8 @@ permalink: /static/take5/
 {%- endif -%}
 
 </main>
+
+{% include take5/detail-opener-js.html %}
 
 {%- if jekyll.environment == "development" -%}
     {%- include take5/test-bottom.html -%}
