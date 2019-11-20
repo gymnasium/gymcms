@@ -17,6 +17,7 @@
 
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/take5.css">
 
+{% include take5/detail-opener-js.html %}
 {% assign course = site.data.take5s[page.course_ID] %}
 
 <main id="main" role="main">
@@ -181,7 +182,6 @@
     {% endif %}
 </main>
 
-{% include take5/detail-opener-js.html %}
 
 {%- if jekyll.environment == "development" -%}
     {%- include take5/test-bottom.html -%}
