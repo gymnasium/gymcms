@@ -1,21 +1,40 @@
 <script>
 
+  var ready = function (fn) {
+
+    // Sanity check
+    if (typeof fn !== 'function') return;
+
+    // If document is already loaded, run method
+    if (document.readyState === 'complete') {
+      return fn();
+    }
+
+    // Otherwise, wait until document is loaded
+    document.addEventListener('DOMContentLoaded', fn, false);
+
+  };
+
+  ready(function () {
+
     // Media query event handler
     if (matchMedia) {
-      var details = document.querySelector('#tutorial-resources');
+      var menu = document.querySelector('#tutorial-resources');
       var mq = window.matchMedia('(min-width: 62em)');
       mq.addListener(mm);
       mm(mq);
     }
-    
+
     // Media query change
     function mm(mq) {
       if (mq.matches) {
-        details.setAttribute('open', 'open');
+        menu.setAttribute('open', 'open');
       }
       else {
-        details.removeAttribute('open');
+        menu.removeAttribute('open');
       }
     }
+
+  });
 
 </script>
