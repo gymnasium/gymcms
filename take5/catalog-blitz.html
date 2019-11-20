@@ -27,6 +27,8 @@ permalink: /static/take5/
 
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/take5.css">
 
+{% include take5/detail-opener-js.html %}
+
 <main id="main" role="main">
 <header class="take5--about" id="about">
   <div class="container">
@@ -192,8 +194,6 @@ permalink: /static/take5/
 {%- endif -%}
 
 </main>
-
-{% include take5/detail-opener-js.html %}
 
 {%- if jekyll.environment == "development" -%}
     {%- include take5/test-bottom.html -%}
