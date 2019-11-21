@@ -96,9 +96,28 @@ permalink: /static/take5/catalog
 {% if featured != null %}
 <div class="take5--main">
 
-<div class="take5--hero-content">
+<div class="take5--info take5--hero-content">
   <div class="container">
     <div class="row">
+      <div class="col-md-4">
+        <details open class="take5--resources" id="tutorial-resources">
+          <summary aria-expanded="true/false" tabindex="0" role="button">
+            <b role="heading">Topics</b>
+          </summary>
+          <div class="take5--resources-list take5--upcoming-list">
+            <!-- Found {{topics | size}} topic(s) with live content -->
+            <ul>
+              {% for catalog_topic in unique_topics %}
+              <li>
+                <h4>
+                  <a href="#{{ catalog_topic | slugify }}">{{ catalog_topic }}</a>
+                </h4>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </details>
+      </div>
       <div class="col-md-8">
         <div class="take5--featured" id="featured-tutorial">
           <header>
@@ -128,25 +147,6 @@ permalink: /static/take5/catalog
         </div>
       </div>
       {% endif %}
-      <div class="col-md-4">
-        <details open class="take5--resources" id="tutorial-resources">
-          <summary aria-expanded="true/false" tabindex="0" role="button">
-            <b role="heading">Topics</b>
-          </summary>
-          <div class="take5--resources-list take5--upcoming-list">
-            <!-- Found {{topics | size}} topic(s) with live content -->
-            <ul>
-              {% for catalog_topic in unique_topics %}
-              <li>
-                <h4>
-                  <a href="#{{ catalog_topic | slugify }}">{{ catalog_topic }}</a>
-                </h4>
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </details>
-      </div>
     </div>
   </div>
 </div>
