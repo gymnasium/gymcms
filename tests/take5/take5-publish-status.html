@@ -2,9 +2,10 @@
 layout: raw
 permalink: /tests/take5/published/
 ---
-{% if jekyll.environment != "production" %}
-<h3><mark> Current branch: {{ jekyll.environment | upcase }} </mark></h3>
-{% endif %}
+{% if jekyll.environment == "production" %}
+
+
+{% assign domain_link = "https://thegymnasium.com/take5/" %}
 
 {%- assign pubdates = ""  | split: ", " -%}
 {%- assign publish_order = ""  | split: ", " -%}
@@ -40,9 +41,13 @@ permalink: /tests/take5/published/
     <td>{{ site.data.take5s[item].date | date: "%m/%d/%Y" }}</td>
     <td>{{ site.data.take5s[item].topic }}</td>
     <td>{{ site.data.take5s[item].instructor }}</td>
-    <td>{{ site.data.take5s[item].title | slugify | prepend: domain_link }}</td>
+    <td><a href="{{ site.data.take5s[item].title | slugify | prepend: domain_link }}">{{ site.data.take5s[item].title | slugify | prepend: domain_link }}</a></td>
 </tr>
 
 {%- endif -%}
 {%- endfor -%}
 </table>
+
+{%- else -%}
+<h3><mark> Current branch: {{ jekyll.environment | upcase }} </mark></h3>
+{% endif %}
