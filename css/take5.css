@@ -282,6 +282,10 @@ main h3 {
   padding-bottom: 1.6em;
 }
 
+.take5--featured {
+  padding: 1.6em;
+}
+
 @media (min-width: 62em) {
 
   .take5--hero-content .col-md-8,
@@ -290,13 +294,14 @@ main h3 {
   }
 
   .take5--featured {
+    padding: 0;
     margin-right: 1.2em;
   }
 
 }
 
 .take5--featured > header {
-  margin-bottom: 1.6em;
+  margin-bottom: 1.4em;
 }
 
 .take5--featured .tutorial {
@@ -408,12 +413,19 @@ main h3 {
   padding-top: 0;
 }
 
-.take5--upcoming-list ul {
+.take5--upcoming-list ul,
+.take5--topics-menu-list ul, {
   list-style: none url();
   padding-left: 0;
 }
 
-.take5--upcoming-list li {
+.take5--topics-menu-list ul {
+  border-top: 1px dashed #ccc;
+  margin-top: 1.4em;
+}
+
+.take5--upcoming-list li,
+.take5--topics-menu-list li {
   padding-top: .8em;
   padding-bottom: .8em;
   border-bottom: 1px dashed #ccc;
@@ -475,6 +487,24 @@ details.take5--transcript {
 
 }
 
+.take5--topics-menu {
+  padding-bottom: 1.4em;
+  border-bottom: 1px dashed #ccc;
+}
+
+.take5--topics-menu[open] {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+@media (max-width: 62em) {
+
+  #tutorial-topics summary b::before {
+    content: "Browse" "\00a0";
+  }
+
+}
+
 @media (min-width: 62em) {
 
   .take5--main .col-md-4 {
@@ -485,15 +515,17 @@ details.take5--transcript {
     margin-top: 0;
   }
 
-  #tutorial-resources summary {
+  #tutorial-resources summary,
+  #tutorial-topics summary {
     pointer-events: none;
     visibility: hidden;
     overflow: hidden;
   }
 
-  #tutorial-resources summary b {
+  #tutorial-resources summary b,
+  #tutorial-topics summary b {
     float: left;
-    font: 900 1.55em/1.2 "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
+    font: 900 1.55em/1.05 "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
     color: #222;
     letter-spacing: .035rem;
     text-transform: uppercase;
@@ -502,12 +534,14 @@ details.take5--transcript {
 
   #tutorial-resources summary:hover b,
   #tutorial-resources summary:focus b,
-  #tutorial-resources summary:active b {
+  #tutorial-resources summary:active b,
+  #tutorial-topics summary:hover b,
+  #tutorial-topics summary:focus b,
+  #tutorial-topics summary:active b {
     border-bottom: 0 none;
   }
 
 }
-
 
 .take5--hero-content,
 .take5--recent-content {

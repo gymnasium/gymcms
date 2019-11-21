@@ -100,23 +100,23 @@ permalink: /static/take5/catalog
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <details open class="take5--resources" id="tutorial-resources">
-          <summary aria-expanded="true/false" tabindex="0" role="button">
-            <b role="heading">Topics</b>
-          </summary>
-          <div class="take5--resources-list take5--upcoming-list">
-            <!-- Found {{topics | size}} topic(s) with live content -->
-            <ul>
-              {% for catalog_topic in unique_topics %}
-              <li>
-                <h4>
-                  <a href="#{{ catalog_topic | slugify }}">{{ catalog_topic }}</a>
-                </h4>
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </details>
+        <nav class="take5--tutorial-topics" aria-labelledby="tutorial-topics">
+          <details class="take5--topics-menu" id="tutorial-topics">
+            <summary aria-expanded="true/false" tabindex="0" role="button">
+              <b role="heading">Topics</b>
+            </summary>
+            <div class="take5--topics-menu-list">
+              <!-- Found {{topics | size}} topic(s) with live content -->
+              <ul>
+                {% for catalog_topic in unique_topics %}
+                <li>
+                  <a href="#{{ catalog_topic | slugify }}"><b>{{ catalog_topic }}</b></a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </details>
+        </nav>
       </div>
       <div class="col-md-8">
         <div class="take5--featured" id="featured-tutorial">
