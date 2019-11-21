@@ -1,0 +1,48 @@
+---
+layout: raw
+permalink: /tests/take5/published/
+---
+{% if jekyll.environment != "production" %}
+<h3><mark> Current branch: {{ jekyll.environment | upcase }} </mark></h3>
+{% endif %}
+
+{%- assign pubdates = ""  | split: ", " -%}
+{%- assign publish_order = ""  | split: ", " -%}
+
+{% assign catalog = site.data.take5s | sort %}
+
+{% for take5_hash in catalog %}
+    {% assign item = take5_hash[1] %}
+    {%- assign pubdates = pubdates | push: item.date -%}
+{% endfor %}
+
+{%- assign pubdates_sorted = pubdates | sort -%}
+
+{%- for pubdate in pubdates_sorted -%}
+    
+    {% for take5_hash in catalog %}
+        {% assign item = take5_hash[1] %}
+        {%- if item.date == pubdate -%}
+            {%- assign publish_order = publish_order | push: item.course_ID -%}
+        {%- endif -%}
+    {% endfor %}
+
+{%- endfor -%}
+
+{%- assign publish_order = publish_order | uniq | join: ', '|split: ', '  -%}
+<table>
+
+{%- for item in publish_order -%}
+{%- if site.data.take5s[item].live == true -%}
+<tr>
+    <td>{{ site.data.take5s[item].course_ID }}</td>
+    <td>{{ site.data.take5s[item].title }}</td>
+    <td>{{ site.data.take5s[item].date | date: "%m/%d/%Y" }}</td>
+    <td>{{ site.data.take5s[item].topic }}</td>
+    <td>{{ site.data.take5s[item].instructor }}</td>
+    <td>{{ site.data.take5s[item].title | slugify | prepend: domain_link }}</td>
+</tr>
+
+{%- endif -%}
+{%- endfor -%}
+</table>
