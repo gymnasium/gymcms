@@ -1,8 +1,10 @@
 <header>
-        <h2 class="all-caps">{{ include.topic }}</h2>
-    </header>
-    <div class="cols cols-max-3">
-<ul>
+  <h2 class="all-caps">
+    {{ include.topic }}
+  </h2>
+</header>
+<div class="cols cols-max-3">
+  <ul>
 {% assign sorted_catalog = site.data.take5s | sort %}
 
 {% for take5_hash in sorted_catalog reversed %}
@@ -13,23 +15,24 @@
 
 {% if item.live == true %}
 
-<li>
-    <article class="tutorial">
+    <li>
+      <article class="tutorial">
         <div class="artwork" data-duration="{{ item.video_duration }}">
-            <a href="{{ item.title | slugify | prepend: domain_link }}" title="Watch Video">
-            <img alt="{{ item.title }}" src="{{ site.url }}{{ site.baseurl }}{{ item.poster_art }}"></a>
+          <a href="{{ item.title | slugify | prepend: domain_link }}" title="Watch Video">
+            <img alt="{{ item.title }}" src="{{ site.url }}{{ site.baseurl }}{{ item.poster_art }}">
+          </a>
         </div>
         <header>
-            <h3 class="all-caps">
+          <h3 class="all-caps">
             <a href="{{ item.title | slugify | prepend: domain_link }}">{{ item.title }}</a>
-            </h3>
+          </h3>
         </header>
-    </article>
-</li>
+      </article>
+    </li>
 
 {% endif %}
 {% endif %}
 
 {% endfor %}
-</ul>
-  </div>
+  </ul>
+</div>

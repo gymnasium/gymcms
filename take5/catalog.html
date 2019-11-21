@@ -15,7 +15,7 @@ permalink: /static/take5/catalog
 
 {% endcase %}
 
-{%- comment -%} 
+{%- comment -%}
 {%- if jekyll.environment == "development" -%}
     {%- include take5/test-top.html -%}
 {%- endif -%}
@@ -36,7 +36,7 @@ permalink: /static/take5/catalog
 
 {%- assign pubdates = ""  | split: ", " -%}
 {%- assign publish_order = ""  | split: ", " -%}
-{% assign topics = ""  | split: ', '%} 
+{% assign topics = ""  | split: ', '%}
 
 {%- assign recent = ""  | split: ", " -%}
 
@@ -48,7 +48,7 @@ permalink: /static/take5/catalog
         {% assign topics = topics | push: item.topic  %}
         {%- assign pubdates = pubdates | push: item.date -%}
     {% endif %}
-    
+
 {% endfor %}
 
 {% assign unique_topics = topics | uniq | join: ', '|split: ', ' %}
@@ -56,7 +56,7 @@ permalink: /static/take5/catalog
 {%- assign pubdates_sorted = pubdates | sort -%}
 
 {%- for pubdate in pubdates_sorted -%}
-    
+
     {% for take5_hash in catalog %}
         {% assign item = take5_hash[1] %}
         {%- if item.date == pubdate -%}
@@ -92,53 +92,63 @@ permalink: /static/take5/catalog
 {%- endif -%}
 {%- endfor -%}
 
- 
 
 {% if featured != null %}
 <div class="take5--main">
-    
+
 <div class="take5--hero-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="take5--featured" id="featured-tutorial">
-                <header>
-                    <h2>Recent</h2>
-                </header>
-                    <div class="tutorial">
-                        <div class="artwork" data-duration="{{ featured_video_duration }}">
-                        <a href="{{ featured_url }}" title="Watch Video"><img alt="{{ featured_description }}" src="{{ site.url }}{{ site.baseurl }}{{ featured_poster_art }}"></a>
-                    </div>
-                    <header>
-                        <h2 class="all-caps subhead-topic">{{ featured_topic }}</h2>
-                        <h1 class="title all-caps"><a href="{{ featured_url }}">{{ featured_title }}</a></h1>
-                        <p class="instructor">with {{ featured_instructor }}</p>
-                    </header>
-                    <p class="description">{{ featured_description }}</p>
-                    <div class="cta cta-left">
-                        <a class="gym-button" href="{{ featured_url }}"><b>Watch Video</b></a>
-                    </div>
-                </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="take5--featured" id="featured-tutorial">
+          <header>
+            <h2>Recent</h2>
+          </header>
+          <div class="tutorial">
+            <div class="artwork" data-duration="{{ featured_video_duration }}">
+              <a href="{{ featured_url }}" title="Watch Video">
+                <img alt="{{ featured_description }}" src="{{ site.url }}{{ site.baseurl }}{{ featured_poster_art }}">
+              </a>
             </div>
+            <header>
+              <h2 class="all-caps subhead-topic">{{ featured_topic }}</h2>
+              <h1 class="title all-caps">
+                <a href="{{ featured_url }}">{{ featured_title }}</a>
+              </h1>
+              <p class="instructor">with {{ featured_instructor }}
+              </p>
+            </header>
+            <p class="description">{{ featured_description }}</p>
+            <div class="cta cta-left">
+              <a class="gym-button" href="{{ featured_url }}">
+                <b>Watch Video</b>
+              </a>
+            </div>
+          </div>
         </div>
-        {% endif %}
-        <div class="col-md-4">
-
-<details open class="take5--resources" id="tutorial-resources">
-        <summary aria-expanded="true/false" tabindex="0" role="button"><b role="heading">Topics</b></summary>
-            <div class="take5--resources-list take5--upcoming-list">
-<!-- Found {{topics | size}} topic(s) with live content -->
-
+      </div>
+      {% endif %}
+      <div class="col-md-4">
+        <details open class="take5--resources" id="tutorial-resources">
+          <summary aria-expanded="true/false" tabindex="0" role="button">
+            <b role="heading">Topics</b>
+          </summary>
+          <div class="take5--resources-list take5--upcoming-list">
+            <!-- Found {{topics | size}} topic(s) with live content -->
             <ul>
-                {% for catalog_topic in unique_topics %}
-                <li><h4><a href="#{{ catalog_topic | slugify }}">{{ catalog_topic }}</a></h4></li>
-                {% endfor %}
+              {% for catalog_topic in unique_topics %}
+              <li>
+                <h4>
+                  <a href="#{{ catalog_topic | slugify }}">{{ catalog_topic }}</a>
+                </h4>
+              </li>
+              {% endfor %}
             </ul>
-        <p><strong>Stay Up-To-Date</strong><br><a class="gymlink" href="https://twitter.com/aquentgymnasium" target="_blank" rel="noopener">Follow Gymnasium on Twitter</a></p>
-        </div>
-    </details>
-        </div>
+          </div>
+        </details>
+      </div>
     </div>
+  </div>
 </div>
 
 <!-- Display {{ recent | size }} Take 5s -->
@@ -149,22 +159,22 @@ permalink: /static/take5/catalog
 {%- if  recent_count  != 0 -%}
 
 <div class="take5--recent-content">
-    <div class="container">
-        <section class="take5--recent-tutorials" id="{{ catalog_topic | slugify }}">
-                {% include /take5/catalog-topic-group.html topic=catalog_topic %}
-        </section>
-      <div class="to-top-link">
-        <a href="#main"><b>Back to top</b></a>
-      </div>
+  <div class="container">
+    <section class="take5--recent-tutorials" id="{{ catalog_topic | slugify }}">
+      {% include /take5/catalog-topic-group.html topic=catalog_topic %}
+    </section>
+    <div class="to-top-link">
+    <a href="#main"><b>Back to top</b></a>
     </div>
-        </section>
-
+  </div>
 </div>
 {%- endif -%}
 {% endfor %}
 
+</div>
+
 </main>
-{%- comment -%} 
+{%- comment -%}
 {%- if jekyll.environment == "development" -%}
     {%- include take5/test-bottom.html -%}
 {%- endif -%}
