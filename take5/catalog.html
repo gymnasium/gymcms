@@ -158,7 +158,7 @@ permalink: /static/take5/catalog
 {%- assign recent_count = recent | size -%}
 {%- if  recent_count  != 0 -%}
 
-<div class="take5--recent-content">
+<div class="take5--recent-content take5--catalog-section">
   <div class="container">
     <section class="take5--recent-tutorials" id="{{ catalog_topic | slugify }}">
       {% include /take5/catalog-topic-group.html topic=catalog_topic %}

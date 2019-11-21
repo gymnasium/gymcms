@@ -329,6 +329,8 @@ main h3 {
 #main .take5--resources h2,
 #main .take5--recommended h2 {
   font-size: 1.55em;
+  letter-spacing: .035rem;
+
 }
 
 .course header,
@@ -470,7 +472,7 @@ details.take5--transcript {
     float: left;
     font: 900 1.55em/1.2 "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
     color: #222;
-    letter-spacing: .015em;
+    letter-spacing: .035rem;
     text-transform: uppercase;
     visibility: visible;
   }
@@ -525,6 +527,34 @@ details.take5--transcript {
   margin-top: -5%;
 }
 
+/* --- catalog view --- */
+
+.take5--catalog-section {
+  background-color: #ebebeb;
+  padding-top: 0;
+  padding-bottom: 1.6em;
+}
+
+.take5--catalog-section .take5--recent-tutorials {
+  padding-top: 1.6em;
+}
+
+.take5--catalog-section .tutorial {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0 0 3px 3px;
+}
+
+.take5--catalog-section .tutorial .artwork {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.take5--catalog-section .tutorial header {
+  padding: 1em;
+  margin-top: 0;
+}
+
 /* --- links / buttons --- */
 
 /* cta / structure */
@@ -539,6 +569,10 @@ details.take5--transcript {
 .cta-message,
 .cta-message h2 {
   text-align: center;
+}
+
+.cta-message h2 {
+  letter-spacing: .035rem;
 }
 
 .cta-left {
@@ -583,6 +617,15 @@ details.take5--transcript {
   padding-bottom: 1.2em;
   margin-top: 1.2em;
   overflow: hidden;
+}
+
+.take5--catalog-section .cols ul {
+  margin-top: 0;
+}
+
+.take5--catalog-section .cols li {
+  padding-bottom: 0;
+  margin-top: 0;
 }
 
 .cols-hr ul {
