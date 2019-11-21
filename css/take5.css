@@ -284,30 +284,48 @@ main h3 {
 
 @media (min-width: 62em) {
 
-#main .take5--featured {
-  margin-right: 1.2em;
-}
+  .take5--hero-content .col-md-8,
+  .take5--hero-content .col-md-4 {
+    float: right;
+  }
+
+  .take5--featured {
+    margin-right: 1.2em;
+  }
 
 }
 
-#main .take5--featured > header {
+.take5--featured > header {
   margin-bottom: 1.6em;
 }
 
-#main .take5--featured .tutorial {
-  margin-bottom: 1.2em;
+.take5--featured .tutorial {
+  padding: 0 1em 1.2em;
+  border: 1px solid #ddd;
+  border-radius: 0 0 3px 3px;
 }
 
-#main .take5--featured .title {
+.take5--featured .tutorial header {
+  margin-top: 1em;
+}
+
+.take5--featured .tutorial .artwork {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
+.take5--featured .title {
   font-size: 1.85em
+}
+
+.take5--featured .instructor {
+  margin-top: .6em;
 }
 
 .take5--info .title {
   font-size: 2.05em;
-}
-
-#main .take5--featured .title {
-  margin-top: .8rem;
 }
 
 .take5--info .desscription {
@@ -321,6 +339,7 @@ main h3 {
 .take5--resources {
   margin-top: 1.2em;
 }
+
 
 /* add #main for specificity override */
 
@@ -340,7 +359,7 @@ main h3 {
 
 .subhead-topic,
 .subhead-datetime {
-  font: bold .85em/1.15 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font: bold .85em/1.15 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
   letter-spacing: .05rem;
   word-spacing: .05rem;
@@ -351,6 +370,10 @@ main h3 {
 .tutorial .subhead-topic,
 .tutorial .subhead-datetime {
   margin-bottom: .6rem;
+}
+
+.tutorial .subhead-topic {
+  font-weight: 900;
 }
 
 .subhead-datetime {
