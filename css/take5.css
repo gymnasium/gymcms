@@ -465,6 +465,16 @@ details.take5--transcript {
   margin-top: 1.2em;
 }
 
+#tutorial-transcript ol,
+#tutorial-transcript ul {
+  margin-top: 1em;
+}
+
+#tutorial-transcript li {
+  font-size: 1.15em;
+  line-height: 1.45;
+}
+
 .take5--main summary {
   display: list-item;
   cursor: pointer;
