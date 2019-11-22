@@ -6,11 +6,11 @@ course_type: take5
 url: /static/take5/GYM-5010/
 poster_art: /img/take5/posters/gym-5010.jpg
 topic: "User Experience"
-live: false
+live: true
 instructor: "Jeremy Osborn"
 video_ID: PwuPv7JwzCA
 video_duration: "4:50"
-featured: false
+featured: true
 short_description: "Learn how to silently collaborate with a team to in order to get group consensus in this tutorial with Jeremy Osborn, Academic Director of Gymnasium."
 related_content:
 - label: "18F Methods instructions on the KJ method"
