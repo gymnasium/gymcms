@@ -106,7 +106,7 @@ permalink: /static/take5/catalog
               <b role="heading">Topics</b>
             </summary>
             <div class="take5--topics-menu-list">
-              <!-- Found {{topics | size}} topic(s) with live content -->
+              <!-- Found {{ unique_topics | size }} topic(s) with live content -->
               <ul>
                 {% for catalog_topic in unique_topics %}
                 <li>
