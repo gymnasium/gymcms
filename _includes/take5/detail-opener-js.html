@@ -15,11 +15,12 @@
 
   };
 
-  ready(function () {
+
+  ready( function () {
 
     // Media query event handler
     if (matchMedia) {
-      var menu = document.querySelector('#tutorial-resources');
+      var details = document.querySelector('#tutorial-resources, #tutorial-topics');
       var mq = window.matchMedia('(min-width: 62em)');
       mq.addListener(mm);
       mm(mq);
