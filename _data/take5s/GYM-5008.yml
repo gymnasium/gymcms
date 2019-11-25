@@ -6,7 +6,7 @@ course_type: take5
 url: /static/take5/GYM-5008/
 poster_art: /img/take5/posters/gym-5008.jpg
 topic: "User Experience"
-live: false
+live: true
 instructor: "Heather O'Neill"
 video_ID: eE0rJNHvAzs
 video_duration: "3:48"

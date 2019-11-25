@@ -3,7 +3,7 @@ layout: raw
 permalink: /tests/take5-content/
 ---
 
-<title>Take 5 Testing: Content Overview</title>
+<title>Take 5 Content Status</title>
 
 
 <!-- Styles for the Take 5 testing table -->
@@ -35,8 +35,21 @@ td.success {
 
 {% assign sorted_catalog = site.data.take5s | sort %}
 
-<h1>Take 5 Testing: Content Overview</h1>
-<p>Found: <strong>{{sorted_catalog | size }}</strong> Take 5 tutorials</p>
+<h1>Take 5 Content Status</h1>
+
+<pre>Environment: <b>{{ jekyll.environment | upcase }}</b></pre>
+<pre>Found <strong>{{sorted_catalog | size }}</strong> tutorials</pre>
+
+{% for take5_hash in sorted_catalog %}
+    {% assign test_item = take5_hash[1] %}
+    {% if test_item.featured == true %}
+        {%- assign feature_count = feature_count | plus: 1 -%}
+    {% endif %}
+{% endfor %}
+{%- if feature_count > 1 -%}
+    <h2><mark> WARNING: There are {{ feature_count }} featured items! </mark></h2>
+{%- endif -%}
+    
 
 <table border="0" style="width:100%">
     <thead>
@@ -50,11 +63,11 @@ td.success {
         <th>Video ID</th>
         <th>Video Duration</th>
         <th>Short Description</th>
-        <th>OG Description</th>
         <th>Meta Partial?</th>
-        <th>OG Art</th>
         <th>Poster Art</th>
     </thead>
+
+    
 
     {% for take5_hash in sorted_catalog %}
     {% assign item = take5_hash[1] %}
@@ -85,24 +98,24 @@ td.success {
     {% endif %}
 
     <!-- Instructor -->
-    {% if item.instructor ==null %}<td class="error">MISSING VALUE</td>{% else %}
+    {% if item.instructor == null %}<td class="error">MISSING VALUE</td>{% else %}
     <td>{{ item.instructor }}</td>
     {% endif %}
 
     <!-- Publish status - Live? -->
-    {% if item.live ==null %}<td class="error">MISSING VALUE</td>{% else %}
-    {% if item.live ==false %}<td class="warn">{{ item.live }}</td>{% else %}
+    {% if item.live == null %}<td class="error">MISSING VALUE</td>{% else %}
+    {% if item.live == false %}<td class="warn">{{ item.live }}</td>{% else %}
     <td class="success">{{ item.live }}</td>
     {% endif %}
     {% endif %}
 
     <!-- Publish Date -->
-    {% if item.date ==null %}<td class="error">MISSING VALUE</td>{% else %}
+    {% if item.date == null %}<td class="error">MISSING VALUE</td>{% else %}
     <td>{{ item.date | date: "%F" }}</td>
     {% endif %}
 
     <!-- Video ID -->
-    {% if item.video_ID ==null %}<td class="error">MISSING VALUE</td>{% else %}
+    {% if item.video_ID == null %}<td class="error">MISSING VALUE</td>{% else %}
     <td><a href="https://www.youtube.com/watch?v={{ item.video_ID }}" target="_blank">{{ item.video_ID }}</td>
     {% endif %}
     
@@ -115,44 +128,26 @@ td.success {
     {% endif %}
 
     <!-- Short Description -->
-    {% if item.short_description ==null %}<td class="error">MISSING VALUE</td>{% else %}
+    {% if item.short_description == null %}<td class="error">MISSING VALUE</td>{% else %}
     {% assign this_description = item.short_description | strip_html %}
     {% if this_description contains "lorem" or this_description contains "ipsum" %}
     <td class="warn" title="{{this_description}}">May contain placeholder text! ({{this_description | size }} chars)</td>{% else %}
-    <td class="success" title="{{this_description}}">true ({{this_description | size }} chars)</td>
-    {% endif %}
-    {% endif %}
-
-    <!-- OG Description -->
-    {% if item.og_description ==null %}<td class="error">MISSING VALUE</td>{% else %}
-    {% assign this_og_length = item.og_description | size %}
-    {% assign this_og_description = item.og_description %}
-    {% if this_og_description contains "lorem" or this_og_description contains "ipsum" %}
-    <td class="warn" title="{{this_og_description}}">May contain placeholder text! ({{this_og_length }} chars)</td>
-    {%- elsif this_og_length >= 161 -%}
-    <td class="warn" title="{{this_og_description}}">Too long!! ({{this_og_length }} chars)</td>
-    {% else %}
-    <td class="success" title="{{this_og_description}}">true ({{this_og_length}} chars)</td>
+    <td title="{{this_description}}">true ({{this_description | size }} chars)</td>
     {% endif %}
     {% endif %}
 
     <!-- Meta tag partial -->
     {% assign meta_partial = item.course_ID | prepend: '/take5/meta/' | append: '-meta.md' | downcase %}
     {% capture meta_partial_test %}{% file_exists {{ meta_partial }} %}{% endcapture %}
-    {% if meta_partial_test =="false" %}<td class="error">MISSING FILE</td>{% else %}
-    <td class="success">
+    {% if meta_partial_test == "false" %}<td class="error">MISSING FILE</td>{% else %}
+    <td>
         <a href="/static/take5/meta/{{ item.course_ID | append: '-meta/' | downcase }}" target="_blank">{{ meta_partial_test }}</a>
     </td>
     {% endif %}
 
-    <!-- OG Art -->
-    {% if item.og_art ==null %}<td class="error">MISSING VALUE</td>{% else %}
-    <td class="success"><a href="{{item.og_art}}" target="_blank">true</a></td>
-    {% endif %}
-
     <!-- Poster Art -->
-    {% if item.poster_art ==null %}<td class="error">MISSING VALUE</td>{% else %}
-    <td class="success"><a href="{{item.poster_art}}" target="_blank">true</a></td>
+    {% if item.poster_art == null %}<td class="error">MISSING VALUE</td>{% else %}
+    <td><a href="{{item.poster_art}}" target="_blank">true</a></td>
     {% endif %}
 </tr>
 {% endfor %}
