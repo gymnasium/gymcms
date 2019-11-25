@@ -1,59 +1,177 @@
 ---
 layout: raw
-permalink: /static/take5/catalog
+permalink: /static/take5/
 ---
-<link rel="stylesheet" href="https://deploy-preview-109--gymcms.netlify.com/css/take-5.css/">
+{% case jekyll.environment %}
+
+{% when "development" %}
+{% assign domain_link = "https://courses.gymna.si/take5/" %}
+
+{% when "staging" %}
+{% assign domain_link = "https://courses.gymna.si/take5/" %}
+
+{% when "production" %}
+{% assign domain_link = "https://thegymnasium.com/take5/" %}
+
+{% endcase %}
+
+{%- if jekyll.environment == "development" -%}
+  {%- include take5/test-top.html -%}
+{%- endif -%}
+
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/take5.css">
+
+{% include take5/detail-opener-js.html %}
+
 <main id="main" role="main">
-<h1 class="title all-caps">Take 5 Catalog Page</h1>
+<header class="take5--about" id="about">
+  <div class="container">
+    <h1>Take 5</h1>
+    <p><strong>Learn a new skill in 5 minutes</strong> — video tutorials on web design and development, UX, prototyping, and career skills.</p>
+  </div>
+</header>
 
-{%- comment -%}
-//
-// This page creates a catalog view that is grouped by topic
-// It should only display topics that have at least one live tutorial
-//
-{%- endcomment -%}
+{%- assign pubdates = ""  | split: ", " -%}
+{%- assign publish_order = ""  | split: ", " -%}
+{% assign topics = ""  | split: ', '%}
 
-{%- comment -%}
-//
-// Loop through all take 5s
-//
-{%- endcomment -%}
+{%- assign recent = ""  | split: ", " -%}
 
-{% assign topics = ""  | split: ', '%} 
-{% assign sorted_catalog = site.data.take5s | sort %}
+{% assign catalog = site.data.take5s | sort %}
 
-{% for take5_hash in sorted_catalog %}
+{% for take5_hash in catalog %}
+    {% assign item = take5_hash[1] %}
+    {% if item.live == true %}
+        {% assign topics = topics | push: item.topic  %}
+        {%- assign pubdates = pubdates | push: item.date -%}
+    {% endif %}
 
-{% assign item = take5_hash[1] %}
-
-{%- comment -%}
-//
-// If there's a live tutorial, add the topic to an array of topics
-//
-{%- endcomment -%}
-
-{% if item.live == true %}
-{% assign topics = topics | push: item.topic  %}
-{% endif %}
 {% endfor %}
-
-{%- comment -%}
-//
-// Remove duplicates in the array of topics
-// Since each live tutorial found in the loop will add a separate entry to the array
-// there will likely be duplicates.
-// Note: to count the number of live items per group, count the full array, not the de-duped
-//
-{%- endcomment -%}
 
 {% assign unique_topics = topics | uniq | join: ', '|split: ', ' %}
 
-<!-- Found {{topics | size}} topic(s) with live content -->
+{%- assign pubdates_sorted = pubdates | sort -%}
+
+{%- for pubdate in pubdates_sorted -%}
+
+    {% for take5_hash in catalog %}
+        {% assign item = take5_hash[1] %}
+        {%- if item.date == pubdate -%}
+            {%- assign publish_order = publish_order | push: item.course_ID -%}
+        {%- endif -%}
+    {% endfor %}
+
+{%- endfor -%}
+
+{%- assign publish_order = publish_order | uniq | join: ', '|split: ', '  -%}
+
+{%- for item in publish_order -%}
+
+{%- if site.data.take5s[item].live == true -%}
+
+
+    {%- if site.data.take5s[item].featured == true -%}
+        {% assign featured = site.data.take5s[item].course_ID %}
+        {% assign featured_title = site.data.take5s[item].title %}
+        {% assign featured_description = site.data.take5s[item].short_description %}
+        {% assign featured_url = site.data.take5s[item].title | slugify | prepend: domain_link %}
+        {% assign featured_instructor = site.data.take5s[item].instructor %}
+        {% assign featured_topic = site.data.take5s[item].topic %}
+        {% assign featured_poster_art = site.data.take5s[item].poster_art %}
+        {% assign featured_video_duration = site.data.take5s[item].video_duration %}
+    {%- else -%}
+    {%- comment -%} Not featured, but live? Add the course_ID to the RECENT list {%- endcomment -%}
+    {%- assign recent = recent | push: site.data.take5s[item].course_ID -%}
+    {%- endif -%}
+{%- else -%}
+    {%- comment -%} Not live? Add the course_ID to the UPCOMING list {%- endcomment -%}
+    {%- assign upcoming = upcoming | push: site.data.take5s[item].course_ID -%}
+{%- endif -%}
+{%- endfor -%}
+
+
+{% if featured != null %}
+<div class="take5--main">
+
+<div class="take5--info take5--hero-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <nav class="take5--tutorial-topics" aria-labelledby="tutorial-topics">
+          <details open class="take5--topics-menu" id="tutorial-topics">
+            <summary aria-expanded="true/false" tabindex="0" role="button">
+              <b role="heading">Topics</b>
+            </summary>
+            <div class="take5--topics-menu-list">
+              <!-- Found {{ unique_topics | size }} topic(s) with live content -->
+              <ul>
+                {% for catalog_topic in unique_topics %}
+                <li>
+                  <a href="#{{ catalog_topic | slugify }}"><b>{{ catalog_topic }}</b></a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </details>
+        </nav>
+      </div>
+      <div class="col-md-8">
+        <div class="take5--featured" id="featured-tutorial">
+          <header>
+            <h2>Recent</h2>
+          </header>
+          <div class="tutorial">
+            <div class="artwork" data-duration="{{ featured_video_duration }}">
+              <a href="{{ featured_url }}" title="Watch Video">
+                <img alt="{{ featured_description }}" src="{{ site.url }}{{ site.baseurl }}{{ featured_poster_art }}">
+              </a>
+            </div>
+            <header>
+              <h2 class="all-caps subhead-topic">{{ featured_topic }}</h2>
+              <h1 class="title all-caps">
+                <a href="{{ featured_url }}">{{ featured_title }}</a>
+              </h1>
+              <p class="instructor">with {{ featured_instructor }}
+              </p>
+            </header>
+            <p class="description">{{ featured_description }}</p>
+            <div class="cta cta-left">
+              <a class="gym-button" href="{{ featured_url }}">
+                <b>Watch Video</b>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- Display {{ recent | size }} Take 5s -->
 
 {% for catalog_topic in unique_topics %}
-{% include /take5/catalog-topic-group.html topic=catalog_topic %}
+
+{%- assign recent_count = recent | size -%}
+{%- if  recent_count  != 0 -%}
+
+<div class="take5--recent-content take5--catalog-section">
+  <div class="container">
+    <section class="take5--recent-tutorials" id="{{ catalog_topic | slugify }}">
+      {% include /take5/catalog-topic-group.html topic=catalog_topic %}
+    </section>
+    <div class="to-top-link">
+    <a href="#main"><b>Back to top</b></a>
+    </div>
+  </div>
+</div>
+{%- endif -%}
 {% endfor %}
 
-
+</div>
 
 </main>
+
+{%- if jekyll.environment == "development" -%}
+  {%- include take5/test-bottom.html -%}
+{%- endif -%}
