@@ -52,6 +52,35 @@ related_content:
 ```
 </details>
 
+<details>
+<summary>View Starter Code (to copy/paste)</summary>
+
+```yaml
+---
+course_ID: GYM-5000
+title: 
+date: 2019-11-15T00:00:00-04:00
+course_type: take5
+url: /static/take5/GYM-5000/
+poster_art: /img/take5/posters/gym-5000.jpg
+live: false
+instructor: 
+topic: 
+video_ID: 
+video_duration: "0:00"
+featured: false
+short_description: 
+project_file_source: 
+project_files:
+- label: 
+  url: 
+related_content:
+- label: 
+  url: 
+---
+```
+</details>
+
 ### About Project Files {docsify-ignore}
 
 - Project files are optional
@@ -128,9 +157,9 @@ The meta include stub file only contains frontmatter.
 
 ```yaml
 ---
-layout: take5-meta                              # Important!
+layout: take5-meta
 course_ID: GYM-5001
-permalink: /static/take5/meta/gym-5001-meta/    # Pay attention: Lots of "metas"
+permalink: /static/take5/meta/gym-5001-meta/
 ---
 ```
 
@@ -179,7 +208,7 @@ permalink: /static/take5/meta/gym-5001-meta/    # Pay attention: Lots of "metas"
 
 1. **Create a new branch from staging**
     - `git checkout staging`
-    - `git branch patch/launch-gym-5002`
+    - `git branch content/take5/gym-5002`
 2. **Configure the (new) Take 5 Tutorial**
     - Edit `_data/take5/GYM-5002.yml` and make the following revisions:
         - Verify that the `date` is in the appropriate format (i.e. `2019-10-28T00:00:00-04:00`)
