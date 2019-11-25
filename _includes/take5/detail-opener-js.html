@@ -15,6 +15,7 @@
 
   };
 
+
   ready( function () {
 
     // Media query event handler
@@ -28,10 +29,10 @@
     // Media query change
     function mm(mq) {
       if (mq.matches) {
-        details.setAttribute('open', 'open');
+        menu.setAttribute('open', 'open');
       }
       else {
-        details.removeAttribute('open');
+        menu.removeAttribute('open');
       }
     }
 
