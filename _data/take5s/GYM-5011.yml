@@ -21,4 +21,6 @@ related_content:
   url: "https://www.sketch.com/docs/symbols/smart-layout/"
 - label: "Working with Hidden Symbols"
   url: "https://www.youtube.com/watch?v=M0FHj0YBSh4"
+- label: "Working with CSS Feature Queries"
+  url: "https://thegymnasium.com/take5/working-with-css-feature-queries"  
 ---

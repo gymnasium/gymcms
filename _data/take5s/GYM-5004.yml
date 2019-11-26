@@ -7,7 +7,7 @@ url: /static/take5/GYM-5004/
 poster_art: /img/take5/posters/gym-5004.jpg
 topic: "Web Design & Development"
 live: true
-instructor: 'Jeremy Osborn'
+instructor: "Jeremy Osborn"
 video_ID: VaHkQQ5xgac
 video_duration: "4:34"
 featured: false
@@ -19,6 +19,8 @@ project_files:
 - label: "Completed Project"
   url: "https://codepen.io/josborn/pen/oRVrOR"
 related_content:
+- label: "Creating a CSS Knockout Text Effect"
+  url: "https://thegymnasium.com/take5/creating-a-css-knockout-text-effect"
 - label: "How @supports works by Chris Coyier"
   url: "https://css-tricks.com/how-supports-works/"
 - label: "Using Feature Queries in CSS by Jen Simmons"
@@ -27,5 +29,4 @@ related_content:
   url: "https://caniuse.com/#feat=css-featurequeries"
 - label: "Fit for Purpose: Making Sense of the New CSS by Eric Meyer"
   url: "https://www.youtube.com/watch?v=0sDYhKi1qzc"
-
 ---
