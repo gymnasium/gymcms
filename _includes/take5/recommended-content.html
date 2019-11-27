@@ -1,61 +1,77 @@
 
 {% case jekyll.environment %}
 
-{% when "development" %}
-{% assign domain_link = "https://courses.gymna.si/take5/" %}
+  {% when "development" %}
+    {% assign domain_link = "https://courses.gymna.si/take5/" %}
 
-{% when "staging" %}
-{% assign domain_link = "https://courses.gymna.si/take5/" %}
+  {% when "staging" %}
+    {% assign domain_link = "https://courses.gymna.si/take5/" %}
 
-{% when "production" %}
-{% assign domain_link = "https://thegymnasium.com/take5/" %}
+  {% when "production" %}
+    {% assign domain_link = "https://thegymnasium.com/take5/" %}
 
 {% endcase %}
 
 {% if course.topic == "Web Design & Development" %}
 
-{% assign tutorial1 = site.data.take5s.GYM-5001 %}
-{% assign tutorial2 = site.data.take5s.GYM-5002 %}
-{% assign tutorial3 = site.data.take5s.GYM-5003 %}
-{% assign course1 = site.data.courses.GYM-109 %}
-{% assign course2 = site.data.courses.GYM-107 %}
-{% assign course3 = site.data.courses.GYM-011 %}
+  {% assign course1 = site.data.courses.GYM-109 %}
+  {% assign course2 = site.data.courses.GYM-107 %}
+  {% assign course3 = site.data.courses.GYM-011 %}
 
 {% elsif course.topic == "User Experience" %}
 
-{% assign tutorial1 = site.data.take5s.GYM-5001 %}
-{% assign tutorial2 = site.data.take5s.GYM-5002 %}
-{% assign tutorial3 = site.data.take5s.GYM-5003 %}
-{% assign course1 = site.data.courses.GYM-103 %}
-{% assign course2 = site.data.courses.GYM-015 %}
-{% assign course3 = site.data.courses.GYM-105 %}
+  {% assign course1 = site.data.courses.GYM-103 %}
+  {% assign course2 = site.data.courses.GYM-015 %}
+  {% assign course3 = site.data.courses.GYM-105 %}
 
 {% elsif course.topic == "Prototyping" %}
 
-{% assign tutorial1 = site.data.take5s.GYM-5006 %}
-{% assign tutorial2 = site.data.take5s.GYM-5007 %}
-{% assign tutorial3 = site.data.take5s.GYM-5008 %}
-{% assign course1 = site.data.courses.GYM-015 %}
-{% assign course2 = site.data.courses.GYM-005 %}
-{% assign course3 = site.data.courses.GYM-008 %}
+  {% assign course1 = site.data.courses.GYM-015 %}
+  {% assign course2 = site.data.courses.GYM-005 %}
+  {% assign course3 = site.data.courses.GYM-008 %}
 
 {% elsif course.topic == "Career Skills" %}
 
-{% assign tutorial1 = site.data.take5s.GYM-5016 %}
-{% assign tutorial2 = site.data.take5s.GYM-5017 %}
-{% assign tutorial3 = site.data.take5s.GYM-5018 %}
-{% assign course1 = site.data.courses.GYM-001 %}
-{% assign course2 = site.data.courses.GYM-105 %}
-{% assign course3 = site.data.courses.GYM-106 %}
+  {% assign course1 = site.data.courses.GYM-001 %}
+  {% assign course2 = site.data.courses.GYM-105 %}
+  {% assign course3 = site.data.courses.GYM-106 %}
 
 {% else %}
-{% assign tutorial1 = "" %}
-{% assign tutorial2 = "" %}
-{% assign tutorial3 = "" %}
 {% assign course1 = "" %}
 {% assign course2 = "" %}
 {% assign course3 = "" %}
 {% endif %}
+
+{%- assign recommendations = ""  | split: ", " -%}
+{%- assign this_tutorial = page.course_ID -%}
+{%- assign this_topic = site.data.take5s.[page.course_ID].topic -%}
+
+{% assign sorted_catalog = site.data.take5s | sort %}
+
+{% for take5_hash in sorted_catalog reversed %}
+
+  {% assign item = take5_hash[1] %}
+
+  {% if item.topic == this_topic %}
+
+        {% if item.live == true %}
+            {% if item.course_ID != this_tutorial %}
+              {%- assign recommendations = recommendations | push: item.course_ID -%}
+            {% endif %}
+        {% endif %}
+      {% endif %}
+  {% endfor %}
+
+ {%- assign random_recommendations = recommendations | sample: 3 -%}
+
+ {%- assign rec1 = random_recommendations[0] -%}
+ {%- assign rec2 = random_recommendations[1] -%}
+ {%- assign rec3 = random_recommendations[2] -%}
+
+{% assign tutorial1 = site.data.take5s.[rec1] %}
+{% assign tutorial2 = site.data.take5s.[rec2] %}
+{% assign tutorial3 = site.data.take5s.[rec3] %}
+
 
 {%- if tutorial1 != "" -%}
 
@@ -78,7 +94,7 @@
                 </a>
               </div>
               <header>
-                <b class="all-caps">{{ tutorial1.topic }}</b>
+                <h4 class="subhead-topic">{{ tutorial1.topic }}</h4>
                 <h3 class="all-caps">
                   <a href="{{ tutorial1.title | slugify | prepend: domain_link  }}">{{ tutorial1.title }}</a>
                 </h3>
@@ -93,7 +109,7 @@
                 </a>
               </div>
               <header>
-                <b class="all-caps">{{ tutorial2.topic }}</b>
+                <h4 class="subhead-topic">{{ tutorial2.topic }}</h4>
                 <h3 class="all-caps">
                   <a href="{{ tutorial2.title | slugify | prepend: domain_link  }}">{{ tutorial2.title }}</a>
                 </h3>
@@ -105,10 +121,10 @@
               <div class="artwork" data-duration="{{ tutorial3.video_duration }}">
                 <a href="{{ tutorial3.title | slugify | prepend: domain_link  }}" title="Watch Video">
                   <img alt="{{ tutorial3.title }}" src="{{ site.url }}{{ site.baseurl }}{{ tutorial3.poster_art }}">
-                </a>
+                </a>s
               </div>
               <header>
-                <b class="all-caps">{{ tutorial3.topic }}</b>
+                <h4 class="subhead-topic">{{ tutorial3.topic }}</h4>
                 <h3 class="all-caps">
                   <a href="{{ tutorial3.title | slugify | prepend: domain_link  }}">{{ tutorial3.title }}</a>
                 </h3>
