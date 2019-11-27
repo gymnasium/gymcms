@@ -352,7 +352,6 @@ main h3 {
 #main .take5--recommended h2 {
   font-size: 1.55em;
   letter-spacing: .035rem;
-
 }
 
 .course header,
@@ -377,6 +376,11 @@ main h3 {
 
 .tutorial .subhead-topic {
   font-weight: 900;
+}
+
+.take5--recommended .tutorial .subhead-topic {
+  margin-top: 1.6rem;
+  margin-bottom: .8rem;
 }
 
 .subhead-datetime {
