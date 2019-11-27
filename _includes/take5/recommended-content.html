@@ -47,21 +47,21 @@
 {%- assign this_topic = site.data.take5s.[page.course_ID].topic -%}
 
 {% assign sorted_catalog = site.data.take5s | sort %}
-  
+
 {% for take5_hash in sorted_catalog reversed %}
-  
+
   {% assign item = take5_hash[1] %}
-  
+
   {% if item.topic == this_topic %}
-  
+
         {% if item.live == true %}
             {% if item.course_ID != this_tutorial %}
               {%- assign recommendations = recommendations | push: item.course_ID -%}
             {% endif %}
-        {% endif %}  
-      {% endif %}  
+        {% endif %}
+      {% endif %}
   {% endfor %}
- 
+
  {%- assign random_recommendations = recommendations | sample: 3 -%}
 
  {%- assign rec1 = random_recommendations[0] -%}
@@ -94,7 +94,7 @@
                 </a>
               </div>
               <header>
-                <b class="all-caps">{{ tutorial1.topic }}</b>
+                <h4 class="subhead-topic">{{ tutorial1.topic }}</h4>
                 <h3 class="all-caps">
                   <a href="{{ tutorial1.title | slugify | prepend: domain_link  }}">{{ tutorial1.title }}</a>
                 </h3>
@@ -109,7 +109,7 @@
                 </a>
               </div>
               <header>
-                <b class="all-caps">{{ tutorial2.topic }}</b>
+                <h4 class="subhead-topic">{{ tutorial2.topic }}</h4>
                 <h3 class="all-caps">
                   <a href="{{ tutorial2.title | slugify | prepend: domain_link  }}">{{ tutorial2.title }}</a>
                 </h3>
@@ -121,10 +121,10 @@
               <div class="artwork" data-duration="{{ tutorial3.video_duration }}">
                 <a href="{{ tutorial3.title | slugify | prepend: domain_link  }}" title="Watch Video">
                   <img alt="{{ tutorial3.title }}" src="{{ site.url }}{{ site.baseurl }}{{ tutorial3.poster_art }}">
-                </a>
+                </a>s
               </div>
               <header>
-                <b class="all-caps">{{ tutorial3.topic }}</b>
+                <h4 class="subhead-topic">{{ tutorial3.topic }}</h4>
                 <h3 class="all-caps">
                   <a href="{{ tutorial3.title | slugify | prepend: domain_link  }}">{{ tutorial3.title }}</a>
                 </h3>
