@@ -465,6 +465,10 @@ details.take5--transcript {
   line-height: 1.45;
 }
 
+#tutorial-transcript div[class^="language"] {
+  margin-top: 1.15em;
+}
+
 .take5--main summary {
   display: list-item;
   cursor: pointer;
