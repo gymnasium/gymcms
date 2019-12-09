@@ -171,8 +171,7 @@ main figcaption {
   color: #fff;
 }
 
-#main .gymlink,
-#main .gymlink * {
+#main .section-content:not(.cta) a {
   color: #f8971d;
 }
 
@@ -180,12 +179,6 @@ main figcaption {
 
 #main .container-fluid {
   padding-bottom: 0;
-}
-
-/* !override / remove spacer div  */
-
-#main + div[style] {
-  display: none;
 }
 
 /* --- #about --- */
