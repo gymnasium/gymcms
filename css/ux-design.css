@@ -247,9 +247,13 @@ main h3 {
   border-radius: 3px;
 }
 
-.section header {
+.section-content > header {
   margin-top: .4em;
   margin-bottom: 1.6em;
+}
+
+.section-content section header {
+  margin-top: .6em;
 }
 
 /* --- card layout --- */
@@ -323,11 +327,16 @@ footer.card-cta {
   background-color: #444;
 }
 
+#featured .course-artwork {
+  height: 0;
+  padding-bottom: 63%;
+  overflow: hidden;
+}
+
 #featured .course-artwork img {
   display: inline-block;
   max-width: 88%;
-  margin-top: -6%;
-  margin-bottom: -4%;
+  margin-top: -11%;
 }
 
 #featured .full-width {
@@ -381,15 +390,16 @@ footer.card-cta {
   vertical-align: middle;
 }
 
+.poster-mask {
+  border: 1px solid #dedede;
+}
+
 /* --- #webinars --- */
 
 #webinars .cols-hr ul {
   padding-bottom: 0;
   border-bottom: 0;
-}
-
-#webinars figure {
-  margin-bottom: .8em;
+  margin-bottom: 0;
 }
 
 #webinars .poster-mask {
@@ -397,7 +407,6 @@ footer.card-cta {
   height: 0;
   background-color: #000;
   padding-bottom: 62.5%; /* pseudo 16:9 aspect ratio */
-  border: 1px solid #dedede;
   overflow: hidden;
 }
 
@@ -415,10 +424,6 @@ footer.card-cta {
 #webinars .poster-mask-crop img {
   width: 112.5%;
   max-width: none;
-}
-
-#webinars .webinar header {
-  margin-bottom: 0;
 }
 
 /* --- grid layout --- */
@@ -439,6 +444,7 @@ footer.card-cta {
 
 .cols-hr ul {
   grid-gap: 0;
+  padding-bottom: 1.2em;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   margin-top: 0;
@@ -450,7 +456,6 @@ footer.card-cta {
   top: -1px;
   border-top: 1px solid #ddd;
   padding-top: 1.2em;
-  padding-bottom: 1.2em;
 }
 
 .cols-hr li::before {
