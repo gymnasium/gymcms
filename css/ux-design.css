@@ -390,7 +390,8 @@ footer.card-cta {
   vertical-align: middle;
 }
 
-.poster-mask {
+.tutorial figure,
+.webinar figure {
   border: 1px solid #dedede;
 }
 
