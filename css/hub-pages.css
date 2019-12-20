@@ -88,6 +88,14 @@ main figcaption {
   background-color: #d73158;
 }
 
+
+/* --- web development lang palette --- */
+
+.bg-web-development-lang,
+.featured-course .bg-web-developement-lang {
+  background-color: #764C9F;
+}
+
 /* --- ux / prototyping color palette --- */
 
 .bg-ux-design,
@@ -396,13 +404,13 @@ footer.card-cta {
 
 #courses h3 {
   display: inline-block;
-  width: 72%;
+  width: 70%;
   vertical-align: middle;
 }
 
 .tutorial figure,
 .webinar figure {
-  border: 1px solid #dedede;
+  border: 1px solid #dedede;s
 }
 
 /* --- #webinars --- */
