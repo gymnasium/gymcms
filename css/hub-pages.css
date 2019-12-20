@@ -81,14 +81,32 @@ main figcaption {
   white-space: nowrap;
 }
 
-/* --- ux color palette --- */
+/* --- web development palette --- */
+
+.bg-web-development,
+.featured-course .bg-web-developement {
+  background-color: #d73158;
+}
+
+
+/* --- web development lang palette --- */
+
+.bg-web-development-lang,
+.featured-course .bg-web-developement-lang {
+  background-color: #764C9F;
+}
+
+/* --- ux / prototyping color palette --- */
 
 .bg-ux-design,
-.featured-course .bg-ux-design {
+.featured-course .ux-design {
   background: #5ca5a0;
 }
 
-.bg-ux-content {
+/* --- career skills color palette --- */
+
+.bg-career-skills,
+.featured-course .bg-career-skills {
   background: #2c9959;
 }
 
@@ -335,8 +353,8 @@ footer.card-cta {
 
 #featured .course-artwork img {
   display: inline-block;
-  max-width: 88%;
-  margin-top: -11%;
+  max-width: 86%;
+  margin-top: -8%;
 }
 
 #featured .full-width {
@@ -386,13 +404,13 @@ footer.card-cta {
 
 #courses h3 {
   display: inline-block;
-  width: 72%;
+  width: 70%;
   vertical-align: middle;
 }
 
 .tutorial figure,
 .webinar figure {
-  border: 1px solid #dedede;
+  border: 1px solid #dedede;s
 }
 
 /* --- #webinars --- */
