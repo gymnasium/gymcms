@@ -13,7 +13,7 @@
   --gym-font-stack-text: 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-footer#contentinfo {
+#contentinfo {
   min-height: 170px;
   font-size: 16px;
   color: var(--gym-white);
