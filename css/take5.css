@@ -272,7 +272,7 @@ main h3 {
   padding-top: 1.6em;
 }
 
-@media (min-width: 62em) {
+@media (min-width: 62em), (min-width: 992px) {
 
   .take5--hero-content .col-md-4 + .col-md-8 {
     float: right;
@@ -502,7 +502,7 @@ details.take5--transcript {
   border-bottom: 0;
 }
 
-@media (max-width: 62em) {
+@media (max-width: 48em), (max-width: 991px) {
 
   .take5--hero-content .take5--resources,
   #tutorial-topics {
@@ -515,7 +515,7 @@ details.take5--transcript {
 
 }
 
-@media (min-width: 62em) {
+@media (min-width: 62em), (min-width: 992px) {
 
   .take5--main .col-md-4 {
     float: right;
