@@ -535,10 +535,11 @@ details.take5--transcript {
   #tutorial-resources summary b,
   #tutorial-topics summary b {
     float: left;
-    font: 900 1.55em/1.05 "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
+    font: 900 1.55em/1.08 "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
     color: #222;
     letter-spacing: .035rem;
     text-transform: uppercase;
+    vertical-align: 0;
     visibility: visible;
   }
 
