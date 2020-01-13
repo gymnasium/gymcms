@@ -15,12 +15,11 @@
 
   };
 
-
   ready( function () {
 
     // Media query event handler
     if (matchMedia) {
-      var mq = window.matchMedia('(min-width: 62em)');
+      var mq = window.matchMedia('(min-width: 62em), (min-width: 992px)');
       mq.addListener(mm);
       mm(mq);
     }
