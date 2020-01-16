@@ -8,9 +8,11 @@ Welcome to our free collection of career resources where you can find articles, 
 
 ### R&eacute;sum&eacute; and Portfolio Advice
 
-- [lorem](#)
-- [ipsum](#)
-- [dolor](#)
+- [11 Common Mistakes to Avoid on Your Resume](https://vitamintalent.com/blog/Eleven-common-mistakes-to-avoid-on-your-resume)
+- [4 Quick Tips to Improve Your Online Portfolio (VIDEO)](https://vitamintalent.com/blog/four-quick-tips-to-improve-your-online-portfolio-video)
+- [Top 10 Portfolio Tips for Freelance Designers](https://vitamintalent.com/blog/top-ten-portfolio-tips-for-freelance-designers)
+- [Top 5 Free Portfolio Sites](https://vitamintalent.com/blog/top-free-portfolio-sites)
+- [Top R&eacute;sum&eacute; Tips For Freelancers](https://vitamintalent.com/blog/top-resume-tips-for-freelancers)
 
 ---
 
@@ -18,6 +20,7 @@ Welcome to our free collection of career resources where you can find articles, 
 
 - [How to Conduct an Interview Like a Boss](https://medium.com/gymnasium/how-to-conduct-an-interview-like-a-boss-7de5c9810c4c){: target="_blank" rel="noopener"}
 - [7 Non-Technical Skills Every Creative Needs to Land the Job](https://vitamintalent.com/blog/7-non-technical-skills-every-creative-needs-to-land-the-job){: target="_blank" rel="noopener"}
+- [5 Secrets Of Interviewing From Our Clients](https://vitamintalent.com/blog/secrets-of-interviewing-from-our-clients)
 
 ---
 
