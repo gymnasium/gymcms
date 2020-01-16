@@ -16,6 +16,7 @@ Welcome to our free collection of career resources where you can find articles, 
 - [Top R&eacute;sum&eacute; Tips for Freelancers](https://vitamintalent.com/blog/top-resume-tips-for-freelancers){: target="_blank" rel="noopener"}
 - [Top 5 Free Portfolio Sites](https://vitamintalent.com/blog/top-free-portfolio-sites){: target="_blank" rel="noopener"}
 - [5 Tips for Making Your R&eacute;sum&eacute; More Engaging](https://vitamintalent.com/blog/five-tips-for-making-your-resume-more-engaging#){: target="_blank" rel="noopener"}
+
 ---
 
 ### Interviewing Tips
@@ -33,10 +34,13 @@ Welcome to our free collection of career resources where you can find articles, 
 - [4 Ways a Good Recruiter Can Keep Your Career on Track](https://vitamintalent.com/blog/4-ways-a-good-recruiter-can-keep-your-career-on-track){: target="_blank" rel="noopener"}
 
 ---
+
 ### Salary &amp; Benefits
 
-- [Check My Salary](https://vitamintalent.com/check-salary){: target="_blank" rel="noopener"} — See how your salary stacks up to the competition.
-- [2020 Salary Guide](https://go.vitamintalent.com/salary-guide){: target="_blank" rel="noopener"} — Your free guide to the future of remote work.
+See how your salary stacks up to the competition.
+
+- [Check My Salary](https://vitamintalent.com/check-salary){: target="_blank" rel="noopener"}
+- [2020 Salary Guide](https://go.vitamintalent.com/salary-guide){: target="_blank" rel="noopener"}
 
 ---
 
