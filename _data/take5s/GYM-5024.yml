@@ -5,12 +5,12 @@ date: 2020-01-20T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5024/
 poster_art: /img/take5/posters/gym-5024.jpg
-live: false
+live: true
 instructor: "Jeremy Osborn"
 topic: "Web Design & Development"
 video_ID: Xb3pBj4PKxg
 video_duration: "4:59"
-featured: false
+featured: true
 short_description: "Learn how to add CSS Media Queries in order to get started with responsive web design in this tutorial by Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: CodePen
 project_files:
