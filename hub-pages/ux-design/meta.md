@@ -1,6 +1,6 @@
 ---
 layout: meta
-permalink: /tests/hub-pages/meta/ux-design-collection-meta/
+permalink: /static/hub-pages/meta/ux-design-collection-meta/
 og_description: "Explore our free collection of UX courses, tutorials, webinars, articles, and jobs."
 og_title: "UX Design Collection"
 og_url: https://thegymnasium.com/ux-design
