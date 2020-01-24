@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    {{ content }}
+
+    {% assign webinar = site.data.webinars[page.event_ID] %}
+
+    <pre>
+    event_title: {{ webinar.event_title }}
+    event_guests: {{ webinar.event_guests }}
+    page_title: {{ webinar.page_title }}
+    short_description: {{ webinar.short_description }}
+    event_date: {{ webinar.event_date }}
+    event_time: {{ webinar.event_time }}
+    event_ogimage: {{ webinar.event_ogimage }}
+    recording_ogimage: {{ webinar.recording_ogimage }}
+    host: {{ webinar.host }}
+    speaker: {{ webinar.speaker | inspect }}
+    content_category: {{ webinar.content_category }}
+    landing: {{ webinar.landing }}
+    register: {{ webinar.register }}
+    video: {{ webinar.video }}
+    webinar_ID: {{ webinar.webinar_ID }}
+    video_ID: {{ webinar.video_ID }}
+  </pre>
+  </body>
+</html>
