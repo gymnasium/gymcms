@@ -5,12 +5,12 @@ date: 2020-01-27T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5025/
 poster_art: /img/take5/posters/gym-5025.jpg
-live: true
+live: false
 instructor: "Jeremy Osborn"
 topic: "Web Design & Development"
 video_ID: ZLR0rLm_zEM
 video_duration: "4:57"
-featured: true
+featured: false
 short_description: "Learn how CSS Variables can help you speed up and simplify your development workflow in this tutorial by Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: CodePen
 project_files:
