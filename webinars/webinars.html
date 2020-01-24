@@ -1,0 +1,15 @@
+---
+permalink: /static/webinars/
+layout: default
+---
+
+
+{% for webinar_list in site.data.webinars %}
+
+{% assign webinar = webinar_list[1] %}
+<pre><strong>
+{{ webinar.event_title | strip_html }}
+</pre></strong>
+<pre>{{ webinar.event_date }}</pre>
+<pre>{{ webinar.short_description }}</pre>
+{% endfor %}
