@@ -1,25 +1,21 @@
----
-layout: raw
-permalink: /static/hub-pages/meta/prototyping-collection-meta/
----
-<meta name="description" content="Explore our free collection of prototyping courses, tutorials, webinars, articles, and jobs.">
+<meta name="description" content="{{ page.og_description }}">
 <meta name="author" content="Aquent Gymnasium">
-<meta property="og:url" content="https://thegymnasium.com/prototyping">
+<meta property="og:url" content="{{ page.og_url }}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Prototyping | Gymnasium">
-<meta property="og:title" content="Prototyping Collection">
-<meta property="og:description" content="Explore our free collection of prototyping courses, tutorials, webinars, articles, and jobs.">
-<meta property="og:image:alt" content="Prototyping Collection">
-<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/img/hub-pages/og/prototyping-collection-og.png">
+<meta property="og:site_name" content="{{ page.page_title }}">
+<meta property="og:title" content="{{ page.og_title }}">
+<meta property="og:description" content="{{ page.og_description }}">
+<meta property="og:image:alt" content="{{ page.og_title }}">
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.og_art }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@AquentGymnasium">
 <meta name="twitter:creator" content="@AquentGymnasium">
-<meta name="twitter:url" property="og:url" content="https://thegymnasium.com/prototyping">
-<meta name="twitter:title" property="og:title" content="Prototyping Collection">
-<meta name="twitter:description" property="og:description" content="Explore our free collection of prototyping courses, tutorials, webinars, articles, and jobs.">
-<meta property="og:image:alt" content="Prototyping Collection">
-<meta name="twitter:image" property="og:image" content="{{ site.url }}{{ site.baseurl }}/img/hub-pages/og/prototyping-collection-og.png">
+<meta name="twitter:url" property="og:url" content="{{ page.og_url }}">
+<meta name="twitter:title" property="og:title" content="{{ page.og_title }}">
+<meta name="twitter:description" property="og:description" content="{{ page.og_description }}">
+<meta property="og:image:alt" content="{{ page.og_title }}">
+<meta name="twitter:image" property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ og_art }}">
 <link rel="apple-touch-icon" sizes="57x57" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="https://gymnasium.github.io/cms/favicon.ico/apple-icon-72x72.png">
@@ -38,3 +34,8 @@ permalink: /static/hub-pages/meta/prototyping-collection-meta/
 <meta name="msapplication-TileImage" content="https://gymnasium.github.io/cms/favicon.ico/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
+<!-- //
+Generated at: {{ site.time }}
+Served from: {{ page.url | absolute_url }}
+Git Hash: {{ site.data['hash']}}
+// -->
