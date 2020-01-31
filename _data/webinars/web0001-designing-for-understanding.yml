@@ -2,13 +2,8 @@
 event_ID: web0001-designing-for-understanding
 event_title: "Designing for Understanding: <span class=\"nowrap\">Create Meaningful</span> Interactions for Web <span class=\"nowrap\">and Mobile</span>"
 event_guests: "with Stephanie Hay and <span class=\"nowrap\">John Hodgins</span>"
-<<<<<<< HEAD
 short_description: "A conversation about how content, UX, and design work together to create meaningful interactions with special guests Stephanie Hay and John Hodgins."
 permalink: static/webinars/designing-for-understanding
-=======
-page_title: "Gymnasium Webinar"
-short_description: "A conversation about how content, UX, and design work together to create meaningful interactions with special guests Stephanie Hay and John Hodgins."
->>>>>>> 6225798afafaee9b0e8e996d576938e04f5793f3
 event_date: 2016-04-27
 event_time: "2PM EDT"
 event_ogimage: designing-for-understanding-event-og.png
