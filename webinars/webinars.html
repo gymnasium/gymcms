@@ -1,15 +1,45 @@
 ---
 permalink: /static/webinars/
-layout: default
+layout: raw
 ---
 
-
-{% for webinar_list in site.data.webinars %}
+{%- assign sorted_webinars = site.data.webinars | sort: event_date -%}
+{% for webinar_list in sorted_webinars %}
 
 {% assign webinar = webinar_list[1] %}
-<pre><strong>
+<h2>
 {{ webinar.event_title | strip_html }}
-</pre></strong>
-<pre>{{ webinar.event_date }}</pre>
-<pre>{{ webinar.short_description }}</pre>
+</h2>
+<img src="{{site.url}}/img/social/webinars/{{ webinar.event_ogimage }}" alt="" width="160">
+<ul>
+    <li>
+        webinar.event_date: {{ webinar.event_date }}
+    </li>
+    <li>
+        webinar.event_time: {{ webinar.event_time }}
+    </li>
+    <li>
+        webinar.short_description: {{ webinar.short_description }}
+    </li>
+    <li>
+        webinar.event_ogimage: {{ webinar.event_ogimage }}
+    </li>
+    <li>
+        webinar.content_category: {{ webinar.content_category }}
+    </li>
+    <li>
+        webinar.permalink: <a href="{{site.url}}/{{ webinar.permalink }}">{{ webinar.permalink }}</a>
+    </li>
+    <li>
+        webinar.speaker:
+        <ul>
+        {%- for speaker in webinar.speaker -%}
+            <li>
+                {{ speaker }}
+            </li>            
+        {%- endfor -%}
+</ul>
+    </li>
+
+</ul>
 {% endfor %}
