@@ -43,11 +43,16 @@ Webinar Count: {{ site.data.webinars | size }}
         item.permalink: <a href="/{{ item.permalink }}">{{ item.permalink }}</a>
     </li>
     <li>
+        item.host: {{ item.host }}
+        
+    </li>
+    <li>
         item.speaker:
         <ul>
         {%- for speaker in item.speaker -%}
             <li>
-                {{ speaker }}
+                {%- include webinar-bio.html bio=speaker -%}
+                <!-- {{ speaker }} -->
             </li>            
         {%- endfor -%}
 </ul>

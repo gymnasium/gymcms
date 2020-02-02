@@ -95,14 +95,14 @@
   <h1>Our Presenters</h1>
 </header>
     {% for speaker in webinar.speaker %}
-     {% include /bios/{{speaker}}.html %}
+    {%- include webinar-bio.html bio=speaker -%}
     {% endfor %}
 
     <header>
       <h1>Our Host</h1>
     </header>
 {% for host in webinar.host %}
-{% include /bios/{{host}}.html %}
+{%- include webinar-bio.html bio=host -%}
 {% endfor %}
 </aside>
 
