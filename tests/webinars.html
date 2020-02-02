@@ -1,7 +1,11 @@
 ---
-permalink: /static/webinars/
 layout: raw
+permalink: /tests/webinars/
 ---
+
+<pre>
+Webinar Count: {{ site.data.webinars | size }} 
+</pre>
 
 {%- assign webinars_ascending_date = "" | split: ", " -%}
 {%- assign webinars_descending_date = "" | split: ", " -%}
@@ -17,11 +21,9 @@ layout: raw
 
 {%- for webinar in webinars_descending_date -%}
     {%- assign item = site.data.webinars[webinar] -%}
-<h2>
-{{ item.event_title | strip_html }}
-</h2>
-<img src="{{site.url}}/img/social/webinars/{{ item.event_ogimage }}" alt="" width="160">
 <ul>
+    <li><strong>{{ item.event_title | strip_html }}</strong></li>
+    <ul>
     <li>
         item.event_date: {{ item.event_date }}
     </li>
@@ -32,7 +34,7 @@ layout: raw
         item.short_description: {{ item.short_description }}
     </li>
     <li>
-        item.event_ogimage: {{ item.event_ogimage }}
+        item.event_ogimage: <a href="/img/social/webinars/{{item.event_ogimage }}">/img/social/webinars/{{item.event_ogimage }}</a>
     </li>
     <li>
         item.content_category: {{ item.content_category }}
@@ -49,7 +51,8 @@ layout: raw
             </li>            
         {%- endfor -%}
 </ul>
-    </li>
+</ul>
+</li>
 
 </ul>
 {%- endfor -%}
