@@ -465,9 +465,13 @@ details.take5--transcript {
   line-height: 1.45;
 }
 
-#tutorial-transcript div[class^="language"],
-#tutorial-transcript div[class^="language"] + p {
+#tutorial-transcript [class*="language-"],
+#tutorial-transcript [class*="language-"] + p {
   margin-top: 1.6675em;
+}
+
+#tutorial-transcript [data-language="markup"]::before {
+  content: "html";
 }
 
 .take5--main summary {
