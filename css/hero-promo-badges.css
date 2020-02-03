@@ -49,7 +49,7 @@ a.gym-button-shrink-wrap {
   }
 
 #badges .row {
-  background: transparent url("https://gymcms.xyz/home/img/hero-promo-badges/exam-badges.png") no-repeat center 19.875em;
+  background: transparent url("https://thegymcms.com/home/img/hero-promo-badges/exam-badges.png") no-repeat center 19.875em;
   background-size: contain;
   padding-bottom: 70%;
   }
@@ -82,7 +82,7 @@ a.gym-button-shrink-wrap {
   width: 20.5em;
   height: 25em;
   content: "";
-  background: transparent url("https://gymcms.xyz/home/img/hero-promo-badges/badges.png") no-repeat right top;
+  background: transparent url("https://thegymcms.com/home/img/hero-promo-badges/badges.png") no-repeat right top;
   margin-left: -5%;
   }
 
@@ -94,7 +94,7 @@ a.gym-button-shrink-wrap {
   width: 36.25em;
   height: 25em;
   content: "";
-  background: transparent url("https://gymcms.xyz/home/img/hero-promo-badges/exam-badges.png") no-repeat left top;
+  background: transparent url("https://thegymcms.com/home/img/hero-promo-badges/exam-badges.png") no-repeat left top;
   margin-right: -5%;
   }
 
@@ -109,7 +109,7 @@ a.gym-button-shrink-wrap {
 (min-resolution: 1.25dppx) {
 
 #badges .row {
-  background: transparent url("https://gymcms.xyz/home/img/hero-promo-badges/exam-badges-2x.png") no-repeat center 19.875em;
+  background: transparent url("https://thegymcms.com/home/img/hero-promo-badges/exam-badges-2x.png") no-repeat center 19.875em;
   background-size: contain;
   }
 
@@ -126,12 +126,12 @@ a.gym-button-shrink-wrap {
   }
 
 #badges .col:before {
-  background: transparent url("https://gymcms.xyz/home/img/hero-promo-badges/badges-2x.png") no-repeat right top;
+  background: transparent url("https://thegymcms.com/home/img/hero-promo-badges/badges-2x.png") no-repeat right top;
   background-size: 283px 360px;
   }
 
 #badges .col:after {
-  background: transparent url("https://gymcms.xyz/home/img/hero-promo-badges/exam-badges-2x.png") no-repeat left top;
+  background: transparent url("https://thegymcms.com/home/img/hero-promo-badges/exam-badges-2x.png") no-repeat left top;
   background-size: 505px 360px;
   }
 
