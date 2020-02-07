@@ -40,7 +40,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="{{ page_title }}">
-<meta property="og:title" content="{{ og_title }}">
+<meta property="og:title" content="{{ og_title | strip_html }}">
 <meta property="og:description" content="{{ short_description }}">
 <meta property="og:image:alt" content="{{ og_title }}">
 <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ og_art }}">
@@ -48,9 +48,9 @@
 <meta name="twitter:site" content="@AquentGymnasium">
 <meta name="twitter:creator" content="@AquentGymnasium">
 <meta name="twitter:url" property="og:url" content="{{ og_url }}">
-<meta name="twitter:title" property="og:title" content="{{ og_title }}">
+<meta name="twitter:title" property="og:title" content="{{ og_title | strip_html }}">
 <meta name="twitter:description" property="og:description" content="{{ short_description }}">
-<meta property="og:image:alt" content="{{ og_title }}">
+<meta property="og:image:alt" content="{{ og_title | strip_html }}">
 <meta name="twitter:image" property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ og_art }}">
 <link rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}{{ site.baseurl }}/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="{{ site.url }}{{ site.baseurl }}/favicon/apple-icon-60x60.png">
