@@ -10,7 +10,7 @@ instructor: "Mike Bifulco"
 topic: "Web Design & Development"
 video_ID: ukPI1zlxKqg
 video_duration: "4:58"
-featured: true
+featured: false
 short_description: "Learn how to get up and running with your first GitHub Pages Website in this tutorial by Mike Bifulco, Director of Technology at Aquent Gymnasium."
 related_content:
 - label: "GitHub.com"
