@@ -5,12 +5,12 @@ date: 2020-02-10T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5027/
 poster_art: /img/take5/posters/gym-5027.jpg
-live: false
+live: live
 instructor: "Jeremy Osborn"
 topic: "Career Skills"
 video_ID: AcJPrHGIIL8
 video_duration: "4:59"
-featured: false
+featured: live
 short_description: "Learn 3 ways to manage your work day more efficiently in this tutorial by Jeremy Osborn, Academic Director at Aquent Gymnasium."
 related_content:
 - label: "Create Email Templates in Gmail"
