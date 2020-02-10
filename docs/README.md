@@ -172,7 +172,7 @@ permalink: /static/take5/meta/gym-5001-meta/
 <details>
 <summary>View Sample</summary>
 
-![img/take5/og/gym-5001-og.png](https://gymcms.xyz/img/take5/og/gym-5001-og.png)
+![img/take5/og/gym-5001-og.png](https://thegymcms.com/img/take5/og/gym-5001-og.png)
 </details>
 
 ### Video Poster Image
@@ -187,7 +187,7 @@ permalink: /static/take5/meta/gym-5001-meta/
 <details>
 <summary>View Sample</summary>
 
-![img/take5/posters/gym-5001.png](https://gymcms.xyz/img/take5/posters/gym-5001.jpg)
+![img/take5/posters/gym-5001.png](https://thegymcms.com/img/take5/posters/gym-5001.jpg)
 </details>
 
 ### Hero Poster Image
@@ -198,7 +198,7 @@ permalink: /static/take5/meta/gym-5001-meta/
 <details>
 <summary>View Sample</summary>
 
-![img/take5/posters/gym-5001-hero.png](https://gymcms.xyz/img/take5/posters/gym-5001-hero.jpg)
+![img/take5/posters/gym-5001-hero.png](https://thegymcms.com/img/take5/posters/gym-5001-hero.jpg)
 </details>
 
 
