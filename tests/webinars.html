@@ -1,0 +1,63 @@
+---
+layout: raw
+permalink: /tests/webinars/
+---
+
+<pre>
+Webinar Count: {{ site.data.webinars | size }} 
+</pre>
+
+{%- assign webinars_ascending_date = "" | split: ", " -%}
+{%- assign webinars_descending_date = "" | split: ", " -%}
+
+{%- assign sorted_webinars = site.data.webinars | sort: event_date -%}
+
+{% for webinar_list in sorted_webinars %}
+{% assign webinar = webinar_list[1] %}
+{%- assign webinars_ascending_date = webinars_ascending_date | push: webinar.event_ID -%}
+{% endfor %}
+
+{%- assign webinars_descending_date = webinars_ascending_date | reverse -%}
+
+{%- for webinar in webinars_descending_date -%}
+    {%- assign item = site.data.webinars[webinar] -%}
+<ul>
+    <li><strong>{{ item.event_title | strip_html }}</strong></li>
+    <ul>
+    <li>
+        item.event_date: {{ item.event_date }}
+    </li>
+    <li>
+        item.event_time: {{ item.event_time }}
+    </li>
+    <li>
+        item.short_description: {{ item.short_description }}
+    </li>
+    <li>
+        item.event_ogimage: <a href="/img/social/webinars/{{item.event_ogimage }}">/img/social/webinars/{{item.event_ogimage }}</a>
+    </li>
+    <li>
+        item.content_category: {{ item.content_category }}
+    </li>
+    <li>
+        item.permalink: <a href="/{{ item.permalink }}">{{ item.permalink }}</a>
+    </li>
+    <li>
+        item.host: {{ item.host }}
+        
+    </li>
+    <li>
+        item.speaker:
+        <ul>
+        {%- for speaker in item.speaker -%}
+            <li>
+                {%- include webinar-bio.html bio=speaker -%}
+                <!-- {{ speaker }} -->
+            </li>            
+        {%- endfor -%}
+</ul>
+</ul>
+</li>
+
+</ul>
+{%- endfor -%}
