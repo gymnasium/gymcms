@@ -1,0 +1,8 @@
+{%- assign bio = site.data.bios.[include.bio] -%}
+<section class="event-bio">
+    <img alt="{{ bio.name }}" src="{{ site.baseurl }}/img/webinar-bio-headshots/{{ bio.headshot }}">
+    <h2>{{ bio.name }}</h2>
+    <p>
+        {{ bio.description }}
+    </p>
+  </section>

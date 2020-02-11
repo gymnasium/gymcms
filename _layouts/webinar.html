@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>{{ page.title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/webinar.css">
   </head>
   <body>
-    {{ content }}
+    
 
     {% assign webinar = site.data.webinars[page.event_ID] %}
-
+<!--//
     <pre>
     event_title: {{ webinar.event_title }}
     event_guests: {{ webinar.event_guests }}
@@ -27,6 +28,84 @@
     video: {{ webinar.video }}
     webinar_ID: {{ webinar.webinar_ID }}
     video_ID: {{ webinar.video_ID }}
-  </pre>
-  </body>
-</html>
+  </pre> 
+//-->
+
+
+{%- comment -%} {% include event-header.html %} {%- endcomment -%}
+
+<body>
+
+<main class="content structure">
+
+<article>
+
+
+<header class="main-header event-header">
+    <h1>Webinar</h1>
+    {% if webinar.video %}
+    <h2>Recording</h2>
+    {% else %}
+    <h2>Registration</h2>
+    {% endif %}
+</header>
+
+<header class="event-banner-hero event-theme-{{ webinar.content_category }}">
+  <h1>{{ webinar.event_title }}</h1>
+  <h2>{{ webinar.event_guests }}</h2>
+
+  {% if webinar.video %}
+  <h3 class="datetime">{{ webinar.event_date | date: "%B %-d, %Y"}}</h3>
+    {% else %}
+    <h3 class="datetime">{{ webinar.event_date | date: "%A, %B %-d, %Y at " }}{{ webinar.event_time }}</h3>
+    {% endif %}
+</header>
+
+<p class="call-out">{{ webinar.short_description }}</p>
+
+{% if webinar.register %}
+{% include event-reg-form.html %}
+
+    {% else  %}
+        {% if webinar.recording %}
+        {% include event-recording-form.html %}
+        {% endif %}
+
+        {% if webinar.video and webinar.video_ID %}
+        <p><strong>This webinar recording is now available.</strong>
+        {% include event-video.html %}
+        {% endif %}
+{% endif %}
+
+
+{% if webinar.notist_deck %}
+{% include event_slides.html %}
+{% endif %}
+
+
+{{ content }}
+</article>
+
+<!-- sidebar -->
+
+<aside>
+
+
+<header>
+  <h1>Our Presenters</h1>
+</header>
+    {% for speaker in webinar.speaker %}
+    {%- include webinar-bio.html bio=speaker -%}
+    {% endfor %}
+
+    <header>
+      <h1>Our Host</h1>
+    </header>
+{% for host in webinar.host %}
+{%- include webinar-bio.html bio=host -%}
+{% endfor %}
+</aside>
+
+</main>
+
+{%- comment -%} {% include event-footer.html %} {%- endcomment -%}
