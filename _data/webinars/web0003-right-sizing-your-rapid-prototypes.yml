@@ -14,7 +14,6 @@ speaker:
     - eyoung
     - tsingleton
 content_category: ux
-
 landing: true
 register: false
 video: true
