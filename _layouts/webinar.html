@@ -1,38 +1,35 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/webinar.css">
-  </head>
-  <body>
+  
     
 
-    {% assign webinar = site.data.webinars[page.event_ID] %}
+{% assign webinar = site.data.webinars[page.event_ID] %}
 <!--//
-    <pre>
-    event_title: {{ webinar.event_title }}
-    event_guests: {{ webinar.event_guests }}
-    page_title: {{ webinar.page_title }}
-    short_description: {{ webinar.short_description }}
-    event_date: {{ webinar.event_date }}
-    event_time: {{ webinar.event_time }}
-    event_ogimage: {{ webinar.event_ogimage }}
-    recording_ogimage: {{ webinar.recording_ogimage }}
-    host: {{ webinar.host }}
-    speaker: {{ webinar.speaker | inspect }}
-    content_category: {{ webinar.content_category }}
-    landing: {{ webinar.landing }}
-    register: {{ webinar.register }}
-    video: {{ webinar.video }}
-    webinar_ID: {{ webinar.webinar_ID }}
-    video_ID: {{ webinar.video_ID }}
-  </pre> 
+event_title: {{ webinar.event_title | strip_html }}
+event_guests: {{ webinar.event_guests | strip_html }}
+page_title: {{ webinar.page_title | strip_html }}
+short_description: {{ webinar.short_description  | strip_html }}
+event_date: {{ webinar.event_date }}
+event_time: {{ webinar.event_time }}
+event_ogimage: {{ webinar.event_ogimage }}
+recording_ogimage: {{ webinar.recording_ogimage }}
+host: {{ webinar.host }}
+speaker[0]: {{ webinar.speaker[0] }}
+speaker[1]: {{ webinar.speaker[1] }}
+content_category: {{ webinar.content_category }}
+landing: {{ webinar.landing }}
+register: {{ webinar.register }}
+video: {{ webinar.video }}
+webinar_ID: {{ webinar.webinar_ID }}
+video_ID: {{ webinar.video_ID }}
 //-->
 
+{% if webinar.video %}
+{%- assign page_title = "Webinar Recording | The Gymnasium" -%}
+{%- elsif webinar.register -%}
+{%- assign page_title = "Webinar Registration | The Gymnasium" -%}
+{% endif %}
+<title>{{ page_title }}</title>
 
-{%- comment -%} {% include event-header.html %} {%- endcomment -%}
+<link rel="stylesheet" href="/css/webinar.css">
 
 <body>
 
@@ -64,13 +61,9 @@
 <p class="call-out">{{ webinar.short_description }}</p>
 
 {% if webinar.register %}
-{% include event-reg-form.html %}
+{% include webinar-registration-form.html %}
 
     {% else  %}
-        {% if webinar.recording %}
-        {% include event-recording-form.html %}
-        {% endif %}
-
         {% if webinar.video and webinar.video_ID %}
         <p><strong>This webinar recording is now available.</strong>
         {% include event-video.html %}
@@ -108,4 +101,3 @@
 
 </main>
 
-{%- comment -%} {% include event-footer.html %} {%- endcomment -%}

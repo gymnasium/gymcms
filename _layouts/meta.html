@@ -2,24 +2,25 @@
     {%- comment -%}
     Set up meta tags for a webinar meta include
     {%- endcomment -%}
-
     {%- assign event = site.data.webinars[page.event_ID] -%}
-    {%- assign short_description = event.short_description -%}
+    {%- assign short_description = event.short_description | strip_html -%}
 
     {%- assign path = event.event_ID -%}
     {%- assign path =  path | slice: 8,path.size   -%}
     {%- assign og_url = path | prepend: "https://thegymnasium.com/webinars/" -%}
-    
+    {%- assign og_title = event.event_title -%}
+
+    {%- if event.register == true -%}    
+        {%- assign page_title = "Webinar Registration | The Gymnasium" -%}
+        {%- assign og_art = event.event_ogimage | prepend: "img/social/webinars/" -%}    
+    {%- endif -%}
+
     {%- if event.video == true -%}
         {%- assign page_title = "Webinar Recording | The Gymnasium" -%}
-        {%- assign og_title = event.event_title -%}
         {%- assign og_art = event.recording_ogimage | prepend: "img/social/webinars/" -%}
-    {%- elsif event.registration == true -%}    
-        {%- assign page_title = "Webinar Registration | The Gymnasium" -%}
-        {%- assign og_art = event.event_ogimage | prepend: "img/social/webinars/" -%}
-        {%- assign og_title = event.event_title -%}
+    {%- endif -%}    
 
-    {%- endif -%}
+
 
 {%- elsif page.permalink contains "take5" -%}
     {%- comment -%}
@@ -41,7 +42,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="{{ page_title }}">
 <meta property="og:title" content="{{ og_title | strip_html }}">
-<meta property="og:description" content="{{ short_description }}">
+<meta property="og:description" content="{{ short_description | strip_html }}">
 <meta property="og:image:alt" content="{{ og_title | strip_html }}">
 <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ og_art }}">
 <meta name="twitter:card" content="summary_large_image">
@@ -49,7 +50,7 @@
 <meta name="twitter:creator" content="@AquentGymnasium">
 <meta name="twitter:url" property="og:url" content="{{ og_url }}">
 <meta name="twitter:title" property="og:title" content="{{ og_title | strip_html }}">
-<meta name="twitter:description" property="og:description" content="{{ short_description }}">
+<meta name="twitter:description" property="og:description" content="{{ short_description | strip_html }}">
 <meta property="og:image:alt" content="{{ og_title | strip_html }}">
 <meta name="twitter:image" property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ og_art }}">
 <link rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}{{ site.baseurl }}/favicon/apple-icon-57x57.png">
