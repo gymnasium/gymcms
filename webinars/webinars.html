@@ -22,7 +22,9 @@ layout: raw
 <h2>
 {{ item.event_title | strip_html }}
 </h2>
-<img src="{{site.url}}/img/social/webinars/{{ item.event_ogimage }}" alt="" width="160">
+{%- if item.event_ogimage != null -%}
+<img src="{{site.url}}/img/social/webinars/{{ item.event_ogimage }}" alt="" width="160">    
+{%- endif -%}
 <ul>
     <li>
         item.event_date: {{ item.event_date }}
@@ -46,12 +48,14 @@ layout: raw
         item.speaker:
         <ul>
         {%- for speaker in item.speaker -%}
-        
-            <li><img src="{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
+        <li>
+            {%- if site.data.bios[speaker].headshot != null -%}
+                <img src="{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
+            {%- endif -%}
             {{ site.data.bios[speaker].name }}
             </li>            
         {%- endfor -%}
-</ul>
+        </ul>
     </li>
 
 </ul>
