@@ -1,4 +1,7 @@
-  
+{%- if jekyll.environment == "development" -%}
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>  
+{%- endif -%}
     
 
 {% assign webinar = site.data.webinars[page.event_ID] %}
@@ -100,4 +103,4 @@ video_ID: {{ webinar.video_ID }}
 </aside>
 
 </main>
-
+<script src="{{ site.baseurl }}{{ site.baseurl }}/js/functions.js" async></script>
