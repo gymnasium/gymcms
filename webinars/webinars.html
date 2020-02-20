@@ -15,16 +15,47 @@ layout: raw
 
 {%- assign webinars_descending_date = webinars_ascending_date | reverse -%}
 
+<style>
+    #featured_webinar{
+        background-color: orange;
+    }
+    .webinar{
+        background-color: grey;
+    }
+</style>
+
 <h1>Webinars</h1>
 
 {%- for webinar in webinars_descending_date -%}
     {%- assign item = site.data.webinars[webinar] -%}
-<h2>
-{{ item.event_title | strip_html }}
-</h2>
-{%- if item.event_ogimage != null -%}
-<img src="{{site.url}}/img/social/webinars/{{ item.event_ogimage }}" alt="" width="160">    
+
+    {%- assign complete_webinar_title = item.event_title | strip_html -%}
+    {%- assign decolonized_webinar_title = complete_webinar_title | split: ":"  -%}
+    {%- assign webinar_title = decolonized_webinar_title[0] -%}
+    {%- assign webinar_subtitle = decolonized_webinar_title[1] -%}
+    {%- assign speaker_1 = item.speaker[0]  -%}
+    {%- assign speaker_2 = item.speaker[1]  -%}
+    
+    {% if item.register %}
+<div id="featured_webinar">
+    {% else %}
+<div class="webinar">
+    {% endif %}
+
+<pre>{{ item.content_category }}</pre>
+<h2>{{ webinar_title }}</h2>
+
+{% if webinar_subtitle %}
+<h3>{{ webinar_subtitle }}</h3>
 {%- endif -%}
+<pre>({{ complete_webinar_title }})</pre>
+
+<p>With <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
+
+{%- if item.register -%}
+    <p>Live streaming on {{ item.event_date | date: "%A, %B %-d, %Y at " }}{{ item.event_time }}</p>
+{%- endif -%}
+
 <ul>
     <li>
         item.event_date: {{ item.event_date }}
@@ -49,7 +80,7 @@ layout: raw
         <ul>
         {%- for speaker in item.speaker -%}
         <li>
-            {%- if site.data.bios[speaker].headshot != null -%}
+            {%- if item.register and site.data.bios[speaker].headshot != null -%}
                 <img src="{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
             {%- endif -%}
             {{ site.data.bios[speaker].name }}
@@ -58,5 +89,7 @@ layout: raw
         </ul>
     </li>
 
+
 </ul>
+</div>
 {%- endfor -%}
