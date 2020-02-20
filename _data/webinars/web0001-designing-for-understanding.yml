@@ -12,7 +12,7 @@ host: josborn
 speaker:
     - shay
     - jhodgins
-content_category: skills
+content_category: ux
 landing: true
 register: false
 video: true
