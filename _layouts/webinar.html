@@ -88,14 +88,14 @@ video_ID: {{ webinar.video_ID }}
 
 
 <header>
-  <h1>Our Presenters</h1>
+  <h1>Guest Speakers</h1>
 </header>
     {% for speaker in webinar.speaker %}
     {%- include webinar-bio.html bio=speaker -%}
     {% endfor %}
 
     <header>
-      <h1>Our Host</h1>
+      <h1>Host</h1>
     </header>
 {% for host in webinar.host %}
 {%- include webinar-bio.html bio=host -%}
