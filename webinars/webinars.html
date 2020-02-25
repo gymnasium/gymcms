@@ -3,6 +3,10 @@ permalink: /static/webinars/
 layout: raw
 ---
 
+{%- if jekyll.environment == "development" -%}
+  {%- include take5/test-top.html -%}
+{%- endif -%}
+
 {%- assign webinars_ascending_date = "" | split: ", " -%}
 {%- assign webinars_descending_date = "" | split: ", " -%}
 
@@ -35,7 +39,7 @@ layout: raw
     {%- assign webinar_subtitle = decolonized_webinar_title[1] -%}
     {%- assign speaker_1 = item.speaker[0]  -%}
     {%- assign speaker_2 = item.speaker[1]  -%}
-    
+
     {% if item.register %}
 <div id="featured_webinar">
     {% else %}
@@ -84,7 +88,7 @@ layout: raw
                 <img src="{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
             {%- endif -%}
             {{ site.data.bios[speaker].name }}
-            </li>            
+            </li>
         {%- endfor -%}
         </ul>
     </li>
@@ -93,3 +97,7 @@ layout: raw
 </ul>
 </div>
 {%- endfor -%}
+
+{%- if jekyll.environment == "development" -%}
+  {%- include take5/test-bottom.html -%}
+{%- endif -%}
