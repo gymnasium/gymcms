@@ -19,30 +19,37 @@ layout: raw
 
 {%- assign webinars_descending_date = webinars_ascending_date | reverse -%}
 
-<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/webinar.css">
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/webinars.css">
 
 <style>
-    #featured-webinar{
-        background-color: orange;
-    }
-    .webinar{
-        background-color: grey;
-    }
+  #featured-webinar{
+      background-color: orange;
+  }
+  .webinar{
+      background-color: grey;
+  }
 </style>
 
-<h1>Webinars</h1>
+<main id="main" role="main">
+
+<header class="webinars--about" id="about">
+  <div class="container">
+    <h1>Webinars</h1>
+    <p>Insightful conversation with trailblazers in the web community.</p>
+  </div>
+</header>
 
 <ul>
 
 {%- for webinar in webinars_descending_date -%}
-    {%- assign item = site.data.webinars[webinar] -%}
+  {%- assign item = site.data.webinars[webinar] -%}
 
-    {%- assign complete_webinar_title = item.event_title | strip_html -%}
-    {%- assign decolonized_webinar_title = complete_webinar_title | split: ":"  -%}
-    {%- assign webinar_title = decolonized_webinar_title[0] -%}
-    {%- assign webinar_subtitle = decolonized_webinar_title[1] -%}
-    {%- assign speaker_1 = item.speaker[0]  -%}
-    {%- assign speaker_2 = item.speaker[1]  -%}
+  {%- assign complete_webinar_title = item.event_title | strip_html -%}
+  {%- assign decolonized_webinar_title = complete_webinar_title | split: ":"  -%}
+  {%- assign webinar_title = decolonized_webinar_title[0] -%}
+  {%- assign webinar_subtitle = decolonized_webinar_title[1] -%}
+  {%- assign speaker_1 = item.speaker[0]  -%}
+  {%- assign speaker_2 = item.speaker[1]  -%}
 
   {% if item.register %}
   <li class="webinar" id="featured-webinar">
@@ -50,7 +57,7 @@ layout: raw
   <li class="webinar">
   {% endif %}
 
-    <p><b>{{ item.content_category }}</b></p>
+    <p class="all-caps"><b>{{ item.content_category }}</b></p>
     <h2>{{ webinar_title }}{% if webinar_subtitle %}<span>: {{ webinar_subtitle }}</span>{%- endif -%}</h2>
 
     <!--
@@ -62,7 +69,7 @@ layout: raw
     <p>With <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
 
     {%- if item.register -%}
-    <p>Live streaming on {{ item.event_date | date: "%A, %B %-d, %Y at " }}{{ item.event_time }}</p>
+    <p>Live streaming on <strong>{{ item.event_date | date: "%A, %B %-d, %Y at " }}{{ item.event_time }}</strong></p>
     {%- endif -%}
 
     {%- if item.register -%}
@@ -101,6 +108,8 @@ layout: raw
 {%- endfor -%}
 
 </ul>
+
+</main>
 
 {%- if jekyll.environment == "development" -%}
   {%- include take5/test-bottom.html -%}
