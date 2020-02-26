@@ -22,10 +22,11 @@ layout: raw
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/webinars.css">
 
 <style>
-  #featured-webinar{
+  #featured-webinar .webinar--card {
       background-color: orange;
   }
-  .webinar{
+
+  .webinar--card {
       background-color: grey;
   }
 </style>
@@ -58,53 +59,57 @@ layout: raw
     {% else %}
     <li class="webinar">
     {% endif %}
+        <div class="webinar--card">
+        <div class="webinar--main">
+        <header>
+          <p class="all-caps topic"><b>{{ item.content_category }}</b></p>
+          <h2>{{ webinar_title }}{% if webinar_subtitle %}<span class="subhead"><span class="visuallyhidden">:</span> {{ webinar_subtitle }}</span>{%- endif -%}</h2>
+        </header>
 
-      <p class="all-caps"><b>{{ item.content_category }}</b></p>
-      <h2>{{ webinar_title }}{% if webinar_subtitle %}<span>: {{ webinar_subtitle }}</span>{%- endif -%}</h2>
-
-      <!--
-      {%- if jekyll.environment == "development" -%}
-      <pre>({{ complete_webinar_title }})</pre>
-      {%- endif -%}
-      -->
-
-      <p>With <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
-
-      {%- if item.register -%}
-      <p>Live streaming on <strong>{{ item.event_date | date: "%A, %B %-d, %Y at " }}{{ item.event_time }}</strong></p>
-      {%- endif -%}
-
-      {%- if item.register -%}
-      <p>{{ item.short_description }}</p>
-      {%- endif -%}
-
-      <div>
-        {%- if item.register -%}
-        <a class="gym-button gym-button-secondary" href="/{{ item.permalink }}">
-          <b>Register to Attend</b>
-        </a>
-        {% else %}
-        <a class="gym-button gym-button-secondary" href="/{{ item.permalink }}">
-          <b>Watch Recording</b>
-        </a>
+        <!--
+        {%- if jekyll.environment == "development" -%}
+        <pre>({{ complete_webinar_title }})</pre>
         {%- endif -%}
+        -->
+
+        <p>With <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
+
+        <!-- item.event_ogimage: {{ item.event_ogimage }} -->
+
+        {%- for speaker in item.speaker -%}
+        {%- if item.register and site.data.bios[speaker].headshot != null -%}
+        <ul>
+        <li>
+          <figure>
+            <img src="{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
+            <figcaption>{{ site.data.bios[speaker].name }}</figcaption>
+            </figure>
+          </li>
+        </ul>
+        {%- endif -%}
+        {%- endfor -%}
+
+        {%- if item.register -%}
+        <p>Live streaming on <strong>{{ item.event_date | date: "%A, %B %-d, %Y at " }}{{ item.event_time }}</strong></p>
+        {%- endif -%}
+
+        {%- if item.register -%}
+        <p>{{ item.short_description }}</p>
+        {%- endif -%}
+
+        </div>
+        <div class="cta">
+          {%- if item.register -%}
+          <a class="gym-button gym-button-secondary" href="/{{ item.permalink }}">
+            <b>Register to Attend</b>
+          </a>
+          {% else %}
+          <a class="gym-button gym-button-secondary" href="/{{ item.permalink }}">
+            <b>Watch Recording</b>
+          </a>
+          {%- endif -%}
+        </div>
       </div>
-
-      <!-- item.event_ogimage: {{ item.event_ogimage }} -->
-
-      {%- for speaker in item.speaker -%}
-      {%- if item.register and site.data.bios[speaker].headshot != null -%}
-      <ul>
-      <li>
-        <figure>
-          <img src="{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
-          <figcaption>{{ site.data.bios[speaker].name }}</figcaption>
-          </figure>
-        </li>
-     </ul>
-    {%- endif -%}
-    {%- endfor -%}
-
   </li>
 
   {%- endfor -%}
