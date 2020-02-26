@@ -21,16 +21,6 @@ layout: raw
 
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/webinars.css">
 
-<style>
-  #featured-webinar .webinar--card {
-      background-color: orange;
-  }
-
-  .webinar--card {
-      background-color: grey;
-  }
-</style>
-
 <main id="main" role="main">
 
 <header class="webinars--about" id="about">
@@ -59,11 +49,11 @@ layout: raw
     {% else %}
     <li class="webinar">
     {% endif %}
-        <div class="webinar--card">
+        <div class="webinar--card {{ item.content_category }}">
         <div class="webinar--main">
         <header>
           <p class="all-caps topic"><b>{{ item.content_category }}</b></p>
-          <h2>{{ webinar_title }}{% if webinar_subtitle %}<span class="subhead"><span class="visuallyhidden">:</span> {{ webinar_subtitle }}</span>{%- endif -%}</h2>
+          <h2 class="title">{{ webinar_title }}{% if webinar_subtitle %}<span class="subhead"><span class="visuallyhidden">:</span> {{ webinar_subtitle }}</span>{%- endif -%}</h2>
         </header>
 
         <!--
