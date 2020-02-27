@@ -94,6 +94,10 @@ main figcaption {
   padding-bottom: 0;
 }
 
+main.webinars {
+  background-color: transparent;
+}
+
 /* --- typography --- */
 
 /* headings / margin reset */
