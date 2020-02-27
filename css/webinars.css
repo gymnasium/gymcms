@@ -198,6 +198,30 @@ main figcaption {
   border-top: 1em solid #ccc;
 }
 
+.webinar--main {
+  padding: 1em 1em 0;
+}
+
+.webinar--main header {
+  max-width: 18.25em;
+}
+
+.webinar--main header .topic,
+.webinar--main header .title {
+  color: #fff;
+}
+
+.webinar--main header .topic {
+  font-size: 1em;
+  line-height: 1;
+  color: #ccc;
+  letter-spacing: .15rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* topics */
+
 .webinar .design {
   border-top-color: #d73158;
 }
@@ -214,18 +238,13 @@ main figcaption {
   border-top-color: #5ca5a0;
 }
 
-.webinar--card header .topic,
-.webinar--card header .title {
-  color: #fff;
-}
-
-.webinar--card header .topic {
-  margin-top: 0;
-}
-
-.webinar--card header .subhead {
+.webinar--main header .subhead {
   display: block;
-  font-size: .75em;
+  max-width: 24rem;
+  font-weight: bold;
+  font-size: .5em;
+  line-height: 1.35;
+  margin-top: .75rem;
 }
 
 /* legacy layout / fallback  */
