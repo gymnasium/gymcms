@@ -667,7 +667,8 @@ main p.small-print {
   }
 
 .event-form p.small-print small {
-  line-height: 1.2;
+  font-size: .925em;
+  line-height: 1.35;
   }
 
 .event-form button {
