@@ -199,7 +199,7 @@ main figcaption {
 }
 
 .webinar--main {
-  padding: 1em 1em 0;
+  padding: 1.2em 1.2em 0;
 }
 
 .webinar--main header {
@@ -241,10 +241,22 @@ main figcaption {
 .webinar--main header .subhead {
   display: block;
   max-width: 24rem;
-  font-weight: bold;
   font-size: .5em;
   line-height: 1.35;
+  color: #fff;
   margin-top: .75rem;
+}
+
+.webinar--main .guest-speakers {
+  font-size: 1em;
+  color: #e1e1e1;
+}
+
+/* --- cta --- */
+
+.webinar--cta {
+  align-items: end;
+  padding: 1.2em;
 }
 
 /* legacy layout / fallback  */
@@ -254,11 +266,6 @@ main figcaption {
   margin-top: 0;
 }
 
-/* --- cta --- */
-
-.cta {
-  align-items: end;
-}
 
 /* --- grid layout --- */
 

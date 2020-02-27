@@ -62,7 +62,7 @@ layout: raw
         {%- endif -%}
         -->
 
-        <p>With <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
+        <p class="guest-speakers">With <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
 
         <!-- item.event_ogimage: {{ item.event_ogimage }} -->
 
@@ -88,7 +88,7 @@ layout: raw
         {%- endif -%}
 
         </div>
-        <div class="cta">
+        <div class="webinar--cta">
           {%- if item.register -%}
           <a class="gym-button gym-button-secondary" href="/{{ item.permalink }}">
             <b>Register to Attend</b>
