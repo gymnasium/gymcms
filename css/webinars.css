@@ -671,31 +671,26 @@ main p.small-print {
   margin-top: 2em;
   }
 
-.gym-button {
+button.gym-button {
+  font-size: 105%;
   display: block;
   width: 100%;
   color: #fff;
   background: #f8971d;
-  padding: 2em;
+  padding: 1.6em 2em;
   border: 0;
   border-radius: 2px;
   cursor: pointer;
   }
 
-.gym-button:hover,
-.gym-button:focus {
+button.gym-button:hover,
+button.gym-button:focus {
   background: #666;
-  }
-
-.gym-button b {
-  font: bold 2em/1 brandon-grotesque, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  letter-spacing: .02em;
-  vertical-align: baseline;
   }
 
 @media (min-width: 32em) {
 
-.gym-button {
+button.gym-button {
   max-width: 30em;
   }
 
