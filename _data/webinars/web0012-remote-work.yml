@@ -5,7 +5,7 @@ event_guests: "with Richard Banfield <span class=\"nowrap\">and Darren Buckner</
 short_description: "Join us for an hour-long webinar about the benefits and challenges of remote work — from communication and collaboration to time zones and transparency."
 permalink: static/webinars/remote-work
 event_date: 2020-03-17
-event_time: "3:00 PM EST"
+event_time: "3:00 PM EDT"
 event_ogimage: default_ogimage.png
 recording_ogimage: default_ogimage.png
 host: josborn
