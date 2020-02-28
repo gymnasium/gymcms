@@ -30,7 +30,6 @@ main figcaption {
   text-align: left;
 }
 
-
 /* remove border from linked images  */
 
 [role="main"] a.img-link:hover {
@@ -92,10 +91,6 @@ main figcaption {
 
 #main .container-fluid {
   padding-bottom: 0;
-}
-
-main.webinars {
-  background-color: transparent;
 }
 
 /* --- typography --- */
@@ -399,35 +394,15 @@ img {
   border: 0;
   }
 
-/* flexible structure / centering mechanism */
-
-.structure {
-  width: 92%;
-  max-width: 72em;
-  margin: 0 auto;
-  }
-
-/* brand / Gymnasium logo */
-
-#brand {
-  background: #222;
-  }
-
-.logo {
-  padding: 2.2em;
-  }
-
-.logo img {
-  max-width: 13.125em;
-  }
-
 /* main / article */
 
-main {
+main.content {
   display: block;
+  max-width: 72em;
   background: #fff;
   border-right: 1px solid #ccc;
   border-left: 1px solid #ccc;
+  margin: 0 auto;
   overflow: hidden;
   }
 
