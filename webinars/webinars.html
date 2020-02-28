@@ -21,7 +21,7 @@ layout: raw
 
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/webinars.css">
 
-<main class="webinars" id="main" role="main">
+<main id="main" role="main">
 
 <header class="webinars--about" id="about">
   <div class="container">
@@ -66,18 +66,20 @@ layout: raw
 
         <!-- item.event_ogimage: {{ item.event_ogimage }} -->
 
+<!--
         {%- for speaker in item.speaker -%}
         {%- if item.register and site.data.bios[speaker].headshot != null -%}
         <ul>
-        <li>
-          <figure>
-            <img src="{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
-            <figcaption>{{ site.data.bios[speaker].name }}</figcaption>
+          <li>
+            <figure>
+              <img src="{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
+              <figcaption>{{ site.data.bios[speaker].name }}</figcaption>
             </figure>
           </li>
         </ul>
         {%- endif -%}
         {%- endfor -%}
+ -->
 
         {%- if item.register -%}
         <p>Live streaming on <strong>{{ item.event_date | date: "%A, %B %-d, %Y at " }}{{ item.event_time }}</strong></p>
