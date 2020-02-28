@@ -19,6 +19,7 @@ main img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
+  border: 0;
 }
 
 main figure {
@@ -266,7 +267,6 @@ main figcaption {
   margin-top: 0;
 }
 
-
 /* --- grid layout --- */
 
 /* --- legacy columns (inline-block) w/ breakpoints --- */
@@ -372,27 +372,22 @@ main figcaption {
 
 }
 
+/* secondary button */
 
-/* links / general */
+#main .gym-button-secondary {
+  background-color: transparent;
+  border: 2px solid #a6a6a6;
+}
 
-a {
-  color: #f8971d;
-  text-decoration: none;
-  }
+#main .gym-button-secondary b {
+  color: #fff;
+}
 
-a:hover,
-a:focus {
-  text-decoration: underline;
-  }
-
-/* flexible images */
-
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  border: 0;
-  }
+#main .gym-button-secondary:hover,
+#main .gym-button-secondary:focus,
+#main .gym-button-secondary:active {
+  border: 2px solid #fff;
+}
 
 /* main / article */
 
