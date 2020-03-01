@@ -9,7 +9,7 @@ permalink: /debug/
 `{{ site.url }}{{ site.baseurl }}`
 
 
-`https://gymcms.xyz/css/hero-gym-014.css`
+`https://thegymcms.com/css/hero-gym-014.css`
 
 
 `{{ site.url }}{{ site.baseurl }}/css/hero-gym-014.css`
