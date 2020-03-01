@@ -1,0 +1,112 @@
+{%- if jekyll.environment == "development" -%}
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.min.js"></script>
+  {%- include take5/test-top.html -%}
+{%- endif -%}
+
+{% assign webinar = site.data.webinars[page.event_ID] %}
+<!--//
+event_title: {{ webinar.event_title | strip_html }}
+event_guests: {{ webinar.event_guests | strip_html }}
+page_title: {{ webinar.page_title | strip_html }}
+short_description: {{ webinar.short_description  | strip_html }}
+event_date: {{ webinar.event_date }}
+event_time: {{ webinar.event_time }}
+event_ogimage: {{ webinar.event_ogimage }}
+recording_ogimage: {{ webinar.recording_ogimage }}
+host: {{ webinar.host }}
+speaker[0]: {{ webinar.speaker[0] }}
+speaker[1]: {{ webinar.speaker[1] }}
+content_category: {{ webinar.content_category }}
+landing: {{ webinar.landing }}
+register: {{ webinar.register }}
+video: {{ webinar.video }}
+webinar_ID: {{ webinar.webinar_ID }}
+video_ID: {{ webinar.video_ID }}
+//-->
+
+{% if webinar.video %}
+{%- assign page_title = "Webinar Recording | The Gymnasium" -%}
+{%- elsif webinar.register -%}
+{%- assign page_title = "Webinar Registration | The Gymnasium" -%}
+{% endif %}
+<title>{{ page_title }}</title>
+
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/webinars.css">
+
+<body>
+
+<div class="container">
+<main class="content">
+
+<article>
+
+<header class="main-header event-header">
+    <h1>Webinar</h1>
+    {% if webinar.video %}
+    <h2>Recording</h2>
+    {% else %}
+    <h2>Registration</h2>
+    {% endif %}
+</header>
+
+<header class="event-banner-hero event-theme-{{ webinar.content_category }}">
+  <h1>{{ webinar.event_title }}</h1>
+  <h2>{{ webinar.event_guests }}</h2>
+
+  {% if webinar.video %}
+  <h3 class="datetime">{{ webinar.event_date | date: "%B %-d, %Y"}}</h3>
+    {% else %}
+    <h3 class="datetime">{{ webinar.event_date | date: "%A, %B %-d, %Y at " }}{{ webinar.event_time }}</h3>
+    {% endif %}
+</header>
+
+<p class="call-out">{{ webinar.short_description }}</p>
+
+{% if webinar.register %}
+{% include webinar-registration-form.html %}
+
+    {% else  %}
+        {% if webinar.video and webinar.video_ID %}
+        <p><strong>This webinar recording is now available.</strong>
+        {% include event-video.html %}
+        {% endif %}
+{% endif %}
+
+
+{% if webinar.notist_deck %}
+{% include event_slides.html %}
+{% endif %}
+
+
+{{ content }}
+</article>
+
+<!-- sidebar -->
+
+<aside>
+
+
+<header>
+  <h1>Guest Speakers</h1>
+</header>
+    {% for speaker in webinar.speaker %}
+    {%- include webinar-bio.html bio=speaker -%}
+    {% endfor %}
+
+    <header>
+      <h1>Host</h1>
+    </header>
+{% for host in webinar.host %}
+{%- include webinar-bio.html bio=host -%}
+{% endfor %}
+</aside>
+
+</main>
+</div>
+
+<script src="{{ site.baseurl }}{{ site.baseurl }}/js/functions.js" async></script>
+
+{%- if jekyll.environment == "development" -%}
+  {%- include take5/test-bottom.html -%}
+{%- endif -%}
