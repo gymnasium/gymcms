@@ -5,7 +5,7 @@ date: 2020-02-03T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5026/
 poster_art: /img/take5/posters/gym-5026.jpg
-live: false
+live: true
 instructor: "Mike Bifulco"
 topic: "Web Design & Development"
 video_ID: ukPI1zlxKqg
