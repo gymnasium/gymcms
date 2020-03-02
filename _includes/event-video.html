@@ -1,0 +1,7 @@
+{% if webinar.video_ID %}
+<div class="event-video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ webinar.video_ID }}" frameborder="0" allowfullscreen></iframe>
+</div>
+{% else %}
+<h2>No video ID provided</h2>
+{% endif %}

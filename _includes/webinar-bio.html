@@ -1,0 +1,19 @@
+{%- assign bio = site.data.bios.[include.bio] -%}
+{%- if bio.description == null -%}
+    {%- assign description = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor aliquid impedit inventore non sed exercitationem architecto, reiciendis provident consequatur fugit laudantium autem veritatis corrupti sint rem sunt." -%}
+{%- else -%}
+    {%- assign description = bio.description -%}
+{%- endif -%}
+
+{%- if bio.headshot == null -%}
+    {%- assign headshot = "bio-placeholder.jpg" -%}
+{%- else -%}
+    {%- assign headshot = bio.headshot -%}
+{%- endif -%}
+<section class="event-bio">
+    <img alt="{{ bio.name }}" src="{{ site.url }}{{ site.baseurl }}/img/webinar-bio-headshots/{{ headshot }}">
+    <h2>{{ bio.name }}</h2>
+    <p>
+        {{ description }}
+    </p>
+  </section>
