@@ -32,93 +32,89 @@ layout: raw
 
 <div class="container">
   <div class="cols">
-  <ul>
+    <ul>
 
-  {%- for webinar in webinars_descending_date -%}
-    {%- assign item = site.data.webinars[webinar] -%}
+    {%- for webinar in webinars_descending_date -%}
+      {%- assign item = site.data.webinars[webinar] -%}
 
-    {%- assign complete_webinar_title = item.event_title | strip_html -%}
-    {%- assign decolonized_webinar_title = complete_webinar_title | split: ":"  -%}
-    {%- assign webinar_title = decolonized_webinar_title[0] -%}
-    {%- assign webinar_subtitle = decolonized_webinar_title[1] -%}
-    {%- assign speaker_1 = item.speaker[0]  -%}
-    {%- assign speaker_2 = item.speaker[1]  -%}
-
-
-    {% case jekyll.environment %}
-      {% when "development" %}
-        {%- assign webinar_url = item.permalink | prepend: '/' | prepend: site.url  -%}
-      {% when "staging" %}
-        {%- assign webinar_url = item.permalink | remove_first: 'static'| prepend: 'https://courses.gymna.si' -%}
-      {% when "production" %}
-        {%- assign webinar_url = item.permalink | remove_first: 'static'| prepend: 'https://thegymnasium.com' -%}
-    {% endcase %}
+      {%- assign complete_webinar_title = item.event_title | strip_html -%}
+      {%- assign decolonized_webinar_title = complete_webinar_title | split: ":"  -%}
+      {%- assign webinar_title = decolonized_webinar_title[0] -%}
+      {%- assign webinar_subtitle = decolonized_webinar_title[1] -%}
+      {%- assign speaker_1 = item.speaker[0]  -%}
+      {%- assign speaker_2 = item.speaker[1]  -%}
 
 
-    {% if item.register %}
-    <li class="webinar" id="featured-webinar">
-    {% else %}
-    <li class="webinar">
-    {% endif %}
+      {% case jekyll.environment %}
+        {% when "development" %}
+          {%- assign webinar_url = item.permalink | prepend: '/' | prepend: site.url  -%}
+        {% when "staging" %}
+          {%- assign webinar_url = item.permalink | remove_first: 'static'| prepend: 'https://courses.gymna.si' -%}
+        {% when "production" %}
+          {%- assign webinar_url = item.permalink | remove_first: 'static'| prepend: 'https://thegymnasium.com' -%}
+      {% endcase %}
+
+
+      {% if item.register %}
+      <li class="webinar" id="featured-webinar">
+      {% else %}
+      <li class="webinar">
+      {% endif %}
         <div class="webinar--card {{ item.content_category }}">
-        <div class="webinar--main">
-        <header>
-          <p class="all-caps topic"><b>{{ item.content_category }}</b></p>
-          <h2 class="title">{{ webinar_title }}{% if webinar_subtitle %}<span class="subhead"><span class="visuallyhidden">:</span> {{ webinar_subtitle }}</span>{%- endif -%}</h2>
-        </header>
+          <div class="webinar--main">
+            <header>
+              <p class="all-caps topic"><b>{{ item.content_category }}</b></p>
+              <h2 class="title">{{ webinar_title }}{% if webinar_subtitle %}<span class="subhead"><span class="visuallyhidden">:</span> {{ webinar_subtitle }}</span>{%- endif -%}</h2>
+              {%- if item.register -%}
+              <p class="short-description">{{ item.short_description }}</p>
+              <p class="datetime">Live streaming on <strong>{{ item.event_date | date: "%A, %B %-d, %Y at " }}{{ item.event_time }}</strong></p>
+              {%- endif -%}
+            </header>
+            <div class="webinar--info">
+            {%- comment -%}
+              {%- if jekyll.environment == "development" -%}
+                <pre>({{ complete_webinar_title }})</pre>
+              {%- endif -%}
+            {%- endcomment -%}
 
-      {%- comment -%}         
-        {%- if jekyll.environment == "development" -%}
-          <pre>({{ complete_webinar_title }})</pre>
-        {%- endif -%}
-      {%- endcomment -%}
+              {%- if item.register -%}
+              <p>With guest speakers:</p>
+              <ul id="guest-speaker-headshots">
+              {%- for speaker in item.speaker -%}
+              {%- if item.register and site.data.bios[speaker].headshot != null -%}
+                <li>
+                  <figure>
+                    <img src="{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
+                    <figcaption>{{ site.data.bios[speaker].name }}</figcaption>
+                  </figure>
+                </li>
+              {%- endif -%}
+              {%- endfor -%}
+              </ul>
+              {% else %}
+              <p class="guest-speakers">With <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
+              {%- endif -%}
 
-        <p class="guest-speakers">With <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
-
-        <!-- item.event_ogimage: {{ item.event_ogimage }} -->
-
-{%- comment -%} 
-        {%- for speaker in item.speaker -%}
-        {%- if item.register and site.data.bios[speaker].headshot != null -%}
-        <ul>
-          <li>
-            <figure>
-              <img src="{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
-              <figcaption>{{ site.data.bios[speaker].name }}</figcaption>
-            </figure>
-          </li>
-        </ul>
-        {%- endif -%}
-        {%- endfor -%}
-{%- endcomment -%}
-
-        {%- if item.register -%}
-        <p>Live streaming on <strong>{{ item.event_date | date: "%A, %B %-d, %Y at " }}{{ item.event_time }}</strong></p>
-        {%- endif -%}
-
-        {%- if item.register -%}
-        <p>{{ item.short_description }}</p>
-        {%- endif -%}
-
+            <!-- item.event_ogimage: {{ item.event_ogimage }} -->
+            </div>
+          </div>
+          <div class="webinar--cta">
+            {%- if item.register -%}
+            <a class="gym-button" href="{{ webinar_url }}">
+              <b>Register to Attend</b>
+            </a>
+            {% else %}
+            <a class="gym-button gym-button-secondary" href="{{ webinar_url }}">
+              <b>Watch Recording</b>
+            </a>
+            {%- endif -%}
+          </div>
         </div>
-        <div class="webinar--cta">
-          {%- if item.register -%}
-          <a class="gym-button" href="{{ webinar_url }}">
-            <b>Register to Attend</b>
-          </a>
-          {% else %}
-          <a class="gym-button gym-button-secondary" href="{{ webinar_url }}">
-            <b>Watch Recording</b>
-          </a>
-          {%- endif -%}
-        </div>
-      </div>
-  </li>
+      </li>
+    {%- endfor -%}
 
-  {%- endfor -%}
-
-  </ul>
-</div>
+    </ul>
+  </div>
 </div>
 
 </main>
