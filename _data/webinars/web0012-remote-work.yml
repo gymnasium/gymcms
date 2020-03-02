@@ -6,8 +6,8 @@ short_description: "Join us for an hour-long webinar about the benefits and chal
 permalink: static/webinars/remote-work
 event_date: 2020-03-17
 event_time: "3:00 PM EDT"
-event_ogimage: default_ogimage.png
-recording_ogimage: default_ogimage.png
+event_ogimage: remote-work-event-og.png
+recording_ogimage: remote-work-recording-og.png
 host: josborn
 speaker: 
   - rbanfield
