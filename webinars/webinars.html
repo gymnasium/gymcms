@@ -74,7 +74,7 @@ layout: raw
             {%- comment -%}
               {%- if jekyll.environment == "development" -%}
                 <pre>({{ complete_webinar_title }})</pre>
-                <img src="{{ site.baseurl }}/img/social/webinars/{{ webinar.event_ogimage }}">
+                <img src="{{ site.url }}{{ site.baseurl }}/img/social/webinars/{{ webinar.event_ogimage }}">
               {%- endif -%}
             {%- endcomment -%}
 
@@ -85,7 +85,7 @@ layout: raw
               {%- if item.register and site.data.bios[speaker].headshot != null -%}
                 <li>
                   <figure>
-                    <img src="{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
+                    <img src="{{ site.url }}{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
                     <figcaption>{{ site.data.bios[speaker].name }}</figcaption>
                   </figure>
                 </li>
