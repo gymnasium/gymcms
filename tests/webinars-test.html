@@ -1,0 +1,64 @@
+---
+layout: raw
+permalink: /tests/webinars/
+---
+<!-- Styles for the webinars testing table -->
+<style>
+    a, a:active, a:link, a:visited { 
+        color: black;
+    }
+    
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+    
+    td.error {
+        font-weight: bold;
+        background-color:red;
+        color: white; 
+    }
+    
+    td.warn {
+        background-color: yellow;
+    }
+    
+    td.success {
+        background-color: limegreen;
+    }
+    </style>
+<pre>
+Webinar Count: {{ site.data.webinars | size }} 
+</pre>
+
+{%- assign gym_staging_url = "https://courses.gymna.si" -%}
+{%- assign gym_production_url = "https://thegymnasium.com" -%}
+
+{%- assign webinars_ascending_date = "" | split: ", " -%}
+{%- assign webinars_descending_date = "" | split: ", " -%}
+
+{%- assign sorted_webinars = site.data.webinars | sort: event_date -%}
+
+{% for webinar_list in sorted_webinars %}
+{% assign webinar = webinar_list[1] %}
+{%- assign webinars_ascending_date = webinars_ascending_date | push: webinar.event_ID -%}
+{% endfor %}
+
+{%- assign webinars_descending_date = webinars_ascending_date | reverse -%}
+
+<h2>Webinar URLs</h2>
+
+<table>
+{%- for webinar in webinars_descending_date -%}
+    {%- assign item = site.data.webinars[webinar] -%}
+    {%- assign gym_path = item.permalink | remove: "static/"-%}
+    <tr>
+        <td><strong>{{ item.event_title | strip_html }}</strong></td>
+        <td><a href="{{ site.url }}{{ site.baseurl }}/{{ item.permalink }}" target="_blank">{{ site.url }}{{ site.baseurl }}/{{ item.permalink }}</a></td>
+        <td><a href="{{ gym_staging_url }}/{{ gym_path }}" target="_blank">{{ gym_staging_url }}/{{ gym_path }}</a></td>
+        <td><a href="{{ gym_production_url }}/{{ gym_path }}" target="_blank">{{ gym_production_url }}/{{ gym_path }}</a></td>
+    </tr>
+
+{%- endfor -%}
+</table>
