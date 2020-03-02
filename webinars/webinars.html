@@ -74,6 +74,7 @@ layout: raw
             {%- comment -%}
               {%- if jekyll.environment == "development" -%}
                 <pre>({{ complete_webinar_title }})</pre>
+                <img src="{{ site.baseurl }}/img/social/webinars/{{ webinar.event_ogimage }}">
               {%- endif -%}
             {%- endcomment -%}
 
@@ -94,8 +95,6 @@ layout: raw
               {% else %}
               <p class="guest-speakers">With <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
               {%- endif -%}
-
-            <!-- item.event_ogimage: {{ item.event_ogimage }} -->
             </div>
           </div>
           <div class="webinar--cta">
