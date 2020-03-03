@@ -1,5 +1,5 @@
 ---
-event_ID: web0005-state-of-responsive-web-design
+event_ID: web0005-state-of-responsive-design
 permalink: /static/webinars/state-of-responsive-web-design/
 layout: webinar
 ---
