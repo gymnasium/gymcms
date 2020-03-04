@@ -5,10 +5,17 @@
     {%- assign event = site.data.webinars[page.event_ID] -%}
     {%- assign short_description = event.short_description | strip_html -%}
 
-    {%- assign path = event.event_ID -%}
-    {%- assign path =  path | slice: 8,path.size   -%}
-    {%- assign og_url = path | prepend: "https://thegymnasium.com/webinars/" -%}
-    {%- assign og_title = event.event_title -%}
+    {%- if event.event_ID == "web0005-state-of-responsive-web-design" -%}
+        {%- assign og_url = "https://thegymnasium.com/webinars/state-of-responsive-web-design" -%}
+        {%- assign og_title = event.event_title -%}
+    
+    {%- else -%}
+
+        {%- assign path = event.event_ID -%}
+        {%- assign path =  path | slice: 8,path.size   -%}
+        {%- assign og_url = path | prepend: "https://thegymnasium.com/webinars/" -%}
+        {%- assign og_title = event.event_title -%}
+    {%- endif -%}
 
     {%- if event.register == true -%}    
         {%- assign page_title = "Webinar Registration | The Gymnasium" -%}
