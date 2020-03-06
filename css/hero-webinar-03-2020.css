@@ -64,7 +64,7 @@
 
 .webinar-03-2020 header h2,
 .webinar-03-2020 header h3 {
-  font: 900 1.6em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 900 1.6em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
   color: #222;
   letter-spacing: .05em;
   margin-bottom: .8em;
@@ -76,7 +76,7 @@
 
 .webinar-03-2020 header p {
   width: 95%;
-  font: normal 1.15em/1.35 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 1.15em/1.35 "Helvetica Neue", Helvetica, sans-serif;
   color: #222;
   margin-top: 1.4em;
   margin-bottom: 1.4em;
@@ -89,7 +89,6 @@
 .webinar-03-2020 .guest-speakers {
   display: none;
 }
-
 
 @media (min-width: 64em) {
 
@@ -147,6 +146,7 @@
   }
 
 }
+
 .webinar-03-2020 .cta {
   margin-top: 1.6em;
 }
