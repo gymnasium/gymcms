@@ -165,3 +165,39 @@ a.gym-button-secondary:active {
   color: #fff !important;
   border: 2px solid #fff !important;
 }
+
+.outer::after {
+  content: "Make";
+  position: absolute;
+  left: 0;
+  transform: rotate(-8deg);
+  width: 5.5ch;
+  color: red;
+  margin-top: 0.25ch;
+  margin-left: -1.5ch;
+  background: rgba(255,255,255,0.6);
+  border: 5px solid red;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0 0.1ch;
+}
+
+.inner {
+  /* text-decoration: line-through;
+  text-decoration-color: red; */
+  opacity: 0.6;
+}
+
+#qmark {
+}
+
+#qmark::after {
+  content: "!";
+  position: relative;
+  margin-left: -0.6ch;
+  left: 0;
+  color: red;
+  font-size: 1.25em;
+  transform: rotate(-4deg);
+  opacity: 1;
+}
