@@ -166,8 +166,6 @@ a.gym-button-secondary:active {
   border: 2px solid #fff !important;
 }
 
-
-
 .outer::after {
   content: "Make";
   position: absolute;
