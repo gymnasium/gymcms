@@ -5,12 +5,12 @@ date: 2020-03-17T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5031/
 poster_art: /img/take5/posters/gym-5031.jpg
-live: true
+live: false
 instructor: "Jeremy Osborn"
 topic: "Web Design & Development"
 video_ID: 0X4uxoKMwew
 video_duration: "4:59"
-featured: true
+featured: false
 short_description: "Learn how to make an interactive column chart using Google Charts in this tutorial by Jeremy Osborn, Academic Director at Aquent Gymnasium."
 project_file_source: CodePen
 project_files:
