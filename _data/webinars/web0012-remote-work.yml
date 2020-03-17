@@ -9,13 +9,13 @@ event_time: "3:00 PM EDT"
 event_ogimage: remote-work-event-og.png
 recording_ogimage: remote-work-recording-og.png
 host: josborn
-speaker: 
+speaker:
   - rbanfield
   - dbuckner
 content_category: skills
 landing: true
-register: true
-video:
+register: false
+video: true
 webinar_ID: 7396426119882358539
 webinar_question_key: 131513996
 video_ID:
