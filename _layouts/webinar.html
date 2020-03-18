@@ -67,6 +67,11 @@ video_ID: {{ webinar.video_ID }}
 {% include webinar-registration-form.html %}
 
     {% else %}
+        {% if webinar.video %}
+        <p class="call-out"><strong>This webinar recording will be available shortly.</strong>
+        {% endif %}
+
+    {% else %}
         {% if webinar.video and webinar.video_ID %}
         <p><strong>This webinar recording is now available.</strong>
         {% include event-video.html %}
