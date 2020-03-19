@@ -33,9 +33,9 @@
 
   .hero-promo .container {
     position: relative;
-    left: 10%;
-    max-width: 43.5em;
+    left: 17%;
     box-sizing: content-box;
+    max-width: 37em;
     min-height: 25.125em;
   }
 
@@ -50,7 +50,6 @@
     background-repeat: no-repeat;
     background-position: left center;
     background-size: cover;
-    border-right: 2px solid #ccc;
     border-image-slice: 1;
     border-image-width: 0 0 0 999em;
     border-image-repeat: stretch;
