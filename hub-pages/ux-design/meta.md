@@ -5,5 +5,5 @@ og_description: "Explore our free collection of UX courses, tutorials, webinars,
 og_title: "UX Design Collection"
 og_url: https://thegymnasium.com/ux-design
 page_title: "UX Design | Gymnasium"
-og_art: /img/hub-pages/og/ux-design-collection-og.png
+og_art: img/hub-pages/og/ux-design-collection-og.png
 ---

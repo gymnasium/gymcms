@@ -36,13 +36,25 @@
     {%- assign course = site.data.take5s[page.course_ID] -%}
     {%- assign og_description = course.short_description -%}
     {%- assign og_url = course.title | slugify | prepend: "https://thegymnasium.com/take5/" -%}
-    {%- assign page_title content="Take 5 | Gymnasium" -%}
+    {%- assign page_title = "Take 5 | Gymnasium" -%}
     {%- assign og_art = course.course_ID | downcase | append: "-og.png" | prepend: "/img/take5/og/" -%}
     {%- assign og_alt = course.title | prepend: "Video poster for tutorial titled " -%}
 
+{%- elsif page.permalink contains "hub-pages" -%}
+    {%- comment -%}
+    Set up meta tags for a collection or hub page meta include
+    {%- endcomment -%}
+    {%- assign short_description = page.og_description -%}
+    {%- assign og_url = page.og_url -%}
+    {%- assign page_title = page.page_title -%}
+    {%- assign og_art = page.og_art -%}
+    {%- assign og_alt = page.og_title -%}
+    {%- assign og_title = page.og_title -%}
+
+
 {%- endif -%}
     
-<meta name="description" content="{{ short_description }}">
+<meta name="description" content="{{ short_description | strip_html }}">
 <meta name="author" content="Aquent Gymnasium">
 <meta property="og:url" content="{{ og_url }}">
 <meta property="og:type" content="website">
