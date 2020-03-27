@@ -5,5 +5,5 @@ og_description: "Explore our free collection of UX courses, tutorials, webinars,
 og_title: "Web Development Collection"
 og_url: https://thegymnasium.com/web-development
 page_title: "Web Development | Gymnasium"
-og_art: /img/hub-pages/og/web-development-collection-og.png
+og_art: img/hub-pages/og/web-development-collection-og.png
 ---

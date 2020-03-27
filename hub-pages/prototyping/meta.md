@@ -5,5 +5,5 @@ og_description: "Explore our free collection of UX courses, tutorials, webinars,
 og_title: "Prototyping Collection"
 og_url: https://thegymnasium.com/prototyping
 page_title: "Prototyping | Gymnasium"
-og_art: /img/hub-pages/og/prototyping-collection-og.png
+og_art: img/hub-pages/og/prototyping-collection-og.png
 ---
