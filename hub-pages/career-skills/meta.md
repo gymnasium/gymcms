@@ -1,7 +1,7 @@
 ---
 layout: meta
 permalink: /static/hub-pages/meta/career-skills-collection-meta/
-og_description: "Explore our free collection of UX courses, tutorials, webinars, articles, and jobs."
+og_description: "Explore our free collection of career skill courses, tutorials, webinars, articles, and jobs."
 og_title: "Career Skills Collection"
 og_url: https://thegymnasium.com/career-skills
 page_title: "Career Skills | Gymnasium"
