@@ -1,0 +1,46 @@
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  document.getElementById('hero-swap').setAttribute('disabled', true);
+
+	window.onload = heroSwap;
+
+	var heroStyle = [
+		'hero-dfg-2020-heart.css',
+		'hero-dfg-2020-people.css'
+	];
+
+	function heroSwap() {
+		var randomNum = Math.floor(Math.random() * heroStyle.length);
+		document.getElementById('hero-swap').href = "{{ site.url }}{{ site.baseurl }}/css/hero-dfg-2020/" + heroStyle[randomNum];
+		document.getElementById('hero-swap').removeAttribute('disabled');
+	}
+
+}, false);
+
+</script>
+
+<link rel="preload" media="(min-width: 76em), (min-width: 76em) and (min-resolution: 200dpi), (min-width: 76em) and (min-resolution: 1.25dppx)" href="{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2020/designing-for-good-2020-hero-heart-2000w.jpg" as="image">
+<link rel="preload" media="(min-width: 76em), (min-width: 76em) and (min-resolution: 200dpi), (min-width: 76em) and (min-resolution: 1.25dppx)" href="{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2020/designing-for-good-2020-hero-people-2000w.jpg" as="image">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:700&display=swap">
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/hero-dfg-2020/hero-dfg-2020.css">
+<link id="hero-swap" rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/hero-dfg-2020/hero-dfg-2020-heart.css">
+
+<div class="hero-promo" id="hero-dfg-2020">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="content">
+          <header>
+            <h1>Designing <span class="no-wrap">for Good</span> <span class="date">2020</span></h1>
+            <p><strong>Enter the Designing for Good grant competition</strong> <span class="no-wrap">and use</span> your creative skills to help a nonprofit win $10K.</p>
+            <div class="cta">
+              <a class="gym-button gym-button-secondary" href="https://designingforgood.com/?utm_source=gymnasium&utm_medium=web&utm_campaign=AQ_NA_design-grants&utm_content=banner" target="_blank" rel="noopener"><b>Learn More</b></a>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

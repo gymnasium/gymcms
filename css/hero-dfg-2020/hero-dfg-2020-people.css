@@ -1,0 +1,34 @@
+---
+---
+
+#hero-dfg-2020 {
+  background-color: #1b1815;
+  background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2020/designing-for-good-2020-hero-people-720w.jpg");
+  background-position: left bottom;
+}
+
+.hero-promo header h1::after {
+  background-color: #4c3327;
+  background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2020/designing-for-good-2020-hero-people-720w.jpg");
+}
+
+@media (min-width: 48em) {
+
+  #hero-dfg-2020 {
+    background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2020/designing-for-good-2020-hero-people-1440w.jpg");
+  }
+
+}
+
+@media
+(min-width: 76em),
+(min-width: 76em) and
+(min-resolution: 200dpi),
+(min-width: 76em) and
+(min-resolution: 1.25dppx) {
+
+  #hero-dfg-2020 {
+    background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2020/designing-for-good-2020-hero-people-2000w.jpg");
+  }
+
+}
