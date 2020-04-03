@@ -1,0 +1,132 @@
+---
+---
+
+#hero-dfg-2020 {
+  background-color: #474a5e;
+  background-image: linear-gradient(150deg, #825a43, #474a5e);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: padding-top .25s ease-in-out, padding-bottom .25s ease-in-out;
+}
+
+.hero-promo .content {
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+}
+
+.hero-promo header {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, .85);
+  transition: background-color .5s ease-in-out;
+  padding: 2.4em;
+  margin-top: 0;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-promo header h1 {
+  font-family: Poppins, "Arial Black", Gadget, sans-serif;
+  font-weight: bold;
+  font-size: 3.428571428571429em;
+  line-height: 1.1;
+  color: #333;
+  letter-spacing: 0;
+  word-spacing: -.015em;
+  margin-top: -.125em;
+  margin-bottom: -.125em;
+}
+
+.hero-promo header h1::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background-color: #474a5e;
+  background-image: linear-gradient(150deg, #825a43, #474a5e);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  transition: padding-bottom .25s ease-in-out;
+}
+
+.hero-promo .content .date {
+  display: inline-block;
+  color: #ff5f14;
+}
+
+.hero-promo p {
+  font-size: 1.142857142857143em;
+  line-height: 1.45;
+  color: #333;
+  margin-top: .525em;
+}
+
+.hero-promo .cta {
+  margin-top: 2em;
+}
+
+@media (min-width: 36em) {
+
+  #hero-dfg-2020 {
+    padding-top: 1.75em;
+    padding-bottom: 1.75em;
+  }
+
+  .hero-promo header {
+    max-width: 40em;
+  }
+
+}
+
+@media (min-width: 48em) {
+
+  #hero-dfg-2020 {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .hero-promo header {
+    float: left;
+    width: 34em;
+  }
+
+  .hero-promo .content .date {
+    display: inherit;
+  }
+
+  .hero-promo header h1::after {
+    padding-bottom: 0;
+    background: transparent none;
+  }
+
+}
+
+.hero-promo a.gym-button-secondary {
+  width: auto !important;
+  background-color: #009cde;
+  padding-left: 2.2em;
+  padding-right: 2.2em;
+  vertical-align: bottom;
+}
+
+.hero-promo a.gym-button-secondary b {
+  color: #fff !important;
+}
+
+.hero-promo .no-wrap {
+  white-space: nowrap;
+}
+
