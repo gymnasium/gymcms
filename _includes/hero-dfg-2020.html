@@ -1,31 +1,25 @@
-<script>
-
-document.addEventListener('DOMContentLoaded', function() {
-
-  document.getElementById('hero-swap').setAttribute('disabled', true);
-
-	window.onload = heroSwap;
-
-	var heroStyle = [
-		'hero-dfg-2020-heart.css',
-		'hero-dfg-2020-people.css'
-	];
-
-	function heroSwap() {
-		var randomNum = Math.floor(Math.random() * heroStyle.length);
-		document.getElementById('hero-swap').href = "{{ site.url }}{{ site.baseurl }}/css/hero-dfg-2020/" + heroStyle[randomNum];
-		document.getElementById('hero-swap').removeAttribute('disabled');
-	}
-
-}, false);
-
-</script>
-
-<link rel="preload" media="(min-width: 76em), (min-width: 76em) and (min-resolution: 200dpi), (min-width: 76em) and (min-resolution: 1.25dppx)" href="{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2020/designing-for-good-2020-hero-heart-2000w.jpg" as="image">
-<link rel="preload" media="(min-width: 76em), (min-width: 76em) and (min-resolution: 200dpi), (min-width: 76em) and (min-resolution: 1.25dppx)" href="{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2020/designing-for-good-2020-hero-people-2000w.jpg" as="image">
+<link rel="preload" href="{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2020/designing-for-good-2020-hero-heart-2000w.jpg" as="image" media="(min-width: 76em)">
+<link rel="preload" href="{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2020/designing-for-good-2020-hero-people-2000w.jpg" as="image" media="(min-width: 76em)">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:700&display=swap">
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/hero-dfg-2020/hero-dfg-2020.css">
-<link id="hero-swap" rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/hero-dfg-2020/hero-dfg-2020-heart.css">
+<link id="hero-swap" rel="preload" href="{{ site.url }}{{ site.baseurl }}/css/hero-dfg-2020/hero-dfg-2020-heart.css" as="style">
+
+<script async>
+var heroSwap = document.getElementById("hero-swap");
+var heroStyle = [
+  "hero-dfg-2020-heart.css",
+  "hero-dfg-2020-people.css"
+];
+var randomNum = [(Math.random() * heroStyle.length) | 0];
+window.addEventListener("DOMContentLoaded", function() {
+heroSwap.href = "{{ site.url }}{{ site.baseurl }}/css/hero-dfg-2020/" + heroStyle[randomNum];
+heroSwap.setAttribute("rel", "stylesheet");
+});
+</script>
+
+<noscript>
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/hero-dfg-2020/hero-dfg-2020-heart.css">
+</noscript>
 
 <div class="hero-promo" id="hero-dfg-2020">
   <div class="container">
