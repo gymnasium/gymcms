@@ -88,7 +88,6 @@ main figcaption {
   background-color: #d73158;
 }
 
-
 /* --- web development lang palette --- */
 
 .bg-web-development-lang,
@@ -272,6 +271,10 @@ main h3 {
 
 .section-content section header {
   margin-top: .6em;
+}
+
+.section-content p {
+  max-width: 96ch;
 }
 
 /* --- card layout --- */
@@ -517,6 +520,12 @@ footer.card-cta {
   padding-bottom: 1.2em;
 }
 
+.resources .subsection header {
+  margin-top: 1.6em;
+  margin-bottom: 1.2em;
+}
+
+
 @media (min-width: 40em) {
 
   .cols {
@@ -564,7 +573,6 @@ footer.card-cta {
 
   .cols ul {
     display: grid;
-    grid-auto-rows: 1fr;
     grid-template-columns: auto;
     grid-gap: 1.2em;
   }
