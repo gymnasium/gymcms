@@ -1,6 +1,6 @@
 ---
 layout: meta
-permalink: /static/hub-pages/meta/remote-work-meta/
+permalink: /static/hub-pages/meta/remote-work-resources-meta/
 og_description: "Explore our free collection of remote work resources."
 og_title: "Remote Work Resources"
 og_url: https://thegymnasium.com/remote-work
