@@ -132,7 +132,7 @@ main figcaption {
   display: inline-block;
   content: "↑";
   font-family: monospace, monospace;
-  vertical-align: baseline;
+  vertical-align: top;
   margin-right: .25em;
 }
 
@@ -275,6 +275,11 @@ main h3 {
 
 .section-content p {
   max-width: 96ch;
+}
+
+.section-content ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* --- card layout --- */
