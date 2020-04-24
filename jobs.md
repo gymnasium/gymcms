@@ -47,6 +47,7 @@ See how your salary stacks up to the competition.
 
 ### Lifelong Learning
 
+- [Remote Work: Can It Work for You?](https://thegymnasium.com/webinars/remote-work)
 - [Adaptability As the Key to Success in Design](https://medium.com/gymnasium/adaptability-as-the-key-to-success-in-design-ea64c1ed4044){: target="_blank" rel="noopener"}
 - [4 Reasons Web Designers Should Learn to Code](https://medium.com/gymnasium/4-reasons-web-designers-should-learn-to-code-2d1770d7866d){: target="_blank" rel="noopener"}
 - [7 Skills Creatives Need That Aren’t About Being Creative](https://vitamintalent.com/blog/7-skills-creatives-need-that-aren-t-about-being-creative){: target="_blank" rel="noopener"}
