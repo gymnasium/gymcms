@@ -282,6 +282,10 @@ main h3 {
   margin-bottom: 0;
 }
 
+.section-content li p {
+  margin-top: .6em;
+}
+
 /* --- card layout --- */
 
 .card-main {
