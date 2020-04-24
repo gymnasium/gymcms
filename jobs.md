@@ -13,7 +13,6 @@ Welcome to our free collection of career resources where you can find articles, 
 - [Should You Include a Cover Letter with Your R&eacute;sum&eacute;?](https://vitamintalent.com/blog/should-you-include-a-cover-letter-with-your-resume){: target="_blank" rel="noopener"}
 - [The Horrible Truth About R&eacute;sum&eacute;s (And How To Fix It)](https://vitamintalent.com/blog/the-horrible-truth-about-r-sum-s-and-how-to-fix-it){: target="_blank" rel="noopener"}
 - [Top R&eacute;sum&eacute; Tips for Freelancers](https://vitamintalent.com/blog/top-resume-tips-for-freelancers){: target="_blank" rel="noopener"}
-
 - [5 Tips for Making Your R&eacute;sum&eacute; More Engaging](https://vitamintalent.com/blog/five-tips-for-making-your-resume-more-engaging#){: target="_blank" rel="noopener"}
 
 ---
