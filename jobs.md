@@ -6,16 +6,22 @@ permalink: /static/jobs/
 
 Welcome to our free collection of career resources where you can find articles, tutorials, and more. Whether you’re a student creating a portfolio or a client building a team, we’ve got you covered.
 
-### R&eacute;sum&eacute; and Portfolio Tips
+### R&eacute;sum&eacute; Tips
 
 - [5 Things You Need To Take Off Your R&eacute;sum&eacute;, PRONTO!](https://vitamintalent.com/blog/5-things-you-need-to-take-off-your-resume-pronto){: target="_blank" rel="noopener"}
 - [3 Creative Ways To Make Your R&eacute;sum&eacute; Stand Out](https://vitamintalent.com/blog/3-creative-ways-to-make-your-r-sum-stand-out){: target="_blank" rel="noopener"}
 - [Should You Include a Cover Letter with Your R&eacute;sum&eacute;?](https://vitamintalent.com/blog/should-you-include-a-cover-letter-with-your-resume){: target="_blank" rel="noopener"}
 - [The Horrible Truth About R&eacute;sum&eacute;s (And How To Fix It)](https://vitamintalent.com/blog/the-horrible-truth-about-r-sum-s-and-how-to-fix-it){: target="_blank" rel="noopener"}
-- [Top 10 Portfolio Tips for Freelance Designers](https://vitamintalent.com/blog/top-ten-portfolio-tips-for-freelance-designers){: target="_blank" rel="noopener"}
 - [Top R&eacute;sum&eacute; Tips for Freelancers](https://vitamintalent.com/blog/top-resume-tips-for-freelancers){: target="_blank" rel="noopener"}
-- [Top 5 Free Portfolio Sites](https://vitamintalent.com/blog/top-free-portfolio-sites){: target="_blank" rel="noopener"}
+
 - [5 Tips for Making Your R&eacute;sum&eacute; More Engaging](https://vitamintalent.com/blog/five-tips-for-making-your-resume-more-engaging#){: target="_blank" rel="noopener"}
+
+---
+
+### Portfolio Tips
+
+- [Top 10 Portfolio Tips for Freelance Designers](https://vitamintalent.com/blog/top-ten-portfolio-tips-for-freelance-designers){: target="_blank" rel="noopener"}
+- [Top 5 Free Portfolio Sites](https://vitamintalent.com/blog/top-free-portfolio-sites){: target="_blank" rel="noopener"}
 
 ---
 
