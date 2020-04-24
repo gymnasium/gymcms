@@ -40,7 +40,8 @@ Welcome to our free collection of career resources where you can find articles, 
 See how your salary stacks up to the competition.
 
 - [Check My Salary](https://vitamintalent.com/check-salary){: target="_blank" rel="noopener"}
-- [2020 Salary Guide](https://go.vitamintalent.com/salary-guide){: target="_blank" rel="noopener"}
+- [2020 US Salary Guide](https://go.vitamintalent.com/salary-guide){: target="_blank" rel="noopener"}
+- [2020 UK Salary Guide](https://go.aquent.com/UK-salary-guide){: target="_blank" rel="noopener"}
 
 ---
 
