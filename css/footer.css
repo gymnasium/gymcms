@@ -71,6 +71,7 @@
   list-style: none url();
   padding-left: 0;
   margin-top: 0.95em;
+  margin-left: 0;
 }
 
 #contentinfo li {
