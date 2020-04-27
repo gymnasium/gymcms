@@ -1,10 +1,10 @@
 :root {
   /** colors **/
   --gym-orange: #f8971d;
-  --gym-black: #222222;
-  --gym-white: #ffffff;
-  --gym-gray: #cccccc;
-  --gym-dark-gray: #444444;
+  --gym-black: #222;
+  --gym-white: #fff;
+  --gym-gray: #ccc;
+  --gym-dark-gray: #444;
   --gym-light-gray: #a6a6a6;
   --gym-light-page-background: #ebebeb;
 
