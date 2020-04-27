@@ -98,6 +98,30 @@
   border-bottom: 0;
 }
 
+#social li {
+  position: relative;
+}
+
+#social a[data-title] {
+  display: inline-block;
+}
+
+#social a[data-title]:hover {
+  padding-right: 6ch;
+}
+
+#social a[data-title]:hover::after,
+#social a[data-title]:focus::after,
+#social a[data-title]:active::after {
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  content: attr(data-title);
+  color: var(--gym-orange);
+  line-height: 1.8;
+}
+
 #contentinfo .open-edx-logo {
   width: 8.5em;
   height: auto;
