@@ -25,6 +25,7 @@
 #contentinfo h2 {
   font-family: var(--gym-font-stack);
   font-size: 1em;
+  line-height: 1.25;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -79,10 +80,11 @@
 }
 
 #contentinfo li {
+  line-height: 1.35;
   height: auto;
   padding-right: 0;
   border-right: 0;
-  margin-top: 0.4em;
+  margin-top: 0.6em;
 }
 
 #contentinfo li a {
