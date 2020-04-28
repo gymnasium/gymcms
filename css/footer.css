@@ -13,13 +13,6 @@
   --gym-font-stack-text: 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-/** disable font-smoothing */
-
-body {
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing: none;
-}
-
 #contentinfo {
   font-size: 16px;
   color: var(--gym-white);
