@@ -1,10 +1,10 @@
 :root {
   /** colors **/
   --gym-orange: #f8971d;
-  --gym-black: #222222;
-  --gym-white: #ffffff;
-  --gym-gray: #cccccc;
-  --gym-dark-gray: #444444;
+  --gym-black: #222;
+  --gym-white: #fff;
+  --gym-gray: #ccc;
+  --gym-dark-gray: #444;
   --gym-light-gray: #a6a6a6;
   --gym-light-page-background: #ebebeb;
 
@@ -14,7 +14,6 @@
 }
 
 #contentinfo {
-  min-height: 170px;
   font-size: 16px;
   color: var(--gym-white);
   background-color: var(--gym-black);
@@ -25,6 +24,7 @@
 #contentinfo h2 {
   font-family: var(--gym-font-stack);
   font-size: 1em;
+  line-height: 1.25;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -68,16 +68,22 @@
 }
 
 #contentinfo ul {
-  list-style: none url();
+  list-style-type: "";
   padding-left: 0;
   margin-top: 0.95em;
+  margin-left: 0;
+}
+
+#contentinfo ul ::marker {
+  color: transparent;
 }
 
 #contentinfo li {
+  line-height: 1.35;
   height: auto;
   padding-right: 0;
   border-right: 0;
-  margin-top: 0.4em;
+  margin-top: 0.6em;
 }
 
 #contentinfo li a {
@@ -89,6 +95,30 @@
 #contentinfo a:active {
   color: var(--gym-orange);
   border-bottom: 0;
+}
+
+#social li {
+  position: relative;
+}
+
+#social a[data-title] {
+  display: inline-block;
+}
+
+#social a[data-title]:hover {
+  padding-right: 6ch;
+}
+
+#social a[data-title]:hover::after,
+#social a[data-title]:focus::after,
+#social a[data-title]:active::after {
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 2em;
+  content: attr(data-title);
+  color: var(--gym-orange);
+  line-height: 1.8;
 }
 
 #contentinfo .open-edx-logo {
