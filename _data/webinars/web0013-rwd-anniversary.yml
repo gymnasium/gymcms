@@ -1,0 +1,19 @@
+event_ID: web0013-rwd-anniversary
+event_title: "Responsive Design <span class=\"nowrap\">Ten Years</span> <span class=\"nowrap\">Later</span>"
+event_guests: "with Ethan Marcotte"
+short_description: "Join us for this short description of the event!"
+permalink: static/webinars/rwd-anniversary
+event_date: 2020-05-26
+event_time: "2:00 PM EDT"
+event_ogimage: default_ogimage.png
+recording_ogimage: default_ogimage.png
+host: josborn
+speaker: emarcotte
+content_category: design
+landing: true
+register: false
+video: false
+webinar_ID: 
+webinar_question_key: 
+video_ID: 
+notist_deck: 
