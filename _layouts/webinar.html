@@ -88,9 +88,13 @@ video_ID: {{ webinar.video_ID }}
 
 <aside>
 
-
+{%- capture headcount -%}{{ webinar.speaker | size }}{%- endcapture -%}
 <header>
+  {%- if headcount == "1"  -%}
+  <h1>Guest Speaker</h1>
+  {%- else -%}
   <h1>Guest Speakers</h1>
+  {%- endif -%}
 </header>
     {% for speaker in webinar.speaker %}
     {%- include webinar-bio.html bio=speaker -%}

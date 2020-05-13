@@ -8,7 +8,8 @@ event_time: "2:00 PM EDT"
 event_ogimage: default_ogimage.png
 recording_ogimage: default_ogimage.png
 host: josborn
-speaker: emarcotte
+speaker: 
+  - emarcotte
 content_category: design
 landing: true
 register: false
