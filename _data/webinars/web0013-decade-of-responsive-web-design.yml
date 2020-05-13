@@ -1,8 +1,8 @@
-event_ID: web0013-rwd-anniversary
+event_ID: web0013-decade-of-responsive-web-design
 event_title: "Responsive Design <span class=\"nowrap\">Ten Years</span> <span class=\"nowrap\">Later</span>"
 event_guests: "with Ethan Marcotte"
 short_description: "Join us for this short description of the event!"
-permalink: static/webinars/rwd-anniversary
+permalink: static/webinars/decade-of-responsive-web-design
 event_date: 2020-05-26
 event_time: "2:00 PM EDT"
 event_ogimage: default_ogimage.png
