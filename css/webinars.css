@@ -33,10 +33,9 @@ main figcaption {
 
 /* gym button */
 
-[role="main"] .gym-button {
-  width: auto !important; /* !override / shrink-wrap */
-  padding: 1.2em 2.2em !important; /* !override */
-  border-radius: 3px;
+#main .gym-button {
+  width: auto;
+  padding: 1.2em 2em;
 }
 
 /* gym text */
@@ -754,27 +753,10 @@ main h3 {
   line-height: 1.35;
 }
 
-button.gym-button {
-  font-size: 105%;
-  display: block;
-  width: 100%;
-  color: #fff;
-  background: #f8971d;
-  padding: 1.6em 2em;
-  border: 0;
-  border-radius: 2px;
-  cursor: pointer;
-}
+@media (max-width: 32em) {
 
-button.gym-button:hover,
-button.gym-button:focus {
-  background: #666;
-}
-
-@media (min-width: 32em) {
-
-  button.gym-button {
-    max-width: 30em;
+  #main .event-form button.gym-button {
+    width: 100%;
   }
 
 }
