@@ -129,6 +129,7 @@ main figcaption {
   text-transform: uppercase;
 }
 
+#main .nowrap,
 #main .no-wrap {
   font: inherit;
   color: inherit;
