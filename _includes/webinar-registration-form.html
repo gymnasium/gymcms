@@ -1,20 +1,21 @@
-<form class="event-form" id="event-form" action="https://attendee.gotowebinar.com/registration.tmpl" method="post" autocapitalize="off" autocomplete="nope">
+<form class="event-form" id="event-form" action="https://attendee.gotowebinar.com/registration.tmpl" method="post" autocapitalize="off">
+
     <fieldset>
-      <legend class="visuallyhidden">Webinar Registration</legend>
+      <legend class="visuallyhidden"><h2>Register</h2></legend>
       <input type="hidden" id="webinar" name="webinar" value="{{ webinar.webinar_ID }}">
       <input type="hidden" id="organizer" name="organizer" value="1493921119291604485">
       <ul>
         <li>
           <label id="registrant.givenNameLabel" for="registrant.givenName"><b>First Name</b> (Required)</label>
-          <input required type="text" id="registrant.givenName" name="registrant.givenName" class="firstname" value="" maxlength="128">
+          <input required type="text" id="registrant.givenName" name="registrant.givenName" class="firstname" value="" maxlength="128" autocomplete="given-name">
         </li>
         <li>
           <label id="registrant.surnameLabel" for="registrant.surname"><b>Last Name</b> (Required)</label>
-          <input required type="text" id="registrant.surname" name="registrant.surname" class="lastname" value="" maxlength="128">
+          <input required type="text" id="registrant.surname" name="registrant.surname" class="lastname" value="" maxlength="128" autocomplete="family-name">
         </li>
         <li>
           <label id="registrant.emailLabel" for="registrant.email"><b>Email Address</b> (Required)</label>
-          <input required type="email" id="registrant.email" name="registrant.email" class="email" value="" maxlength="128">
+          <input required type="email" id="registrant.email" name="registrant.email" class="email" value="" maxlength="128" autocomplete="email">
         </li>
       </ul>
     </fieldset>
