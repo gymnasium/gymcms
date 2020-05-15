@@ -34,77 +34,80 @@ video_ID: {{ webinar.video_ID }}
 
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/webinars.css">
 
-<body>
-
 <div class="container">
-<main class="content">
+  <main class="content webinar-content" id="main" role="main">
 
-<article>
+    <article>
 
-<header class="main-header event-header">
-    <h1>Webinar</h1>
-    {% if webinar.video %}
-    <h2>Recording</h2>
-    {% else %}
-    <h2>Registration</h2>
-    {% endif %}
-</header>
-
-<header class="event-banner-hero event-theme-{{ webinar.content_category }}">
-  <h1>{{ webinar.event_title }}</h1>
-  <h2>{{ webinar.event_guests }}</h2>
-
-  {% if webinar.video %}
-  <h3 class="datetime">{{ webinar.event_date | date: "%B %-d, %Y"}}</h3>
-    {% else %}
-    <h3 class="datetime">{{ webinar.event_date | date: "%A, %B %-d, %Y at " }}{{ webinar.event_time }}</h3>
-    {% endif %}
-</header>
-
-<p class="call-out">{{ webinar.short_description }}</p>
-
-{% if webinar.register %}
-{% include webinar-registration-form.html %}
-
-    {% else %}
-        {% if webinar.video and webinar.video_ID %}
-        <p><strong>This webinar recording is now available.</strong>
-        {% include event-video.html %}
-            {% else %}
-            <p class="call-out"><strong>This webinar recording will be available shortly.</strong>
+      <header class="main-header event-header">
+        <h1>Webinar</h1>
+        {% if webinar.video %}
+        <h2>Recording</h2>
+        {% else %}
+        <h2>Registration</h2>
         {% endif %}
-
-{% endif %}
-
-{% if webinar.notist_deck %}
-{% include event_slides.html %}
-{% endif %}
-
-
-{{ content }}
-</article>
-
-<!-- sidebar -->
-
-<aside>
-
-
-<header>
-  <h1>Guest Speakers</h1>
-</header>
-    {% for speaker in webinar.speaker %}
-    {%- include webinar-bio.html bio=speaker -%}
-    {% endfor %}
-
-    <header>
-      <h1>Host</h1>
     </header>
-{% for host in webinar.host %}
-{%- include webinar-bio.html bio=host -%}
-{% endfor %}
-</aside>
 
-</main>
+      <header class="event-banner-hero event-theme-{{ webinar.content_category }}">
+      <h1>{{ webinar.event_title }}</h1>
+      <h2>{{ webinar.event_guests }}</h2>
+
+      {% if webinar.video %}
+      <h3 class="datetime">{{ webinar.event_date | date: "%B %-d, %Y"}}</h3>
+        {% else %}
+        <h3 class="datetime">{{ webinar.event_date | date: "%A, %B %-d, %Y at " }}{{ webinar.event_time }}</h3>
+        {% endif %}
+    </header>
+
+      <p class="call-out">{{ webinar.short_description }}</p>
+
+      {% if webinar.register %}
+      {% include webinar-registration-form.html %}
+
+        {% else %}
+            {% if webinar.video and webinar.video_ID %}
+            <p><strong>This webinar recording is now available.</strong>
+            {% include event-video.html %}
+                {% else %}
+                <p class="call-out"><strong>This webinar recording will be available shortly.</strong>
+            {% endif %}
+
+      {% endif %}
+
+      {% if webinar.notist_deck %}
+      {% include event_slides.html %}
+      {% endif %}
+
+
+      {{ content }}
+
+    </article>
+
+    <!-- sidebar -->
+
+    <aside>
+
+      {%- capture headcount -%}{{ webinar.speaker | size }}{%- endcapture -%}
+      <header>
+        {%- if headcount == "1"  -%}
+        <h1>Guest Speaker</h1>
+        {%- else -%}
+        <h1>Guest Speakers</h1>
+        {%- endif -%}
+      </header>
+          {% for speaker in webinar.speaker %}
+          {%- include webinar-bio.html bio=speaker -%}
+          {% endfor %}
+
+      <header>
+        <h1>Host</h1>
+      </header>
+      {% for host in webinar.host %}
+      {%- include webinar-bio.html bio=host -%}
+      {% endfor %}
+    </aside>
+
+  </main>
 </div>
 
 <script src="{{ site.url }}{{ site.baseurl }}/js/functions.js" async></script>
