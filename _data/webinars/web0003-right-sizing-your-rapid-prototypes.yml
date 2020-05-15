@@ -6,8 +6,8 @@ short_description: "A conversation about choosing the appropriate fidelity of br
 permalink: static/webinars/right-sizing-your-rapid-prototypes
 event_date: 2016-08-17
 event_time: "2PM EDT"
-event_ogimage: right-sizing-rapid-prototypes-event-og.png
-recording_ogimage: right-sizing-rapid-prototypes-recording-og.png
+event_ogimage: right-sizing-your-rapid-prototypes-event-og.png
+recording_ogimage: right-sizing-your-rapid-prototypes-recording-og.png
 host: josborn
 speaker:
     - eyoung

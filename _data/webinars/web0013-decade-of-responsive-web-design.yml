@@ -1,0 +1,20 @@
+event_ID: web0013-decade-of-responsive-web-design
+event_title: "A Decade of Responsive <span class=\"nowrap\">Web Design</span>"
+event_guests: "with Ethan Marcotte"
+short_description: "Join us for this short description of the event!"
+permalink: static/webinars/decade-of-responsive-web-design
+event_date: 2020-05-26
+event_time: "2:00 PM EDT"
+event_ogimage: decade-of-responsive-web-design-event-og.png
+recording_ogimage: decade-of-responsive-web-design-recording-og.png
+host: josborn
+speaker:
+  - emarcotte
+content_category: design
+landing: true
+register: true
+video: false
+webinar_ID: 4094344214168045584
+webinar_question_key: 152948572
+video_ID:
+notist_deck:

@@ -90,9 +90,13 @@ layout: raw
                 <img src="{{ site.url }}{{ site.baseurl }}/img/social/webinars/{{ webinar.event_ogimage }}">
               {%- endif -%}
             {%- endcomment -%}
-
+            {%- capture headcount -%}{{ item.speaker | size }}{%- endcapture -%}
               {%- if item.register -%}
-              <p>With guest speakers:</p>
+              {%- if headcount == "1" -%}
+              <p>With guest speaker:</p>
+              {%- else -%}
+              <p>With guest speakers:</p>              
+              {%- endif -%}
               <ul id="guest-speaker-headshots">
               {%- for speaker in item.speaker -%}
               {%- if item.register and site.data.bios[speaker].headshot != null -%}
@@ -106,7 +110,11 @@ layout: raw
               {%- endfor -%}
               </ul>
               {% else %}
+              {%- if headcount == "1" -%}
+              <p class="guest-speakers">With <strong>{{ site.data.bios[speaker_1].name }}</strong></p>  
+              {%- else -%}
               <p class="guest-speakers">With <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
+              {%- endif -%}
               {%- endif -%}
             </div>
           </div>
