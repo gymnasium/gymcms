@@ -12,7 +12,7 @@ speaker:
   - emarcotte
 content_category: design
 landing: true
-register: true
+register: false
 video: false
 webinar_ID: 4094344214168045584
 webinar_question_key: 152948572
