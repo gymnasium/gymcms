@@ -254,6 +254,7 @@ main figcaption {
 /* --- cta --- */
 
 .webinar--cta {
+  color: #fff;
   align-items: end;
   padding: 1.2em;
 }
