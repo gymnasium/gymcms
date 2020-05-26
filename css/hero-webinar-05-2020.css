@@ -78,7 +78,7 @@
 }
 
 .hero-promo-webinar header p {
-  max-width: 30em;
+  max-width: 28em;
   font: normal 1.15em/1.35 "Helvetica Neue", Helvetica, sans-serif;
   color: #222;
   margin-top: 1.4em;
@@ -125,17 +125,17 @@
     background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-05-2020/ala-306-rwd-2010-20-720w.png");
     border: .8em solid #222;
     border-top-width: 1.4em;
-    border-radius: 1em;
+    border-radius: .8em;
   }
 
   .hero-promo-webinar .content::after {
-    bottom: -1.6em;
+    bottom: -1.4em;
     right: -31.5em;
-    width: 36.25em;
-    height: 26.25em;
+    width: 36.375em;
+    height: 26.375em;
     background: #fff no-repeat center left / cover;
     background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-05-2020/ethanmarcotte-2020-1080w.jpg");
-    border: 1.6em solid #222;
+    border: 1.4em solid #222;
     border-top-width: 1.8em;
     border-radius: 1em;
   }
