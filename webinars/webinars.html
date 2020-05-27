@@ -53,9 +53,9 @@ layout: raw
           {% when "production" %}
             {%- assign webinar_url = 'https://thegymnasium.com/webinars/state-of-responsive-web-design' -%}
         {% endcase %}
-      
+
       {%- else -%}
-      
+
         {% case jekyll.environment %}
           {% when "development" %}
             {%- assign webinar_url = item.permalink | prepend: '/' | prepend: site.url  -%}
@@ -64,7 +64,7 @@ layout: raw
           {% when "production" %}
             {%- assign webinar_url = item.permalink | remove_first: 'static'| prepend: 'https://thegymnasium.com' -%}
         {% endcase %}
-      
+
       {%- endif -%}
 
 
@@ -95,7 +95,7 @@ layout: raw
               {%- if headcount == "1" -%}
               <p>With guest speaker:</p>
               {%- else -%}
-              <p>With guest speakers:</p>              
+              <p>With guest speakers:</p>
               {%- endif -%}
               <ul id="guest-speaker-headshots">
               {%- for speaker in item.speaker -%}
@@ -111,7 +111,7 @@ layout: raw
               </ul>
               {% else %}
               {%- if headcount == "1" -%}
-              <p class="guest-speakers">With <strong>{{ site.data.bios[speaker_1].name }}</strong></p>  
+              <p class="guest-speakers">With <strong>{{ site.data.bios[speaker_1].name }}</strong></p>
               {%- else -%}
               <p class="guest-speakers">With <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
               {%- endif -%}
@@ -123,10 +123,12 @@ layout: raw
             <a class="gym-button" href="{{ webinar_url }}">
               <b>Register to Attend</b>
             </a>
-            {% else %}
+            {% elsif item.video %}
             <a class="gym-button gym-button-secondary" href="{{ webinar_url }}">
               <b>Watch Recording</b>
             </a>
+            {% else %}
+            <strong>Recording available soon…</strong>
             {%- endif -%}
           </div>
         </div>
