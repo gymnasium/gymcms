@@ -259,6 +259,10 @@ main figcaption {
   padding: 1.2em;
 }
 
+.webinar--cta p {
+  font-size: 1em;
+}
+
 /* --- featured webinar --- */
 
 #featured-webinar header,
