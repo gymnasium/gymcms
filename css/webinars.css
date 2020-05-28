@@ -255,8 +255,12 @@ main figcaption {
 
 .webinar--cta {
   color: #fff;
-  align-items: end;
   padding: 1.2em;
+}
+
+.webinar--cta p {
+  font-size: 1em;
+  margin-top: 0;
 }
 
 /* --- featured webinar --- */
@@ -824,8 +828,4 @@ main aside h2 {
 .event-bio h2 {
   margin-top: 1.3em;
   margin-bottom: .8em;
-}
-
-.event-thumb {
-  max-width: 200px;
 }
