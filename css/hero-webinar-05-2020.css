@@ -5,15 +5,16 @@
   position: relative;
   font-size: 16px;
   background-color: #d73158;
-  transition: background-color ease .5s;
   padding-top: 15px;
   padding-bottom: 15px;
   overflow: hidden;
+  transition: background-color ease .5s;
 }
 
 .hero-promo-webinar .content {
   max-width: 48em;
   padding: .6em 5.25%;
+  transition: all ease .5s;
 }
 
 @media (min-width: 60em) {
@@ -107,13 +108,18 @@
 .hero-promo-webinar .content::before,
 .hero-promo-webinar .content::after {
   position: absolute;
-  bottom: -100em;
+  transform: translateY(100em);
   content: "";
   z-index: 1;
-  transition: bottom ease 1.25s;
+  transition: transform ease 1s;
 }
 
 @media (min-width: 70em) {
+
+  .hero-promo-webinar .content::before,
+  .hero-promo-webinar .content::after {
+    transform: translateY(0);
+  }
 
   .hero-promo-webinar .content::before {
     position: absolute;
