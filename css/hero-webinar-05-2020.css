@@ -40,9 +40,7 @@
 @media (min-width: 70em) {
 
   .hero-promo-webinar .content {
-    position: relative;
     left: -12.5%;
-    z-index: 0;
   }
 
 }
@@ -51,39 +49,31 @@
   padding: 0 0 2.8em;
 }
 
-.hero-promo-webinar header h1,
 .hero-promo-webinar header h2,
 .hero-promo-webinar header h3,
 .hero-promo-webinar header p {
-  margin-top: 0;
-  margin-bottom: 0;
+  color: #222;
 }
 
 .hero-promo-webinar header h1 {
   font-size: 2.5em;
   color: #fff;
-  margin-top: -.05em;
-  margin-bottom: -.05em;
+  margin-top: .45em;
+  margin-bottom: .45em;
 }
 
 .hero-promo-webinar header h2,
 .hero-promo-webinar header h3 {
   font: 900 1.6em/1.25 "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
-  color: #222;
   letter-spacing: .05em;
-  margin-bottom: .8em;
-}
-
-.hero-promo-webinar header h3 {
-  margin-top: .8em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .hero-promo-webinar header p {
   max-width: 28em;
   font: normal 1.15em/1.35 "Helvetica Neue", Helvetica, sans-serif;
-  color: #222;
   margin-top: 1.4em;
-  margin-bottom: 1.4em;
 }
 
 .hero-promo-webinar img {
@@ -122,7 +112,6 @@
   }
 
   .hero-promo-webinar .content::before {
-    position: absolute;
     bottom: -.8em;
     left: -13.25em;
     width: 14.75em;
