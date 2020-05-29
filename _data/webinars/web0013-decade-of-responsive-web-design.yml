@@ -13,8 +13,8 @@ speaker:
 content_category: design
 landing: true
 register: false
-video: false
+video: true
 webinar_ID: 4094344214168045584
 webinar_question_key: 152948572
-video_ID:
+video_ID: FzVEz761JgA
 notist_deck:
