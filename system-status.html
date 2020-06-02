@@ -3,3 +3,66 @@ layout: raw
 permalink: /static/system-status/
 ---
 
+<style>
+
+/* ---
+https://github.com/gymnasium/tracker/issues/47
+--- */
+
+.courseware-bookmarks-button {
+  padding-left: 30px;
+}
+
+.course-navigation .button-chapter:only-of-type {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: text;
+}
+
+.course-navigation .button-chapter:only-of-type:focus {
+  outline: none;
+}
+
+.course-navigation .button-chapter:only-of-type .icon {
+  display: none;
+}
+
+.course-navigation .button-chapter:only-of-type .group-heading {
+  line-height: 1.25 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-right: 14px;
+}
+
+/* ---
+https://github.com/gymnasium/tracker/issues/43
+--- */
+
+nav.discussion {
+  margin: 0 !important;
+}
+
+nav.discussion .new-post-btn {
+  font-size: 1em;
+  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
+  color: #fff;
+  background-color: #f8971d;
+  padding: .75em 1em;
+  border: 0;
+}
+
+/* ---
+https://github.com/gymnasium/tracker/issues/40
+--- */
+
+.sidebar #jobs-microservice-frame {
+  min-width: 116% !important;
+  background-color: #444;
+  padding: 1.4em;
+  margin-top: -1.4em;
+  margin-left: -1.4em;
+}
+
+</style>
