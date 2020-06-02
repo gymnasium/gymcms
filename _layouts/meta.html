@@ -8,7 +8,7 @@
     {%- if event.event_ID == "web0005-state-of-responsive-web-design" -%}
         {%- assign og_url = "https://thegymnasium.com/webinars/state-of-responsive-web-design" -%}
         {%- assign og_title = event.event_title -%}
-    
+
     {%- else -%}
 
         {%- assign path = event.event_ID -%}
@@ -17,15 +17,15 @@
         {%- assign og_title = event.event_title -%}
     {%- endif -%}
 
-    {%- if event.register == true -%}    
+    {%- if event.register == true -%}
         {%- assign page_title = "Webinar Registration | The Gymnasium" -%}
-        {%- assign og_art = event.event_ogimage | prepend: "img/social/webinars/" -%}    
+        {%- assign og_art = event.event_ogimage | prepend: "img/social/webinars/" -%}
     {%- endif -%}
 
     {%- if event.video == true -%}
         {%- assign page_title = "Webinar Recording | The Gymnasium" -%}
         {%- assign og_art = event.recording_ogimage | prepend: "img/social/webinars/" -%}
-    {%- endif -%}    
+    {%- endif -%}
 
 
 
@@ -51,9 +51,19 @@
     {%- assign og_alt = page.og_title -%}
     {%- assign og_title = page.og_title -%}
 
+{%- elsif page.permalink contains "jobs" -%}
+    {%- comment -%}
+    Set up meta tags for Jobs page meta include
+    {%- endcomment -%}
+    {%- assign short_description = page.og_description -%}
+    {%- assign og_url = page.og_url -%}
+    {%- assign page_title = page.page_title -%}
+    {%- assign og_art = page.og_art -%}
+    {%- assign og_alt = page.og_title -%}
+    {%- assign og_title = page.og_title -%}
 
 {%- endif -%}
-    
+
 <meta name="description" content="{{ short_description | strip_html }}">
 <meta name="author" content="Aquent Gymnasium">
 <meta property="og:url" content="{{ og_url }}">
