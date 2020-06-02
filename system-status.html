@@ -3,3 +3,37 @@ layout: raw
 permalink: /static/system-status/
 ---
 
+<style>
+
+/* ---
+https://github.com/gymnasium/tracker/issues/47
+--- */
+
+.courseware-bookmarks-button {
+  padding-left: 30px;
+}
+
+.course-navigation .button-chapter:only-of-type {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: text;
+}
+
+.course-navigation .button-chapter:only-of-type:focus {
+  outline: none;
+}
+
+.course-navigation .button-chapter:only-of-type .icon {
+  display: none;
+}
+
+.course-navigation .button-chapter:only-of-type .group-heading {
+  line-height: 1.25 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-right: 14px;
+}
+
+</style>
