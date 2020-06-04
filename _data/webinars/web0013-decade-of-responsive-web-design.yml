@@ -18,3 +18,8 @@ webinar_ID: 4094344214168045584
 webinar_question_key: 152948572
 video_ID: FzVEz761JgA
 notist_deck:
+resources:
+  - label: "Responsive Web Design"
+    url: "https://alistapart.com/article/responsive-web-design/"
+  - label: "Responsive Web Design Fundamentals"
+    url: "https://thegymnasium.com/courses/course-v1:GYM+109+0/about"
