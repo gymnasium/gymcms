@@ -19,5 +19,7 @@ video: true
 webinar_ID: 6295135474972801793
 webinar_question_key: 107694819
 video_ID: 6ZkQnHKwIdY
-notist_deck: jeremyosborn/8TQd8s
+resources:
+  - label: "Notist: Webinar slide deck"
+    url: "https://noti.st/jeremyosborn/8TQd8s"
 ---

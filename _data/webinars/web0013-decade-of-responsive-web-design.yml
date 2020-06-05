@@ -1,3 +1,4 @@
+---
 event_ID: web0013-decade-of-responsive-web-design
 event_title: "A Decade of Responsive <span class=\"nowrap\">Web Design</span>"
 event_guests: "with Ethan Marcotte"
@@ -17,7 +18,6 @@ video: true
 webinar_ID: 4094344214168045584
 webinar_question_key: 152948572
 video_ID: FzVEz761JgA
-notist_deck:
 resources:
   - label: "A List Apart: Responsive Web Design"
     url: "https://alistapart.com/article/responsive-web-design/"
@@ -29,3 +29,4 @@ resources:
     url: "https://thegymnasium.com/courses/course-v1:GYM+109+0/about"
   - label: "Gymnasium: Web Development Collection"
     url: "https://thegymnasium.com/web-development"
+---
