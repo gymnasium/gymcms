@@ -77,8 +77,8 @@ video_ID: {{ webinar.video_ID }}
       {% if webinar.notist_deck %}
       {% include event_slides.html %}
       {% endif %}
-      
-      {% if webinar.resources %}
+
+      {% if webinar.resources and webinar.video and webinar.video_ID %}
       {% include webinar-resources.html %}
       {% else %}
       <!-- There are no resources for this webinar -->
