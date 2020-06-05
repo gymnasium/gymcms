@@ -19,7 +19,13 @@ webinar_question_key: 152948572
 video_ID: FzVEz761JgA
 notist_deck:
 resources:
-  - label: "Responsive Web Design"
+  - label: "A List Apart: Responsive Web Design"
     url: "https://alistapart.com/article/responsive-web-design/"
-  - label: "Responsive Web Design Fundamentals"
+  - label: "Internet Archive: Responsive Web Design (original publication)"
+    url: "https://web.archive.org/web/20100528081721/http://www.alistapart.com/articles/responsive-web-design"
+  - label: "Ethan Marcotte’s website"
+    url: "https://ethanmarcotte.com"
+  - label: "Gymnasium: Responsive Web Design Fundamentals"
     url: "https://thegymnasium.com/courses/course-v1:GYM+109+0/about"
+  - label: "Gymnasium: Web Development Collection"
+    url: "https://thegymnasium.com/web-development"
