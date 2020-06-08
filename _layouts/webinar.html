@@ -74,12 +74,6 @@ video_ID: {{ webinar.video_ID }}
 
       {% endif %}
 
-      {% comment %}
-      {% if webinar.notist_deck %}
-      {% include event_slides.html %}
-      {% endif %}
-      {% endcomment %}
-
       {% if webinar.resources and webinar.video and webinar.video_ID %}
       {% include webinar-resources.html %}
       {% else %}
