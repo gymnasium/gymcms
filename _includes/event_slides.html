@@ -1,8 +1,0 @@
-{% if webinar.notist_deck %}
-<p>
-    <strong>The webinar slide deck is now available.</strong>
-</p>
-
-<p data-notist="{{ webinar.notist_deck }}">View <a href="https://noti.st/{{ webinar.notist_deck }}">{{ page.webinar_title  | strip_html }}</a> on Notist.</p><script async src="https://on.notist.cloud/embed/002.js"></script>
-
-{% endif %}
