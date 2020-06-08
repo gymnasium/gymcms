@@ -51,6 +51,24 @@ main figcaption {
   border-bottom: 2px solid #444 !important; /* ! */
 }
 
+/* reset default (text) links */
+
+[role="main"] a:not([class]) {
+  color: #222;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #222;
+  margin-bottom: -2px;
+}
+
+[role="main"] a:not([class]):hover,
+[role="main"] a:not([class]):focus,
+[role="main"] a:not([class]):active {
+  color: #222;
+  text-decoration: none;
+  border-bottom: 2px solid #222 !important;
+}
+
 /* --- #main --- */
 
 /* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
@@ -104,7 +122,6 @@ main figcaption {
 
 #main h1 {
   font-size: 2.25em;
-  letter-spacing: .025em;
 }
 
 #main h3 {
@@ -507,7 +524,7 @@ main article {
 main h1,
 main h2,
 main h3 {
-  letter-spacing: .04em;
+  letter-spacing: .02em;
 }
 
 .main-header {
@@ -519,8 +536,9 @@ main h3 {
 .main-header h1,
 .main-header h2 {
   font-weight: 900;
-  font-size: 2.2em;
-  line-height: 1.1;
+  font-size: 2.25em;
+  line-height: 1.05;
+  letter-spacing: .02em;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
@@ -564,6 +582,16 @@ main h3 {
   font: normal 1em/1.5 "Helvetica Neue", "Helvetica", sans-serif;
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.webinar-content h2 + ul {
+  padding-left: 1em;
+  margin-top: 1.2em;
+}
+
+.webinar-content h2 + ul li {
+  line-height: 1.35;
+  margin-top: .6em;
 }
 
 #main p.call-out {
@@ -801,15 +829,11 @@ main aside header {
 #main aside h1 {
   font: 900 1.6em/1.1 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 0;
   }
 
 main aside h2 {
   font: bold 1.2em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .event-bio {
