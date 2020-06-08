@@ -1,0 +1,51 @@
+---
+layout: raw
+permalink: /static/catalog-all/
+---
+{% assign sorted_courses = site.data.courses | sort %}
+{% assign sorted_take5s = site.data.take5s | sort %}
+<h1>Catalog - All Courses</h1>
+
+<h2>Full Courses</h2>
+
+<ul>
+
+{% for course_hash in sorted_courses %}
+    {% assign course = course_hash[1] %}
+    {%- if course.course_type == "full" -%}
+    <li>{{ course.course_ID }}: <a href="{{ course.url }}">{{ course.title }}</a></li>
+    {{ course.short_description }}
+    <pre>img/course-artwork/png/{{ course.course_ID | downcase }}.png</pre>
+    <!-- Category/Topic: {{ course.topic }} -->
+    {%- endif -%}
+{% endfor %}
+</ul>
+
+<h2>Gym Shorts</h2>
+
+<ul>
+
+{% for gymshort_hash in sorted_courses %}
+    {% assign gymshort = gymshort_hash[1] %}
+    {%- if gymshort.course_type == "short" -%}
+    <li>{{ gymshort.course_ID }}: <a href="{{ gymshort.url }}">{{ gymshort.title }}</a></li>
+    {{ gymshort.short_description }}
+    <pre>img/course-artwork/png/{{ gymshort.course_ID | downcase }}.png</pre>
+    <!-- Category/Topic: {{ gymshort.topic }} -->
+    {%- endif -%}
+{% endfor %}
+</ul>
+
+<h2>Take 5</h2>
+
+<ul>
+
+    {% for take5_hash in sorted_take5s %}
+        {% assign take5 = take5_hash[1] %}
+    <li>{{ take5.course_ID }}: <a href="{{ take5.url }}">{{ take5.title }}</a></li>
+    {{ take5.short_description }}
+    <pre>{{ take5.poster_art }}</pre>
+    <!-- Category/Topic: {{ take5.topic }} -->
+    {% endfor %}
+</ul>
+    
