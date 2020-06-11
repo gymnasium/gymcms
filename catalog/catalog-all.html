@@ -16,7 +16,8 @@ permalink: /static/catalog-all/
     {%- assign keywords = "" | split: ',' -%}
     {%- assign keywords = keywords | push: course.course_type -%}
       {%- for subtopic in course.subtopics -%}
-      {%- assign keywords = keywords | push: subtopic.label -%}
+      {%- assign slugified_keyword = subtopic.label | slugify -%}
+      {%- assign keywords = keywords | push: slugified_keyword -%}
     {%- endfor -%}
     <li>{{ course.course_ID }}: <div class="{{ keywords | join: ' ' }}"><a href="{{ course.url }}">{{ course.title }}</a></div></li>
     {{ course.short_description }}
@@ -36,7 +37,8 @@ permalink: /static/catalog-all/
     {%- assign keywords = "" | split: ',' -%}
     {%- assign keywords = keywords | push: gymshort.course_type -%}
       {%- for subtopic in gymshort.subtopics -%}
-        {%- assign keywords = keywords | push: subtopic.label -%}
+      {%- assign slugified_keyword = subtopic.label | slugify -%}
+        {%- assign keywords = keywords | push: slugified_keyword -%}
     {%- endfor -%}
     <li>{{ gymshort.course_ID }}: <div class="{{ keywords | join: ' ' }}"><a href="{{ gymshort.url }}">{{ gymshort.title }}</a></div></li>
     {{ gymshort.short_description }}
@@ -55,7 +57,8 @@ permalink: /static/catalog-all/
            {%- assign keywords = "" | split: ',' -%}
            {%- assign keywords = keywords | push: take5.course_type -%}
       {%- for subtopic in take5.subtopics -%}
-        {%- assign keywords = keywords | push: subtopic.label -%}
+      {%- assign slugified_keyword = subtopic.label | slugify -%}
+        {%- assign keywords = keywords | push: slugified_keyword -%}
     {%- endfor -%}
     <li>{{ take5.course_ID }}: <div class="{{ keywords | join: ' ' }}"><a href="{{ take5.url }}">{{ take5.title }}</a></div></li>
     {{ take5.short_description }}
