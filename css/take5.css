@@ -82,9 +82,39 @@ main figcaption {
   color: #fff;
 }
 
-#main .gymlink,
-#main .gymlink * {
-  color: #f8971d;
+/* reset default (text) links */
+
+#main .title a,
+#main [class="all-caps"] a {
+  line-height: 1.35;
+}
+
+#main .title a,
+#main a:not([class]) {
+  color: #222;
+  text-decoration: none;
+  padding-top: 2px;
+  border-bottom: 1px solid #222;
+  margin-bottom: -2px;
+}
+
+#main .title a:hover,
+#main .title a:focus,
+#main .title a:active,
+#main a:not([class]):hover,
+#main a:not([class]):focus,
+#main a:not([class]):active {
+  color: #222;
+  text-decoration: none;
+  border-bottom: 2px solid #222 !important;
+}
+
+#main .title a:after,
+#main [class="all-caps"] a:after,
+#main li > a:not([class]):after {
+  content: "";
+  display: block;
+  padding-top: .5625rem;
 }
 
 /* !override / remove padding-bottom  */
@@ -92,7 +122,6 @@ main figcaption {
 #main .container-fluid {
   padding-bottom: 0;
 }
-
 
 /* --- typography --- */
 
@@ -113,12 +142,6 @@ main figcaption {
   letter-spacing: .025em;
 }
 
-/*
-[role="main"] h2 {
-  letter-spacing: .015em;
-}
- */
-
 #featured h3 {
   letter-spacing: .035em;
 }
@@ -131,7 +154,7 @@ main figcaption {
 /* paragraphs */
 
 [role="main"] p {
-  font: normal 1.15em/1.45 "Helvetica Neue", Helvetica, sans-serif;
+  font: normal 1.15em/1.5 "Helvetica Neue", Helvetica, sans-serif;
   margin-top: 1em;
   margin-bottom: 0;
 }
@@ -409,7 +432,7 @@ main h3 {
 
 .take5--resources-list li {
   margin-top: .6em;
-  line-height: 1.35;
+  line-height: 1.5;
 }
 
 .take5--resources-list li:first-child {
@@ -456,7 +479,8 @@ details.take5--transcript {
 }
 
 #tutorial-transcript ol,
-#tutorial-transcript ul {
+#tutorial-transcript ul,
+#tutorial-transcript blockquote {
   margin-top: 1em;
 }
 
@@ -474,6 +498,15 @@ details.take5--transcript {
   content: "html";
 }
 
+#tutorial-transcript blockquote p {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+#tutorial-transcript blockquote p:first-child {
+  margin-top: 0;
+}
+
 .take5--main summary {
   display: list-item;
   cursor: pointer;
@@ -486,14 +519,16 @@ details.take5--transcript {
 .take5--main summary b {
   font-weight: normal;
   font-family: sans-serif;
-  color: #f8971d;
   vertical-align: -.05em;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #222;
+  margin-bottom: -2px;
 }
 
 .take5--main summary:hover b,
 .take5--main summary:focus b,
 .take5--main summary:active b {
-  border-bottom: 1px solid #f8971d;
+  border-bottom: 2px solid #222;
 }
 
 .take5--topics-menu {
