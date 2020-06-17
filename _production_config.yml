@@ -12,6 +12,8 @@ exclude:
   - 'Gemfile'
   - 'Gemfile.lock'
   - 'README.md'
+  - 'netlify.toml'
+  - '.jekyll-cache'
 
 repository: gymnasium/gymcms
 
