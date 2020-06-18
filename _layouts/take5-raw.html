@@ -176,7 +176,7 @@
   {%- endcomment -%}
 
   {% capture rec_content_test %}{% file_exists _includes/take5/recommended-content.html %}{% endcapture %}
-    {% if rec_content_test =="true" %}
+    {% if rec_content_test == "true" %}
     {%- include /take5/recommended-content.html rec-take5=true rec-courses=true -%} {% else %}
       <h3><mark>No recommended content found!</mark></h3>
     {% endif %}
