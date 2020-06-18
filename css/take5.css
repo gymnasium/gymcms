@@ -93,9 +93,9 @@ main figcaption {
 #main a:not([class]) {
   color: #222;
   text-decoration: none;
-  padding-top: 2px;
+  padding-bottom: 0.125rem;
   border-bottom: 1px solid #222;
-  margin-bottom: -2px;
+  margin-bottom: -0.125rem;
 }
 
 #main .title a:hover,
