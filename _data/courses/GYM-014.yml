@@ -1,0 +1,11 @@
+---
+course_ID: GYM-014
+title: "Working with Atomic Design and Pattern Lab"
+course_type: short
+url: https://thegymnasium.com/courses/course-v1:GYM+014+0/about
+topic: "Web Design & Development"
+subtopics:
+  - label: "Design Systems"
+  - label: "Pattern Library"
+short_description: "Learn how to use Atomic Design methodology within Pattern Lab in order to create reusable user interface components."
+---
