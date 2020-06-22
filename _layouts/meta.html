@@ -62,6 +62,18 @@
     {%- assign og_alt = page.og_title -%}
     {%- assign og_title = page.og_title -%}
 
+{%- elsif page.permalink contains "static/courses" -%}
+    {%- comment -%}
+    Set up meta tags for course page meta include
+    {%- endcomment -%}
+    {%- assign course = site.data.courses[page.course_ID] -%}
+    {%- assign og_description = course.short_description -%}
+    {%- assign short_description = og_description -%}
+    {%- assign og_url = course.url -%}
+    {%- assign og_title = course.title -%}
+    {%- assign page_title =  course.title | append: " | Gymnasium" -%}
+    {%- assign og_art = course.course_ID | downcase | append: "-social.png" | prepend: "img/social/courses/" -%}
+
 {%- endif -%}
 
 <meta name="description" content="{{ short_description | strip_html }}">
@@ -99,7 +111,6 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="{{ site.url }}{{ site.baseurl }}/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-
 <!-- //
 Generated at: {{ site.time }}
 Served from: {{ page.url | absolute_url }}
