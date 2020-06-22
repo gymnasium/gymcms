@@ -1,0 +1,10 @@
+---
+course_ID: GYM-108
+title: "JavaScript and jQuery Survival Guide"
+course_type: full
+url: https://thegymnasium.com/courses/course-v1:GYM+108+0/about
+topic: "JavaScript"
+subtopics: 
+ - label: "jQuery"
+short_description: "This course will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples."
+---
