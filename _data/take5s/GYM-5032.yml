@@ -5,12 +5,12 @@ date: 2020-06-22T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5032/
 poster_art: /img/take5/posters/gym-5032.jpg
-live: false
+live: true
 instructor: "Ethan Marcotte"
 topic: "Web Design & Development"
 video_ID: Y2vjyDxkIPs
 video_duration: "4:59"
-featured: false
+featured: true
 short_description: "Learn how to get started with VoiceOver, Apple’s built-in screen reader, to read and navigate web pages in this tutorial by Ethan Marcotte — the fellow who started that whole “responsive design” thing."
 project_file_source: CodePen
 project_files:
