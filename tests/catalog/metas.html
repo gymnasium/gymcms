@@ -17,7 +17,7 @@ permalink: /tests/catalog/metas
     {%- assign og_title = course.title -%}
     {%- assign page_title =  course.title | append: " | Gymnasium" -%}
     {%- assign og_art = course.course_ID | downcase | append: "-social.png" | prepend: "img/social/courses/" -%}
-
+    {%- assign twitter_card_style = "summary"-%}
 
 
 <h3>{{course.course_ID }} - {{ course.title }}</h3>
@@ -33,7 +33,7 @@ property="og:title" content="{{ og_title | strip_html }}"
 property="og:description" content="{{ short_description | strip_html }}"
 property="og:image:alt" content="{{ og_title | strip_html }}"
 property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ og_art }}"
-name="twitter:card" content="summary_large_image"
+name="twitter:card" content="{{ twitter_card_style }}"
 name="twitter:site" content="@AquentGymnasium"
 name="twitter:creator" content="@AquentGymnasium"
 name="twitter:url" property="og:url" content="{{ og_url }}"
