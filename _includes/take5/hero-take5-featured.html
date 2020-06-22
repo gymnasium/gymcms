@@ -18,6 +18,7 @@
     {%- assign hero_ID = item.course_ID | downcase -%}
     {%- assign hero_topic = item.topic -%}
     {%- assign hero_title = item.title -%}
+    {%- assign hero_instructor = item.instructor | prepend: "with " -%}
     {%- assign hero_art = item.poster_art | replace: ".jpg", "-hero.jpg" -%}
     {%- assign hero_utm = "" -%}
     {%- assign hero_link = item.title | downcase | slugify | append: hero_utm | prepend: domain_link -%}
@@ -25,6 +26,7 @@
 {%- endfor -%}
 
 {%- case hero_topic -%}
+
     {%- when "Web Design & Development" -%}
     {%- assign hero_style = "topic-web-design-development" -%}
 
@@ -59,7 +61,7 @@
         <h3 class="subhead-topic">{{ hero_topic }}</h3>
         <h2 class="take5-brand-kern">Take 5</h2>
         <h1>{{ hero_title }}</h1>
-        <p class="description"><strong>Take 5 minutes to learn a practical skill for free.</strong></p>
+        <p class="description"><strong>Take 5 minutes to learn a practical skill for free <span class="inline-block">{{ hero_instructor }}</span>.</strong></p>
       </header>
       <div class="cta">
         <a class="gym-button gym-button-secondary" href="{{ hero_link }}"><b>Watch and Learn</b></a>
