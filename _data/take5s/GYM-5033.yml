@@ -5,12 +5,12 @@ date: 2020-06-23T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5033/
 poster_art: /img/take5/posters/gym-5033.jpg
-live: false
+live: true
 instructor: "Ethan Marcotte"
 topic: "Web Design & Development"
 video_ID: mmXdKhB7Ueg
 video_duration: "4:50"
-featured: false
+featured: true
 short_description: "Learn how to design beautiful and accessible link focus states in this tutorial by Ethan Marcotte — the fellow who started that whole “responsive design” thing."
 project_file_source: CodePen
 project_files:
