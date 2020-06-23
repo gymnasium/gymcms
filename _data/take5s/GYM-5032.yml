@@ -10,7 +10,7 @@ instructor: "Ethan Marcotte"
 topic: "Web Design & Development"
 video_ID: Y2vjyDxkIPs
 video_duration: "4:59"
-featured: true
+featured: false
 short_description: "Learn how to get started with VoiceOver, Apple’s built-in screen reader, to read and navigate web pages in this tutorial by Ethan Marcotte — the fellow who started that whole “responsive design” thing."
 project_file_source: CodePen
 project_files:

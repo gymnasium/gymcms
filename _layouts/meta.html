@@ -4,7 +4,7 @@
     {%- endcomment -%}
     {%- assign event = site.data.webinars[page.event_ID] -%}
     {%- assign short_description = event.short_description | strip_html -%}
-
+    {%- assign twitter_card_style = "summary_large_image"-%}
     {%- if event.event_ID == "web0005-state-of-responsive-web-design" -%}
         {%- assign og_url = "https://thegymnasium.com/webinars/state-of-responsive-web-design" -%}
         {%- assign og_title = event.event_title -%}
@@ -39,6 +39,7 @@
     {%- assign page_title = "Take 5 | Gymnasium" -%}
     {%- assign og_art = course.course_ID | downcase | append: "-og.png" | prepend: "/img/take5/og/" -%}
     {%- assign og_alt = course.title | prepend: "Video poster for tutorial titled " -%}
+    {%- assign twitter_card_style = "summary_large_image"-%}
 
 {%- elsif page.permalink contains "hub-pages" -%}
     {%- comment -%}
@@ -50,6 +51,7 @@
     {%- assign og_art = page.og_art -%}
     {%- assign og_alt = page.og_title -%}
     {%- assign og_title = page.og_title -%}
+    {%- assign twitter_card_style = "summary_large_image"-%}
 
 {%- elsif page.permalink contains "jobs" -%}
     {%- comment -%}
@@ -61,7 +63,20 @@
     {%- assign og_art = page.og_art -%}
     {%- assign og_alt = page.og_title -%}
     {%- assign og_title = page.og_title -%}
+    {%- assign twitter_card_style = "summary_large_image"-%}
 
+{%- elsif page.permalink contains "static/courses" -%}
+    {%- comment -%}
+    Set up meta tags for course page meta include
+    {%- endcomment -%}
+    {%- assign course = site.data.courses[page.course_ID] -%}
+    {%- assign og_description = course.short_description -%}
+    {%- assign short_description = og_description -%}
+    {%- assign og_url = course.url -%}
+    {%- assign og_title = course.title -%}
+    {%- assign page_title =  course.title | append: " | Gymnasium" -%}
+    {%- assign og_art = course.course_ID | downcase | append: "-social.png" | prepend: "img/social/courses/" -%}
+    {%- assign twitter_card_style = "summary"-%}
 {%- endif -%}
 
 <meta name="description" content="{{ short_description | strip_html }}">
@@ -74,7 +89,7 @@
 <meta property="og:description" content="{{ short_description | strip_html }}">
 <meta property="og:image:alt" content="{{ og_title | strip_html }}">
 <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ og_art }}">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="{{ twitter_card_style }}">
 <meta name="twitter:site" content="@AquentGymnasium">
 <meta name="twitter:creator" content="@AquentGymnasium">
 <meta name="twitter:url" property="og:url" content="{{ og_url }}">
@@ -99,7 +114,6 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="{{ site.url }}{{ site.baseurl }}/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-
 <!-- //
 Generated at: {{ site.time }}
 Served from: {{ page.url | absolute_url }}
