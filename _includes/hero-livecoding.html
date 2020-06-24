@@ -1,3 +1,16 @@
+{%- case jekyll.environment -%}
+
+{%- when "development" -%}
+{%- assign domain_parent = "staging.thegymcms.com" -%}
+
+{%- when "staging" -%}
+{%- assign domain_parent = "courses.gymna.si" -%}
+
+{%- when "production" -%}
+{%- assign domain_parent = thegymnasium.com" -%}
+
+{%- endcase -%}
+
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/hero-live-coding.css">
 
 <div id="live-coding">
@@ -12,10 +25,10 @@
   </header>
   <div class="twitch-embed">
     <div class="twitch-stream">
-      <iframe id="stream_embed" src="https://player.twitch.tv/?channel=irreverentmike" title="Twitch Stream"></iframe>
+      <iframe id="stream_embed" src="https://player.twitch.tv/?channel=irreverentmike&parent={{ domain_parent }}" title="Twitch Stream"></iframe>
     </div>
     <div class="twitch-chat">
-      <iframe id="chat_embed" src="https://www.twitch.tv/embed/irreverentmike/chat" title="Twitch Chat" frameborder="0"></iframe>
+      <iframe id="chat_embed" src="https://www.twitch.tv/embed/irreverentmike/chat?parent={{ domain_parent }}" title="Twitch Chat" frameborder="0"></iframe>
     </div>
   </div>
 </div>
