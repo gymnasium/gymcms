@@ -10,7 +10,7 @@ instructor: "Ethan Marcotte"
 topic: "Web Design & Development"
 video_ID: fk-eu9TmFNk
 video_duration: "4:58"
-featured: true
+featured: false
 short_description: "Learn how to set flexible and accessible type sizes for a more user-friendly web in this tutorial by Ethan Marcotte — the fellow who started that whole “responsive design” thing."
 project_file_source: CodePen
 project_files:
