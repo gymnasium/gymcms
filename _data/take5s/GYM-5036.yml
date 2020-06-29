@@ -10,7 +10,7 @@ instructor: "Ethan Marcotte"
 topic: "Web Design & Development"
 video_ID: nt7p3CuxUzA
 video_duration: "4:55"
-featured: false
+featured: true
 short_description: "Learn how to create visually compelling and accessible drop caps on the web in this tutorial by Ethan Marcotte — the fellow who started that whole “responsive design” thing."
 project_file_source: CodePen
 project_files:
