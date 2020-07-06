@@ -11,7 +11,14 @@
   background-image: linear-gradient(to top, #00aeef 0%, #007fae 99%, #007fae 100%);
   padding-top: 15px;
   padding-bottom: 15px;
-  overflow: hidden;
+}
+
+@media (min-width: 48em) {
+
+  .blue-beanie-day {
+    overflow: hidden;
+  }
+
 }
 
 .blue-beanie-day .content {

@@ -7,7 +7,6 @@
   background-color: #d73158;
   padding-top: 15px;
   padding-bottom: 15px;
-  overflow: hidden;
   transition: background-color ease .5s;
 }
 
@@ -105,6 +104,10 @@
 }
 
 @media (min-width: 70em) {
+
+  .hero-promo-webinar {
+    overflow: hidden;
+  }
 
   .hero-promo-webinar .content::before,
   .hero-promo-webinar .content::after {
