@@ -3,6 +3,7 @@ title: Gymnasium Static Content
 url: https://staging.thegymcms.com
 baseurl:
 timezone: America/New_York
+environment: staging
 
 # Building
 
@@ -12,6 +13,7 @@ exclude:
   - 'Gemfile.lock'
   - 'README.md'
   - 'netlify.toml'
+  - '.jekyll-cache'
 
 repository: gymnasium/gymcms
 

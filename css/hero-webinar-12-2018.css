@@ -15,7 +15,6 @@
   background-size: cover;
   padding-top: 15px;
   padding-bottom: 15px;
-  overflow: hidden;
 }
 
 .webinar-12-2018::after {
@@ -79,9 +78,19 @@
 .webinar-12-2018 header h2,
 .webinar-12-2018 header h3,
 .webinar-12-2018 header p {
-  text-align: center;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@media (min-width: 32em) {
+
+  .webinar-12-2018 header h1,
+  .webinar-12-2018 header h2,
+  .webinar-12-2018 header h3,
+  .webinar-12-2018 header p {
+    text-align: center;
+  }
+
 }
 
 .webinar-12-2018 header h1 {
@@ -113,8 +122,15 @@
 }
 
 .webinar-12-2018 .cta {
-  text-align: center;
   margin-top: 1.6em;
+}
+
+@media (min-width: 32em) {
+
+  .webinar-12-2018 .cta {
+    text-align: center;
+  }
+
 }
 
 .webinar-12-2018 a.gym-button-secondary {
