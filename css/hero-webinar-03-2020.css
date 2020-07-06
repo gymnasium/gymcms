@@ -25,7 +25,6 @@
   background-size: 1.375em 1.375em;
   padding-top: 15px;
   padding-bottom: 15px;
-  overflow: hidden;
 }
 
 .webinar-03-2020 .content {
@@ -186,9 +185,6 @@ a.gym-button-secondary:active {
   /* text-decoration: line-through;
   text-decoration-color: red; */
   opacity: 0.6;
-}
-
-#qmark {
 }
 
 #qmark::after {

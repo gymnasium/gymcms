@@ -23,8 +23,7 @@
 .hero-promo .content {
   padding-left: 15px;
   padding-right: 15px;
-  overflow: hidden;
-  }
+}
 
 .hero-promo header {
   position: relative;
@@ -148,7 +147,7 @@
 
   #hero-dfg-2019 {
     background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-2000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
-    }
+  }
 
 }
 
