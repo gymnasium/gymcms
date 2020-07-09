@@ -5,6 +5,122 @@ permalink: /static/system-status/
 
 <style>
 
+/* --- Course Resources (Syllabus & Chapter Raw HTML blocks) --- */
+
+.edx-block-resources {
+  font-size: 16px !important;
+  color: #222;
+}
+
+.edx-block-resources header {
+  font-size: 16px !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 1em !important;
+}
+
+.edx-block-resources section {
+  padding-top: 1.2em;
+  border-top: 1px dashed #ccc;
+  margin-top: 1.4em;
+}
+
+.edx-block-resources h2,
+.edx-block-resources h3,
+.edx-block-resources p {
+  margin-top: 0;
+  margin-bottom: 0 !important;
+ }
+
+.handouts .handouts-header,
+.edx-block-resources h2 {
+  font: 900 1.55em/1.15 "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif !important;
+  color: #222 !important;
+  letter-spacing: 0.035rem !important;
+}
+
+.edx-block-resources h3 {
+  font-size: 1.4em !important;
+  line-height: 1.15 !important;
+}
+
+.handouts .handouts-header {
+  text-transform: uppercase !important;
+  margin-bottom: 1.2rem !important;
+}
+
+.edx-block-resources p {
+  font: 1em/1.35 "Helvetica Neue", Helvetica, sans-serif;
+  margin-top: 0.5rem;
+}
+
+.handouts p,
+.handouts dl div {
+  margin-top: 1rem;
+}
+
+.handouts dt,
+.handouts dd {
+  line-height: 1.35;
+}
+
+.edx-block-resources ul {
+  margin-top: 0 !important;
+}
+
+.edx-block-resources li {
+  line-height: 1.35;
+  margin-top: 1rem;
+  margin-bottom: 0 !important;
+}
+
+/* ---
+https://github.com/gymnasium/tracker/issues/54
+--- */
+
+#homework-materials {
+  font-size: 16px;
+  color: #222;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#homework-materials h2 {
+  font-weight: 900;
+  font-size: 1.2em;
+  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
+  color: #222;
+  letter-spacing: .05rem;
+  margin-top: 0;
+  margin-bottom: 1.2em;
+}
+
+#homework-materials p {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+.handouts a,
+.edx-block-resources a,
+#homework-materials a {
+  color: inherit !important;
+  text-decoration: none;
+  padding-bottom: 0.125rem;
+  border-bottom: 1px solid #222 !important;
+  margin-bottom: -0.125rem;
+}
+
+.handouts a:hover,
+.handouts a:focus,
+.handouts a:active,
+.edx-block-resources a:hover,
+.edx-block-resources a:focus,
+.edx-block-resources a:active,
+#homework-materials a:hover,
+#homework-materials a:focus,
+#homework-materials a:active {
+  border-bottom-width: 2px !important;
+}
+
 /* ---
 https://github.com/gymnasium/tracker/issues/47
 --- */
