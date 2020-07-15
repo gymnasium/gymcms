@@ -1,0 +1,141 @@
+---
+---
+
+.hero-promo {
+  position: relative;
+  font-size: 16px;
+  background-color: #222;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 2px solid #444;
+}
+
+.hero-promo .content {
+  padding: 15px 30px 45px;
+}
+
+.hero-promo .artwork {
+  height: 0;
+  background: #d73158 no-repeat center center / contain;
+  background-image: url("{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-016.png");
+  padding-bottom: 62.5%;
+  margin: -15px -15px 0;
+}
+
+@media (min-width: 48em) {
+
+  .hero-promo .artwork {
+    background: transparent no-repeat center center / cover;
+    background-image: url("{{ site.url }}{{ site.baseurl }}/img/badges-artwork/svg/gym-016-badge.svg");
+    padding-bottom: 100%;
+    margin-top: 15px;
+  }
+
+  .hero-promo .content {
+    padding: 0 0 45px 15px;
+  }
+
+}
+
+@media (min-width: 62.5em) {
+
+  .hero-promo .artwork {
+    margin: 15px 0;
+  }
+
+  .hero-promo .content {
+    padding: 0 15px 45px;
+  }
+
+}
+
+@media (min-width: 75em) {
+
+  .hero-promo .content {
+    padding-top: 25px;
+  }
+
+}
+
+.hero-promo header h1,
+.hero-promo header p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero-promo header h1 {
+  font-size: 2.5em;
+  color: #fff;
+}
+
+.hero-promo header p {
+  font: normal 1.15em/1.4 "Helvetica Neue", Helvetica, sans-serif;
+  color: #ccc;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.hero-promo .subhead {
+  font: 900 1.5em/1.15 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 1px;
+  word-spacing: -3px;
+  color: #ccc;
+}
+
+.hero-promo .subhead strong {
+  font-weight: inherit;
+}
+
+.hero-promo .description {
+  max-width: 27em;
+}
+
+.hero-promo .new-course mark {
+  font-style: inherit;
+  color: #f8971d;
+  background-color: transparent;
+}
+
+.hero-promo img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.hero-promo .all-caps {
+  text-transform: uppercase;
+}
+
+.hero-promo .break {
+  display: block;
+}
+
+.hero-promo .no-wrap {
+  white-space: nowrap;
+}
+
+.hero-promo .cta {
+  margin-top: 1.6em;
+}
+
+.hero-promo a.gym-button-secondary {
+  font-size: 105%;
+  width: auto;
+  color: #222 !important;
+  border: 2px solid #fff !important;
+  padding: 1.2em 2em !important;
+  vertical-align: bottom;
+}
+
+.hero-promo a.gym-button-secondary:hover,
+.hero-promo a.gym-button-secondary:focus,
+.hero-promo a.gym-button-secondary:active {
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+
+.hero-promo a.gym-button-secondary:focus,
+.hero-promo a.gym-button-secondary:active {
+  background-color: #666 !important;
+}
