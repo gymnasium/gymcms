@@ -135,7 +135,11 @@
   border: 2px solid #fff !important;
 }
 
+.hero-promo a.gym-button-secondary:hover {
+  background-color: #666 !important;
+}
+
 .hero-promo a.gym-button-secondary:focus,
 .hero-promo a.gym-button-secondary:active {
-  background-color: #666 !important;
+  background-color: transparent !important;
 }
