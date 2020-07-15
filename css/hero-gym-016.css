@@ -92,6 +92,7 @@
 
 .hero-promo .new-course mark {
   font-style: inherit;
+  font-weight: inherit;
   color: #f8971d;
   background-color: transparent;
 }
