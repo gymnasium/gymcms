@@ -11,13 +11,14 @@
 }
 
 .hero-promo .content {
-  padding: 15px 30px 45px;
+  padding: 10px 15px 45px;
 }
 
 .hero-promo .artwork {
   height: 0;
-  background: #d73158 no-repeat center center / contain;
-  background-image: url("{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-016.png");
+  background: #d73158 url("{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-016.png")no-repeat center center;
+  background-image: url("{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-016.svg"), linear-gradient(transparent, 0, transparent);
+  background-size: contain;
   padding-bottom: 62.5%;
   margin: -15px -15px 0;
 }
@@ -25,10 +26,13 @@
 @media (min-width: 48em) {
 
   .hero-promo .artwork {
-    background: transparent no-repeat center center / cover;
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/badges-artwork/svg/gym-016-badge.svg");
+    !position: relative;
+    !left: 15px;
+    background: transparent url("{{ site.url }}{{ site.baseurl }}/img/badges-artwork/png/gym-016-badge.png") no-repeat center center;
+    background-image: url("{{ site.url }}{{ site.baseurl }}/img/badges-artwork/svg/gym-016-badge.svg"), linear-gradient(transparent, 0, transparent);
+    background-size: contain;
     padding-bottom: 100%;
-    margin-top: 15px;
+    margin: 15px 0;
   }
 
   .hero-promo .content {
@@ -39,10 +43,6 @@
 
 @media (min-width: 62.5em) {
 
-  .hero-promo .artwork {
-    margin: 15px 0;
-  }
-
   .hero-promo .content {
     padding: 0 15px 45px;
   }
@@ -52,7 +52,7 @@
 @media (min-width: 75em) {
 
   .hero-promo .content {
-    padding-top: 20px;
+    padding-top: 15px;
   }
 
 }
@@ -64,8 +64,17 @@
 }
 
 .hero-promo header h1 {
-  font-size: 2.5em;
+  font-size: 2.25em;
   color: #fff;
+}
+
+@media (min-width: 48em) {
+
+  .hero-promo header h1 {
+    font-size: 2.5em;
+
+  }
+
 }
 
 .hero-promo header p {
@@ -80,6 +89,7 @@
   letter-spacing: 1px;
   word-spacing: -3px;
   color: #ccc;
+  margin-bottom: 1.4rem;
 }
 
 .hero-promo .subhead strong {
