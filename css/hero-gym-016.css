@@ -26,26 +26,22 @@
 @media (min-width: 48em) {
 
   .hero-promo .artwork {
-    position: relative;
-    left: 15px;
+    !position: relative;
+    !left: 15px;
     background: transparent url("{{ site.url }}{{ site.baseurl }}/img/badges-artwork/png/gym-016-badge.png") no-repeat center center;
     background-image: url("{{ site.url }}{{ site.baseurl }}/img/badges-artwork/svg/gym-016-badge.svg"), linear-gradient(transparent, 0, transparent);
     background-size: contain;
     padding-bottom: 100%;
-    margin: 15px 0 15px -15px;
+    margin: 15px 0;
   }
 
   .hero-promo .content {
-    padding: 0 0 45px 20px;
+    padding: 0 0 45px 15px;
   }
 
 }
 
 @media (min-width: 62.5em) {
-
-  .hero-promo .artwork {
-    margin: 15px 0 15px -30px;
-  }
 
   .hero-promo .content {
     padding: 0 15px 45px;
