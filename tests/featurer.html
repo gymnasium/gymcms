@@ -1,0 +1,45 @@
+---
+layout: default
+permalink: tests/featurer/
+featured_courses: GYM-016, GYM-104, GYM-015
+---
+
+{%- assign featured_courses = page.featured_courses  | split: ", " -%}
+
+
+
+<pre>Found {{ featured_courses | size }} items</pre>
+
+{%- for featured in featured_courses -%}
+
+<b><pre>{{ site.data.courses[featured].course_ID }}</pre></b>
+<pre>{{ site.data.courses[featured].title }}</pre>
+<pre>{{ site.data.courses[featured].short_description }}</pre>
+<pre>{{ site.data.courses[featured].url }}</pre>
+
+{%- assign featured_artwork = site.data.courses[featured].course_ID | downcase | append: '.png' -%}
+{%- assign course_artwork_path = site.url | append: site.baseurl | append: "/img/course-artwork/png/"-%}
+
+{%- if site.data.courses[featured].topic == "Web Design & Development" -%}
+    {%- assign content_color = "#d73158" -%}
+{%- elsif site.data.courses[featured].topic == "User Experience" -%}
+    {%- assign content_color = "#5ca5a0" -%}
+{%- elsif site.data.courses[featured].topic == "Content Creation" -%}
+    {%- assign content_color = "#2c9959" -%}
+{%- elsif site.data.courses[featured].topic == "JavaScript" -%}
+    {%- assign content_color = "#764c9f" -%}
+{%- elsif site.data.courses[featured].topic == "Prototyping" -%}
+    {%- assign content_color = "#5ca5a0" -%}
+{%- else -%}
+    <b>ERROR!</b>🚧
+    {%- assign content_color = "ERROR" -%}
+
+{%- endif -%}
+
+<pre>{{ content_color }}</pre>
+<pre>{{ featured_artwork | prepend: course_artwork_path }}</pre>
+
+<hr>
+{%- endfor -%}
+
+
