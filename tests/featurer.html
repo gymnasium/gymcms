@@ -20,7 +20,7 @@ featured_courses: GYM-016, GYM-104, GYM-015
 {%- assign artwork_png = site.data.courses[featured].course_ID | downcase | append: '.png' -%}
 {%- assign artwork_svg = site.data.courses[featured].course_ID | downcase | append: '.svg' -%}
 {%- assign artwork_path_png = site.url | append: site.baseurl | append: "/img/course-artwork/png/"-%}
-{%- assign artwork_path_svg = site.url | append: site.baseurl | append: "/img/course-artwork/png/"-%}
+{%- assign artwork_path_svg = site.url | append: site.baseurl | append: "/img/course-artwork/svg/"-%}
 
 {%- if site.data.courses[featured].topic == "Web Design & Development" -%}
     {%- assign content_color = "#d73158" -%}
