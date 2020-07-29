@@ -12,13 +12,15 @@ featured_courses: GYM-016, GYM-104, GYM-015
 
 {%- for featured in featured_courses -%}
 
-<b><pre>{{ site.data.courses[featured].course_ID }}</pre></b>
-<pre>{{ site.data.courses[featured].title }}</pre>
-<pre>{{ site.data.courses[featured].short_description }}</pre>
-<pre>{{ site.data.courses[featured].url }}</pre>
+<b><pre>Course ID: {{ site.data.courses[featured].course_ID }}</pre></b>
+<pre>Title: {{ site.data.courses[featured].title }}</pre>
+<pre>Description: {{ site.data.courses[featured].short_description }}</pre>
+<pre>URL: {{ site.data.courses[featured].url }}</pre>
 
-{%- assign featured_artwork = site.data.courses[featured].course_ID | downcase | append: '.png' -%}
-{%- assign course_artwork_path = site.url | append: site.baseurl | append: "/img/course-artwork/png/"-%}
+{%- assign artwork_png = site.data.courses[featured].course_ID | downcase | append: '.png' -%}
+{%- assign artwork_svg = site.data.courses[featured].course_ID | downcase | append: '.svg' -%}
+{%- assign artwork_path_png = site.url | append: site.baseurl | append: "/img/course-artwork/png/"-%}
+{%- assign artwork_path_svg = site.url | append: site.baseurl | append: "/img/course-artwork/png/"-%}
 
 {%- if site.data.courses[featured].topic == "Web Design & Development" -%}
     {%- assign content_color = "#d73158" -%}
@@ -36,8 +38,9 @@ featured_courses: GYM-016, GYM-104, GYM-015
 
 {%- endif -%}
 
-<pre>{{ content_color }}</pre>
-<pre>{{ featured_artwork | prepend: course_artwork_path }}</pre>
+<pre>bg_color: {{ content_color }}</pre>
+<pre>png: {{ artwork_png | prepend: artwork_path_png }}</pre>
+<pre>svg: {{ artwork_svg | prepend: artwork_path_svg }}</pre>
 
 <hr>
 {%- endfor -%}
