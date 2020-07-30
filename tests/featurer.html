@@ -7,8 +7,11 @@ featured_courses: GYM-107, GYM-014, GYM-105
 {%- assign featured_courses = page.featured_courses  | split: ", " -%}
 
 
+{%- assign item_count = featured_courses | size -%}
 
-<pre>Found {{ featured_courses | size }} items</pre>
+<pre>
+{"featured_courses": [
+</pre>
 
 {%- for featured in featured_courses -%}
 
@@ -37,6 +40,8 @@ featured_courses: GYM-107, GYM-014, GYM-105
 
 {%- endif -%}
 
+<pre>
+
 {"title": "{{ site.data.courses[featured].title }}",
     "url": "{{ site.data.courses[featured].url }}",
     "description": "{{ site.data.courses[featured].short_description }}",
@@ -45,6 +50,13 @@ featured_courses: GYM-107, GYM-014, GYM-105
     "artwork": ["{{ artwork_svg | prepend: artwork_path_svg
      }}","{{ artwork_png | prepend: artwork_path_png }}"],
     "color": "{{ content_color }}"}
-<hr>
+{%- if forloop.index != item_count -%}
+,
+{%- endif -%}
+</pre>
 {%- endfor -%}
+
+<pre>
+]}
+</pre>
 
