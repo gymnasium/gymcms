@@ -1,17 +1,19 @@
 ---
 layout: raw
-permalink: tests/featurer/
+permalink: feeds/featured-courses.json
 featured_courses: GYM-107, GYM-014, GYM-105
 ---
+{%- comment -%}
+This Jekyll page generates a content feed for the Aquent CMS. 
+The Aquent page design assumes 3 featured courses, it will generate 
+valid json for any number of courses. 
+{%- endcomment -%}
 
 {%- assign featured_courses = page.featured_courses  | split: ", " -%}
 
-
 {%- assign item_count = featured_courses | size -%}
 
-<pre>
 {"featured_courses": [
-</pre>
 
 {%- for featured in featured_courses -%}
 
@@ -21,8 +23,8 @@ featured_courses: GYM-107, GYM-014, GYM-105
 {%- assign artwork_path_svg = site.url | append: site.baseurl | append: "/img/course-artwork/svg/"-%}
 
 {%- assign instructor = site.data.courses[featured].instructor -%}
-{%- assign instructor_name =  site.data.bios[instructor].name  -%}
-{%- assign instructor_title =  site.data.bios[instructor].subtitle  -%}
+{%- assign instructor_name = site.data.bios[instructor].name  -%}
+{%- assign instructor_title = site.data.bios[instructor].subtitle  -%}
 
 {%- if site.data.courses[featured].topic == "Web Design & Development" -%}
     {%- assign content_color = "#d73158" -%}
@@ -35,12 +37,9 @@ featured_courses: GYM-107, GYM-014, GYM-105
 {%- elsif site.data.courses[featured].topic == "Prototyping" -%}
     {%- assign content_color = "#5ca5a0" -%}
 {%- else -%}
-    <b>ERROR!</b>🚧
-    {%- assign content_color = "ERROR" -%}
-
+    {%- assign content_color = "#ccc" -%}
 {%- endif -%}
 
-<pre>
 
 {"title": "{{ site.data.courses[featured].title }}",
     "url": "{{ site.data.courses[featured].url }}",
@@ -53,10 +52,7 @@ featured_courses: GYM-107, GYM-014, GYM-105
 {%- if forloop.index != item_count -%}
 ,
 {%- endif -%}
-</pre>
 {%- endfor -%}
 
-<pre>
 ]}
-</pre>
 
