@@ -5,4 +5,5 @@ course_type: short
 url: https://thegymnasium.com/courses/GYM/009/0/about
 topic: "Web Design & Development"
 short_description: "This course will teach you how to create themes for Drupal 8. Specifically, you will learn how to install a local development environment for Drupal 8, and use the new TWIG templating engine to customize the structure and style of your theme."
+instructor: ghodgkinson
 ---
