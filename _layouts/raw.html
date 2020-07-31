@@ -1,7 +1,11 @@
 {{ content }}
 
+{%- assign extension-check = page.url | slice: -4,4 -%}
+{%- if extension-check !="json"-%}
 <!-- //
 Generated at: {{ site.time }}
 Served from: {{ page.url | absolute_url }}
 Git Hash: {{ site.data['hash']}}
 // -->
+{%- endif -%}
+
