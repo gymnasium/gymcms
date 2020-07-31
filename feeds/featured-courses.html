@@ -1,0 +1,58 @@
+---
+layout: raw
+permalink: feeds/featured-courses.json
+featured_courses: GYM-016, GYM-107, GYM-015
+---
+{%- comment -%}
+This Jekyll page generates a content feed for the Aquent CMS. 
+The Aquent page design assumes 3 featured courses, it will generate 
+valid json for any number of courses. 
+{%- endcomment -%}
+
+{%- assign featured_courses = page.featured_courses  | split: ", " -%}
+
+{%- assign item_count = featured_courses | size -%}
+
+{"featured_courses": [
+
+{%- for featured in featured_courses -%}
+
+{%- assign artwork_png = site.data.courses[featured].course_ID | downcase | append: '.png' -%}
+{%- assign artwork_svg = site.data.courses[featured].course_ID | downcase | append: '.svg' -%}
+{%- assign artwork_path_png = site.url | append: site.baseurl | append: "/img/course-artwork/png/"-%}
+{%- assign artwork_path_svg = site.url | append: site.baseurl | append: "/img/course-artwork/svg/"-%}
+
+{%- assign instructor = site.data.courses[featured].instructor -%}
+{%- assign instructor_name = site.data.bios[instructor].name  -%}
+{%- assign instructor_title = site.data.bios[instructor].subtitle  -%}
+
+{%- if site.data.courses[featured].topic == "Web Design & Development" -%}
+    {%- assign content_color = "#d73158" -%}
+{%- elsif site.data.courses[featured].topic == "User Experience" -%}
+    {%- assign content_color = "#5ca5a0" -%}
+{%- elsif site.data.courses[featured].topic == "Content Creation" -%}
+    {%- assign content_color = "#2c9959" -%}
+{%- elsif site.data.courses[featured].topic == "JavaScript" -%}
+    {%- assign content_color = "#764c9f" -%}
+{%- elsif site.data.courses[featured].topic == "Prototyping" -%}
+    {%- assign content_color = "#5ca5a0" -%}
+{%- else -%}
+    {%- assign content_color = "#ccc" -%}
+{%- endif -%}
+
+
+{"title": "{{ site.data.courses[featured].title }}",
+    "url": "{{ site.data.courses[featured].url }}",
+    "description": "{{ site.data.courses[featured].short_description }}",
+    "instructor_name": "{{ instructor_name }}",
+    "instructor_title": "{{ instructor_title }}",
+    "artwork": ["{{ artwork_svg | prepend: artwork_path_svg
+     }}","{{ artwork_png | prepend: artwork_path_png }}"],
+    "color": "{{ content_color }}"}
+{%- if forloop.index != item_count -%}
+,
+{%- endif -%}
+{%- endfor -%}
+
+]}
+
