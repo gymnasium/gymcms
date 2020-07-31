@@ -1,0 +1,62 @@
+---
+layout: raw
+permalink: tests/featurer/
+featured_courses: GYM-107, GYM-014, GYM-105
+---
+
+{%- assign featured_courses = page.featured_courses  | split: ", " -%}
+
+
+{%- assign item_count = featured_courses | size -%}
+
+<pre>
+{"featured_courses": [
+</pre>
+
+{%- for featured in featured_courses -%}
+
+{%- assign artwork_png = site.data.courses[featured].course_ID | downcase | append: '.png' -%}
+{%- assign artwork_svg = site.data.courses[featured].course_ID | downcase | append: '.svg' -%}
+{%- assign artwork_path_png = site.url | append: site.baseurl | append: "/img/course-artwork/png/"-%}
+{%- assign artwork_path_svg = site.url | append: site.baseurl | append: "/img/course-artwork/svg/"-%}
+
+{%- assign instructor = site.data.courses[featured].instructor -%}
+{%- assign instructor_name =  site.data.bios[instructor].name  -%}
+{%- assign instructor_title =  site.data.bios[instructor].subtitle  -%}
+
+{%- if site.data.courses[featured].topic == "Web Design & Development" -%}
+    {%- assign content_color = "#d73158" -%}
+{%- elsif site.data.courses[featured].topic == "User Experience" -%}
+    {%- assign content_color = "#5ca5a0" -%}
+{%- elsif site.data.courses[featured].topic == "Content Creation" -%}
+    {%- assign content_color = "#2c9959" -%}
+{%- elsif site.data.courses[featured].topic == "JavaScript" -%}
+    {%- assign content_color = "#764c9f" -%}
+{%- elsif site.data.courses[featured].topic == "Prototyping" -%}
+    {%- assign content_color = "#5ca5a0" -%}
+{%- else -%}
+    <b>ERROR!</b>🚧
+    {%- assign content_color = "ERROR" -%}
+
+{%- endif -%}
+
+<pre>
+
+{"title": "{{ site.data.courses[featured].title }}",
+    "url": "{{ site.data.courses[featured].url }}",
+    "description": "{{ site.data.courses[featured].short_description }}",
+    "instructor_name": "{{ instructor_name }}",
+    "instructor_title": "{{ instructor_title }}",
+    "artwork": ["{{ artwork_svg | prepend: artwork_path_svg
+     }}","{{ artwork_png | prepend: artwork_path_png }}"],
+    "color": "{{ content_color }}"}
+{%- if forloop.index != item_count -%}
+,
+{%- endif -%}
+</pre>
+{%- endfor -%}
+
+<pre>
+]}
+</pre>
+
