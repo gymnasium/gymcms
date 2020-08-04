@@ -1,122 +1,78 @@
 ---
 layout: raw
 permalink: /static/home/featured-courses/
+featured_courses: GYM-016, GYM-107, GYM-015, GYM-104
 ---
+
+{%- assign featured_courses = page.featured_courses  | split: ", " -%}
+
+{%- assign item_count = featured_courses | size -%}
+
+
 
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/featured-courses.css">
 
 <div class="section-featured-courses">
   <div class="cols">
     <ul class="list-featured-courses">
+
+    {%- for featured in featured_courses -%}
+    {%- assign artwork_png = site.data.courses[featured].course_ID | downcase | append: '.png' -%}
+    {%- assign artwork_svg = site.data.courses[featured].course_ID | downcase | append: '.svg' -%}
+    {%- assign artwork_path_png = site.url | append: site.baseurl | append: "/img/course-artwork/png/"-%}
+    {%- assign artwork_path_svg = site.url | append: site.baseurl | append: "/img/course-artwork/svg/"-%}
+
+    {%- assign instructor = site.data.courses[featured].instructor -%}
+    {%- assign instructor_name = site.data.bios[instructor].name  -%}
+    {%- assign instructor_title = site.data.bios[instructor].subtitle  -%}
+    
+    {%- assign topic = site.data.courses[featured].topic  -%}
+    {%- assign url = site.data.courses[featured].url  -%}
+    {%- assign title = site.data.courses[featured].title  -%}
+    {%- assign description = site.data.courses[featured].short_description  -%}
+    
+    {%- if site.data.courses[featured].topic == "Web Design & Development" -%}
+        {%- assign content_class = "design-development" -%}
+    {%- elsif site.data.courses[featured].topic == "User Experience" -%}
+        {%- assign content_class = "user-experience" -%}
+    {%- elsif site.data.courses[featured].topic == "Content Creation" -%}
+        {%- assign content_class = "content-creation" -%}
+    {%- elsif site.data.courses[featured].topic == "JavaScript" -%}
+        {%- assign content_class = "development" -%}
+    {%- elsif site.data.courses[featured].topic == "Prototyping" -%}
+        {%- assign content_class = "user-experience" -%}
+    {%- endif -%}
+
       <li>
-        <div class="card featured-course user-experience">
+        <div class="card featured-course {{ content_class }}">
           <div class="card-main equal-h">
             <header>
-              <b class="course-type">User Experience</b>
+              <b class="course-type">{{ topic }}</b>
               <div class="mask">
-                <a href="https://thegymnasium.com/courses/course-v1:GYM+015+0/about" title="Learn More">
-                  <img alt="Prototyping for Digital Products and Websites" srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-015.svg" src="https://thegymnasium.com/asset-v1:GYM+015+0+type@asset+block@gym-015.png" width="256">
+                <a href="{{ url }}" title="Learn More">
+                  <img alt="{{ title }}" srcset="{{ artwork_svg | prepend: artwork_path_svg }}" src="{{ artwork_svg | prepend: artwork_path_png }}" width="256">
                 </a>
               </div>
-              <h2><a href="https://thegymnasium.com/courses/course-v1:GYM+015+0/about" title="Learn More">Prototyping for Digital Products and Websites</a></h2>
-              <p>A case for using prototyping in your design process to boost efficient collaboration.</p>
+              <h2><a href="{{ url }}" title="Learn More">{{ title }}</a></h2>
+              <p>{{ description }}</p>
             </header>
           </div>
           <div class="card-footer">
             <div class="card-info">
               <dl class="instructor">
-                <dt class="byline"><b>with Jenna Bantjes</b></dt>
-                <dd>Experience Designer</dd>
+                <dt class="byline"><b>with {{ instructor_name }}</b></dt>
+                <dd>{{ instructor_title }}</dd>
               </dl>
             </div>
             <div class="card-cta">
-              <a class="gym-button" href="https://thegymnasium.com/courses/course-v1:GYM+015+0/about"><b>Learn More</b></a>
+              <a class="gym-button" href="{{ url }}"><b>Learn More</b></a>
             </div>
           </div>
         </div>
       </li>
-      <li>
-        <div class="card featured-course design-development">
-          <div class="card-main equal-h">
-            <header>
-              <b class="course-type">Web Design & Development</b>
-              <div class="mask">
-                <a href="https://thegymnasium.com/courses/GYM/107/0/about" title="Learn More">
-                  <img alt="Modern Web Design" srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-107.svg" src="https://thegymnasium.com/c4x/GYM/107/asset/gym-107.png" width="256">
-                </a>
-              </div>
-              <h2><a href="https://thegymnasium.com/courses/GYM/107/0/about" title="Learn More">Modern <span class="no-wrap">Web Design</span></a></h2>
-              <p>A beginner’s guide to front-end development covering HTML, CSS, and JavaScript.</p>
-            </header>
-          </div>
-          <div class="card-footer">
-            <div class="card-info">
-              <dl class="instructor">
-                <dt class="byline"><b>with Aaron Gustafson</b></dt>
-                <dd>of Microsoft</dd>
-              </dl>
-            </div>
-            <div class="card-cta">
-              <a class="gym-button" href="https://thegymnasium.com/courses/GYM/107/0/about"><b>Learn More</b></a>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="card featured-course user-experience">
-          <div class="card-main equal-h">
-            <header>
-              <b class="course-type">User Experience</b>
-              <div class="mask">
-                <a href="https://thegymnasium.com/courses/course-v1:GYM+014+0/about" title="Learn More">
-                  <img alt="Working With Atomic Design and Pattern Lab" srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-014.svg" src="https://thegymnasium.com/asset-v1:GYM+014+0+type@asset+block@gym-014.png" width="256">
-                </a>
-              </div>
-              <h2><a href="https://thegymnasium.com/courses/course-v1:GYM+014+0/about" title="Learn More">Working With Atomic Design and Pattern Lab</a></h2>
-              <p>An in-depth look at building successful UI design systems from the author of <cite>Atomic Design</cite>.</p>
-            </header>
-          </div>
-          <div class="card-footer">
-            <div class="card-info">
-              <dl class="instructor">
-                <dt class="byline"><b>with Brad Frost</b></dt>
-                <dd>Web Designer & Speaker</dd>
-              </dl>
-            </div>
-            <div class="card-cta">
-              <a class="gym-button" href="https://thegymnasium.com/courses/course-v1:GYM+014+0/about"><b>Learn More</b></a>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="card featured-course content-creation">
-          <div class="card-main equal-h">
-            <header>
-              <b class="course-type">Content Creation</b>
-              <div class="mask">
-                <a href="https://thegymnasium.com/courses/GYM/105/0/about" title="Learn More">
-                  <img alt="Writing for Web & Mobile" srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-105.svg" src="https://thegymnasium.com/c4x/GYM/105/asset/gym-105.png" width="256">
-                </a>
-              </div>
-              <h2><a href="https://thegymnasium.com/courses/GYM/105/0/about" title="Learn More">Writing for Web & Mobile</a></h2>
-              <p>A deep dive on how to use data to write compelling copy and engage users.</p>
-            </header>
-          </div>
-          <div class="card-footer">
-            <div class="card-info">
-              <dl class="instructor">
-                <dt class="byline"><b>with Stephanie Hay</b></dt>
-                <dd>of Capital One</dd>
-              </dl>
-            </div>
-            <div class="card-cta">
-              <a class="gym-button" href="https://thegymnasium.com/courses/GYM/105/0/about"><b>Learn More</b></a>
-            </div>
-          </div>
-        </div>
-      </li>
+      {%- endfor -%}
     </ul>
+
   </div>
   <div class="about-featured-courses">
     <div class="description">
