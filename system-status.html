@@ -81,6 +81,45 @@ permalink: /static/system-status/
 }
 
 /* ---
+https://github.com/gymnasium/tracker/issues/77
+--- */
+
+.cookiebanner {
+  border-top: 1px dashed #666;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+@media (max-width: 75em) {
+
+  .cookiebanner {
+    text-align: left !important;
+  }
+
+}
+
+.cookiebanner span {
+  color: #fff;
+}
+
+.cookiebanner a {
+  color: #fff !important;
+  padding-bottom: 0.125rem;
+  border-bottom: 1px solid currentColor !important;
+  margin-bottom: -0.125rem;
+}
+
+.cookiebanner a:hover,
+.cookiebanner a:focus,
+.cookiebanner a:active {
+  border-bottom-width: 2px !important;
+}
+
+.cookiebanner-close {
+  color: var(--gym-orange);
+}
+
+/* ---
 https://github.com/gymnasium/tracker/issues/54
 --- */
 
