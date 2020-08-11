@@ -1,0 +1,42 @@
+---
+layout: raw
+permalink: /tests/bios/
+---
+
+<title>Course Catalog: Bios Tests</title>
+
+{% assign instructors = site.data.bios | sort %}
+
+<p>Found: {{ instructors | size }} instructors</p>
+<table border="0">
+    <thead>
+        <th>Name</th>
+        <th>Headshot</th>
+        <th>Short Description</th>
+        <th>Length</th>
+    </thead>
+{% for people in instructors %}
+    {% assign person = people[1] %}
+
+    {% assign bio-link = "https://github.com/gymnasium/gymcms/tree/staging/_data/bios" %}
+    
+    <tr>
+        <td>
+            <a href="{{ bio-link }}" target="_blank" title="Link to GitHub">{{ person.name }}</a>
+        </td>
+        <td>
+            {%- if person.headshot == "bio-placeholder.jpg" -%}
+            <mark>Issue</mark>
+            {%- else -%}
+            OK
+            {%- endif -%}
+        </td>
+        <td>
+            {{ person.description }}
+        </td>
+        <td>
+            {{ person.description | size }}
+        </td>
+    </tr>
+{% endfor %}
+</table>    
