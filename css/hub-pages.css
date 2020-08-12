@@ -156,15 +156,18 @@ main figcaption {
 
 /* gym text */
 
-[role="main"] a.gym-link-secondary {
-  color: inherit;
-  border-bottom: 2px solid #f8971d;
+#main a:not([class]) {
+  line-height: 1.35;
+  color: currentColor !important;
+  padding-bottom: 0.125rem;
+  border-bottom: 1px solid currentColor;
 }
 
-[role="main"] a.gym-link-secondary:hover,
-[role="main"] a.gym-link-secondary:focus {
-  color: inherit;
-  border-bottom: 2px solid #444 !important; /* ! */
+#main a:not([class]):hover,
+#main a:not([class]):focus,
+#main a:not([class]):active {
+ border-bottom-width: 2px;
+ margin-bottom: -0.125rem;
 }
 
 /* --- #main --- */
@@ -365,13 +368,14 @@ footer.card-cta {
 #featured .course-artwork {
   height: 0;
   padding-bottom: 63%;
-  overflow: hidden;
+  border-bottom: 1.2em dashed transparent;
+  margin-top: -1.2em;
+  overflow: visible;
 }
 
 #featured .course-artwork img {
   display: inline-block;
-  max-width: 86%;
-  margin-top: -8%;
+  height: 100%;
 }
 
 #featured .full-width {
