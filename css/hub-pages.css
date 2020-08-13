@@ -366,16 +366,21 @@ footer.card-cta {
 }
 
 #featured .course-artwork {
+  position: relative;
   height: 0;
-  padding-bottom: 63%;
+  padding-bottom: 62.5%;
   border-bottom: 1.2em dashed transparent;
   margin-top: -1.2em;
   overflow: visible;
 }
 
 #featured .course-artwork img {
-  display: inline-block;
-  height: 100%;
+  display: block;
+  position: absolute;
+  top: .125em;
+  left: 0;
+  width: 108%;
+  height: 108%;
 }
 
 #featured .full-width {
