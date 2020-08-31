@@ -34,39 +34,32 @@ main figcaption {
 
 /* headings / margin reset */
 
-[role="main"] h1,
-[role="main"] h2,
-[role="main"] h3,
-[role="main"] h4,
-[role="main"] h5,
-[role="main"] h6 {
+#main h1,
+#main h2,
+#main h3,
+#main h4,
+#main h5,
+#main h6 {
   color: #222;
+  line-height: 1.15;
+  letter-spacing: 0.015em;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-[role="main"] h1 {
-  letter-spacing: .025em;
-}
-
-[role="main"] h2 {
-  letter-spacing: .015em;
 }
 
 #featured h3 {
   letter-spacing: .035em;
 }
 
-[role="main"] h3 {
-  letter-spacing: 0;
+#main h3 {
   text-transform: none;
 }
 
 /* paragraphs */
 
-[role="main"] p {
+#main p {
   font: normal 1.15em/1.45 "Helvetica Neue", Helvetica, sans-serif;
-  margin-top: 1em;
+  margin-top: 1.2rem;
   margin-bottom: 0;
 }
 
@@ -140,15 +133,9 @@ main figcaption {
   margin-right: .25em;
 }
 
-/* remove border from linked images  */
-
-[role="main"] a.img-link:hover {
-  border-bottom: none;
-}
-
 /* gym button */
 
-[role="main"] .gym-button {
+#main .gym-button {
   width: auto !important; /* !override / shrink-wrap */
   padding: 1.2em 2.2em !important; /* !override */
   border-radius: 3px;
@@ -156,17 +143,18 @@ main figcaption {
 
 /* gym text */
 
-#main a:not([class]) {
-  line-height: inherit !important;
+main[role="main"] a:not([class]) {
+  line-height: inherit;
   color: currentColor !important;
+  text-decoration: none;
   padding-bottom: 0.125rem;
-  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid currentColor !important;
 }
 
-#main a:not([class]):hover,
-#main a:not([class]):focus,
-#main a:not([class]):active {
- border-bottom-width: 2px;
+main[role="main"] a:not([class]):hover,
+main[role="main"] a:not([class]):focus,
+main[role="main"] a:not([class]):active {
+ border-bottom-width: 2px !important;
  margin-bottom: -0.125rem;
 }
 
@@ -178,7 +166,7 @@ main figcaption {
   font-size: 16px;
 }
 
-[role="main"] .main-content {
+main[role="main"] .main-content {
   padding-left: 0;
   padding-right: 0;
 }
@@ -193,10 +181,6 @@ main figcaption {
 
 #main .gym-button b {
   color: #fff;
-}
-
-#main .section-content:not(.cta) a {
-  color: #f8971d;
 }
 
 /* !override / remove padding-bottom  */
@@ -226,7 +210,8 @@ main figcaption {
 }
 
 #main h1,
-#main h2 {
+#main h2,
+#main h3 {
   font-weight: 900;
 }
 
@@ -242,12 +227,18 @@ main figcaption {
 
 #main h2 {
   font-size: 1.8em;
-  color: #222;
 }
 
-main h3 {
+#main h3 {
   font-size: 1.4em;
+}
+
+#main h3 a {
   line-height: 1.35;
+}
+
+#main h3 + p {
+  margin-top: 1.4rem;
 }
 
 /* --- section --- */
@@ -259,6 +250,11 @@ main h3 {
 
 .section header p {
   font: normal 1.25em/1.45 "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.section header p,
+.subsection header p {
+  margin-top: 1.2rem;
 }
 
 .section-content {
@@ -291,7 +287,7 @@ main h3 {
 }
 
 .section-content li p {
-  margin-top: .6em;
+  margin-top: .6rem;
 }
 
 /* --- card layout --- */
@@ -314,10 +310,6 @@ main h3 {
 .card-main,
 .card-cta-button {
   padding: 1.2em;
-}
-
-.card p {
-  margin-top: 1em;
 }
 
 .card-cta {
@@ -544,10 +536,14 @@ footer.card-cta {
 }
 
 .subsection header {
-  margin-top: 1.6em;
+  margin-top: 2em;
   margin-bottom: 1.2em;
 }
 
+.section header h3,
+.subsection header h3 {
+  font-size: 1.4em;
+}
 
 @media (min-width: 40em) {
 
