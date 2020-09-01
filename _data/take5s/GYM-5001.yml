@@ -11,7 +11,7 @@ topic: "Web Design & Development"
 video_ID: zRNUPU2dujU
 video_duration: "4:59"
 featured: false
-short_description: "Learn how to create a scrolling background effect using CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium." 
+short_description: "Learn how to create a scrolling background effect using CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"
@@ -23,6 +23,6 @@ related_content:
   url: "https://caniuse.com/#feat=background-attachment"
 - label: "Stack Overflow: Background size on iOS"
   url: "https://stackoverflow.com/questions/21476380/background-size-on-ios"
-- label: "MDN web docs: Viewport concepts"
+- label: "MDN: Viewport concepts"
   url: "https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts"
 ---
