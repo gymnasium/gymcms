@@ -519,7 +519,7 @@ footer.card-cta {
 }
 
 .list-hr li {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px dashed #ddd;
   padding-top: 1.2em;
   padding-bottom: 1.2em;
 }
