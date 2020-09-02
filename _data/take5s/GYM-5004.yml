@@ -19,7 +19,7 @@ project_files:
 - label: "Completed Project"
   url: "https://codepen.io/josborn/pen/oRVrOR"
 related_content:
-- label: "Creating a CSS Knockout Text Effect"
+- label: "Gymnasium: Creating a CSS Knockout Text Effect"
   url: "https://thegymnasium.com/take5/creating-a-css-knockout-text-effect"
 - label: "How @supports works by Chris Coyier"
   url: "https://css-tricks.com/how-supports-works/"

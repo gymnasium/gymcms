@@ -8,7 +8,7 @@ poster_art: /img/take5/posters/gym-5003.jpg
 topic: "Web Design & Development"
 subtopics:
   - label: CSS
-  - label: HTML 
+  - label: HTML
 permalink: /static/take5/:name
 live: true
 instructor: "Jeremy Osborn"
@@ -24,7 +24,7 @@ project_files:
   url: "https://codepen.io/josborn/pen/JVavQN"
 related_content:
 - label: "HSL Color Picker"
-  url: "http://hslpicker.com/"
+  url: "http://hslpicker.com"
 - label: "Multiple Backgrounds and CSS Gradients by Jonathan Snook"
   url: "https://snook.ca/archives/html_and_css/multiple-bg-css-gradients"
 - label: "Can I Use: CSS Gradients"
