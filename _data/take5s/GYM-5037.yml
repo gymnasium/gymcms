@@ -10,7 +10,7 @@ instructor: "Clarissa Peterson"
 topic: "Web Design & Development"
 video_ID: qfdOIriWM90
 video_duration: "3:52"
-featured: true
+featured: false
 short_description: "Learn how to leverage the inherent accessibility of HTML documents in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
 related_content:
 - label: "HTML: A good basis for accessibility"
