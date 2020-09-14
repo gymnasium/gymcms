@@ -490,12 +490,19 @@ details.take5--transcript {
 }
 
 #tutorial-transcript [class*="language-"],
-#tutorial-transcript [class*="language-"] + p {
+#tutorial-transcript [class*="language-"] + p,
+#tutorial-transcript .example,
+#tutorial-transcript .example + p {
   margin-top: 1.6675em;
 }
 
 #tutorial-transcript [data-language="markup"]::before {
   content: "html";
+}
+
+#tutorial-transcript .example {
+  background-color: transparent;
+  padding: 1.2em;
 }
 
 #tutorial-transcript blockquote p {
