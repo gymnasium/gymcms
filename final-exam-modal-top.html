@@ -45,3 +45,11 @@ permalink: /static/final-exam-modal-top/
     </div>
   </div>
 </main>
+
+<script type="text/javascript">
+  // append the course ID to the surveymonkey survey as a URL parameter
+  $(() => {
+    const COURSE_NUM = $('#__course_number__').text();
+    $('.survey a')[0].href += `?cid=${COURSE_NUM}`;
+  })
+</script>
