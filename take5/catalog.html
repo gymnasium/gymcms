@@ -27,28 +27,28 @@ permalink: /static/take5/
 <header class="take5--about" id="about">
   <div class="container">
     <h1>Take 5</h1>
-    <p><strong>Learn a new skill in 5 minutes</strong> — video tutorials on web design and development, UX, prototyping, and career skills.</p>
+    <p><strong>Learn a new skill in 5 minutes.</strong><br>Video tutorials on web design and development, accessibility, user experience, prototyping, and career skills.</p>
   </div>
 </header>
 
-{%- assign pubdates = ""  | split: ", " -%}
-{%- assign publish_order = ""  | split: ", " -%}
-{% assign topics = ""  | split: ', '%}
+{%- assign pubdates = "" | split: ", " -%}
+{%- assign publish_order = "" | split: ", " -%}
+{% assign topics = "" | split: ', '%}
 
-{%- assign recent = ""  | split: ", " -%}
+{%- assign recent = "" | split: ", " -%}
 
 {% assign catalog = site.data.take5s | sort %}
 
 {% for take5_hash in catalog %}
     {% assign item = take5_hash[1] %}
     {% if item.live == true %}
-        {% assign topics = topics | push: item.topic  %}
+        {% assign topics = topics | push: item.topic %}
         {%- assign pubdates = pubdates | push: item.date -%}
     {% endif %}
 
 {% endfor %}
 
-{% assign unique_topics = topics | uniq | join: ', '|split: ', ' %}
+{% assign unique_topics = "Web Design & Development, Accessibility, User Experience, Prototyping, Career Skills" | uniq | join: ', '|split: ', ' %}
 
 {%- assign pubdates_sorted = pubdates | sort -%}
 
@@ -63,7 +63,7 @@ permalink: /static/take5/
 
 {%- endfor -%}
 
-{%- assign publish_order = publish_order | uniq | join: ', '|split: ', '  -%}
+{%- assign publish_order = publish_order | uniq | join: ', '|split: ', ' -%}
 
 {%- for item in publish_order -%}
 
