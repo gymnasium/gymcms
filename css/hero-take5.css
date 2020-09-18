@@ -2,11 +2,12 @@
   background-color: #2c9959;
 }
 
-.topic-user-experience,
-.topic-prototyping {
+.topic-prototyping,
+.topic-user-experience, {
   background-color: #5ca5a0;
 }
 
+.topic-accessibility,
 .topic-web-design-development {
   background-color: #d73158;
 }
