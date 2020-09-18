@@ -12,17 +12,17 @@
 
 {% endcase %}
 
-{% if course.topic == "Web Design & Development" %}
+{% if course.topic == "Accessibility" %}
 
-  {% assign course1 = site.data.courses.GYM-109 %}
-  {% assign course2 = site.data.courses.GYM-107 %}
+  {% assign course1 = site.data.courses.GYM-016 %}
+  {% assign course2 = site.data.courses.GYM-007 %}
   {% assign course3 = site.data.courses.GYM-011 %}
 
-{% elsif course.topic == "User Experience" %}
+{% elsif course.topic == "Career Skills" %}
 
-  {% assign course1 = site.data.courses.GYM-103 %}
-  {% assign course2 = site.data.courses.GYM-015 %}
-  {% assign course3 = site.data.courses.GYM-105 %}
+  {% assign course1 = site.data.courses.GYM-001 %}
+  {% assign course2 = site.data.courses.GYM-105 %}
+  {% assign course3 = site.data.courses.GYM-106 %}
 
 {% elsif course.topic == "Prototyping" %}
 
@@ -30,11 +30,17 @@
   {% assign course2 = site.data.courses.GYM-005 %}
   {% assign course3 = site.data.courses.GYM-008 %}
 
-{% elsif course.topic == "Career Skills" %}
+{% elsif course.topic == "User Experience" %}
 
-  {% assign course1 = site.data.courses.GYM-001 %}
-  {% assign course2 = site.data.courses.GYM-105 %}
-  {% assign course3 = site.data.courses.GYM-106 %}
+  {% assign course1 = site.data.courses.GYM-103 %}
+  {% assign course2 = site.data.courses.GYM-015 %}
+  {% assign course3 = site.data.courses.GYM-105 %}
+
+{% elsif course.topic == "Web Design & Development" %}
+
+  {% assign course1 = site.data.courses.GYM-109 %}
+  {% assign course2 = site.data.courses.GYM-107 %}
+  {% assign course3 = site.data.courses.GYM-011 %}
 
 {% else %}
 {% assign course1 = "" %}
