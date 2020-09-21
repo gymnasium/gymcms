@@ -215,6 +215,10 @@ main figcaption {
   margin-top: .6em;
 }
 
+#about p strong:first-child {
+  display: block;
+}
+
 main h3 {
   font-size: 1.4em;
   line-height: 1.15;
