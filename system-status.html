@@ -81,6 +81,64 @@ permalink: /static/system-status/
 }
 
 /* ---
+https://github.com/gymnasium/tracker/issues/81
+--- */
+
+/* syllabus / add single-column breakpoint fix */
+
+@media (max-width: 62em) {
+
+  #main .info-wrapper .updates {
+    padding-bottom: 0;
+    border-right: 0;
+  }
+
+  #main .info-wrapper .handouts {
+    display: block;
+    width: 100%;
+    padding-bottom: 2em;
+    border-top: 1px dashed #ccc;
+  }
+
+}
+
+/* dashboard / update single-column layout style */
+
+@media (max-width: 62em) {
+
+  #dashboard-main #my-courses {
+    border-right: 0;
+  }
+
+  #dashboard-main .profile-sidebar {
+    border-top: 1px dashed #ccc;
+  }
+
+}
+
+/* about / update sidebar style */
+
+.course-about-sidebar .course-instructor {
+  padding-top: 1.2em;
+}
+
+@media (max-width: 62em) {
+
+  .course-about .course-about-overview {
+    padding-right: 0;
+    padding-bottom: 1.2em;
+    border-right: 0;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 1.2em;
+  }
+
+  .course-about .course-about-sidebar {
+    padding: 0;
+  }
+
+}
+
+/* ---
 https://github.com/gymnasium/tracker/issues/77
 --- */
 
