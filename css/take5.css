@@ -115,6 +115,7 @@ main figcaption {
   content: "";
   display: block;
   padding-top: .5625rem;
+  outline: none;
 }
 
 /* !override / remove padding-bottom  */
