@@ -1,0 +1,22 @@
+---
+course_ID: GYM-5040
+title: "Improving Image Accessibility With Alt Text"
+date: 2020-09-29T00:00:00-04:00
+course_type: take5
+url: /static/take5/GYM-5040/
+poster_art: /img/take5/posters/gym-5040.jpg
+live: true
+instructor: "Clarissa Peterson"
+topic: "Accessibility"
+video_ID: CizNbSuRRew
+video_duration: "4:20"
+featured: true
+short_description: "Learn best practices for using alt text to improve the accessibility of the images on your website in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
+related_content:
+- label: "When Not to use alt attributes"
+  url: "https://www.sitepoint.com/the-hidden-nuggets-of-wcag2-when-not-to-use-alt-attributes/"
+- label: "Alt text decision tree"
+  url: "https://www.w3.org/WAI/tutorials/images/decision-tree/"
+- label: "Alt text and image descriptions made simple"
+  url: "https://meloukhia.net/2016/10/alt_text_and_image_descriptions_made_simple/"
+---
