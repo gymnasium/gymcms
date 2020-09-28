@@ -1,7 +1,7 @@
 ---
 course_ID: GYM-5039
 title: "Designing Accessible Data Tables"
-date: 2020-09-15T00:00:00-04:00
+date: 2020-09-22T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5039/
 poster_art: /img/take5/posters/gym-5039.jpg
@@ -10,7 +10,7 @@ instructor: "Clarissa Peterson"
 topic: "Accessibility"
 video_ID: npto50RJpDc
 video_duration: "4:28"
-featured: true
+featured: false
 short_description: "Learn how to make the data tables in your HTML documents more accessible for everyone in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
 project_file_source: CodePen
 project_files:
