@@ -10,7 +10,7 @@ instructor: "Clarissa Peterson"
 topic: "Accessibility"
 video_ID: CizNbSuRRew
 video_duration: "4:20"
-featured: true
+featured: false
 short_description: "Learn best practices for using alt text to improve the accessibility of the images on your website in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
 related_content:
 - label: "When Not to use alt attributes"
