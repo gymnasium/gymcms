@@ -13,9 +13,9 @@ video_duration: "4:13"
 featured: true
 short_description: "Learn how to write alt text for more complex image use, such as charts, graphs, and image links in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
 related_content:
-- label: "Complex images tutorial"
+- label: "Complex Images Tutorial"
   url: "https://www.w3.org/WAI/tutorials/images/complex/"
-- label: "Charts and Accessibility"
+- label: "Charts & Accessibility"
   url: "https://accessibility.psu.edu/images/charts/"
 - label: "Writing Alt Text for Data Visualization by Amy Cesal"
   url: "https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81"
