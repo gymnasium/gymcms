@@ -139,6 +139,44 @@ https://github.com/gymnasium/tracker/issues/81
 }
 
 /* ---
+https://github.com/gymnasium/tracker/issues/85
+--- */
+
+/* update (text) link style */
+
+#content a:not([class]) {
+  line-height: inherit;
+  color: currentColor !important;
+  text-decoration: none;
+  padding-bottom: 0.125rem;
+  border-bottom: 1px solid currentColor !important;
+}
+
+#content a:not([class]):hover,
+#content a:not([class]):focus,
+#content a:not([class]):active {
+  border-bottom-width: 2px !important;
+  margin-bottom: -0.125rem;
+}
+
+/* update font-family for catalog navigation */
+
+#gym-catalog .course-menu a:focus,
+#gym-catalog .course-menu a:active {
+  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/*--
+https://github.com/gymnasium/tracker/issues/84
+--*/
+
+/* update color contrast ratio */
+
+#content .how-gymnasium-works p {
+  color: #666;
+}
+
+/* ---
 https://github.com/gymnasium/tracker/issues/77
 --- */
 
