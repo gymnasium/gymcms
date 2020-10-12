@@ -10,7 +10,7 @@ instructor: "Clarissa Peterson"
 topic: "Accessibility"
 video_ID: iyzPK-Mz_CY
 video_duration: "4:13"
-featured: true
+featured: false
 short_description: "Learn how to write alt text for more complex image use, such as charts, graphs, and image links in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
 related_content:
 - label: "Complex Images Tutorial"
