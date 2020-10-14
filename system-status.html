@@ -139,13 +139,14 @@ https://github.com/gymnasium/tracker/issues/81
 }
 
 /* ---
+https://github.com/gymnasium/tracker/issues/86
 https://github.com/gymnasium/tracker/issues/85
 --- */
 
 /* update (text) link style */
 
 #content p > a:not([class]),
-#content li > a:not([class])  {
+#content li:not([class]) > a:not([class])  {
   line-height: inherit;
   color: currentColor !important;
   text-decoration: none;
@@ -156,9 +157,9 @@ https://github.com/gymnasium/tracker/issues/85
 #content p > a:not([class]):hover,
 #content p > a:not([class]):focus,
 #content p > a:not([class]):active,
-#content li > a:not([class]):hover,
-#content li > a:not([class]):focus,
-#content li > a:not([class]):active {
+#content li:not([class]) > a:not([class]):hover,
+#content li:not([class]) > a:not([class]):focus,
+#content li:not([class]) > a:not([class]):active {
   border-bottom-width: 2px !important;
   margin-bottom: -0.125rem;
 }
