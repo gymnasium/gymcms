@@ -1,12 +1,12 @@
 ---
 layout: raw
 permalink: feeds/featured-courses.json
-featured_courses: GYM-016, GYM-107, GYM-015
+featured_courses: GYM-016, GYM-103, GYM-001
 ---
 {%- comment -%}
-This Jekyll page generates a content feed for the Aquent CMS. 
-The Aquent page design assumes 3 featured courses, it will generate 
-valid json for any number of courses. 
+This Jekyll page generates a content feed for the Aquent CMS.
+The Aquent page design assumes 3 featured courses, it will generate
+valid json for any number of courses.
 {%- endcomment -%}
 
 {%- assign featured_courses = page.featured_courses  | split: ", " -%}
@@ -26,20 +26,21 @@ valid json for any number of courses.
 {%- assign instructor_name = site.data.bios[instructor].name  -%}
 {%- assign instructor_title = site.data.bios[instructor].subtitle  -%}
 
-{%- if site.data.courses[featured].topic == "Web Design & Development" -%}
-    {%- assign content_color = "#d73158" -%}
-{%- elsif site.data.courses[featured].topic == "User Experience" -%}
-    {%- assign content_color = "#5ca5a0" -%}
+{%- if site.data.courses[featured].topic == "Career Skills" -%}
+    {%- assign content_color = "#2c9959" -%}
 {%- elsif site.data.courses[featured].topic == "Content Creation" -%}
     {%- assign content_color = "#2c9959" -%}
 {%- elsif site.data.courses[featured].topic == "JavaScript" -%}
     {%- assign content_color = "#764c9f" -%}
 {%- elsif site.data.courses[featured].topic == "Prototyping" -%}
     {%- assign content_color = "#5ca5a0" -%}
+{%- elsif site.data.courses[featured].topic == "User Experience" -%}
+    {%- assign content_color = "#5ca5a0" -%}
+{%- elsif site.data.courses[featured].topic == "Web Design & Development" -%}
+    {%- assign content_color = "#d73158" -%}
 {%- else -%}
     {%- assign content_color = "#ccc" -%}
 {%- endif -%}
-
 
 {"title": "{{ site.data.courses[featured].title }}",
     "url": "{{ site.data.courses[featured].url }}",
@@ -55,4 +56,3 @@ valid json for any number of courses.
 {%- endfor -%}
 
 ]}
-
