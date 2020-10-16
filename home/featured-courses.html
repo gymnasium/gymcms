@@ -1,14 +1,12 @@
 ---
 layout: raw
 permalink: /static/home/featured-courses/
-featured_courses: GYM-016, GYM-107, GYM-015, GYM-104
+featured_courses: GYM-016, GYM-103, GYM-001, GYM-108
 ---
 
 {%- assign featured_courses = page.featured_courses  | split: ", " -%}
 
 {%- assign item_count = featured_courses | size -%}
-
-
 
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/featured-courses.css">
 
@@ -25,21 +23,23 @@ featured_courses: GYM-016, GYM-107, GYM-015, GYM-104
     {%- assign instructor = site.data.courses[featured].instructor -%}
     {%- assign instructor_name = site.data.bios[instructor].name  -%}
     {%- assign instructor_title = site.data.bios[instructor].subtitle  -%}
-    
+
     {%- assign topic = site.data.courses[featured].topic  -%}
     {%- assign url = site.data.courses[featured].url  -%}
     {%- assign title = site.data.courses[featured].title  -%}
     {%- assign description = site.data.courses[featured].short_description  -%}
-    
-    {%- if site.data.courses[featured].topic == "Web Design & Development" -%}
-        {%- assign content_class = "design-development" -%}
-    {%- elsif site.data.courses[featured].topic == "User Experience" -%}
-        {%- assign content_class = "user-experience" -%}
+
+    {%- if site.data.courses[featured].topic == "Career Skills" -%}
+        {%- assign content_class = "career-skills" -%}
     {%- elsif site.data.courses[featured].topic == "Content Creation" -%}
         {%- assign content_class = "content-creation" -%}
     {%- elsif site.data.courses[featured].topic == "JavaScript" -%}
         {%- assign content_class = "development" -%}
     {%- elsif site.data.courses[featured].topic == "Prototyping" -%}
+        {%- assign content_class = "user-experience" -%}
+    {%- elsif site.data.courses[featured].topic == "Web Design & Development" -%}
+        {%- assign content_class = "design-development" -%}
+    {%- elsif site.data.courses[featured].topic == "User Experience" -%}
         {%- assign content_class = "user-experience" -%}
     {%- endif -%}
 
