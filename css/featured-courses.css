@@ -16,10 +16,12 @@
   background-color: #764c9f;
 }
 
+.list-featured-courses .prototyping,
 .list-featured-courses .user-experience {
   background-color: #5ca5a0;
 }
 
+.list-featured-courses .career-skills,
 .list-featured-courses .content-creation {
   background-color: #2c9959;
 }
