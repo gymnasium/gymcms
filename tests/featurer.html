@@ -1,7 +1,7 @@
 ---
 layout: raw
 permalink: tests/featurer/
-featured_courses: GYM-107, GYM-014, GYM-105
+featured_courses: GYM-016, GYM-103, GYM-001
 ---
 
 {%- assign featured_courses = page.featured_courses  | split: ", " -%}
@@ -24,18 +24,20 @@ featured_courses: GYM-107, GYM-014, GYM-105
 {%- assign instructor_name =  site.data.bios[instructor].name  -%}
 {%- assign instructor_title =  site.data.bios[instructor].subtitle  -%}
 
-{%- if site.data.courses[featured].topic == "Web Design & Development" -%}
-    {%- assign content_color = "#d73158" -%}
-{%- elsif site.data.courses[featured].topic == "User Experience" -%}
-    {%- assign content_color = "#5ca5a0" -%}
+{%- if site.data.courses[featured].topic == "Career Skills" -%}
+    {%- assign content_color = "#2c9959" -%}
 {%- elsif site.data.courses[featured].topic == "Content Creation" -%}
     {%- assign content_color = "#2c9959" -%}
 {%- elsif site.data.courses[featured].topic == "JavaScript" -%}
     {%- assign content_color = "#764c9f" -%}
 {%- elsif site.data.courses[featured].topic == "Prototyping" -%}
     {%- assign content_color = "#5ca5a0" -%}
+{%- elsif site.data.courses[featured].topic == "User Experience" -%}
+    {%- assign content_color = "#5ca5a0" -%}
+{%- elsif site.data.courses[featured].topic == "Web Design & Development" -%}
+    {%- assign content_color = "#d73158" -%}
 {%- else -%}
-    <b>ERROR!</b>🚧
+    <strong>ERROR!</strong>🚧
     {%- assign content_color = "ERROR" -%}
 
 {%- endif -%}
