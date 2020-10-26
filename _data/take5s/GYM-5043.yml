@@ -10,7 +10,7 @@ instructor: "Clarissa Peterson"
 topic: "Accessibility"
 video_ID: 7Q1bVzu0KxE
 video_duration: "3:36"
-featured: true
+featured: false
 short_description: "Discover how to identify whether the colors on your website have sufficient contrast between text color and its background in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
 related_content:
 - label: "WebAIM: Contrast Checker"
