@@ -1,7 +1,7 @@
 ---
 course_ID: GYM-5046
 title: "Creating Accessible Video and Audio Content"
-date: 2020-11-03T00:00:00-04:00
+date: 2020-11-10T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5046/
 poster_art: /img/take5/posters/gym-5046.jpg
@@ -9,7 +9,7 @@ live: true
 instructor: "Clarissa Peterson"
 topic: "Accessibility"
 video_ID: mCIFslxi1yU
-video_duration: "4:33"
+video_duration: "4:44"
 featured: true
 short_description: "With more video and audio being published online than ever before, it’s critical to make this content as accessible as possible. Learn strategies for improving multimedia accessibility on your websites in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
 related_content:
