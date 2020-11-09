@@ -10,7 +10,7 @@ instructor: "Clarissa Peterson"
 topic: "Accessibility"
 video_ID: m3M7QbDE3Lg
 video_duration: "4:33"
-featured: false
+featured: true
 short_description: "Forms are a frequent source of accessibility problems on websites. Learn some tips and tricks on how to make your web forms easier to use and understand in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
 related_content:
 - label: "Validating Input"
