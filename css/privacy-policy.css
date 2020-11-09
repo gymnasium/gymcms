@@ -38,14 +38,3 @@
 .privacy-policy .to-top-link {
   margin-top: 1.2em;
 }
-
-.privacy-policy .to-top-link a  {
-  color: currentColor;
-  border-bottom: 1px solid currentColor;
-}
-
-.privacy-policy .to-top-link a:hover,
-.privacy-policy .to-top-link a:focus {
-  color: currentColor !important;
-  border-bottom: 2px solid currentColor !important;
-}
