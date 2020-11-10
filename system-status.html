@@ -147,7 +147,9 @@ https://github.com/gymnasium/tracker/issues/85
 /* update (text) link style */
 
 main p > a:not([class]),
-main li:not([class]) > a:not([class])  {
+main li:not([class]) > a:not([class]),
+main label a:not([class]),
+.login-form a.forgot-password {
   line-height: inherit;
   color: currentColor !important;
   text-decoration: none;
@@ -160,10 +162,111 @@ main p > a:not([class]):focus,
 main p > a:not([class]):active,
 main li:not([class]) > a:not([class]):hover,
 main li:not([class]) > a:not([class]):focus,
-main li:not([class]) > a:not([class]):active {
+main li:not([class]) > a:not([class]):active,
+main label a:not([class]):hover,
+main label a:not([class]):focus,
+main label a:not([class]):active,
+.login-form a.forgot-password:hover,
+.login-form a.forgot-password:focus,
+.login-form a.forgot-password:active {
   text-decoration: none;
   border-bottom-width: 2px !important;
   margin-bottom: -0.125rem;
+}
+
+/*
+https://github.com/gymnasium/tracker/issues/103
+https://github.com/gymnasium/tracker/issues/89
+*/
+
+/* update login-register form */
+
+.login-register {
+  max-width: none;
+}
+
+#login,
+#register {
+  padding: 0 1.8em 2.2em;
+  margin-top: 1.6em;
+}
+
+.login-providers h1 + button.login-provider {
+  margin: 1.4em 0 1em;
+}
+
+.login-providers .section-title + button.login-provider {
+  margin-top: 0.6em;
+}
+
+.login-register .form-field {
+  margin-top: 0.6em;
+  margin-bottom: 1.4em;
+}
+
+.login-register .form-field label,
+.login-register .form-field input {
+  margin-bottom: 0.6em;
+}
+
+#register .form-field input {
+  margin-bottom: 0;
+}
+
+.login-register .form-field label.focus-out {
+  position: static;
+  padding-top: 0;
+  padding-left: 0;
+  opacity: 1;
+  z-index: auto;
+}
+
+.login-register .form-field .tip {
+  display: inline-block;
+}
+
+.login-register .form-field label[for="register-terms_of_service"] {
+  margin: 0;
+}
+
+.login-register .checkbox-terms_of_service {
+  margin: 1em 0;
+}
+
+.login-register .checkbox-remember {
+  margin: 1.2em 0 0.6em;
+}
+
+.login-register .login-remember {
+  line-height: 1.15;
+}
+
+.login-register .toggle-form {
+  font-size: 14px;
+}
+
+.login-register .logistration-bottom {
+  padding-left: 1.8em;
+  padding-right: 1.8em;
+  margin-top: 1.2em;
+}
+
+.login-register .logistration-button {
+  text-transform: capitalize;
+}
+
+.login-register .note {
+  font-weight: bold;
+  color: #222;
+}
+
+.login-register .logistration-bottom h2 {
+  text-align: left;
+  padding: 0 0 0.4em;
+}
+
+.login-register .logistration-bottom h2 .text {
+  text-transform: uppercase;
 }
 
 /* update font-family for catalog navigation */
