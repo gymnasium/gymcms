@@ -174,6 +174,68 @@ main label a:not([class]):active,
   margin-bottom: -0.125rem;
 }
 
+/*
+https://github.com/gymnasium/tracker/issues/127
+*/
+
+/* update password reset form style */
+
+.login-register,
+.login-register .form-type {
+  min-width: none;
+}
+
+#passwordreset-form {
+  padding: 1.8em 1.8em 2.2em;
+}
+
+#passwordreset-form h2.section-title {
+  font: 900 2.571428571428571em/1 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  color: #333;
+  letter-spacing: 0.01em;
+  word-spacing: 0.04em;
+  margin-top: 0;
+}
+
+#passwordreset-form h2.lines {
+  text-align: left;
+}
+
+#passwordreset-form h2.lines::after {
+  display: none;
+}
+
+#passwordreset-form h2.lines .text {
+  position: static;
+  top: 0;
+  z-index: auto;
+  font-size: inherit;
+  background: none;
+  padding: 0;
+}
+
+#passwordreset-form .paragon__invalid-feedback {
+  font-size: unset;
+}
+
+#passwordreset-form .action-primary {
+  margin-top: 0;
+}
+
+#passwordreset-form .action-primary {
+  width: 100%;
+  font: bold 1.5em/1 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #f8971d;
+  padding: 1em;
+  border-radius: .125em;
+}
+
+#passwordreset-form .action-primary:hover,
+#passwordreset-form .action-primary:focus,
+#passwordreset-form .action-primary:active {
+  background-color: #a6a6a6;
+}
+
 /* update font-family for catalog navigation */
 
 #gym-catalog .course-menu a:focus,
