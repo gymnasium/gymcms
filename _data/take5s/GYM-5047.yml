@@ -5,12 +5,12 @@ date: 2020-11-17T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5047/
 poster_art: /img/take5/posters/gym-5047.jpg
-live: false
+live: true
 instructor: "Clarissa Peterson"
 topic: "Accessibility"
 video_ID: TpvlucvoUPw
 video_duration: "4:38"
-featured: false
+featured: true
 short_description: "A few of the most common animation techniques used on the web can make users affected by motion dizzy or even sick. Learn how to avoid these techniques in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
 related_content:
 - label: "Designing Safer Web Animation For Motion Sensitivity"
