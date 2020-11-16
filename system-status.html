@@ -81,6 +81,27 @@ permalink: /static/system-status/
 }
 
 /* ---
+https://github.com/gymnasium/tracker/issues/129
+--- */
+
+#content .course-tabs a {
+  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
+  color: currentColor !important;
+}
+
+#content .course-tabs a b {
+  color: currentColor !important;
+  border-bottom: 1px solid currentColor !important;
+}
+
+#content .course-tabs .active b,
+#content .course-tabs a:hover b,
+#content .course-tabs a:focus b {
+  color: currentColor !important;
+  border-bottom: 2px solid currentColor !important;
+}
+
+/* ---
 https://github.com/gymnasium/tracker/issues/81
 --- */
 
@@ -148,6 +169,9 @@ https://github.com/gymnasium/tracker/issues/85
 
 main p > a:not([class]),
 main li:not([class]) > a:not([class]),
+.white-panel p > a:not(.btn),
+.white-panel li:not([class]) > a:not(.btn),
+.course-menu a:not(.btn),
 main label a:not([class]),
 .login-form a.forgot-password {
   line-height: inherit;
@@ -163,6 +187,15 @@ main p > a:not([class]):active,
 main li:not([class]) > a:not([class]):hover,
 main li:not([class]) > a:not([class]):focus,
 main li:not([class]) > a:not([class]):active,
+.white-panel p > a:not(.btn):hover,
+.white-panel p > a:not(.btn):focus,
+.white-panel p > a:not(.btn):active,
+.white-panel li:not([class]) > a:not(.btn):hover,
+.white-panel li:not([class]) > a:not(.btn):focus,
+.white-panel li:not([class]) > a:not(.btn):active,
+.course-menu a:not(.btn):hover,
+.course-menu a:not(.btn):focus,
+.course-menu a:not(.btn):active,
 main label a:not([class]):hover,
 main label a:not([class]):focus,
 main label a:not([class]):active,
@@ -172,6 +205,68 @@ main label a:not([class]):active,
   text-decoration: none;
   border-bottom-width: 2px !important;
   margin-bottom: -0.125rem;
+}
+
+/*
+https://github.com/gymnasium/tracker/issues/127
+*/
+
+/* update password reset form style */
+
+.login-register,
+.login-register .form-type {
+  min-width: none;
+}
+
+#passwordreset-form {
+  padding: 1.8em 1.8em 2.2em;
+}
+
+#passwordreset-form h2.section-title {
+  font: 900 2.571428571428571em/1 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  color: #333;
+  letter-spacing: 0.01em;
+  word-spacing: 0.04em;
+  margin-top: 0;
+}
+
+#passwordreset-form h2.lines {
+  text-align: left;
+}
+
+#passwordreset-form h2.lines::after {
+  display: none;
+}
+
+#passwordreset-form h2.lines .text {
+  position: static;
+  top: 0;
+  z-index: auto;
+  font-size: inherit;
+  background: none;
+  padding: 0;
+}
+
+#passwordreset-form .paragon__invalid-feedback {
+  font-size: unset;
+}
+
+#passwordreset-form .action-primary {
+  margin-top: 0;
+}
+
+#passwordreset-form .action-primary {
+  width: 100%;
+  font: bold 1.5em/1 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #f8971d;
+  padding: 1em;
+  border-radius: .125em;
+}
+
+#passwordreset-form .action-primary:hover,
+#passwordreset-form .action-primary:focus,
+#passwordreset-form .action-primary:active {
+  background-color: #a6a6a6;
 }
 
 /* update font-family for catalog navigation */
@@ -187,7 +282,7 @@ https://github.com/gymnasium/tracker/issues/84
 
 /* update color contrast ratio */
 
-#content .how-gymnasium-works p {
+main .how-gymnasium-works p {
   color: #666;
 }
 
