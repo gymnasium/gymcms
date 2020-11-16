@@ -81,6 +81,27 @@ permalink: /static/system-status/
 }
 
 /* ---
+https://github.com/gymnasium/tracker/issues/129
+--- */
+
+#content .course-tabs a {
+  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
+  color: currentColor !important;
+}
+
+#content .course-tabs a b {
+  color: currentColor !important;
+  border-bottom: 1px solid currentColor !important;
+}
+
+#content .course-tabs .active b,
+#content .course-tabs a:hover b,
+#content .course-tabs a:focus b {
+  color: currentColor !important;
+  border-bottom: 2px solid currentColor !important;
+}
+
+/* ---
 https://github.com/gymnasium/tracker/issues/81
 --- */
 
@@ -150,6 +171,7 @@ main p > a:not([class]),
 main li:not([class]) > a:not([class]),
 .white-panel p > a:not(.btn),
 .white-panel li:not([class]) > a:not(.btn),
+.course-menu a:not(.btn),
 main label a:not([class]),
 .login-form a.forgot-password {
   line-height: inherit;
@@ -171,6 +193,9 @@ main li:not([class]) > a:not([class]):active,
 .white-panel li:not([class]) > a:not(.btn):hover,
 .white-panel li:not([class]) > a:not(.btn):focus,
 .white-panel li:not([class]) > a:not(.btn):active,
+.course-menu a:not(.btn):hover,
+.course-menu a:not(.btn):focus,
+.course-menu a:not(.btn):active,
 main label a:not([class]):hover,
 main label a:not([class]):focus,
 main label a:not([class]):active,

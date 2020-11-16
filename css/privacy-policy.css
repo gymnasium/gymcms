@@ -35,6 +35,8 @@
  margin-bottom: 0;
 }
 
+/* back to top */
+
 .privacy-policy .to-top-link {
   margin-top: 1.2em;
 }
@@ -48,4 +50,12 @@
 .privacy-policy .to-top-link a:focus {
   color: currentColor !important;
   border-bottom: 2px solid currentColor !important;
+}
+
+.privacy-policy .to-top-link b::before {
+  display: inline-block;
+  content: "↑";
+  font-family: monospace, monospace;
+  vertical-align: top;
+  margin-right: .25em;
 }
