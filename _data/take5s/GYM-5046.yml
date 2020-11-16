@@ -10,7 +10,7 @@ instructor: "Clarissa Peterson"
 topic: "Accessibility"
 video_ID: mCIFslxi1yU
 video_duration: "4:44"
-featured: true
+featured: false
 short_description: "With more video and audio being published online than ever before, it’s critical to make this content as accessible as possible. Learn strategies for improving multimedia accessibility on your websites in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
 related_content:
 - label: "Audio Description for the Blind (Video)"
