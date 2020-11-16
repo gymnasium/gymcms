@@ -148,6 +148,8 @@ https://github.com/gymnasium/tracker/issues/85
 
 main p > a:not([class]),
 main li:not([class]) > a:not([class]),
+.white-panel p > a:not(.btn),
+.white-panel li:not([class]) > a:not(.btn),
 main label a:not([class]),
 .login-form a.forgot-password {
   line-height: inherit;
@@ -163,6 +165,12 @@ main p > a:not([class]):active,
 main li:not([class]) > a:not([class]):hover,
 main li:not([class]) > a:not([class]):focus,
 main li:not([class]) > a:not([class]):active,
+.white-panel p > a:not(.btn):hover,
+.white-panel p > a:not(.btn):focus,
+.white-panel p > a:not(.btn):active,
+.white-panel li:not([class]) > a:not(.btn):hover,
+.white-panel li:not([class]) > a:not(.btn):focus,
+.white-panel li:not([class]) > a:not(.btn):active,
 main label a:not([class]):hover,
 main label a:not([class]):focus,
 main label a:not([class]):active,
@@ -249,7 +257,7 @@ https://github.com/gymnasium/tracker/issues/84
 
 /* update color contrast ratio */
 
-#content .how-gymnasium-works p {
+main .how-gymnasium-works p {
   color: #666;
 }
 
