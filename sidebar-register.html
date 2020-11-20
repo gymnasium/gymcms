@@ -2,11 +2,22 @@
 layout: raw
 permalink: /static/sidebar-register/
 ---
+{%- case jekyll.environment -%}
+
+  {%- when "development" -%}
+  {%- assign gym_url = "courses.gymna.si" -%}
+  
+  {%- when "staging" -%}
+  {%- assign gym_url = "courses.gymna.si" -%}
+
+  {%- when "production" -%}
+  {%- assign gym_url = "thegymnasium.com" -%}
+{%- endcase -%}
 
 <div class="btn-brand btn-login">
   <h3 class="title">Already registered?</h3>
   <p class="instructions">
-    <a class="btn-login-action" href="/login">
+    <a class="btn-login-action" href="https://{{ gym_url }}/login">
       Log in
     </a>
   </p>
@@ -26,7 +37,7 @@ permalink: /static/sidebar-register/
   <h3>Need Help?</h3>
   <p>
     Need help registering with Gymnasium?
-    <a href="/faq">
+    <a href="https://{{ gym_url }}/faq">
       View our FAQs for answers to commonly asked questions.
     </a>
     You can find the answers to most of your questions in our list of FAQs. After you enroll in a course, you can also find answers in the course discussions.
