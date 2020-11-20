@@ -2,16 +2,27 @@
 layout: raw
 permalink: /static/upcoming-courses/
 ---
+{%- case jekyll.environment -%}
+
+  {%- when "development" -%}
+  {%- assign gym_url = "courses.gymna.si" -%}
+
+  {%- when "staging" -%}
+  {%- assign gym_url = "courses.gymna.si" -%}
+
+  {%- when "production" -%}
+  {%- assign gym_url = "thegymnasium.com" -%}
+{%- endcase -%}
 <!-- <h1>Upcoming Courses</h1> -->
 <h1>Featured Content</h1>
 
 <section>
   <figure>
-    <a href="/accessibility">
-      <img class="img-responsive" alt="Accessibility Collection cover image." src="https://thegymcms.com/img/hub-pages/og/accessibility-collection-og.png" width="1200" height="628">
+    <a href="https://{{ gym_url }}/accessibility">
+      <img class="img-responsive" alt="Accessibility Collection cover image." src="{{ site.url }}{{ site.baseurl }}/img/hub-pages/og/accessibility-collection-og.png" width="1200" height="628">
     </a>
     <figcaption>
-      <a href="/accessibility" class="gym-button"><b>Learn More</b></a>
+      <a href="https://{{ gym_url }}/accessibility" class="gym-button"><b>Learn More</b></a>
     </figcaption>
   </figure>
   <h2>Accessibility Collection</h2>
@@ -20,11 +31,11 @@ permalink: /static/upcoming-courses/
 
 <section>
   <figure>
-    <a href="/ux-design">
-      <img class="img-responsive" alt="UX Design Collection cover image." src="https://thegymcms.com/img/hub-pages/og/ux-design-collection-og.png" width="1200" height="628">
+    <a href="https://{{ gym_url }}/ux-design">
+      <img class="img-responsive" alt="UX Design Collection cover image." src="{{ site.url }}{{ site.baseurl }}/img/hub-pages/og/ux-design-collection-og.png" width="1200" height="628">
     </a>
     <figcaption>
-      <a href="/ux-design" class="gym-button"><b>Learn More</b></a>
+      <a href="https://{{ gym_url }}/ux-design" class="gym-button"><b>Learn More</b></a>
     </figcaption>
   </figure>
   <h2>UX Design Collection</h2>
@@ -45,4 +56,4 @@ permalink: /static/upcoming-courses/
     In this course you will learn how to design for a comfortable user experience in a virtual space and how to build your own project from the ground up.
   </p>
 </section>
- -->
+-->
