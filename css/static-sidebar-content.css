@@ -2,12 +2,12 @@
 
 .sidebar-static {
  padding: 0 1.2em 2.6em;
- margin: 1.2em -.8em -2em;
+ margin: 1.2em -0.8em -2em;
 }
 
 /* main content / adjustment for vertical rule */
 
-.col-md-9  {
+.white-panel .col-md-9  {
   padding-top: 1.2em;
   padding-right: 1.2em;
   padding-bottom: 2em;
@@ -19,7 +19,7 @@
 
 /* main content / vertical rule */
 
-  .col-md-9 {
+  .white-panel .col-md-9 {
     border-right: 1px dashed #ccc;
   }
 
