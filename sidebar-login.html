@@ -2,12 +2,24 @@
 layout: raw
 permalink: /static/sidebar-login/
 ---
+{%- case jekyll.environment -%}
+
+  {%- when "development" -%}
+  {%- assign gym_url = "courses.gymna.si" -%}
+  
+  {%- when "staging" -%}
+  {%- assign gym_url = "courses.gymna.si" -%}
+
+  {%- when "production" -%}
+  {%- assign gym_url = "thegymnasium.com" -%}
+{%- endcase -%}
+
 <div class="cta cta-help">
   <h3>Not Enrolled?</h3>
-  <p><a href="/register">Sign up for Gymnasium today!</a></p>
+  <p><a href="https://{{ gym_url }}/register">Sign up for Gymnasium today!</a></p>
 
   <h3>Need Help?</h3>
   <p>Looking for help signing in or with your Gymnasium account?
-  <a href="/faq">
+  <a href="https://{{ gym_url }}/faq">
       View our help section for answers to commonly asked questions.
   </a></p>

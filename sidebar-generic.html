@@ -2,8 +2,18 @@
 layout: raw
 permalink: /static/sidebar-generic/
 ---
-<link rel="stylesheet" href="https://gymnasium.github.io/static-site-content/css/static-sidebar-content.css">
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/static-sidebar-content.css">
+{%- case jekyll.environment -%}
 
+  {%- when "development" -%}
+  {%- assign gym_url = "courses.gymna.si" -%}
+  
+  {%- when "staging" -%}
+  {%- assign gym_url = "courses.gymna.si" -%}
+
+  {%- when "production" -%}
+  {%- assign gym_url = "thegymnasium.com" -%}
+{%- endcase -%}
 <!-- Temporary HTML for style hooks -->
 <div class="find-courses">
 <div class="sidebar sidebar-static">
@@ -13,11 +23,11 @@ permalink: /static/sidebar-generic/
 
 <section>
   <figure>
-    <a href="/courses/course-v1:GYM+016+0/about">
-      <img class="img-responsive" alt="Designing Accessible and Responsive Websites cover image." srcset="https://thegymcms.com/img/course-artwork/svg/gym-016.svg" src="https://thegymcms.com/img/course-artwork/png/gym-016.svg" width="574" height="488">
+    <a href="https://{{ gym_url }}/courses/course-v1:GYM+016+0/about">
+      <img class="img-responsive" alt="Designing Accessible and Responsive Websites cover image." srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-016.svg" src="{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-016.svg" width="574" height="488">
     </a>
     <figcaption>
-      <a href="/courses/course-v1:GYM+016+0/about" class="gym-button"><b>Learn More</b></a>
+      <a href="https://{{ gym_url }}/courses/course-v1:GYM+016+0/about" class="gym-button"><b>Learn More</b></a>
     </figcaption>
   </figure>
   <h2>Designing Accessible and Responsive Websites</h2>
@@ -26,11 +36,11 @@ permalink: /static/sidebar-generic/
 
 <section>
   <figure>
-    <a href="/courses/GYM/104/0/about">
-      <img class="img-responsive" alt="UX Fundamentals cover image." srcset="https://thegymcms.com/img/course-artwork/svg/gym-103.svg" src="https://thegymcms.com/img/course-artwork/png/gym-103.svg" width="574" height="488">
+    <a href="https://{{ gym_url }}/courses/GYM/104/0/about">
+      <img class="img-responsive" alt="UX Fundamentals cover image." srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-103.svg" src="{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-103.svg" width="574" height="488">
     </a>
     <figcaption>
-      <a href="/courses/GYM/104/0/about" class="gym-button"><b>Learn More</b></a>
+      <a href="https://{{ gym_url }}/courses/GYM/104/0/about" class="gym-button"><b>Learn More</b></a>
     </figcaption>
   </figure>
   <h2>UX Fundamentals</h2>
