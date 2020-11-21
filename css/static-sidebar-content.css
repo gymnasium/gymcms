@@ -21,12 +21,9 @@ upcoming-coures.html
   text-transform: uppercase;
 }
 
-.catalog-content .sidebar p {
+.catalog-content .sidebar p,
+.catalog-content .sidebar .gym-button b {
   font-size: 1.05em;
-}
-
-.catalog-content .sidebar figure {
-  margin-top: 1.2em;
 }
 
 /* ---
@@ -74,10 +71,16 @@ sidebar-generic.html
   margin-top: 15px;
 }
 
-.sidebar-static p {
+.sidebar-static p,
+.sidebar-static .gym-button b {
   font-size: 1em !important;
 }
 
+/* ---
+shared styles
+--- */
+
+.catalog-content .sidebar figure,
 .sidebar-static figure {
   margin-top: 1.2em;
 }
