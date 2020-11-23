@@ -5,12 +5,12 @@ date: 2020-11-24T00:00:00-04:00
 course_type: take5
 url: /static/take5/GYM-5048/
 poster_art: /img/take5/posters/gym-5048.jpg
-live: false
+live: true
 instructor: "Clarissa Peterson"
 topic: "Accessibility"
 video_ID: Njn6CQwiafQ
 video_duration: "3:41"
-featured: false
+featured: true
 short_description: "You don’t have to forgo animation entirely to accommodate users with disabilities. Learn how to ensure that animated elements won’t compromise the accessibility of your website in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
 related_content:
 - label: "An Introduction to the Reduced Motion Media Query"
