@@ -2,8 +2,18 @@
 layout: raw
 permalink: /static/sidebar-generic/
 ---
-<link rel="stylesheet" href="https://gymnasium.github.io/static-site-content/css/static-sidebar-content.css">
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/static-sidebar-content.css">
+{%- case jekyll.environment -%}
 
+  {%- when "development" -%}
+  {%- assign gym_url = "courses.gymna.si" -%}
+
+  {%- when "staging" -%}
+  {%- assign gym_url = "courses.gymna.si" -%}
+
+  {%- when "production" -%}
+  {%- assign gym_url = "thegymnasium.com" -%}
+{%- endcase -%}
 <!-- Temporary HTML for style hooks -->
 <div class="find-courses">
 <div class="sidebar sidebar-static">
@@ -13,28 +23,28 @@ permalink: /static/sidebar-generic/
 
 <section>
   <figure>
-    <a href="/courses/GYM/107/0/about">
-      <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/107/asset/gym-107.png" alt="107 Modern Web Design Cover Image">
+    <a href="https://{{ gym_url }}/courses/course-v1:GYM+016+0/about">
+      <img class="img-responsive" alt="Designing Accessible and Responsive Websites cover image." srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-016.svg" src="{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-016.svg" width="574" height="488">
     </a>
     <figcaption>
-      <a href="/courses/GYM/107/0/about" class="gym-button"><b>Learn More</b></a>
+      <a href="https://{{ gym_url }}/courses/course-v1:GYM+016+0/about" class="gym-button"><b>Learn More</b></a>
     </figcaption>
   </figure>
-  <h2>Modern Web Design</h2>
-  <p>This course will prepare you to be a front-end developer by walking you through the process of building a simple, responsive website using HTML, CSS and JavaScript.</p>
+  <h2>Designing Accessible and Responsive Websites</h2>
+  <p>Learn accessible and responsive design best practices to help make a more user-friendly web for everyone.</p>
 </section>
 
 <section>
   <figure>
-    <a href="/courses/GYM/104/0/about">
-      <img class="img-responsive" src="https://thegymnasium.com/c4x/GYM/104/asset/gym-104.png" alt="104 JavaScript Foundations Cover Image">
+    <a href="https://{{ gym_url }}/courses/GYM/103/0/about">
+      <img class="img-responsive" alt="UX Fundamentals cover image." srcset="{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-103.svg" src="{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-103.svg" width="574" height="488">
     </a>
     <figcaption>
-      <a href="/courses/GYM/104/0/about" class="gym-button"><b>Learn More</b></a>
+      <a href="https://{{ gym_url }}/courses/GYM/103/0/about" class="gym-button"><b>Learn More</b></a>
     </figcaption>
   </figure>
-  <h2>JavaScript Foundations</h2>
-  <p>Learn the fundamentals of programming with JavaScript and get started on the road to its mastery.</p>
+  <h2>UX Fundamentals</h2>
+  <p>Learn how to apply user-centered design principles to improve your website and mobile app design. A must-take course for anyone working in web design and development.</p>
 </section>
 
 <!-- Temporary HTML for style hooks -->
