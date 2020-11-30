@@ -113,13 +113,13 @@
   margin-top: 2.5rem;
 }
 
-.blue-beanie-day a:not([class])  {
-  color: currentColor;
-  border-bottom: 1px solid currentColor;
+.blue-beanie-day header a:not(.btn) {
+  color: currentColor !important;
+  border-bottom: 1px solid currentColor !important;
 }
 
-.blue-beanie-day a:not([class]):hover,
-.blue-beanie-day a:not([class]):focus {
+.blue-beanie-day header a:not(.btn):hover,
+.blue-beanie-day header a:not(.btn):focus {
   color: currentColor !important;
   border-bottom: 2px solid currentColor !important;
 }
