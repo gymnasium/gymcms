@@ -157,6 +157,10 @@
   display: inline-block;
 }
 
-.no-wrap {
-  white-space: nowrap;
+@media (min-width: 62em) {
+
+  .no-wrap {
+    white-space: nowrap;
+  }
+
 }
