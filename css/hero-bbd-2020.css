@@ -18,6 +18,11 @@
   margin: 2.5% -30px 0;
 }
 
+.bbd-gym-016 .hero-content-art {
+  border-bottom: 0 none;
+  margin-bottom: -2.5%;
+}
+
 .hero-promo .hero-content-art img {
   display: inline-block;
   width: auto;
@@ -47,11 +52,25 @@
     max-width: 100%;
   }
 
+  .bbd-gym-016 .hero-content-art picture {
+    display: inline-block;
+    position: relative;
+    top: -5em;
+  }
+
   .hero-content-copy {
     position: relative;
     left: 52%;
     width: 51.5%;
     z-index: 1;
+  }
+
+}
+
+@media (min-width: 75em) {
+
+  .bbd-gym-016 .hero-content-art picture {
+    top: -2em;
   }
 
 }
@@ -157,6 +176,10 @@
   display: inline-block;
 }
 
-.no-wrap {
-  white-space: nowrap;
+@media (min-width: 36em) {
+
+  .no-wrap {
+    white-space: nowrap;
+  }
+
 }
