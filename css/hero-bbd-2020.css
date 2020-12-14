@@ -32,16 +32,6 @@
 
 @media (min-width: 62em) {
 
-  .bbd-gym-016 .hero-content-art picture {
-    display: inline-block;
-    position: relative;
-    top: -5em;
-  }
-
-}
-
-@media (min-width: 62em) {
-
   .hero-promo .container {
     position: relative;
     min-height: 25.125em;
@@ -60,6 +50,12 @@
 
   .hero-promo .hero-content-art img {
     max-width: 100%;
+  }
+
+  .bbd-gym-016 .hero-content-art picture {
+    display: inline-block;
+    position: relative;
+    top: -5em;
   }
 
   .hero-content-copy {
