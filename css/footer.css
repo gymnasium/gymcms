@@ -121,6 +121,10 @@
   line-height: 1.8;
 }
 
+#contentinfo .open-edx-logo {
+  height: auto;
+}
+
 #contentinfo .copyright {
   text-align: left;
 }
