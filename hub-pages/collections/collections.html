@@ -3,4 +3,47 @@ permalink: /static/collections/
 layout: raw
 ---
 
-<p>Chocolate bar danish chocolate. Tootsie roll gummi bears tiramisu halvah. </p>
+{%- if jekyll.environment == "development" -%}
+  {%- include take5/test-top.html -%}
+{%- endif -%}
+
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/collections.css">
+
+<main id="main" role="main">
+
+<header class="collections--about" id="about">
+  <div class="container">
+    <h1>Collections</h1>
+    <p>Refresh your skills with free courses, tutorials, and resources.</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="cols">
+    <ul>
+    <!-- placeholder for -->
+      <li class="collection">
+        <div class="collection--card placeholder-category">
+          <div class="collection--main">
+            <header>
+              <h2 class="title"><!-- placeholder title --></h2>
+              <p class="short-description"><!-- placeholder description --></p>
+            </header>
+          </div>
+          <div class="collection--cta">
+            <a class="gym-button gym-button-secondary" href="placeholder-url">
+              <b>Explore</b>
+            </a>
+          </div>
+        </div>
+      </li>
+    <!-- placeholder endfor -->
+    </ul>
+  </div>
+</div>
+
+</main>
+
+{%- if jekyll.environment == "development" -%}
+  {%- include take5/test-bottom.html -%}
+{%- endif -%}
