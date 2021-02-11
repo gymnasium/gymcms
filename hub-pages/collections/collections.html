@@ -24,7 +24,7 @@ layout: raw
     {%- for collection_hash in site.data.collections -%}
       {%- assign hub_page = collection_hash[1] -%}
       <li class="collection">
-        <div class="collection--card {{- hub_page.topic | downcase | replace: ' ', '-' | replace: ' & ', '-' -}}">
+        <div class="collection--card {{ hub_page.topic | downcase | replace: ' & ', '-' | replace: ' ', '-' }}">
           <div class="collection--main">
             <header>
               <h2 class="title">{{ hub_page.title }}</h2>
