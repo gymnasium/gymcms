@@ -215,20 +215,22 @@ main figcaption {
 
 /* topics */
 
-.collection .design {
+.collection .accessibility,
+.collection .web-design-development {
   border-top-color: #d73158;
 }
 
-.collection .dev {
+.collection .javascript {
   border-top-color: #764c9f;
 }
 
-.collection .skills {
-  border-top-color: #2c9959;
+.collection .prototyping,
+.collection .user-experience {
+  border-top-color: #5ca5a0;
 }
 
-.collection .ux {
-  border-top-color: #5ca5a0;
+.collection .career-skills {
+  border-top-color: #2c9959;
 }
 
 .collection--main header .subhead {
