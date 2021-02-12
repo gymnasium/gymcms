@@ -21,23 +21,24 @@ layout: raw
 <div class="container">
   <div class="cols">
     <ul>
-    <!-- placeholder for -->
+    {%- for collection_hash in site.data.collections -%}
+      {%- assign hub_page = collection_hash[1] -%}
       <li class="collection">
-        <div class="collection--card placeholder-category">
+        <div class="collection--card {{ hub_page.topic | slugify }}">
           <div class="collection--main">
             <header>
-              <h2 class="title"><!-- placeholder title --></h2>
-              <p class="short-description"><!-- placeholder description --></p>
+              <h2 class="title">{{ hub_page.title }}</h2>
+              <p class="short-description">{{ hub_page.short_description }}</p>
             </header>
           </div>
           <div class="collection--cta">
-            <a class="gym-button gym-button-secondary" href="placeholder-url">
+            <a class="gym-button gym-button-secondary" href="{{ hub_page.url }}">
               <b>Explore</b>
             </a>
           </div>
         </div>
       </li>
-    <!-- placeholder endfor -->
+    {%- endfor -%}
     </ul>
   </div>
 </div>
