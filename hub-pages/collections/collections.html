@@ -23,7 +23,7 @@ layout: raw
     <ul>
     {%- for collection_hash in site.data.collections -%}
       {%- assign hub_page = collection_hash[1] -%}
-      <li class="collection">
+      <li class="collection {{ hub_page.collection_ID }}">
         <div class="collection--card {{ hub_page.topic | slugify }}">
           <div class="collection--main">
             <header>
