@@ -21,9 +21,10 @@ layout: raw
 <div class="container">
   <div class="cols">
     <ul>
-    {%- for collection_hash in site.data.collections -%}
+    {%- assign collections_sorted = site.data.collections | sort -%}
+    {%- for collection_hash in collections_sorted -%}
       {%- assign hub_page = collection_hash[1] -%}
-      <li class="collection" id="{{ hub_page.collection_ID }}">
+      <li class="collection">
         <div class="collection--card {{ hub_page.topic | slugify }}">
           <div class="collection--main">
             <header>
