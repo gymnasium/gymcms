@@ -35,7 +35,7 @@ main figcaption {
 
 #main .gym-button {
   width: auto;
-  padding: 1.2em 2em;
+  padding: 1.2em 1.4em;
 }
 
 /* gym text */
@@ -478,19 +478,23 @@ main figcaption {
 
 /* secondary button */
 
+/* secondary button */
+
 #main .gym-button-secondary {
+  color: #fff;
   background-color: transparent;
-  border: 2px solid #a6a6a6;
+  border: 2px solid #f8971d;
 }
 
 #main .gym-button-secondary b {
-  color: #fff;
+  color: inherit;
+  vertical-align: text-top;
 }
 
 #main .gym-button-secondary:hover,
 #main .gym-button-secondary:focus,
 #main .gym-button-secondary:active {
-  border: 2px solid #fff;
+  border-color: #a6a6a6;
 }
 
 /* main / article */
