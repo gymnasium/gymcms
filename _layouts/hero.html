@@ -1,0 +1,15 @@
+---
+
+---
+{%- assign hero = site.data.hero -%}
+
+{%- if hero.live_coding == true -%}
+<!-- Display live coding on both hero includes -->
+{%- include hero-livecoding.html -%}
+    {%- elsif page.permalink contains "hero-auth" and hero.auth_promo -%}
+        <!-- Display something specific on the authenticated hero include -->
+        {%- include {{hero.auth_promo}} -%} 
+    {%- else -%}
+    <!-- Display the current promo on both hero includes -->
+    {%- include {{hero.current_promo}} -%}
+{%- endif -%}
