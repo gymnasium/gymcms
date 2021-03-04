@@ -1,0 +1,60 @@
+{% assign course = site.data.courses[page.course_ID] %}
+<!-- {{ course.title }} -->
+
+<!-- https://studio.gymna.si/settings/details/course-v1:GYM+{{course.course_ID | remove: "GYM-"}}+0 -->
+<!-- Studio Field: Course Short Description -->
+
+
+{{ course.short_description }}
+
+<div class="row">
+ <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      {%- for skill in course.skills -%}
+      <dd><span>{{ skill.label }}</span></dd>
+      {%- endfor -%}
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      {%- for audience in course.audience -%}
+      <dd><span>{{ audience.label }}</span></dd>
+      {%- endfor -%}
+    </dl>
+  </div>
+
+ </div>
+
+<hr>
+
+<!-- https://studio.gymna.si/course_info/course-v1:GYM+{{course.course_ID | remove: "GYM-"}}+0 -->
+<!-- Course Updates -->
+
+<header class="hero">
+  <h1>Syllabus</h1>
+  {%- if course.course_type =="short" -%}
+  <p>Gym Shorts are short courses that all last under an hour. Like our full courses, they are taught by industry experts and focus on current skills and technologies. Each includes approximately one hour of video instruction, a final exam, and a badge (if and) when you pass.</p> 
+  {%- else -%}
+ <p><mark>PUT THE CONTENT FOR FULL COURSES HERE</mark></p>
+ {%- endif -%}
+</header>
+<section id="course-outline">
+        <h2>Course Outline</h2>
+  <ul>
+    {%- for section in course.course_outline -%}
+        <li>
+          <h3>{{ section.title}}</h3>
+          <p>{{ section.description}}</p>
+        </li>
+        {%- endfor -%}
+
+      </ul>
+        </section>
+
+<hr>
+
+<!-- Course Overview -->
+

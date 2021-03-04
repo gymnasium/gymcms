@@ -6,4 +6,27 @@ url: https://thegymnasium.com/courses/course-v1:GYM+109+0/about
 topic: "Web Design & Development"
 short_description: "This is a hands-on, code-intensive course on how to build high-performance, responsive websites that look great across multiple screen sizes and devices."
 instructor: jpamental
+skills: 
+  - label: "Strategic thinking about responsive process"
+  - label: "Page layout structure with HTML & CSS"
+  - label: "Responsive typography and image techniques"
+  - label: "And more…"
+audience:
+  - label: "Front-End Developers"
+  - label: "Designers with coding chops"
+  - label: "JavaScript Developers"
+course_outline:
+  - title: "Lesson 1: Setting The Stage"
+    description: "You'll start by looking at the objectives and structure of the course and what you'll be learning. Then you'll begin to explore the technical, conceptual, and design considerations involved with Responsive Web Design. Concepts covered include understanding how mobile web browsing influences our design and development, why design patterns are becoming increasingly important and how to identify challenges when responsively designing for content management systems."
+  - title: "Lesson 2: Basic Mechanics And Leveling Up"
+    description: "In this lesson, you'll dive into the core concepts of fluid layouts, flexible media, and CSS media queries. You'll learn strategies for converting a static layout into a flexible layout, how to best use media query breakpoints to make layouts look great, and when to use the right unit of measure for the job (pixels versus percentages versus ems). You'll also get a chance to learn about new units of measure that are gaining traction on the web and decide whether they make sense for your upcoming projects."
+  - title: "Lesson 3: Typography And Layout"
+    description: "You'll learn best practices for adding web fonts to your projects. In the typography section, you'll learn how to effectively use web fonts to improve the readability and aesthetics of your design.In addition you'll learn the latest methods of how to mitigate the performance hit your users face when loading fonts. In the layout section, you'll implement enhancements to your design using CSS Columns and Flexbox. You'll also get a preview of CSS Grid Layout, a new technology with the potential to revolutionize the way we design for the web."
+  - title: "Lesson 4: Navigation Patterns"
+    description: "This lesson focuses on how to determine the appropriate context for responsive navigation and how to tailor your user interface for touch screens as well as for smartphones versus desktop. You'll take a tour of a number of desktop and mobile navigation patterns and learn the pros and cons of each. Finally, you'll walk through a detailed tutorial on how to build an \"off-canvas\" navigation that works well on mobile and translates effectively to desktop screens."
+  - title: "Lesson 5: Advanced Enhancement"
+    description: "Discover how to integrate responsive images into your websites through a series of hands-on exercises using the picture element and other techniques. You'll acknowledge the past by looking at how to support older browsers with polyfills and look toward the future with a discussion of the potential of Element Queries."
+  - title: "Lesson 6: Performance"
+    description: "Learn why website performance is one of the most important elements of the design process, especially for users in mobile and/or low-bandwidth scenarios. You'll learn which tools are useful for testing your sites and walk through a number of exercises involving the optimization of our sample site. Specifically, you'll learn when a Content Delivery Network (CDN) makes sense. You'll also learn recent techniques involving inline CSS and JavaScript configurations that can cut page-load time dramatically for your user."
+  
 ---

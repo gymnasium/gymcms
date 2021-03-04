@@ -6,4 +6,28 @@ url: https://thegymnasium.com/courses/GYM/001/0/about
 topic: "Career Skills"
 short_description: "Learn how to estimate, plan, track, and manage your time in order to complete projects. Being busy isn’t a bad thing, but not being in control of your own time is."
 instructor: bharned
+skills: 
+  - label: "Project estimation"
+  - label: "Time tracking"
+  - label: "Team/client communication skills"
+  - label: "And more…"
+audience:
+  - label: "Designers"
+  - label: "Developers"
+  - label: "Anyone with a deadline"
+course_outline:
+  - title: "Chapter 1: Why Is Estimating And Managing Your Time Important?"
+    description: "An introduction to what we will cover in the course and why it’s being covered. Will include examples of the outcomes of good and bad time management, and how it can affect projects and your personal time."
+  - title: "Chapter 2: Estimating Your Time On Projects"
+    description: "Knowing just how long something will take you might seem impossible. It’s not! With the use of simple work breakdown tactics, very basic project planning-and even the use of some historical data-you can come up with a pretty solid estimate. This section will present a process for dissecting how much time you will need to accomplish discrete tasks-for research, UX design, visual design, and development."
+  - title: "Chapter 3: A Sample Freelance Gig"
+    description: "Brett walks through a real-world scenario of a designer estimating how much time it will take to design and build a small business website."
+  - title: "Chapter 4: Tracking Your Time"
+    description: "This will be a quick lesson on best practices for setting up and tracking your time using the time tracking mechanism of your choice. We’ll cover selected apps and features and recommendations on usage."
+  - title: "Chapter 5: The To-Do List Is Your New BFF"
+    description: "You'll learn why you should record and track all of your tasks, large and small. You'll also discover tactics for meaningfully prioritizing your to-do list items. This section will also cover a review of a few to-do list applications that might help you manage your tasks and time."
+  - title: "Chapter 6: Solid Communication"
+    description: "The foundation to doing anything successfully in life is grounded in solid communications practices. This section will offer guidance on how you can best communicate with your team, and how those communications can improve how you plan and use your working time."
+  - title: "Chapter 7: Conclusion"
+    description: "Brett recaps the topics you have covered and sends you on your way to defeat busy!"
 ---

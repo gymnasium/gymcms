@@ -1,0 +1,31 @@
+{% assign course = site.data.courses[page.course_ID] %}
+<!-- {{ course.title }} -->
+
+<!-- https://studio.gymna.si/settings/details/course-v1:GYM+{{course.course_ID | remove: "GYM-"}}+0 -->
+<!-- Studio Field: Course Short Description -->
+
+
+{{ course.short_description }}
+
+<div class="row">
+ <div class="col-md-6">
+    <dl>
+      <dt>Skills Covered</dt>
+      {%- for skill in course.skills -%}
+      <dd><span>{{ skill.label }}</span></dd>
+      {%- endfor -%}
+    </dl>
+  </div>
+
+  <div class="col-md-6">
+    <dl>
+      <dt>This course is for </dt>
+      {%- for audience in course.audience -%}
+      <dd><span>{{ audience.label }}</span></dd>
+      {%- endfor -%}
+    </dl>
+  </div>
+
+ </div>
+
+<hr>
