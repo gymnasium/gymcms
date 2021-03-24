@@ -47,18 +47,18 @@ main {
 /* reset default (text) links */
 [role="main"] {
   a:not([class]) {
-    color: #222;
+    color: $gym-black;
     text-decoration: none;
     padding-bottom: 2px;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid $gym-black;
     margin-bottom: -2px;
 
     &:hover,
     &:focus,
     &:active {
-      color: #222;
+      color: $gym-black;
       text-decoration: none;
-      border-bottom: 2px solid #222 !important;
+      border-bottom: 2px solid $gym-black !important;
     }
   }
 }
@@ -77,13 +77,13 @@ main {
 
   /* !override / color */
     b {
-      color: #fff;
+      color: $gym-white;
     }
   }
 
   .gymlink,
   .gymlink * {
-    color: #f8971d;
+    color: $gym-orange;
   }
 
   /* !override / remove padding-bottom  */
@@ -100,11 +100,6 @@ main {
 /* !override / reset/rescale font-size adjustment */
 
 
-
-
-
-
-
 /* --- typography --- */
 
 /* headings / margin reset */
@@ -116,7 +111,7 @@ main {
   h4,
   h5,
   h6 {
-    color: #222;
+    color: $gym-black;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -134,7 +129,7 @@ main {
 
   /* paragraphs */
   p {
-    font: normal 1.15em/1.45 "Helvetica Neue", Helvetica, sans-serif;
+    font: normal 1.15em/1.45 $gym-font-stack-text;
     margin-top: 1em;
     margin-bottom: 0;
   }
@@ -156,9 +151,9 @@ main {
 
   /* secondary button */
   .gym-button-secondary {
-    color: #fff;
+    color: $gym-white;
     background-color: transparent;
-    border: 2px solid #f8971d;
+    border: 2px solid $gym-orange;
 
     b {
       color: inherit;
@@ -168,7 +163,7 @@ main {
     &:hover,
     &:focus,
     &:active {
-      border-color: #a6a6a6;
+      border-color: $gym-light-gray;
     }
   }
 }
@@ -187,7 +182,7 @@ main {
 
   h1,
   p {
-    color: #222;
+    color: $gym-black;
   }
 
   .banner-content {
@@ -196,7 +191,7 @@ main {
   }
 
   p {
-    font: normal 1.25em/1.45 "Helvetica Neue", Helvetica, sans-serif;
+    font: normal 1.25em/1.45 $gym-font-stack-text;
     margin-top: .6em;
   }
 }
@@ -211,7 +206,7 @@ main {
   &--card {
     display: grid;
     grid-template-rows: 1fr auto;
-    background-color: #222;
+    background-color: $gym-black;
     border-top: 1em solid #ccc;
   }
   
@@ -223,7 +218,7 @@ main {
 
       .topic,
       .title {
-        color: #fff;
+        color: $gym-white;
       }
 
       .topic {
@@ -264,7 +259,7 @@ main {
       max-width: 24rem;
       font-size: .55em;
       line-height: 1.35;
-      color: #fff;
+      color: $gym-white;
       letter-spacing: .05rem;
       margin-top: .75rem;
     }
@@ -278,7 +273,7 @@ main {
   /* --- cta --- */
 
   &--cta {
-    color: #fff;
+    color: $gym-white;
     padding: 1.2em;
 
     p {
