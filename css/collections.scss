@@ -71,6 +71,25 @@ main {
 
 #main {
   font-size: 16px;
+
+  .gym-button {
+    font-size: 105%;
+
+  /* !override / color */
+    b {
+      color: #fff;
+    }
+  }
+
+  .gymlink,
+  .gymlink * {
+    color: #f8971d;
+  }
+
+  /* !override / remove padding-bottom  */
+  .container-fluid {
+    padding-bottom: 0;
+  }
 }
 
 [role="main"] .main-content {
@@ -80,72 +99,78 @@ main {
 
 /* !override / reset/rescale font-size adjustment */
 
-#main .gym-button {
-  font-size: 105%;
-}
 
-/* !override / color */
 
-#main .gym-button b {
-  color: #fff;
-}
 
-#main .gymlink,
-#main .gymlink * {
-  color: #f8971d;
-}
 
-/* !override / remove padding-bottom  */
 
-#main .container-fluid {
-  padding-bottom: 0;
-}
 
 /* --- typography --- */
 
 /* headings / margin reset */
 
-[role="main"] h1,
-[role="main"] h2,
-[role="main"] h3,
-[role="main"] h4,
-[role="main"] h5,
-[role="main"] h6 {
-  color: #222;
-  margin-top: 0;
-  margin-bottom: 0;
+[role="main"] {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #222;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 2.25em;
+  }
+  
+  h3 {
+    font-size: 1.4em;
+    line-height: 1.15;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  /* paragraphs */
+  p {
+    font: normal 1.15em/1.45 "Helvetica Neue", Helvetica, sans-serif;
+    margin-top: 1em;
+    margin-bottom: 0;
+  }
 }
 
-#main h1 {
-  font-size: 2.25em;
-}
 
-#main h3 {
-  font-size: 1.4em;
-  line-height: 1.15;
-  letter-spacing: 0;
-  text-transform: none;
-}
+#main {
+  /* typographical details */
+  .all-caps {
+    text-transform: uppercase;
+  }
+  
+  .nowrap,
+  .no-wrap {
+    font: inherit;
+    color: inherit;
+    white-space: nowrap;
+  }
 
-/* paragraphs */
+  /* secondary button */
+  .gym-button-secondary {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #f8971d;
 
-[role="main"] p {
-  font: normal 1.15em/1.45 "Helvetica Neue", Helvetica, sans-serif;
-  margin-top: 1em;
-  margin-bottom: 0;
-}
+    b {
+      color: inherit;
+      vertical-align: text-top;
+    }
 
-/* typographical details */
-
-#main .all-caps {
-  text-transform: uppercase;
-}
-
-#main .nowrap,
-#main .no-wrap {
-  font: inherit;
-  color: inherit;
-  white-space: nowrap;
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: #a6a6a6;
+    }
+  }
 }
 
 /* --- collections / catalog view --- */
@@ -366,28 +391,6 @@ main {
   /* override -- legacy layout -- end */
 
 }
-
-#main {
-  /* secondary button */
-  .gym-button-secondary {
-    color: #fff;
-    background-color: transparent;
-    border: 2px solid #f8971d;
-
-    b {
-      color: inherit;
-      vertical-align: text-top;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      border-color: #a6a6a6;
-    }
-  }
-}
-
-
 
 /* typographic style / basic */
 
