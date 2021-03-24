@@ -7,3 +7,8 @@ TODO: reconcile this with the concurrent work happening here: @https://github.co
 This file will automatically compile as design-systems.css, assuming the front matter block (double ---) exists
 
 */
+.ds {
+  &--about {
+    background-color: green; // example
+  }
+}
