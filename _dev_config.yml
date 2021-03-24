@@ -31,3 +31,8 @@ kramdown:
   hard_wrap:      false
   footnote_nr:    1
   show_warnings:  false
+
+## CSS Preprocessing/SASS (see @https://github.com/jekyll/jekyll-sass-converter)
+sass:
+  sass_dir: _sass
+  style: expanded
