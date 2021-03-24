@@ -1,0 +1,400 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+/* --- !override / reset / all initial --- */
+#content > .container,
+#content > .container > .row,
+#content > .container > .row > .col-md-12 {
+  @include resets;
+}
+
+/* --- smooth scrolling --- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- flexible images --- */
+main {
+  img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+  }
+  
+  figure {
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  figcaption {
+    text-align: left;
+  }
+}
+
+
+/* gym button */
+
+#main .gym-button {
+  width: auto;
+  padding: 1.2em 1.4em;
+}
+
+/* reset default (text) links */
+[role="main"] {
+  a:not([class]) {
+    color: #222;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #222;
+    margin-bottom: -2px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #222;
+      text-decoration: none;
+      border-bottom: 2px solid #222 !important;
+    }
+  }
+}
+
+
+
+/* --- #main --- */
+
+/* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
+
+#main {
+  font-size: 16px;
+}
+
+[role="main"] .main-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* !override / reset/rescale font-size adjustment */
+
+#main .gym-button {
+  font-size: 105%;
+}
+
+/* !override / color */
+
+#main .gym-button b {
+  color: #fff;
+}
+
+#main .gymlink,
+#main .gymlink * {
+  color: #f8971d;
+}
+
+/* !override / remove padding-bottom  */
+
+#main .container-fluid {
+  padding-bottom: 0;
+}
+
+/* --- typography --- */
+
+/* headings / margin reset */
+
+[role="main"] h1,
+[role="main"] h2,
+[role="main"] h3,
+[role="main"] h4,
+[role="main"] h5,
+[role="main"] h6 {
+  color: #222;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#main h1 {
+  font-size: 2.25em;
+}
+
+#main h3 {
+  font-size: 1.4em;
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* paragraphs */
+
+[role="main"] p {
+  font: normal 1.15em/1.45 "Helvetica Neue", Helvetica, sans-serif;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+/* typographical details */
+
+#main .all-caps {
+  text-transform: uppercase;
+}
+
+#main .nowrap,
+#main .no-wrap {
+  font: inherit;
+  color: inherit;
+  white-space: nowrap;
+}
+
+/* --- collections / catalog view --- */
+
+/* --- #about --- */
+
+/* !override background-color w/ ID selector/combinator */
+
+#about {
+  background-color: #d2d2d2;
+  padding-top: 1.6em;
+  padding-bottom: 1.6em;
+  border-bottom: 1px dashed #bbb;
+
+  h1,
+  p {
+    color: #222;
+  }
+
+  .banner-content {
+    background-color: inherit;
+    padding-bottom: 0;
+  }
+
+  p {
+    font: normal 1.25em/1.45 "Helvetica Neue", Helvetica, sans-serif;
+    margin-top: .6em;
+  }
+}
+
+
+
+/* --- collection --- */
+
+.collection {
+
+  /* --- collection--card --- */
+  &--card {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background-color: #222;
+    border-top: 1em solid #ccc;
+  }
+  
+  &--main {
+    padding: 1.2em 1.2em 0;
+
+    header {
+      max-width: 18.25em;
+
+      .topic,
+      .title {
+        color: #fff;
+      }
+
+      .topic {
+        font-size: 1em;
+        line-height: 1;
+        color: #999;
+        letter-spacing: .15rem;
+        margin-top: -1px;
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+
+  /* topics */
+
+  .accessibility,
+  .web-design-development {
+    border-top-color: #d73158;
+  }
+
+  .javascript {
+    border-top-color: #764c9f;
+  }
+
+  .prototyping,
+  .user-experience {
+    border-top-color: #5ca5a0;
+  }
+
+  .career-skills {
+    border-top-color: #2c9959;
+  }
+
+  // Main
+  &--main {
+    header .subhead {
+      display: block;
+      max-width: 24rem;
+      font-size: .55em;
+      line-height: 1.35;
+      color: #fff;
+      letter-spacing: .05rem;
+      margin-top: .75rem;
+    }
+
+    p {
+      font-size: 1em;
+      color: #ccc;
+    }
+  }
+
+  /* --- cta --- */
+
+  &--cta {
+    color: #fff;
+    padding: 1.2em;
+
+    p {
+      font-size: 1em;
+      margin-top: 0;
+    }
+  }
+}
+
+
+/* --- grid layout --- */
+
+/* --- legacy columns (inline-block) w/ breakpoints --- */
+
+.cols > ul {
+  list-style: none;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.cols ul > li {
+  overflow: hidden;
+}
+
+@media (min-width: 40em) {
+
+  .cols {
+    padding-bottom: 1px; /* overflow height adjustment (hack) -- useful when nested content has border */
+    overflow: hidden;
+
+    > ul {
+      margin-left: -.6em;
+      margin-right: -.6em;
+
+      li {
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        box-sizing: border-box;
+        padding-left: .6em;
+        padding-right: .6em;
+        margin-top: 1.2em;
+        margin-right: -4px;
+      }
+    }
+  }
+}
+
+@media (min-width: 58em) {
+
+  .cols > ul li {
+    width: 50%;
+  }
+
+}
+
+@media (min-width: 64em) {
+
+  .cols > ul li {
+    width: 33.333333333333333%;
+  }
+
+}
+
+/* --- modern columns (grid) --- */
+
+@supports (display: grid) {
+
+  .cols > ul {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1.2em;
+  }
+
+  @media (min-width: 36em) {
+
+    .cols > ul {
+      grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    }
+
+  }
+
+/* override -- legacy layout -- start */
+
+  .cols,
+  .cols > ul li {
+    overflow: visible;
+  }
+
+  .cols > ul,
+  .cols > ul li {
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .cols > ul {
+    margin-left: 0;
+
+    li {
+      display: inherit;
+      width: auto;
+      box-sizing: content-box;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  /* override -- legacy layout -- end */
+
+}
+
+#main {
+  /* secondary button */
+  .gym-button-secondary {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #f8971d;
+
+    b {
+      color: inherit;
+      vertical-align: text-top;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: #a6a6a6;
+    }
+  }
+}
+
+
+
+/* typographic style / basic */
+
+main {
+  h1,
+  h2,
+  h3 {
+    letter-spacing: .02em;
+  }
+}
