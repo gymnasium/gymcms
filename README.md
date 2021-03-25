@@ -12,8 +12,9 @@ This repo serves as CMS for some of the static content on our Open EdX site. Con
 1. clone this repo.
 1. run `docker-compose up` in the repo root.
 1. Wait patiently for stuff to load & compile.
-1. navigate to [http://0.0.0.0:4000](http://0.0.0.0:4000)
+1. navigate to [http://0.0.0.0:4000](http://0.0.0.0:4000) to see the build status.
 1. Get busy making beautiful things!
 
 ## Static Content
-Static pages are served up from various subdirectories off the root.
+Static pages are served up from the `static` folder:
+* [http://localhost:4000/static/](http://localhost:4000/static/)
