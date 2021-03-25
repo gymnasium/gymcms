@@ -12,7 +12,7 @@ permalink: /tests/take5/dates/
 {%- assign pubdates = ""  | split: ", " -%}
 {%- assign publish_order = ""  | split: ", " -%}
 
-{% assign catalog = site.data.take5s | sort %}
+{% assign catalog = site.data.take5 | sort %}
 
 {% for take5_hash in catalog %}
     {% assign item = take5_hash[1] %}
@@ -36,9 +36,9 @@ permalink: /tests/take5/dates/
 
 {%- for item in publish_order -%}
 <pre>
-Course ID: {{ site.data.take5s[item].course_ID }}
-Title: {{ site.data.take5s[item].title }}
-Publish Date: {{ site.data.take5s[item].date }}
-Publish Date: {{ site.data.take5s[item].date | date_to_string }}
+Course ID: {{ site.data.take5[item].course_ID }}
+Title: {{ site.data.take5[item].title }}
+Publish Date: {{ site.data.take5[item].date }}
+Publish Date: {{ site.data.take5[item].date | date_to_string }}
 </pre>
 {%- endfor -%}

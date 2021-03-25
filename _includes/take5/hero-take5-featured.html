@@ -11,7 +11,7 @@
 
 {%- endcase -%}
 
-{%- assign catalog = site.data.take5s | sort -%}
+{%- assign catalog = site.data.take5 | sort -%}
 {%- for take5_hash in catalog -%}
     {%- assign item = take5_hash[1] -%}
     {%- if item.featured == true -%}
