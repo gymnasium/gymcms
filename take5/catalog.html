@@ -37,7 +37,7 @@ permalink: /static/take5/
 
 {%- assign recent = "" | split: ", " -%}
 
-{% assign catalog = site.data.take5s | sort %}
+{% assign catalog = site.data.take5 | sort %}
 
 {% for take5_hash in catalog %}
     {% assign item = take5_hash[1] %}
@@ -67,25 +67,25 @@ permalink: /static/take5/
 
 {%- for item in publish_order -%}
 
-{%- if site.data.take5s[item].live == true -%}
+{%- if site.data.take5[item].live == true -%}
 
 
-    {%- if site.data.take5s[item].featured == true -%}
-        {% assign featured = site.data.take5s[item].course_ID %}
-        {% assign featured_title = site.data.take5s[item].title %}
-        {% assign featured_description = site.data.take5s[item].short_description %}
-        {% assign featured_url = site.data.take5s[item].title | slugify | prepend: domain_link %}
-        {% assign featured_instructor = site.data.take5s[item].instructor %}
-        {% assign featured_topic = site.data.take5s[item].topic %}
-        {% assign featured_poster_art = site.data.take5s[item].poster_art %}
-        {% assign featured_video_duration = site.data.take5s[item].video_duration %}
+    {%- if site.data.take5[item].featured == true -%}
+        {% assign featured = site.data.take5[item].course_ID %}
+        {% assign featured_title = site.data.take5[item].title %}
+        {% assign featured_description = site.data.take5[item].short_description %}
+        {% assign featured_url = site.data.take5[item].title | slugify | prepend: domain_link %}
+        {% assign featured_instructor = site.data.take5[item].instructor %}
+        {% assign featured_topic = site.data.take5[item].topic %}
+        {% assign featured_poster_art = site.data.take5[item].poster_art %}
+        {% assign featured_video_duration = site.data.take5[item].video_duration %}
     {%- else -%}
     {%- comment -%} Not featured, but live? Add the course_ID to the RECENT list {%- endcomment -%}
-    {%- assign recent = recent | push: site.data.take5s[item].course_ID -%}
+    {%- assign recent = recent | push: site.data.take5[item].course_ID -%}
     {%- endif -%}
 {%- else -%}
     {%- comment -%} Not live? Add the course_ID to the UPCOMING list {%- endcomment -%}
-    {%- assign upcoming = upcoming | push: site.data.take5s[item].course_ID -%}
+    {%- assign upcoming = upcoming | push: site.data.take5[item].course_ID -%}
 {%- endif -%}
 {%- endfor -%}
 

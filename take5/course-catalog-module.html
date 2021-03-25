@@ -23,7 +23,7 @@ permalink: /static/take5-catalog-module/
 {%- assign recent = ""  | split: ", " -%}
 {%- assign upcoming = ""  | split: ", " -%}
 
-{% assign catalog = site.data.take5s | sort %}
+{% assign catalog = site.data.take5 | sort %}
 
 {% for take5_hash in catalog %}
     {% assign item = take5_hash[1] %}
@@ -47,9 +47,9 @@ permalink: /static/take5-catalog-module/
 
 {%- for item in publish_order -%}
 
-{%- if site.data.take5s[item].live == true -%}
+{%- if site.data.take5[item].live == true -%}
 
-    {%- assign recent = recent | push: site.data.take5s[item].course_ID -%}
+    {%- assign recent = recent | push: site.data.take5[item].course_ID -%}
     {%- endif -%}
 {%- endfor -%}
 
@@ -63,7 +63,7 @@ permalink: /static/take5-catalog-module/
 <ul class="listing-courses" id="take5-list">
 
 {%- for item in recent -%}
-{%- assign recent_take5 = site.data.take5s[item] -%}
+{%- assign recent_take5 = site.data.take5[item] -%}
 
 <li class="course-item" data-course-id="{{ recent_take5.course_ID | remove: 'GYM-' }}">
   <article class="row">

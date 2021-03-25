@@ -1,0 +1,34 @@
+---
+layout: raw
+permalink: /static/courses/
+---
+<section class="courses-container">
+
+  <!-- Full courses description -->
+  <h1 id="full">
+    Full Courses
+  </h1>
+  <p class="hero">
+    Full Courses are taught by industry experts and focus on current skills and technologies. Each includes 3 to 6 hours of video instruction, optional quizzes and assignments, a final exam, and certificate (if and) when you pass.
+  </p>
+  
+  <ul class="listing-courses">
+    <!-- course card underscore template is loaded here if course_discovery is set to true-->
+    
+    <!-- otherwise we use the following loop -->
+    %for course in courses:
+      <%include file="./catalog-course.html" args="course=course" />
+    %endfor
+  </ul>
+
+  <!-- Gym Shorts description -->
+  <h1 id="gymshorts">Gym Shorts</h1>
+  <p class="hero">
+    Gym Shorts are short courses that all last under an hour. Like our Full Courses, they are taught by industry experts and focus on current skills and technologies. Each includes approximately one hour of video instruction, a final exam, and a badge (if and) when you pass.
+  </p>
+  <ul class="listing-courses" id="gym-shorts-list">
+
+  </ul>
+
+  ${gymcms.render('take5-catalog-module')}
+</section>

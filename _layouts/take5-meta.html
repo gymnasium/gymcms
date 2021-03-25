@@ -1,4 +1,4 @@
-{%- assign course = site.data.take5s[page.course_ID] -%}
+{%- assign course = site.data.take5[page.course_ID] -%}
 {%- assign og_description = course.short_description -%}
 <meta property="og:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/take5/' }}">
 <meta property="og:type" content="website">
