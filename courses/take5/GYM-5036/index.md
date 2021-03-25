@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5036
-permalink: /static/take5/gym-5036
+permalink: /courses/take5/gym-5036
 ---
 
 Ethan Marcotte: You’ve probably seen many drop caps on the web, those big beautiful letters that appear at the beginnings of articles, essays, or blog posts. Let’s explore a common way for creating drop caps, discuss their strengths and weaknesses. And then we’ll look at a more robust approach to creating compelling and accessible drop caps on the web. Here’s our sample design. If you want to follow along, you can use [this URL][1]{: target="_blank" rel="noopener"} on CodePen. And if you’d like to skip ahead to the [finished version][2]{: target="_blank" rel="noopener"}, that’s available on CodePen, too.

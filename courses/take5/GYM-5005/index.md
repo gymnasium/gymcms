@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5005
-permalink: /static/take5/gym-5005
+permalink: /courses/take5/gym-5005
 ---
 
 What’s up, cool cats? Welcome to a very special edition of our Take 5 tutorials, where you’re going to have a gas. *Chill out.* Turn this grayscale image of the famous jazz musician Thelonious Monk into a duotone. Now, in honor of Monk, we’re recording this in our favorite hangout spot. I encourage you to get a refreshing beverage of your own and follow along as we *blow your mind*.

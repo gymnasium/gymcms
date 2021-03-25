@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5002
-permalink: /static/take5/gym-5002
+permalink: /courses/take5/gym-5002
 ---
 
 In today’s tutorial, you’re going to take a plain heading, [as seen here][1]{: target="_blank" rel="noopener"}, and [add a knockout effect][2]{: target="_blank" rel="noopener"}, which means you can take any image you’d like and make it appear inside the outline of your text. The example you’ll be using is an image of clouds, and the text you’ll be using are the words, **The Cloud**.

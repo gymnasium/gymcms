@@ -71,7 +71,7 @@ td.success {
     <td><pre><a href="{{ item.url | absolute_url }}">{{ item.url | absolute_url }}</a></pre></td>
     
     <!-- Meta tag partial -->
-    {% assign meta_url = item.course_ID | prepend: '/static/take5/meta/' | append: '-meta/' | downcase %}
+    {% assign meta_url = item.course_ID | prepend: '/take5/meta/' | append: '-meta/' | downcase %}
     <td>
         <a href="{{ meta_url | absolute_url }}"><pre>{{ meta_url | absolute_url }}</pre></a>
     </td>

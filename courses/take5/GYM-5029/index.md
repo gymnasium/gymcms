@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5029
-permalink: /static/take5/gym-5029
+permalink: /courses/take5/gym-5029
 ---
 
 Microinteractions are the small everyday events in digital products that can be a great way to enhance the overall experience for your users. Examples include what happens when you favorite a tweet or the way an app updates its interface after a task is completed.

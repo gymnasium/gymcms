@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5010
-permalink: /static/take5/gym-5010
+permalink: /courses/take5/gym-5010
 ---
 
 In this tutorial you’re going to learn how to use the KJ method.

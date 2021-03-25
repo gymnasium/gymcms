@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5043
-permalink: /static/take5/gym-5043
+permalink: /courses/take5/gym-5043
 ---
 
 Clarissa Peterson: One issue that sometimes causes difficulty for website users is a lack of contrast between colors. In this tutorial, you’ll learn why contrast between foreground and background colors is important and how to make sure you have enough contrast on a web page.

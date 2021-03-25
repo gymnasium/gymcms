@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5037
-permalink: /static/take5/gym-5037
+permalink: /courses/take5/gym-5037
 ---
 
 Clarissa Peterson: How you use HTML, CSS, and JavaScript on a web page has a big effect on the page’s accessibility. In this tutorial, you’ll learn the purpose of HTML, CSS and JavaScript along with when it’s okay to use document types other than regular web pages and how they affect accessibility. To start out, (Big Idea) **you need to remember that not everybody’s going to view a web page in the same way that you do.** Screen reading software only gets the content it reads from the HTML, not the CSS, so you can’t rely on the CSS to communicate with users.

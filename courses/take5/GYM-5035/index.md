@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5035
-permalink: /static/take5/gym-5035
+permalink: /courses/take5/gym-5035
 ---
 
 Ethan Marcotte: You’ve probably worked with a variety of units in your design. **Pixels**, **percentages**, maybe even the odd **em** or **rem**. In this lesson, we’re going to look at the **viewport units**, `vw` and `vh`, and explore the ways in which they can spice up our designs. If you want to follow along, you can use [this URL][1]{: target="_blank" rel="noopener"} on CodePen. And if you’d like to skip ahead to the [finished version][2]{: target="_blank" rel="noopener"}, that’s available on CodePen, too.

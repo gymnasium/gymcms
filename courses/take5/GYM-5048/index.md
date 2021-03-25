@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5048
-permalink: /static/take5/gym-5048
+permalink: /courses/take5/gym-5048
 ---
 
 Clarissa Peterson: In this tutorial, you’ll learn how to hide animations from users who don’t want them and how animations can cause serious problems for certain users with epilepsy. The good news is there’s something in CSS that will help — the **prefers-reduced-motion media query**. It’s available in most major browsers already.

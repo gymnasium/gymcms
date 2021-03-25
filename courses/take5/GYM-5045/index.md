@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5045
-permalink: /static/take5/gym-5045
+permalink: /courses/take5/gym-5045
 ---
 
 Clarissa Peterson: Forms often cause accessibility problems on websites. There are many things you can do to make your forms more accessible. In this tutorial, you’ll learn how to use required fields, validation, and placeholder text, as well as learn why you need to make sure your form doesn’t time out. (Best Practice) **Users need to be able to easily tell which fields they are required to complete before submitting a form. It’s common to use color for this purpose, but since some users are color blind, you can’t rely on color alone. Instead perhaps use color plus an asterisk to mark required fields.**

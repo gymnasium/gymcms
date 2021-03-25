@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5026
-permalink: /static/take5/gym-5026
+permalink: /courses/take5/gym-5026
 ---
 
 In this tutorial, you’re going to learn how to create a GitHub Pages website. By the end of the video, you will have your own domain and a public place to post your work, similar to this one, **jamesnasium.github.io**. Of course, the first part of this address will be your own name (yourusername.github.io). To get some sample content for your site, you’ll take some text from a <cite>Wikipedia</cite> article, and place it into a simple HTML page like so.

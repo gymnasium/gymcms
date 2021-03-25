@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5012
-permalink: /static/take5/gym-5012
+permalink: /courses/take5/gym-5012
 ---
 
 In this tutorial, you’re going to learn how to use **CSS Grid Layout** to help you quickly and easily prototype page layouts in the browser. [This is the project on CodePen][1]{: target="_blank" rel="noopener"} you’ll be working with. And [here is the URL][1]{: target="_blank" rel="noopener"}, which you can also find linked within the **Resources** section for this video.

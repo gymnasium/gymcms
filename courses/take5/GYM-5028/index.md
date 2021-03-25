@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5028
-permalink: /static/take5/gym-5028
+permalink: /courses/take5/gym-5028
 ---
 
 Hey everybody, chances are you’re familiar with dark mode, right? A feature used to minimize eyestrain, reduce battery drain, and let’s just face it — looks kind of cool. In this first example here, you can see me switching between light mode and dark mode, and it’s affecting both my operating system as well as an application.

@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5042
-permalink: /static/take5/gym-5042
+permalink: /courses/take5/gym-5042
 ---
 
 Clarissa Peterson: The colors you use on your website can cause problems for users who are color blind or those who have low vision. In this tutorial, you’ll learn what color blindness is, how it affects users, and how to choose different colors or other visual cues to distinguish information on the screen.

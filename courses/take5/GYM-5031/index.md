@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5031
-permalink: /static/take5/gym-5031
+permalink: /courses/take5/gym-5031
 ---
 
 Charts, diagrams, and visualizations can all help people understand large sets of data at a glance. When these are interactive, they can allow users to explore data in a meaningful and even personal way. And if you’re curious to learn what it takes, enroll in our free class on information design and data visualization [located here at Gymnasium][1].

@@ -1,6 +1,6 @@
 ---
 layout: meta
-permalink: /static/hub-pages/meta/prototyping-collection-meta/
+permalink: /hub-pages/meta/prototyping-collection-meta/
 page_title: "Prototyping | Gymnasium"
 og_title: "Prototyping Collection"
 og_description: "Explore our free collection of prototyping courses, tutorials, webinars, articles, and jobs."

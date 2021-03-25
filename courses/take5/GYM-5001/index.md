@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5001
-permalink: /static/take5/gym-5001/
+permalink: /courses/take5/gym-5001/
 ---
 
 In today’s Take 5, you’re going to make a scrolling background image effect [as seen here][1]{: target="_blank" rel="noopener"}. This effect is similar to the parallax effect that can be found on many places across the web, such as this one.

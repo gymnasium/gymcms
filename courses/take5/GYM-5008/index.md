@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5008
-permalink: /static/take5/gym-5008
+permalink: /courses/take5/gym-5008
 ---
 
 In today’s Take 5 tutorial, you’re going to learn how to write effective survey questions. Surveys are great tools for gathering high-level information in larger quantities and to understand the overall market, customer, or industry behaviors. *Let’s get started.*

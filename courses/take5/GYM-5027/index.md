@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5027
-permalink: /static/take5/gym-5027
+permalink: /courses/take5/gym-5027
 ---
 
 Work meetings. Writing emails. Calendar management — with remote working and virtual teams becoming more and more popular, these everyday work tasks seem to be taking up more and more of our time. This study by McKinsey states that, “the average professional spends 28% of the work week reading and answering email.” Workplace messaging systems such as [Slack][1]{: target="_blank" rel="noopener"} claim to reduce the amount of time workers spend on email, which is probably true. But these systems don't necessarily reduce interruptions or distractions, and in some cases, can even increase them.

@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5019
-permalink: /static/take5/gym-5019
+permalink: /courses/take5/gym-5019
 ---
 
 What have you done recently to promote your work and talents? By the end of this video, I’m going to convince you that there’s more you could be doing. And hopefully, inspire you to take the next step.

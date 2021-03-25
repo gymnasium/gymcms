@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5023
-permalink: /static/take5/gym-5023
+permalink: /courses/take5/gym-5023
 ---
 
 In this tutorial, you’re going to use the **HSL color system** in order to create a unique and harmonious color scheme. You’re going to [start with this drab design here][1]{: target="_blank" rel="noopener"} and [end up with the more colorful one as seen here][2]{: target="_blank" rel="noopener"}. Now [here’s the URL to a CodePen project][1]{: target="_blank" rel="noopener"} where you can follow along, although that link is also available in the **Resources** section for this video. And to begin, here is **the magic number 30**. If you forget everything else about this tutorial, just remember that number, and you’re going to see why shortly.

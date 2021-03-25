@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5014
-permalink: /static/take5/gym-5014
+permalink: /courses/take5/gym-5014
 ---
 
 In this tutorial, you’ll learn how to use Adobe XD’s **Auto-Animate** feature in order to create a high fidelity interactive prototype as seen here. Now you can [follow along by downloading the lesson file at this URL][1]{: rel="noopener"}, or by clicking on the link in the **Resources** section for this video. Once you open up the lesson file, you’ll see a single art board that I’ve prepared for you. The way **Auto-Animate** works is by comparing two artboards, seeing if they have layers with the same name and then animating any properties that have changed between the two.

@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5040
-permalink: /static/take5/gym-5040
+permalink: /courses/take5/gym-5040
 ---
 
 Clarissa Peterson: In this tutorial, you’ll learn what alt text is and when to use or omit alt text. Users who are blind can’t see images, so you need to provide the same content to those users in a different way so that it can be read by their screen reader. (Best Practice) **For most images, the best way to make the information available to screen reader users is to provide a text equivalent.** That means you are providing text to the screen reader software in place of the image, and that text needs to have an equivalent meaning to whatever information is provided visually through the image.

@@ -1,5 +1,5 @@
 ---
 layout: take5-meta
 course_ID: GYM-5035
-permalink: /static/courses/take5/gym-5035/meta/
+permalink: /courses/take5/gym-5035/meta/
 ---

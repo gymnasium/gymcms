@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5022
-permalink: /static/take5/gym-5022
+permalink: /courses/take5/gym-5022
 ---
 
 In this tutorial, you’re going to build a vector download icon in Sketch that looks like this. Now, you can [follow along by downloading the lesson file at this URL][1] or by clicking on the link in the **Resources** section for this video. That lesson file also has a completed version of the graphic if you want to double-check your work.

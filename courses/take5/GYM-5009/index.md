@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5009
-permalink: /static/take5/gym-5009
+permalink: /courses/take5/gym-5009
 ---
 
 In today’s Take 5 tutorial, you’re going to learn how to lead your first usability test. Usability testing allows us to understand how people move through a digital product to solve a problem or complete a task. Imagine you work at Figma, a collaborative interface design tool. Your user analytics show that despite having the presets for different phones, most users don’t use them when they start a new project. In order to understand why, you set up usability test.

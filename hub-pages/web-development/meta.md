@@ -1,6 +1,6 @@
 ---
 layout: meta
-permalink: /static/hub-pages/meta/web-development-collection-meta/
+permalink: /hub-pages/meta/web-development-collection-meta/
 page_title: "Web Development | Gymnasium"
 og_title: "Web Development Collection"
 og_description: "Explore our free collection of web development courses, tutorials, webinars, articles, and jobs."

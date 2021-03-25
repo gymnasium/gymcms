@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5046
-permalink: /static/take5/gym-5046
+permalink: /courses/take5/gym-5046
 ---
 
 > More Than 500 Hours of Content Are Now Being Uploaded To YouTube Every Minute

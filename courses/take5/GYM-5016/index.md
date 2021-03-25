@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5016
-permalink: /static/take5/gym-5016
+permalink: /courses/take5/gym-5016
 ---
 
 In today’s Take 5 tutorial, you’re going to learn the component nuances of telling your story in order to help advance your potential, from winning a project to getting a raise.

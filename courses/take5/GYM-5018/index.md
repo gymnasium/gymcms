@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5018
-permalink: /static/take5/gym-5018
+permalink: /courses/take5/gym-5018
 ---
 
 In today’s Take 5 tutorial, I’m going to introduce you to a formula to help you create compelling stories for projects you’ve created.
