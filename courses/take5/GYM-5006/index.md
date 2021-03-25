@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5006
-permalink: /static/take5/gym-5006
+permalink: /courses/take5/gym-5006
 ---
 
 In this tutorial you’ll learn what a card sort is and how to conduct a successful card sorting session.

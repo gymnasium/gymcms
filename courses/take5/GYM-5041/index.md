@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5041
-permalink: /static/take5/gym-5041
+permalink: /courses/take5/gym-5041
 ---
 
 Clarissa Peterson: There are a few scenarios where alt text can be tricky. In this tutorial, you’ll learn what to do when there is text in an image, when you have graphs or charts, or when an image is a link.

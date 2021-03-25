@@ -1,6 +1,6 @@
 ---
 layout: raw
-permalink: /static/csr-policy/
+permalink: /csr-policy/
 ---
 # Corporate Social Responsibility
 

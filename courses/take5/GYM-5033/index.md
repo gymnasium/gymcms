@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5033
-permalink: /static/take5/gym-5033
+permalink: /courses/take5/gym-5033
 ---
 
 Ethan Marcotte: One of the most popular uses for CSS is applying beautiful hover states to your links. In this video, the links light up whenever I move my mouse cursor over them. Aesthetics aside, hover styles can make our pages more usable. They give a clear signal to users that they can interact with a certain link or element, helping them more quickly take action.

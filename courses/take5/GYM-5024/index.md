@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5024
-permalink: /static/take5/gym-5024
+permalink: /courses/take5/gym-5024
 ---
 
 In this tutorial, you’re going to learn how to use CSS media queries in order to change the appearance of your page based on the width of the user’s screen. Now, [this is a URL to a project on CodePen][1]{: target="_blank" rel="noopener"} that you can follow along with, and that link is also available in the **Resources** section for this video. You’ll also find a [completed version of the project][2]{: target="_blank" rel="noopener"} there if you want to check your work.

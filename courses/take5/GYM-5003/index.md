@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5003
-permalink: /static/take5/gym-5003
+permalink: /courses/take5/gym-5003
 ---
 
 In this tutorial, you’re going to add a gradient overlay to an image that [starts like this][1]{: target="_blank" rel="noopener"} and [ends like this][2]{: target="_blank" rel="noopener"}, using only CSS. In the past, you can only do this sort of thing in an image editor such as Photoshop. But the ability to do this in CSS is faster, easier to update, and more suitable for responsive layouts, such as this one seen here.

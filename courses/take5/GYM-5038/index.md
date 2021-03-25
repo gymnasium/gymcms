@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5038
-permalink: /static/take5/gym-5038
+permalink: /courses/take5/gym-5038
 ---
 
 Clarissa Peterson: Headings and lists are two key parts of HTML that can be used to make content on a web page more accessible. In this tutorial, you’ll learn how to use heading levels to help screen reader users navigate a page, as well as the three types of HTML lists and the correct use case for each.

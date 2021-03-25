@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5011
-permalink: /static/take5/gym-5011
+permalink: /courses/take5/gym-5011
 ---
 
 In this tutorial, you’re going to learn how to use **Smart Layout** in Sketch. In order to follow along, you can [download the lesson file at this URL][1]{: rel="noopener"}. Although, there’s also a link to the file in the **Resources** section for this video.

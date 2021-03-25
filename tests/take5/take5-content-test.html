@@ -141,7 +141,7 @@ td.success {
     {% capture meta_partial_test %}{% file_exists {{ meta_partial }} %}{% endcapture %}
     {% if meta_partial_test == "false" %}<td class="error">MISSING FILE</td>{% else %}
     <td>
-        <a href="/static/take5/meta/{{ item.course_ID | append: '-meta/' | downcase }}" target="_blank">{{ meta_partial_test }}</a>
+        <a href="/take5/meta/{{ item.course_ID | append: '-meta/' | downcase }}" target="_blank">{{ meta_partial_test }}</a>
     </td>
     {% endif %}
 

@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5020
-permalink: /static/take5/gym-5020
+permalink: /courses/take5/gym-5020
 ---
 
 In this Take 5 Tutorial, you’re going to learn how to increase your opportunities and potential by understanding the different audiences you’re likely to meet in the business world.

@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5013
-permalink: /static/take5/gym-5013
+permalink: /courses/take5/gym-5013
 ---
 
 In this tutorial, you’ll learn how to use in InVision Studio’s **Timeline** feature to give you more precise control over your animations. Now you can [follow along by downloading the lesson file at this URL][1]{: rel="noopener"} or by clicking on the link in the **Resources** section for this video.

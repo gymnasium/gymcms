@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5032
-permalink: /static/take5/gym-5032
+permalink: /courses/take5/gym-5032
 ---
 
 Ethan Marcotte: When was the last time you listened to a web page?

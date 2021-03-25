@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5017
-permalink: /static/take5/gym-5017
+permalink: /courses/take5/gym-5017
 ---
 
 Career pivots used to have more stigma attached than they do today. Dramatic shifts in profession will still raise questions from employers. So you need to be *ultra* prepared to answer them. You know you’re ready for a new challenge. But how do you convince the person on the hiring end that you’re the right fit? You know you’d be great at the role, but you’re coming in with a less traditional resume, so you can’t help but feel a bit insecure.

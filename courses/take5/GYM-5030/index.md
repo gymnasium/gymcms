@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5030
-permalink: /static/take5/gym-5030
+permalink: /courses/take5/gym-5030
 ---
 
 In Figma, overlays are a feature that allow you to place one form of content on top of another. In prototyping, this is typically used to display extra information on the screen, such as a confirmation message, tooltip, or a menu. In this tutorial, you’ll learn the basics of overlays as well as a few advanced tips. If you want to follow along, [this is a URL where you can download the project file][1]. And this link is also available in the **Resources** section for this video.

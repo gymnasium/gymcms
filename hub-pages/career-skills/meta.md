@@ -1,6 +1,6 @@
 ---
 layout: meta
-permalink: /static/hub-pages/meta/career-skills-collection-meta/
+permalink: /hub-pages/meta/career-skills-collection-meta/
 page_title: "Career Skills | Gymnasium"
 og_title: "Career Skills Collection"
 og_description: "Explore our free collection of career skill courses, tutorials, webinars, articles, and jobs."

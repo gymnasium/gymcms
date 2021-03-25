@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5004
-permalink: /static/take5/gym-5004
+permalink: /courses/take5/gym-5004
 ---
 
 In today’s Take 5, <cite>Working with CSS Feature Queries</cite>, you’re going to learn how to use cutting edge CSS features for modern browsers while simultaneously making sure that older browsers have a decent visual fallback.

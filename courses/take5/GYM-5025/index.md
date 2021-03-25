@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5025
-permalink: /static/take5/gym-5025
+permalink: /courses/take5/gym-5025
 ---
 
 In this tutorial, you’re going to learn the basics of **CSS variables**, a relatively new addition to CSS that allows you to speed up and simplify your web development workflow. Now this video is going to walk you through a simple example where you’ll use a CSS variable to change and synchronize the color value of three different elements in your design from a single line of code.

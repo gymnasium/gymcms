@@ -1,5 +1,5 @@
 ---
-permalink: /static/webinars/
+permalink: /webinars/
 layout: raw
 ---
 
@@ -47,7 +47,7 @@ layout: raw
       {%- if item.event_ID == "web0005-state-of-responsive-web-design" -%}
         {% case jekyll.environment %}
           {% when "development" %}
-            {%- assign webinar_url = '/static/webinars/state-of-responsive-design'  -%}
+            {%- assign webinar_url = '/webinars/state-of-responsive-design'  -%}
           {% when "staging" %}
             {%- assign webinar_url = 'https://courses.gymna.si/webinars/state-of-responsive-web-design' -%}
           {% when "production" %}

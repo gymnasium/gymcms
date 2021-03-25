@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5015
-permalink: /static/take5/gym-5015
+permalink: /courses/take5/gym-5015
 ---
 
 In this tutorial, you’ll learn how to create advanced animations in Figma using the **Smart Animate** feature. Specifically, you’re going to prototype this effect where a user can *click* and *drag* to create transparency for an image. You can [follow along by downloading the lesson file at this URL][1]{: rel="noopener"} or by clicking on the link in the **Resources** section for this video.

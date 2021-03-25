@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5007
-permalink: /static/take5/gym-5007
+permalink: /courses/take5/gym-5007
 ---
 
 In today’s Take 5 tutorial, you’re going to learn how to conduct a successful customer interview. Customer interviews are conversations where one person does the bulk of the talking, so they tend to be one sided. They’re a perfect way to get a direct line into how customers think about the problems that your product aims to solve. *Let’s jump in.*

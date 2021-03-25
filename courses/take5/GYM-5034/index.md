@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5034
-permalink: /static/take5/gym-5034
+permalink: /courses/take5/gym-5034
 ---
 
 Ethan Marcotte: Using CSS to set the size of our text is one of the most important fundamental web design skills, and it’s probably one of the first things you learned how to do. However, it turns out that one of the most popular ways to set font sizes has some pretty significant drawbacks for our users. Let’s explore why, and then I’ll help you learn an alternative way to create web pages that are more readable and accessible for all.

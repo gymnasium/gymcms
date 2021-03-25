@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5047
-permalink: /static/take5/gym-5047
+permalink: /courses/take5/gym-5047
 ---
 
 Clarissa Peterson: Animations are used a lot on the web, especially in the last few years since it’s become a lot easier to create animations just using CSS.

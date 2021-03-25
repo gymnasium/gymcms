@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5044
-permalink: /static/take5/gym-5044
+permalink: /courses/take5/gym-5044
 ---
 
 Clarissa Peterson: Forms are often a cause of accessibility problems on websites. There are a few things you need to do to make sure that everyone is able to complete the forms on your site. In this tutorial, you’ll learn how to make a form easy to understand and easy to navigate through, as well as the proper use of the `label` element.

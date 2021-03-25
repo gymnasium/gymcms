@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5021
-permalink: /static/take5/gym-5021
+permalink: /courses/take5/gym-5021
 ---
 
 In today’s Take 5, you’re going to learn how to add generated content to the links on a web page. Specifically, by the end of the tutorial, you’ll have all links to PDFs or Word documents automatically labeled and styled with CSS. [This is the project on CodePen][1]{: target="_blank" rel="noopener"} you’ll be working with. And [here’s the URL][1]{: target="_blank" rel="noopener"}, which you can find linked within the **Resources** section for this video.

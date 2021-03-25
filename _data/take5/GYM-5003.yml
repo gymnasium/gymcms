@@ -3,13 +3,13 @@ course_ID: GYM-5003
 title: "Adding a CSS Gradient Overlay to an Image"
 date: 2019-10-30T00:00:00-04:00
 course_type: take5
-url: /static/take5/GYM-5003/
+url: /take5/GYM-5003/
 poster_art: /img/take5/posters/gym-5003.jpg
 topic: "Web Design & Development"
 subtopics:
   - label: CSS
   - label: HTML
-permalink: /static/take5/:name
+permalink: /take5/:name
 live: true
 instructor: "Jeremy Osborn"
 video_ID: SaO2hO-4yEY

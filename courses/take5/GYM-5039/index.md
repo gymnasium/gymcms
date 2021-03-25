@@ -1,7 +1,7 @@
 ---
 layout: take5-raw
 course_ID: GYM-5039
-permalink: /static/take5/gym-5039
+permalink: /courses/take5/gym-5039
 ---
 
 Clarissa Peterson: Tables are the best way to display certain types of data, but if you don’t ensure that your tables are accessible, screen reader users won’t be able to make sense of the data. In this tutorial, you’ll learn what you need to do to make tables more accessible.
