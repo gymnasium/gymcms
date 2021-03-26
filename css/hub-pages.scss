@@ -3,6 +3,8 @@
 @import 'variables';
 @import 'mixins';
 
+@include initial-resets;
+
 /* --- typography --- */
 
 #main {
