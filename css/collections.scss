@@ -1,40 +1,6 @@
 ---
 ---
-@import 'variables';
-@import 'mixins';
-
-/* --- !override / reset / all initial --- */
-#content > .container,
-#content > .container > .row,
-#content > .container > .row > .col-md-12 {
-  @include resets;
-}
-
-/* --- smooth scrolling --- */
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* --- flexible images --- */
-main {
-  img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-    border: 0;
-  }
-  
-  figure {
-    text-align: center;
-    overflow: hidden;
-  }
-  
-  figcaption {
-    text-align: left;
-  }
-}
+@import 'defaults';
 
 
 /* gym button */
