@@ -138,32 +138,12 @@ main[role="main"] a:not([class]):active {
 
 /* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
 
-#main {
-  font-size: 16px;
-}
-
 main[role="main"] .main-content {
   padding-left: 0;
   padding-right: 0;
 }
 
 /* !override / reset/rescale font-size adjustment */
-
-#main .gym-button {
-  font-size: 105%;
-}
-
-/* !override / color */
-
-#main .gym-button b {
-  color: $gym-white;
-}
-
-/* !override / remove padding-bottom  */
-
-#main .container-fluid {
-  padding-bottom: 0;
-}
 
 /* --- #about --- */
 
