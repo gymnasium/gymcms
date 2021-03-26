@@ -396,18 +396,18 @@ main h3 {
   font-family: $gym-font-stack;
   margin-top: -.2em;
   margin-bottom: 1.8em;
-}
 
-.main-header h1,
-.main-header h2 {
-  font-weight: 900;
-  font-size: 2.25em;
-  line-height: 1.05;
-  letter-spacing: .02em;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 0;
+  h1,
+  h2 {
+    font-weight: 900;
+    font-size: 2.25em;
+    line-height: 1.05;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
   }
+}
 
 /* offset "live event" style */
 
@@ -415,6 +415,24 @@ main h3 {
   margin-top: -.21em;
   margin-left: -.3em;
   margin-bottom: 1.3em;
+
+  h1,
+  h2 {
+    display: inline-block;
+  }
+
+  /* "live event" style */
+
+  h1 {
+    background: $gym-orange;
+    padding: .21em .2em .1em .3em;
+    margin-right: .2em;
+  }
+
+  h2 {
+    padding-top: .21em;
+    padding-bottom: .1em;
+  }
 }
 
 @media (min-width: 39em) {
@@ -425,38 +443,22 @@ main h3 {
 
 }
 
-.event-header h1,
-.event-header h2 {
-  display: inline-block;
-}
+.webinar-content {
+  p {
+    font: normal 1em/1.5 $gym-font-stack-text;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  
+  h2 + ul {
+    padding-left: 1.15em;
+    margin-top: 1.2em;
 
-/* "live event" style */
-
-.event-header h1 {
-  background: $gym-orange;
-  padding: .21em .2em .1em .3em;
-  margin-right: .2em;
-}
-
-.event-header h2 {
-  padding-top: .21em;
-  padding-bottom: .1em;
-}
-
-.webinar-content p {
-  font: normal 1em/1.5 $gym-font-stack-text;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.webinar-content h2 + ul {
-  padding-left: 1.15em;
-  margin-top: 1.2em;
-}
-
-.webinar-content h2 + ul li {
-  line-height: 1.35;
-  margin-top: .6em;
+    li {
+      line-height: 1.35;
+      margin-top: .6em;
+    }
+  }
 }
 
 #main p.call-out {
@@ -469,7 +471,6 @@ main h3 {
     font-size: 1.6em;
     line-height: 1.4;
   }
-
 }
 
 /* event banner hero / title, speaker(s), datetime */
@@ -479,35 +480,39 @@ main h3 {
   margin: 0 -2.2em;
 }
 
-#main .event-banner-hero h1 {
-  font-weight: 900;
-  font-size: 2.2em;
-  line-height: 1.2;
-  color: $gym-white;
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: .4em;
-}
-
-#main .event-banner-hero h2 {
-  font-weight: bold;
-  font-size: 1.8em;
-  line-height: 1.3;
-  color: $gym-white;
-  text-align: center;
-  text-transform: none;
-  margin-top: 0;
-  margin-bottom: .8em;
-}
-
-#main .event-banner-hero h3 {
-  line-height: 1.3;
-  color: $gym-white;
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 0;
+#main {
+  .event-banner-hero {
+    h1 {
+      font-weight: 900;
+      font-size: 2.2em;
+      line-height: 1.2;
+      color: $gym-white;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: .4em;
+    }
+    
+    h2 {
+      font-weight: bold;
+      font-size: 1.8em;
+      line-height: 1.3;
+      color: $gym-white;
+      text-align: center;
+      text-transform: none;
+      margin-top: 0;
+      margin-bottom: .8em;
+    }
+    
+    h3 {
+      line-height: 1.3;
+      color: $gym-white;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
 }
 
 /* event banner theme / background-color */
@@ -544,15 +549,14 @@ main h3 {
   background: $gym-light-page-background;
   padding-bottom: 56.25%;
   margin: 2em 0;
-}
 
-/* wistia and youtube friendly */
-
-.event-video .wistia_embed,
-.event-video iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  /* wistia and youtube friendly */
+  .wistia_embed,
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* form / registration */
@@ -563,93 +567,96 @@ main h3 {
   border: 1px solid $gym-gray;
   border-radius: 2px;
   margin-bottom: 2em;
+
+  h2 {
+    font-family: $gym-font-stack;
+    font-size: 2.2em;
+    line-height: 1.1;
+    letter-spacing: .01em;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
-.registration-closed h2 {
-  font-family: $gym-font-stack;
-  font-size: 2.2em;
-  line-height: 1.1;
-  letter-spacing: .01em;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.registration-closed p {
-  margin-bottom: 0;
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .event-form {
   color: $gym-black;
-}
 
-.event-form fieldset {
-  border: 0;
-  padding: 0;
-}
+  fieldset {
+    border: 0;
+    padding: 0;
 
-.event-form fieldset legend {
-  font: 900 1.6em/1.2 $gym-font-stack;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  border: 0;
-}
+    legend {
+      font: 900 1.6em/1.2 $gym-font-stack;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      border: 0;
+    }
+    
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    
+    li {
+      font-size: 1em;
+      margin: 1.4em 0 0;
 
-.event-form fieldset ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  
+  label {
+    display: block;
+    font: normal 1em/1.35 $gym-font-stack;
+    text-transform: uppercase;
+    margin-bottom: .6em;
 
-.event-form fieldset li {
-  font-size: 1em;
-  margin: 1.4em 0 0;
+    &.error {
+      font-weight: bold;
+      color: #d9534f;
+      margin-top: .5em;
+      margin-bottom: -.5em;
+    }
+  }
+  
+  fieldset input,
+  .optional {
+    display: block;
+    width: 100%;
+    font: normal 1em/1.15 $gym-font-stack-text;
+    background: none;
+    padding: .5em;
+    border: 1px solid $gym-gray;
+    border-bottom: 2px solid $gym-orange;
+    border-radius: 2px;
+    box-sizing: border-box;
   }
 
-.event-form fieldset li:first-child {
-  margin-top: 0;
+  
+  .optional {
+    line-height: 1.4;
+    margin-bottom: 1.4em;
+    }
+  
+  p.small-print {
+    line-height: 1.25;
+    margin-bottom: 1.2em;
+
+    small {
+      font-size: .925em;
+      line-height: 1.35;
+    }
+  }
 }
 
-.event-form label {
-  display: block;
-  font: normal 1em/1.35 $gym-font-stack;
-  text-transform: uppercase;
-  margin-bottom: .6em;
-  }
 
-.event-form fieldset input,
-.event-form .optional {
-  display: block;
-  width: 100%;
-  font: normal 1em/1.15 $gym-font-stack-text;
-  background: none;
-  padding: .5em;
-  border: 1px solid $gym-gray;
-  border-bottom: 2px solid $gym-orange;
-  border-radius: 2px;
-  box-sizing: border-box;
-  }
-
-.event-form label.error {
-  font-weight: bold;
-  color: #d9534f;
-  margin-top: .5em;
-  margin-bottom: -.5em;
-  }
-
-.event-form .optional {
-  line-height: 1.4;
-  margin-bottom: 1.4em;
-  }
-
-.event-form p.small-print {
-  line-height: 1.25;
-  margin-bottom: 1.2em;
-}
-
-.event-form p.small-print small {
-  font-size: .925em;
-  line-height: 1.35;
-}
 
 @media (max-width: 32em) {
 
@@ -703,18 +710,18 @@ main aside h2 {
 
 .event-bio {
   margin-bottom: 2em;
-}
 
-.event-bio ~ header {
-  margin-top: 2.2em;
-}
+  ~ header {
+    margin-top: 2.2em;
+  }
 
-.event-bio img {
-  max-width: 8em;
-  border: 1px solid $gym-light-page-background;
-}
+  img {
+    max-width: 8em;
+    border: 1px solid $gym-light-page-background;
+  }
 
-.event-bio h2 {
-  margin-top: 1.3em;
-  margin-bottom: .8em;
+  h2 {
+    margin-top: 1.3em;
+    margin-bottom: .8em;
+  }
 }
