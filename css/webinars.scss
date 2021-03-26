@@ -66,8 +66,6 @@
   }
 }
 
-
-
 #main h1 {
   font-size: 2.25em;
 }
@@ -78,8 +76,6 @@
   letter-spacing: 0;
   text-transform: none;
 }
-
-
 
 /* typographical details */
 
@@ -121,8 +117,6 @@
     margin-top: .6em;
   }
 }
-
-
 
 /* --- webinar --- */
 
@@ -224,11 +218,6 @@
   }
 }
 
-
-
-
-
-
 /* --- featured webinar --- */
 #featured-webinar {
   header,
@@ -240,7 +229,6 @@
     color: $gym-white;
   }
 }
-
 
 #guest-speaker-headshots {
   list-style: none;
@@ -339,9 +327,6 @@
 @include grid-support;
 
 /* secondary button */
-
-/* secondary button */
-
 #main .gym-button-secondary {
   color: $gym-white;
   background-color: transparent;
@@ -360,7 +345,6 @@
 }
 
 /* main / article */
-
 main.content {
   display: block;
   max-width: 72em;
@@ -385,7 +369,6 @@ main article {
 }
 
 /* typographic style / basic */
-
 main h1,
 main h2,
 main h3 {
@@ -410,7 +393,6 @@ main h3 {
 }
 
 /* offset "live event" style */
-
 .event-header {
   margin-top: -.21em;
   margin-left: -.3em;
@@ -422,7 +404,6 @@ main h3 {
   }
 
   /* "live event" style */
-
   h1 {
     background: $gym-orange;
     padding: .21em .2em .1em .3em;
@@ -516,33 +497,29 @@ main h3 {
 }
 
 /* event banner theme / background-color */
-
-/* reddish */
-
-.event-theme-design {
-  background: $gym-magenta;
-}
-
-/* purple */
-
-.event-theme-dev {
-  background: $gym-purple;
-}
-
-/* blueish */
-
-.event-theme-ux {
-  background: $gym-teal;
-}
-
-/* green */
-
-.event-theme-skills {
-  background: $gym-green;
+.event-theme {
+  /* reddish */
+  &-design {
+    background: $gym-magenta;
+  }
+  
+  /* purple */
+  &-dev {
+    background: $gym-purple;
+  }
+  
+  /* blueish */
+  &-ux {
+    background: $gym-teal;
+  }
+  
+  /* green */
+  &-skills {
+    background: $gym-green;
+  }
 }
 
 /* event video / wistia embed */
-
 .event-video {
   position: relative;
   height: 0;
@@ -595,13 +572,13 @@ main h3 {
       letter-spacing: .04em;
       border: 0;
     }
-    
+
     ul {
       list-style: none;
       padding-left: 0;
       margin: 0;
     }
-    
+
     li {
       font-size: 1em;
       margin: 1.4em 0 0;
@@ -625,7 +602,7 @@ main h3 {
       margin-bottom: -.5em;
     }
   }
-  
+
   fieldset input,
   .optional {
     display: block;
@@ -639,7 +616,6 @@ main h3 {
     box-sizing: border-box;
   }
 
-  
   .optional {
     line-height: 1.4;
     margin-bottom: 1.4em;
@@ -656,29 +632,37 @@ main h3 {
   }
 }
 
-
-
 @media (max-width: 32em) {
-
   #main .event-form button.gym-button {
     width: 100%;
   }
-
 }
 
 /* sidebar */
 
-main aside {
-  padding: 2.2em 2.2em 0;
-  border-top: 1px dashed $gym-gray;
-  box-sizing: border-box;
-}
+main {
+  aside {
+    padding: 2.2em 2.2em 0;
+    border-top: 1px dashed $gym-gray;
+    box-sizing: border-box;
 
-main aside header {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $gym-gray;
-  margin-top: -.2em;
-  margin-bottom: 1.6em;
+    header {
+      padding-bottom: 2em;
+      border-bottom: 1px solid $gym-gray;
+      margin-top: -.2em;
+      margin-bottom: 1.6em;
+    }
+
+    h2 {
+      font: bold 1.2em/1.2 $gym-font-stack;
+      text-transform: uppercase;
+    }
+
+    @at-root #main aside h1 {
+      font: 900 1.6em/1.1 $gym-font-stack;
+      text-transform: uppercase;
+    }
+  }
 }
 
 @media (min-width: 60em) {
@@ -690,22 +674,11 @@ main aside header {
     border-top: 0;
     border-left: 1px dashed $gym-gray;
     margin-left: -1px;
+
+    header {
+      padding-top: 1.2em;
+    }
   }
-
-  main aside header {
-    padding-top: 1.2em;
-  }
-
-}
-
-#main aside h1 {
-  font: 900 1.6em/1.1 $gym-font-stack;
-  text-transform: uppercase;
-  }
-
-main aside h2 {
-  font: bold 1.2em/1.2 $gym-font-stack;
-  text-transform: uppercase;
 }
 
 .event-bio {
