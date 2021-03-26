@@ -1,6 +1,7 @@
 ---
 ---
-@import 'defaults';
+@import 'variables';
+@import 'mixins';
 
 /* reset default (text) links */
 [role="main"] {
@@ -215,107 +216,7 @@
 
 
 /* --- grid layout --- */
-
-/* --- legacy columns (inline-block) w/ breakpoints --- */
-
-.cols > ul {
-  list-style: none;
-  padding-top: 1.2em;
-  padding-bottom: 1.2em;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.cols ul > li {
-  overflow: hidden;
-}
-
-@media (min-width: 40em) {
-
-  .cols {
-    padding-bottom: 1px; /* overflow height adjustment (hack) -- useful when nested content has border */
-    overflow: hidden;
-
-    > ul {
-      margin-left: -.6em;
-      margin-right: -.6em;
-
-      li {
-        display: inline-block;
-        width: 50%;
-        vertical-align: top;
-        box-sizing: border-box;
-        padding-left: .6em;
-        padding-right: .6em;
-        margin-top: 1.2em;
-        margin-right: -4px;
-      }
-    }
-  }
-}
-
-@media (min-width: 58em) {
-
-  .cols > ul li {
-    width: 50%;
-  }
-
-}
-
-@media (min-width: 64em) {
-
-  .cols > ul li {
-    width: 33.333333333333333%;
-  }
-
-}
-
-/* --- modern columns (grid) --- */
-
-@supports (display: grid) {
-
-  .cols > ul {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 1.2em;
-  }
-
-  @media (min-width: 36em) {
-
-    .cols > ul {
-      grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-    }
-
-  }
-
-/* override -- legacy layout -- start */
-
-  .cols,
-  .cols > ul li {
-    overflow: visible;
-  }
-
-  .cols > ul,
-  .cols > ul li {
-    margin-top: 0;
-    margin-right: 0;
-  }
-
-  .cols > ul {
-    margin-left: 0;
-
-    li {
-      display: inherit;
-      width: auto;
-      box-sizing: content-box;
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-  /* override -- legacy layout -- end */
-
-}
+@include grid-support;
 
 /* typographic style / basic */
 

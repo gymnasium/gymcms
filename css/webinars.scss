@@ -2,7 +2,6 @@
 ---
 @import 'variables';
 @import 'mixins';
-@import 'defaults';
 
 /* reset default (text) links */
 [role="main"] {
@@ -194,19 +193,16 @@
       color: $gym-white;
     }
   }
-  
-  
-  
+
   /* --- cta --- */
-  
   &--cta {
     color: $gym-white;
     padding: 1.2em;
-  }
-  
-  &--cta p {
-    font-size: 1em;
-    margin-top: 0;
+
+    p {
+      font-size: 1em;
+      margin-top: 0;
+    }
   }
 
   /* topics */
@@ -234,200 +230,113 @@
 
 
 /* --- featured webinar --- */
+#featured-webinar {
+  header,
+  header .subhead {
+    max-width: none;
+  }
 
-#featured-webinar header,
-#featured-webinar header .subhead {
-  max-width: none;
+  .guest-speakers {
+    color: $gym-white;
+  }
 }
 
-#featured-webinar .guest-speakers {
-  color: $gym-white;
-}
 
 #guest-speaker-headshots {
   list-style: none;
   padding-left: 0;
   margin: 0;
   overflow: hidden;
+
+  li {
+    margin-top: 1.2em;
+  }
+  
+  figure {
+    text-align: left;
+  }
+  
+  img,
+  figcaption {
+    display: inline;
+  }
+  
+  img {
+    width: 3.5em;
+    border: 1px solid #999;
+    margin-right: 1em;
+  }
+  
+  figcaption {
+    font: bold 1em/1.25 $gym-font-stack-text;
+    color: $gym-white;
+    vertical-align: middle;
+  }
 }
 
-#guest-speaker-headshots li {
-  margin-top: 1.2em;
-}
 
-#guest-speaker-headshots figure {
-  text-align: left;
-}
-
-#guest-speaker-headshots img,
-#guest-speaker-headshots figcaption {
-  display: inline;
-}
-
-#guest-speaker-headshots img {
-  width: 3.5em;
-  border: 1px solid #999;
-  margin-right: 1em;
-}
-
-#guest-speaker-headshots figcaption {
-  font: bold 1em/1.25 $gym-font-stack-text;
-  color: $gym-white;
-  vertical-align: middle;
-}
 
 @media (min-width: 58em) {
 
-  #featured-webinar .webinar--card {
-    display: block;
-    overflow: hidden;
+  #featured-webinar {
+    /* legacy layout / fallback  */
+    width: 100%;
+    margin-top: 0;
+
+    .webinar {
+      &--card {
+        display: block;
+        overflow: hidden;
+      }
+    
+      &--main {
+        header {
+          float: left;
+          width: 50%;
+        }
+
+        .title {
+          font-size: 2.5em;
+        }
+      }
+
+      &--info {
+        position: relative;
+        top: .5em;
+        left: 1.6em;
+        width: 48%;
+        margin-left: 48%;
+
+        p {
+          font-size: 1.15em;
+        }
+      }
+    
+      &--cta {
+        clear: both;
+      }
+    }
+
+    .short-description,
+    .datetime {
+      font-size: 1.15em;
+    }
   }
 
-  #featured-webinar .webinar--main header {
-    float: left;
-    width: 50%;
+  #guest-speaker-headshots {
+    figcaption {
+      font-size: 1.15em;
+    }
+
+    img {
+      width: 5.5em;
+    }
   }
-
-  #featured-webinar .webinar--main .title {
-    font-size: 2.5em;
-  }
-
-  #featured-webinar .short-description,
-  #featured-webinar .datetime,
-  #featured-webinar .webinar--info p,
-  #guest-speaker-headshots figcaption {
-    font-size: 1.15em;
-  }
-
-  #featured-webinar .webinar--info {
-    position: relative;
-    top: .5em;
-    left: 1.6em;
-    width: 48%;
-    margin-left: 48%;
-  }
-
-  #featured-webinar .webinar--cta {
-    clear: both;
-  }
-
-  #guest-speaker-headshots img {
-    width: 5.5em;
-  }
-
-}
-
-/* legacy layout / fallback  */
-
-#featured-webinar {
-  width: 100%;
-  margin-top: 0;
 }
 
 /* --- grid layout --- */
 
-/* --- legacy columns (inline-block) w/ breakpoints --- */
-
-.cols > ul {
-  list-style: none;
-  padding-top: 1.2em;
-  padding-bottom: 1.2em;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.cols ul > li {
-  overflow: hidden;
-}
-
-@media (min-width: 40em) {
-
-  .cols {
-    padding-bottom: 1px; /* overflow height adjustment (hack) -- useful when nested content has border */
-    overflow: hidden;
-  }
-
-  .cols > ul {
-    margin-left: -.6em;
-    margin-right: -.6em;
-  }
-
-  .cols > ul li {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
-    box-sizing: border-box;
-    padding-left: .6em;
-    padding-right: .6em;
-    margin-top: 1.2em;
-    margin-right: -4px;
-  }
-
-}
-
-@media (min-width: 58em) {
-
-  .cols > ul li {
-    width: 50%;
-  }
-
-}
-
-@media (min-width: 64em) {
-
-  .cols > ul li {
-    width: 33.333333333333333%;
-  }
-
-}
-
-/* --- modern columns (grid) --- */
-
-@supports (display: grid) {
-
-  .cols > ul {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 1.2em;
-  }
-
-  @media (min-width: 36em) {
-
-    .cols > ul {
-      grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-    }
-
-  }
-
-/* override -- legacy layout -- start */
-
-  .cols,
-  .cols > ul li {
-    overflow: visible;
-  }
-
-  .cols > ul,
-  .cols > ul li {
-    margin-top: 0;
-    margin-right: 0;
-  }
-
-  .cols > ul {
-    margin-left: 0;
-  }
-
-  .cols > ul li {
-    display: inherit;
-    width: auto;
-    box-sizing: content-box;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* override -- legacy layout -- end */
-
-}
+@include grid-support;
 
 /* secondary button */
 
@@ -473,7 +382,6 @@ main article {
   float: left;
   width: 75%;
   }
-
 }
 
 /* typographic style / basic */
