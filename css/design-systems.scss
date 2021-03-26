@@ -1,14 +1,13 @@
 ---
 ---
-/* 
+@import 'variables';
+@import 'mixins';
 
-TODO: reconcile this with the concurrent work happening here: @https://github.com/gymnasium/gymcms/tree/feature/145-enable-sass
+@include initial-resets;
 
-This file will automatically compile as design-systems.css, assuming the front matter block (double ---) exists
-
-*/
+// Design systems (feel free to rename)
 .ds {
   &--about {
-    background-color: green; // example
+    background-color: $gym-green;
   }
 }
