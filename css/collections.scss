@@ -2,14 +2,6 @@
 ---
 @import 'defaults';
 
-
-/* gym button */
-
-#main .gym-button {
-  width: auto;
-  padding: 1.2em 1.4em;
-}
-
 /* reset default (text) links */
 [role="main"] {
   a:not([class]) {
@@ -33,38 +25,10 @@
 
 /* --- #main --- */
 
-/* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
-
-#main {
-  font-size: 16px;
-
-  .gym-button {
-    font-size: 105%;
-
-  /* !override / color */
-    b {
-      color: $gym-white;
-    }
-  }
-
-  .gymlink,
-  .gymlink * {
-    color: $gym-orange;
-  }
-
-  /* !override / remove padding-bottom  */
-  .container-fluid {
-    padding-bottom: 0;
-  }
-}
-
 [role="main"] .main-content {
   padding-left: 0;
   padding-right: 0;
 }
-
-/* !override / reset/rescale font-size adjustment */
-
 
 /* --- typography --- */
 
