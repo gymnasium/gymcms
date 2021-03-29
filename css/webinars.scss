@@ -12,12 +12,12 @@
   a.gym-link-secondary {
     color: inherit;
     border-bottom: 2px solid $gym-orange;
-  }
 
-  a.gym-link-secondary:hover,
-  a.gym-link-secondary:focus {
-    color: inherit;
-    border-bottom: 2px solid $gym-dark-gray !important; /* ! */
+    &:hover,
+    &:focus {
+      color: inherit;
+      border-bottom: 2px solid $gym-dark-gray !important; /* ! */
+    }
   }
 
   a:not([class]) {
