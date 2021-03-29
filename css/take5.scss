@@ -240,106 +240,110 @@ main h3 {
 }
 
 /* --- take-5 tutorial --- */
-
-.take5--main {
-  background-color: #fff;
-}
-
-.take5--main .embed-full-width {
-  background-color: #d2d2d2;
-  border-top: 1px solid #444;
-  border-bottom: 1px solid #bbb;
-}
-
-.take5--info {
-  padding-top: 1.6em;
-  padding-bottom: 1.8em;
-}
-
-.take5--hero-content .col-md-4 + .col-md-8 {
-  padding-top: 1.6em;
-}
-
-@media (min-width: 62em), (min-width: 992px) {
-
-  .take5--hero-content .col-md-4 + .col-md-8 {
-    float: right;
-    padding-top: 0;
+.take5 {
+  &--main {
+    background-color: #fff;
+  }
+  
+  &--main .embed-full-width {
+    background-color: #d2d2d2;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #bbb;
+  }
+  
+  &--info {
+    padding-top: 1.6em;
+    padding-bottom: 1.8em;
+  }
+  
+  &--hero-content .col-md-4 + .col-md-8 {
+    padding-top: 1.6em;
   }
 
-  .take5--featured {
-    margin-right: 1.2em;
+  @media (min-width: 62em), (min-width: 992px) {
+
+    &--hero-content .col-md-4 + .col-md-8 {
+      float: right;
+      padding-top: 0;
+    }
+  
+    &--featured {
+      margin-right: 1.2em;
+    }
+  
   }
 
-}
-
-.take5--featured > header {
-  margin-bottom: 1.4em;
-}
-
-.take5--featured .tutorial {
-  padding: 0 1em 1.2em;
-  border: 1px solid #ddd;
-  border-radius: 0 0 3px 3px;
-}
-
-.take5--featured .tutorial header {
-  margin-top: 1em;
-}
-
-.take5--featured .tutorial .artwork {
-  border: 0;
-  border-bottom: 1px solid #ddd;
-  margin-left: -1em;
-  margin-right: -1em;
-}
-
-.take5--info .title {
-  font-size: 2.05em;
-  margin-top: -.25rem;
-}
-
-#main .take5--featured .title {
-  font-size: 1.85em;
-  margin-top: 0;
-}
-
-.take5--info .description {
-  font-size: 1.15em;
-}
-
-.take5--info .instructor {
-  font-size: 1em;
-  margin-top: .6em;
-}
-
-.take5--resources {
-  margin-top: 1.4em;
-}
-
-@media (max-width: 62em) {
-
- .take5--resources {
-    padding-top: 1.4em;
-    border-top: 1px dashed #ccc;
-    margin-top: 1.6em;
+  &--featured > header {
+    margin-bottom: 1.4em;
+  }
+  
+  &--featured .tutorial {
+    padding: 0 1em 1.2em;
+    border: 1px solid #ddd;
+    border-radius: 0 0 3px 3px;
+  }
+  
+  &--featured .tutorial header {
+    margin-top: 1em;
+  }
+  
+  &--featured .tutorial .artwork {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+  
+  &--info .title {
+    font-size: 2.05em;
+    margin-top: -.25rem;
   }
 
-  .take5--hero-content .take5--resources {
-    border-top: 0;
+  &--info .description {
+    font-size: 1.15em;
+  }
+  
+  &--info .instructor {
+    font-size: 1em;
+    margin-top: .6em;
+  }
+  
+  &--resources {
+    margin-top: 1.4em;
+  }
+
+  @at-root #main .take5--featured .title {
+    font-size: 1.85em;
     margin-top: 0;
   }
 
+  @media (max-width: 62em) {
+
+    &--resources {
+      padding-top: 1.4em;
+      border-top: 1px dashed #ccc;
+      margin-top: 1.6em;
+    }
+   
+    &--hero-content .take5--resources {
+      border-top: 0;
+      margin-top: 0;
+    }
+  }
 }
+
+
 
 /* add #main for specificity override */
 
-#main .take5--featured > header h2,
-#main .take5--recent-tutorials > header h2,
-#main .take5--resources h2,
-#main .take5--recommended h2 {
-  font-size: 1.55em;
-  letter-spacing: .035rem;
+#main {
+  .take5--featured > header h2,
+  .take5--recent-tutorials > header h2,
+  .take5--resources h2,
+  .take5--recommended h2 {
+    font-size: 1.55em;
+    letter-spacing: .035rem;
+  }
 }
 
 .course header,
@@ -384,24 +388,24 @@ main h3 {
   padding-top: 1.2em;
   border-top: 1px dashed #ccc;
   margin-top: 1.4em;
-}
 
-.take5--resources-list header {
-  margin-bottom: 1em;
-}
+  header {
+    margin-bottom: 1em;
+  }
 
-.take5--resources-list ul {
-  list-style: disc;
-  padding-left: 1.2em;
-}
+  ul {
+    list-style: disc;
+    padding-left: 1.2em;
+  }
 
-.take5--resources-list li {
-  margin-top: .6em;
-  line-height: 1.5;
-}
+  li {
+    margin-top: .6em;
+    line-height: 1.5;
 
-.take5--resources-list li:first-child {
-  margin-top: 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 .take5--upcoming-list {
@@ -487,39 +491,45 @@ details.take5--transcript {
   margin-top: 0;
 }
 
-.take5--main summary {
-  display: list-item;
-  cursor: pointer;
+.take5--main {
+  summary {
+    display: list-item;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover b,
+    &:focus b,
+    &:active b {
+      border-bottom: 2px solid #222;
+    }
+
+    b {
+      font-weight: normal;
+      font-family: sans-serif;
+      vertical-align: -.05em;
+      padding-bottom: 2px;
+      border-bottom: 1px solid #222;
+      margin-bottom: -2px;
+    }
+  }
 }
 
-.take5--main summary:focus {
-  outline: none;
+.take5 {
+  &--topics-menu {
+    padding-bottom: 1.4em;
+    border-bottom: 1px dashed #ccc;
+  }
+  
+  &--topics-menu[open] {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
 }
 
-.take5--main summary b {
-  font-weight: normal;
-  font-family: sans-serif;
-  vertical-align: -.05em;
-  padding-bottom: 2px;
-  border-bottom: 1px solid #222;
-  margin-bottom: -2px;
-}
 
-.take5--main summary:hover b,
-.take5--main summary:focus b,
-.take5--main summary:active b {
-  border-bottom: 2px solid #222;
-}
-
-.take5--topics-menu {
-  padding-bottom: 1.4em;
-  border-bottom: 1px dashed #ccc;
-}
-
-.take5--topics-menu[open] {
-  padding-bottom: 0;
-  border-bottom: 0;
-}
 
 @media (max-width: 48em), (max-width: 991px) {
 
@@ -650,17 +660,17 @@ details.take5--transcript {
   background-color: #fff;
   padding-top: 2em;
   padding-bottom: 2em;
+
+  h2 {
+    letter-spacing: .035rem;
+    margin-top: -.3rem;
+  }
 }
 
 .cta,
 .cta-message,
 .cta-message h2 {
   text-align: center;
-}
-
-.cta-message h2 {
-  letter-spacing: .035rem;
-  margin-top: -.3rem;
 }
 
 .cta-left {
@@ -675,10 +685,10 @@ details.take5--transcript {
 
 .to-top-link {
   margin-top: 1.2em;
-}
 
-.to-top-link b {
-  color: #444;
+  b {
+    color: #444;
+  }
 }
 
 .to-top-link b::before {
@@ -691,159 +701,4 @@ details.take5--transcript {
 
 /* --- grid layout --- */
 
-/* --- legacy columns (inline-block) w/ breakpoints --- */
-
-.cols ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: -1.2em;
-  margin-bottom: 0;
-}
-
-.cols li {
-  padding-top: 1.2em;
-  padding-bottom: 1.2em;
-  margin-top: 1.2em;
-  overflow: hidden;
-}
-
-.take5--catalog-section .cols ul {
-  margin-top: 0;
-}
-
-.take5--catalog-section .cols li {
-  padding-bottom: 0;
-  margin-top: 0;
-}
-
-.cols-hr ul {
-  grid-gap: 0;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  margin-top: 0;
-  overflow: hidden;
-}
-
-.cols-hr li {
-  position: relative;
-  top: -1px;
-  border-top: 1px solid #ddd;
-}
-
-.cols-hr li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -1px;
-  width: 300%;
-  border-top: 1px solid #ddd;
-}
-
-@media (min-width: 40em) {
-
-  .cols {
-    padding-bottom: 1px; /* overflow height adjustment (hack) -- useful when nested content has border */
-    overflow: hidden;
-  }
-
-  .cols ul {
-    margin-left: -.6em;
-    margin-right: -.6em;
-  }
-
-  .cols ul li {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
-    box-sizing: border-box;
-    padding-left: .6em;
-    padding-right: .6em;
-    margin-right: -4px;
-  }
-
-}
-
-@media (min-width: 58em) {
-
-  .cols ul li {
-    width: 50%;
-  }
-
-}
-
-@media (min-width: 64em) {
-
-  .cols ul li {
-    width: 33.333333333333333%;
-  }
-
-}
-
-/* --- modern columns (grid) --- */
-
-@supports (display: grid) {
-
-  .cols ul {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 0 1.2em;
-  }
-
-  @media (min-width: 36em) {
-
-    .cols-max-2 ul {
-      grid-template-columns: repeat(auto-fill, minmax(24em, 1fr));
-    }
-
-    .cols-max-3 ul {
-      grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-    }
-
-  }
-
-  @media (min-width: 48em) {
-
-    .cols ul {
-      grid-auto-rows: 1fr;
-    }
-
-  }
-
-/* override -- legacy layout -- start */
-
-  .cols {
-    padding-bottom: 0;
-  }
-
-  .cols,
-  .cols ul li {
-    overflow: visible;
-  }
-
-  .cols ul,
-  .cols ul li {
-    margin-top: 0;
-    margin-right: 0;
-  }
-
-  .cols ul {
-    margin-left: 0;
-  }
-
-  .cols ul li {
-    display: inherit;
-    width: auto;
-    box-sizing: content-box;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* override -- legacy layout -- end */
-
-  /* --- cards (grid) --- */
-
-  .cols li {
-    display: inherit;
-  }
-
-}
+@include grid-support;
