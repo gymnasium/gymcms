@@ -42,12 +42,6 @@
   padding-right: 0;
 }
 
-/* !override / reset/rescale font-size adjustment */
-
-/* !override / color */
-
-
-
 /* reset default (text) links */
 
 #main .title a,
@@ -57,10 +51,10 @@
 
 #main .title a,
 #main a:not([class]) {
-  color: #222;
+  color: $gym-black;
   text-decoration: none;
   padding-bottom: 0.125rem;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid $gym-black;
   margin-bottom: -0.125rem;
 }
 
@@ -70,9 +64,9 @@
 #main a:not([class]):hover,
 #main a:not([class]):focus,
 #main a:not([class]):active {
-  color: #222;
+  color: $gym-black;
   text-decoration: none;
-  border-bottom: 2px solid #222 !important;
+  border-bottom: 2px solid $gym-black !important;
 }
 
 #main .title a:after,
@@ -94,7 +88,7 @@
 [role="main"] h4,
 [role="main"] h5,
 [role="main"] h6 {
-  color: #222;
+  color: $gym-black;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -115,7 +109,7 @@
 /* paragraphs */
 
 [role="main"] p {
-  font: normal 1.15em/1.5 "Helvetica Neue", Helvetica, sans-serif;
+  font: normal 1.15em/1.5 $gym-font-stack-text;
   margin-top: 1em;
   margin-bottom: 0;
 }
@@ -126,17 +120,15 @@
   text-transform: uppercase;
 }
 
-.tutorial b.all-caps {
-  font-size: 80%;
-  letter-spacing: .05rem;
-}
+.tutorial {
+  b.all-caps {
+    font-size: 80%;
+    letter-spacing: .05rem;
 
-.tutorial b.all-caps + h3 {
-  margin-top: .6rem;
-}
-
-.take5--recent-content {
-  border-top: 1px dashed #ccc;
+    + h3 {
+      margin-top: .6rem;
+    }
+  }
 }
 
 #main .no-wrap {
@@ -158,7 +150,7 @@
 }
 
 #about * {
-  color: #222;
+  color: $gym-black;
 }
 
 #about .banner-content {
@@ -172,7 +164,7 @@
 }
 
 #about p {
-  font: normal 1.25em/1.45 "Helvetica Neue", Helvetica, sans-serif;
+  font: normal 1.25em/1.45 $gym-font-stack-text;
   margin-top: .6em;
 }
 
@@ -197,13 +189,13 @@ main h3 {
 }
 
 .section header p {
-  font: normal 1.25em/1.45 "Helvetica Neue", Helvetica, sans-serif;
+  font: normal 1.25em/1.45 $gym-font-stack-text;
 }
 
 .section-content {
-  background: #fff;
+  background: $gym-white;
   padding: 1.2em;
-  border: 1px solid #ccc;
+  border: 1px solid $gym-gray;
   border-radius: 3px;
 }
 
@@ -229,26 +221,54 @@ main h3 {
   bottom: .5rem;
   right: .5rem;
   content: attr(data-duration);
-  font: normal 80%/.9375 "Helvetica Neue", Helvetica, sans-serif;
+  font: normal 80%/.9375 $gym-font-stack-text;
   letter-spacing: .065rem;
   text-indent: .1rem;
-  color: #fff;
-  background-color: #222;
+  color: $gym-white;
+  background-color: $gym-black;
   padding: .6rem;
-  border: 1px solid #fff;
+  border: 1px solid $gym-white;
   border-radius: 2px;
 }
 
-/* --- take-5 tutorial --- */
+/* --- take-5 --- */
 .take5 {
-  &--main {
-    background-color: #fff;
+  &--recent-content {
+    border-top: 1px dashed $gym-gray;
   }
+
+  &--main {
+    background-color: $gym-white;
+
+    .embed-full-width {
+      background-color: #d2d2d2;
+      border-top: 1px solid #444;
+      border-bottom: 1px solid #bbb;
+    }
+
+    summary {
+      display: list-item;
+      cursor: pointer;
   
-  &--main .embed-full-width {
-    background-color: #d2d2d2;
-    border-top: 1px solid #444;
-    border-bottom: 1px solid #bbb;
+      &:focus {
+        outline: none;
+      }
+  
+      &:hover b,
+      &:focus b,
+      &:active b {
+        border-bottom: 2px solid $gym-black;
+      }
+  
+      b {
+        font-weight: normal;
+        font-family: sans-serif;
+        vertical-align: -.05em;
+        padding-bottom: 2px;
+        border-bottom: 1px solid $gym-black;
+        margin-bottom: -2px;
+      }
+    }
   }
   
   &--info {
@@ -273,41 +293,45 @@ main h3 {
   
   }
 
-  &--featured > header {
-    margin-bottom: 1.4em;
+  &--featured {
+    > header {
+      margin-bottom: 1.4em;
+    }
+    
+    .tutorial {
+      padding: 0 1em 1.2em;
+      border: 1px solid #ddd;
+      border-radius: 0 0 3px 3px;
+
+      header {
+        margin-top: 1em;
+      }
+      
+      .artwork {
+        border: 0;
+        border-bottom: 1px solid #ddd;
+        margin-left: -1em;
+        margin-right: -1em;
+      }
+    }
   }
   
-  &--featured .tutorial {
-    padding: 0 1em 1.2em;
-    border: 1px solid #ddd;
-    border-radius: 0 0 3px 3px;
-  }
-  
-  &--featured .tutorial header {
-    margin-top: 1em;
-  }
-  
-  &--featured .tutorial .artwork {
-    border: 0;
-    border-bottom: 1px solid #ddd;
-    margin-left: -1em;
-    margin-right: -1em;
-  }
-  
-  &--info .title {
-    font-size: 2.05em;
-    margin-top: -.25rem;
+  &--info {
+    .title {
+      font-size: 2.05em;
+      margin-top: -.25rem;
+    }
+
+    .description {
+      font-size: 1.15em;
+    }
+    
+    .instructor {
+      font-size: 1em;
+      margin-top: .6em;
+    }
   }
 
-  &--info .description {
-    font-size: 1.15em;
-  }
-  
-  &--info .instructor {
-    font-size: 1em;
-    margin-top: .6em;
-  }
-  
   &--resources {
     margin-top: 1.4em;
   }
@@ -321,7 +345,7 @@ main h3 {
 
     &--resources {
       padding-top: 1.4em;
-      border-top: 1px dashed #ccc;
+      border-top: 1px dashed $gym-gray;
       margin-top: 1.6em;
     }
    
@@ -330,9 +354,102 @@ main h3 {
       margin-top: 0;
     }
   }
+
+  &--upcoming-list {
+    padding-top: 0;
+
+    .subhead-datetime {
+      margin-bottom: .8rem;
+    }
+    
+    h4 {
+      text-transform: none;
+    }
+  }
+  
+  &--upcoming-list ul,
+  &--topics-menu-list ul {
+    list-style: none url();
+    padding-left: 0;
+  }
+  
+  &--topics-menu-list ul {
+    border-top: 1px dashed $gym-gray;
+    margin-top: 1.4em;
+  }
+  
+  &--upcoming-list li,
+  &--topics-menu-list li {
+    padding-top: .8em;
+    padding-bottom: .8em;
+    border-bottom: 1px dashed $gym-gray;
+    margin-top: 0;
+  }
+
+  &--topics-menu {
+    padding-bottom: 1.4em;
+    border-bottom: 1px dashed $gym-gray;
+
+    &[open] {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  &--hero-content,
+  &--recent-content {
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
+  }
+  
+  &--recommended {
+    padding-top: 1.6em;
+    padding-bottom: 1em;
+
+    header:first-child {
+      margin-bottom: 1em;
+    }
+    
+    section header {
+      margin-top: .6em;
+    }
+
+    .tutorial .subhead-topic {
+      margin-top: 1.6rem;
+      margin-bottom: .8rem;
+    }
+
+    &-content {
+      padding-bottom: 1.2em;
+      border-bottom: 1px dashed $gym-gray;
+      border-top: 1px dashed $gym-gray;
+    }
+  }
+
+  &--resources-list {
+    padding-top: 1.2em;
+    border-top: 1px dashed $gym-gray;
+    margin-top: 1.4em;
+  
+    header {
+      margin-bottom: 1em;
+    }
+  
+    ul {
+      list-style: disc;
+      padding-left: 1.2em;
+    }
+  
+    li {
+      margin-top: .6em;
+      line-height: 1.5;
+  
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
 }
-
-
 
 /* add #main for specificity override */
 
@@ -353,26 +470,23 @@ main h3 {
 
 .subhead-topic,
 .subhead-datetime {
-  font: bold .85em/1.15 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  font: bold .85em/1.15 $gym-font-stack;
+  color: $gym-black;
   letter-spacing: .05rem;
   word-spacing: .05rem;
   text-transform: uppercase;
   text-align: left;
 }
 
-.tutorial .subhead-topic,
-.tutorial .subhead-datetime {
-  margin-bottom: .6rem;
-}
-
-.tutorial .subhead-topic {
-  font-weight: 900;
-}
-
-.take5--recommended .tutorial .subhead-topic {
-  margin-top: 1.6rem;
-  margin-bottom: .8rem;
+.tutorial {
+  .subhead-topic,
+  .subhead-datetime {
+    margin-bottom: .6rem;
+  }
+  
+  .subhead-topic {
+    font-weight: 900;
+  }
 }
 
 .subhead-datetime {
@@ -384,60 +498,7 @@ main h3 {
   margin-top: .5rem;
 }
 
-.take5--resources-list {
-  padding-top: 1.2em;
-  border-top: 1px dashed #ccc;
-  margin-top: 1.4em;
 
-  header {
-    margin-bottom: 1em;
-  }
-
-  ul {
-    list-style: disc;
-    padding-left: 1.2em;
-  }
-
-  li {
-    margin-top: .6em;
-    line-height: 1.5;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-}
-
-.take5--upcoming-list {
-  padding-top: 0;
-}
-
-.take5--upcoming-list ul,
-.take5--topics-menu-list ul {
-  list-style: none url();
-  padding-left: 0;
-}
-
-.take5--topics-menu-list ul {
-  border-top: 1px dashed #ccc;
-  margin-top: 1.4em;
-}
-
-.take5--upcoming-list li,
-.take5--topics-menu-list li {
-  padding-top: .8em;
-  padding-bottom: .8em;
-  border-bottom: 1px dashed #ccc;
-  margin-top: 0;
-}
-
-.take5--upcoming-list .subhead-datetime {
-  margin-bottom: .8rem;
-}
-
-.take5--upcoming-list h4 {
-  text-transform: none;
-}
 
 .subhead-datetime time b {
   display: inline-block;
@@ -447,89 +508,51 @@ details.take5--transcript {
   margin-top: 1.2em;
 }
 
-#tutorial-transcript ol,
-#tutorial-transcript ul,
-#tutorial-transcript blockquote {
-  margin-top: 1em;
-}
-
-#tutorial-transcript li {
-  font-size: 1.15em;
-  line-height: 1.45;
-}
-
-#tutorial-transcript [class*="language-"] {
-  white-space: pre-wrap;
-}
-
-#tutorial-transcript [class*="language-"],
-#tutorial-transcript [class*="language-"] + p,
-#tutorial-transcript .example,
-#tutorial-transcript .example + p {
-  margin-top: 1.6675em;
-}
-
-#tutorial-transcript [data-language] [class*="language-"] {
-  padding-right: 1.2em;
-}
-
-#tutorial-transcript [data-language="markup"]::before {
-  content: "html";
-}
-
-#tutorial-transcript .example {
-  background-color: transparent;
-  padding: 1.2em;
-}
-
-#tutorial-transcript blockquote p {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-#tutorial-transcript blockquote p:first-child {
-  margin-top: 0;
-}
-
-.take5--main {
-  summary {
-    display: list-item;
-    cursor: pointer;
-
-    &:focus {
-      outline: none;
-    }
-
-    &:hover b,
-    &:focus b,
-    &:active b {
-      border-bottom: 2px solid #222;
-    }
-
-    b {
-      font-weight: normal;
-      font-family: sans-serif;
-      vertical-align: -.05em;
-      padding-bottom: 2px;
-      border-bottom: 1px solid #222;
-      margin-bottom: -2px;
-    }
-  }
-}
-
-.take5 {
-  &--topics-menu {
-    padding-bottom: 1.4em;
-    border-bottom: 1px dashed #ccc;
+#tutorial-transcript {
+  ol,
+  ul,
+  blockquote {
+    margin-top: 1em;
   }
   
-  &--topics-menu[open] {
-    padding-bottom: 0;
-    border-bottom: 0;
+  li {
+    font-size: 1.15em;
+    line-height: 1.45;
+  }
+  
+  [class*="language-"] {
+    white-space: pre-wrap;
+  }
+  
+  [class*="language-"],
+  [class*="language-"] + p,
+  .example,
+  .example + p {
+    margin-top: 1.6675em;
+  }
+  
+  [data-language] [class*="language-"] {
+    padding-right: 1.2em;
+  }
+  
+  [data-language="markup"]::before {
+    content: "html";
+  }
+  
+  .example {
+    background-color: transparent;
+    padding: 1.2em;
+  }
+  
+  blockquote p {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  
+  blockquote p:first-child {
+    margin-top: 0;
   }
 }
-
-
 
 @media (max-width: 48em), (max-width: 991px) {
 
@@ -541,7 +564,6 @@ details.take5--transcript {
   #tutorial-topics summary b::before {
     content: "Browse" "\00a0";
   }
-
 }
 
 @media (min-width: 62em), (min-width: 992px) {
@@ -564,8 +586,8 @@ details.take5--transcript {
   #tutorial-resources summary b,
   #tutorial-topics summary b {
     float: left;
-    font: 900 1.55em/1.08 "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
-    color: #222;
+    font: 900 1.55em/1.08 $gym-font-stack;
+    color: $gym-black;
     letter-spacing: .035rem;
     text-transform: uppercase;
     vertical-align: 0;
@@ -580,34 +602,8 @@ details.take5--transcript {
   #tutorial-topics summary:active b {
     border-bottom: 0 none;
   }
-
 }
-.take5 {
-  &--hero-content,
-  &--recent-content {
-    padding-top: 1.6em;
-    padding-bottom: 1.6em;
-  }
-  
-  &--recommended-content {
-    padding-bottom: 1.2em;
-    border-bottom: 1px dashed #ccc;
-    border-top: 1px dashed #ccc;
-  }
-  
-  &--recommended {
-    padding-top: 1.6em;
-    padding-bottom: 1em;
 
-    header:first-child {
-      margin-bottom: 1em;
-    }
-    
-    section header {
-      margin-top: .6em;
-    }
-  }
-}
 
 // SASS placeholder to combine rules
 %tutorial-artwork {
@@ -646,7 +642,7 @@ details.take5--transcript {
     }
   
     .tutorial {
-      background-color: #fff;
+      background-color: $gym-white;
       border: 1px solid #ddd;
       border-radius: 0 0 3px 3px;
 
@@ -668,7 +664,7 @@ details.take5--transcript {
 /* cta / structure */
 
 .cta-message {
-  background-color: #fff;
+  background-color: $gym-white;
   padding-top: 2em;
   padding-bottom: 2em;
 
