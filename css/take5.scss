@@ -582,34 +582,35 @@ details.take5--transcript {
   }
 
 }
+.take5 {
+  &--hero-content,
+  &--recent-content {
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
+  }
+  
+  &--recommended-content {
+    padding-bottom: 1.2em;
+    border-bottom: 1px dashed #ccc;
+    border-top: 1px dashed #ccc;
+  }
+  
+  &--recommended {
+    padding-top: 1.6em;
+    padding-bottom: 1em;
 
-.take5--hero-content,
-.take5--recent-content {
-  padding-top: 1.6em;
-  padding-bottom: 1.6em;
+    header:first-child {
+      margin-bottom: 1em;
+    }
+    
+    section header {
+      margin-top: .6em;
+    }
+  }
 }
 
-.take5--recommended-content {
-  padding-bottom: 1.2em;
-  border-bottom: 1px dashed #ccc;
-  border-top: 1px dashed #ccc;
-}
-
-.take5--recommended {
-  padding-top: 1.6em;
-  padding-bottom: 1em;
-}
-
-.take5--recommended header:first-child {
-  margin-bottom: 1em;
-}
-
-.take5--recommended section header {
-  margin-top: .6em;
-}
-
-.tutorial .artwork,
-.take5--recommended .artwork {
+// SASS placeholder to combine rules
+%tutorial-artwork {
   text-align: center;
   height: 0;
   background-color: #d2d2d2;
@@ -618,38 +619,48 @@ details.take5--transcript {
   overflow: hidden;
 }
 
-.tutorial .artwork img,
-.take5--recommended .artwork img {
+.tutorial .artwork,
+.take5--recommended .artwork {
+  @extend %tutorial-artwork;
+}
+
+%tutorial-artwork-img {
   display: inline-block;
   margin-top: -5%;
 }
 
+.tutorial .artwork img,
+.take5--recommended .artwork img {
+  @extend %tutorial-artwork-img;
+}
+
 /* --- catalog view --- */
+.take5 {
+  &--catalog-section {
+    background-color: #ebebeb;
+    padding-top: 0;
+    padding-bottom: 1.4em;
 
-.take5--catalog-section {
-  background-color: #ebebeb;
-  padding-top: 0;
-  padding-bottom: 1.4em;
-}
+    .take5--recent-tutorials {
+      padding-top: 1.6em;
+    }
+  
+    .tutorial {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 0 0 3px 3px;
 
-.take5--catalog-section .take5--recent-tutorials {
-  padding-top: 1.6em;
-}
-
-.take5--catalog-section .tutorial {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 0 0 3px 3px;
-}
-
-.take5--catalog-section .tutorial .artwork {
-  border: 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.take5--catalog-section .tutorial header {
-  padding: 1em;
-  margin-top: 0;
+      .artwork {
+        border: 0;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      header {
+        padding: 1em;
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 /* --- links / buttons --- */
@@ -688,15 +699,15 @@ details.take5--transcript {
 
   b {
     color: #444;
-  }
-}
 
-.to-top-link b::before {
-  display: inline-block;
-  content: "↑";
-  font-family: monospace, monospace;
-  vertical-align: baseline;
-  margin-right: .25em;
+    &::before {
+      display: inline-block;
+      content: "↑";
+      font-family: monospace, monospace;
+      vertical-align: baseline;
+      margin-right: .25em;
+    }
+  }
 }
 
 /* --- grid layout --- */
