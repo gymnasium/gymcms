@@ -1,15 +1,20 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
 .topic-career-skills {
-  background-color: #2c9959;
+  background-color: $gym-green;
 }
 
 .topic-prototyping,
 .topic-user-experience, {
-  background-color: #5ca5a0;
+  background-color: $gym-teal;
 }
 
 .topic-accessibility,
 .topic-web-design-development {
-  background-color: #d73158;
+  background-color: $gym-magenta;
 }
 
 /* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
@@ -49,7 +54,7 @@
     background: #333 no-repeat left center;
     background-size: cover;
     border-image: 1 / 0 0 0 999em / 0 0 0 999em stretch;
-    border-right: 2px solid #ccc;
+    border-right: 2px solid $gym-gray;
   }
 
   .hero-promo .hero-content-art::after {
@@ -58,7 +63,7 @@
     left: 2px;
     content: "";
     height: 100%;
-    border-right: 2px solid #ccc;
+    border-right: 2px solid $gym-gray;
   }
 
   .hero-content-copy {
@@ -79,7 +84,7 @@
   font-size: 2.5em;
   line-height: 1.15;
   letter-spacing: .1rem;
-  color: #fff;
+  color: $gym-white;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -89,7 +94,7 @@
   line-height: 1.15;
   letter-spacing: .1rem;
   word-spacing: -.05rem;
-  color: #222;
+  color: $gym-black;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -108,7 +113,7 @@
 
 .hero-content-copy .description {
   font-size: 1.4em;
-  color: #222;
+  color: $gym-black;
   margin-top: 1.6rem;
 }
 
@@ -125,7 +130,7 @@
   width: auto !important;
   vertical-align: bottom;
   padding: 1.2em 1.6em !important;
-  border: 2px solid #fff !important;
+  border: 2px solid $gym-white !important;
 }
 
 /* misc details */

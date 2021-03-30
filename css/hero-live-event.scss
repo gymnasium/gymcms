@@ -1,10 +1,15 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
 .home {
   background: none;
 }
 
 .promo-live-event {
   background-image: url("https://gymnasium.github.io/static-site-content/home/img/hero-live-event-scripting-bg.png");
-  background-color: #764c9f;
+  background-color: $gym-purple;
 }
 
 .header-live-event {
@@ -18,13 +23,13 @@
  }
 
 .header-live-event h1 {
-  color: #fff;
+  color: $gym-white;
   line-height: 1.15;
 }
 
 .header-live-event .all-caps {
-  font: 900 1.6em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  font: 900 1.6em/1.4 $gym-font-stack;
+  color: $gym-black;
   text-transform: uppercase;
   letter-spacing: .05em;
 }
@@ -42,7 +47,7 @@
 }
 
 .header-live-event p {
-  font: bold 1.6em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: bold 1.6em/1.4 $gym-font-stack;
   color: #e1e1e1;
   letter-spacing: .05em;
   margin: .5em 0 0;
@@ -64,14 +69,14 @@
 
 .promo-live-event .cta .gym-button  {
   display: inline-block;
-  color: #fff;
+  color: $gym-white;
   width: auto !important; /* dangerous override */
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  background: #222;
+  background: $gym-black;
   padding: 1em 2em !important; /* dangerous override */
-  border: 2px solid #fff;;
+  border: 2px solid $gym-white;;
   border-radius: 2px;
   margin: 0 -1em;
   cursor: pointer;
@@ -81,11 +86,11 @@
 .promo-live-event .cta .gym-button:focus,
 .promo-live-event .cta .gym-button:active {
   background: none;
-  border: 2px solid #fff;
+  border: 2px solid $gym-white;
 }
 
 .cta .gym-button b {
-  font: bold 1.4em/1.15 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: bold 1.4em/1.15 $gym-font-stack;
   letter-spacing: .02em;
   vertical-align: baseline;
 }

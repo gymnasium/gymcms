@@ -1,3 +1,8 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
 .all-caps {
   text-transform: uppercase;
 }
@@ -41,12 +46,12 @@
 
 .blue-beanie-day header h1 {
   font-size: 2.25em;
-  color: #fff;
+  color: $gym-white;
 }
 
 .blue-beanie-day header h2 {
-  font: 900 1.6em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  font: 900 1.6em/1.4 $gym-font-stack;
+  color: $gym-black;
   letter-spacing: .05em;
 }
 
@@ -63,14 +68,14 @@
   left: -11.5%;
   content: "";
   width: 120%;
-  border-top: .15em solid #f8971d;
+  border-top: .15em solid $gym-orange;
   margin-top: -.15em;
   transform: rotate(10deg);
 }
 
 .blue-beanie-day header p {
-  font: normal 1em/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  font: normal 1em/1.4 $gym-font-stack-text;
+  color: $gym-black;
   margin: 1.2em;
 }
 
@@ -129,9 +134,9 @@
 
 .blue-beanie-day a.gym-button-secondary {
   width: auto;
-  color: #222 !important;
+  color: $gym-black !important;
   background-color: #00aeef !important;
-  border: 2px solid #222 !important;
+  border: 2px solid $gym-black !important;
   padding: 1.2em 1.6em !important;
   vertical-align: bottom;
 }
@@ -139,7 +144,7 @@
 a.gym-button-secondary:hover,
 a.gym-button-secondary:focus,
 a.gym-button-secondary:active {
-  color: #fff !important;
+  color: $gym-white !important;
   background-color: transparent !important;
-  border: 2px solid #fff !important;
+  border: 2px solid $gym-white !important;
 }

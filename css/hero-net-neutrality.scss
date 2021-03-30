@@ -1,3 +1,8 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
 .home {
   background: none;
 }
@@ -19,14 +24,14 @@
 
 .header-net-neutrality h1 {
   font-size: 3em;
-  color: #fff;
+  color: $gym-white;
   line-height: 1.15;
   margin-bottom: 0;
   margin-bottom: 0;
 }
 
 .header-net-neutrality .all-caps {
-  font: 900 1.4em/1.2 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 900 1.4em/1.2 $gym-font-stack;
   color: #fd4935;
   text-transform: uppercase;
   letter-spacing: .05em;
@@ -60,14 +65,14 @@
 
 .promo-net-neutrality .cta .gym-button  {
   display: inline-block;
-  color: #fff;
+  color: $gym-white;
   width: auto !important; /* dangerous override */
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
-  background: #222;
+  background: $gym-black;
   padding: 1em 2em !important; /* dangerous override */
-  border: 2px solid #fff;;
+  border: 2px solid $gym-white;;
   border-radius: 2px;
   margin: 0 -1em;
   cursor: pointer;
@@ -77,11 +82,11 @@
 .promo-net-neutrality .cta .gym-button:focus,
 .promo-net-neutrality .cta .gym-button:active {
   background: none;
-  border: 2px solid #fff;
+  border: 2px solid $gym-white;
 }
 
 .cta .gym-button b {
-  font: bold 1.4em/1.15 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: bold 1.4em/1.15 $gym-font-stack;
   letter-spacing: .02em;
   vertical-align: baseline;
 }

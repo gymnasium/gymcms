@@ -1,3 +1,8 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
 .all-caps {
   text-transform: uppercase;
 }
@@ -18,7 +23,7 @@
 }
 
 .webinar-05-2019 {
-  background-color: #5ca5a0;
+  background-color: $gym-teal;
   background-image: linear-gradient(to right, #69aca7 1px, transparent 1px), linear-gradient(to bottom, #69aca7 1px, transparent 1px);
   background-position: center center;
   background-size: 1em 1em;
@@ -53,15 +58,15 @@
 
 .webinar-05-2019 header h1 {
   font-size: 2.5em;
-  color: #fff;
+  color: $gym-white;
   margin-top: -.05em;
   margin-bottom: -.05em;
 }
 
 .webinar-05-2019 header h2,
 .webinar-05-2019 header h3 {
-  font: 900 1.6em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  font: 900 1.6em/1.4 $gym-font-stack;
+  color: $gym-black;
   letter-spacing: .05em;
   margin-bottom: .8em;
 }
@@ -72,14 +77,14 @@
 
 .webinar-05-2019 header p {
   width: 95%;
-  font: normal 1em/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  font: normal 1em/1.4 $gym-font-stack-text;
+  color: $gym-black;
   margin-top: 1.4em;
   margin-bottom: 1.4em;
 }
 
 .webinar-05-2019 header p.presenters {
-  font: bold 1.6em/1.6 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: bold 1.6em/1.6 $gym-font-stack;
   color: #e1e1e1;
   margin-top: .6em;
   margin-bottom: .6em;
@@ -123,11 +128,11 @@
 
   .webinar-05-2019 .wireframe-image,
   .webinar-05-2019 .placeholder-image {
-    background-color: #ddd;
+    background-color: $gym-gray-2;
   }
 
   .webinar-05-2019 .placeholder-image {
-    border: 1px solid #222;
+    border: 1px solid $gym-black;
   }
 
   .webinar-05-2019 .wireframe-image div,
@@ -137,8 +142,8 @@
 
   .webinar-05-2019 .placeholder-image div {
      background:
-      linear-gradient(to top right, transparent 49.7%, #222 49.7%, #222 50.3%, transparent 50.3%),
-      linear-gradient(to bottom right, transparent 49.7%, #222 49.7%, #222 50.3%, transparent 50.3%);
+      linear-gradient(to top right, transparent 49.7%, $gym-black 49.7%, $gym-black 50.3%, transparent 50.3%),
+      linear-gradient(to bottom right, transparent 49.7%, $gym-black 49.7%, $gym-black 50.3%, transparent 50.3%);
   }
 
   .webinar-05-2019 .placeholder-text::after {
@@ -150,9 +155,9 @@
   .webinar-05-2019 .wireframe-text {
     display: inline-block;
     width: 60%;
-    color: #222;
+    color: $gym-black;
     line-height: .85;
-    background-color: #222;
+    background-color: $gym-black;
     margin-top: .85em;
   }
 
@@ -161,7 +166,7 @@
   }
 
   .webinar-05-2019 .speaker img {
-    border: 1px solid #222;
+    border: 1px solid $gym-black;
   }
 
 }
@@ -180,8 +185,8 @@
 
 .webinar-05-2019 a.gym-button-secondary {
   width: auto;
-  color: #fff !important;
-  border: 2px solid #fff !important;
+  color: $gym-white !important;
+  border: 2px solid $gym-white !important;
   padding: 1.2em 1.6em !important;
   vertical-align: bottom;
 }
@@ -189,6 +194,6 @@
 a.gym-button-secondary:hover,
 a.gym-button-secondary:focus,
 a.gym-button-secondary:active {
-  color: #fff !important;
-  border: 2px solid #fff !important;
+  color: $gym-white !important;
+  border: 2px solid $gym-white !important;
 }

@@ -44,7 +44,7 @@
     display: grid;
     grid-template-rows: 1fr auto;
     background-color: $gym-black;
-    border-top: 1em solid #ccc;
+    border-top: 1em solid $gym-gray;
   }
   
   &--main {
@@ -73,20 +73,20 @@
 
   .accessibility,
   .web-design-development {
-    border-top-color: #d73158;
+    border-top-color: $gym-magenta;
   }
 
   .javascript {
-    border-top-color: #764c9f;
+    border-top-color: $gym-purple;
   }
 
   .prototyping,
   .user-experience {
-    border-top-color: #5ca5a0;
+    border-top-color: $gym-teal;
   }
 
   .career-skills {
-    border-top-color: #2c9959;
+    border-top-color: $gym-green;
   }
 
   // Main
@@ -103,7 +103,7 @@
 
     p {
       font-size: 1em;
-      color: #ccc;
+      color: $gym-gray;
     }
   }
 
