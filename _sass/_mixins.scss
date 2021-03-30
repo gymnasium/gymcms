@@ -213,10 +213,24 @@
   
     .cols > ul li {
       width: 33.333333333333333%;
+
+      // Hide 4th panel if it exists
+      &:nth-child(4) {
+        display: none;
+      }
     }
-  
   }
 
+  @media (min-width: 78em) {
+
+    .cols ul li {
+      width: 25%;
+    }
+  
+    .cols ul li:last-child {
+      display: inline-block;
+    }
+  }
 
 
   /* --- modern columns (grid) --- */
@@ -233,7 +247,19 @@
       .cols > ul {
         grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
       }
+    }
 
+    @media (min-width: 62em) {
+      .cols ul li:nth-child(4) {
+        display: none;
+      }
+    }
+    
+    @media (min-width: 78em) {
+    
+      .cols ul li:last-child {
+        display: inherit;
+      }
     }
 
   /* override -- legacy layout -- start */
