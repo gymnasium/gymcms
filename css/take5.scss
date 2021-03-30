@@ -23,13 +23,13 @@
 
 [role="main"] a.gym-link-secondary {
   color: inherit;
-  border-bottom: 2px solid #f8971d;
+  border-bottom: 2px solid $gym-orange;
 }
 
 [role="main"] a.gym-link-secondary:hover,
 [role="main"] a.gym-link-secondary:focus {
   color: inherit;
-  border-bottom: 2px solid #444 !important; /* ! */
+  border-bottom: 2px solid $gym-dark-gray !important; /* ! */
 }
 
 /* --- #main --- */
@@ -159,7 +159,7 @@ main h3 {
 }
 
 #main .section header p {
-  color: #444;
+  color: $gym-dark-gray;
 }
 
 /* --- section --- */
@@ -223,7 +223,7 @@ main h3 {
 
     .embed-full-width {
       background-color: #d2d2d2;
-      border-top: 1px solid #444;
+      border-top: 1px solid $gym-dark-gray;
       border-bottom: 1px solid #bbb;
     }
 
@@ -281,7 +281,7 @@ main h3 {
     
     .tutorial {
       padding: 0 1em 1.2em;
-      border: 1px solid #ddd;
+      border: 1px solid $gym-gray-2;
       border-radius: 0 0 3px 3px;
 
       header {
@@ -290,7 +290,7 @@ main h3 {
       
       .artwork {
         border: 0;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid $gym-gray-2;
         margin-left: -1em;
         margin-right: -1em;
       }
@@ -592,7 +592,7 @@ details.take5--transcript {
   height: 0;
   background-color: #d2d2d2;
   padding-bottom: 44.444444444444444%;
-  border: 1px solid #ddd;
+  border: 1px solid $gym-gray-2;
   overflow: hidden;
 }
 
@@ -614,7 +614,7 @@ details.take5--transcript {
 /* --- catalog view --- */
 .take5 {
   &--catalog-section {
-    background-color: #ebebeb;
+    background-color: $gym-light-page-background;
     padding-top: 0;
     padding-bottom: 1.4em;
 
@@ -624,12 +624,12 @@ details.take5--transcript {
   
     .tutorial {
       background-color: $gym-white;
-      border: 1px solid #ddd;
+      border: 1px solid $gym-gray-2;
       border-radius: 0 0 3px 3px;
 
       .artwork {
         border: 0;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid $gym-gray-2;
       }
       
       header {
@@ -675,7 +675,7 @@ details.take5--transcript {
   margin-top: 1.2em;
 
   b {
-    color: #444;
+    color: $gym-dark-gray;
 
     &::before {
       display: inline-block;

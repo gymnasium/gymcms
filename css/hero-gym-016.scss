@@ -1,13 +1,15 @@
 ---
 ---
+@import 'variables';
+@import 'mixins';
 
 .hero-promo {
   position: relative;
   font-size: 16px;
-  background-color: #222;
+  background-color: $gym-black;
   padding-top: 15px;
   padding-bottom: 15px;
-  border-top: 2px solid #444;
+  border-top: 2px solid $gym-dark-gray;
 }
 
 .hero-promo .content {
@@ -16,7 +18,7 @@
 
 .hero-promo .artwork {
   height: 0;
-  background: #d73158 url("{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-016.png")no-repeat center center;
+  background: $gym-magenta url("{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-016.png")no-repeat center center;
   background-image: url("{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-016.svg"), linear-gradient(transparent, 0, transparent);
   background-size: contain;
   padding-bottom: 62.5%;
@@ -26,8 +28,8 @@
 @media (min-width: 48em) {
 
   .hero-promo .artwork {
-    !position: relative;
-    !left: 15px;
+    position: relative;
+    left: 15px;
     background: transparent url("{{ site.url }}{{ site.baseurl }}/img/badges-artwork/png/gym-016-badge.png") no-repeat center center;
     background-image: url("{{ site.url }}{{ site.baseurl }}/img/badges-artwork/svg/gym-016-badge.svg"), linear-gradient(transparent, 0, transparent);
     background-size: contain;
@@ -38,7 +40,6 @@
   .hero-promo .content {
     padding: 0 0 45px 15px;
   }
-
 }
 
 @media (min-width: 62.5em) {
@@ -54,7 +55,6 @@
   .hero-promo .content {
     padding-top: 15px;
   }
-
 }
 
 .hero-promo header h1,
@@ -65,7 +65,7 @@
 
 .hero-promo header h1 {
   font-size: 2.25em;
-  color: #fff;
+  color: $gym-white;
 }
 
 @media (min-width: 48em) {
@@ -78,17 +78,17 @@
 }
 
 .hero-promo header p {
-  font: normal 1.15em/1.4 "Helvetica Neue", Helvetica, sans-serif;
-  color: #ccc;
+  font: normal 1.15em/1.4 $gym-font-stack-text;
+  color: $gym-gray;
   margin-top: 1.4rem;
   margin-bottom: 1.4rem;
 }
 
 .hero-promo .subhead {
-  font: 900 1.5em/1.15 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  font: 900 1.5em/1.15 $gym-font-stack;
   letter-spacing: 1px;
   word-spacing: -3px;
-  color: #ccc;
+  color: $gym-gray;
   margin-bottom: 1.4rem;
 }
 
@@ -103,7 +103,7 @@
 .hero-promo .new-course mark {
   font-style: inherit;
   font-weight: inherit;
-  color: #f8971d;
+  color: $gym-orange;
   background-color: transparent;
 }
 
@@ -133,8 +133,8 @@
 .hero-promo a.gym-button-secondary {
   font-size: 105%;
   width: auto;
-  color: #222 !important;
-  border: 2px solid #fff !important;
+  color: $gym-black !important;
+  border: 2px solid $gym-white !important;
   padding: 1.2em 2em !important;
   vertical-align: bottom;
 }
@@ -142,8 +142,8 @@
 .hero-promo a.gym-button-secondary:hover,
 .hero-promo a.gym-button-secondary:focus,
 .hero-promo a.gym-button-secondary:active {
-  color: #fff !important;
-  border: 2px solid #fff !important;
+  color: $gym-white !important;
+  border: 2px solid $gym-white !important;
 }
 
 .hero-promo a.gym-button-secondary:hover {

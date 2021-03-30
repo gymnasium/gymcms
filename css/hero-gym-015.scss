@@ -1,11 +1,16 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
 .ux-design {
-  background-color: #5ca5a0;
+  background-color: $gym-teal;
 }
 
 #hero-gym-015 {
   background: radial-gradient(
     200% 100% at top left,
-    #5ca5a0  92%,
+    $gym-teal  92%,
     #46807c 25%
   )
 }
@@ -15,7 +20,7 @@
   #hero-gym-015 {
     background: radial-gradient(
       200% 100% at top left,
-      #5ca5a0  75%,
+      $gym-teal  75%,
       #46807c 25%
     )
   }
@@ -53,7 +58,7 @@
 
 .hero-promo .content-art img {
   width: 100%;
-  color: #222;
+  color: $gym-black;
 }
 
 @media (min-width: 40em) {
@@ -105,13 +110,13 @@
   font-size: 2.25em;
   line-height: 1.15;
   letter-spacing: .025em;
-  color: #fff;
+  color: $gym-white;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .hero-promo .subhead {
-  font: 900 1.35em/1.15 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 900 1.35em/1.15 $gym-font-stack;
   text-transform: uppercase;
   letter-spacing: .015em;
   margin-bottom: .75em;
@@ -176,7 +181,7 @@
   width: auto !important;
   font-size: 105% !important;
   padding: 1.2em 1.6em !important;
-  border: 2px solid #fff !important;
+  border: 2px solid $gym-white !important;
 }
 
 /* misc details */

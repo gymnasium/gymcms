@@ -1,3 +1,8 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
 .all-caps {
   text-transform: uppercase;
 }
@@ -45,9 +50,9 @@
   font-weight: 900;
   line-height: .85;
   font-size: 12em;
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #5ca5a0;
-  text-shadow: .075em 0 0 #222;
+  font-family: $gym-font-stack;
+  color: $gym-teal;
+  text-shadow: .075em 0 0 $gym-black;
 }
 
 .hero-promo header {
@@ -64,15 +69,15 @@
 
 .hero-promo header h1 {
   font-size: 2.5em;
-  color: #5ca5a0;
+  color: $gym-teal;
   margin-top: -.05em;
   margin-bottom: -.05em;
 }
 
 .hero-promo header h2,
 .hero-promo header h3 {
-  font: 900 1.6em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  font: 900 1.6em/1.4 $gym-font-stack;
+  color: $gym-black;
   letter-spacing: .05em;
   margin-bottom: .8em;
 }
@@ -82,13 +87,13 @@
 }
 
 .hero-promo header p {
-  font: normal 1.4em/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #ebebeb;
+  font: normal 1.4em/1.4 $gym-font-stack-text;
+  color: $gym-light-page-background;
   margin-top: 1em;
 }
 
 .hero-promo header p b {
-  color: #fff;
+  color: $gym-white;
 }
 
 @media (min-width: 22em) {
@@ -196,8 +201,8 @@
 .hero-promo a.gym-button-secondary {
   font-size: 105%;
   width: auto;
-  color: #fff !important;
-  border: 2px solid #fff !important;
+  color: $gym-white !important;
+  border: 2px solid $gym-white !important;
   padding: 1.2em 1.6em !important;
   vertical-align: bottom;
 }
@@ -205,6 +210,6 @@
 a.gym-button-secondary:hover,
 a.gym-button-secondary:focus,
 a.gym-button-secondary:active {
-  color: #fff !important;
-  border: 2px solid #fff !important;
+  color: $gym-white !important;
+  border: 2px solid $gym-white !important;
 }

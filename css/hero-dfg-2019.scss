@@ -1,5 +1,7 @@
 ---
 ---
+@import 'variables';
+@import 'mixins';
 
 .block {
   display: block;
@@ -28,7 +30,7 @@
 .hero-promo header {
   position: relative;
   z-index: 1;
-  background-color: #fff;
+  background-color: $gym-white;
   transition: background-color .5s ease-in-out;
   padding: 2.4em;
   margin-top: 0;
@@ -38,7 +40,7 @@
 }
 
 .hero-promo header h1 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", $gym-font-stack-text;
   font-weight: bold;
   font-size: 3.428571428571429em;
   line-height: 1.12;
@@ -160,5 +162,5 @@
 }
 
 .hero-promo a.gym-button-secondary b {
-  color: #fff !important;
+  color: $gym-white !important;
 }

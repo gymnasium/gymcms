@@ -1,12 +1,14 @@
 ---
 ---
+@import 'variables';
+@import 'mixins';
 
 .dark-mode-sketch {
   background-color: #263441;
 }
 
 .ux-design-text {
-  color: #5ca5a0;
+  color: $gym-teal;
 }
 
 .block {
@@ -32,7 +34,7 @@
 }
 
 .hero-promo header h1 {
-  color: #fff;
+  color: $gym-white;
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 0;
@@ -49,7 +51,7 @@
 .hero-promo figure {
   position: relative;
   height: 0;
-  background-color: #ebebeb;
+  background-color: $gym-light-page-background;
   padding-bottom: 60%;
   border-radius: .375em;
   margin-top: 1.8em;
@@ -207,6 +209,6 @@
 a.gym-button-secondary:hover,
 a.gym-button-secondary:focus,
 a.gym-button-secondary:active {
-  color: #fff !important;
-  border: 2px solid #fff !important;
+  color: $gym-white !important;
+  border: 2px solid $gym-white !important;
 }

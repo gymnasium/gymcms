@@ -1,14 +1,19 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
 .home {
   background: none;
 }
 
 #live-coding {
-  border-bottom: 4em solid #764c9f;
+  border-bottom: 4em solid $gym-purple;
 }
 
 #live-coding header {
-  color: #fff;
-  background: #764c9f;
+  color: $gym-white;
+  background: $gym-purple;
   padding: 1.6em 0;
 }
 

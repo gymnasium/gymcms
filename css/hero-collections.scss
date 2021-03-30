@@ -1,3 +1,8 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
 /* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
 
 .hero-promo {
@@ -28,7 +33,7 @@
     content: "";
     height: 100%;
     background-color: #ac2142;
-    border-top: 2.5em solid #d73158;
+    border-top: 2.5em solid $gym-magenta;
     border-bottom: 1.25em solid #7b182f;
     padding-top: 1.875em;
     animation: 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
@@ -43,43 +48,43 @@
 
     0% {
       background-color: #ac2142;
-      border-top-color: #d73158;
+      border-top-color: $gym-magenta;
       border-bottom-color: #7b182f;
     }
 
     20% {
       background-color: #ac2142;
-      border-top-color: #d73158;
+      border-top-color: $gym-magenta;
       border-bottom-color: #7b182f;
     }
 
     35% {
       background-color: #46807c;
-      border-top-color: #5ca5a0;
+      border-top-color: $gym-teal;
       border-bottom-color: #2b4d4b;
     }
 
     60% {
       background-color: #46807c;
-      border-top-color: #5ca5a0;
+      border-top-color: $gym-teal;
       border-bottom-color: #2b4d4b;
     }
 
     75% {
       background-color: #237b47;
-      border-top-color: #2c9959;
+      border-top-color: $gym-green;
       border-bottom-color: #164d2d;
     }
 
     90% {
       background-color: #237b47;
-      border-top-color: #2c9959;
+      border-top-color: $gym-green;
       border-bottom-color: #164d2d;
     }
 
     100% {
       background-color: #ac2142;
-      border-top-color: #d73158;
+      border-top-color: $gym-magenta;
       border-bottom-color: #7b182f;
     }
 
@@ -103,7 +108,7 @@
     top: 0;
     width: 50%;
     height: 100%;
-    background-color: #d73158;
+    background-color: $gym-magenta;
     animation: 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
     animation-name: color-background;
   }
@@ -138,31 +143,31 @@
   @keyframes color-background {
 
     0% {
-      background-color: #d73158;
+      background-color: $gym-magenta;
     }
 
     20% {
-      background-color: #d73158;
+      background-color: $gym-magenta;
     }
 
     35% {
-      background-color: #5ca5a0;
+      background-color: $gym-teal;
     }
 
     60% {
-      background-color: #5ca5a0;
+      background-color: $gym-teal;
     }
 
     75% {
-      background-color: #2c9959;
+      background-color: $gym-green;
     }
 
     90% {
-      background-color: #2c9959;
+      background-color: $gym-green;
     }
 
     100% {
-      background-color: #d73158;
+      background-color: $gym-magenta;
     }
 
   }
@@ -214,7 +219,7 @@
   font-size: 2.5em;
   line-height: 1.15;
   letter-spacing: .1rem;
-  color: #fff;
+  color: $gym-white;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -224,7 +229,7 @@
   line-height: 1.15;
   letter-spacing: .1rem;
   word-spacing: -.05rem;
-  color: #222;
+  color: $gym-black;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -232,7 +237,7 @@
 .hero-content-copy .subhead {
   font-weight: bold;
   font-size: 1.15em;
-  color: #f8971d;
+  color: $gym-orange;
   letter-spacing: 0.125rem;
   word-spacing: 0;
   margin-bottom: 2rem;
@@ -259,11 +264,11 @@
 
 .hero-promo a.gym-button-secondary {
   font-size: 105%;
-  color: #fff !important;
+  color: $gym-white !important;
   width: auto !important;
   background-color: transparent !important;
   padding: 1.2em 1.4em !important;
-  border: 2px solid #f8971d !important;
+  border: 2px solid $gym-orange !important;
 }
 
 .hero-promo a.gym-button-secondary b {
@@ -274,7 +279,7 @@
 .hero-promo a.gym-button-secondary:hover,
 .hero-promo a.gym-button-secondary:focus,
 .hero-promo a.gym-button-secondary:active {
-  border-color: #a6a6a6 !important;
+  border-color: $gym-light-gray !important;
 }
 
 /* misc details */

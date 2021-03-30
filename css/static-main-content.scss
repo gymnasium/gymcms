@@ -1,3 +1,8 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
 /* main content / layout */
 
 .main-content-static h2 {
@@ -9,7 +14,7 @@
 }
 
 .main-content-static p.hero-text {
-  font: normal 1.6em/1.4 brandon-grotesque, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: normal 1.6em/1.4 $gym-font-stack;
   word-spacing: 0.032em;
   margin: 0.67em 0;
 }
@@ -32,7 +37,7 @@
 .iframe-video-holder {
   position: relative;
   height: 0;
-  background: #222;
+  background: $gym-black;
   overflow: hidden;
 }
 

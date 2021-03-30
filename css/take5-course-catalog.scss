@@ -1,9 +1,14 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
 #take5-list figure > a {
     display: block;
     height: 0;
     background-color: #d2d2d2;
     padding-bottom: 44.444444444444444%;
-    border: 1px solid #ddd;
+    border: 1px solid $gym-gray-2;
     border-bottom: 0;
     overflow: hidden;
   }
