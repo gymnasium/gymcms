@@ -3,7 +3,7 @@
 @import 'variables';
 @import 'mixins';
 
-@include initial-resets;
+@include defaults;
 
 // Design systems (feel free to rename)
 .ds {

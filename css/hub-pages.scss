@@ -3,51 +3,7 @@
 @import 'variables';
 @import 'mixins';
 
-@include initial-resets;
-
-/* --- typography --- */
-
-#main {
-
-  /* headings / margin reset */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $gym-black;
-    line-height: 1.15;
-    letter-spacing: 0.015em;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  h3 {
-    text-transform: none;
-  }
-
-  /* paragraphs */
-  p {
-    font: normal 1.15em/1.45 $gym-font-stack-text;
-    margin-top: 1.2rem;
-    margin-bottom: 0;
-  }
-
-  .main-content p {
-    color: #555;
-  }
-
-  /* typographical details */
-  .all-caps {
-    text-transform: uppercase;
-  }
-
-  .no-wrap {
-    color: inherit;
-    white-space: nowrap;
-  }
-}
+@include defaults;
 
 
 #featured h3 {
@@ -117,33 +73,6 @@
   border-radius: 3px;
 }
 
-/* gym text */
-
-main[role="main"] a:not([class]) {
-  line-height: inherit;
-  color: currentColor !important;
-  text-decoration: none;
-  padding-bottom: 0.125rem;
-  border-bottom: 1px solid currentColor !important;
-}
-
-main[role="main"] a:not([class]):hover,
-main[role="main"] a:not([class]):focus,
-main[role="main"] a:not([class]):active {
- border-bottom-width: 2px !important;
- margin-bottom: -0.125rem;
-}
-
-/* --- #main --- */
-
-/* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
-
-main[role="main"] .main-content {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* !override / reset/rescale font-size adjustment */
 
 /* --- #about --- */
 

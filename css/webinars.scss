@@ -3,70 +3,7 @@
 @import 'variables';
 @import 'mixins';
 
-@include initial-resets;
-
-/* reset default (text) links */
-[role="main"] {
-
-  /* gym text */
-  a.gym-link-secondary {
-    color: inherit;
-    border-bottom: 2px solid $gym-orange;
-
-    &:hover,
-    &:focus {
-      color: inherit;
-      border-bottom: 2px solid $gym-dark-gray !important; /* ! */
-    }
-  }
-
-  a:not([class]) {
-    color: $gym-black;
-    text-decoration: none;
-    padding-bottom: 2px;
-    border-bottom: 1px solid $gym-black;
-    margin-bottom: -2px;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $gym-black;
-      text-decoration: none;
-      border-bottom: 2px solid $gym-black !important;
-    }
-  }
-  
-  /* --- #main --- */
-  
-  /* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
-  .main-content {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  
-  /* --- typography --- */
-  
-  /* headings / margin reset */
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $gym-black;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  /* paragraphs */
-
-  p {
-    font: normal 1.15em/1.45 $gym-font-stack-text;
-    margin-top: 1em;
-    margin-bottom: 0;
-  }
-}
+@include defaults;
 
 #main h1 {
   font-size: 2.25em;

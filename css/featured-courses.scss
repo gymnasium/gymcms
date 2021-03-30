@@ -169,9 +169,8 @@
 
 @include grid-support;
 
+/* --- cards (grid) --- */
 @supports (display: grid) {
-  /* --- cards (grid) --- */
-
   .card {
     display: inherit;
   }
