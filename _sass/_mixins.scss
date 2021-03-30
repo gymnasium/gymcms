@@ -1,6 +1,6 @@
 @mixin initial-resets {
 
-  /* --- !override / reset / all initial --- */
+  // --- !override / reset / all initial ---
   #content > .container,
   #content > .container > .row,
   #content > .container > .row > .col-md-12 {
@@ -13,13 +13,13 @@
 
   @include initial-resets;
 
-  /* --- smooth scrolling --- */
+  // --- smooth scrolling ---
 
   html {
     scroll-behavior: smooth;
   }
 
-  /* --- flexible images --- */
+  // --- flexible images ---
   main {
     img {
       width: auto;
@@ -39,17 +39,17 @@
     }
   }
 
-  /* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
+  // !override / reset/rescale Bootstrap (3) handiwork — future-friendly
   #main {
     font-size: 16px;
 
-    /* gym button */
+    // gym button
     .gym-button {
       font-size: 105%;
       width: auto;
       padding: 1.2em 1.4em;
 
-    /* !override / color */
+    // !override / color
       b {
         color: $gym-white;
       }
@@ -60,14 +60,13 @@
       color: $gym-orange;
     }
 
-    /* !override / remove padding-bottom  */
+    // !override / remove padding-bottom 
     .container-fluid {
       padding-bottom: 0;
     }
   }
 
-
-  /* reset default (text) links */
+  // reset default (text) links
   [role="main"] {
     a:not([class]) {
       color: currentColor;
@@ -85,16 +84,16 @@
       }
     }
 
-    /* --- #main --- */
+    // --- #main ---
     .main-content {
       padding-left: 0;
       padding-right: 0;
     }
   }
 
-  /* --- typography --- */
+  // --- typography ---
 
-  /* headings / margin reset */
+  // headings / margin reset
 
   [role="main"] {
     h1,
@@ -119,7 +118,7 @@
       text-transform: none;
     }
 
-    /* paragraphs */
+    // paragraphs
     p {
       font: normal 1.15em/1.45 $gym-font-stack-text;
       margin-top: 1em;
@@ -127,9 +126,14 @@
     }
   }
 
+  // prevent word wrap
+  .nowrap,
+  .no-wrap {
+    white-space: nowrap;
+  }
 
   #main {
-    /* typographical details */
+    // typographical details
     .all-caps {
       text-transform: uppercase;
     }
@@ -138,10 +142,9 @@
     .no-wrap {
       font: inherit;
       color: inherit;
-      white-space: nowrap;
     }
 
-    /* secondary button */
+    // secondary button
     .gym-button-secondary {
       color: $gym-white;
       background-color: transparent;
@@ -163,7 +166,7 @@
 
 // Adds grid support with fallbacks
 @mixin grid-support {
-  /* --- legacy columns (inline-block) w/ breakpoints --- */
+  // --- legacy columns (inline-block) w/ breakpoints
   .cols > ul {
     list-style: none;
     padding-top: 1.2em;
@@ -178,9 +181,8 @@
   }
   
   @media (min-width: 40em) {
-  
     .cols {
-      padding-bottom: 1px; /* overflow height adjustment (hack) -- useful when nested content has border */
+      padding-bottom: 1px; // overflow height adjustment (hack) -- useful when nested content has border
       overflow: hidden;
   
       > ul {
@@ -202,15 +204,12 @@
   }
   
   @media (min-width: 58em) {
-  
     .cols > ul li {
       width: 50%;
     }
-  
   }
   
   @media (min-width: 64em) {
-  
     .cols > ul li {
       width: 33.333333333333333%;
 
@@ -222,7 +221,6 @@
   }
 
   @media (min-width: 78em) {
-
     .cols ul li {
       width: 25%;
     }
@@ -232,8 +230,7 @@
     }
   }
 
-
-  /* --- modern columns (grid) --- */
+  // --- modern columns (grid)
   @supports (display: grid) {
 
     .cols > ul {
@@ -243,9 +240,8 @@
     }
 
     @media (min-width: 36em) {
-
       .cols > ul {
-        grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(19.25em, 1fr));
       }
     }
 
@@ -256,13 +252,12 @@
     }
     
     @media (min-width: 78em) {
-    
       .cols ul li:last-child {
         display: inherit;
       }
     }
 
-  /* override -- legacy layout -- start */
+    // override -- legacy layout -- start
 
     .cols,
     .cols > ul li {
@@ -286,6 +281,8 @@
         padding-right: 0;
       }
     }
-    /* override -- legacy layout -- end */
+    // override -- legacy layout -- end
+
   }
 }
+
