@@ -1,7 +1,8 @@
 ---
 ---
-@import 'variables';
-@import 'mixins';
+
+@import "variables";
+@import "mixins";
 
 /* --- reset/rescale Bootstrap (3) handiwork --- */
 
@@ -16,16 +17,16 @@
   .design-development {
     background-color: $gym-magenta;
   }
-  
+
   .development {
     background-color: $gym-purple;
   }
-  
+
   .prototyping,
   .user-experience {
     background-color: $gym-teal;
   }
-  
+
   .career-skills,
   .content-creation {
     background-color: $gym-green;
@@ -33,14 +34,13 @@
 }
 
 .featured-course {
-
   .course-type {
     position: relative;
-    top: -.4em;
-    font: bold .85em/1.15 $gym-font-stack;
+    top: -0.4em;
+    font: bold 0.85em/1.15 $gym-font-stack;
     color: $gym-white;
-    letter-spacing: .075em;
-    word-spacing: .1em;
+    letter-spacing: 0.075em;
+    word-spacing: 0.1em;
     text-transform: uppercase;
     text-align: left;
   }
@@ -66,7 +66,7 @@
 .list-featured-courses .featured-course header h2 {
   font: 900 1.6em/1.2 $gym-font-stack;
   color: $gym-white;
-  letter-spacing: .035em;
+  letter-spacing: 0.035em;
   text-transform: uppercase;
   text-align: left;
   margin-top: 0;
@@ -84,8 +84,8 @@
 .featured-course header p {
   font: 500 1.1em/1.4 $gym-font-stack;
   color: $gym-white;
-  letter-spacing: .05em;
-  margin: .5em 0 0;
+  letter-spacing: 0.05em;
+  margin: 0.5em 0 0;
 }
 
 .featured-course .instructor {
@@ -118,12 +118,10 @@
 }
 
 @media (min-width: 75em) {
-
   .about-featured-courses {
     margin-left: 12.5%;
     margin-right: 12.5%;
   }
-
 }
 
 .about-featured-courses .description p {
@@ -148,145 +146,30 @@
   &-main {
     padding: 1.2em;
   }
-  
+
   &-footer {
     background: $gym-white;
   }
-  
+
   &-info {
     padding: 1.2em 1.2em 0;
   }
-  
+
   &-cta {
     text-align: center;
     padding: 1.2em;
-  
+
     a {
       display: inline-block;
       padding: 1.2em 2.2em;
-      border-radius: .1875em;
+      border-radius: 0.1875em;
     }
   }
 }
 
-/* --- grid cleanup --- */
-
-/* --- legacy columns (inline-block) w/ breakpoints --- */
-
-.cols ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: -1.2em;
-  margin-bottom: 0;
-
-  li {
-    margin-top: 1.2em;
-    overflow: hidden;
-  }
-}
-
-@media (min-width: 40em) {
-
-  .cols {
-    padding-bottom: 1px; /* overflow height adjustment (hack) -- useful when nested content has border */
-    overflow: hidden;
-
-    ul {
-      margin-left: -.6em;
-      margin-right: -.6em;
-
-      li {
-        display: inline-block;
-        width: 50%;
-        vertical-align: top;
-        box-sizing: border-box;
-        padding-left: .6em;
-        padding-right: .6em;
-        margin-right: -4px;
-      }
-    }
-  }
-}
-
-@media (min-width: 62em) {
-
-  .cols ul li {
-    width: 33.333333333333333%;
-
-    &:last-child {
-      display: none;
-    }
-  }
-}
-
-@media (min-width: 78em) {
-
-  .cols ul li {
-    width: 25%;
-
-    &:last-child {
-      display: inline-block;
-    }
-  }
-}
-
-/* --- modern columns (grid) --- */
+@include grid-support;
 
 @supports (display: grid) {
-
-  .cols ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19.25em, 1fr));
-    grid-gap: 1.2em;
-  }
-
-  /* override -- legacy layout -- start */
-
-  .cols {
-    padding-bottom: 0;
-  }
-
-  .cols,
-  .cols ul li {
-    overflow: visible;
-  }
-
-  .cols ul,
-  .cols ul li {
-    margin-top: 0;
-    margin-right: 0;
-  }
-
-  .cols ul {
-    margin-left: 0;
-
-    li {
-      display: inherit;
-      width: auto;
-      box-sizing: content-box;
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-
-@media (min-width: 62em) {
-
-  .cols ul li:last-child {
-    display: none;
-  }
-
-}
-
-@media (min-width: 78em) {
-
-  .cols ul li:last-child {
-    display: inherit;
-  }
-
-}
-
-  /* override -- legacy layout -- end */
-
   /* --- cards (grid) --- */
 
   .card {
@@ -296,7 +179,6 @@
   .card-footer {
     align-self: end;
   }
-
 }
 
 /* --- gym-button --- */
@@ -311,8 +193,6 @@
     }
   }
 }
-
-
 
 /* --- overrides --- */
 
