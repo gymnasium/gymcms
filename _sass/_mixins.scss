@@ -65,6 +65,100 @@
       padding-bottom: 0;
     }
   }
+
+
+  /* reset default (text) links */
+  [role="main"] {
+    a:not([class]) {
+      color: currentColor;
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid currentColor;
+      margin-bottom: -2px;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: currentColor;
+        text-decoration: none;
+        border-bottom: 2px solid currentColor !important;
+      }
+    }
+
+    /* --- #main --- */
+    .main-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  /* --- typography --- */
+
+  /* headings / margin reset */
+
+  [role="main"] {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $gym-black;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    h1 {
+      font-size: 2.25em;
+    }
+    
+    h3 {
+      font-size: 1.4em;
+      line-height: 1.15;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    /* paragraphs */
+    p {
+      font: normal 1.15em/1.45 $gym-font-stack-text;
+      margin-top: 1em;
+      margin-bottom: 0;
+    }
+  }
+
+
+  #main {
+    /* typographical details */
+    .all-caps {
+      text-transform: uppercase;
+    }
+    
+    .nowrap,
+    .no-wrap {
+      font: inherit;
+      color: inherit;
+      white-space: nowrap;
+    }
+
+    /* secondary button */
+    .gym-button-secondary {
+      color: $gym-white;
+      background-color: transparent;
+      border: 2px solid $gym-orange;
+
+      b {
+        color: inherit;
+        vertical-align: text-top;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: $gym-light-gray;
+      }
+    }
+  }
 }
 
 // Adds grid support with fallbacks

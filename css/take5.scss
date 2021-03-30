@@ -3,7 +3,7 @@
 @import 'variables';
 @import 'mixins';
 
-@include initial-resets;
+@include defaults;
 
 /* remove border from linked images  */
 
@@ -76,25 +76,6 @@
   display: block;
   padding-top: .5625rem;
   outline: none;
-}
-
-/* --- typography --- */
-
-/* headings / margin reset */
-
-[role="main"] h1,
-[role="main"] h2,
-[role="main"] h3,
-[role="main"] h4,
-[role="main"] h5,
-[role="main"] h6 {
-  color: $gym-black;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-[role="main"] h1 {
-  letter-spacing: .025em;
 }
 
 #featured h3 {
@@ -401,7 +382,7 @@ main h3 {
     padding-top: 1.6em;
     padding-bottom: 1.6em;
   }
-  
+
   &--recommended {
     padding-top: 1.6em;
     padding-bottom: 1em;
