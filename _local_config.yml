@@ -1,0 +1,38 @@
+# Setup
+title: Gymnasium Static Content
+url: http://localhost:4000
+baseurl:
+timezone: America/New_York
+environment: local
+
+# Building
+
+exclude:
+  - 'docker-compose.yml'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'README.md'
+  - 'netlify.toml'
+  - '.jekyll-cache'
+
+repository: gymnasium/gymcms
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+
+# Markdown Processing
+kramdown:
+  auto_ids:       true
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
+  show_warnings:  false
+
+## CSS Preprocessing/SASS (see @https://github.com/jekyll/jekyll-sass-converter)
+sass:
+  sass_dir: _sass
+  style: expanded
