@@ -2,6 +2,7 @@
 ---
 @import 'variables';
 @import 'mixins';
+@import 'animations';
 
 .all-caps {
   text-transform: uppercase;
@@ -29,39 +30,12 @@
   height: 100%;
   background: $gym-green url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-64px.png") no-repeat center center;
   background-size: cover;
-  animation: fade 6s ease-in-out 3s forwards;
+  animation: image-fade 6s ease-in-out 3s forwards;
 }
 
-@keyframes fade {
+@include image-fade;
 
-  0% {
-    background: $gym-green url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-64px.png") no-repeat center center;
-  }
 
-  20% {
-    background: $gym-green url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-48px.png") no-repeat center center;
-  }
-
-  40% {
-    background: $gym-green url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-48px.png") no-repeat center center;
-  }
-
-  60% {
-    background: $gym-green url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
-    opacity: 1;
-  }
-
-  80% {
-    background: $gym-green url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
-    opacity: .5;
-  }
-
-  100% {
-    background: $gym-green url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
-    opacity: 0;
-  }
-
-}
 
 .webinar-12-2018 .content {
   font-size: 114.2857142857143%;
