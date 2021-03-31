@@ -2,6 +2,7 @@
 ---
 @import 'variables';
 @import 'mixins';
+@import 'animations';
 
 // --- hero banner / gym-014 / atomic design ---
 
@@ -72,24 +73,7 @@
   animation: orbit 24s linear infinite;
 }
 
-@keyframes orbit {
-  from {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: rotate(0deg) translateX(7.5em) translateY(-5.5em) rotate(0deg);
-  }
-  to {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: rotate(360deg) translateX(7.5em) translateY(-5.5em) rotate(-360deg);
-  }
-}
+@include orbit;
 
 #atomic-design-atom img {
   display: inline-block;
