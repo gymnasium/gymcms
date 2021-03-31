@@ -1,0 +1,29 @@
+---
+permalink: /static/design-systems/
+layout: raw
+---
+
+{%- if jekyll.environment == "development" -%}
+  {%- include take5/test-top.html -%}
+{%- endif -%}
+
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/design-systems.css">
+
+<main id="main" role="main">
+
+<header class="ds--about" id="about">
+  <div class="container">
+    <h1>Design Systems</h1>
+    <p>Lorem ipsum me...</p>
+  </div>
+</header>
+
+<div class="container">
+  <!-- populate me -->
+</div>
+
+</main>
+
+{%- if jekyll.environment == "development" -%}
+  {%- include take5/test-bottom.html -%}
+{%- endif -%}

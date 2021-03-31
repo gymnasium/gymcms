@@ -1,0 +1,25 @@
+---
+layout: default
+permalink: /tests/hero
+---
+{%- assign hero = site.data.hero -%}
+<h1>Hero Tests</h1>
+
+<h2>Public Hero</h2>
+
+<p><a href="/tests/hero-public">current_promo</a>: <code>{{ hero.current_promo }}</code></p>
+
+   
+
+<h2>Authenticated Hero</h2>
+
+<p><a href="/tests/hero-auth">auth_promo</a>: <code>{{ hero.auth_promo }}</code></p>
+
+ 
+
+<h2>Live Coding Hero</h2>
+
+
+<p><a href="/tests/hero-live-coding">live_coding</a>: <code>{{ hero.live_coding }}</code></p>
+
+
