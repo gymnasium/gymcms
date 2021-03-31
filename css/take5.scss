@@ -5,21 +5,21 @@
 
 @include defaults;
 
-/* remove border from linked images  */
+// remove border from linked images 
 
 [role="main"] a.img-link:hover {
   border-bottom: none;
 }
 
-/* gym button */
+// gym button
 
 [role="main"] .gym-button {
-  width: auto !important; /* !override / shrink-wrap */
-  padding: 1.2em 2.2em !important; /* !override */
+  width: auto !important; // !override / shrink-wrap
+  padding: 1.2em 2.2em !important; // !override
   border-radius: 3px;
 }
 
-/* gym text */
+// gym text
 
 [role="main"] a.gym-link-secondary {
   color: inherit;
@@ -29,12 +29,12 @@
 [role="main"] a.gym-link-secondary:hover,
 [role="main"] a.gym-link-secondary:focus {
   color: inherit;
-  border-bottom: 2px solid $gym-dark-gray !important; /* ! */
+  border-bottom: 2px solid $gym-dark-gray !important; // !
 }
 
-/* --- #main --- */
+// --- #main ---
 
-/* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
+// !override / reset/rescale Bootstrap (3) handiwork — future-friendly
 
 
 [role="main"] .main-content {
@@ -42,7 +42,7 @@
   padding-right: 0;
 }
 
-/* reset default (text) links */
+// reset default (text) links
 
 #main .title a,
 #main [class="all-caps"] a {
@@ -87,7 +87,7 @@
   text-transform: none;
 }
 
-/* paragraphs */
+// paragraphs
 
 [role="main"] p {
   font: normal 1.15em/1.5 $gym-font-stack-text;
@@ -95,7 +95,7 @@
   margin-bottom: 0;
 }
 
-/* typographical details */
+// typographical details
 
 #main .all-caps {
   text-transform: uppercase;
@@ -117,11 +117,11 @@
   white-space: nowrap;
 }
 
-/* --- take-5 catalog --- */
+// --- take-5 catalog ---
 
-/* --- #about --- */
+// --- #about ---
 
-/* !override background-color w/ ID selector/combinator */
+// !override background-color w/ ID selector/combinator
 
 #about {
   background-color: #d2d2d2;
@@ -162,7 +162,7 @@ main h3 {
   color: $gym-dark-gray;
 }
 
-/* --- section --- */
+// --- section ---
 
 .section {
   padding-top: 1.2em;
@@ -212,7 +212,7 @@ main h3 {
   border-radius: 2px;
 }
 
-/* --- take-5 --- */
+// --- take-5 ---
 .take5 {
   &--recent-content {
     border-top: 1px dashed $gym-gray;
@@ -432,7 +432,7 @@ main h3 {
   }
 }
 
-/* add #main for specificity override */
+// add #main for specificity override
 
 #main {
   .take5--featured > header h2,
@@ -611,7 +611,7 @@ details.take5--transcript {
   @extend %tutorial-artwork-img;
 }
 
-/* --- catalog view --- */
+// --- catalog view ---
 .take5 {
   &--catalog-section {
     background-color: $gym-light-page-background;
@@ -640,9 +640,9 @@ details.take5--transcript {
   }
 }
 
-/* --- links / buttons --- */
+// --- links / buttons ---
 
-/* cta / structure */
+// cta / structure
 
 .cta-message {
   background-color: $gym-white;
@@ -669,7 +669,7 @@ details.take5--transcript {
   margin-top: 1.2em;
 }
 
-/* back to top */
+// back to top
 
 .to-top-link {
   margin-top: 1.2em;
@@ -687,6 +687,6 @@ details.take5--transcript {
   }
 }
 
-/* --- grid layout --- */
+// --- grid layout ---
 
 @include grid-support;

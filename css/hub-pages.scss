@@ -10,44 +10,44 @@
   letter-spacing: .035em;
 }
 
-/* --- web development palette --- */
+// --- web development palette ---
 
 .bg-web-development,
 .featured-course .bg-web-developement {
   background-color: $gym-magenta;
 }
 
-/* --- web development lang palette --- */
+// --- web development lang palette ---
 
 .bg-web-development-lang,
 .featured-course .bg-web-developement-lang {
   background-color: $gym-purple;
 }
 
-/* --- ux / prototyping color palette --- */
+// --- ux / prototyping color palette ---
 
 .bg-ux-design,
 .featured-course .ux-design {
   background: $gym-teal;
 }
 
-/* --- career skills color palette --- */
+// --- career skills color palette ---
 
 .bg-career-skills,
 .featured-course .bg-career-skills {
   background: $gym-green;
 }
 
-/* --- links / buttons --- */
+// --- links / buttons ---
 
-/* cta / structure */
+// cta / structure
 
 .cta {
   text-align: center;
   margin-top: 1.2em;
 }
 
-/* back to top */
+// back to top
 
 .to-top-link {
   margin-top: 1.2em;
@@ -65,18 +65,18 @@
   }
 }
 
-/* gym button */
+// gym button
 
 #main .gym-button {
-  width: auto !important; /* !override / shrink-wrap */
-  padding: 1.2em 2.2em !important; /* !override */
+  width: auto !important; // !override / shrink-wrap
+  padding: 1.2em 2.2em !important; // !override
   border-radius: 3px;
 }
 
 
-/* --- #about --- */
+// --- #about ---
 
-/* !override background-color w/ ID selector/combinator */
+// !override background-color w/ ID selector/combinator
 
 #about {
   background-color: #d2d2d2;
@@ -126,7 +126,7 @@
   margin-top: 1.4rem;
 }
 
-/* --- section --- */
+// --- section ---
 
 .section {
   padding-top: 1.2em;
@@ -175,7 +175,7 @@
   color: $gym-black;
 }
 
-/* --- card layout --- */
+// --- card layout ---
 
 .card-main {
   padding: 1.2em;
@@ -209,7 +209,7 @@ footer.card-cta {
   display: inline-block;
 }
 
-/* --- #feature --- */
+// --- #feature ---
 
 #featured {
   padding-top: 1.6em;
@@ -265,13 +265,13 @@ footer.card-cta {
   margin: -1.2em -1.2em 1.2em;
 }
 
-/* --- #jobs --- */
+// --- #jobs ---
 
 #jobs .content-hr {
   padding-bottom: 0;
 }
 
-/* --- #courses --- */
+// --- #courses ---
 
 #courses .cols-hr ul {
   grid-gap: 0;
@@ -295,7 +295,7 @@ footer.card-cta {
   vertical-align: middle;
   padding-bottom: 20%;
   border-radius: 50%;
-  -moz-border-radius: 0; /* for legacy Firefox */
+  -moz-border-radius: 0; // for legacy Firefox
   overflow: hidden;
   margin-right: 1.2em;
 }
@@ -316,7 +316,7 @@ footer.card-cta {
   border: 1px solid #dedede;
 }
 
-/* --- #webinars --- */
+// --- #webinars ---
 
 #webinars .cols-hr ul {
   padding-bottom: 0;
@@ -328,7 +328,7 @@ footer.card-cta {
   position: relative;
   height: 0;
   background-color: #000;
-  padding-bottom: 62.5%; /* pseudo 16:9 aspect ratio */
+  padding-bottom: 62.5%; // pseudo 16:9 aspect ratio
   overflow: hidden;
 }
 
@@ -348,9 +348,9 @@ footer.card-cta {
   max-width: none;
 }
 
-/* --- grid layout --- */
+// --- grid layout ---
 
-/* --- legacy columns (inline-block) w/ breakpoints --- */
+// --- legacy columns (inline-block) w/ breakpoints ---
 
 .cols ul {
   list-style: none;
@@ -436,7 +436,7 @@ footer.card-cta {
 @media (min-width: 40em) {
 
   .cols {
-    padding-bottom: 1px; /* overflow height adjustment (hack) -- useful when nested content has border */
+    padding-bottom: 1px; // overflow height adjustment (hack) -- useful when nested content has border
     overflow: hidden;
 
     ul {
@@ -473,7 +473,7 @@ footer.card-cta {
   }
 }
 
-/* --- modern columns (grid) --- */
+// --- modern columns (grid) ---
 
 @supports (display: grid) {
 
@@ -495,7 +495,7 @@ footer.card-cta {
 
   }
 
-/* override -- legacy layout -- start */
+// override -- legacy layout -- start
 
   .cols {
     padding-bottom: 0;
@@ -540,9 +540,9 @@ footer.card-cta {
       }
     }
   }
-  /* override -- legacy layout -- end */
+  // override -- legacy layout -- end
 
-  /* --- cards (grid) --- */
+  // --- cards (grid) ---
 
   .cols li,
   .card,

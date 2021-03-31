@@ -3,7 +3,7 @@
 @import 'variables';
 @import 'mixins';
 
-/* --- hero banner / gym-014 / atomic design --- */
+// --- hero banner / gym-014 / atomic design ---
 
 .ux-design {
   background-color: $gym-teal;
@@ -22,13 +22,13 @@
 
 .ux-design p a {
   padding-bottom: 2px;
-  border-bottom: 2px solid $gym-orange !important; /* dangerous override */
+  border-bottom: 2px solid $gym-orange !important; // dangerous override
 }
 
 .ux-design p a:hover,
 .ux-design p a:focus,
 .ux-design p a:active {
-  border-bottom: 2px solid $gym-white !important; /* dangerous override */
+  border-bottom: 2px solid $gym-white !important; // dangerous override
 }
 
 .hero-promo {
@@ -148,9 +148,9 @@ a.gym-button-shrink-wrap {
 
 }
 
-/* --- common --- */
+// --- common ---
 
-/* typographic details */
+// typographic details
 
 .no-wrap {
   white-space: nowrap;

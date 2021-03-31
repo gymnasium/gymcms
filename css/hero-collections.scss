@@ -2,8 +2,9 @@
 ---
 @import 'variables';
 @import 'mixins';
+@import 'animations';
 
-/* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
+// !override / reset/rescale Bootstrap (3) handiwork — future-friendly
 
 .hero-promo {
   position: relative;
@@ -11,7 +12,7 @@
   background-color: #2c2c2c;
 }
 
-/* structural spacing */
+// structural spacing
 
 .hero-promo .container {
   background-color: inherit;
@@ -23,7 +24,6 @@
   .hero-content-copy .description {
     width: 95%;
   }
-
 }
 
 @media (max-width: 62em) {
@@ -44,51 +44,7 @@
     max-width: 32em;
   }
 
-  @keyframes color-blocks {
-
-    0% {
-      background-color: #ac2142;
-      border-top-color: $gym-magenta;
-      border-bottom-color: #7b182f;
-    }
-
-    20% {
-      background-color: #ac2142;
-      border-top-color: $gym-magenta;
-      border-bottom-color: #7b182f;
-    }
-
-    35% {
-      background-color: #46807c;
-      border-top-color: $gym-teal;
-      border-bottom-color: #2b4d4b;
-    }
-
-    60% {
-      background-color: #46807c;
-      border-top-color: $gym-teal;
-      border-bottom-color: #2b4d4b;
-    }
-
-    75% {
-      background-color: #237b47;
-      border-top-color: $gym-green;
-      border-bottom-color: #164d2d;
-    }
-
-    90% {
-      background-color: #237b47;
-      border-top-color: $gym-green;
-      border-bottom-color: #164d2d;
-    }
-
-    100% {
-      background-color: #ac2142;
-      border-top-color: $gym-magenta;
-      border-bottom-color: #7b182f;
-    }
-
-  }
+  @include color-blocks($orientation: vertical, $background: true);
 
 }
 
@@ -140,80 +96,13 @@
     margin-left: 12em;
   }
 
-  @keyframes color-background {
+  @include color-background;
 
-    0% {
-      background-color: $gym-magenta;
-    }
-
-    20% {
-      background-color: $gym-magenta;
-    }
-
-    35% {
-      background-color: $gym-teal;
-    }
-
-    60% {
-      background-color: $gym-teal;
-    }
-
-    75% {
-      background-color: $gym-green;
-    }
-
-    90% {
-      background-color: $gym-green;
-    }
-
-    100% {
-      background-color: $gym-magenta;
-    }
-
-  }
-
-  @keyframes color-blocks {
-
-    0% {
-      border-left-color: #ac2142;
-      border-right-color: #7b182f;
-    }
-
-    20% {
-      border-left-color: #ac2142;
-      border-right-color: #7b182f;
-    }
-
-    35% {
-      border-left-color: #46807c;
-      border-right-color: #2b4d4b;
-    }
-
-    60% {
-      border-left-color: #46807c;
-      border-right-color: #2b4d4b;
-    }
-
-    75% {
-      border-left-color: #237b47;
-      border-right-color: #164d2d;
-    }
-
-    90% {
-      border-left-color: #237b47;
-      border-right-color: #164d2d;
-    }
-
-    100% {
-      border-left-color: #ac2142;
-      border-right-color: #7b182f;
-    }
-
-  }
+  @include color-blocks($orientation: horizontal, $background: false);
 
 }
 
-/* content / copy */
+// content / copy
 
 .hero-content-copy header h1 {
   font-size: 2.5em;
@@ -253,14 +142,14 @@
   margin-top: 1.6rem;
 }
 
-/* cta */
+// cta
 
 .hero-promo .cta {
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
 
-/* secondary button */
+// secondary button
 
 .hero-promo a.gym-button-secondary {
   font-size: 105%;
@@ -282,7 +171,7 @@
   border-color: $gym-light-gray !important;
 }
 
-/* misc details */
+// misc details
 
 .all-caps {
   text-transform: uppercase;

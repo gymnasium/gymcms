@@ -16,7 +16,7 @@
   text-transform: none;
 }
 
-/* typographical details */
+// typographical details
 
 #main .all-caps {
   text-transform: uppercase;
@@ -29,11 +29,11 @@
   white-space: nowrap;
 }
 
-/* --- webinars / catalog view --- */
+// --- webinars / catalog view ---
 
-/* --- #about --- */
+// --- #about ---
 
-/* !override background-color w/ ID selector/combinator */
+// !override background-color w/ ID selector/combinator
 
 #about {
   background-color: #d2d2d2;
@@ -57,9 +57,9 @@
   }
 }
 
-/* --- webinar --- */
+// --- webinar ---
 
-/* grid layout  */
+// grid layout 
 
 @media (min-width: 40em) {
 
@@ -77,7 +77,7 @@
 
 }
 
-/* --- webinar--card --- */
+// --- webinar--card ---
 .webinar {
   &--card {
     display: grid;
@@ -127,7 +127,7 @@
     }
   }
 
-  /* --- cta --- */
+  // --- cta ---
   &--cta {
     color: $gym-white;
     padding: 1.2em;
@@ -138,7 +138,7 @@
     }
   }
 
-  /* topics */
+  // topics
 
   .design {
     border-top-color: $gym-magenta;
@@ -157,7 +157,7 @@
   }
 }
 
-/* --- featured webinar --- */
+// --- featured webinar ---
 #featured-webinar {
   header,
   header .subhead {
@@ -206,7 +206,7 @@
 @media (min-width: 58em) {
 
   #featured-webinar {
-    /* legacy layout / fallback  */
+    // legacy layout / fallback 
     width: 100%;
     margin-top: 0;
 
@@ -261,11 +261,11 @@
   }
 }
 
-/* --- grid layout --- */
+// --- grid layout ---
 
 @include grid-support;
 
-/* secondary button */
+// secondary button
 #main .gym-button-secondary {
   color: $gym-white;
   background-color: transparent;
@@ -283,7 +283,7 @@
   border-color: $gym-light-gray;
 }
 
-/* main / article */
+// main / article
 main.content {
   display: block;
   max-width: 72em;
@@ -307,7 +307,7 @@ main article {
   }
 }
 
-/* typographic style / basic */
+// typographic style / basic
 main h1,
 main h2,
 main h3 {
@@ -331,7 +331,7 @@ main h3 {
   }
 }
 
-/* offset "live event" style */
+// offset "live event" style
 .event-header {
   margin-top: -.21em;
   margin-left: -.3em;
@@ -342,7 +342,7 @@ main h3 {
     display: inline-block;
   }
 
-  /* "live event" style */
+  // "live event" style
   h1 {
     background: $gym-orange;
     padding: .21em .2em .1em .3em;
@@ -393,7 +393,7 @@ main h3 {
   }
 }
 
-/* event banner hero / title, speaker(s), datetime */
+// event banner hero / title, speaker(s), datetime
 
 .event-banner-hero {
   padding: 2em 2.2em;
@@ -435,30 +435,30 @@ main h3 {
   }
 }
 
-/* event banner theme / background-color */
+// event banner theme / background-color
 .event-theme {
-  /* reddish */
+  // reddish
   &-design {
     background: $gym-magenta;
   }
   
-  /* purple */
+  // purple
   &-dev {
     background: $gym-purple;
   }
   
-  /* blueish */
+  // blueish
   &-ux {
     background: $gym-teal;
   }
   
-  /* green */
+  // green
   &-skills {
     background: $gym-green;
   }
 }
 
-/* event video / wistia embed */
+// event video / wistia embed
 .event-video {
   position: relative;
   height: 0;
@@ -466,7 +466,7 @@ main h3 {
   padding-bottom: 56.25%;
   margin: 2em 0;
 
-  /* wistia and youtube friendly */
+  // wistia and youtube friendly
   .wistia_embed,
   iframe {
     position: absolute;
@@ -475,7 +475,7 @@ main h3 {
   }
 }
 
-/* form / registration */
+// form / registration
 
 .registration-closed {
   background: $gym-light-page-background;
@@ -577,7 +577,7 @@ main h3 {
   }
 }
 
-/* sidebar */
+// sidebar
 
 main {
   aside {

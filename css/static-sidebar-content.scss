@@ -5,8 +5,8 @@
 
 
 /* ---
-upcoming coures / featured content
-upcoming-coures.html
+upcoming courses / featured content
+upcoming-courses.html
 --- */
 
 .catalog-content .sidebar h1 {
@@ -37,14 +37,14 @@ featured coures
 sidebar-generic.html
 --- */
 
-/* sidebar / static */
+// sidebar / static
 
 .sidebar-static {
  padding: 0 1.2em 2.6em;
  margin: 1.2em -0.8em -2em;
 }
 
-/* main content / adjustment for vertical rule */
+// main content / adjustment for vertical rule
 
 .white-panel .col-md-9  {
   padding-top: 1.2em;
@@ -56,13 +56,13 @@ sidebar-generic.html
 
 @media (min-width: 62em) {
 
-/* main content / vertical rule */
+// main content / vertical rule
 
   .white-panel .col-md-9 {
     border-right: 1px dashed $gym-gray;
   }
 
-/* sidebar / layout adjustment */
+// sidebar / layout adjustment
 
   .sidebar-static {
     padding-top: 1.2em;

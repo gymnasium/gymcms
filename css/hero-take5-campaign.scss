@@ -3,20 +3,20 @@
 @import 'variables';
 @import 'mixins';
 
-/* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
+// !override / reset/rescale Bootstrap (3) handiwork — future-friendly
 
 .hero-promo {
   position: relative;
   font-size: 16px;
 }
 
-/* structural spacing */
+// structural spacing
 
 .hero-promo .container {
   padding: 0 15px 3em;
 }
 
-/* content / art */
+// content / art
 
 .hero-content-art .slide {
   position: absolute;
@@ -34,7 +34,7 @@
   will-change: background-image;
 }
 
-/* animation: 60s ease-in-out infinite running slide-show; */
+// animation: 60s ease-in-out infinite running slide-show;
 
 #slide-1 {
   background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5019-hero.jpg");
@@ -233,7 +233,7 @@
 
 }
 
-/* content / copy */
+// content / copy
 
 .hero-content-copy {
   position: relative;
@@ -299,13 +299,13 @@
 
 }
 
-/* cta */
+// cta
 
 .hero-promo .cta {
   margin-top: 2.5rem;
 }
 
-/* !override / reset/rescale font-size adjustment */
+// !override / reset/rescale font-size adjustment
 
 .hero-promo a.gym-button-secondary {
   font-size: 105%;
@@ -315,7 +315,7 @@
   border: 2px solid $gym-white !important;
 }
 
-/* misc details */
+// misc details
 
 [hidden] {
   display: none;

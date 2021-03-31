@@ -17,14 +17,14 @@
   background-color: $gym-magenta;
 }
 
-/* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
+// !override / reset/rescale Bootstrap (3) handiwork — future-friendly
 
 .hero-promo {
   position: relative;
   font-size: 16px;
 }
 
-/* structural spacing */
+// structural spacing
 
 .hero-promo .container {
   padding: 0 30px 3em;
@@ -72,7 +72,7 @@
 
 }
 
-/* content / copy */
+// content / copy
 
 .hero-content-copy {
   padding-left: .4em;
@@ -117,13 +117,13 @@
   margin-top: 1.6rem;
 }
 
-/* cta */
+// cta
 
 .hero-promo .cta {
   margin-top: 2.5rem;
 }
 
-/* !override / reset/rescale font-size adjustment */
+// !override / reset/rescale font-size adjustment
 
 .hero-promo a.gym-button-secondary {
   font-size: 105%;
@@ -133,7 +133,7 @@
   border: 2px solid $gym-white !important;
 }
 
-/* misc details */
+// misc details
 
 [hidden] {
   display: none;

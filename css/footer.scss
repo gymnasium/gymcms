@@ -4,7 +4,7 @@
 @import 'mixins';
 
 :root {
-  /** colors **/
+  //* colors **/
   --gym-orange: $gym-orange;
   --gym-black: $gym-black;
   --gym-white: $gym-white;
@@ -13,7 +13,7 @@
   --gym-light-gray: $gym-light-gray;
   --gym-light-page-background: $gym-light-page-background;
 
-  /** typefaces */
+  //* typefaces
   --gym-font-stack: $gym-font-stack;
   --gym-font-stack-text: $gym-font-stack-text;
 }

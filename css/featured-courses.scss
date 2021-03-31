@@ -4,7 +4,7 @@
 @import "variables";
 @import "mixins";
 
-/* --- reset/rescale Bootstrap (3) handiwork --- */
+// --- reset/rescale Bootstrap (3) handiwork ---
 
 .featured-course .card-main,
 .featured-course .instructor,
@@ -12,7 +12,7 @@
   font-size: 114.2857142857143%;
 }
 
-/* --- course type(s) --- */
+// --- course type(s) ---
 .list-featured-courses {
   .design-development {
     background-color: $gym-magenta;
@@ -45,7 +45,7 @@
     text-align: left;
   }
 
-  /* --- artwork mask --- */
+  // --- artwork mask ---
   .mask {
     display: block;
     text-align: center;
@@ -61,7 +61,7 @@
   }
 }
 
-/* --- typography --- */
+// --- typography ---
 
 .list-featured-courses .featured-course header h2 {
   font: 900 1.6em/1.2 $gym-font-stack;
@@ -104,14 +104,14 @@
   font: normal 1.0625em/1.25 $gym-font-stack-text;
 }
 
-/* --- call-to-action / featured courses --- */
+// --- call-to-action / featured courses ---
 
 .about-featured-courses .cta {
   text-align: center;
   padding: 1.2em;
 }
 
-/* --- about / featured courses --- */
+// --- about / featured courses ---
 
 .about-featured-courses {
   margin: 2.2em 5% -1.8em;
@@ -126,14 +126,14 @@
 
 .about-featured-courses .description p {
   font: bold 1.6em/1.4 $gym-font-stack;
-  color: $gym-dark-gray !important; /* ! */
+  color: $gym-dark-gray !important; // !
   margin-bottom: 0;
 }
 
-/* --- typographic details --- */
+// --- typographic details ---
 
 
-/* --- card --- */
+// --- card ---
 
 .card {
   border: 1px solid $gym-gray;
@@ -164,7 +164,7 @@
 
 @include grid-support;
 
-/* --- cards (grid) --- */
+// --- cards (grid) ---
 @supports (display: grid) {
   .card {
     display: inherit;
@@ -175,20 +175,20 @@
   }
 }
 
-/* --- gym-button --- */
+// --- gym-button ---
 .section-featured-courses {
   .gym-button {
     display: inline-block;
-    width: auto !important; /* ! */
-    padding: 1em 2em !important; /* ! */
+    width: auto !important; // !
+    padding: 1em 2em !important; // !
 
     b {
-      color: $gym-white !important; /* ! */
+      color: $gym-white !important; // !
     }
   }
 }
 
-/* --- overrides --- */
+// --- overrides ---
 
 .list-featured-courses a:hover {
   border-bottom: 0 !important;
