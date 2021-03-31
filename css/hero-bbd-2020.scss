@@ -3,7 +3,7 @@
 @import 'variables';
 @import 'mixins';
 
-/* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
+// !override / reset/rescale Bootstrap (3) handiwork — future-friendly
 
 .hero-promo {
   font-size: 16px;
@@ -11,7 +11,7 @@
   background-image: linear-gradient(to top, #00aeef 0%, #007fae 99%, #007fae 100%);
 }
 
-/* structural spacing */
+// structural spacing
 
 .hero-promo .container {
   padding: 0 30px 3em;
@@ -83,7 +83,7 @@
 
 }
 
-/* content / copy */
+// content / copy
 
 .hero-content-copy {
   padding-left: .4em;
@@ -134,7 +134,7 @@
   margin-top: 1.6rem;
 }
 
-/* cta */
+// cta
 
 .hero-promo .cta {
   margin-top: 2.5rem;
@@ -170,7 +170,7 @@
   background-color: transparent !important;
 }
 
-/* misc details */
+// misc details
 
 [hidden] {
   display: none;

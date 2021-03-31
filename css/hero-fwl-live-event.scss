@@ -101,12 +101,12 @@
 .hero-fwl-live-event .cta .gym-button  {
   display: inline-block;
   color: $gym-white;
-  width: auto !important; /* dangerous override */
+  width: auto !important; // dangerous override
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
   background: $gym-black;
-  padding: 1em 2em !important; /* dangerous override */
+  padding: 1em 2em !important; // dangerous override
   border: 2px solid $gym-white;
   border-radius: 2px;
   cursor: pointer;

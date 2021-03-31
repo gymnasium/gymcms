@@ -2,6 +2,9 @@
 ---
 @import 'variables';
 @import 'mixins';
+@import 'animations';
+
+@include sway;
 
 .all-caps {
   text-transform: uppercase;
@@ -19,11 +22,9 @@
 }
 
 @media (min-width: 48em) {
-
   .blue-beanie-day {
     overflow: hidden;
   }
-
 }
 
 .blue-beanie-day .content {
@@ -97,34 +98,6 @@
   height: auto;
   margin: 0 auto;
   animation: sway 24s cubic-bezier(0.420, 0.000, 0.580, 1.000) 5s infinite alternate;
-}
-
-@keyframes sway {
-
-  0% {
-    left: 0;
-  }
-
-  20% {
-    left: 7.5%;
-    max-width: 68%;
-  }
-
-  50% {
-    left: 0;
-    max-width: 66.666666666666667%;
-  }
-
-  80% {
-    left: -7.5%;
-    max-width: 68%;
-  }
-
-  100% {
-    left: 0;
-    max-width: 66.666666666666667%;
-  }
-
 }
 
 .blue-beanie-day .cta {

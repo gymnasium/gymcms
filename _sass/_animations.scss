@@ -1,0 +1,148 @@
+// Store animations here as mixins, and pull them into components accordingly.
+
+// Sway
+@mixin sway {
+  @keyframes sway {
+
+    0% {
+      left: 0;
+    }
+  
+    20% {
+      left: 7.5%;
+      max-width: 68%;
+    }
+  
+    50% {
+      left: 0;
+      max-width: 66.666666666666667%;
+    }
+  
+    80% {
+      left: -7.5%;
+      max-width: 68%;
+    }
+  
+    100% {
+      left: 0;
+      max-width: 66.666666666666667%;
+    }
+  }
+}
+
+
+// Color blocks
+@mixin color-blocks($orientation: vertical, $background: false) {
+  $dir1: null;
+  $dir2: null;
+  @if ($orientation == 'horizontal') {
+    $dir1: left;
+    $dir2: right;
+  } @else if ($orientation == 'vertical') {
+    $dir1: top;
+    $dir2: bottom;
+  } @else {
+    @error 'Please pass an argument of either `horizontal` or `vertical`';
+  }
+
+  @keyframes color-blocks {
+
+    0% {
+      @if ($background) {
+        background-color: #ac2142;
+      }
+      
+      border-#{$dir1}-color: $gym-magenta;
+      border-#{$dir2}-color: #7b182f;
+    }
+
+    20% {
+      @if ($background) {
+        background-color: #ac2142;
+      }
+      
+      border-#{$dir1}-color: $gym-magenta;
+      border-#{$dir2}-color: #7b182f;
+    }
+
+    35% {
+      @if ($background) {
+        background-color: #46807c;
+      }
+      
+      border-#{$dir1}-color: $gym-teal;
+      border-#{$dir2}-color: #2b4d4b;
+    }
+
+    60% {
+      @if ($background) {
+        background-color: #46807c;
+      }
+      
+      border-#{$dir1}-color: $gym-teal;
+      border-#{$dir2}-color: #2b4d4b;
+    }
+
+    75% {
+      @if ($background) {
+        background-color: #237b47;
+      }
+      
+      border-#{$dir1}-color: $gym-green;
+      border-#{$dir2}-color: #164d2d;
+    }
+
+    90% {
+      @if ($background) {
+        background-color: #237b47;
+      }
+      
+      border-#{$dir1}-color: $gym-green;
+      border-#{$dir2}-color: #164d2d;
+    }
+
+    100% {
+      @if ($background) {
+        background-color: #ac2142;
+      }
+      
+      border-#{$dir1}-color: $gym-magenta;
+      border-#{$dir2}-color: #7b182f;
+    }
+
+  }
+}
+
+
+@mixin color-background {
+  @keyframes color-background {
+
+    0% {
+      background-color: $gym-magenta;
+    }
+
+    20% {
+      background-color: $gym-magenta;
+    }
+
+    35% {
+      background-color: $gym-teal;
+    }
+
+    60% {
+      background-color: $gym-teal;
+    }
+
+    75% {
+      background-color: $gym-green;
+    }
+
+    90% {
+      background-color: $gym-green;
+    }
+
+    100% {
+      background-color: $gym-magenta;
+    }
+  }
+}

@@ -27,13 +27,13 @@
 
 }
 
-/* !override / reset/rescale Bootstrap (3) handiwork — future-friendly */
+// !override / reset/rescale Bootstrap (3) handiwork — future-friendly
 
 .hero-promo {
   font-size: 16px;
 }
 
-/* structural spacing */
+// structural spacing
 
 .hero-promo .container {
   max-width: 76em;
@@ -44,7 +44,7 @@
   margin: 1.2% 5%;
 }
 
-/* flexible images */
+// flexible images
 
 .hero-promo img {
   display: inline-block;
@@ -54,7 +54,7 @@
   vertical-align: middle;
 }
 
-/* content / art */
+// content / art
 
 .hero-promo .content-art img {
   width: 100%;
@@ -94,7 +94,7 @@
 
 }
 
-/* content / copy */
+// content / copy
 
 .hero-promo .content-copy {
   margin-left: auto;
@@ -169,13 +169,13 @@
 
 }
 
-/* cta */
+// cta
 
 .hero-promo .cta {
   margin-top: 1em;
 }
 
-/* !override / reset/rescale font-size adjustment */
+// !override / reset/rescale font-size adjustment
 
 .hero-promo .gym-button {
   width: auto !important;
@@ -184,7 +184,7 @@
   border: 2px solid $gym-white !important;
 }
 
-/* misc details */
+// misc details
 
 [hidden] {
   display: none;
