@@ -33,7 +33,7 @@
   margin-left: 0;
 }
 
-@media (min-width: 36em) {
+@include breakpoint(36em, min) {
 
 #live-coding header h2,
 #live-coding .byline,
@@ -98,7 +98,7 @@
   overflow: hidden;
 }
 
-@media (min-width: 24em) {
+@include breakpoint(24em, min) {
 
 .twitch-chat {
   display: block;
@@ -106,7 +106,7 @@
 
 }
 
-@media (min-width: 60em) {
+@include breakpoint(60em, min) {
 
 .twitch-stream {
   position: relative;

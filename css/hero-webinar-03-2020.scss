@@ -42,7 +42,7 @@
   padding: 1.5% 0 2.8em;
 }
 
-@media (min-width: 64em) {
+@include breakpoint(64em, min) {
 
   .webinar-03-2020 header {
     width: 105%;
@@ -94,7 +94,7 @@
   display: none;
 }
 
-@media (min-width: 64em) {
+@include breakpoint(64em, min) {
 
   .webinar-03-2020 {
     background-size: 2em 2em;

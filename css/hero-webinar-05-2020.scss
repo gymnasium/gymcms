@@ -18,7 +18,7 @@
   transition: all ease .5s;
 }
 
-@media (min-width: 60em) {
+@include breakpoint(60em, min) {
 
   .hero-promo-webinar {
     background-color: #666;
@@ -38,7 +38,7 @@
 
 }
 
-@media (min-width: 70em) {
+@include breakpoint(70em, min) {
 
   .hero-promo-webinar .content {
     left: -12.5%;
@@ -105,7 +105,7 @@
   transition: transform ease 1s;
 }
 
-@media (min-width: 70em) {
+@include breakpoint(70em, min) {
 
   .hero-promo-webinar {
     overflow: hidden;

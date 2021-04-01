@@ -40,7 +40,7 @@
   margin-bottom: 0;
 }
 
-@media (max-width: 34em) {
+@include breakpoint(34em, max) {
 
   .hero-promo header h1 > .no-wrap {
     white-space: normal;
@@ -149,7 +149,7 @@
 
 }
 
-@media (max-width: 30em) {
+@include breakpoint(30em, max) {
 
   .dark-mode-sketch a.gym-button-secondary {
     width: 100% !important;
@@ -185,7 +185,7 @@
 
 }
 
-@media (min-width: 80em) {
+@include breakpoint(80em, min) {
 
   .hero-promo header h1 {
     width: auto;
