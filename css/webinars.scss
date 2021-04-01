@@ -59,24 +59,6 @@
 
 // --- webinar ---
 
-// grid layout 
-
-@media (min-width: 40em) {
-
-  #featured-webinar {
-    grid-column: span 2;
-  }
-
-}
-
-@media (min-width: 64em) {
-
-  #featured-webinar {
-    grid-column: span 3;
-  }
-
-}
-
 // --- webinar--card ---
 .webinar {
   &--card {
@@ -139,7 +121,6 @@
   }
 
   // topics
-
   .design {
     border-top-color: $gym-magenta;
   }
@@ -159,6 +140,60 @@
 
 // --- featured webinar ---
 #featured-webinar {
+
+  @include breakpoint(small, min) {
+    grid-column: span 2;
+  }
+
+  @include breakpoint(58em, min) {
+    // legacy layout / fallback 
+    width: 100%;
+    margin-top: 0;
+
+    .webinar {
+      &--card {
+        display: block;
+        overflow: hidden;
+      }
+
+      &--main {
+        header {
+          float: left;
+          width: 50%;
+        }
+
+        .title {
+          font-size: 2.5em;
+        }
+      }
+
+      &--info {
+        position: relative;
+        top: .5em;
+        left: 1.6em;
+        width: 48%;
+        margin-left: 48%;
+
+        p {
+          font-size: 1.15em;
+        }
+      }
+
+      &--cta {
+        clear: both;
+      }
+    }
+
+    .short-description,
+    .datetime {
+      font-size: 1.15em;
+    }
+  }
+
+  @include breakpoint(64em, min) {
+    grid-column: span 3;
+  }
+  
   header,
   header .subhead {
     max-width: none;
@@ -199,62 +234,12 @@
     color: $gym-white;
     vertical-align: middle;
   }
-}
 
-
-
-@media (min-width: 58em) {
-
-  #featured-webinar {
-    // legacy layout / fallback 
-    width: 100%;
-    margin-top: 0;
-
-    .webinar {
-      &--card {
-        display: block;
-        overflow: hidden;
-      }
-    
-      &--main {
-        header {
-          float: left;
-          width: 50%;
-        }
-
-        .title {
-          font-size: 2.5em;
-        }
-      }
-
-      &--info {
-        position: relative;
-        top: .5em;
-        left: 1.6em;
-        width: 48%;
-        margin-left: 48%;
-
-        p {
-          font-size: 1.15em;
-        }
-      }
-    
-      &--cta {
-        clear: both;
-      }
-    }
-
-    .short-description,
-    .datetime {
-      font-size: 1.15em;
-    }
-  }
-
-  #guest-speaker-headshots {
+  @include breakpoint(58em, min) {
     figcaption {
       font-size: 1.15em;
     }
-
+  
     img {
       width: 5.5em;
     }
@@ -284,34 +269,34 @@
 }
 
 // main / article
-main.content {
-  display: block;
-  max-width: 72em;
-  background: $gym-white;
-  border-right: 1px solid $gym-gray;
-  border-left: 1px solid $gym-gray;
-  margin: 0 auto;
-  overflow: hidden;
-}
 
-main article {
-  padding: 2.2em;
-  box-sizing: border-box;
-}
-
-@media (min-width: 60em) {
-
-main article {
-  float: left;
-  width: 75%;
+main {
+  &.content {
+    display: block;
+    max-width: 72em;
+    background: $gym-white;
+    border-right: 1px solid $gym-gray;
+    border-left: 1px solid $gym-gray;
+    margin: 0 auto;
+    overflow: hidden;
   }
-}
 
-// typographic style / basic
-main h1,
-main h2,
-main h3 {
-  letter-spacing: .02em;
+  article {
+    padding: 2.2em;
+    box-sizing: border-box;
+  
+    @include breakpoint(60em, min) {
+      float: left;
+      width: 75%;
+    }
+  }
+
+  // typographic style / basic
+  h1,
+  h2,
+  h3 {
+    letter-spacing: .02em;
+  }
 }
 
 .main-header {
@@ -337,6 +322,10 @@ main h3 {
   margin-left: -.3em;
   margin-bottom: 1.3em;
 
+  @include breakpoint(39em, min) {
+    margin-bottom: 2em;
+  }
+
   h1,
   h2 {
     display: inline-block;
@@ -353,14 +342,6 @@ main h3 {
     padding-top: .21em;
     padding-bottom: .1em;
   }
-}
-
-@media (min-width: 39em) {
-
-  .event-header {
-    margin-bottom: 2em;
-  }
-
 }
 
 .webinar-content {
@@ -380,19 +361,6 @@ main h3 {
     }
   }
 }
-
-#main p.call-out {
-  font: normal 1.4em/1.5 $gym-font-stack;
-}
-
-@media (min-width: 36em) {
-
-  #main p.call-out {
-    font-size: 1.6em;
-    line-height: 1.4;
-  }
-}
-
 // event banner hero / title, speaker(s), datetime
 
 .event-banner-hero {
@@ -401,6 +369,15 @@ main h3 {
 }
 
 #main {
+  p.call-out {
+    font: normal 1.4em/1.5 $gym-font-stack;
+
+    @include breakpoint(36em, min) {
+      font-size: 1.6em;
+      line-height: 1.4;
+    }
+  }
+
   .event-banner-hero {
     h1 {
       font-weight: 900;
@@ -571,7 +548,7 @@ main h3 {
   }
 }
 
-@media (max-width: 32em) {
+@include breakpoint(32em,max) {
   #main .event-form button.gym-button {
     width: 100%;
   }
@@ -584,6 +561,19 @@ main {
     padding: 2.2em 2.2em 0;
     border-top: 1px dashed $gym-gray;
     box-sizing: border-box;
+
+    @include breakpoint(60em, min) {
+      float: right;
+      width: 25%;
+      padding: 1.6em;
+      border-top: 0;
+      border-left: 1px dashed $gym-gray;
+      margin-left: -1px;
+  
+      header {
+        padding-top: 1.2em;
+      }
+    }
 
     header {
       padding-bottom: 2em;
@@ -600,22 +590,6 @@ main {
     @at-root #main aside h1 {
       font: 900 1.6em/1.1 $gym-font-stack;
       text-transform: uppercase;
-    }
-  }
-}
-
-@media (min-width: 60em) {
-
-  main aside {
-    float: right;
-    width: 25%;
-    padding: 1.6em;
-    border-top: 0;
-    border-left: 1px dashed $gym-gray;
-    margin-left: -1px;
-
-    header {
-      padding-top: 1.2em;
     }
   }
 }

@@ -34,7 +34,7 @@
   display: none;
 }
 
-@media (min-width: 62em) {
+@include breakpoint(medium, min) {
 
   .hero-promo .container {
     position: relative;

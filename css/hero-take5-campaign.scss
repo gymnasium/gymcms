@@ -132,7 +132,7 @@
   margin-top: 1.6rem;
 }
 
-@media (min-width: 62em) {
+@include breakpoint(medium, min) {
 
   .hero-promo .container {
     position: relative;

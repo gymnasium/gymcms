@@ -37,34 +37,34 @@
   margin-bottom: 2em;
   margin-left: auto;
   margin-right: auto;
-}
 
-.hero-promo header h1 {
-  font-family: "Open Sans", $gym-font-stack-text;
-  font-weight: bold;
-  font-size: 3.428571428571429em;
-  line-height: 1.12;
-  color: #333;
-  letter-spacing: 0;
-  word-spacing: -.015em;
-  margin-top: -.125em;
-  margin-bottom: -.125em;
-}
+  h1 {
+    font-family: "Open Sans", $gym-font-stack-text;
+    font-weight: bold;
+    font-size: 3.428571428571429em;
+    line-height: 1.12;
+    color: #333;
+    letter-spacing: 0;
+    word-spacing: -.015em;
+    margin-top: -.125em;
+    margin-bottom: -.125em;
 
-.hero-promo header h1::after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 0;
-  padding-bottom: 50%;
-  background-color: #e5e2d3;
-  background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-1000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin-top: .5em;
-  margin-bottom: .5em;
-  transition: padding-bottom .25s ease-in-out;
+    &::after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 0;
+      padding-bottom: 50%;
+      background-color: #e5e2d3;
+      background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-1000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin-top: .5em;
+      margin-bottom: .5em;
+      transition: padding-bottom .25s ease-in-out;
+    }
+  }
 }
 
 .hero-promo .content .date {
@@ -90,7 +90,7 @@
   margin-top: 2em;
 }
 
-@media (min-width: 36em) {
+@include breakpoint(36em, min) {
 
   #hero-dfg-2019 {
     padding-top: 1.75em;
@@ -104,7 +104,7 @@
 }
 
 
-@media (min-width: 48em) {
+@include breakpoint(48em, min) {
 
   #hero-dfg-2019 {
     background-color: #dcd2b9;
@@ -132,7 +132,7 @@
 
 }
 
-@media (min-width: 76em) {
+@include breakpoint(76em, min) {
 
   .hero-promo header {
     background-color: rgba(255, 255, 255, .7);

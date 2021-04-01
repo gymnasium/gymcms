@@ -57,10 +57,8 @@
   
   .resources {
     clear: left;
-  }
-  
-  @media (min-width: 62em) {
-    .resources {
+
+    @include breakpoint(medium, min) {
       clear: none;
     }
   }

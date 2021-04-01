@@ -38,7 +38,7 @@
   white-space: nowrap;
 }
 
-@media (min-width: 40em) {
+@include breakpoint(small, min) {
 
   .header-live-event .group {
     display: block;

@@ -68,7 +68,7 @@ sidebar-generic.html
   margin-bottom: -2em;
 }
 
-@media (min-width: 62em) {
+@include breakpoint(medium, min) {
   // main content / vertical rule
 
   .white-panel .col-md-9 {

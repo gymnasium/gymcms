@@ -111,7 +111,7 @@ a.gym-button-shrink-wrap {
   padding: 1.2em 2.2em !important;
 }
 
-@media (min-width: 48em) {
+@include breakpoint(48em, min) {
 
   .hero-promo {
     background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-gym-014/bg-pattern-lab-wide.png");

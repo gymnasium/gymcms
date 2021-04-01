@@ -46,7 +46,7 @@ img.hero-dfg {
   border-bottom: none;
 }
 
-@media (min-width: 48em) {
+@include breakpoint(48em, min) {
 
   .promo-dfg {
     padding-bottom: 33%;

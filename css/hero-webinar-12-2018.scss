@@ -58,7 +58,7 @@
   margin-bottom: 0;
 }
 
-@media (min-width: 32em) {
+@include breakpoint(32em, min) {
 
   .webinar-12-2018 header h1,
   .webinar-12-2018 header h2,
@@ -101,7 +101,7 @@
   margin-top: 1.6em;
 }
 
-@media (min-width: 32em) {
+@include breakpoint(32em, min) {
 
   .webinar-12-2018 .cta {
     text-align: center;

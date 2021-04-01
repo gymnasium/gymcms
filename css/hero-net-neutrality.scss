@@ -42,7 +42,7 @@
 }
 
 
-@media (min-width: 48em) {
+@include breakpoint(48em, min) {
 
 .header-net-neutrality .all-caps {
   font-size: 1.6em;

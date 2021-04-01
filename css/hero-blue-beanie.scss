@@ -68,7 +68,7 @@
   transform: rotate(10deg);
 }
 
-@media (min-width: 62em) {
+@include breakpoint(medium, min) {
 
   .header-blue-beanie .group {
     display: block;

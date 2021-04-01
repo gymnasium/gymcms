@@ -70,7 +70,7 @@
   margin-top: 2em;
 }
 
-@media (min-width: 36em) {
+@include breakpoint(36em, min) {
 
   #hero-dfg-2020 {
     padding-top: 1.75em;
@@ -83,7 +83,7 @@
 
 }
 
-@media (min-width: 48em) {
+@include breakpoint(48em, min) {
 
   #hero-dfg-2020 {
     background: #825a43 no-repeat center center / cover;

@@ -94,7 +94,7 @@
   display: none;
 }
 
-@media (min-width: 75em) {
+@include breakpoint(large, min) {
 
   .webinar-05-2019 .process {
     display: block;
