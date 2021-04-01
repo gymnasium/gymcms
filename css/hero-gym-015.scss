@@ -74,7 +74,7 @@
 
 }
 
-@media (min-width: 60em) {
+@include breakpoint(60em, min) {
 
   .hero-promo .content-art {
     margin-left: 2%;
@@ -82,7 +82,7 @@
 
 }
 
-@media (min-width: 80em) {
+@include breakpoint(80em, min) {
 
   .hero-promo .content-art {
     margin-left: 6%;

@@ -468,16 +468,15 @@ footer.card-cta {
 
 }
 
-@media (min-width: 58em) {
 
+@include breakpoint(58em, min) {
   .cols ul li {
     width: 50%;
   }
-
 }
 
-@media (min-width: 64em) {
 
+@include breakpoint(64em, min) {
   .cols ul li {
     width: 33.333333333333333%;
   }
@@ -493,7 +492,7 @@ footer.card-cta {
     grid-gap: 1.2em;
   }
 
-  @media (min-width: 36em) {
+  @include breakpoint(36em, min) {
 
     .cols-max-2 ul {
       grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));

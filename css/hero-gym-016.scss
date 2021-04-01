@@ -42,7 +42,7 @@
   }
 }
 
-@media (min-width: 62.5em) {
+@include breakpoint(62.5em, min) {
 
   .hero-promo .content {
     padding: 0 15px 45px;

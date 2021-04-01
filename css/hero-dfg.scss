@@ -68,7 +68,7 @@ img.hero-dfg {
 
 }
 
-@media (min-width: 58em) {
+@include breakpoint(58em, min) {
 
   .promo-dfg .cta {
     bottom: 23%;

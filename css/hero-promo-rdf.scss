@@ -89,7 +89,7 @@
   vertical-align: baseline;
 }
 
-@media (min-width: 28em) {
+@include breakpoint(28em, min) {
 
   .hero-promo-rdf .container {
     width: 90%;
@@ -140,7 +140,7 @@
 
 }
 
-@media (min-width: 54em) {
+@include breakpoint(54em, min) {
 
   .hero-promo-rdf .course-artwork img {
     max-width: 85%;
@@ -156,7 +156,7 @@
 
 }
 
-@media (min-width: 60em) {
+@include breakpoint(60em, min) {
 
   .hero-promo-rdf {
     overflow: hidden;
