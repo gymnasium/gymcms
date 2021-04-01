@@ -1,3 +1,76 @@
+@import 'variables';
+@import 'functions';
+
+/* Breakpoints
+  via @https://rimdev.io/making-media-query-mixins-with-sass/
+  modified with to always convert px values to em
+
+  Example usage:
+
+    @include breakpoint(landscape, orientation) {}
+    @include breakpoint(small, min) {}
+
+    Use pixel values
+    @include breakpoint(320px, min) {}
+
+    Nest rules to combine them:
+    @include breakpoint(small, min) {
+      @include breakpoint(large, max) {}
+    }
+
+*/
+@mixin breakpoint($breakpoint, $feature) {
+  @if map-has-key($breakpoints, $breakpoint) {
+
+    // Get the breakpoint value from the map…
+    $value: map-get($breakpoints, $breakpoint);
+
+    // If we have a pixel value, let's convert it to em
+    @if (ends-with($value, 'px')) {
+      $value: font-calc($value, em);
+    }
+    
+    @if ($feature == max) {
+      // subtract 1px from the max width
+      @media (max-width: ($value - font-calc(1, em))) {
+        @content;
+      }
+    } @else if ($feature == min) {
+      @media (min-width: $value) {
+        @content;
+      }
+    } @else {
+      @media ($feature: $value) {
+        @content;
+      }
+    }
+  
+  // If the breakpoint does not exist in the map…
+  // Use this to spit out `landscape` or `portrait` or whatever other type of media query.
+  } @else {
+    // If we have a pixel value, let's convert it to em
+    @if (ends-with($breakpoint, 'px')) {
+      $breakpoint: font-calc($breakpoint, em);
+      @debug $breakpoint;
+    }
+
+    @if $feature == max {
+      // subtract 1px from the max width
+      @media (max-width: ($breakpoint - font-calc(1, em))) {
+        @content;
+      }
+    } @else if $feature == min {
+      @media (min-width: $breakpoint) {
+        @content;
+      }
+    } @else {
+      @media ($feature: $breakpoint) {
+        @content;
+      }
+    }
+  }
+}
+
 @mixin initial-resets {
 
   // --- !override / reset / all initial ---

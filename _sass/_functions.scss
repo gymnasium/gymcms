@@ -1,0 +1,36 @@
+// Does a string end with __?
+@function ends-with($string, $find) {
+  // Firstly, ensure we're dealing with a string (in case numbers are passed in)
+  $string: '#{$string}';
+
+  @if (str-slice($string, (str-length($string) - str-length($find) + 1)) == $find) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+/* Convert pixels to em or rem 
+  via @https://css-tricks.com/snippets/sass/px-to-em-functions/
+  modified to support em or rem output
+  defaults to rem
+  base font size 16px
+*/
+@function font-calc($pixels, $unit: rem, $context: 16) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  $base-unit: 1rem;
+  @if $unit == 'em' {
+    $base-unit: 1em;
+  }
+
+  @return $pixels / $context * $base-unit;
+}
+
+

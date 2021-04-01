@@ -10,86 +10,85 @@
   position: relative;
   font-size: 16px;
   background-color: #2c2c2c;
-}
 
-// structural spacing
+  // structural spacing
+  .container {
+    background-color: inherit;
+    padding: 1.75em 30px 3.125em;
+  }
 
-.hero-promo .container {
-  background-color: inherit;
-  padding: 1.75em 30px 3.125em;
-}
+  @include breakpoint(medium, max) {
+    &:before {
+      display: block;
+      content: "";
+      height: 100%;
+      background-color: #ac2142;
+      border-top: 2.5em solid $gym-magenta;
+      border-bottom: 1.25em solid #7b182f;
+      padding-top: 1.875em;
+      animation: 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
+      animation-name: color-blocks;
+    }
 
-@media (min-width: 32em) and (max-width: 62em) {
-
-  .hero-content-copy .description {
-    width: 95%;
+    .container {
+      max-width: 32em;
+    }
   }
 }
 
-@media (max-width: 62em) {
 
-  .hero-promo:before {
-    display: block;
-    content: "";
-    height: 100%;
-    background-color: #ac2142;
-    border-top: 2.5em solid $gym-magenta;
-    border-bottom: 1.25em solid #7b182f;
-    padding-top: 1.875em;
-    animation: 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
-    animation-name: color-blocks;
+@include breakpoint(32em, min) {
+  @include breakpoint(large, max) {
+    .hero-content-copy .description {
+      width: 95%;
+    }
   }
+}
 
-  .hero-promo .container {
-    max-width: 32em;
-  }
-
+@include breakpoint(medium, max) {
   @include color-blocks($orientation: vertical, $background: true);
-
 }
 
-@media (min-width: 62em) {
+@include breakpoint(medium, min) {
+  .hero-promo {
+    .container {
+      background-color: #2c2c2c;
+      padding-top: 2.75em;
+      padding-bottom: 4.125em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      left: 1.5em;
+      max-width: 54.5em;
+      min-height: 27em;
 
-  .hero-promo .container {
-    background-color: #2c2c2c;
-    padding-top: 2.75em;
-    padding-bottom: 4.125em;
-  }
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-left: 6em solid #ac2142;
+        border-right: 4em solid #7b182f;
+        animation: 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
+        animation-name: color-blocks;
+      }
+    }
 
-  .hero-promo:before {
-    display: block;
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background-color: $gym-magenta;
-    animation: 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
-    animation-name: color-background;
-  }
-
-  .hero-promo .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: 1.5em;
-    max-width: 54.5em;
-    min-height: 27em;
-  }
-
-  .hero-promo .container:after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    border-left: 6em solid #ac2142;
-    border-right: 4em solid #7b182f;
-    animation: 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
-    animation-name: color-blocks;
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background-color: $gym-magenta;
+      animation: 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
+      animation-name: color-background;
+    }
   }
 
   .hero-content-copy {
@@ -99,7 +98,6 @@
   @include color-background;
 
   @include color-blocks($orientation: horizontal, $background: false);
-
 }
 
 // content / copy
