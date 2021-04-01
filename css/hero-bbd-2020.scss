@@ -36,7 +36,7 @@
   height: auto;
 }
 
-@media (min-width: 62em) {
+@include breakpoint(medium, min) {
 
   .hero-promo .container {
     position: relative;
@@ -74,7 +74,7 @@
 
 }
 
-@media (min-width: 75em) {
+@include breakpoint(large, min) {
 
   .bbd-gym-016 .hero-content-art picture,
   .bbd-accessibility .hero-content-art picture {
@@ -184,7 +184,7 @@
   display: inline-block;
 }
 
-@media (min-width: 36em) {
+@include breakpoint(36em, min) {
 
   .no-wrap {
     white-space: nowrap;

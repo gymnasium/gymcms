@@ -37,7 +37,7 @@
 }
 
 
-@media (min-width: 62em) {
+@include breakpoint(medium, min) {
 
   .main-content-static .w-75 {
     width: 75%;

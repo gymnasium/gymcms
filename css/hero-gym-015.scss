@@ -15,7 +15,7 @@
   )
 }
 
-@media (min-width: 62em) {
+@include breakpoint(medium, min) {
 
   #hero-gym-015 {
     background: radial-gradient(
@@ -61,7 +61,7 @@
   color: $gym-black;
 }
 
-@media (min-width: 40em) {
+@include breakpoint(small, min) {
 
   .hero-promo .content-art {
     float: left;
@@ -131,7 +131,7 @@
   margin-top: .75em;
 }
 
-@media (min-width: 40em) {
+@include breakpoint(small, min) {
 
   .hero-promo .content-copy {
     max-width: none;
@@ -152,7 +152,7 @@
 
 }
 
-@media (min-width: 62em) {
+@include breakpoint(medium, min) {
 
   .hero-promo .content-copy {
     clear: none;
@@ -160,7 +160,7 @@
 
 }
 
-@media (min-width: 75em) {
+@include breakpoint(large, min) {
 
   .hero-promo header h2 {
     font-size: 2.5em;

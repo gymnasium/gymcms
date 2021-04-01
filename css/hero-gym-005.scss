@@ -90,7 +90,7 @@
 }
 
 
-@media (min-width: 48em) {
+@include breakpoint(48em, min) {
 
   .hero-promo .container {
     padding: 1.2em 0 2.8em;
@@ -161,7 +161,7 @@
   margin-top: 1.2em;
 }
 
-@media (min-width: 48em) {
+@include breakpoint(48em, min) {
 
   .hero-promo header {
     overflow: hidden;

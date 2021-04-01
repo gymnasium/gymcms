@@ -119,7 +119,7 @@
 
 }
 
-@media (min-width: 48em) {
+@include breakpoint(48em, min) {
 
   .hero-promo-rdf .course-artwork {
     width: 41%;

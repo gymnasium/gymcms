@@ -261,8 +261,7 @@ main h3 {
     padding-top: 1.6em;
   }
 
-  @media (min-width: 62em), (min-width: 992px) {
-
+  @include breakpoint(62em,min) {
     &--hero-content .col-md-4 + .col-md-8 {
       float: right;
       padding-top: 0;
@@ -271,7 +270,6 @@ main h3 {
     &--featured {
       margin-right: 1.2em;
     }
-  
   }
 
   &--featured {
@@ -322,7 +320,7 @@ main h3 {
     margin-top: 0;
   }
 
-  @media (max-width: 62em) {
+  @include breakpoint(medium, max) {
 
     &--resources {
       padding-top: 1.4em;
@@ -535,7 +533,7 @@ details.take5--transcript {
   }
 }
 
-@media (max-width: 48em), (max-width: 991px) {
+@include breakpoint(48em, max) {
 
   .take5--hero-content .take5--resources,
   #tutorial-topics {
@@ -547,7 +545,7 @@ details.take5--transcript {
   }
 }
 
-@media (min-width: 62em), (min-width: 992px) {
+@include breakpoint(medium, min) {
 
   .take5--main .col-md-4 {
     float: right;

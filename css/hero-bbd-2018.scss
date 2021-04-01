@@ -21,7 +21,7 @@
   padding-bottom: 15px;
 }
 
-@media (min-width: 48em) {
+@include breakpoint(48em, min) {
   .blue-beanie-day {
     overflow: hidden;
   }

@@ -55,7 +55,7 @@ a.gym-button-shrink-wrap {
   padding-bottom: 70%;
 }
 
-@media (min-width: 32em) {
+@include breakpoint(32em, min) {
 
   .hero-promo {
     padding: 2.5em 5%;

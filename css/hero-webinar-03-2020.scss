@@ -113,7 +113,7 @@
 
 }
 
-@media (min-width: 75em) {
+@include breakpoint(large, min) {
 
   .webinar-03-2020::before {
     position: absolute;

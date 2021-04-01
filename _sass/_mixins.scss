@@ -51,7 +51,6 @@
     // If we have a pixel value, let's convert it to em
     @if (ends-with($breakpoint, 'px')) {
       $breakpoint: font-calc($breakpoint, em);
-      @debug $breakpoint;
     }
 
     @if $feature == max {
