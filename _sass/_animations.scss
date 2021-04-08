@@ -1,0 +1,249 @@
+// Store animations here as mixins, and pull them into components accordingly.
+
+// Sway
+@mixin sway {
+  @keyframes sway {
+
+    0% {
+      left: 0;
+    }
+  
+    20% {
+      left: 7.5%;
+      max-width: 68%;
+    }
+  
+    50% {
+      left: 0;
+      max-width: 66.666666666666667%;
+    }
+  
+    80% {
+      left: -7.5%;
+      max-width: 68%;
+    }
+  
+    100% {
+      left: 0;
+      max-width: 66.666666666666667%;
+    }
+  }
+}
+
+
+// Color blocks (accepts arguments for vertical or horizontal borders)
+@mixin color-blocks($orientation: vertical, $background: false) {
+  $dir1: null;
+  $dir2: null;
+  @if ($orientation == 'horizontal') {
+    $dir1: left;
+    $dir2: right;
+  } @else if ($orientation == 'vertical') {
+    $dir1: top;
+    $dir2: bottom;
+  } @else {
+    @error 'Please pass an argument of either `horizontal` or `vertical`';
+  }
+
+  @keyframes color-blocks {
+
+    0% {
+      @if ($background) {
+        background-color: #ac2142;
+      }
+      
+      border-#{$dir1}-color: $gym-magenta;
+      border-#{$dir2}-color: #7b182f;
+    }
+
+    20% {
+      @if ($background) {
+        background-color: #ac2142;
+      }
+      
+      border-#{$dir1}-color: $gym-magenta;
+      border-#{$dir2}-color: #7b182f;
+    }
+
+    35% {
+      @if ($background) {
+        background-color: #46807c;
+      }
+      
+      border-#{$dir1}-color: $gym-teal;
+      border-#{$dir2}-color: #2b4d4b;
+    }
+
+    60% {
+      @if ($background) {
+        background-color: #46807c;
+      }
+      
+      border-#{$dir1}-color: $gym-teal;
+      border-#{$dir2}-color: #2b4d4b;
+    }
+
+    75% {
+      @if ($background) {
+        background-color: #237b47;
+      }
+      
+      border-#{$dir1}-color: $gym-green;
+      border-#{$dir2}-color: #164d2d;
+    }
+
+    90% {
+      @if ($background) {
+        background-color: #237b47;
+      }
+      
+      border-#{$dir1}-color: $gym-green;
+      border-#{$dir2}-color: #164d2d;
+    }
+
+    100% {
+      @if ($background) {
+        background-color: #ac2142;
+      }
+      
+      border-#{$dir1}-color: $gym-magenta;
+      border-#{$dir2}-color: #7b182f;
+    }
+  }
+}
+
+
+@mixin color-background {
+  @keyframes color-background {
+
+    0% {
+      background-color: $gym-magenta;
+    }
+
+    20% {
+      background-color: $gym-magenta;
+    }
+
+    35% {
+      background-color: $gym-teal;
+    }
+
+    60% {
+      background-color: $gym-teal;
+    }
+
+    75% {
+      background-color: $gym-green;
+    }
+
+    90% {
+      background-color: $gym-green;
+    }
+
+    100% {
+      background-color: $gym-magenta;
+    }
+  }
+}
+
+
+
+@mixin ebb-flow {
+  @keyframes ebb-flow {
+
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+// Fades animation
+@mixin fades {
+  @for $n from 1 through 5 {
+    @keyframes fade-#{$n} {
+      $counter: 0;
+
+      @for $i from 0 through 100 {
+        @if ($i % 20 == 0) {
+          // increment our counter only every 20 steps
+          $counter: $counter + 1;
+
+          // Render percentage (keyframe step)
+          #{$i}% {
+
+            // If the counter matches $n, set opacity to 1
+            @if $n == $counter {
+              opacity: 1;
+
+            } @else {
+              opacity: 0;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@mixin image-fade {
+  @keyframes image-fade {
+
+    0% {
+      background: $gym-green url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-64px.png") no-repeat center center;
+    }
+  
+    20% {
+      background: $gym-green url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-48px.png") no-repeat center center;
+    }
+  
+    40% {
+      background: $gym-green url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-48px.png") no-repeat center center;
+    }
+  
+    60% {
+      background: $gym-green url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
+      opacity: 1;
+    }
+  
+    80% {
+      background: $gym-green url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
+      opacity: .5;
+    }
+  
+    100% {
+      background: $gym-green url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w-32px.png") no-repeat center center;
+      opacity: 0;
+    }
+  }
+}
+
+@mixin orbit {
+  @keyframes orbit {
+    from {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: rotate(0deg) translateX(7.5em) translateY(-5.5em) rotate(0deg);
+    }
+    to {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: rotate(360deg) translateX(7.5em) translateY(-5.5em) rotate(-360deg);
+    }
+  }
+}
