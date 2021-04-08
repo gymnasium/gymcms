@@ -1,0 +1,27 @@
+// Colors
+$gym-orange: #f8971d;
+$gym-black: #222;
+$gym-white: #fff;
+$gym-gray: #ccc;
+$gym-gray-2: adjust-color($gym-gray, $lightness: 6.66%); // example: outputs #ddd, might as well hard-code this here
+$gym-dark-gray: #444;
+$gym-light-gray: #a6a6a6;
+$gym-light-page-background: #ebebeb;
+
+// Fancy colors
+$gym-green: #2c9959;
+$gym-magenta: #d73158;
+$gym-purple: #764c9f;
+$gym-teal: #5ca5a0;
+
+// Fonts
+$gym-font-stack: brandon-grotesque, 'Helvetica Neue', Helvetica, sans-serif;
+$gym-font-stack-text: 'Helvetica Neue', Helvetica, sans-serif;
+
+// A map of (commonly used) breakpoints.
+// TODO: we have a lot of other breakpoints specified in our CSS - maybe we can work to combine/reduce some of these rules
+$breakpoints: (
+  small: 640px, // 40em
+  medium: 992px, // 62em
+  large: 1200px // 75em
+);

@@ -1,0 +1,123 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+@import 'animations';
+
+@include sway;
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.blue-beanie-day {
+  background-color: #00aeef;
+  background-image: linear-gradient(to top, #00aeef 0%, #007fae 99%, #007fae 100%);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@include breakpoint(48em, min) {
+  .blue-beanie-day {
+    overflow: hidden;
+  }
+}
+
+.blue-beanie-day .content {
+  font-size: 114.2857142857143%;
+}
+
+.blue-beanie-day header {
+  position: relative;
+  z-index: 1;
+  padding-top: 15px;
+}
+
+.blue-beanie-day header h1,
+.blue-beanie-day header h2,
+.blue-beanie-day header p {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.blue-beanie-day header h1 {
+  font-size: 2.25em;
+  color: $gym-white;
+}
+
+.blue-beanie-day header h2 {
+  font: 900 1.6em/1.4 $gym-font-stack;
+  color: $gym-black;
+  letter-spacing: .05em;
+}
+
+.blue-beanie-day header s {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+.blue-beanie-day header s:after {
+  display: inline-block;
+  position: absolute;
+  top: 54%;
+  left: -11.5%;
+  content: "";
+  width: 120%;
+  border-top: .15em solid $gym-orange;
+  margin-top: -.15em;
+  transform: rotate(10deg);
+}
+
+.blue-beanie-day header p {
+  font: normal 1em/1.4 $gym-font-stack-text;
+  color: $gym-black;
+  margin: 1.2em;
+}
+
+#blue-beanie-gang {
+  position: relative;
+  top: 0;
+  z-index: -1;
+  display: block;
+  height: 0;
+  padding-bottom: 28.75%;
+  margin: 1em auto 0;
+}
+
+#blue-beanie-gang img {
+  display: block;
+  position: relative;
+  width: auto;
+  max-width: 66.666666666666667%;
+  height: auto;
+  margin: 0 auto;
+  animation: sway 24s cubic-bezier(0.420, 0.000, 0.580, 1.000) 5s infinite alternate;
+}
+
+.blue-beanie-day .cta {
+  text-align: center;
+  margin-top: 1.6em;
+}
+
+.blue-beanie-day a.gym-button-secondary {
+  width: auto;
+  color: $gym-black !important;
+  background-color: #00aeef !important;
+  border: 2px solid $gym-black !important;
+  padding: 1.2em 1.6em !important;
+  vertical-align: bottom;
+}
+
+a.gym-button-secondary:hover,
+a.gym-button-secondary:focus,
+a.gym-button-secondary:active {
+  color: $gym-white !important;
+  background-color: transparent !important;
+  border: 2px solid $gym-white !important;
+}

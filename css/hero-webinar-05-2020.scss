@@ -1,0 +1,163 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+.hero-promo-webinar {
+  position: relative;
+  font-size: 16px;
+  background-color: $gym-magenta;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: background-color ease .5s;
+}
+
+.hero-promo-webinar .content {
+  max-width: 48em;
+  padding: .6em 5.25%;
+  transition: all ease .5s;
+}
+
+@include breakpoint(60em, min) {
+
+  .hero-promo-webinar {
+    background-color: #666;
+  }
+
+  .hero-promo-webinar .content {
+    position: relative;
+    top: 1em;
+    background-color: $gym-magenta;
+    padding: 1.6em 5.25% 1.4em;
+    border: 1.8em solid #181818;
+    border-bottom: 0;
+    border-radius: 1em 1em 0 0;
+    margin: 0 auto;
+    z-index: 0;
+  }
+
+}
+
+@include breakpoint(70em, min) {
+
+  .hero-promo-webinar .content {
+    left: -12.5%;
+  }
+
+}
+
+.hero-promo-webinar article {
+  padding: 0 0 2.8em;
+}
+
+.hero-promo-webinar header h2,
+.hero-promo-webinar header h3,
+.hero-promo-webinar header p {
+  color: $gym-black;
+}
+
+.hero-promo-webinar header h1 {
+  font-size: 2.5em;
+  color: $gym-white;
+  margin-top: .45em;
+  margin-bottom: .45em;
+}
+
+.hero-promo-webinar header h2,
+.hero-promo-webinar header h3 {
+  font: 900 1.6em/1.25 $gym-font-stack;
+  letter-spacing: .05em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero-promo-webinar header p {
+  max-width: 28em;
+  font: normal 1.15em/1.35 $gym-font-stack-text;
+  margin-top: 1.4em;
+}
+
+.hero-promo-webinar img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.hero-promo-webinar .all-caps {
+  text-transform: uppercase;
+}
+
+.hero-promo-webinar .break {
+  display: block;
+}
+
+.hero-promo-webinar .no-wrap {
+  white-space: nowrap;
+}
+
+.hero-promo-webinar .content::before,
+.hero-promo-webinar .content::after {
+  position: absolute;
+  transform: translateY(100em);
+  content: "";
+  z-index: 1;
+  transition: transform ease 1s;
+}
+
+@include breakpoint(70em, min) {
+
+  .hero-promo-webinar {
+    overflow: hidden;
+  }
+
+  .hero-promo-webinar .content::before,
+  .hero-promo-webinar .content::after {
+    transform: translateY(0);
+  }
+
+  .hero-promo-webinar .content::before {
+    bottom: -.8em;
+    left: -13.25em;
+    width: 14.75em;
+    height: 22.75em;
+    background: $gym-white no-repeat center center / cover;
+    background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-05-2020/ala-306-rwd-2010-20-720w.png");
+    border: .8em solid $gym-black;
+    border-top-width: 1.4em;
+    border-radius: .8em;
+  }
+
+  .hero-promo-webinar .content::after {
+    bottom: -1.4em;
+    right: -31.5em;
+    width: 36.375em;
+    height: 26.375em;
+    background: $gym-white no-repeat center left / cover;
+    background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-webinar-05-2020/ethanmarcotte-2020-1080w.jpg");
+    border: 1.4em solid $gym-black;
+    border-top-width: 1.8em;
+    border-radius: 1em;
+  }
+
+}
+
+.hero-promo-webinar .cta {
+  margin-top: 1.6em;
+}
+
+.hero-promo-webinar a.gym-button-secondary {
+  font-size: 105%;
+  width: auto;
+  color: $gym-white !important;
+  border: 2px solid $gym-white !important;
+  padding: 1.2em 2em !important;
+  vertical-align: bottom;
+}
+
+.hero-promo-webinar a.gym-button-secondary:hover,
+.hero-promo-webinar a.gym-button-secondary:focus,
+.hero-promo-webinar a.gym-button-secondary:active {
+  color: $gym-white !important;
+  border: 2px solid $gym-white !important;
+}
