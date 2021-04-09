@@ -52,7 +52,7 @@
   }
   
   p {
-    font: normal 1.25em/1.45 $gym-font-stack-text;
+    font: normal 1.25em/1.45 $gym-text-font-stack;
     margin-top: .6em;
   }
 }
@@ -230,7 +230,7 @@
   }
   
   figcaption {
-    font: bold 1em/1.25 $gym-font-stack-text;
+    font: bold 1em/1.25 $gym-text-font-stack;
     color: $gym-white;
     vertical-align: middle;
   }
@@ -346,7 +346,7 @@ main {
 
 .webinar-content {
   p {
-    font: normal 1em/1.5 $gym-font-stack-text;
+    font: normal 1em/1.5 $gym-text-font-stack;
     margin-top: 1em;
     margin-bottom: 1em;
   }
@@ -523,7 +523,7 @@ main {
   .optional {
     display: block;
     width: 100%;
-    font: normal 1em/1.15 $gym-font-stack-text;
+    font: normal 1em/1.15 $gym-text-font-stack;
     background: none;
     padding: .5em;
     border: 1px solid $gym-gray;
