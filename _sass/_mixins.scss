@@ -192,7 +192,7 @@
 
     // paragraphs
     p {
-      font: normal 1.15em/1.45 $gym-font-stack-text;
+      font: normal 1.15em/1.45 $gym-text-font-stack;
       margin-top: 1em;
       margin-bottom: 0;
     }
@@ -241,8 +241,8 @@
   // --- legacy columns (inline-block) w/ breakpoints
   .cols > ul {
     list-style: none;
-    padding-top: 1.2em;
-    padding-bottom: 1.2em;
+    padding-top: 0;
+    padding-bottom: 0;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -315,6 +315,14 @@
       .cols > ul {
         grid-template-columns: repeat(auto-fit, minmax(19.25em, 1fr));
       }
+
+      .cols-max-2 ul {
+        grid-template-columns: repeat(auto-fill, minmax(24em, 1fr));
+      }
+  
+      .cols-max-3 ul {
+        grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+      }
     }
 
     @media (min-width: 62em) {
@@ -355,6 +363,24 @@
     }
     // override -- legacy layout -- end
 
+  }
+}
+
+// TODO: figure out where to include these in the future
+@mixin root-variables {
+  :root {
+    //* colors **/
+    --gym-orange: #{$gym-orange};
+    --gym-black: #{$gym-black};
+    --gym-white: #{$gym-white};
+    --gym-gray: #{$gym-gray};
+    --gym-dark-gray: #{$gym-dark-gray};
+    --gym-light-gray: #{$gym-light-gray};
+    --gym-light-page-background: #{$gym-light-page-background};
+  
+    //* typefaces
+    --gym-font-stack: #{$gym-font-stack};
+    --gym-text-font-stack: #{$gym-text-font-stack};
   }
 }
 
