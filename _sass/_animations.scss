@@ -112,6 +112,128 @@
   }
 }
 
+@mixin color-blocks($orientation: vertical, $background: false) {
+  $dir1: null;
+  $dir2: null;
+  @if ($orientation == 'horizontal') {
+    $dir1: left;
+    $dir2: right;
+  } @else if ($orientation == 'vertical') {
+    $dir1: top;
+    $dir2: bottom;
+  } @else {
+    @error 'Please pass an argument of either `horizontal` or `vertical`';
+  }
+
+  @keyframes color-blocks {
+
+    0% {
+      @if ($background) {
+        background-color: #ac2142;
+      }
+
+      $border-color: $gym-magenta;
+
+      @if $orientation == 'horizontal' {
+        $border-color: #ac2142;
+      }
+      
+      border-#{$dir1}-color: $border-color;
+      border-#{$dir2}-color: #7b182f;
+    }
+
+    20% {
+      @if ($background) {
+        background-color: #ac2142;
+      }
+
+      $border-color: $gym-magenta;
+
+      @if $orientation == 'horizontal' {
+        $border-color: #ac2142;
+      }
+      
+      border-#{$dir1}-color: $border-color;
+      border-#{$dir2}-color: #7b182f;
+    }
+
+    35% {
+      @if ($background) {
+        background-color: #46807c;
+      }
+
+      $border-color: $gym-teal;
+
+      @if $orientation == 'horizontal' {
+        $border-color: #46807c;
+      }
+      
+      border-#{$dir1}-color: $border-color;
+      border-#{$dir2}-color: #2b4d4b;
+    }
+
+    60% {
+      @if ($background) {
+        background-color: #46807c;
+      }
+      
+      $border-color: $gym-teal;
+
+      @if $orientation == 'horizontal' {
+        $border-color: #46807c;
+      }
+      
+      border-#{$dir1}-color: $border-color;
+      border-#{$dir2}-color: #2b4d4b;
+    }
+
+    75% {
+      @if ($background) {
+        background-color: #237b47;
+      }
+
+      $border-color: $gym-green;
+
+      @if $orientation == 'horizontal' {
+        $border-color: #237b47;
+      }
+      
+      border-#{$dir1}-color: $border-color;
+      border-#{$dir2}-color: #164d2d;
+    }
+
+    90% {
+      @if ($background) {
+        background-color: #237b47;
+      }
+      
+      $border-color: $gym-green;
+
+      @if $orientation == 'horizontal' {
+        $border-color: #237b47;
+      }
+      
+      border-#{$dir1}-color: $border-color;
+      border-#{$dir2}-color: #164d2d;
+    }
+
+    100% {
+      @if ($background) {
+        background-color: #ac2142;
+      }
+      
+      $border-color: $gym-magenta;
+
+      @if $orientation == 'horizontal' {
+        $border-color: #ac2142;
+      }
+      
+      border-#{$dir1}-color: $border-color;
+      border-#{$dir2}-color: #7b182f;
+    }
+  }
+}
+
 
 @mixin color-background {
   @keyframes color-background {
