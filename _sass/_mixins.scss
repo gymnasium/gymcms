@@ -192,7 +192,7 @@
 
     // paragraphs
     p {
-      font: normal 1.15em/1.45 $gym-font-stack-text;
+      font: normal 1.15em/1.45 $gym-text-font-stack;
       margin-top: 1em;
       margin-bottom: 0;
     }
@@ -363,6 +363,24 @@
     }
     // override -- legacy layout -- end
 
+  }
+}
+
+// TODO: figure out where to include these in the future
+@mixin root-variables {
+  :root {
+    //* colors **/
+    --gym-orange: #{$gym-orange};
+    --gym-black: #{$gym-black};
+    --gym-white: #{$gym-white};
+    --gym-gray: #{$gym-gray};
+    --gym-dark-gray: #{$gym-dark-gray};
+    --gym-light-gray: #{$gym-light-gray};
+    --gym-light-page-background: #{$gym-light-page-background};
+  
+    //* typefaces
+    --gym-font-stack: #{$gym-font-stack};
+    --gym-text-font-stack: #{$gym-text-font-stack};
   }
 }
 

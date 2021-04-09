@@ -3,30 +3,15 @@
 @import 'variables';
 @import 'mixins';
 
-:root {
-  //* colors **/
-  --gym-orange: #{$gym-orange};
-  --gym-black: #{$gym-black};
-  --gym-white: #{$gym-white};
-  --gym-gray: #{$gym-gray};
-  --gym-dark-gray: #{$gym-dark-gray};
-  --gym-light-gray: #{$gym-light-gray};
-  --gym-light-page-background: #{$gym-light-page-background};
-
-  //* typefaces
-  --gym-font-stack: #{$gym-font-stack};
-  --gym-font-stack-text: #{$gym-font-stack-text};
-}
-
 #contentinfo {
   font-size: 16px;
-  color: var(--gym-white);
-  background-color: var(--gym-black);
+  color: $gym-white;
+  background-color: $gym-black;
   padding: 5px 10px 30px 10px;
   margin: 0 auto;
 
   h2 {
-    font-family: var(--gym-font-stack);
+    font-family: $gym-font-stack;
     font-size: 1em;
     line-height: 1.25;
     margin-top: 0;
@@ -89,13 +74,13 @@
   }
   
   li a {
-    color: var(--gym-white);
+    color: $gym-white;
   }
   
   a:hover,
   a:focus,
   a:active {
-    color: var(--gym-orange);
+    color: $gym-orange;
     border-bottom: 0;
   }
 
@@ -132,7 +117,7 @@
       top: 0;
       left: 2em;
       content: attr(data-title);
-      color: var(--gym-orange);
+      color: $gym-orange;
       line-height: 1.8;
     }
   }
