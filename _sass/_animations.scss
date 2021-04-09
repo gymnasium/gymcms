@@ -49,70 +49,83 @@
 
     0% {
       @if ($background) {
-        background-color: #ac2142;
+        background-color: $gym-magenta-dark;
       }
       
       border-#{$dir1}-color: $gym-magenta;
-      border-#{$dir2}-color: #7b182f;
+      border-#{$dir2}-color: $gym-magenta-darker;
     }
 
     20% {
       @if ($background) {
-        background-color: #ac2142;
+        background-color: $gym-magenta-dark;
       }
       
       border-#{$dir1}-color: $gym-magenta;
-      border-#{$dir2}-color: #7b182f;
+      border-#{$dir2}-color: $gym-magenta-darker;
     }
 
     35% {
       @if ($background) {
-        background-color: #46807c;
+        background-color: $gym-teal-dark;
       }
       
       border-#{$dir1}-color: $gym-teal;
-      border-#{$dir2}-color: #2b4d4b;
+      border-#{$dir2}-color: $gym-teal-darker;
     }
 
     60% {
       @if ($background) {
-        background-color: #46807c;
+        background-color: $gym-teal-dark;
       }
       
       border-#{$dir1}-color: $gym-teal;
-      border-#{$dir2}-color: #2b4d4b;
+      border-#{$dir2}-color: $gym-teal-darker;
     }
 
     75% {
       @if ($background) {
-        background-color: #237b47;
+        background-color: $gym-green-dark;
       }
       
       border-#{$dir1}-color: $gym-green;
-      border-#{$dir2}-color: #164d2d;
+      border-#{$dir2}-color: $gym-green-darker;
     }
 
     90% {
       @if ($background) {
-        background-color: #237b47;
+        background-color: $gym-green-dark;
       }
       
       border-#{$dir1}-color: $gym-green;
-      border-#{$dir2}-color: #164d2d;
+      border-#{$dir2}-color: $gym-green-darker;
     }
 
     100% {
       @if ($background) {
-        background-color: #ac2142;
+        background-color: $gym-magenta-dark;
       }
       
       border-#{$dir1}-color: $gym-magenta;
-      border-#{$dir2}-color: #7b182f;
+      border-#{$dir2}-color: $gym-magenta-darker;
     }
   }
 }
 
 @mixin color-blocks($orientation: vertical, $background: false) {
+
+// @debug $gym-magenta-dark;
+// @debug $gym-magenta-darker;
+
+// @debug $gym-teal-dark;
+// @debug $gym-teal-darker;
+
+// @debug $gym-green-dark;
+// @debug $gym-green-darker;
+
+// @debug $gym-purple-dark;
+// @debug $gym-purple-darker;
+
   $dir1: null;
   $dir2: null;
   @if ($orientation == 'horizontal') {
@@ -129,107 +142,107 @@
 
     0% {
       @if ($background) {
-        background-color: #ac2142;
+        background-color: $gym-magenta-dark;
       }
 
       $border-color: $gym-magenta;
 
       @if $orientation == 'horizontal' {
-        $border-color: #ac2142;
+        $border-color: $gym-magenta-dark;
       }
       
       border-#{$dir1}-color: $border-color;
-      border-#{$dir2}-color: #7b182f;
+      border-#{$dir2}-color: $gym-magenta-darker;
     }
 
     20% {
       @if ($background) {
-        background-color: #ac2142;
+        background-color: $gym-magenta-dark;
       }
 
       $border-color: $gym-magenta;
 
       @if $orientation == 'horizontal' {
-        $border-color: #ac2142;
+        $border-color: $gym-magenta-dark;
       }
       
       border-#{$dir1}-color: $border-color;
-      border-#{$dir2}-color: #7b182f;
+      border-#{$dir2}-color: $gym-magenta-darker;
     }
 
     35% {
       @if ($background) {
-        background-color: #46807c;
+        background-color: $gym-teal-dark;
       }
 
       $border-color: $gym-teal;
 
       @if $orientation == 'horizontal' {
-        $border-color: #46807c;
+        $border-color: $gym-teal-dark;
       }
       
       border-#{$dir1}-color: $border-color;
-      border-#{$dir2}-color: #2b4d4b;
+      border-#{$dir2}-color: $gym-teal-darker;
     }
 
     60% {
       @if ($background) {
-        background-color: #46807c;
+        background-color: $gym-teal-dark;
       }
       
       $border-color: $gym-teal;
 
       @if $orientation == 'horizontal' {
-        $border-color: #46807c;
+        $border-color: $gym-teal-dark;
       }
       
       border-#{$dir1}-color: $border-color;
-      border-#{$dir2}-color: #2b4d4b;
+      border-#{$dir2}-color: $gym-teal-darker;
     }
 
     75% {
       @if ($background) {
-        background-color: #237b47;
+        background-color: $gym-green-dark;
       }
 
       $border-color: $gym-green;
 
       @if $orientation == 'horizontal' {
-        $border-color: #237b47;
+        $border-color: $gym-green-dark;
       }
       
       border-#{$dir1}-color: $border-color;
-      border-#{$dir2}-color: #164d2d;
+      border-#{$dir2}-color: $gym-green-darker;
     }
 
     90% {
       @if ($background) {
-        background-color: #237b47;
+        background-color: $gym-green-dark;
       }
       
       $border-color: $gym-green;
 
       @if $orientation == 'horizontal' {
-        $border-color: #237b47;
+        $border-color: $gym-green-dark;
       }
       
       border-#{$dir1}-color: $border-color;
-      border-#{$dir2}-color: #164d2d;
+      border-#{$dir2}-color: $gym-green-darker;
     }
 
     100% {
       @if ($background) {
-        background-color: #ac2142;
+        background-color: $gym-magenta-dark;
       }
       
       $border-color: $gym-magenta;
 
       @if $orientation == 'horizontal' {
-        $border-color: #ac2142;
+        $border-color: $gym-magenta-dark;
       }
       
       border-#{$dir1}-color: $border-color;
-      border-#{$dir2}-color: #7b182f;
+      border-#{$dir2}-color: $gym-magenta-darker;
     }
   }
 }
@@ -298,16 +311,17 @@
           // increment our counter only every 20 steps
           $counter: $counter + 1;
 
+          // stash our interpolated step as a variable to prevent linter errors
+          $x: "#{$i}%";
+
           // Render percentage (keyframe step)
-          #{$i}% {
+          #{$x} {
 
             // If the counter matches $n, set opacity to 1
             @if $n == $counter {
               opacity: 1;
-
             } @else {
               opacity: 0;
-
             }
           }
         }

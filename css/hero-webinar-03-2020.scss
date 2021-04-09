@@ -25,7 +25,7 @@
 .webinar-03-2020 {
   position: relative;
   background-color: $gym-green;
-  background-image: radial-gradient(circle, #237b47 1px, transparent 1px);
+  background-image: radial-gradient(circle, $gym-green-dark 1px, transparent 1px);
   background-position: 0 0;
   background-size: 1.375em 1.375em;
   padding-top: 15px;
@@ -87,7 +87,7 @@
 }
 
 .webinar-03-2020 .slash {
-  color: #237b47;
+  color: $gym-green-dark;
 }
 
 .webinar-03-2020 .guest-speakers {
