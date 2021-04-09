@@ -122,7 +122,7 @@
   }
 
   p {
-    font: normal 1.25em/1.45 $gym-font-stack-text;
+    font: normal 1.25em/1.45 $gym-text-font-stack;
     color: $gym-black;
     margin-top: .6em;
   }
@@ -136,7 +136,7 @@
   margin-bottom: 1.2em;
 
   header p {
-    font: normal 1.25em/1.45 $gym-font-stack-text;
+    font: normal 1.25em/1.45 $gym-text-font-stack;
   }
 }
 

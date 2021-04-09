@@ -90,7 +90,7 @@
 // paragraphs
 
 [role="main"] p {
-  font: normal 1.15em/1.5 $gym-font-stack-text;
+  font: normal 1.15em/1.5 $gym-text-font-stack;
   margin-top: 1em;
   margin-bottom: 0;
 }
@@ -145,7 +145,7 @@
 }
 
 #about p {
-  font: normal 1.25em/1.45 $gym-font-stack-text;
+  font: normal 1.25em/1.45 $gym-text-font-stack;
   margin-top: .6em;
 }
 
@@ -170,7 +170,7 @@ main h3 {
 }
 
 .section header p {
-  font: normal 1.25em/1.45 $gym-font-stack-text;
+  font: normal 1.25em/1.45 $gym-text-font-stack;
 }
 
 .section-content {
@@ -202,7 +202,7 @@ main h3 {
   bottom: .5rem;
   right: .5rem;
   content: attr(data-duration);
-  font: normal 80%/.9375 $gym-font-stack-text;
+  font: normal 80%/.9375 $gym-text-font-stack;
   letter-spacing: .065rem;
   text-indent: .1rem;
   color: $gym-white;
@@ -634,6 +634,42 @@ details.take5--transcript {
         padding: 1em;
         margin-top: 0;
       }
+    }
+
+    .cols {
+      ul {
+        margin-top: 0;
+      }
+
+      li {
+        padding-bottom: 0;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.cols-hr {
+  ul {
+    grid-gap: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-top: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    position: relative;
+    top: -1px;
+    border-top: 1px solid #ddd;
+  
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -1px;
+      width: 300%;
+      border-top: 1px solid #ddd;
     }
   }
 }
