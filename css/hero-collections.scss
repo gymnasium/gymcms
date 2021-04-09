@@ -22,9 +22,9 @@
       display: block;
       content: "";
       height: 100%;
-      background-color: #ac2142;
+      background-color: $gym-magenta-dark;
       border-top: 2.5em solid $gym-magenta;
-      border-bottom: 1.25em solid #7b182f;
+      border-bottom: 1.25em solid $gym-magenta-darker;
       padding-top: 1.875em;
       animation: 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
       animation-name: color-blocks;
@@ -70,8 +70,8 @@
         top: 0;
         left: 0;
         height: 100%;
-        border-left: 6em solid #ac2142;
-        border-right: 4em solid #7b182f;
+        border-left: 6em solid $gym-magenta-dark;
+        border-right: 4em solid $gym-magenta-darker;
         animation: 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
         animation-name: color-blocks;
       }
