@@ -254,7 +254,7 @@
   
   @media (min-width: 40em) {
     .cols {
-      padding-bottom: 1px; // overflow height adjustment (hack) -- useful when nested content has border
+      padding-bottom: 0;
       overflow: hidden;
   
       > ul {
