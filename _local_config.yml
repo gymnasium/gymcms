@@ -1,10 +1,10 @@
 # Setup
 title: Gymnasium Static Content
-url: https://dev--gymcms.netlify.com
+url: http://localhost:4000
 baseurl:
 timezone: America/New_York
-environment: development
-   
+environment: local
+
 # Building
 
 exclude:

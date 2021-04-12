@@ -1,0 +1,193 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+// !override / reset/rescale Bootstrap (3) handiwork — future-friendly
+
+.hero-promo {
+  font-size: 16px;
+  background-color: #00aeef;
+  background-image: linear-gradient(to top, #00aeef 0%, #007fae 99%, #007fae 100%);
+}
+
+// structural spacing
+
+.hero-promo .container {
+  padding: 0 30px 3em;
+}
+
+.hero-promo .hero-content-art {
+  text-align: center;
+  border-bottom: 1px dashed #1bc0f2;
+  margin: 2.5% -30px 0;
+}
+
+.bbd-gym-016 .hero-content-art,
+.bbd-accessibility .hero-content-art  {
+  border-bottom: 0 none;
+  margin-bottom: -2.5%;
+}
+
+.hero-promo .hero-content-art img {
+  display: inline-block;
+  width: auto;
+  max-width: 95%;
+  height: auto;
+}
+
+@include breakpoint(medium, min) {
+
+  .hero-promo .container {
+    position: relative;
+    min-height: 25.125em;
+  }
+
+  .hero-promo .hero-content-art {
+    position: absolute;
+    bottom: 0;
+    left: -3%;
+    width: 55%;
+    text-align: left;
+    z-index: 0;
+    border: 0;
+    margin: 0;
+  }
+
+  .hero-promo .hero-content-art img {
+    max-width: 100%;
+  }
+
+  .bbd-gym-016 .hero-content-art picture,
+  .bbd-accessibility .hero-content-art picture {
+    display: inline-block;
+    position: relative;
+    top: -5em;
+  }
+
+  .hero-content-copy {
+    position: relative;
+    left: 52%;
+    width: 51.5%;
+    z-index: 1;
+  }
+
+}
+
+@include breakpoint(large, min) {
+
+  .bbd-gym-016 .hero-content-art picture,
+  .bbd-accessibility .hero-content-art picture {
+    top: -2em;
+  }
+
+}
+
+// content / copy
+
+.hero-content-copy {
+  padding-left: .4em;
+  margin-top: 6%;
+  margin-bottom: 4%;
+}
+
+.hero-content-copy header h1 {
+  font-size: 2.5em;
+  line-height: 1.15;
+  letter-spacing: .1rem;
+  color: $gym-white;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero-content-copy header h2 {
+  font-size: 2.5em;
+  line-height: 1.15;
+  letter-spacing: .1rem;
+  word-spacing: -.05rem;
+  color: $gym-black;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.blue-beanie-day header s {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+.blue-beanie-day header s:after {
+  display: inline-block;
+  position: absolute;
+  top: 54%;
+  left: -11.5%;
+  content: "";
+  width: 120%;
+  border-top: .15em solid $gym-orange;
+  margin-top: -.15em;
+  transform: rotate(10deg);
+}
+
+.hero-content-copy .description {
+  font-size: 1.4em;
+  color: $gym-black;
+  margin-top: 1.6rem;
+}
+
+// cta
+
+.hero-promo .cta {
+  margin-top: 2.5rem;
+}
+
+.blue-beanie-day header a:not(.btn) {
+  color: currentColor !important;
+  border-bottom: 1px solid currentColor !important;
+}
+
+.blue-beanie-day header a:not(.btn):hover,
+.blue-beanie-day header a:not(.btn):focus {
+  color: currentColor !important;
+  border-bottom: 2px solid currentColor !important;
+}
+
+.blue-beanie-day a.gym-button-secondary {
+  width: auto;
+  color: $gym-black !important;
+  background-color: #1bc0f2 !important;
+  border: 2px solid $gym-black !important;
+  padding: 1.2em 1.6em !important;
+  vertical-align: bottom;
+}
+
+.blue-beanie-day a.gym-button-secondary b {
+  color: currentColor;
+}
+
+.blue-beanie-day a.gym-button-secondary:hover,
+.blue-beanie-day a.gym-button-secondary:focus,
+.blue-beanie-day a.gym-button-secondary:active {
+  background-color: transparent !important;
+}
+
+// misc details
+
+[hidden] {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+@include breakpoint(36em, min) {
+
+  .no-wrap {
+    white-space: nowrap;
+  }
+
+}

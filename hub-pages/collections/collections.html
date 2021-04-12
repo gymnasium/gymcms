@@ -24,6 +24,7 @@ layout: raw
     {%- assign collections_sorted = site.data.collections | sort -%}
     {%- for collection_hash in collections_sorted -%}
       {%- assign hub_page = collection_hash[1] -%}
+      {%- unless hub_page.exclude -%}
       <li class="collection">
         <div class="collection--card {{ hub_page.topic | slugify }}">
           <div class="collection--main">
@@ -39,6 +40,7 @@ layout: raw
           </div>
         </div>
       </li>
+      {%- endunless -%}
     {%- endfor -%}
     </ul>
   </div>

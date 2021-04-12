@@ -1,0 +1,135 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+@include defaults;
+
+// --- collections / catalog view ---
+
+// --- #about ---
+
+// !override background-color w/ ID selector/combinator
+
+#about {
+  background-color: #d2d2d2;
+  padding-top: 1.6em;
+  padding-bottom: 1.6em;
+  border-bottom: 1px dashed #bbb;
+
+  h1,
+  p {
+    color: $gym-black;
+  }
+
+  .banner-content {
+    background-color: inherit;
+    padding-bottom: 0;
+  }
+
+  p {
+    font: normal 1.25em/1.45 $gym-text-font-stack;
+    margin-top: .6em;
+  }
+}
+
+
+
+// --- collection ---
+
+.collection {
+
+  // --- collection--card ---
+  &--card {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background-color: $gym-black;
+    border-top: 1em solid $gym-gray;
+  }
+  
+  &--main {
+    padding: 1.2em 1.2em 0;
+
+    header {
+      max-width: 18.25em;
+
+      .topic,
+      .title {
+        color: $gym-white;
+      }
+
+      .topic {
+        font-size: 1em;
+        line-height: 1;
+        color: #999;
+        letter-spacing: .15rem;
+        margin-top: -1px;
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+
+  // topics
+
+  .accessibility,
+  .web-design-development {
+    border-top-color: $gym-magenta;
+  }
+
+  .javascript {
+    border-top-color: $gym-purple;
+  }
+
+  .prototyping,
+  .user-experience {
+    border-top-color: $gym-teal;
+  }
+
+  .career-skills {
+    border-top-color: $gym-green;
+  }
+
+  // Main
+  &--main {
+    header .subhead {
+      display: block;
+      max-width: 24rem;
+      font-size: .55em;
+      line-height: 1.35;
+      color: $gym-white;
+      letter-spacing: .05rem;
+      margin-top: .75rem;
+    }
+
+    p {
+      font-size: 1em;
+      color: $gym-gray;
+    }
+  }
+
+  // --- cta ---
+
+  &--cta {
+    color: $gym-white;
+    padding: 1.2em;
+
+    p {
+      font-size: 1em;
+      margin-top: 0;
+    }
+  }
+}
+
+
+// --- grid layout ---
+@include grid-support;
+
+// typographic style / basic
+
+main {
+  h1,
+  h2,
+  h3 {
+    letter-spacing: .02em;
+  }
+}

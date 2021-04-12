@@ -1,0 +1,613 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+@include defaults;
+
+#main h1 {
+  font-size: 2.25em;
+}
+
+#main h3 {
+  font-size: 1.4em;
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+// typographical details
+
+#main .all-caps {
+  text-transform: uppercase;
+}
+
+#main .nowrap,
+#main .no-wrap {
+  font: inherit;
+  color: inherit;
+  white-space: nowrap;
+}
+
+// --- webinars / catalog view ---
+
+// --- #about ---
+
+// !override background-color w/ ID selector/combinator
+
+#about {
+  background-color: #d2d2d2;
+  padding-top: 1.6em;
+  padding-bottom: 1.6em;
+  border-bottom: 1px dashed #bbb;
+
+  h1,
+  p {
+    color: $gym-black;
+  }
+  
+  .banner-content {
+    background-color: inherit;
+    padding-bottom: 0;
+  }
+  
+  p {
+    font: normal 1.25em/1.45 $gym-text-font-stack;
+    margin-top: .6em;
+  }
+}
+
+// --- webinar ---
+
+// --- webinar--card ---
+.webinar {
+  &--card {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background-color: $gym-black;
+    border-top: 1em solid $gym-gray;
+  }
+  
+  &--main {
+    padding: 1.2em 1.2em 0;
+
+    header {
+      max-width: 18.25em;
+
+      .topic,
+      .title {
+        color: $gym-white;
+      }
+    
+      .topic {
+        font-size: 1em;
+        line-height: 1;
+        color: #999;
+        letter-spacing: .15rem;
+        margin-top: -1px;
+        margin-bottom: 1.2rem;
+      }
+
+      .subhead {
+        display: block;
+        max-width: 24rem;
+        font-size: .55em;
+        line-height: 1.35;
+        color: $gym-white;
+        letter-spacing: .05rem;
+        margin-top: .75rem;
+      }
+    }
+    
+    p {
+      font-size: 1em;
+      color: $gym-gray;
+    }
+    
+    .datetime {
+      color: $gym-white;
+    }
+  }
+
+  // --- cta ---
+  &--cta {
+    color: $gym-white;
+    padding: 1.2em;
+
+    p {
+      font-size: 1em;
+      margin-top: 0;
+    }
+  }
+
+  // topics
+  .design {
+    border-top-color: $gym-magenta;
+  }
+
+  .dev {
+    border-top-color: $gym-purple;
+  }
+
+  .skills {
+    border-top-color: $gym-green;
+  }
+
+  .ux {
+    border-top-color: $gym-teal;
+  }
+}
+
+// --- featured webinar ---
+#featured-webinar {
+
+  @include breakpoint(small, min) {
+    grid-column: span 2;
+  }
+
+  @include breakpoint(58em, min) {
+    // legacy layout / fallback 
+    width: 100%;
+    margin-top: 0;
+
+    .webinar {
+      &--card {
+        display: block;
+        overflow: hidden;
+      }
+
+      &--main {
+        header {
+          float: left;
+          width: 50%;
+        }
+
+        .title {
+          font-size: 2.5em;
+        }
+      }
+
+      &--info {
+        position: relative;
+        top: .5em;
+        left: 1.6em;
+        width: 48%;
+        margin-left: 48%;
+
+        p {
+          font-size: 1.15em;
+        }
+      }
+
+      &--cta {
+        clear: both;
+      }
+    }
+
+    .short-description,
+    .datetime {
+      font-size: 1.15em;
+    }
+  }
+
+  @include breakpoint(64em, min) {
+    grid-column: span 3;
+  }
+  
+  header,
+  header .subhead {
+    max-width: none;
+  }
+
+  .guest-speakers {
+    color: $gym-white;
+  }
+}
+
+#guest-speaker-headshots {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  overflow: hidden;
+
+  li {
+    margin-top: 1.2em;
+  }
+  
+  figure {
+    text-align: left;
+  }
+  
+  img,
+  figcaption {
+    display: inline;
+  }
+  
+  img {
+    width: 3.5em;
+    border: 1px solid #999;
+    margin-right: 1em;
+  }
+  
+  figcaption {
+    font: bold 1em/1.25 $gym-text-font-stack;
+    color: $gym-white;
+    vertical-align: middle;
+  }
+
+  @include breakpoint(58em, min) {
+    figcaption {
+      font-size: 1.15em;
+    }
+  
+    img {
+      width: 5.5em;
+    }
+  }
+}
+
+// --- grid layout ---
+
+@include grid-support;
+
+// secondary button
+#main .gym-button-secondary {
+  color: $gym-white;
+  background-color: transparent;
+  border: 2px solid $gym-orange;
+}
+
+#main .gym-button-secondary b {
+  color: inherit;
+  vertical-align: text-top;
+}
+
+#main .gym-button-secondary:hover,
+#main .gym-button-secondary:focus,
+#main .gym-button-secondary:active {
+  border-color: $gym-light-gray;
+}
+
+// main / article
+
+main {
+  &.content {
+    display: block;
+    max-width: 72em;
+    background: $gym-white;
+    border-right: 1px solid $gym-gray;
+    border-left: 1px solid $gym-gray;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  article {
+    padding: 2.2em;
+    box-sizing: border-box;
+  
+    @include breakpoint(60em, min) {
+      float: left;
+      width: 75%;
+    }
+  }
+
+  // typographic style / basic
+  h1,
+  h2,
+  h3 {
+    letter-spacing: .02em;
+  }
+}
+
+.main-header {
+  font-family: $gym-font-stack;
+  margin-top: -.2em;
+  margin-bottom: 1.8em;
+
+  h1,
+  h2 {
+    font-weight: 900;
+    font-size: 2.25em;
+    line-height: 1.05;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+// offset "live event" style
+.event-header {
+  margin-top: -.21em;
+  margin-left: -.3em;
+  margin-bottom: 1.3em;
+
+  @include breakpoint(39em, min) {
+    margin-bottom: 2em;
+  }
+
+  h1,
+  h2 {
+    display: inline-block;
+  }
+
+  // "live event" style
+  h1 {
+    background: $gym-orange;
+    padding: .21em .2em .1em .3em;
+    margin-right: .2em;
+  }
+
+  h2 {
+    padding-top: .21em;
+    padding-bottom: .1em;
+  }
+}
+
+.webinar-content {
+  p {
+    font: normal 1em/1.5 $gym-text-font-stack;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  
+  h2 + ul {
+    padding-left: 1.15em;
+    margin-top: 1.2em;
+
+    li {
+      line-height: 1.35;
+      margin-top: .6em;
+    }
+  }
+}
+// event banner hero / title, speaker(s), datetime
+
+.event-banner-hero {
+  padding: 2em 2.2em;
+  margin: 0 -2.2em;
+}
+
+#main {
+  p.call-out {
+    font: normal 1.4em/1.5 $gym-font-stack;
+
+    @include breakpoint(36em, min) {
+      font-size: 1.6em;
+      line-height: 1.4;
+    }
+  }
+
+  .event-banner-hero {
+    h1 {
+      font-weight: 900;
+      font-size: 2.2em;
+      line-height: 1.2;
+      color: $gym-white;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: .4em;
+    }
+    
+    h2 {
+      font-weight: bold;
+      font-size: 1.8em;
+      line-height: 1.3;
+      color: $gym-white;
+      text-align: center;
+      text-transform: none;
+      margin-top: 0;
+      margin-bottom: .8em;
+    }
+    
+    h3 {
+      line-height: 1.3;
+      color: $gym-white;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+// event banner theme / background-color
+.event-theme {
+  // reddish
+  &-design {
+    background: $gym-magenta;
+  }
+  
+  // purple
+  &-dev {
+    background: $gym-purple;
+  }
+  
+  // blueish
+  &-ux {
+    background: $gym-teal;
+  }
+  
+  // green
+  &-skills {
+    background: $gym-green;
+  }
+}
+
+// event video / wistia embed
+.event-video {
+  position: relative;
+  height: 0;
+  background: $gym-light-page-background;
+  padding-bottom: 56.25%;
+  margin: 2em 0;
+
+  // wistia and youtube friendly
+  .wistia_embed,
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// form / registration
+
+.registration-closed {
+  background: $gym-light-page-background;
+  padding: 1.6em 1.2em;
+  border: 1px solid $gym-gray;
+  border-radius: 2px;
+  margin-bottom: 2em;
+
+  h2 {
+    font-family: $gym-font-stack;
+    font-size: 2.2em;
+    line-height: 1.1;
+    letter-spacing: .01em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.event-form {
+  color: $gym-black;
+
+  fieldset {
+    border: 0;
+    padding: 0;
+
+    legend {
+      font: 900 1.6em/1.2 $gym-font-stack;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      border: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    li {
+      font-size: 1em;
+      margin: 1.4em 0 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  
+  label {
+    display: block;
+    font: normal 1em/1.35 $gym-font-stack;
+    text-transform: uppercase;
+    margin-bottom: .6em;
+
+    &.error {
+      font-weight: bold;
+      color: #d9534f;
+      margin-top: .5em;
+      margin-bottom: -.5em;
+    }
+  }
+
+  fieldset input,
+  .optional {
+    display: block;
+    width: 100%;
+    font: normal 1em/1.15 $gym-text-font-stack;
+    background: none;
+    padding: .5em;
+    border: 1px solid $gym-gray;
+    border-bottom: 2px solid $gym-orange;
+    border-radius: 2px;
+    box-sizing: border-box;
+  }
+
+  .optional {
+    line-height: 1.4;
+    margin-bottom: 1.4em;
+    }
+  
+  p.small-print {
+    line-height: 1.25;
+    margin-bottom: 1.2em;
+
+    small {
+      font-size: .925em;
+      line-height: 1.35;
+    }
+  }
+}
+
+@include breakpoint(32em,max) {
+  #main .event-form button.gym-button {
+    width: 100%;
+  }
+}
+
+// sidebar
+
+main {
+  aside {
+    padding: 2.2em 2.2em 0;
+    border-top: 1px dashed $gym-gray;
+    box-sizing: border-box;
+
+    @include breakpoint(60em, min) {
+      float: right;
+      width: 25%;
+      padding: 1.6em;
+      border-top: 0;
+      border-left: 1px dashed $gym-gray;
+      margin-left: -1px;
+  
+      header {
+        padding-top: 1.2em;
+      }
+    }
+
+    header {
+      padding-bottom: 2em;
+      border-bottom: 1px solid $gym-gray;
+      margin-top: -.2em;
+      margin-bottom: 1.6em;
+    }
+
+    h2 {
+      font: bold 1.2em/1.2 $gym-font-stack;
+      text-transform: uppercase;
+    }
+
+    @at-root #main aside h1 {
+      font: 900 1.6em/1.1 $gym-font-stack;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.event-bio {
+  margin-bottom: 2em;
+
+  ~ header {
+    margin-top: 2.2em;
+  }
+
+  img {
+    max-width: 8em;
+    border: 1px solid $gym-light-page-background;
+  }
+
+  h2 {
+    margin-top: 1.3em;
+    margin-bottom: .8em;
+  }
+}
