@@ -1,0 +1,124 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+#contentinfo {
+  font-size: 16px;
+  color: $gym-white;
+  background-color: $gym-black;
+  padding: 5px 10px 30px 10px;
+  margin: 0 auto;
+
+  h2 {
+    font-family: $gym-font-stack;
+    font-size: 1em;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .all-caps {
+    text-transform: uppercase;
+  }
+
+  .gym-brand {
+    margin-bottom: 1em;
+  }
+  
+  .gymnasium-logo {
+    width: 12.5em;
+    height: auto;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  
+  .gym-brand p {
+    width: 95%;
+    font-size: 1em;
+    line-height: 1.55;
+    margin-top: 1.2em;
+  }
+  
+  .resources {
+    clear: left;
+
+    @include breakpoint(medium, min) {
+      clear: none;
+    }
+  }
+  
+  .footer-link-list {
+    padding-top: 0.625em;
+    margin-top: 0;
+    margin-bottom: 1.2em;
+  }
+  
+  ul {
+    list-style-type: "";
+    padding-left: 0;
+    margin-top: 0.95em;
+    margin-left: 0;
+  }
+  
+  ul ::marker {
+    color: transparent;
+  }
+  
+  li {
+    line-height: 1.35;
+    height: auto;
+    padding-right: 0;
+    border-right: 0;
+    margin-top: 0.6em;
+  }
+  
+  li a {
+    color: $gym-white;
+  }
+  
+  a:hover,
+  a:focus,
+  a:active {
+    color: $gym-orange;
+    border-bottom: 0;
+  }
+
+  .open-edx-logo {
+    height: auto;
+  }
+  
+  .copyright {
+    text-align: left;
+  }
+  
+  .copyright small {
+    font-size: 80%;
+  }
+}
+
+#social {
+  li {
+    position: relative;
+  }
+  
+  a[data-title] {
+    display: inline-block;
+
+    &:hover {
+      padding-right: 6ch;
+    }
+    
+    &:hover::after,
+    &:focus::after,
+    &:active::after {
+      display: inline;
+      position: absolute;
+      top: 0;
+      left: 2em;
+      content: attr(data-title);
+      color: $gym-orange;
+      line-height: 1.8;
+    }
+  }
+}

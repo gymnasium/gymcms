@@ -1,0 +1,94 @@
+---
+---
+
+@import "variables";
+@import "mixins";
+
+/* ---
+upcoming courses / featured content
+upcoming-courses.html
+--- */
+
+.catalog-content {
+  .sidebar {
+    h1 {
+      font-size: 1.44em;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    section {
+      font-size: 16px;
+    }
+
+    h2 {
+      font: 900 1em/1.3 $gym-font-stack;
+      color: $gym-black;
+      letter-spacing: 0.02em;
+      word-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    p,
+    .gym-button b {
+      font-size: 1.05em;
+    }
+  }
+}
+
+/* ---
+featured coures
+sidebar-generic.html
+--- */
+
+// sidebar / static
+
+.sidebar-static {
+  padding: 0 1.2em 2.6em;
+  margin: 1.2em -0.8em -2em;
+
+  h1 {
+    font-size: 1.2em !important;
+    margin-top: 15px;
+  }
+
+  p,
+  .gym-button b {
+    font-size: 1em !important;
+  }
+}
+
+// main content / adjustment for vertical rule
+
+.white-panel .col-md-9 {
+  padding-top: 1.2em;
+  padding-right: 1.2em;
+  padding-bottom: 2em;
+  margin-top: -1.2em;
+  margin-bottom: -2em;
+}
+
+@include breakpoint(medium, min) {
+  // main content / vertical rule
+
+  .white-panel .col-md-9 {
+    border-right: 1px dashed $gym-gray;
+  }
+
+  // sidebar / layout adjustment
+
+  .sidebar-static {
+    padding-top: 1.2em;
+    margin-top: -1.2em;
+    margin-right: -2.2em;
+  }
+}
+
+/* ---
+shared styles
+--- */
+
+.catalog-content .sidebar figure,
+.sidebar-static figure {
+  margin-top: 1.2em;
+}

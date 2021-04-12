@@ -1,0 +1,166 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+.block {
+  display: block;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+#hero-dfg-2019 {
+  background-color: #dcd2b9;
+  background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-1000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: padding-top .25s ease-in-out, padding-bottom .25s ease-in-out;
+}
+
+.hero-promo .content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.hero-promo header {
+  position: relative;
+  z-index: 1;
+  background-color: $gym-white;
+  transition: background-color .5s ease-in-out;
+  padding: 2.4em;
+  margin-top: 0;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+
+  h1 {
+    font-family: "Open Sans", $gym-text-font-stack;
+    font-weight: bold;
+    font-size: 3.428571428571429em;
+    line-height: 1.12;
+    color: #333;
+    letter-spacing: 0;
+    word-spacing: -.015em;
+    margin-top: -.125em;
+    margin-bottom: -.125em;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 0;
+      padding-bottom: 50%;
+      background-color: #e5e2d3;
+      background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-1000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin-top: .5em;
+      margin-bottom: .5em;
+      transition: padding-bottom .25s ease-in-out;
+    }
+  }
+}
+
+.hero-promo .content .date {
+  display: inline-block;
+  color: #ee5857;
+}
+
+.hero-promo .date .ltrsp-l {
+  display: inline-block;
+  letter-spacing: .08em;
+  margin-right: -.085em;
+
+}
+
+.hero-promo p {
+  font-size: 1.142857142857143em;
+  line-height: 1.45;
+  color: #333;
+  margin-top: .525em;
+}
+
+.hero-promo .cta {
+  margin-top: 2em;
+}
+
+@include breakpoint(36em, min) {
+
+  #hero-dfg-2019 {
+    padding-top: 1.75em;
+    padding-bottom: 1.75em;
+  }
+
+  .hero-promo header {
+    width: 40em;
+  }
+
+}
+
+
+@include breakpoint(48em, min) {
+
+  #hero-dfg-2019 {
+    background-color: #dcd2b9;
+    background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-1500w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .hero-promo header {
+    float: right;
+    width: 30em;
+  }
+
+  .hero-promo .content .date {
+    display: inherit;
+  }
+
+  .hero-promo header h1::after {
+    padding-bottom: 0;
+    background: transparent none;
+  }
+
+}
+
+@include breakpoint(76em, min) {
+
+  .hero-promo header {
+    background-color: rgba(255, 255, 255, .7);
+  }
+
+}
+
+@media
+(min-width: 90em),
+(min-width: 76em) and
+(min-resolution: 200dpi),
+(min-width: 76em) and
+(min-resolution: 1.25dppx) {
+
+  #hero-dfg-2019 {
+    background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-2000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
+  }
+
+}
+
+.hero-promo a.gym-button-secondary {
+  width: auto !important;
+  background-color: #ee5857;
+  padding-left: 2.2em;
+  padding-right: 2.2em;
+  vertical-align: bottom;
+}
+
+.hero-promo a.gym-button-secondary b {
+  color: $gym-white !important;
+}

@@ -1,0 +1,39 @@
+// Colors
+$gym-orange: #f8971d;
+$gym-black: #222;
+$gym-white: #fff;
+$gym-gray: #ccc;
+$gym-gray-2: adjust-color($gym-gray, $lightness: 6.66%); // example: outputs #ddd, might as well hard-code this here
+$gym-dark-gray: #444;
+$gym-light-gray: #a6a6a6;
+$gym-light-page-background: #ebebeb;
+
+// Fancy colors
+$gym-green: #2c9959;
+$gym-green-dark: adjust-color($gym-green, $lightness: -7.7%); // #237b47
+$gym-green-darker: adjust-color($gym-green, $lightness: -19.1%); // #164d2d
+
+$gym-magenta: #d73158;
+$gym-magenta-dark: adjust-color($gym-magenta, $lightness: -11.5%); // outputs #ac2142
+$gym-magenta-darker: adjust-color($gym-magenta, $lightness: -23%); // outputs #7b182f
+
+$gym-purple: #764c9f;
+$gym-purple-dark: adjust-color($gym-purple, $lightness: -11.5%);
+$gym-purple-darker: adjust-color($gym-purple, $lightness: -23%);
+
+$gym-teal: #5ca5a0;
+$gym-teal-dark: adjust-color($gym-teal, $lightness: -11.58%); // outputs #46807c
+$gym-teal-darker: adjust-color($gym-teal, $lightness: -26.9%); // #2b4d4b
+
+// Fonts
+$gym-text-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$gym-font-stack: "brandon-grotesque", $gym-text-font-stack;
+
+
+// A map of (commonly used) breakpoints.
+// TODO: we have a lot of other breakpoints specified in our CSS - maybe we can work to combine/reduce some of these rules
+$breakpoints: (
+  small: 640px, // 40em
+  medium: 992px, // 62em
+  large: 1200px // 75em
+);
