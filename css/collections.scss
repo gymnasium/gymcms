@@ -7,6 +7,11 @@
 
 // --- collections / catalog view ---
 
+#main > .container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 // --- #about ---
 
 // !override background-color w/ ID selector/combinator
@@ -46,7 +51,7 @@
     background-color: $gym-black;
     border-top: 1em solid $gym-gray;
   }
-  
+
   &--main {
     padding: 1.2em 1.2em 0;
 
@@ -87,6 +92,10 @@
 
   .career-skills {
     border-top-color: $gym-green;
+  }
+
+  .design-systems {
+    border-top-color: $gym-orange;
   }
 
   // Main
