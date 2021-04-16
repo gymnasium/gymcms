@@ -1,0 +1,765 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+@include defaults;
+
+
+#featured h3 {
+  letter-spacing: .035em;
+}
+
+// --- web development palette ---
+
+.bg-web-development,
+.featured-course .bg-web-developement {
+  background-color: $gym-magenta;
+}
+
+// --- web development lang palette ---
+
+.bg-web-development-lang,
+.featured-course .bg-web-developement-lang {
+  background-color: $gym-purple;
+}
+
+// --- ux / prototyping color palette ---
+
+.bg-ux-design,
+.featured-course .ux-design {
+  background: $gym-teal;
+}
+
+// --- career skills color palette ---
+
+.bg-career-skills,
+.featured-course .bg-career-skills {
+  background: $gym-green;
+}
+
+// --- links / buttons ---
+
+#main a {
+  color: currentColor;
+  border-bottom-color: currentColor;
+}
+
+// cta / structure
+
+.cta {
+  text-align: center;
+  margin-top: 1.2em;
+}
+
+// back to top
+
+.to-top-link {
+  margin-top: 1.2em;
+
+  b {
+    color: $gym-dark-gray;
+
+    &::before {
+      display: inline-block;
+      content: "↑";
+      font-family: monospace, monospace;
+      vertical-align: top;
+      margin-right: .25em;
+    }
+  }
+}
+
+// gym button
+
+#main .gym-button {
+  width: auto !important; // !override / shrink-wrap
+  padding: 1.2em 2.2em !important; // !override
+  border-radius: 3px;
+}
+
+
+// --- #about ---
+
+// !override background-color w/ ID selector/combinator
+
+#main {
+  h1,
+  h2,
+  h3 {
+    font-weight: 900;
+  }
+
+  h1 {
+    font-size: 2.25em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  h3 a {
+    line-height: 1.35;
+  }
+
+  h3 + p {
+    margin-top: 1.4rem;
+  }
+}
+
+#about {
+  background-color: #d2d2d2;
+  padding-top: 1.6em;
+  padding-bottom: 1.6em;
+  border-bottom: 1px dashed #bbb;
+
+  * {
+    color: $gym-black;
+  }
+
+  .banner-content {
+    background-color: inherit;
+    padding-bottom: 0;
+  }
+
+  p {
+    font: normal 1.25em/1.45 $gym-text-font-stack;
+    color: $gym-black;
+    margin-top: .6em;
+  }
+}
+
+
+// --- section ---
+
+.section {
+  padding-top: 1.2em;
+  margin-bottom: 1.2em;
+
+  header p {
+    font: normal 1.25em/1.45 $gym-text-font-stack;
+  }
+}
+
+.section header p,
+.subsection header p {
+  margin-top: 1.2rem;
+}
+
+.section-content {
+  background: $gym-white;
+  padding: 1.2em;
+  border: 1px solid $gym-gray;
+  border-radius: 3px;
+
+  > header {
+    margin-top: .4em;
+    margin-bottom: 1.6em;
+  }
+
+  section header {
+    margin-top: .6em;
+  }
+
+  p {
+    max-width: 96ch;
+  }
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  li p {
+    margin-top: .6rem;
+  }
+}
+
+#main .section-content > header p {
+  color: $gym-black;
+}
+
+// --- card layout ---
+
+.card-main {
+  padding: 1.2em;
+}
+
+.card-main header,
+.card-cta-button {
+  background-color: $gym-white;
+}
+
+.card-content {
+  border: 1px solid $gym-gray;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.card-main,
+.card-cta-button {
+  padding: 1.2em;
+}
+
+.card-cta {
+  text-align: center;
+}
+
+footer.card-cta {
+  margin-top: 1.2em;
+}
+
+.card-cta a {
+  display: inline-block;
+}
+
+// --- #feature ---
+
+#featured {
+  padding-top: 1.6em;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+@include breakpoint(48em, min) {
+
+  #featured {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+}
+
+.card-main header.full-width {
+  padding: 1.2em;
+  margin: -1.2em -1.2em 0;
+}
+
+#featured .card-main h3 {
+  font-size: 1.6em;
+  line-height: 1.15;
+  font-weight: 900;
+  color: $gym-white;
+}
+
+.featured {
+  background-color: $gym-dark-gray;
+
+  .course-artwork {
+    position: relative;
+    height: 0;
+    padding-bottom: 62.5%;
+    border-bottom: 1.2em dashed transparent;
+    overflow: visible;
+  }
+
+  .course-artwork img {
+    display: block;
+    position: absolute;
+    top: .125em;
+    left: 0;
+    width: 108%;
+    height: 108%;
+  }
+
+  .full-width {
+    border-top: 1px solid #dedede;
+    margin: 0 -1.2em 1.2em;
+  }
+}
+
+// --- #jobs ---
+
+#jobs .content-hr {
+  padding-bottom: 0;
+}
+
+// --- #courses ---
+#courses {
+
+  .cols-hr {
+    ul {
+      grid-gap: 0;
+      border-top: 1px solid $gym-gray-2;
+      border-bottom: 1px solid $gym-gray-2;
+      margin-top: 0;
+    }
+
+    li {
+      position: relative;
+      top: -1px;
+      border-top: 1px solid $gym-gray-2;
+      padding-top: 1.2em;
+      padding-bottom: 1.2em;
+    }
+  }
+
+  .course-artwork {
+    display: inline-block;
+    width: 20%;
+    height: 0;
+    vertical-align: middle;
+    padding-bottom: 20%;
+    border-radius: 50%;
+    -moz-border-radius: 0; // for legacy Firefox
+    overflow: hidden;
+    margin-right: 1.2em;
+
+    img {
+      max-width: 86%;
+      margin-top: 12%;
+    }
+  }
+
+  h3 {
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+  }
+}
+
+
+.tutorial figure,
+.webinar figure {
+  border: 1px solid #dedede;
+}
+
+// --- #webinars ---
+#webinars {
+  .cols-hr ul {
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .poster-mask {
+    position: relative;
+    height: 0;
+    background-color: #000;
+    padding-bottom: 62.5%; // pseudo 16:9 aspect ratio
+    overflow: hidden;
+  }
+
+  .poster-mask img {
+    position: absolute;
+    top: -100%;
+    right: -100%;
+    bottom: -100%;
+    left: -100%;
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  .poster-mask-crop img {
+    width: 112.5%;
+    max-width: none;
+  }
+}
+
+
+// --- grid layout ---
+
+// --- legacy columns (inline-block) w/ breakpoints ---
+
+.cols ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: -1.2em;
+  margin-bottom: 0;
+}
+
+.cols li {
+  margin-top: 1.2em;
+  overflow: hidden;
+}
+
+.cols-hr ul {
+  grid-gap: 0;
+  padding-bottom: 1.2em;
+  border-top: 1px solid $gym-gray-2;
+  border-bottom: 1px solid $gym-gray-2;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.cols-hr li {
+  position: relative;
+  top: -1px;
+  border-top: 1px solid $gym-gray-2;
+  padding-top: 1.2em;
+}
+
+.cols-hr li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  width: 300%;
+  border-top: 1px solid $gym-gray-2;
+}
+
+#webinars .cols-hr ul {
+  margin-bottom: -1.2em;
+}
+
+#webinars .cols-hr li,
+#courses .cols-hr li {
+  margin-top: 0;
+}
+
+.list-hr {
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li {
+    border-bottom: 1px dashed $gym-gray-2;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+
+    &:first-child {
+      border-top: 1px solid $gym-gray-2;
+    }
+  }
+}
+
+
+.content-hr {
+  border-top: 1px solid $gym-gray-2;
+  border-bottom: 1px solid $gym-gray-2;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+}
+
+.subsection header {
+  margin-top: 2em;
+  margin-bottom: 1.2em;
+}
+
+.section header h3,
+.subsection header h3 {
+  font-size: 1.4em;
+}
+
+@include breakpoint(small, min) {
+
+  .cols {
+    padding-bottom: 1px; // overflow height adjustment (hack) -- useful when nested content has border
+    overflow: hidden;
+
+    ul {
+      margin-left: -.6em;
+      margin-right: -.6em;
+    }
+  }
+
+  .cols ul li,
+  #courses .cols-hr li {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    box-sizing: border-box;
+    padding-left: .6em;
+    padding-right: .6em;
+    margin-right: -4px;
+  }
+
+}
+
+
+@include breakpoint(58em, min) {
+  .cols ul li {
+    width: 50%;
+  }
+}
+
+
+@include breakpoint(64em, min) {
+  .cols ul li {
+    width: 33.333333333333333%;
+  }
+}
+
+// --- modern columns (grid) ---
+
+@supports (display: grid) {
+
+  .cols ul {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1.2em;
+  }
+
+  @include breakpoint(36em, min) {
+
+    .cols-max-2 ul {
+      grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+    }
+
+    .cols-max-3 ul {
+      grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    }
+
+  }
+
+// override -- legacy layout -- start
+
+  .cols {
+    padding-bottom: 0;
+  }
+
+  .cols,
+  .cols ul li {
+    overflow: visible;
+  }
+
+  .cols ul,
+  .cols ul li {
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .cols ul {
+    margin-left: 0;
+  }
+
+  .cols ul li,
+  #courses .cols-hr li {
+    display: inherit;
+    width: auto;
+    box-sizing: content-box;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #courses .cols-hr li {
+    display: block;
+  }
+
+  #webinars {
+    .cols-hr {
+      ul {
+        margin-bottom: 0;
+      }
+
+      li {
+        padding-bottom: 0;
+      }
+    }
+  }
+  // override -- legacy layout -- end
+
+  // --- cards (grid) ---
+
+  .cols li,
+  .card,
+  .card-content {
+    display: inherit;
+  }
+
+  .card,
+  .card-content {
+    grid-template-rows: 1fr;
+  }
+
+  .card-cta-button {
+    align-self: end;
+  }
+}
+
+// --- design systems ---
+
+.design-systems #about {
+  margin-bottom: 9.5rem;
+}
+
+@include breakpoint(62em, min) {
+
+  .design-systems #about {
+    margin-bottom: 12.5rem;
+
+    p + p {
+      margin-top: 0;
+    }
+
+  }
+
+}
+
+// --- sticky notes ---
+
+.sticky-notes {
+  position: relative;
+  top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  grid-auto-rows: minmax(24rem, auto);
+  gap: 2.2rem;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: -5rem;
+
+  li {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    &:first-child {
+      transform: rotate(-1deg);
+    }
+
+    &:nth-child(2) {
+      transform: rotate(3deg) translateY(1rem);
+    }
+
+    &:nth-child(3) {
+      transform: translateY(2rem);
+    }
+
+    &:last-child {
+      transform: rotate(2deg) translateY(2.5rem);
+    }
+
+    b {
+      font-family: $gym-font-stack;
+      font-size: 1.6em;
+    }
+
+  }
+
+}
+
+@include breakpoint(64em, min) {
+
+  .sticky-notes li {
+
+    &:nth-child(2) {
+      transform: rotate(3deg) translateY(5rem);
+    }
+
+    &:last-child {
+      transform: rotate(2deg) translateY(0);
+    }
+
+  }
+
+}
+
+// --- sections ---
+
+#main .cta-view p,
+#instructor p {
+  color: #666;
+}
+
+#main .cta-view p {
+  font-size: 1.4em;
+  margin-top: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+@include breakpoint(64em, min) {
+
+  #main .cta-view p {
+    margin-top: 0;
+  }
+
+}
+
+.design-systems .row-info ul {
+  padding-left: 1.6rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.design-systems .row-info ul li {
+  font-family: $gym-text-font-stack;
+  padding-left: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.design-systems .row-info {
+  padding-top: 1rem;
+}
+
+.design-systems .row-info h3 {
+  margin-top: 2rem;
+}
+
+@include breakpoint(62em, min) {
+
+  #designers .section-content,
+  #developers .section-content,
+  #product-managers .section-content,
+  #everyone .section-content {
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-origin: padding-box;
+    background-size: contain;
+  }
+
+  #designers .section-content {
+    background-image: url("{{ site.url }}{{ site.baseurl }}/img/hub-pages/design-systems/illustrations/designers.png");
+  }
+
+  #developers .section-content {
+    background-image: url("{{ site.url }}{{ site.baseurl }}/img/hub-pages/design-systems/illustrations/developers.png");
+  }
+
+  #product-managers .section-content {
+    background-image: url("{{ site.url }}{{ site.baseurl }}/img/hub-pages/design-systems/illustrations/product-managers.png");
+    background-size: 37%;
+  }
+
+  #everyone .section-content {
+    background-image: url("{{ site.url }}{{ site.baseurl }}/img/hub-pages/design-systems/illustrations/everyone.png");
+    background-size: 37.5%;
+  }
+
+}
+
+@include breakpoint(74em, min) {
+
+  #designers .section-content,
+  #developers .section-content {
+    background-position: 90% center;
+  }
+
+}
+
+// --- instructor ---
+
+#instructor {
+
+  .subsection {
+    padding-top: 2.2rem;
+    border-top: 1px solid #ddd;
+  }
+
+  h3 {
+    margin-bottom: 1.6rem;
+  }
+
+  p + * {
+    margin-top: 1.4rem;
+  }
+
+}
+
+@include breakpoint(64em, min) {
+
+  #instructor {
+
+    p:first-child {
+      margin-top: 0;
+    }
+
+  }
+
+}

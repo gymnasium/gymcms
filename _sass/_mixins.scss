@@ -1,0 +1,390 @@
+@import 'variables';
+@import 'functions';
+
+/* Breakpoints
+  via @https://rimdev.io/making-media-query-mixins-with-sass/
+  modified with to always convert px values to em
+
+  Example usage:
+
+    @include breakpoint(landscape, orientation) {}
+    @include breakpoint(small, min) {}
+
+    Use pixel values
+    @include breakpoint(320px, min) {}
+
+    Nest rules to combine them:
+    @include breakpoint(small, min) {
+      @include breakpoint(large, max) {}
+    }
+
+*/
+@mixin breakpoint($breakpoint, $feature) {
+  @if map-has-key($breakpoints, $breakpoint) {
+
+    // Get the breakpoint value from the map…
+    $value: map-get($breakpoints, $breakpoint);
+
+    // If we have a pixel value, let's convert it to em
+    @if (ends-with($value, 'px')) {
+      $value: font-calc($value, em);
+    }
+
+    @if ($feature == max) {
+      // subtract 1px from the max width
+      @media (max-width: ($value - font-calc(1, em))) {
+        @content;
+      }
+    } @else if ($feature == min) {
+      @media (min-width: $value) {
+        @content;
+      }
+    } @else {
+      @media ($feature: $value) {
+        @content;
+      }
+    }
+
+  // If the breakpoint does not exist in the map…
+  // Use this to spit out `landscape` or `portrait` or whatever other type of media query.
+  } @else {
+    // If we have a pixel value, let's convert it to em
+    @if (ends-with($breakpoint, 'px')) {
+      $breakpoint: font-calc($breakpoint, em);
+    }
+
+    @if $feature == max {
+      // subtract 1px from the max width
+      @media (max-width: ($breakpoint - font-calc(1, em))) {
+        @content;
+      }
+    } @else if $feature == min {
+      @media (min-width: $breakpoint) {
+        @content;
+      }
+    } @else {
+      @media ($feature: $breakpoint) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin initial-resets {
+
+  // --- !override / reset / all initial ---
+  #content > .container,
+  #content > .container > .row,
+  #content > .container > .row > .col-md-12 {
+    align-content:stretch;align-items:stretch;align-self:auto;animation-delay:0s;animation-direction:normal;animation-duration:0s;animation-fill-mode:none;animation-iteration-count:1;animation-name:none;animation-play-state:running;animation-timing-function:ease;backface-visibility:visible;background-blend-mode:normal;border-spacing:0;bottom:auto;box-decoration-break:slice;box-shadow:none;box-sizing:content-box;break-after:auto;break-before:auto;break-inside:auto;caption-side:top;caret-color:auto;clear:none;clip:auto;clip-path:none;color:initial;column-count:auto;column-fill:balance;column-gap:normal;column-rule-color:currentcolor;column-rule-style:none;column-rule-width:medium;column-span:none;column-width:auto;content:normal;counter-increment:none;counter-reset:none;cursor:auto;display:inline;empty-cells:show;filter:none;flex-basis:auto;flex-direction:row;flex-grow:0;flex-shrink:1;flex-wrap:nowrap;float:none;font-family:initial;font-feature-settings:normal;font-kerning:auto;font-language-override:normal;font-size:medium;font-size-adjust:none;font-stretch:normal;font-style:normal;font-synthesis:weight style;font-variant:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-weight:400;grid-auto-columns:auto;grid-auto-flow:row;grid-auto-rows:auto;grid-column-end:auto;grid-column-gap:0;grid-column-start:auto;grid-row-end:auto;grid-row-gap:0;grid-row-start:auto;grid-template-areas:none;grid-template-columns:none;grid-template-rows:none;height:auto;hyphens:manual;image-rendering:auto;image-resolution:1dppx;ime-mode:auto;isolation:auto;justify-content:flex-start;left:auto;letter-spacing:normal;line-break:auto;line-height:normal;mask-clip:border-box;mask-composite:add;mask-image:none;mask-mode:match-source;mask-origin:border-box;mask-position:0 0;mask-repeat:repeat;mask-size:auto;mask-type:luminance;max-height:none;max-width:none;min-width:0;mix-blend-mode:normal;object-fit:fill;object-position:50% 50%;opacity:1;order:0;orphans:2;outline-color:initial;outline-offset:0;outline-style:none;outline-width:medium;overflow:visible;overflow-wrap:normal;overflow-x:visible;overflow-y:visible;page-break-after:auto;page-break-before:auto;page-break-inside:auto;perspective:none;perspective-origin:50% 50%;position:static;quotes:initial;resize:none;right:auto;ruby-align:space-around;ruby-merge:separate;ruby-position:over;scroll-behavior:auto;tab-size:8;table-layout:auto;text-align:initial;text-align-last:auto;text-combine-upright:none;text-decoration-color:currentcolor;text-decoration-line:none;text-decoration-style:solid;text-emphasis-color:currentcolor;text-emphasis-position:over right;text-emphasis-style:none;text-indent:0;text-justify:auto;text-orientation:mixed;text-overflow:clip;text-rendering:auto;text-shadow:none;text-transform:none;text-underline-position:auto;top:auto;touch-action:auto;transform:none;transform-box:border-box;transform-origin:50% 50% 0;transform-style:flat;transition-delay:0s;transition-duration:0s;transition-property:all;transition-timing-function:ease;vertical-align:baseline;visibility:visible;white-space:normal;widows:2;width:auto;will-change:auto;word-break:normal;word-spacing:normal;word-wrap:normal;writing-mode:horizontal-tb;z-index:auto;background:0 0;border-color:currentcolor;border-radius:0;border-style:none;border-width:medium;list-style:disc;margin:0;padding:0;
+  }
+}
+
+// Establish defaults for DRYness
+@mixin defaults {
+
+  @include initial-resets;
+
+  // --- smooth scrolling ---
+
+  @media only screen and (prefers-reduced-motion: no-preference) {
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+  }
+
+  // --- flexible images ---
+  main {
+    img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+      border: 0;
+    }
+
+    figure {
+      text-align: center;
+      overflow: hidden;
+    }
+
+    figcaption {
+      text-align: left;
+    }
+  }
+
+  // !override / reset/rescale Bootstrap (3) handiwork — future-friendly
+  #main {
+    font-size: 16px;
+
+    // gym button
+    .gym-button {
+      font-size: 105%;
+      width: auto;
+      padding: 1.2em 1.4em;
+
+    // !override / color
+      b {
+        color: $gym-white;
+      }
+    }
+
+    .gymlink,
+    .gymlink * {
+      color: $gym-orange;
+    }
+
+    // !override / remove padding-bottom
+    .container-fluid {
+      padding-bottom: 0;
+    }
+  }
+
+  // reset default (text) links
+  [role="main"] {
+    a:not([class]) {
+      color: currentColor;
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid currentColor;
+      margin-bottom: -2px;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: currentColor;
+        text-decoration: none;
+        border-bottom: 2px solid currentColor !important;
+      }
+    }
+
+    // --- #main ---
+    .main-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  // --- typography ---
+
+  // headings / margin reset
+
+  [role="main"] {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $gym-black;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    h1 {
+      font-size: 2.25em;
+    }
+
+    h3 {
+      font-size: 1.4em;
+      line-height: 1.15;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    // paragraphs
+    p {
+      font: normal 1.15em/1.45 $gym-text-font-stack;
+      margin-top: 1em;
+      margin-bottom: 0;
+    }
+  }
+
+  // prevent word wrap
+  .nowrap,
+  .no-wrap {
+    white-space: nowrap;
+  }
+
+  #main {
+    // typographical details
+    .all-caps {
+      text-transform: uppercase;
+    }
+
+    .nowrap,
+    .no-wrap {
+      font: inherit;
+      color: inherit;
+    }
+
+    // secondary button
+    .gym-button-secondary {
+      color: $gym-white;
+      background-color: transparent;
+      border: 2px solid $gym-orange;
+
+      b {
+        color: inherit;
+        vertical-align: text-top;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: $gym-light-gray;
+      }
+    }
+  }
+}
+
+// Adds grid support with fallbacks
+@mixin grid-support {
+  // --- legacy columns (inline-block) w/ breakpoints
+  .cols > ul {
+    list-style: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .cols ul > li {
+    overflow: hidden;
+  }
+
+  @media (min-width: 40em) {
+    .cols {
+      padding-bottom: 0;
+      overflow: hidden;
+
+      > ul {
+        margin-left: -.6em;
+        margin-right: -.6em;
+
+        li {
+          display: inline-block;
+          width: 50%;
+          vertical-align: top;
+          box-sizing: border-box;
+          padding-left: .6em;
+          padding-right: .6em;
+          margin-top: 1.2em;
+          margin-right: -4px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 58em) {
+    .cols > ul li {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 64em) {
+    .cols > ul li {
+      width: 33.333333333333333%;
+
+      // Hide 4th panel if it exists
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: 78em) {
+    .cols ul li {
+      width: 25%;
+    }
+
+    .cols ul li:last-child {
+      display: inline-block;
+    }
+  }
+
+  // --- modern columns (grid)
+  @supports (display: grid) {
+
+    .cols > ul {
+      display: grid;
+      grid-template-columns: auto;
+      grid-gap: 1.2em;
+    }
+
+    @media (min-width: 36em) {
+      .cols > ul {
+        grid-template-columns: repeat(auto-fit, minmax(19.25em, 1fr));
+      }
+
+      .cols-max-2 ul {
+        grid-template-columns: repeat(auto-fill, minmax(24em, 1fr));
+      }
+
+      .cols-max-3 ul {
+        grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+      }
+    }
+
+    @media (min-width: 62em) {
+      .cols ul li:nth-child(4) {
+        display: none;
+      }
+    }
+
+    @media (min-width: 78em) {
+      .cols ul li:last-child {
+        display: inherit;
+      }
+    }
+
+    // override -- legacy layout -- start
+
+    .cols,
+    .cols > ul li {
+      overflow: visible;
+    }
+
+    .cols > ul,
+    .cols > ul li {
+      margin-top: 0;
+      margin-right: 0;
+    }
+
+    .cols > ul {
+      margin-left: 0;
+
+      li {
+        display: inherit;
+        width: auto;
+        box-sizing: content-box;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    // override -- legacy layout -- end
+
+  }
+}
+
+// TODO: figure out where to include these in the future
+@mixin root-variables {
+  :root {
+    //* colors **/
+    --gym-orange: #{$gym-orange};
+    --gym-black: #{$gym-black};
+    --gym-white: #{$gym-white};
+    --gym-gray: #{$gym-gray};
+    --gym-dark-gray: #{$gym-dark-gray};
+    --gym-light-gray: #{$gym-light-gray};
+    --gym-light-page-background: #{$gym-light-page-background};
+
+    //* typefaces
+    --gym-font-stack: #{$gym-font-stack};
+    --gym-text-font-stack: #{$gym-text-font-stack};
+  }
+}
+

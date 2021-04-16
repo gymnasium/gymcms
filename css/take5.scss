@@ -1,0 +1,726 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+@include defaults;
+
+// remove border from linked images 
+
+[role="main"] a.img-link:hover {
+  border-bottom: none;
+}
+
+// gym button
+
+[role="main"] .gym-button {
+  width: auto !important; // !override / shrink-wrap
+  padding: 1.2em 2.2em !important; // !override
+  border-radius: 3px;
+}
+
+// gym text
+
+[role="main"] a.gym-link-secondary {
+  color: inherit;
+  border-bottom: 2px solid $gym-orange;
+}
+
+[role="main"] a.gym-link-secondary:hover,
+[role="main"] a.gym-link-secondary:focus {
+  color: inherit;
+  border-bottom: 2px solid $gym-dark-gray !important; // !
+}
+
+// --- #main ---
+
+// !override / reset/rescale Bootstrap (3) handiwork — future-friendly
+
+
+[role="main"] .main-content {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// reset default (text) links
+
+#main .title a,
+#main [class="all-caps"] a {
+  line-height: 1.35;
+}
+
+#main .title a,
+#main a:not([class]) {
+  color: $gym-black;
+  text-decoration: none;
+  padding-bottom: 0.125rem;
+  border-bottom: 1px solid $gym-black;
+  margin-bottom: -0.125rem;
+}
+
+#main .title a:hover,
+#main .title a:focus,
+#main .title a:active,
+#main a:not([class]):hover,
+#main a:not([class]):focus,
+#main a:not([class]):active {
+  color: $gym-black;
+  text-decoration: none;
+  border-bottom: 2px solid $gym-black !important;
+}
+
+#main .title a:after,
+#main [class="all-caps"] a:after,
+#main li > a:not([class]):after {
+  content: "";
+  display: block;
+  padding-top: .5625rem;
+  outline: none;
+}
+
+#featured h3 {
+  letter-spacing: .035em;
+}
+
+[role="main"] h3 {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+// paragraphs
+
+[role="main"] p {
+  font: normal 1.15em/1.5 $gym-text-font-stack;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+// typographical details
+
+#main .all-caps {
+  text-transform: uppercase;
+}
+
+.tutorial {
+  b.all-caps {
+    font-size: 80%;
+    letter-spacing: .05rem;
+
+    + h3 {
+      margin-top: .6rem;
+    }
+  }
+}
+
+#main .no-wrap {
+  color: inherit;
+  white-space: nowrap;
+}
+
+// --- take-5 catalog ---
+
+// --- #about ---
+
+// !override background-color w/ ID selector/combinator
+
+#about {
+  background-color: #d2d2d2;
+  padding-top: 1.6em;
+  padding-bottom: 1.6em;
+  border-bottom: 1px dashed #bbb;
+}
+
+#about * {
+  color: $gym-black;
+}
+
+#about .banner-content {
+  background-color: inherit;
+  padding-bottom: 0;
+}
+
+
+#main h1 {
+  font-size: 2.25em;
+}
+
+#about p {
+  font: normal 1.25em/1.45 $gym-text-font-stack;
+  margin-top: .6em;
+}
+
+#about p strong:first-child {
+  display: block;
+}
+
+main h3 {
+  font-size: 1.4em;
+  line-height: 1.15;
+}
+
+#main .section header p {
+  color: $gym-dark-gray;
+}
+
+// --- section ---
+
+.section {
+  padding-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.section header p {
+  font: normal 1.25em/1.45 $gym-text-font-stack;
+}
+
+.section-content {
+  background: $gym-white;
+  padding: 1.2em;
+  border: 1px solid $gym-gray;
+  border-radius: 3px;
+}
+
+.section-content > header {
+  margin-bottom: 1.6em;
+}
+
+.section header {
+  margin-top: .6em;
+}
+
+.tutorial h3 {
+  line-height: 1.15;
+}
+
+[data-duration] {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-duration]::after {
+  position: absolute;
+  bottom: .5rem;
+  right: .5rem;
+  content: attr(data-duration);
+  font: normal 80%/.9375 $gym-text-font-stack;
+  letter-spacing: .065rem;
+  text-indent: .1rem;
+  color: $gym-white;
+  background-color: $gym-black;
+  padding: .6rem;
+  border: 1px solid $gym-white;
+  border-radius: 2px;
+}
+
+// --- take-5 ---
+.take5 {
+  &--recent-content {
+    border-top: 1px dashed $gym-gray;
+  }
+
+  &--main {
+    background-color: $gym-white;
+
+    .embed-full-width {
+      background-color: #d2d2d2;
+      border-top: 1px solid $gym-dark-gray;
+      border-bottom: 1px solid #bbb;
+    }
+
+    summary {
+      display: list-item;
+      cursor: pointer;
+  
+      &:focus {
+        outline: none;
+      }
+  
+      &:hover b,
+      &:focus b,
+      &:active b {
+        border-bottom: 2px solid $gym-black;
+      }
+  
+      b {
+        font-weight: normal;
+        font-family: sans-serif;
+        vertical-align: -.05em;
+        padding-bottom: 2px;
+        border-bottom: 1px solid $gym-black;
+        margin-bottom: -2px;
+      }
+    }
+  }
+  
+  &--info {
+    padding-top: 1.6em;
+    padding-bottom: 1.8em;
+  }
+  
+  &--hero-content .col-md-4 + .col-md-8 {
+    padding-top: 1.6em;
+  }
+
+  @include breakpoint(62em,min) {
+    &--hero-content .col-md-4 + .col-md-8 {
+      float: right;
+      padding-top: 0;
+    }
+  
+    &--featured {
+      margin-right: 1.2em;
+    }
+  }
+
+  &--featured {
+    > header {
+      margin-bottom: 1.4em;
+    }
+    
+    .tutorial {
+      padding: 0 1em 1.2em;
+      border: 1px solid $gym-gray-2;
+      border-radius: 0 0 3px 3px;
+
+      header {
+        margin-top: 1em;
+      }
+      
+      .artwork {
+        border: 0;
+        border-bottom: 1px solid $gym-gray-2;
+        margin-left: -1em;
+        margin-right: -1em;
+      }
+    }
+  }
+  
+  &--info {
+    .title {
+      font-size: 2.05em;
+      margin-top: -.25rem;
+    }
+
+    .description {
+      font-size: 1.15em;
+    }
+    
+    .instructor {
+      font-size: 1em;
+      margin-top: .6em;
+    }
+  }
+
+  &--resources {
+    margin-top: 1.4em;
+  }
+
+  @at-root #main .take5--featured .title {
+    font-size: 1.85em;
+    margin-top: 0;
+  }
+
+  @include breakpoint(medium, max) {
+
+    &--resources {
+      padding-top: 1.4em;
+      border-top: 1px dashed $gym-gray;
+      margin-top: 1.6em;
+    }
+   
+    &--hero-content .take5--resources {
+      border-top: 0;
+      margin-top: 0;
+    }
+  }
+
+  &--upcoming-list {
+    padding-top: 0;
+
+    .subhead-datetime {
+      margin-bottom: .8rem;
+    }
+    
+    h4 {
+      text-transform: none;
+    }
+  }
+  
+  &--upcoming-list ul,
+  &--topics-menu-list ul {
+    list-style: none url();
+    padding-left: 0;
+  }
+  
+  &--topics-menu-list ul {
+    border-top: 1px dashed $gym-gray;
+    margin-top: 1.4em;
+  }
+  
+  &--upcoming-list li,
+  &--topics-menu-list li {
+    padding-top: .8em;
+    padding-bottom: .8em;
+    border-bottom: 1px dashed $gym-gray;
+    margin-top: 0;
+  }
+
+  &--topics-menu {
+    padding-bottom: 1.4em;
+    border-bottom: 1px dashed $gym-gray;
+
+    &[open] {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  &--hero-content,
+  &--recent-content {
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
+  }
+
+  &--recommended {
+    padding-top: 1.6em;
+    padding-bottom: 1em;
+
+    header:first-child {
+      margin-bottom: 1em;
+    }
+    
+    section header {
+      margin-top: .6em;
+    }
+
+    .tutorial .subhead-topic {
+      margin-top: 1.6rem;
+      margin-bottom: .8rem;
+    }
+
+    &-content {
+      padding-bottom: 1.2em;
+      border-bottom: 1px dashed $gym-gray;
+      border-top: 1px dashed $gym-gray;
+    }
+  }
+
+  &--resources-list {
+    padding-top: 1.2em;
+    border-top: 1px dashed $gym-gray;
+    margin-top: 1.4em;
+  
+    header {
+      margin-bottom: 1em;
+    }
+  
+    ul {
+      list-style: disc;
+      padding-left: 1.2em;
+    }
+  
+    li {
+      margin-top: .6em;
+      line-height: 1.5;
+  
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// add #main for specificity override
+
+#main {
+  .take5--featured > header h2,
+  .take5--recent-tutorials > header h2,
+  .take5--resources h2,
+  .take5--recommended h2 {
+    font-size: 1.55em;
+    letter-spacing: .035rem;
+  }
+}
+
+.course header,
+.tutorial header {
+  margin-top: .8em;
+}
+
+.subhead-topic,
+.subhead-datetime {
+  font: bold .85em/1.15 $gym-font-stack;
+  color: $gym-black;
+  letter-spacing: .05rem;
+  word-spacing: .05rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.tutorial {
+  .subhead-topic,
+  .subhead-datetime {
+    margin-bottom: .6rem;
+  }
+  
+  .subhead-topic {
+    font-weight: 900;
+  }
+}
+
+.subhead-datetime {
+  display: inline-block;
+}
+
+#tutorial-resources p {
+  font-size: 1em;
+  margin-top: .5rem;
+}
+
+
+
+.subhead-datetime time b {
+  display: inline-block;
+}
+
+details.take5--transcript {
+  margin-top: 1.2em;
+}
+
+#tutorial-transcript {
+  ol,
+  ul,
+  blockquote {
+    margin-top: 1em;
+  }
+  
+  li {
+    font-size: 1.15em;
+    line-height: 1.45;
+  }
+  
+  [class*="language-"] {
+    white-space: pre-wrap;
+  }
+  
+  [class*="language-"],
+  [class*="language-"] + p,
+  .example,
+  .example + p {
+    margin-top: 1.6675em;
+  }
+  
+  [data-language] [class*="language-"] {
+    padding-right: 1.2em;
+  }
+  
+  [data-language="markup"]::before {
+    content: "html";
+  }
+  
+  .example {
+    background-color: transparent;
+    padding: 1.2em;
+  }
+  
+  blockquote p {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  
+  blockquote p:first-child {
+    margin-top: 0;
+  }
+}
+
+@include breakpoint(48em, max) {
+
+  .take5--hero-content .take5--resources,
+  #tutorial-topics {
+    margin-top: -.2em;
+  }
+
+  #tutorial-topics summary b::before {
+    content: "Browse" "\00a0";
+  }
+}
+
+@include breakpoint(medium, min) {
+
+  .take5--main .col-md-4 {
+    float: right;
+  }
+
+  #tutorial-resources {
+     margin-top: 0;
+   }
+
+  #tutorial-resources summary,
+  #tutorial-topics summary {
+    pointer-events: none;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  #tutorial-resources summary b,
+  #tutorial-topics summary b {
+    float: left;
+    font: 900 1.55em/1.08 $gym-font-stack;
+    color: $gym-black;
+    letter-spacing: .035rem;
+    text-transform: uppercase;
+    vertical-align: 0;
+    visibility: visible;
+  }
+
+  #tutorial-resources summary:hover b,
+  #tutorial-resources summary:focus b,
+  #tutorial-resources summary:active b,
+  #tutorial-topics summary:hover b,
+  #tutorial-topics summary:focus b,
+  #tutorial-topics summary:active b {
+    border-bottom: 0 none;
+  }
+}
+
+
+// SASS placeholder to combine rules
+%tutorial-artwork {
+  text-align: center;
+  height: 0;
+  background-color: #d2d2d2;
+  padding-bottom: 44.444444444444444%;
+  border: 1px solid $gym-gray-2;
+  overflow: hidden;
+}
+
+.tutorial .artwork,
+.take5--recommended .artwork {
+  @extend %tutorial-artwork;
+}
+
+%tutorial-artwork-img {
+  display: inline-block;
+  margin-top: -5%;
+}
+
+.tutorial .artwork img,
+.take5--recommended .artwork img {
+  @extend %tutorial-artwork-img;
+}
+
+// --- catalog view ---
+.take5 {
+  &--catalog-section {
+    background-color: $gym-light-page-background;
+    padding-top: 0;
+    padding-bottom: 1.4em;
+
+    .take5--recent-tutorials {
+      padding-top: 1.6em;
+    }
+  
+    .tutorial {
+      background-color: $gym-white;
+      border: 1px solid $gym-gray-2;
+      border-radius: 0 0 3px 3px;
+
+      .artwork {
+        border: 0;
+        border-bottom: 1px solid $gym-gray-2;
+      }
+      
+      header {
+        padding: 1em;
+        margin-top: 0;
+      }
+    }
+
+    .cols {
+      ul {
+        margin-top: 0;
+      }
+
+      li {
+        padding-bottom: 0;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.cols-hr {
+  ul {
+    grid-gap: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-top: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    position: relative;
+    top: -1px;
+    border-top: 1px solid #ddd;
+  
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -1px;
+      width: 300%;
+      border-top: 1px solid #ddd;
+    }
+  }
+}
+
+// --- links / buttons ---
+
+// cta / structure
+
+.cta-message {
+  background-color: $gym-white;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  h2 {
+    letter-spacing: .035rem;
+    margin-top: -.3rem;
+  }
+}
+
+.cta,
+.cta-message,
+.cta-message h2 {
+  text-align: center;
+}
+
+.cta-left {
+  text-align: left;
+}
+
+.cta {
+  margin-top: 1.2em;
+}
+
+// back to top
+
+.to-top-link {
+  margin-top: 1.2em;
+
+  b {
+    color: $gym-dark-gray;
+
+    &::before {
+      display: inline-block;
+      content: "↑";
+      font-family: monospace, monospace;
+      vertical-align: baseline;
+      margin-right: .25em;
+    }
+  }
+}
+
+// --- grid layout ---
+
+@include grid-support;

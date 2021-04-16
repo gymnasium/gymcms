@@ -1,0 +1,180 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+@import 'animations';
+
+// !override / reset/rescale Bootstrap (3) handiwork — future-friendly
+
+.hero-promo {
+  position: relative;
+  font-size: 16px;
+  background-color: #2c2c2c;
+
+  // structural spacing
+  .container {
+    background-color: inherit;
+    padding: 1.75em 30px 3.125em;
+  }
+
+  @include breakpoint(medium, max) {
+    &:before {
+      display: block;
+      content: "";
+      height: 100%;
+      background-color: $gym-magenta-dark;
+      border-top: 2.5em solid $gym-magenta;
+      border-bottom: 1.25em solid $gym-magenta-darker;
+      padding-top: 1.875em;
+      animation: 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
+      animation-name: color-blocks;
+    }
+
+    .container {
+      max-width: 32em;
+    }
+  }
+}
+
+
+@include breakpoint(32em, min) {
+  @include breakpoint(large, max) {
+    .hero-content-copy .description {
+      width: 95%;
+    }
+  }
+}
+
+@include breakpoint(medium, max) {
+  @include color-blocks($orientation: vertical, $background: true);
+}
+
+@include breakpoint(medium, min) {
+  .hero-promo {
+    .container {
+      background-color: #2c2c2c;
+      padding-top: 2.75em;
+      padding-bottom: 4.125em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      left: 1.5em;
+      max-width: 54.5em;
+      min-height: 27em;
+
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-left: 6em solid $gym-magenta-dark;
+        border-right: 4em solid $gym-magenta-darker;
+        animation: 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
+        animation-name: color-blocks;
+      }
+    }
+
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background-color: $gym-magenta;
+      animation: 30s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
+      animation-name: color-background;
+    }
+  }
+
+  .hero-content-copy {
+    margin-left: 12em;
+  }
+
+  @include color-background;
+
+  @include color-blocks($orientation: horizontal, $background: false);
+}
+
+// content / copy
+
+.hero-content-copy header h1 {
+  font-size: 2.5em;
+  line-height: 1.15;
+  letter-spacing: .1rem;
+  color: $gym-white;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero-content-copy header h2 {
+  font-size: 2.5em;
+  line-height: 1.15;
+  letter-spacing: .1rem;
+  word-spacing: -.05rem;
+  color: $gym-black;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hero-content-copy .subhead {
+  font-weight: bold;
+  font-size: 1.15em;
+  color: $gym-orange;
+  letter-spacing: 0.125rem;
+  word-spacing: 0;
+  margin-bottom: 2rem;
+}
+
+.hero-content-copy .subhead strong {
+  font-weight: inherit;
+}
+
+.hero-content-copy .description {
+  font-size: 1.4em;
+  color: #e1e1e1;
+  margin-top: 1.6rem;
+}
+
+// cta
+
+.hero-promo .cta {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+// secondary button
+
+.hero-promo a.gym-button-secondary {
+  font-size: 105%;
+  color: $gym-white !important;
+  width: auto !important;
+  background-color: transparent !important;
+  padding: 1.2em 1.4em !important;
+  border: 2px solid $gym-orange !important;
+}
+
+.hero-promo a.gym-button-secondary b {
+  color: inherit;
+  vertical-align: text-top;
+}
+
+.hero-promo a.gym-button-secondary:hover,
+.hero-promo a.gym-button-secondary:focus,
+.hero-promo a.gym-button-secondary:active {
+  border-color: $gym-light-gray !important;
+}
+
+// misc details
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
