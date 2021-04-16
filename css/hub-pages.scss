@@ -679,6 +679,7 @@ footer.card-cta {
 }
 
 .design-systems .row-info ul li {
+  font-family: $gym-text-font-stack;
   padding-left: 0.6rem;
   margin-top: 0.6rem;
 }
@@ -713,7 +714,7 @@ footer.card-cta {
 
   #product-managers .section-content {
     background-image: url("{{ site.url }}{{ site.baseurl }}/img/hub-pages/design-systems/illustrations/product-managers.png");
-    background-size: 37.5%;
+    background-size: 37%;
   }
 
   #everyone .section-content {
