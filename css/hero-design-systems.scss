@@ -1,0 +1,168 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+@import 'animations';
+
+// !override / reset/rescale Bootstrap (3) handiwork — future-friendly
+
+.hero-promo {
+  position: relative;
+  font-size: 16px;
+  background-color: #2c2c2c;
+
+  // structural spacing
+  .container {
+    background-color: inherit;
+    padding: 1.75em 30px 3.125em;
+  }
+
+}
+
+@include breakpoint(small, min) {
+  .hero-promo {
+
+    .container {
+      max-width: 36em;
+    }
+
+  }
+
+}
+
+@include breakpoint(medium, min) {
+  .hero-promo {
+
+    .container {
+      background-color: #2c2c2c;
+      padding-top: 2.75em;
+      padding-bottom: 4.125em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      max-width: 58em;
+      min-height: 27em;
+
+    .hero-content-copy {
+      margin-left: 30em;
+    }
+
+    }
+
+  }
+
+}
+
+// content / copy
+
+.hero-content-copy header {
+
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.15;
+    letter-spacing: .1rem;
+    color: $gym-black;
+    background-color: $gym-teal;
+    padding: 6rem 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+}
+
+@include breakpoint(small, min) {
+
+
+  .hero-content-copy header {
+
+    h1 {
+      background-color: transparent;
+      padding: 0;
+    }
+
+    .sticky {
+      display: inline-block;
+      padding: 8rem 4rem;
+    }
+
+    .design {
+      background-color: $gym-teal;
+      transform: rotate(-1deg);
+    }
+
+    .systems {
+      background-color: $gym-magenta;
+      transform: rotate(3deg) translate(-3.5rem, 1.5rem);
+    }
+
+    .description {
+      margin-top: 3.2rem;
+    }
+
+  }
+
+}
+
+@include breakpoint(medium, min) {
+
+  .hero-content-copy header {
+
+    .sticky {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .design {
+      transform: rotate(-1deg) translate(0, 5.5rem);
+    }
+
+    .systems {
+      transform: rotate(3deg) translate(21.5rem, 7rem);
+    }
+
+  }
+
+}
+
+.hero-content-copy .subhead strong {
+  font-weight: inherit;
+}
+
+.hero-content-copy .description {
+  font-size: 1.4em;
+  color: #fff;
+  margin-top: 2.4rem;
+}
+
+// cta
+
+.hero-promo .cta {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+// secondary button
+
+.hero-promo a.gym-button {
+  font-size: 105%;
+  color: $gym-white !important;
+  width: auto !important;
+  padding: 1.2em 1.4em !important;
+}
+
+.hero-promo a.gym-button b {
+  color: inherit;
+  vertical-align: text-top;
+}
+
+// misc details
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
