@@ -5,12 +5,6 @@
 
 @include defaults;
 
-// remove border from linked images
-
-[role="main"] a.img-link:hover {
-  border-bottom: none;
-}
-
 // gym button
 
 [role="main"] .gym-button {
@@ -404,6 +398,11 @@ main h3 {
       border-bottom: 1px dashed $gym-gray;
       border-top: 1px dashed $gym-gray;
     }
+
+    .cols-hr ul {
+      padding-top: 1.2em;
+      padding-bottom: 1.2em;
+    }
   }
 
   &--resources-list {
@@ -659,20 +658,22 @@ details.take5--transcript {
     overflow: hidden;
   }
 
-  li {
-    position: relative;
-    top: -1px;
-    border-top: 1px solid #ddd;
+// TODO: Rework or remove (related to layout fallback mixin)
 
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: -1px;
-      width: 300%;
-      border-top: 1px solid #ddd;
-    }
-  }
+//   li {
+//     position: relative;
+//     top: -1px;
+//     border-top: 1px solid #ddd;
+//
+//     &::before {
+//       content: "";
+//       display: block;
+//       position: absolute;
+//       top: -1px;
+//       width: 300%;
+//       border-top: 1px solid #f00;
+//     }
+//   }
 }
 
 // --- links / buttons ---
