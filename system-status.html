@@ -208,6 +208,77 @@ main label a:not([class]):active,
 }
 
 /*
+https://github.com/gymnasium/tracker/issues/143
+*/
+
+#main .problems-wrapper {
+  font-size: 16px;
+}
+
+#main .problem-header {
+  font: 900 2.25em "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#main .problem-progress {
+  font: bold 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 5rem;
+}
+
+#main .problem-progress + * + main .message:not([hidden]),
+#main .problem .solution-span > span {
+  margin-top: -2rem;
+  margin-bottom: 5rem;
+}
+
+#main .problem .response-fieldset-legend {
+  font-size: inherit;
+  border-bottom: 0;
+}
+
+#main .choicegroup legend {
+  margin-bottom: 1rem;
+}
+
+#main .problem .response-fieldset-legend img {
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  padding: 1rem;
+  border: 1px solid #999;
+  margin-top: 1.6rem;
+}
+
+#main .problem .choicegroup_correct:before,
+#main .problem .choicetextgroup_correct:before {
+  margin-top: 4px;
+}
+
+#main .problem .choicegroup_incorrect:before,
+#main .problem .choicetextgroup_incorrect:before {
+  margin-top: -3px;
+}
+
+#main .message h2 {
+  text-transform: uppercase;
+}
+
+#main .message p a:not(.btn),
+#main .message  p a:visited:not(.btn) {
+  font: inherit;
+}
+
+/* pre-hawthorn markup patterns */
+
+#main .problem strong + .wrapper-problem-response {
+  margin-top: 1rem;
+}
+
+#main .problem strong + pre {
+  margin-top: 1.6rem;
+}
+
+/*
 https://github.com/gymnasium/tracker/issues/127
 */
 
@@ -223,7 +294,7 @@ https://github.com/gymnasium/tracker/issues/127
 }
 
 #passwordreset-form h2.section-title {
-  font: 900 2.571428571428571em/1 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  font: 900 2.571428571428571em/1 "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
   color: #333;
   letter-spacing: 0.01em;
   word-spacing: 0.04em;
@@ -257,7 +328,7 @@ https://github.com/gymnasium/tracker/issues/127
 
 #passwordreset-form .action-primary {
   width: 100%;
-  font: bold 1.5em/1 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  font: bold 1.5em/1 "brandon-grotesque", "Helvetica Neue", Helvetica, sans-serif;
   background-color: #f8971d;
   padding: 1em;
   border-radius: .125em;
