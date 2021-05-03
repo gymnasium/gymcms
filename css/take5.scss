@@ -5,12 +5,6 @@
 
 @include defaults;
 
-// remove border from linked images 
-
-[role="main"] a.img-link:hover {
-  border-bottom: none;
-}
-
 // gym button
 
 [role="main"] .gym-button {
@@ -230,17 +224,17 @@ main h3 {
     summary {
       display: list-item;
       cursor: pointer;
-  
+
       &:focus {
         outline: none;
       }
-  
+
       &:hover b,
       &:focus b,
       &:active b {
         border-bottom: 2px solid $gym-black;
       }
-  
+
       b {
         font-weight: normal;
         font-family: sans-serif;
@@ -251,12 +245,12 @@ main h3 {
       }
     }
   }
-  
+
   &--info {
     padding-top: 1.6em;
     padding-bottom: 1.8em;
   }
-  
+
   &--hero-content .col-md-4 + .col-md-8 {
     padding-top: 1.6em;
   }
@@ -266,17 +260,18 @@ main h3 {
       float: right;
       padding-top: 0;
     }
-  
+
     &--featured {
       margin-right: 1.2em;
     }
   }
 
-  &--featured {
+  &--featured,
+  &--recent-tutorials {
     > header {
       margin-bottom: 1.4em;
     }
-    
+
     .tutorial {
       padding: 0 1em 1.2em;
       border: 1px solid $gym-gray-2;
@@ -285,7 +280,7 @@ main h3 {
       header {
         margin-top: 1em;
       }
-      
+
       .artwork {
         border: 0;
         border-bottom: 1px solid $gym-gray-2;
@@ -294,7 +289,7 @@ main h3 {
       }
     }
   }
-  
+
   &--info {
     .title {
       font-size: 2.05em;
@@ -304,7 +299,7 @@ main h3 {
     .description {
       font-size: 1.15em;
     }
-    
+
     .instructor {
       font-size: 1em;
       margin-top: .6em;
@@ -327,7 +322,7 @@ main h3 {
       border-top: 1px dashed $gym-gray;
       margin-top: 1.6em;
     }
-   
+
     &--hero-content .take5--resources {
       border-top: 0;
       margin-top: 0;
@@ -340,23 +335,23 @@ main h3 {
     .subhead-datetime {
       margin-bottom: .8rem;
     }
-    
+
     h4 {
       text-transform: none;
     }
   }
-  
+
   &--upcoming-list ul,
   &--topics-menu-list ul {
     list-style: none url();
     padding-left: 0;
   }
-  
+
   &--topics-menu-list ul {
     border-top: 1px dashed $gym-gray;
     margin-top: 1.4em;
   }
-  
+
   &--upcoming-list li,
   &--topics-menu-list li {
     padding-top: .8em;
@@ -388,7 +383,7 @@ main h3 {
     header:first-child {
       margin-bottom: 1em;
     }
-    
+
     section header {
       margin-top: .6em;
     }
@@ -403,26 +398,31 @@ main h3 {
       border-bottom: 1px dashed $gym-gray;
       border-top: 1px dashed $gym-gray;
     }
+
+    .cols-hr ul {
+      padding-top: 1.2em;
+      padding-bottom: 1.2em;
+    }
   }
 
   &--resources-list {
     padding-top: 1.2em;
     border-top: 1px dashed $gym-gray;
     margin-top: 1.4em;
-  
+
     header {
       margin-bottom: 1em;
     }
-  
+
     ul {
       list-style: disc;
       padding-left: 1.2em;
     }
-  
+
     li {
       margin-top: .6em;
       line-height: 1.5;
-  
+
       &:first-child {
         margin-top: 0;
       }
@@ -462,7 +462,7 @@ main h3 {
   .subhead-datetime {
     margin-bottom: .6rem;
   }
-  
+
   .subhead-topic {
     font-weight: 900;
   }
@@ -493,41 +493,41 @@ details.take5--transcript {
   blockquote {
     margin-top: 1em;
   }
-  
+
   li {
     font-size: 1.15em;
     line-height: 1.45;
   }
-  
+
   [class*="language-"] {
     white-space: pre-wrap;
   }
-  
+
   [class*="language-"],
   [class*="language-"] + p,
   .example,
   .example + p {
     margin-top: 1.6675em;
   }
-  
+
   [data-language] [class*="language-"] {
     padding-right: 1.2em;
   }
-  
+
   [data-language="markup"]::before {
     content: "html";
   }
-  
+
   .example {
     background-color: transparent;
     padding: 1.2em;
   }
-  
+
   blockquote p {
     font-size: inherit;
     line-height: inherit;
   }
-  
+
   blockquote p:first-child {
     margin-top: 0;
   }
@@ -619,7 +619,7 @@ details.take5--transcript {
     .take5--recent-tutorials {
       padding-top: 1.6em;
     }
-  
+
     .tutorial {
       background-color: $gym-white;
       border: 1px solid $gym-gray-2;
@@ -629,7 +629,7 @@ details.take5--transcript {
         border: 0;
         border-bottom: 1px solid $gym-gray-2;
       }
-      
+
       header {
         padding: 1em;
         margin-top: 0;
@@ -657,21 +657,23 @@ details.take5--transcript {
     margin-top: 0;
     overflow: hidden;
   }
-  
-  li {
-    position: relative;
-    top: -1px;
-    border-top: 1px solid #ddd;
-  
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: -1px;
-      width: 300%;
-      border-top: 1px solid #ddd;
-    }
-  }
+
+// TODO: Rework or remove (related to layout fallback mixin)
+
+//   li {
+//     position: relative;
+//     top: -1px;
+//     border-top: 1px solid #ddd;
+//
+//     &::before {
+//       content: "";
+//       display: block;
+//       position: absolute;
+//       top: -1px;
+//       width: 300%;
+//       border-top: 1px solid #f00;
+//     }
+//   }
 }
 
 // --- links / buttons ---
