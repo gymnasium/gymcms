@@ -1,7 +1,9 @@
 ---
 course_ID: GYM-103
 title: "UX Fundamentals"
+date: 2019-10-28T00:00:00-04:00
 course_type: full
+live: true
 url: https://thegymnasium.com/courses/GYM/103/0/about
 topic: "User Experience"
 short_description: "Learn how to apply user-centered design principles to improve your website and mobile app design. A must-take course for anyone working in web design and development."

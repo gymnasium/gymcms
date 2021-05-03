@@ -1,7 +1,9 @@
 ---
 course_ID: GYM-005
 title: "Introducing Sketch for UX and UI"
+date: 2019-10-28T00:00:00-04:00
 course_type: short
+live: true
 url: https://thegymnasium.com/courses/GYM/005/0/about
 topic: "Prototyping"
 short_description: "Learn how to use Sketch tools and features in order to build an interactive prototype for a mobile website."
