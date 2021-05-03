@@ -1,0 +1,66 @@
+---
+layout: raw
+permalink: /courses/gym-shorts/course-list-recent
+---
+
+{%- assign pubdates = ""  | split: ", " -%}
+{%- assign publish_order = ""  | split: ", " -%}
+
+{%- assign recent = "" | split: ", " -%}
+{%- assign upcoming = ""  | split: ", " -%}
+
+{% assign catalog = site.data.courses | sort %}
+
+{% for course_hash in catalog %}
+  {% assign item = course_hash[1] %}
+  {%- assign pubdates = pubdates | push: item.date -%}
+{% endfor %}
+
+{%- assign pubdates_sorted = pubdates | sort -%}
+
+{%- for pubdate in pubdates_sorted -%}
+
+  {% for course_hash in catalog %}
+    {% assign item = course_hash[1] %}
+    {%- if item.date == pubdate -%}
+      {%- assign publish_order = publish_order | push: item.course_ID -%}
+    {%- endif -%}
+  {% endfor %}
+
+{%- endfor -%}
+
+{%- assign publish_order = publish_order | uniq | join: ', '|split: ', '  -%}
+
+{%- for item in publish_order -%}
+  {%- if site.data.courses[item].live == true and site.data.courses[item].course_type == "short" -%}
+    {%- assign recent = recent | push: site.data.courses[item].course_ID -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign recent = recent | reverse -%}
+
+{%- for item in recent -%}
+  {%- assign recent_short = site.data.courses[item] -%}
+
+  <li class="course-item" data-course-id="{{ recent_short.course_ID | remove: 'GYM-' }}">
+    <article class="row">
+      <figure class="col-md-4">
+        <a href="{{ recent_short.title | slugify | prepend: base_path }}">
+          <img class="img-responsive" src="{{ site.url }}{{ site.baseurl }}{{ recent_short.poster_art }}" alt="{{ recent_short.course_ID | remove: 'gym-' }} {{ recent_short.title }} Cover Image">
+        </a>
+        <figcaption>
+          <a href="{{ recent_short.title | slugify | prepend: base_path }}" class="gym-button"><b>Watch Now</b></a>
+        </figcaption>
+      </figure>
+      <div class="col-md-8 course-description">
+        <header>
+          <h2>{{ recent_short.topic }}</h2>
+          <h1>{{ recent_short.title }}</h1>
+        </header>
+        <p>
+          {{ recent_short.short_description }}
+        </p>
+      </div>
+    </article>
+  </li>
+{%- endfor -%}

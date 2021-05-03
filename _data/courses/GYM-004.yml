@@ -1,7 +1,9 @@
 ---
 course_ID: GYM-004
 title: "Creating A WordPress Theme"
+date: 2019-10-28T00:00:00-04:00
 course_type: short
+live: true
 url: https://thegymnasium.com/courses/GYM/004/0/about
 topic: "Web Design & Development"
 short_description: "Learn how to convert your HTML/CSS design into a WordPress website. Discover how to set up a local development environment, and add WordPress tags to your design."
