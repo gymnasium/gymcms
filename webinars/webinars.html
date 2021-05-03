@@ -60,9 +60,9 @@ layout: raw
           {% when "development" %}
             {%- assign webinar_url = item.permalink | prepend: '/' | prepend: site.url  -%}
           {% when "staging" %}
-            {%- assign webinar_url = item.permalink | remove_first: 'static'| prepend: 'https://courses.gymna.si' -%}
+            {%- assign webinar_url = item.permalink | prepend: 'https://courses.gymna.si' -%}
           {% when "production" %}
-            {%- assign webinar_url = item.permalink | remove_first: 'static'| prepend: 'https://thegymnasium.com' -%}
+            {%- assign webinar_url = item.permalink | prepend: 'https://thegymnasium.com' -%}
         {% endcase %}
 
       {%- endif -%}
