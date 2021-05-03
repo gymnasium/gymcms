@@ -240,6 +240,8 @@
   }
 }
 
+// TODO: Rework legacy column layout fallback
+
 // Adds grid support with fallbacks
 @mixin grid-support {
   // --- legacy columns (inline-block) w/ breakpoints
@@ -363,6 +365,10 @@
         box-sizing: content-box;
         padding-left: 0;
         padding-right: 0;
+
+        &::before {
+          content: normal;
+        }
       }
     }
     // override -- legacy layout -- end
@@ -387,4 +393,3 @@
     --gym-text-font-stack: #{$gym-text-font-stack};
   }
 }
-
