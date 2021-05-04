@@ -5,6 +5,7 @@ date: 2019-10-28T00:00:00-04:00
 course_type: short
 live: true
 url: https://thegymnasium.com/courses/course-v1:GYM+011+0/about
+poster_art: /img/course-artwork/png/gym-011.png
 topic: "Web Design & Development"
 short_description: "In this course, you will get a familiarity with all aspects of the built-in developer tools within the Chrome browser. Understanding how to use these tools will speed up your development time and help you create bug-free, high-performing pages and web applications."
 instructor: kpeters
