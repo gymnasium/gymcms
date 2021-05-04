@@ -13,14 +13,14 @@ Displays all generated pages.
 
 {% assign sortedpages = site.pages | sort: "url" %}
 
-### CSS
+### CSS/CSS Maps
 {% for page in sortedpages %}
   {%- if page.url contains "css" %}
   - [{{ page.url }}]({{ page.url }})
   {% endif -%}
 {% endfor %}
 
-### JS
+### JS/JSON
 {% for page in sortedpages %}
   {% if page.url contains "js" %}
   - [{{ page.url }}]({{ page.url }})
