@@ -32,6 +32,10 @@ video_ID: {{ webinar.video_ID }}
 {% endif %}
 <title>{{ page_title }}</title>
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/webinars.css">
 
 <div class="container">
@@ -46,38 +50,38 @@ video_ID: {{ webinar.video_ID }}
         {% else %}
         <h2>Registration</h2>
         {% endif %}
-    </header>
+      </header>
 
       <header class="event-banner-hero event-theme-{{ webinar.content_category }}">
       <h1>{{ webinar.event_title }}</h1>
       <h2>{{ webinar.event_guests }}</h2>
 
       {% if webinar.video %}
-      <h3 class="datetime">{{ webinar.event_date | date: "%B %-d, %Y"}}</h3>
-        {% else %}
+        <h3 class="datetime">{{ webinar.event_date | date: "%B %-d, %Y"}}</h3>
+      {% else %}
         <h3 class="datetime">{{ webinar.event_date | date: "%A, %B %-d, %Y at " }}{{ webinar.event_time }}</h3>
-        {% endif %}
+      {% endif %}
     </header>
 
       <p class="call-out">{{ webinar.short_description }}</p>
 
       {% if webinar.register %}
-      {% include webinar-registration-form.html %}
+        {% include webinar-registration-form.html %}
 
-        {% else %}
-            {% if webinar.video and webinar.video_ID %}
+      {% else %}
+          {% if webinar.video and webinar.video_ID %}
             <p><strong>This webinar recording is now available.</strong>
             {% include event-video.html %}
-                {% else %}
-                <p class="call-out"><strong>This webinar recording will be available soon…</strong>
-            {% endif %}
+          {% else %}
+            <p class="call-out"><strong>This webinar recording will be available soon…</strong>
+          {% endif %}
 
       {% endif %}
 
       {% if webinar.resources and webinar.video and webinar.video_ID %}
-      {% include webinar-resources.html %}
+        {% include webinar-resources.html %}
       {% else %}
-      <!-- There are no resources for this webinar -->
+        <!-- There are no resources for this webinar -->
       {% endif %}
 
       {{ content }}
@@ -96,20 +100,24 @@ video_ID: {{ webinar.video_ID }}
         <h1>Guest Speakers</h1>
         {%- endif -%}
       </header>
-          {% for speaker in webinar.speaker %}
-          {%- include webinar-bio.html bio=speaker -%}
-          {% endfor %}
+      {% for speaker in webinar.speaker %}
+        {%- include webinar-bio.html bio=speaker -%}
+      {% endfor %}
 
       <header>
         <h1>Host</h1>
       </header>
       {% for host in webinar.host %}
-      {%- include webinar-bio.html bio=host -%}
+        {%- include webinar-bio.html bio=host -%}
       {% endfor %}
     </aside>
 
   </main>
 </div>
+
+    </div><!-- .col-md-12 -->
+  </div><!-- .row -->
+</div><!-- .container -->
 
 <script src="{{ site.url }}{{ site.baseurl }}/js/functions.js" async></script>
 
