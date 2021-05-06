@@ -1,5 +1,5 @@
 ---
-layout: raw
+layout: wrapper-full-white
 permalink: /csr-policy/
 ---
 # Corporate Social Responsibility
