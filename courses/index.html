@@ -74,9 +74,8 @@ permalink: /courses/
         </section>
       </div>
       <div class="col-md-3 sidebar">
-
-        <!-- TODO: pull in upcoming courses accordingly -->
-        <!-- ${gymcms.render('upcoming-courses')} -->
+        <!-- Get Upcoming/Featured Courses Sidebar -->
+        {%- include_relative upcoming.html -%}
       </div>
     </div> 
   </main>
