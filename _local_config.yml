@@ -15,6 +15,9 @@ exclude:
   - 'netlify.toml'
   - '.jekyll-cache'
 
+include:
+  - '_redirects'
+
 repository: gymnasium/gymcms
 
 # Conversion
