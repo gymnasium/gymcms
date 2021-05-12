@@ -1,8 +1,11 @@
 ---
 course_ID: GYM-007
 title: "Structuring and Organizing HTML5 Forms"
+date: 2019-10-28T00:00:00-04:00
 course_type: short
+live: true
 url: https://thegymnasium.com/courses/GYM/007/0/about
+poster_art: /img/course-artwork/png/gym-007.png
 topic: "Web Design & Development"
 short_description: "Learn some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes."
 instructor: jkramer

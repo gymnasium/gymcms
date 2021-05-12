@@ -1,0 +1,24 @@
+---
+course_ID: GYM-5037
+title: "Understanding Document Structure Accessibility"
+date: 2020-09-02T00:00:00-04:00
+course_type: take5
+url: /take5/GYM-5037/
+poster_art: /img/take5/posters/gym-5037.jpg
+live: true
+instructor: "Clarissa Peterson"
+topic: "Accessibility"
+video_ID: qfdOIriWM90
+video_duration: "3:52"
+featured: false
+short_description: "Learn how to leverage the inherent accessibility of HTML documents in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
+related_content:
+- label: "HTML: A good basis for accessibility"
+  url: "https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML"
+- label: "Accessibility and web performance are not features, they’re the baseline by Robin Rendle"
+  url: "https://css-tricks.com/accessibility-and-web-performance-are-not-features-theyre-the-baseline/"
+- label: "Provide accessible alternatives - don’t rely on PDF/Word by The Centre for Excellence in Universal Design"
+  url: "http://universaldesign.ie/Technology-ICT/Web-accessibility-techniques/Content-provider-s-introduction-and-index/CP-4-Provide-accessible-alternatives-don-t-rely-on-PDF-Word.html"
+- label: "Gymnasium: Using CSS Generated Content for Links"
+  url: "https://thegymnasium.com/take5/using-css-generated-content-for-links"
+---

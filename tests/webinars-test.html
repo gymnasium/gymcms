@@ -56,7 +56,7 @@ Webinar Count: {{ site.data.webinars | size }}
     {%- if item.event_ID == "web0005-state-of-responsive-web-design" -%}
         {%- assign gym_path = "webinars/state-of-responsive-web-design"-%}
     {%- else -%}
-        {%- assign gym_path = item.permalink | remove: "static/"-%}
+        {%- assign gym_path = item.permalink | remove: "/"-%}
     {%- endif -%}
     <tr>
         <td><strong>{{ item.event_title | strip_html }}</strong></td>

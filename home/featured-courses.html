@@ -1,13 +1,12 @@
 ---
 layout: raw
-permalink: /static/home/featured-courses/
+permalink: /home/featured-courses/
 featured_courses: GYM-017, GYM-018, GYM-019, GYM-020
 ---
 
 {%- assign featured_courses = page.featured_courses  | split: ", " -%}
 
 {%- assign item_count = featured_courses | size -%}
-<!-- Featured Courses -->
 <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/featured-courses.css">
 
 <div class="section-featured-courses">

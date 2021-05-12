@@ -1,0 +1,146 @@
+---
+permalink: /webinars/
+layout: raw
+---
+
+{%- if jekyll.environment == "development" -%}
+  {%- include take5/test-top.html -%}
+{%- endif -%}
+
+{%- assign webinars_ascending_date = "" | split: ", " -%}
+{%- assign webinars_descending_date = "" | split: ", " -%}
+
+{%- assign sorted_webinars = site.data.webinars | sort: event_date -%}
+
+{% for webinar_list in sorted_webinars %}
+{% assign webinar = webinar_list[1] %}
+{%- assign webinars_ascending_date = webinars_ascending_date | push: webinar.event_ID -%}
+{% endfor %}
+
+{%- assign webinars_descending_date = webinars_ascending_date | reverse -%}
+
+<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/webinars.css">
+
+<main id="main" role="main">
+
+<header class="webinars--about" id="about">
+  <div class="container">
+    <h1>Webinars</h1>
+    <p>Insightful conversations with trailblazers in the web community.</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="cols">
+    <ul>
+
+    {%- for webinar in webinars_descending_date -%}
+      {%- assign item = site.data.webinars[webinar] -%}
+
+      {%- assign complete_webinar_title = item.event_title | strip_html -%}
+      {%- assign decolonized_webinar_title = complete_webinar_title | split: ":"  -%}
+      {%- assign webinar_title = decolonized_webinar_title[0] -%}
+      {%- assign webinar_subtitle = decolonized_webinar_title[1] -%}
+      {%- assign speaker_1 = item.speaker[0]  -%}
+      {%- assign speaker_2 = item.speaker[1]  -%}
+
+      {%- if item.event_ID == "web0005-state-of-responsive-web-design" -%}
+        {% case jekyll.environment %}
+          {% when "development" %}
+            {%- assign webinar_url = '/webinars/state-of-responsive-design'  -%}
+          {% when "staging" %}
+            {%- assign webinar_url = 'https://courses.gymna.si/webinars/state-of-responsive-web-design' -%}
+          {% when "production" %}
+            {%- assign webinar_url = 'https://thegymnasium.com/webinars/state-of-responsive-web-design' -%}
+        {% endcase %}
+
+      {%- else -%}
+
+        {% case jekyll.environment %}
+          {% when "development" %}
+            {%- assign webinar_url = item.permalink | prepend: '/' | prepend: site.url  -%}
+          {% when "staging" %}
+            {%- assign webinar_url = item.permalink | prepend: 'https://courses.gymna.si' -%}
+          {% when "production" %}
+            {%- assign webinar_url = item.permalink | prepend: 'https://thegymnasium.com' -%}
+        {% endcase %}
+
+      {%- endif -%}
+
+
+      {% if item.register %}
+      <li class="webinar" id="featured-webinar">
+      {% else %}
+      <li class="webinar">
+      {% endif %}
+        <div class="webinar--card {{ item.content_category }}">
+          <div class="webinar--main">
+            <header>
+              <p class="all-caps topic"><b>{{ item.content_category }}</b></p>
+              <h2 class="title">{{ webinar_title }}{% if webinar_subtitle %}<span class="subhead"><span class="visuallyhidden">:</span> {{ webinar_subtitle }}</span>{%- endif -%}</h2>
+              {%- if item.register -%}
+              <p class="short-description">{{ item.short_description }}</p>
+              <p class="datetime">Live streaming on <strong>{{ item.event_date | date: "%A, %B %-d, %Y at " }}{{ item.event_time }}</strong></p>
+              {%- endif -%}
+            </header>
+            <div class="webinar--info">
+            {%- comment -%}
+              {%- if jekyll.environment == "development" -%}
+                <pre>({{ complete_webinar_title }})</pre>
+                <img src="{{ site.url }}{{ site.baseurl }}/img/social/webinars/{{ webinar.event_ogimage }}">
+              {%- endif -%}
+            {%- endcomment -%}
+            {%- capture headcount -%}{{ item.speaker | size }}{%- endcapture -%}
+              {%- if item.register -%}
+              {%- if headcount == "1" -%}
+              <p>With guest speaker:</p>
+              {%- else -%}
+              <p>With guest speakers:</p>
+              {%- endif -%}
+              <ul id="guest-speaker-headshots">
+              {%- for speaker in item.speaker -%}
+              {%- if item.register and site.data.bios[speaker].headshot != null -%}
+                <li>
+                  <figure>
+                    <img src="{{ site.url }}{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
+                    <figcaption>{{ site.data.bios[speaker].name }}</figcaption>
+                  </figure>
+                </li>
+              {%- endif -%}
+              {%- endfor -%}
+              </ul>
+              {% else %}
+              {%- if headcount == "1" -%}
+              <p class="guest-speakers">With <strong>{{ site.data.bios[speaker_1].name }}</strong></p>
+              {%- else -%}
+              <p class="guest-speakers">With <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
+              {%- endif -%}
+              {%- endif -%}
+            </div>
+          </div>
+          <div class="webinar--cta">
+            {%- if item.register -%}
+            <a class="gym-button" href="{{ webinar_url }}">
+              <b>Register to Attend</b>
+            </a>
+            {% elsif item.video %}
+            <a class="gym-button gym-button-secondary" href="{{ webinar_url }}">
+              <b>Watch Recording</b>
+            </a>
+            {% else %}
+            <p><strong>Recording available soon…</strong></p>
+            {%- endif -%}
+          </div>
+        </div>
+      </li>
+    {%- endfor -%}
+
+    </ul>
+  </div>
+</div>
+
+</main>
+
+{%- if jekyll.environment == "development" -%}
+  {%- include take5/test-bottom.html -%}
+{%- endif -%}

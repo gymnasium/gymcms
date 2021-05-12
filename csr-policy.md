@@ -1,6 +1,6 @@
 ---
-layout: raw
-permalink: /static/csr-policy/
+layout: wrapper-full-white
+permalink: /csr-policy/
 ---
 # Corporate Social Responsibility
 

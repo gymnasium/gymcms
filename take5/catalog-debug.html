@@ -1,6 +1,6 @@
 ---
-layout: raw
-permalink: /static/take5/debug
+layout: wrapper-full-default
+permalink: /take5/debug
 ---
 
 {%- comment -%}
@@ -14,7 +14,7 @@ permalink: /static/take5/debug
 <h1 class="title all-caps">Take 5 Catalog Page</h1>
 
 
-{% assign sorted_catalog = site.data.take5s | sort %}
+{% assign sorted_catalog = site.data.take5 | sort %}
 
 {% for take5_hash in sorted_catalog %}
 {% assign item = take5_hash[1] %}

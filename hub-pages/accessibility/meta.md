@@ -1,6 +1,6 @@
 ---
 layout: meta
-permalink: /static/hub-pages/meta/accessibility-collection-meta/
+permalink: /accessibility-collection/meta/
 page_title: Accessibility | Gymnasium"
 og_title: "Accessibility Collection"
 og_description: "Explore our free collection of web accessibility courses, tutorials, resources, and services."

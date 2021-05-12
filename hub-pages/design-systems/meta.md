@@ -1,6 +1,6 @@
 ---
 layout: meta
-permalink: /static/hub-pages/design-systems/meta/
+permalink: /design-systems/meta/
 page_title: "Design Systems | Gymnasium"
 og_title: "Design Systems Collection"
 og_description: "Explore our free collection of design systems courses taught by Ethan Marcotte."

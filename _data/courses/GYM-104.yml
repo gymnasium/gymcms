@@ -1,8 +1,11 @@
 ---
 course_ID: GYM-104
 title: "JavaScript Foundations"
+date: 2019-10-28T00:00:00-04:00
 course_type: full
+live: true
 url: https://thegymnasium.com/courses/GYM/104/0/about
+poster_art: /img/course-artwork/png/gym-104.png
 topic: "JavaScript"
 short_description: "Learn the fundamentals of programming with JavaScript and get started on the road to its mastery."
 instructor: kpeters

@@ -1,0 +1,26 @@
+---
+course_ID: GYM-5013
+title: "Working with the Timeline in InVision Studio"
+date: 2019-11-06T00:00:00-04:00
+course_type: take5
+url: /take5/GYM-5013/
+poster_art: /img/take5/posters/gym-5013.jpg
+live: true
+instructor: "Jeremy Osborn"
+topic: "Prototyping"
+video_ID: QxN2wVlBTTw
+video_duration: "4:51"
+featured: false
+short_description: "Learn how to create animated micro-interactions using InVision Studio’s timeline feature in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
+project_file_source: GitHub
+project_files:
+- label: "Lesson Files"
+  url: "https://gymnasium.github.io/take5/gym-5013.zip"
+related_content:
+- label: "Official Invision Studio documentation for Advanced Animation"
+  url: "https://support.invisionapp.com/hc/en-us/articles/360027857151"
+- label: "The Basics of Easing by Paul Lewis"
+  url: "https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing"
+- label: "Transitional Interfaces by Pasquale D’Silva"
+  url: "https://medium.com/@pasql/transitional-interfaces-926eb80d64e3"
+---
