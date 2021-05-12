@@ -1,8 +1,11 @@
 ---
 course_ID: GYM-009
 title: "Creating A Drupal 8 Theme"
+date: 2019-10-28T00:00:00-04:00
 course_type: short
+live: true
 url: https://thegymnasium.com/courses/GYM/009/0/about
+poster_art: /img/course-artwork/png/gym-009.png
 topic: "Web Design & Development"
 short_description: "This course will teach you how to create themes for Drupal 8. Specifically, you will learn how to install a local development environment for Drupal 8, and use the new TWIG templating engine to customize the structure and style of your theme."
 instructor: ghodgkinson

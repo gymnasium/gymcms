@@ -1,8 +1,11 @@
 ---
 course_ID: GYM-003
 title: "Grid Layout in Bootstrap 3"
+date: 2019-10-28T00:00:00-04:00
 course_type: short
+live: true
 url: https://thegymnasium.com/courses/GYM/003/0/about
+poster_art: /img/course-artwork/png/gym-003.png
 topic: "Web Design & Development"
 short_description: "Get up to speed with the Twitter Bootstrap's grid layout system and learn how to build a responsive layout that looks great on multiple screen sizes and devices."
 instructor: josborn

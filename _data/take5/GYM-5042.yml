@@ -1,0 +1,26 @@
+---
+course_ID: GYM-5042
+title: "Understanding the Role of Color in Accessibility"
+date: 2020-10-13T00:00:00-04:00
+course_type: take5
+url: /take5/GYM-5042/
+poster_art: /img/take5/posters/gym-5042.jpg
+live: true
+instructor: "Clarissa Peterson"
+topic: "Accessibility"
+video_ID: z1z-kfVtFpk
+video_duration: "4:40"
+featured: false
+short_description: "Take the guesswork out of designing for color blindness and learn how to improve the accessibility of your websites in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
+related_content:
+- label: "Coblis - Color Blindness Simulator"
+  url: "https://www.toptal.com/designers/colorfilter"
+- label: "Toptal Color Blind Filter"
+  url: "https://www.color-blindness.com/coblis-color-blindness-simulator/"
+- label: "Resources for Designing for the Colorblind"
+  url: "https://wearecolorblind.com/resources/collection/resources-for-designing-for-the-colorblind/"
+- label: "ColorBrewer - Color Advice for Cartography"
+  url: "https://colorbrewer2.org"
+- label: "Color Oracle"
+  url: "https://colororacle.org"
+---

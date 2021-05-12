@@ -1,6 +1,6 @@
 ---
 layout: meta
-permalink: /static/hub-pages/collections/meta/
+permalink: /collections/meta/
 page_title: "Collections | Gymnasium"
 og_title: "Collections"
 og_description: "Explore a specific topic and learn practical skills with free courses, tutorials, and resources."

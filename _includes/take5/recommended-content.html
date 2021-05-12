@@ -50,9 +50,9 @@
 
 {%- assign recommendations = ""  | split: ", " -%}
 {%- assign this_tutorial = page.course_ID -%}
-{%- assign this_topic = site.data.take5s.[page.course_ID].topic -%}
+{%- assign this_topic = site.data.take5.[page.course_ID].topic -%}
 
-{% assign sorted_catalog = site.data.take5s | sort %}
+{% assign sorted_catalog = site.data.take5 | sort %}
 
 {% for take5_hash in sorted_catalog reversed %}
 
@@ -74,9 +74,9 @@
  {%- assign rec2 = random_recommendations[1] -%}
  {%- assign rec3 = random_recommendations[2] -%}
 
-{% assign tutorial1 = site.data.take5s.[rec1] %}
-{% assign tutorial2 = site.data.take5s.[rec2] %}
-{% assign tutorial3 = site.data.take5s.[rec3] %}
+{% assign tutorial1 = site.data.take5.[rec1] %}
+{% assign tutorial2 = site.data.take5.[rec2] %}
+{% assign tutorial3 = site.data.take5.[rec3] %}
 
 
 {%- if tutorial1 != "" -%}

@@ -1,0 +1,2 @@
+# Redirect /static/ to root
+/static/*           /:splat     301

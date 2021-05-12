@@ -1,0 +1,26 @@
+---
+course_ID: GYM-5029
+title: "Animating Microinteractions with Figma"
+date: 2020-02-24T00:00:00-04:00
+course_type: take5
+url: /take5/GYM-5029/
+poster_art: /img/take5/posters/gym-5029.jpg
+live: true
+instructor: "Jeremy Osborn"
+topic: "Prototyping"
+video_ID: LnPEGhE90r4
+video_duration: "4:57"
+featured: false
+short_description: "Build and animate a prototype for a simple microinteraction in Figma in this tutorial by Jeremy Osborn, Academic Director at Aquent Gymnasium."
+project_file_source: GitHub
+project_files:
+- label: "Lesson Files"
+  url: "https://gymnasium.github.io/take5/gym-5029.zip"
+related_content:
+- label: "Create Overlays in your Prototypes from the Figma documentation"
+  url: "https://help.figma.com/hc/en-us/articles/360039818254"
+- label: "Figma Tutorial: Overlays"
+  url: "https://youtu.be/t82XRda5DnY"
+- label: "Gymnasium: Creating Advanced Animations in Figma"
+  url: "https://thegymnasium.com/take5/creating-advanced-animations-in-figma"
+---

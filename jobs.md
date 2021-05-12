@@ -1,6 +1,6 @@
 ---
 layout: raw
-permalink: /static/jobs/
+permalink: /jobs/
 ---
 # Jobs
 

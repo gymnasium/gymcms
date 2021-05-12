@@ -1,0 +1,26 @@
+---
+course_ID: GYM-5015
+title: "Creating Advanced Animations in Figma"
+date: 2019-11-08T00:00:00-04:00
+course_type: take5
+url: /take5/GYM-5015/
+poster_art: /img/take5/posters/gym-5015.jpg
+live: true
+instructor: "Jeremy Osborn"
+topic: "Prototyping"
+video_ID: fhAqswjylgg
+video_duration: "4:57"
+featured: false
+short_description: "Learn how to use the Smart Animate feature to create advanced animations in Figma in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
+project_file_source: GitHub
+project_files:
+- label: "Lesson Files"
+  url: "https://gymnasium.github.io/take5/gym-5015.zip"
+related_content:
+- label: "Official Figma documentation for Smart Animate"
+  url: "https://help.figma.com/article/365-smart-animate"
+- label: "Figma Tutorial: Smart Animate and Drag Triggers"
+  url: "https://www.youtube.com/watch?v=6Id4INKEwb8"
+- label: "iOS Animations with Figma’s Smart Animations by Lucas Chae"
+  url: "https://uxdesign.cc/ios-animations-with-figmas-smart-animate-954c13a30cad"
+---

@@ -1,0 +1,28 @@
+---
+course_ID: GYM-5001
+title: "Making a CSS Parallax Effect"
+date: 2019-10-28T00:00:00-04:00
+course_type: take5
+url: /take5/GYM-5001/
+poster_art: /img/take5/posters/gym-5001.jpg
+live: true
+instructor: "Jeremy Osborn"
+topic: "Web Design & Development"
+video_ID: zRNUPU2dujU
+video_duration: "4:59"
+featured: false
+short_description: "Learn how to create a scrolling background effect using CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
+project_file_source: CodePen
+project_files:
+- label: "Starting Project"
+  url: "https://codepen.io/josborn/pen/BebXer"
+- label: "Completed Project"
+  url: "https://codepen.io/josborn/pen/joNmyO"
+related_content:
+- label: "Can I Use: Background Attachment"
+  url: "https://caniuse.com/#feat=background-attachment"
+- label: "Stack Overflow: Background size on iOS"
+  url: "https://stackoverflow.com/questions/21476380/background-size-on-ios"
+- label: "MDN: Viewport concepts"
+  url: "https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts"
+---

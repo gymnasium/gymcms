@@ -1,0 +1,66 @@
+---
+layout: raw
+permalink: /courses/take5/course-list-recent
+---
+
+{%- assign pubdates = ""  | split: ", " -%}
+{%- assign publish_order = ""  | split: ", " -%}
+
+{%- assign recent = "" | split: ", " -%}
+{%- assign upcoming = ""  | split: ", " -%}
+
+{% assign catalog = site.data.take5 | sort %}
+
+{% for course_hash in catalog %}
+  {% assign item = course_hash[1] %}
+  {%- assign pubdates = pubdates | push: item.date -%}
+{% endfor %}
+
+{%- assign pubdates_sorted = pubdates | sort -%}
+
+{%- for pubdate in pubdates_sorted -%}
+
+  {% for course_hash in catalog %}
+    {% assign item = course_hash[1] %}
+    {%- if item.date == pubdate -%}
+      {%- assign publish_order = publish_order | push: item.course_ID -%}
+    {%- endif -%}
+  {% endfor %}
+
+{%- endfor -%}
+
+{%- assign publish_order = publish_order | uniq | join: ', '|split: ', '  -%}
+
+{%- for item in publish_order -%}
+  {%- if site.data.take5[item].live == true -%}
+    {%- assign recent = recent | push: site.data.take5[item].course_ID -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign recent = recent | reverse -%}
+
+{%- for item in recent -%}
+  {%- assign course = site.data.take5[item] -%}
+
+  <li class="course-item" data-course-id="{{ course.course_ID | remove: 'GYM-' }}">
+    <article class="row">
+      <figure class="col-md-4">
+        <a href="{{ course.title | slugify | prepend: base_path }}">
+          <img class="img-responsive" src="{{ site.url }}{{ site.baseurl }}{{ course.poster_art }}" alt="{{ course.course_ID | remove: 'gym-' }} {{ course.title }} Cover Image">
+        </a>
+        <figcaption>
+          <a href="{{ course.title | slugify | prepend: base_path }}" class="gym-button"><b>Watch Now</b></a>
+        </figcaption>
+      </figure>
+      <div class="col-md-8 course-description">
+        <header>
+          <h2>{{ course.topic }}</h2>
+          <h1>{{ course.title }}</h1>
+        </header>
+        <p>
+          {{ course.short_description }}
+        </p>
+      </div>
+    </article>
+  </li>
+{%- endfor -%}
