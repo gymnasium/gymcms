@@ -1,0 +1,32 @@
+---
+layout: raw
+permalink: /tests/catalog/
+---
+
+<h1>Courses</h1>
+
+{% assign sorted_catalog = site.data.courses | sort %}
+
+<pre>Found: <strong>{{sorted_catalog | size }}</strong> courses</pre>
+
+{% for course_hash in sorted_catalog %}
+    {% assign item = course_hash[1] %}
+        <h2>{{ item.title }}</h2>
+        <pre>Course ID: {{ item.course_ID }}</pre>
+        <pre>Production URL: <a href="{{ item.url }}" target="_blank">{{ item.course_ID }}</a></pre>
+        <pre>Course Artwork: {{ item.poster_art }}</pre>
+        <pre>Short Description: {{ item.short_description }}</pre>
+        <dl>
+            <dt>Skills Covered</dt>
+            {%- for skill in item.skills -%}
+            <dd><span>{{ skill.label }}</span></dd>
+            {%- endfor -%}
+          </dl>
+          <dl>
+            <dt>This course is for </dt>
+            {%- for audience in item.audience -%}
+            <dd><span>{{ audience.label }}</span></dd>
+            {%- endfor -%}
+          </dl>
+
+{%- endfor -%}
