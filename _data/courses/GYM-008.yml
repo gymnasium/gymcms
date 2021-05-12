@@ -9,4 +9,13 @@ poster_art: /img/course-artwork/png/gym-008.png
 topic: "Prototyping"
 short_description: "Learn how to use the conditional logic features in Axure in order to quickly create an interactive prototype."
 instructor: tslate
+skills:
+  - label: "Interactive prototyping"
+  - label: "Basic programming logic"
+  - label: "User flows"
+  - label: "And more…"
+audience:
+  - label: "UX Designers"
+  - label: "Interactive Designers"
+  - label: "Information Architects"
 ---
