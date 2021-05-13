@@ -11,10 +11,14 @@ permalink: /tests/catalog/
 
 {% for course_hash in sorted_catalog %}
     {% assign item = course_hash[1] %}
+    {% assign png_path = "/img/course-artwork/png/" | append: item.course_ID | downcase | append: ".png" %}
+    {% assign svg_path = "/img/course-artwork/svg/" | append: item.course_ID | downcase | append: ".svg" %}
+    
         <h2>{{ item.title }}</h2>
         <pre>Course ID: {{ item.course_ID }}</pre>
         <pre>Production URL: <a href="{{ item.url }}" target="_blank">{{ item.course_ID }}</a></pre>
-        <pre>Course Artwork: {{ item.poster_art }}</pre>
+        <pre>Course Artwork PNG: {{ png_path | prepend: site.url }}</pre>
+        <pre>Course Artwork SVG: {{ svg_path | prepend: site.url }}</pre>
         <pre>Short Description: {{ item.short_description }}</pre>
         <dl>
             <dt>Skills Covered</dt>
