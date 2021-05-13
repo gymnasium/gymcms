@@ -5,13 +5,13 @@ permalink: /tests/catalog/
 {% case jekyll.environment %}
 
 {% when "development" %}
-{% assign domain_link = "https://courses.gymna.si/courses/take5/" %}
+{% assign domain_link = "https://courses.gymna.si/" %}
 
 {% when "staging" %}
-{% assign domain_link = "https://courses.gymna.si/courses/take5/" %}
+{% assign domain_link = "https://courses.gymna.si/" %}
 
 {% when "production" %}
-{% assign domain_link = "https://thegymnasium.com/courses/take5/" %}
+{% assign domain_link = "https://thegymnasium.com/" %}
 
 {% endcase %}
 
@@ -48,7 +48,7 @@ permalink: /tests/catalog/
 {%- endfor -%}
 
 <h2>Take 5</h2>
-
+{% assign take5_path = domain_link | append: "courses/take5/" %}
 {% assign sorted_take5catalog = site.data.take5 | sort %}
 <pre>Found: <strong>{{sorted_take5catalog | size }}</strong> Take 5 tutorials</pre>
 
@@ -59,7 +59,7 @@ permalink: /tests/catalog/
 <h3>{{ item.title }}</h3>
 <pre>Course ID: {{ item.course_ID }}</pre>
 <pre>Short Description: {{ item.short_description }}</pre>
-<pre>URL: {{ item.title | slugify | prepend: domain_link }}</pre>
+<pre>URL: {{ item.title | slugify | prepend: take5_path }}</pre>
 <pre>Poster Art: {{ item.poster_art | prepend: site.url }}</pre>
 {%- endif -%}
 {%- endfor -%}
