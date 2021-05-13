@@ -9,4 +9,15 @@ poster_art: /img/course-artwork/png/gym-100.png
 topic: "Web Design & Development"
 short_description: "Learn HTML and CSS and become the Web Designer that Developers love. Professional design experience is a prerequisite, but no prior web or coding experience is necessary."
 instructor: jwebb
+skills:
+ - label: "HTML basics"
+ - label: "CSS basics"
+ - label: "Bootstrap basics"
+ - label: "And more…"
+audience:
+ - label: "Designers"
+ - label: "Creatives"
+ - label: "Copy Editors"
+ - label: "Anyone struggling with HTML"
+
 ---
