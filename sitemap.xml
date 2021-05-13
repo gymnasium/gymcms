@@ -1,35 +1,76 @@
 ---
 layout: null
 permalink: sitemap.xml
-sitemap:
-  exclude: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{%- for page in site.pages -%}
-  {% comment %} Exclude file names by extension {% endcomment %}
-  {%- assign file_ext = page.url | split: "." | last -%}
-  {%- unless page.sitemap.exclude == true or file_ext == "map" or file_ext == "css" or file_ext contains "js" or file_ext == "xml" -%}
-  <url>
-    <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
-    {%- if page.sitemap.lastmod -%}
-      <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
-    {%- elsif page.date -%}
-      <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-    {%- else -%}
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+<url>
+  <loc>{{ site.produrl }}</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/courses/</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>7.0</priority>
+</url>
+
+{%- assign catalog = "" | split: ',' -%}
+
+{% comment %}
+<!-- TODO: uncomment this chunk once we've set up about pages for the courses
+{%- assign courses = site.data.courses -%}
+{%- for course_hash in courses -%}
+    {%- assign catalog = catalog | push: course_hash -%}
+{%- endfor -%}
+ -->
+{% endcomment %}
+
+{%- assign take5_courses = site.data.take5 -%}
+{%- for course_hash in take5_courses -%}
+    {%- assign catalog = catalog | push: course_hash -%}
+{%- endfor -%}
+
+{%- assign sorted_catalog = catalog | sort -%}
+
+{%- for course_hash in sorted_catalog -%}
+    {%- assign item = course_hash[1] -%}
+
+    {%- assign url = item.url | remove: "https://thegymnasium.com" | prepend: site.produrl -%}
+
+    {%- if item.course_type == "take5" -%}
+      {%- assign slug = item.title | downcase | slugify -%}
+      {%- assign url = slug | prepend: "/courses/take5/" | prepend: site.produrl -%}
     {%- endif -%}
-    {%- if page.sitemap.changefreq -%}
-      <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+
+    {%- if item.sitemap.lastmod -%}
+        {%- assign lastmod = item.sitemap.lastmod | date: "%Y-%m-%d" -%}
+    {%- elsif item.date -%}
+        {%- assign lastmod = item.date | date_to_xmlschema -%}
     {%- else -%}
-      <changefreq>monthly</changefreq>
+        {%- assign lastmod = site.time | date_to_xmlschema -%}
     {%- endif -%}
-    {%- if page.sitemap.priority -%}
-      <priority>{{ page.sitemap.priority }}</priority>
+
+    {%- if item.sitemap.changefreq -%}
+        {%- assign changefreq = item.sitemap.changefreq -%}
     {%- else -%}
-      <priority>0.3</priority>
+        {%- assign changefreq = "monthly" -%}
     {%- endif -%}
-  </url>
-  {%- endunless -%}
+
+    {%- if item.sitemap.priority -%}
+        {%- assign priority = item.sitemap.priority -%}
+    {%- else -%}
+        {%- assign priority = 0.3 -%}
+    {%- endif -%}
+
+    <url>
+      <loc>{{ url }}</loc>
+      <lastmod>{{ lastmod }}</lastmod>
+      <changefreq>{{ changefreq }}</changefreq>
+      <priority>{{ priority }}</priority>
+    </url>
 {%- endfor -%}
 </urlset>
