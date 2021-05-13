@@ -9,4 +9,13 @@ poster_art: /img/course-artwork/png/gym-102.png
 topic: "JavaScript"
 short_description: "This course will teach you 5 easy techniques for adding interactivity to your web pages. By the end of the course, you’ll be able to add features and style to your web pages, from simple animations to complex dynamic content."
 instructor: dporter
+skills:
+ - label: "Navigation, animation, and server interaction"
+ - label: "JavaScript"
+ - label: "HTML/CSS"
+ - label: "And more…"
+audience:
+ - label: "Designers with coding chops"
+ - label: "Front-End Developers"
+ - label: "JavaScript Developers"
 ---

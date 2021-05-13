@@ -11,4 +11,13 @@ subtopics:
  - label: "jQuery"
 short_description: "This course will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples."
 instructor: kchisholm
+skills:
+ - label: "Developer Tools"
+ - label: "Events and Event Handlers"
+ - label: "Manipulating HTML & CSS With jQuery"
+ - label: "And more…"
+audience:
+ - label: "Front-End Developers"
+ - label: "JavaScript Developers"
+ - label: "Full Stack Developers"
 ---
