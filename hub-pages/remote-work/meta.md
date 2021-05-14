@@ -1,5 +1,5 @@
 ---
-layout: meta
+layout: meta-large
 permalink: /remote-work/meta/
 page_title: "Remote Work | Gymnasium"
 og_title: "Remote Work Resources"

@@ -9,10 +9,10 @@
     {%- assign og_title = page.og_title -%}
     {%- assign page_title =  page.page_title -%}
     {%- assign og_art = "gym-courses-og" | prepend: "img/social/courses/" -%}
-    {%- assign twitter_card_style = "summary_large_image"-%}
+    
     {%- else -%}
     {%- comment -%}
-    Set up meta tags for course page meta includes
+    Set up meta tags for COURSE page meta includes
     {%- endcomment -%}
     
     {%- assign course = site.data.courses[page.course_ID] -%}
@@ -22,9 +22,26 @@
     {%- assign og_title = course.title -%}
     {%- assign page_title =  course.title | append: " | Gymnasium" -%}
     {%- assign og_art = course.course_ID | downcase | append: "-social.png" | prepend: "img/social/courses/" -%}
-    {%- assign twitter_card_style = "summary_large_image"-%}
     
 {%- endif -%}
+
+
+{%- if page.permalink contains "collection" -%}
+    {%- comment -%}
+    Set up meta tags for COLLECTION page meta includes
+    {%- endcomment -%}
+    {%- assign og_url = page.og_url -%}
+    {%- assign og_title = page.og_title -%}
+    {%- assign page_title =  page.page_title -%}
+    {%- assign og_art = page.og_art -%}
+    {%- assign og_description = page.og_description -%}
+    {%- assign short_description = og_description -%}
+{%- endif -%}
+
+{%- comment -%}
+    Global Settings - consider hardcoding 
+{%- endcomment -%}
+{%- assign twitter_card_style = "summary_large_image"-%}
 
 <meta name="description" content="{{ short_description | strip_html }}">
 <meta name="author" content="Aquent Gymnasium">

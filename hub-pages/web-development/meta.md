@@ -1,5 +1,5 @@
 ---
-layout: meta
+layout: meta-large
 permalink: /web-development-collection/meta/
 page_title: "Web Development | Gymnasium"
 og_title: "Web Development Collection"
