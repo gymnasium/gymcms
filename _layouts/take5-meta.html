@@ -1,6 +1,6 @@
 {%- assign course = site.data.take5[page.course_ID] -%}
 {%- assign og_description = course.short_description -%}
-<meta property="og:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/take5/' }}">
+<meta property="og:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/courses/take5/' }}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <!-- "og:site_name" content="Needs review?" -->
@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@AquentGymnasium">
 <meta name="twitter:creator" content="@AquentGymnasium">
-<meta name="twitter:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/take5/' }}">
+<meta name="twitter:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/courses/take5/' }}">
 <meta name="twitter:title" content="{{ course.title }}">
 <meta name="twitter:description" content="{{ og_description }}">
 <!-- 1.91:1 aspect ratio supported by LinkedIn/Twitter -->
