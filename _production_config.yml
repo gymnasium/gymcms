@@ -2,6 +2,7 @@
 title: Gymnasium Static Content
 url: https://thegymcms.com
 baseurl: /
+produrl: https://thegymnasium.com
 timezone: America/New_York
 environment: production
 

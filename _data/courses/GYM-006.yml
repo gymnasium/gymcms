@@ -4,7 +4,7 @@ title: "Introduction to Git and Github"
 date: 2019-10-28T00:00:00-04:00
 course_type: short
 live: true
-url: https://thegymnasium.com/courses/GYM/006/0/about
+url: /courses/GYM/006/0/about
 poster_art: /img/course-artwork/png/gym-006.png
 topic: "Web Design & Development"
 short_description: "Learn the basics of version control and get a high-level overview of both Git and GitHub. Perfect for someone with little to no first-hand experience with either."
