@@ -35,7 +35,7 @@
     {%- endcomment -%}
     {%- assign course = site.data.take5[page.course_ID] -%}
     {%- assign og_description = course.short_description -%}
-    {%- assign og_url = course.title | slugify | prepend: "https://thegymnasium.com/take5/" -%}
+    {%- assign og_url = course.title | slugify | prepend: "https://thegymnasium.com/courses/take5/" -%}
     {%- assign page_title = "Take 5 | Gymnasium" -%}
     {%- assign og_art = course.course_ID | downcase | append: "-og.png" | prepend: "/img/take5/og/" -%}
     {%- assign og_alt = course.title | prepend: "Video poster for tutorial titled " -%}
