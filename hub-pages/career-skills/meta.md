@@ -1,5 +1,5 @@
 ---
-layout: meta
+layout: meta-large
 permalink: /career-skills-collection/meta/
 page_title: "Career Skills | Gymnasium"
 og_title: "Career Skills Collection"

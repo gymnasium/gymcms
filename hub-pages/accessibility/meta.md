@@ -1,5 +1,5 @@
 ---
-layout: meta
+layout: meta-large
 permalink: /accessibility-collection/meta/
 page_title: Accessibility | Gymnasium"
 og_title: "Accessibility Collection"
