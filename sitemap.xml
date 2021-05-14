@@ -12,31 +12,31 @@ permalink: sitemap.xml
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/jobs/</loc>
+  <loc>{{ site.produrl }}/about</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.8</priority>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/about/</loc>
+  <loc>{{ site.produrl }}/accessibility</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/collections/</loc>
+  <loc>{{ site.produrl }}/collections</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/courses/</loc>
+  <loc>{{ site.produrl }}/courses</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.7</priority>
+  <priority>1.0</priority>
 </url>
 
 {%- assign catalog = "" | split: ',' -%}
@@ -84,7 +84,7 @@ permalink: sitemap.xml
     {%- if item.sitemap.priority -%}
         {%- assign priority = item.sitemap.priority -%}
     {%- else -%}
-        {%- assign priority = 0.3 -%}
+        {%- assign priority = 0.7 -%}
     {%- endif -%}
 
     <url>
@@ -94,4 +94,110 @@ permalink: sitemap.xml
       <priority>{{ priority }}</priority>
     </url>
 {%- endfor -%}
+
+<url>
+  <loc>{{ site.produrl }}/design-systems</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/faq</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/jobs</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/privacy</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/prototyping</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/remote-work</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/support</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/ux-design</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/web-development</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/webinars</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+{%- assign webinars = site.data.webinars | sort -%}
+
+{%- for webinar in webinars -%}
+    {%- assign item = webinar[1] -%}
+
+    {%- assign url = item.permalink | remove: "https://thegymnasium.com" | prepend: site.produrl -%}
+
+    {%- if item.sitemap.lastmod -%}
+        {%- assign lastmod = item.sitemap.lastmod | date: "%Y-%m-%d" -%}
+    {%- elsif item.date -%}
+        {%- assign lastmod = item.date | date_to_xmlschema -%}
+    {%- else -%}
+        {%- assign lastmod = site.time | date_to_xmlschema -%}
+    {%- endif -%}
+
+    {%- if item.sitemap.changefreq -%}
+        {%- assign changefreq = item.sitemap.changefreq -%}
+    {%- else -%}
+        {%- assign changefreq = "monthly" -%}
+    {%- endif -%}
+
+    {%- if item.sitemap.priority -%}
+        {%- assign priority = item.sitemap.priority -%}
+    {%- else -%}
+        {%- assign priority = 0.7 -%}
+    {%- endif -%}
+
+    <url>
+      <loc>{{ url }}</loc>
+      <lastmod>{{ lastmod }}</lastmod>
+      <changefreq>{{ changefreq }}</changefreq>
+      <priority>{{ priority }}</priority>
+    </url>
+{%- endfor -%}
+
 </urlset>
