@@ -1,16 +1,30 @@
-{%- if page.permalink contains "/courses" and page.catalog -%}
-    {%- comment -%}
-    Set up meta tags for course CATALOG page meta includes
-    {%- endcomment -%}
+
+{%- comment -%}
+    Global Settings
+{%- endcomment -%}
+
+{%- assign twitter_card_style = "summary_large_image"-%}
+{%- assign og_url = page.og_url -%}
+{%- assign og_title = page.og_title -%}
+{%- assign page_title =  page.page_title -%}
+{%- assign og_art = page.og_art -%}
+{%- assign og_description = page.og_description -%}
+{%- assign short_description = og_description -%}
+
+{%- if page.permalink contains "/courses" -%}
+    {%- if page.catalog -%}    
+        {%- comment -%}
+        Set up meta tags for course CATALOG page meta includes
+        {%- endcomment -%}
     
-    {%- assign og_description = page.short_description -%}
-    {%- assign short_description = page.og_description -%}
-    {%- assign og_url = page.og_url -%}
-    {%- assign og_title = page.og_title -%}
-    {%- assign page_title =  page.page_title -%}
-    {%- assign og_art = "gym-courses-og" | prepend: "img/social/courses/" -%}
+        {%- assign og_description = page.short_description -%}
+        {%- assign short_description = page.og_description -%}
+        {%- assign og_url = page.og_url -%}
+        {%- assign og_title = page.og_title -%}
+        {%- assign page_title =  page.page_title -%}
+        {%- assign og_art = "gym-courses-og" | prepend: "img/social/courses/" -%}
     
-    {%- else -%}
+    {%- endif -%}
     {%- comment -%}
     Set up meta tags for COURSE page meta includes
     {%- endcomment -%}
@@ -26,22 +40,9 @@
 {%- endif -%}
 
 
-{%- if page.permalink contains "collection" -%}
-    {%- comment -%}
-    Set up meta tags for COLLECTION page meta includes
-    {%- endcomment -%}
-    {%- assign og_url = page.og_url -%}
-    {%- assign og_title = page.og_title -%}
-    {%- assign page_title =  page.page_title -%}
-    {%- assign og_art = page.og_art -%}
-    {%- assign og_description = page.og_description -%}
-    {%- assign short_description = og_description -%}
-{%- endif -%}
 
-{%- comment -%}
-    Global Settings - consider hardcoding 
-{%- endcomment -%}
-{%- assign twitter_card_style = "summary_large_image"-%}
+
+
 
 <meta name="description" content="{{ short_description | strip_html }}">
 <meta name="author" content="Aquent Gymnasium">
