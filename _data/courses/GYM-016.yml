@@ -11,6 +11,15 @@ subtopics:
   - label: "Accessibility"
 short_description: "Learn accessible and responsive design best practices to help make a more user-friendly web for everyone."
 instructor: emarcotte
+skills:
+  - label: "Web accessibility"
+  - label: "Responsive design"
+  - label: "Intermediate HTML/CSS"
+  - label: "And more…"
+audience:
+  - label: "Anyone interested in building more accessible websites"
+  - label: "Web designers with coding chops"
+  - label: "Front-end developers"
 ---
 
 

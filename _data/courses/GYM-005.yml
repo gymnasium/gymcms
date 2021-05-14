@@ -9,4 +9,13 @@ poster_art: /img/course-artwork/png/gym-005.png
 topic: "Prototyping"
 short_description: "Learn how to use Sketch tools and features in order to build an interactive prototype for a mobile website."
 instructor: josborn
+skills:
+  - label: "Sketch fundamentals"
+  - label: "Building static wireframes and prototypes"
+  - label: "Interactive prototyping"
+  - label: "And more…"
+audience:
+  - label: "UX Designers"
+  - label: "Web Designers"
+  - label: "Front-End Developers"
 ---

@@ -9,4 +9,14 @@ poster_art: /img/course-artwork/png/gym-104.png
 topic: "JavaScript"
 short_description: "Learn the fundamentals of programming with JavaScript and get started on the road to its mastery."
 instructor: kpeters
+skills:
+ - label: "JavaScript"
+ - label: "Programming basics"
+ - label: "The interaction between JavaScript and HTML"
+ - label: "And more…"
+audience:
+ - label: "Designers with coding chops"
+ - label: "Front-End Developers"
+ - label: "jQuery Developers"
+
 ---
