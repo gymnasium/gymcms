@@ -12,10 +12,31 @@ permalink: sitemap.xml
 </url>
 
 <url>
+  <loc>{{ site.produrl }}/jobs/</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/about/</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/collections/</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
   <loc>{{ site.produrl }}/courses/</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>7.0</priority>
+  <priority>0.7</priority>
 </url>
 
 {%- assign catalog = "" | split: ',' -%}
