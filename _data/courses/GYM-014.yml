@@ -12,4 +12,13 @@ subtopics:
   - label: "Pattern Library"
 short_description: "Learn how to use Atomic Design methodology within Pattern Lab in order to create reusable user interface components."
 instructor: bfrost
+skills:
+  - label: "Website prototyping"
+  - label: "Designing with dynamic data"
+  - label: "Structuring a design system"
+  - label: "And more…"
+audience:
+  - label: "Anyone interested in building design systems"
+  - label: "Anyone interested in building website or web app prototypes"
+  - label: "UX designers with coding chops"
 ---

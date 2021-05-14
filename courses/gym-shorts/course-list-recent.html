@@ -29,7 +29,7 @@ permalink: /courses/gym-shorts/course-list-recent
 
 {%- endfor -%}
 
-{%- assign publish_order = publish_order | uniq | join: ', '|split: ', '  -%}
+{%- assign publish_order = publish_order | uniq | join: ', ' | split: ', ' -%}
 
 {%- for item in publish_order -%}
   {%- if site.data.courses[item].live == true and site.data.courses[item].course_type == "short" -%}
@@ -41,15 +41,17 @@ permalink: /courses/gym-shorts/course-list-recent
 
 {%- for item in recent -%}
   {%- assign course = site.data.courses[item] -%}
+  {%- assign png_path = "/img/course-artwork/png/" | append: course.course_ID | downcase | append: ".png" -%}
+  {%- assign svg_path = "/img/course-artwork/svg/" | append: course.course_ID | downcase | append: ".svg" -%}
 
   <li class="course-item" data-course-id="{{ course.course_ID | remove: 'GYM-' }}">
     <article class="row">
       <figure class="col-md-4">
         <a href="{{ course.url | remove: 'https://thegymnasium.com' | prepend: domain_name }}">
-          <img class="img-responsive" src="{{ site.url }}{{ site.baseurl }}{{ course.poster_art }}" alt="{{ course.course_ID | remove: 'gym-' }} {{ course.title }} Cover Image">
+          <img class="img-responsive" src="{{ png_path | prepend: site.url }}" srcset="{{ svg_path | prepend: site.url }}" alt="{{ course.course_ID | remove: 'gym-' }} {{ course.title }} Cover Image" decoding="async">
         </a>
         <figcaption>
-          <a href="{{ course.url | remove: 'https://thegymnasium.com' | prepend: domain_name }}" class="gym-button"><b>Watch Now</b></a>
+          <a href="{{ course.url | remove: 'https://thegymnasium.com' | prepend: domain_name }}" class="gym-button"><b>Learn More</b></a>
         </figcaption>
       </figure>
       <div class="col-md-8 course-description">
@@ -60,6 +62,24 @@ permalink: /courses/gym-shorts/course-list-recent
         <p>
           {{ course.short_description }}
         </p>
+        <div class="row">
+          <div class="col-md-6">
+            <dl>
+              <dt>Skills Covered</dt>
+              {%- for skill in course.skills -%}
+              <dd><span>{{ skill.label }}</span></dd>
+              {%- endfor -%}
+            </dl>
+          </div>
+          <div class="col-md-6">
+            <dl>
+              <dt>This Course Is For</dt>
+              {%- for audience in course.audience -%}
+              <dd><span>{{ audience.label }}</span></dd>
+              {%- endfor -%}
+            </dl>
+          </div>
+        </div>
       </div>
     </article>
   </li>

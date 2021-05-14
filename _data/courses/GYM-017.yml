@@ -11,4 +11,13 @@ subtopics:
   - label: "Design Systems"
 short_description: "Learn how to effectively integrate pattern libraries and design systems into your organization’s workflow."
 instructor: emarcotte
+skills:
+  - label: "Design Thinking"
+  - label: "User Experience Design"
+  - label: "Working with pattern libraries"
+  - label: "And more…"
+audience:
+  - label: "Anyone interested in design systems"
+  - label: "Designers, developers, and product managers"
+  - label: "Teams that are new to the design systems process"
 ---
