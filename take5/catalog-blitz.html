@@ -10,20 +10,13 @@ permalink: /take5/blitz
 
 {% case jekyll.environment %}
 
-{% when "development" %}
-{% assign domain_link = "https://courses.gymna.si/take5/" %}
-
-{% when "staging" %}
-{% assign domain_link = "https://courses.gymna.si/take5/" %}
+{% when "development" or when "staging" %}
+{% assign domain_link = "https://courses.gymna.si/courses/take5/" %}
 
 {% when "production" %}
 {% assign domain_link = "https://thegymnasium.com/courses/take5/" %}
 
 {% endcase %}
-
-{%- if jekyll.environment == "development" -%}
-    {%- include take5/test-top.html -%}
-{%- endif -%}
 
 <link rel="stylesheet" href="{{ site.url }}/css/take5.css">
 
@@ -195,7 +188,3 @@ permalink: /take5/blitz
 </div>
 
 </main>
-
-{%- if jekyll.environment == "development" -%}
-    {%- include take5/test-bottom.html -%}
-{%- endif -%}
