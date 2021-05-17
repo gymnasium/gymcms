@@ -34,7 +34,7 @@
 
 .hero-promo {
   position: relative;
-  background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-gym-014/bg-pattern-lab.png");
+  background-image: url("{{ site.url }}/home/img/hero-gym-014/bg-pattern-lab.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -114,7 +114,7 @@ a.gym-button-shrink-wrap {
 @include breakpoint(48em, min) {
 
   .hero-promo {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-gym-014/bg-pattern-lab-wide.png");
+    background-image: url("{{ site.url }}/home/img/hero-gym-014/bg-pattern-lab-wide.png");
   }
 
   #atomic-design-atom {

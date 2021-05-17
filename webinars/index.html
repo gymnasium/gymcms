@@ -19,7 +19,7 @@ layout: raw
 
 {%- assign webinars_descending_date = webinars_ascending_date | reverse -%}
 
-<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/webinars.css">
+<link rel="stylesheet" href="{{ site.url }}/css/webinars.css">
 
 <main id="main" role="main">
 
@@ -87,7 +87,7 @@ layout: raw
             {%- comment -%}
               {%- if jekyll.environment == "development" -%}
                 <pre>({{ complete_webinar_title }})</pre>
-                <img src="{{ site.url }}{{ site.baseurl }}/img/social/webinars/{{ webinar.event_ogimage }}">
+                <img src="{{ site.url }}/img/social/webinars/{{ webinar.event_ogimage }}">
               {%- endif -%}
             {%- endcomment -%}
             {%- capture headcount -%}{{ item.speaker | size }}{%- endcapture -%}
@@ -102,7 +102,7 @@ layout: raw
               {%- if item.register and site.data.bios[speaker].headshot != null -%}
                 <li>
                   <figure>
-                    <img src="{{ site.url }}{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
+                    <img src="{{ site.url }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
                     <figcaption>{{ site.data.bios[speaker].name }}</figcaption>
                   </figure>
                 </li>
