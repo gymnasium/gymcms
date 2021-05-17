@@ -13,7 +13,7 @@
 
 #hero-dfg-2019 {
   background-color: #dcd2b9;
-  background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-1000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
+  background-image: url("{{ site.url }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-1000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
   background-repeat: no-repeat;
   background-position: right center;
   background-size: cover;
@@ -56,7 +56,7 @@
       height: 0;
       padding-bottom: 50%;
       background-color: #e5e2d3;
-      background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-1000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
+      background-image: url("{{ site.url }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-1000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -108,7 +108,7 @@
 
   #hero-dfg-2019 {
     background-color: #dcd2b9;
-    background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-1500w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
+    background-image: url("{{ site.url }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-1500w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -148,7 +148,7 @@
 (min-resolution: 1.25dppx) {
 
   #hero-dfg-2019 {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-2000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
+    background-image: url("{{ site.url }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-2000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
   }
 
 }

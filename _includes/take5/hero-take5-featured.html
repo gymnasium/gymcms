@@ -7,7 +7,7 @@
 {%- assign domain_link = "https://courses.gymna.si/take5/" -%}
 
 {%- when "production" -%}
-{%- assign domain_link = "https://thegymnasium.com/take5/" -%}
+{%- assign domain_link = "https://thegymnasium.com/courses/take5/" -%}
 
 {%- endcase -%}
 
@@ -44,7 +44,7 @@
 
 {%- endcase -%}
 
-{%- assign hero_art_file = hero_art | replace: "/img", "img" -%}
+{%- assign hero_art_file = hero_art -%}
 {%- capture hero_bg_test -%}{% file_exists {{ hero_art_file }} %}{%- endcapture -%}
     <!-- Check for: {{ hero_art_file }} -->
     {% if hero_bg_test == "true" %}
@@ -55,10 +55,10 @@
     <!-- Change to fallback: {{ hero_art }} -->
 {%- endif -%}
 
-<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/hero-take5.css">
+<link rel="stylesheet" href="{{ site.url }}/css/hero-take5.css">
   <div class="{{ 'hero-promo' }} {{ hero_style }}" id="hero-{{ hero_ID }}">
   <div class="container">
-    <div class="hero-content-art" style="background-image: url('{{ site.url }}{{ site.baseurl }}{{ hero_art }}'); border-image-source: url('{{ site.url }}{{ site.baseurl }}{{ hero_art }}');"></div>
+    <div class="hero-content-art" style="background-image: url('{{ site.url }}{{ hero_art }}'); border-image-source: url('{{ site.url }}{{ hero_art }}');"></div>
     <div class="hero-content-copy">
       <header>
         <h3 class="subhead-topic">{{ hero_topic }}</h3>

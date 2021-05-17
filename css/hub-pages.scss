@@ -705,20 +705,20 @@ footer.card-cta {
   }
 
   #designers .section-content {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/hub-pages/design-systems/illustrations/designers.png");
+    background-image: url("{{ site.url }}/img/hub-pages/design-systems/illustrations/designers.png");
   }
 
   #developers .section-content {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/hub-pages/design-systems/illustrations/developers.png");
+    background-image: url("{{ site.url }}/img/hub-pages/design-systems/illustrations/developers.png");
   }
 
   #product-managers .section-content {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/hub-pages/design-systems/illustrations/product-managers.png");
+    background-image: url("{{ site.url }}/img/hub-pages/design-systems/illustrations/product-managers.png");
     background-size: 37%;
   }
 
   #everyone .section-content {
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/hub-pages/design-systems/illustrations/everyone.png");
+    background-image: url("{{ site.url }}/img/hub-pages/design-systems/illustrations/everyone.png");
     background-size: 37.5%;
   }
 

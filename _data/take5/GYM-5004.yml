@@ -3,7 +3,7 @@ course_ID: GYM-5004
 title: "Working with CSS Feature Queries"
 date: 2019-10-31T00:00:00-04:00
 course_type: take5
-url: /take5/GYM-5004/
+url: /courses/take5/GYM-5004/
 poster_art: /img/take5/posters/gym-5004.jpg
 topic: "Web Design & Development"
 live: true
@@ -20,7 +20,7 @@ project_files:
   url: "https://codepen.io/josborn/pen/oRVrOR"
 related_content:
 - label: "Gymnasium: Creating a CSS Knockout Text Effect"
-  url: "https://thegymnasium.com/take5/creating-a-css-knockout-text-effect"
+  url: "https://thegymnasium.com/courses/take5/creating-a-css-knockout-text-effect"
 - label: "How @supports works by Chris Coyier"
   url: "https://css-tricks.com/how-supports-works/"
 - label: "Using Feature Queries in CSS by Jen Simmons"
