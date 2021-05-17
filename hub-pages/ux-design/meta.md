@@ -1,5 +1,5 @@
 ---
-layout: meta
+layout: meta-large
 permalink: /ux-design-collection/meta/
 page_title: "UX Design | Gymnasium"
 og_title: "UX Design Collection"
