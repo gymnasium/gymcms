@@ -1,7 +1,34 @@
+
+{%- comment -%}
+    Global Settings
+{%- endcomment -%}
+
+{%- assign twitter_card_style = "summary_large_image"-%}
+{%- assign og_url = page.og_url -%}
+{%- assign og_title = page.og_title -%}
+{%- assign page_title =  page.page_title -%}
+{%- assign og_art = page.og_art -%}
+{%- assign og_description = page.og_description -%}
+{%- assign short_description = og_description -%}
+
 {%- if page.permalink contains "/courses" -%}
+    {%- if page.catalog -%}    
+        {%- comment -%}
+        Set up meta tags for course CATALOG page meta includes
+        {%- endcomment -%}
+    
+        {%- assign og_description = page.short_description -%}
+        {%- assign short_description = page.og_description -%}
+        {%- assign og_url = page.og_url -%}
+        {%- assign og_title = page.og_title -%}
+        {%- assign page_title =  page.page_title -%}
+        {%- assign og_art = "gym-courses-og" | prepend: "img/social/courses/" -%}
+    
+    {%- endif -%}
     {%- comment -%}
-    Set up meta tags for course page meta include
+    Set up meta tags for COURSE page meta includes
     {%- endcomment -%}
+    
     {%- assign course = site.data.courses[page.course_ID] -%}
     {%- assign og_description = course.short_description -%}
     {%- assign short_description = og_description -%}
@@ -9,8 +36,13 @@
     {%- assign og_title = course.title -%}
     {%- assign page_title =  course.title | append: " | Gymnasium" -%}
     {%- assign og_art = course.course_ID | downcase | append: "-social.png" | prepend: "img/social/courses/" -%}
-    {%- assign twitter_card_style = "summary_large_image"-%}
+    
 {%- endif -%}
+
+
+
+
+
 
 <meta name="description" content="{{ short_description | strip_html }}">
 <meta name="author" content="Aquent Gymnasium">

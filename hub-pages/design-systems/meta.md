@@ -1,5 +1,5 @@
 ---
-layout: meta
+layout: meta-large
 permalink: /design-systems/meta/
 page_title: "Design Systems | Gymnasium"
 og_title: "Design Systems Collection"

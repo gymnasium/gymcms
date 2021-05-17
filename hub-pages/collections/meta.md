@@ -1,5 +1,5 @@
 ---
-layout: meta
+layout: meta-large
 permalink: /collections/meta/
 page_title: "Collections | Gymnasium"
 og_title: "Collections"
