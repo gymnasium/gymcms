@@ -19,7 +19,7 @@ layout: raw
 
 {%- assign webinars_descending_date = webinars_ascending_date | reverse -%}
 
-<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/webinars.css">
+<link rel="stylesheet" href="{{ site.url }}/css/webinars.css">
 
 <main id="main" role="main">
 
@@ -44,29 +44,14 @@ layout: raw
       {%- assign speaker_1 = item.speaker[0]  -%}
       {%- assign speaker_2 = item.speaker[1]  -%}
 
-      {%- if item.event_ID == "web0005-state-of-responsive-web-design" -%}
-        {% case jekyll.environment %}
-          {% when "development" %}
-            {%- assign webinar_url = '/webinars/state-of-responsive-design'  -%}
-          {% when "staging" %}
-            {%- assign webinar_url = 'https://courses.gymna.si/webinars/state-of-responsive-web-design' -%}
-          {% when "production" %}
-            {%- assign webinar_url = 'https://thegymnasium.com/webinars/state-of-responsive-web-design' -%}
-        {% endcase %}
-
-      {%- else -%}
-
-        {% case jekyll.environment %}
-          {% when "development" %}
-            {%- assign webinar_url = item.permalink | prepend: '/' | prepend: site.url  -%}
-          {% when "staging" %}
-            {%- assign webinar_url = item.permalink | prepend: 'https://courses.gymna.si' -%}
-          {% when "production" %}
-            {%- assign webinar_url = item.permalink | prepend: 'https://thegymnasium.com' -%}
-        {% endcase %}
-
-      {%- endif -%}
-
+      {% case jekyll.environment %}
+        {% when "development" %}
+          {%- assign webinar_url = item.permalink | prepend: '/' | prepend: site.url  -%}
+        {% when "staging" %}
+          {%- assign webinar_url = item.permalink | prepend: 'https://courses.gymna.si' -%}
+        {% when "production" %}
+          {%- assign webinar_url = item.permalink | prepend: 'https://thegymnasium.com' -%}
+      {% endcase %}
 
       {% if item.register %}
       <li class="webinar" id="featured-webinar">
@@ -87,7 +72,7 @@ layout: raw
             {%- comment -%}
               {%- if jekyll.environment == "development" -%}
                 <pre>({{ complete_webinar_title }})</pre>
-                <img src="{{ site.url }}{{ site.baseurl }}/img/social/webinars/{{ webinar.event_ogimage }}">
+                <img src="{{ site.url }}/img/social/webinars/{{ webinar.event_ogimage }}">
               {%- endif -%}
             {%- endcomment -%}
             {%- capture headcount -%}{{ item.speaker | size }}{%- endcapture -%}
@@ -102,7 +87,7 @@ layout: raw
               {%- if item.register and site.data.bios[speaker].headshot != null -%}
                 <li>
                   <figure>
-                    <img src="{{ site.url }}{{ site.baseurl }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
+                    <img src="{{ site.url }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
                     <figcaption>{{ site.data.bios[speaker].name }}</figcaption>
                   </figure>
                 </li>

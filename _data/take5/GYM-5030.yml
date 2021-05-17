@@ -3,7 +3,7 @@ course_ID: GYM-5030
 title: "Working with Overlays in Figma"
 date: 2020-03-03T00:00:00-04:00
 course_type: take5
-url: /take5/GYM-5030/
+url: /courses/take5/GYM-5030/
 poster_art: /img/take5/posters/gym-5030.jpg
 live: true
 instructor: "Jeremy Osborn"
@@ -22,5 +22,5 @@ related_content:
 - label: "Figma Tutorial: Overlays"
   url: "https://youtu.be/t82XRda5DnY"
 - label: "Gymnasium: Animating Microinteractions with Figma"
-  url: "https://thegymnasium.com/take5/animating-microinteractions-with-figma"
+  url: "https://thegymnasium.com/courses/take5/animating-microinteractions-with-figma"
 ---
