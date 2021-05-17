@@ -16,8 +16,8 @@ featured_courses: GYM-017, GYM-018, GYM-019, GYM-020
     {%- for featured in featured_courses -%}
     {%- assign artwork_png = site.data.courses[featured].course_ID | downcase | append: '.png' -%}
     {%- assign artwork_svg = site.data.courses[featured].course_ID | downcase | append: '.svg' -%}
-    {%- assign artwork_path_png = site.url | append: site.baseurl | append: "/img/course-artwork/png/"-%}
-    {%- assign artwork_path_svg = site.url | append: site.baseurl | append: "/img/course-artwork/svg/"-%}
+    {%- assign artwork_path_png = site.url | append: "/img/course-artwork/png/"-%}
+    {%- assign artwork_path_svg = site.url | append: "/img/course-artwork/svg/"-%}
 
     {%- assign instructor = site.data.courses[featured].instructor -%}
     {%- assign instructor_name = site.data.bios[instructor].name  -%}
