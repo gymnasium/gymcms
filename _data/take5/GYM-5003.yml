@@ -9,7 +9,7 @@ topic: "Web Design & Development"
 subtopics:
   - label: CSS
   - label: HTML
-permalink: /take5/:name
+permalink: /courses/take5/:name
 live: true
 instructor: "Jeremy Osborn"
 video_ID: SaO2hO-4yEY
