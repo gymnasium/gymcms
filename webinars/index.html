@@ -44,29 +44,14 @@ layout: raw
       {%- assign speaker_1 = item.speaker[0]  -%}
       {%- assign speaker_2 = item.speaker[1]  -%}
 
-      {%- if item.event_ID == "web0005-state-of-responsive-web-design" -%}
-        {% case jekyll.environment %}
-          {% when "development" %}
-            {%- assign webinar_url = '/webinars/state-of-responsive-design'  -%}
-          {% when "staging" %}
-            {%- assign webinar_url = 'https://courses.gymna.si/webinars/state-of-responsive-web-design' -%}
-          {% when "production" %}
-            {%- assign webinar_url = 'https://thegymnasium.com/webinars/state-of-responsive-web-design' -%}
-        {% endcase %}
-
-      {%- else -%}
-
-        {% case jekyll.environment %}
-          {% when "development" %}
-            {%- assign webinar_url = item.permalink | prepend: '/' | prepend: site.url  -%}
-          {% when "staging" %}
-            {%- assign webinar_url = item.permalink | prepend: 'https://courses.gymna.si' -%}
-          {% when "production" %}
-            {%- assign webinar_url = item.permalink | prepend: 'https://thegymnasium.com' -%}
-        {% endcase %}
-
-      {%- endif -%}
-
+      {% case jekyll.environment %}
+        {% when "development" %}
+          {%- assign webinar_url = item.permalink | prepend: '/' | prepend: site.url  -%}
+        {% when "staging" %}
+          {%- assign webinar_url = item.permalink | prepend: 'https://courses.gymna.si' -%}
+        {% when "production" %}
+          {%- assign webinar_url = item.permalink | prepend: 'https://thegymnasium.com' -%}
+      {% endcase %}
 
       {% if item.register %}
       <li class="webinar" id="featured-webinar">
