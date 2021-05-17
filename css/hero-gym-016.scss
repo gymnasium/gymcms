@@ -18,8 +18,8 @@
 
 .hero-promo .artwork {
   height: 0;
-  background: $gym-magenta url("{{ site.url }}{{ site.baseurl }}/img/course-artwork/png/gym-016.png")no-repeat center center;
-  background-image: url("{{ site.url }}{{ site.baseurl }}/img/course-artwork/svg/gym-016.svg"), linear-gradient(transparent, 0, transparent);
+  background: $gym-magenta url("{{ site.url }}/img/course-artwork/png/gym-016.png")no-repeat center center;
+  background-image: url("{{ site.url }}/img/course-artwork/svg/gym-016.svg"), linear-gradient(transparent, 0, transparent);
   background-size: contain;
   padding-bottom: 62.5%;
   margin: -15px -15px 0;
@@ -30,8 +30,8 @@
   .hero-promo .artwork {
     position: relative;
     left: 15px;
-    background: transparent url("{{ site.url }}{{ site.baseurl }}/img/badges-artwork/png/gym-016-badge.png") no-repeat center center;
-    background-image: url("{{ site.url }}{{ site.baseurl }}/img/badges-artwork/svg/gym-016-badge.svg"), linear-gradient(transparent, 0, transparent);
+    background: transparent url("{{ site.url }}/img/badges-artwork/png/gym-016-badge.png") no-repeat center center;
+    background-image: url("{{ site.url }}/img/badges-artwork/svg/gym-016-badge.svg"), linear-gradient(transparent, 0, transparent);
     background-size: contain;
     padding-bottom: 100%;
     margin: 15px 0;
