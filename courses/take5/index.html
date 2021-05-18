@@ -2,21 +2,21 @@
 layout: raw
 permalink: /courses/take5/
 ---
-{% case jekyll.environment %}
+{%- case jekyll.environment -%}
 
-{% when "development" or when "staging" %}
-{% assign domain_link = "https://courses.gymna.si/courses/take5/" %}
+{%- when "development" or when "staging" -%}
+{%- assign domain_link = "https://courses.gymna.si/courses/take5/" -%}
 
-{% when "production" %}
-{% assign domain_link = "https://thegymnasium.com/courses/take5/" %}
+{%- when "production" -%}
+{%- assign domain_link = "https://thegymnasium.com/courses/take5/" -%}
 
-{% endcase %}
+{%- endcase -%}
 
 
 
 <link rel="stylesheet" href="{{ site.url }}/css/take5.css">
 
-{% include take5/detail-opener-js.html %}
+{%- include take5/detail-opener-js.html -%}
 
 <main id="main" role="main">
   <header class="take5--about" id="about">
@@ -28,33 +28,33 @@ permalink: /courses/take5/
   
   {%- assign pubdates = "" | split: ", " -%}
   {%- assign publish_order = "" | split: ", " -%}
-  {% assign topics = "" | split: ', '%}
+  {%- assign topics = "" | split: ', ' -%}
   
   {%- assign recent = "" | split: ", " -%}
   
-  {% assign catalog = site.data.take5 | sort %}
+  {%- assign catalog = site.data.take5 | sort -%}
   
-  {% for take5_hash in catalog %}
-      {% assign item = take5_hash[1] %}
-      {% if item.live == true %}
-          {% assign topics = topics | push: item.topic %}
+  {%- for take5_hash in catalog -%}
+      {%- assign item = take5_hash[1] -%}
+      {%- if item.live == true -%}
+          {%- assign topics = topics | push: item.topic -%}
           {%- assign pubdates = pubdates | push: item.date -%}
-      {% endif %}
+      {%- endif -%}
   
-  {% endfor %}
+  {%- endfor -%}
   
-  {% assign unique_topics = topics | uniq | reverse | join: ', '|split: ', ' %}
+  {%- assign unique_topics = topics | uniq | reverse | join: ', '|split: ', ' -%}
   
   {%- assign pubdates_sorted = pubdates | sort -%}
   
   {%- for pubdate in pubdates_sorted -%}
   
-      {% for take5_hash in catalog %}
-          {% assign item = take5_hash[1] %}
+      {%- for take5_hash in catalog -%}
+          {%- assign item = take5_hash[1] -%}
           {%- if item.date == pubdate -%}
               {%- assign publish_order = publish_order | push: item.course_ID -%}
           {%- endif -%}
-      {% endfor %}
+      {%- endfor -%}
   
   {%- endfor -%}
   
@@ -65,14 +65,14 @@ permalink: /courses/take5/
       {%- if site.data.take5[item].live == true -%}
       
           {%- if site.data.take5[item].featured == true -%}
-              {% assign featured = site.data.take5[item].course_ID %}
-              {% assign featured_title = site.data.take5[item].title %}
-              {% assign featured_description = site.data.take5[item].short_description %}
-              {% assign featured_url = site.data.take5[item].title | slugify | prepend: domain_link %}
-              {% assign featured_instructor = site.data.take5[item].instructor %}
-              {% assign featured_topic = site.data.take5[item].topic %}
-              {% assign featured_poster_art = site.data.take5[item].poster_art %}
-              {% assign featured_video_duration = site.data.take5[item].video_duration %}
+              {%- assign featured = site.data.take5[item].course_ID -%}
+              {%- assign featured_title = site.data.take5[item].title -%}
+              {%- assign featured_description = site.data.take5[item].short_description -%}
+              {%- assign featured_url = site.data.take5[item].title | slugify | prepend: domain_link -%}
+              {%- assign featured_instructor = site.data.take5[item].instructor -%}
+              {%- assign featured_topic = site.data.take5[item].topic -%}
+              {%- assign featured_poster_art = site.data.take5[item].poster_art -%}
+              {%- assign featured_video_duration = site.data.take5[item].video_duration -%}
           {%- else -%}
               {%- comment -%} Not featured, but live? Add the course_ID to the RECENT list {%- endcomment -%}
               {%- assign recent = recent | push: site.data.take5[item].course_ID -%}
@@ -83,9 +83,8 @@ permalink: /courses/take5/
       {%- endif -%}
   {%- endfor -%}
   
-  {% if featured != null %}
+  {%- if featured != null -%}
   <div class="take5--main">
-  
     <div class="take5--info take5--hero-content">
       <div class="container">
         <div class="row">
@@ -98,11 +97,11 @@ permalink: /courses/take5/
                 <div class="take5--topics-menu-list">
                   <!-- Found {{ unique_topics | size }} topic(s) with live content -->
                   <ul>
-                    {% for catalog_topic in unique_topics %}
+                    {%- for catalog_topic in unique_topics -%}
                     <li>
                       <a href="#{{ catalog_topic | slugify }}"><b>{{ catalog_topic }}</b></a>
                     </li>
-                    {% endfor %}
+                    {%- endfor -%}
                   </ul>
                 </div>
               </details>
@@ -142,7 +141,7 @@ permalink: /courses/take5/
     
     <!-- Display {{ recent | size }} Take 5s -->
     
-    {% for catalog_topic in unique_topics %}
+    {%- for catalog_topic in unique_topics -%}
     
         {%- assign recent_count = recent | size -%}
         {%- if  recent_count  != 0 -%}
@@ -150,7 +149,7 @@ permalink: /courses/take5/
         <div class="take5--recent-content take5--catalog-section">
           <div class="container">
             <section class="take5--recent-tutorials" id="{{ catalog_topic | slugify }}">
-              {% include /take5/catalog-topic-group.html topic=catalog_topic %}
+              {%- include /take5/catalog-topic-group.html topic=catalog_topic -%}
             </section>
             <div class="to-top-link">
               <a href="#main"><b>Back to top</b></a>
@@ -158,8 +157,8 @@ permalink: /courses/take5/
           </div><!-- .container -->
         </div><!-- .take5--recent-content.take5--catalog-section -->
         {%- endif -%}
-    {% endfor %}
+    {%- endfor -%}
 
   </div><!-- .take5--main -->
-  {% endif %}
+  {%- endif -%}
 </main>
