@@ -2,6 +2,7 @@
 title: Gymnasium Static Content
 url: http://localhost:4000
 produrl: https://thegymnasium.com
+stagurl: https://courses.gymna.si
 timezone: America/New_York
 environment: local
 

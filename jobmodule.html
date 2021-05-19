@@ -2,21 +2,10 @@
 layout: raw
 permalink: /jobmodule/
 ---
+{%- include config/_domain_name_heroku.md -%}
 
-{% case jekyll.environment %}
-
-{% when "development" %}
-{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com"  %}
-
-{% when "staging" %}
-{% assign include_url = "https://gym-jobs-microservice-staging.herokuapp.com"  %}
-
-{% when "production" %}
-{% assign include_url = "https://gym-jobs-microservice-prod.herokuapp.com"  %}
-
-{% endcase %}
 <!-- Environment: {{ jekyll.environment }} -->
-<iframe src="{{ include_url }}"
+<iframe src="{{ domain_name_heroku }}"
   id="jobs-microservice-frame"
   class="gymnasium-resizable-iframe gymnasium-jobs-microservice-iframe"
   style="width: 1px;min-width: 100%;border:0;"

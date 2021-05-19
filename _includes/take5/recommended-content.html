@@ -1,16 +1,6 @@
+{%- include config/_domain_name.md -%}
 
-{% case jekyll.environment %}
-
-  {% when "development" %}
-    {% assign domain_link = "https://courses.gymna.si/take5/" %}
-
-  {% when "staging" %}
-    {% assign domain_link = "https://courses.gymna.si/take5/" %}
-
-  {% when "production" %}
-    {% assign domain_link = "https://thegymnasium.com/courses/take5/" %}
-
-{% endcase %}
+{% assign base_path = "/courses/take5/" | prepend: domain_name %}
 
 {% if course.topic == "Accessibility" %}
 
@@ -95,14 +85,14 @@
           <li>
             <section class="tutorial">
               <div class="artwork" data-duration="{{ tutorial1.video_duration }}">
-                <a href="{{ tutorial1.title | slugify | prepend: domain_link  }}" title="Watch Video">
+                <a href="{{ tutorial1.title | slugify | prepend: base_path  }}" title="Watch Video">
                   <img alt="{{ tutorial1.title }}" src="{{ site.url }}{{ tutorial1.poster_art }}">
                 </a>
               </div>
               <header>
                 <h4 class="subhead-topic">{{ tutorial1.topic }}</h4>
                 <h3 class="all-caps">
-                  <a href="{{ tutorial1.title | slugify | prepend: domain_link  }}">{{ tutorial1.title }}</a>
+                  <a href="{{ tutorial1.title | slugify | prepend: base_path  }}">{{ tutorial1.title }}</a>
                 </h3>
               </header>
             </section>
@@ -110,14 +100,14 @@
           <li>
             <section class="tutorial">
               <div class="artwork" data-duration="{{ tutorial2.video_duration }}">
-                <a href="{{ tutorial2.title | slugify | prepend: domain_link  }}" title="Watch Video">
+                <a href="{{ tutorial2.title | slugify | prepend: base_path  }}" title="Watch Video">
                   <img alt="{{ tutorial2.title }}" src="{{ site.url }}{{ tutorial2.poster_art }}">
                 </a>
               </div>
               <header>
                 <h4 class="subhead-topic">{{ tutorial2.topic }}</h4>
                 <h3 class="all-caps">
-                  <a href="{{ tutorial2.title | slugify | prepend: domain_link  }}">{{ tutorial2.title }}</a>
+                  <a href="{{ tutorial2.title | slugify | prepend: base_path  }}">{{ tutorial2.title }}</a>
                 </h3>
               </header>
             </section>
@@ -125,14 +115,14 @@
           <li>
             <section class="tutorial">
               <div class="artwork" data-duration="{{ tutorial3.video_duration }}">
-                <a href="{{ tutorial3.title | slugify | prepend: domain_link  }}" title="Watch Video">
+                <a href="{{ tutorial3.title | slugify | prepend: base_path  }}" title="Watch Video">
                   <img alt="{{ tutorial3.title }}" src="{{ site.url }}{{ tutorial3.poster_art }}">
                 </a>s
               </div>
               <header>
                 <h4 class="subhead-topic">{{ tutorial3.topic }}</h4>
                 <h3 class="all-caps">
-                  <a href="{{ tutorial3.title | slugify | prepend: domain_link  }}">{{ tutorial3.title }}</a>
+                  <a href="{{ tutorial3.title | slugify | prepend: base_path  }}">{{ tutorial3.title }}</a>
                 </h3>
               </header>
             </section>
