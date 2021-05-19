@@ -16,15 +16,15 @@
         {%- comment -%}
         Set up meta tags for course CATALOG page meta includes
         {%- endcomment -%}
-    
-        {%- assign og_description = page.short_description -%}
+
+        {%- assign og_description = page.og_description -%}
         {%- assign short_description = page.og_description -%}
         {%- assign og_url = page.og_url -%}
         {%- assign og_title = page.og_title -%}
         {%- assign page_title =  page.page_title -%}
-        {%- assign og_art = "gym-courses-og" | prepend: "img/social/courses/" -%}
+        {%- assign og_art = page.og_art -%}
     
-    {%- endif -%}
+    {%- else -%}
     {%- comment -%}
     Set up meta tags for COURSE page meta includes
     {%- endcomment -%}
@@ -36,7 +36,7 @@
     {%- assign og_title = course.title -%}
     {%- assign page_title =  course.title | append: " | Gymnasium" -%}
     {%- assign og_art = course.course_ID | downcase | append: "-social.png" | prepend: "img/social/courses/" -%}
-    
+    {%- endif -%}    
 {%- endif -%}
 
 
