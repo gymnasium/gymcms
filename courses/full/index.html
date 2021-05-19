@@ -2,14 +2,6 @@
 layout: wrapper-full-default
 permalink: /courses/full/
 ---
-{% case jekyll.environment %}
-
-{% when "development" or when "staging" %}
-{% assign domain_name = "https://courses.gymna.si" %}
-
-{% when "production" %}
-{% assign domain_name = "https://thegymnasium.com" %}
-
-{% endcase %}
+{%- include config/_domain_name.md -%}
 
 <!-- Full course content here -->

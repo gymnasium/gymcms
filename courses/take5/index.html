@@ -2,17 +2,9 @@
 layout: raw
 permalink: /courses/take5/
 ---
-{%- case jekyll.environment -%}
+{%- include config/_domain_name.md -%}
 
-{%- when "development" or when "staging" -%}
-{%- assign domain_link = "https://courses.gymna.si/courses/take5/" -%}
-
-{%- when "production" -%}
-{%- assign domain_link = "https://thegymnasium.com/courses/take5/" -%}
-
-{%- endcase -%}
-
-
+{%- assign base_path = "/courses/take5/" | prepend: domain_name -%}
 
 <link rel="stylesheet" href="{{ site.url }}/css/take5.css">
 
@@ -68,7 +60,7 @@ permalink: /courses/take5/
               {%- assign featured = site.data.take5[item].course_ID -%}
               {%- assign featured_title = site.data.take5[item].title -%}
               {%- assign featured_description = site.data.take5[item].short_description -%}
-              {%- assign featured_url = site.data.take5[item].title | slugify | prepend: domain_link -%}
+              {%- assign featured_url = site.data.take5[item].title | slugify | prepend: base_path -%}
               {%- assign featured_instructor = site.data.take5[item].instructor -%}
               {%- assign featured_topic = site.data.take5[item].topic -%}
               {%- assign featured_poster_art = site.data.take5[item].poster_art -%}

@@ -1,15 +1,6 @@
-{% case jekyll.environment %}
+{%- include config/_domain_name.md -%}
 
-{% when "development" %}
-{% assign domain_link = "https://courses.gymna.si/take5/" %}
-
-{% when "staging" %}
-{% assign domain_link = "https://courses.gymna.si/take5/" %}
-
-{% when "production" %}
-{% assign domain_link = "https://thegymnasium.com/courses/take5/" %}
-
-{% endcase %}
+{% assign base_path = "/courses/take5/" | prepend: domain_name %}
 
 {%- if jekyll.environment == "development" -%}
     {%- include take5/test-top.html -%}
