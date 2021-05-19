@@ -1,7 +1,6 @@
 # Setup
 title: Gymnasium Static Content
 url: https://staging.thegymcms.com
-baseurl: /
 produrl: https://thegymnasium.com
 timezone: America/New_York
 environment: staging

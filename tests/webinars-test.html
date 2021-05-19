@@ -53,11 +53,8 @@ Webinar Count: {{ site.data.webinars | size }}
 {%- for webinar in webinars_descending_date -%}
     {%- assign item = site.data.webinars[webinar] -%}
     
-    {%- if item.event_ID == "web0005-state-of-responsive-web-design" -%}
-        {%- assign gym_path = "webinars/state-of-responsive-web-design"-%}
-    {%- else -%}
-        {%- assign gym_path = item.permalink | remove: "/"-%}
-    {%- endif -%}
+    {%- assign gym_path = item.permalink | remove: "/"-%}
+    
     <tr>
         <td><strong>{{ item.event_title | strip_html }}</strong></td>
         <td><a href="{{ site.url }}/{{ item.permalink }}" target="_blank">{{ site.url }}/{{ item.permalink }}</a></td>
