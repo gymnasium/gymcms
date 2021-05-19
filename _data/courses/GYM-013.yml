@@ -1,9 +1,21 @@
 ---
 course_ID: GYM-013
 title: "3D Modeling for Virtual Reality Creation"
+date: 2019-10-28T00:00:00-04:00
 course_type: short
-url: https://thegymnasium.com/courses/course-v1:GYM+013+0/about
+live: true
+url: /courses/course-v1:GYM+013+0/about
+poster_art: /img/course-artwork/png/gym-013.png
 topic: "Content Creation"
 short_description: "Learn how to create 3D generated imagery in Maya for use in Virtual Reality production."
 instructor: groberts
+skills:
+  - label: "Basic 3D Modeling, Animation and Rigging"
+  - label: "Basic 3D Lighting, Rendering and Cameras"
+  - label: "Pre-rendered Cinematic VR creation and publishing"
+  - label: "And more…"
+audience:
+  - label: "Anyone interested in 3D modeling"
+  - label: "Anyone interested in virtual reality workflow"
+  - label: "3D artists interested in virtual reality production"
 ---

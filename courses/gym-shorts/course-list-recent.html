@@ -1,0 +1,86 @@
+---
+layout: raw
+permalink: /courses/gym-shorts/course-list-recent
+---
+
+{%- assign pubdates = ""  | split: ", " -%}
+{%- assign publish_order = ""  | split: ", " -%}
+
+{%- assign recent = "" | split: ", " -%}
+{%- assign upcoming = ""  | split: ", " -%}
+
+{% assign catalog = site.data.courses | sort %}
+
+{% for course_hash in catalog %}
+  {% assign item = course_hash[1] %}
+  {%- assign pubdates = pubdates | push: item.date -%}
+{% endfor %}
+
+{%- assign pubdates_sorted = pubdates | sort -%}
+
+{%- for pubdate in pubdates_sorted -%}
+
+  {% for course_hash in catalog %}
+    {% assign item = course_hash[1] %}
+    {%- if item.date == pubdate -%}
+      {%- assign publish_order = publish_order | push: item.course_ID -%}
+    {%- endif -%}
+  {% endfor %}
+
+{%- endfor -%}
+
+{%- assign publish_order = publish_order | uniq | join: ', ' | split: ', ' -%}
+
+{%- for item in publish_order -%}
+  {%- if site.data.courses[item].live == true and site.data.courses[item].course_type == "short" -%}
+    {%- assign recent = recent | push: site.data.courses[item].course_ID -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign recent = recent | reverse -%}
+
+{%- for item in recent -%}
+  {%- assign course = site.data.courses[item] -%}
+  {%- assign png_path = "/img/course-artwork/png/" | append: course.course_ID | downcase | append: ".png" -%}
+  {%- assign svg_path = "/img/course-artwork/svg/" | append: course.course_ID | downcase | append: ".svg" -%}
+
+  <li class="course-item" data-course-id="{{ course.course_ID | remove: 'GYM-' }}">
+    <article class="row">
+      <figure class="col-md-4">
+        <a href="{{ course.url | remove: 'https://thegymnasium.com' | prepend: domain_name }}">
+          <img class="img-responsive" src="{{ png_path | prepend: site.url }}" srcset="{{ svg_path | prepend: site.url }}" alt="{{ course.course_ID | remove: 'gym-' }} {{ course.title }} Cover Image" decoding="async">
+        </a>
+        <figcaption>
+          <a href="{{ course.url | remove: 'https://thegymnasium.com' | prepend: domain_name }}" class="gym-button"><b>Learn More</b></a>
+        </figcaption>
+      </figure>
+      <div class="col-md-8 course-description">
+        <header>
+          <h2>{{ course.topic }}</h2>
+          <h1>{{ course.title }}</h1>
+        </header>
+        <p>
+          {{ course.short_description }}
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <dl>
+              <dt>Skills Covered</dt>
+              {%- for skill in course.skills -%}
+              <dd><span>{{ skill.label }}</span></dd>
+              {%- endfor -%}
+            </dl>
+          </div>
+          <div class="col-md-6">
+            <dl>
+              <dt>This Course Is For</dt>
+              {%- for audience in course.audience -%}
+              <dd><span>{{ audience.label }}</span></dd>
+              {%- endfor -%}
+            </dl>
+          </div>
+        </div>
+      </div>
+    </article>
+  </li>
+{%- endfor -%}

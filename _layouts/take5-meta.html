@@ -1,6 +1,6 @@
-{%- assign course = site.data.take5s[page.course_ID] -%}
+{%- assign course = site.data.take5[page.course_ID] -%}
 {%- assign og_description = course.short_description -%}
-<meta property="og:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/take5/' }}">
+<meta property="og:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/courses/take5/' }}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <!-- "og:site_name" content="Needs review?" -->
@@ -8,18 +8,18 @@
 <meta property="og:title" content="{{ course.title }}">
 <meta property="og:description" content="{{ og_description }}">
 <!-- 1.91:1 aspect ratio supported by LinkedIn/Twitter -->
-<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ course.course_ID | downcase | append: '-og.png' | prepend: '/img/take5/og/' }}">
+<meta property="og:image" content="{{ site.url }}{{ course.course_ID | downcase | append: '-og.png' | prepend: '/img/take5/og/' }}">
 <!-- Reuse Title or something more descriptive? -->
 <meta property="og:image:alt" content="{{ course.title | prepend: 'Video poster for tutorial titled ' }}">
 <!-- /*/ Twitter Card / Summary with large image /*/ -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@AquentGymnasium">
 <meta name="twitter:creator" content="@AquentGymnasium">
-<meta name="twitter:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/take5/' }}">
+<meta name="twitter:url" content="{{ course.title | slugify | prepend: 'https://thegymnasium.com/courses/take5/' }}">
 <meta name="twitter:title" content="{{ course.title }}">
 <meta name="twitter:description" content="{{ og_description }}">
 <!-- 1.91:1 aspect ratio supported by LinkedIn/Twitter -->
-<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ course.course_ID | downcase | append: '-og.png' | prepend: '/img/take5/og/' }}">
+<meta name="twitter:image" content="{{ site.url }}{{ course.course_ID | downcase | append: '-og.png' | prepend: '/img/take5/og/' }}">
 <!-- Reuse Title or something more descriptive? -->
 <meta name="twitter:image:alt" content="{{ course.title | prepend: 'Video poster for tutorial titled ' }}">
 

@@ -1,0 +1,86 @@
+---
+layout: raw
+permalink: /courses/
+---
+{% case jekyll.environment %}
+
+{% when "development" or when "staging" %}
+{% assign domain_name = "https://courses.gymna.si" %}
+
+{% when "production" %}
+{% assign domain_name = "https://thegymnasium.com" %}
+
+{% endcase %}
+
+<section class="find-courses" id="gym-catalog">
+
+  <header class="course-title">
+    <div class="container">
+      <h1>Catalog</h1>
+    </div>
+  </header>
+
+  <div class="container course-menu">
+    <div class="row">
+      <ul>
+        <li>
+          <a href="#full">Full Courses</a>
+        </li>
+        <li>
+          <a href="#gymshorts">Gym Shorts</a>
+        </li>
+        <li>
+          <a href="#take5">Take 5</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main" class="container" aria-label="Content" tabindex="-1">  
+    <div class="catalog-content row">
+      <div class="col-md-9 course-overview">
+        <section class="courses-container">
+
+          <h1 id="full">Full Courses</h1>
+          <p class="hero">
+            Full Courses are taught by industry experts and focus on current skills and technologies. Each includes 3 to 6 hours of video instruction, optional quizzes and assignments, a final exam, and certificate (if and) when you pass.
+          </p>
+          
+          <ul class="listing-courses">
+            {%- assign base_path = "/courses/full/" | prepend: domain_name -%}
+            {%- include_relative full/course-list-recent.html -%}
+          </ul>
+        
+          <h1 id="gymshorts">Gym Shorts</h1>
+          <p class="hero">
+            Gym Shorts are short courses that all last under an hour. Like our Full Courses, they are taught by industry experts and focus on current skills and technologies. Each includes approximately one hour of video instruction, a final exam, and a badge (if and) when you pass.
+          </p>
+          <ul class="listing-courses" id="gym-shorts-list">
+            {%- assign base_path = "/courses/gym-shorts/" | prepend: domain_name -%}
+            {%- include_relative gym-shorts/course-list-recent.html -%}
+          </ul>
+        
+          <!-- TODO: maybe create a new CSS file for the entire course catalog page? -->
+          <link rel="stylesheet" href="{{ site.url }}/css/take5-course-catalog.css">
+        
+          {% assign base_path = "/courses/take5/" | prepend: domain_name %}
+          
+          <h1 id="take5">Take 5</h1>
+          {%- include take5/course-catalog-description.html -%}
+        
+          <ul class="listing-courses" id="take5-list">
+          {%- include_relative take5/course-list-recent.html -%}
+          </ul>
+        </section>
+      </div>
+      <div class="col-md-3 sidebar">
+        <!-- Get Upcoming/Featured Courses Sidebar -->
+        {%- include_relative featured.html -%}
+      </div>
+    </div> 
+  </main>
+</section>
+
+
+
+

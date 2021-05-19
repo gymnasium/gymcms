@@ -1,7 +1,7 @@
 # Setup
 title: Gymnasium Static Content
 url: https://thegymcms.com
-baseurl: /
+produrl: https://thegymnasium.com
 timezone: America/New_York
 environment: production
 
@@ -15,6 +15,9 @@ exclude:
   - 'netlify.toml'
   - '.jekyll-cache'
 
+include:
+  - '_redirects'
+
 repository: gymnasium/gymcms
 
 # Conversion
@@ -25,7 +28,6 @@ highlighter: rouge
 detach: false
 port: 4000
 host: 127.0.0.1
-baseurl: ''
 
 # Markdown Processing
 kramdown:
@@ -42,3 +44,20 @@ kramdown:
 sass:
   sass_dir: _sass
   style: compressed
+
+## Additional Plugins
+plugins:
+  - jekyll-get-json
+
+## JSON Fetch
+jekyll_get_json:
+  - data: privacy-index
+    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:webPageContent%20+webPageContent.title:*privacy-policy-index*%20+languageId:1%20+deleted:false%20+working:true/'
+  - data: privacy-shield-notice
+    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:webPageContent%20+webPageContent.title:*privacy-policy-privacy-shield-notice*%20+languageId:1%20+deleted:false%20+working:true/'
+  - data: privacy-ccpa
+    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:webPageContent%20+webPageContent.title:*privacy-policy-ccpa-policy*%20+languageId:1%20+deleted:false%20+working:true/'
+  - data: privacy-data-category
+    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:webPageContent%20+webPageContent.title:*privacy-policy-data-category*%20+languageId:1%20+deleted:false%20+working:true/'
+  - data: privacy-eu-rights
+    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:webPageContent%20+webPageContent.title:*privacy-policy-european-rights*%20+languageId:1%20+deleted:false%20+working:true/'

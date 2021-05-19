@@ -5,12 +5,12 @@ permalink: /tests/take5/published/
 {% if jekyll.environment == "production" %}
 
 
-{% assign domain_link = "https://thegymnasium.com/take5/" %}
+{% assign domain_link = "https://thegymnasium.com/courses/take5/" %}
 
 {%- assign pubdates = ""  | split: ", " -%}
 {%- assign publish_order = ""  | split: ", " -%}
 
-{% assign catalog = site.data.take5s | sort %}
+{% assign catalog = site.data.take5 | sort %}
 
 {% for take5_hash in catalog %}
     {% assign item = take5_hash[1] %}
@@ -34,14 +34,14 @@ permalink: /tests/take5/published/
 <table>
 
 {%- for item in publish_order -%}
-{%- if site.data.take5s[item].live == true -%}
+{%- if site.data.take5[item].live == true -%}
 <tr>
-    <td>{{ site.data.take5s[item].course_ID }}</td>
-    <td>{{ site.data.take5s[item].title }}</td>
-    <td>{{ site.data.take5s[item].date | date: "%m/%d/%Y" }}</td>
-    <td>{{ site.data.take5s[item].topic }}</td>
-    <td>{{ site.data.take5s[item].instructor }}</td>
-    <td><a href="{{ site.data.take5s[item].title | slugify | prepend: domain_link }}">{{ site.data.take5s[item].title | slugify | prepend: domain_link }}</a></td>
+    <td>{{ site.data.take5[item].course_ID }}</td>
+    <td>{{ site.data.take5[item].title }}</td>
+    <td>{{ site.data.take5[item].date | date: "%m/%d/%Y" }}</td>
+    <td>{{ site.data.take5[item].topic }}</td>
+    <td>{{ site.data.take5[item].instructor }}</td>
+    <td><a href="{{ site.data.take5[item].title | slugify | prepend: domain_link }}">{{ site.data.take5[item].title | slugify | prepend: domain_link }}</a></td>
 </tr>
 
 {%- endif -%}

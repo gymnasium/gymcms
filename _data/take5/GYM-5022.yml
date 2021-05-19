@@ -1,0 +1,26 @@
+---
+course_ID: GYM-5022
+title: "Creating a Pixel Perfect Icon in Sketch"
+date: 2019-12-10T00:00:00-04:00
+course_type: take5
+url: /courses/take5/GYM-5022/
+poster_art: /img/take5/posters/gym-5022.jpg
+live: true
+instructor: "Jeremy Osborn"
+topic: "Web Design & Development"
+video_ID: fOP3xEY77bc
+video_duration: "4:57"
+featured: false
+short_description: "Learn how to create a pixel perfect icon in Sketch whose edges remain sharp in any scenario with this tutorial by Jeremy Osborn, Academic Director of Aquent Gymnasium."
+project_file_source: GitHub
+project_files:
+- label: "Lesson Files"
+  url: "https://gymnasium.github.io/take5/gym-5022.zip"
+related_content:
+- label: "6 Easy Steps to Better Icon Design by Scott Lewis"
+  url: "https://www.smashingmagazine.com/2016/05/easy-steps-to-better-logo-design/"
+- label: "The Icon Handbook by Jon Hicks"
+  url: "http://iconhandbook.co.uk//book/"
+- label: "Sketch Quick Tip: Avoid sub-pixels on outline icons by Martin Maricak"
+  url: "https://lockerroom.hellephant.com/sketch-quick-tip-avoid-sub-pixels-on-the-outline-icons-7c55400e6ab1"
+---

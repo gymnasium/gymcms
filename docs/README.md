@@ -26,7 +26,7 @@ course_ID: GYM-5001                         # Unique course ID
 title: "Making a CSS Parallax Effect"       # MUST be quoted
 date: 2019-10-28T00:00:00-04:00             # Publish date — MUST be in this format
 course_type: take5                          # This is required
-url: /static/take5/GYM-5001/                # Only change the course ID!
+url: /courses/take5/GYM-5001/                # Only change the course ID!
 poster_art: /img/take5/posters/gym-5001.jpg # Path to poster image (may be deprecated)
 live: true                                  # Only set to live when ready to publish!
 instructor: "Jeremy Osborn"                 # MUST be quoted
@@ -61,7 +61,7 @@ course_ID: GYM-5000
 title: 
 date: 2019-11-15T00:00:00-04:00
 course_type: take5
-url: /static/take5/GYM-5000/
+url: /courses/take5/GYM-5000/
 poster_art: /img/take5/posters/gym-5000.jpg
 live: false
 instructor: 
@@ -140,7 +140,7 @@ The Take 5 stub page contains frontmatter and the full text from the video trans
 ---
 layout: take5-raw
 course_ID: GYM-5001
-permalink: /static/take5/gym-5001
+permalink: /courses/take5/gym-5001
 ---
 
 In today’s Take 5, you’re going to make a scrolling background image effect 
@@ -159,7 +159,7 @@ The meta include stub file only contains frontmatter.
 ---
 layout: take5-meta
 course_ID: GYM-5001
-permalink: /static/take5/meta/gym-5001-meta/
+permalink: /courses/take5/gym-5001/meta/
 ---
 ```
 

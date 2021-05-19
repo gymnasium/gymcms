@@ -38,27 +38,27 @@
 // animation: 60s ease-in-out infinite running slide-show;
 
 #slide-1 {
-  background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5019-hero.jpg");
+  background-image: url("{{ site.url }}/img/take5/posters/gym-5019-hero.jpg");
   animation-name: fade-1;
 }
 
 #slide-2 {
-  background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5013-hero.jpg");
+  background-image: url("{{ site.url }}/img/take5/posters/gym-5013-hero.jpg");
   animation-name: fade-2;
 }
 
 #slide-3 {
-  background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5002-hero.jpg");
+  background-image: url("{{ site.url }}/img/take5/posters/gym-5002-hero.jpg");
   animation-name: fade-3;
 }
 
 #slide-4 {
-  background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5001-hero.jpg");
+  background-image: url("{{ site.url }}/img/take5/posters/gym-5001-hero.jpg");
   animation-name: fade-4;
 }
 
 #slide-5 {
-  background-image: url("{{ site.url }}{{ site.baseurl }}/img/take5/posters/gym-5007-hero.jpg");
+  background-image: url("{{ site.url }}/img/take5/posters/gym-5007-hero.jpg");
   animation-name: fade-5;
 }
 

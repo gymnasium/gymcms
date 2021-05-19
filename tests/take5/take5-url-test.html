@@ -33,7 +33,7 @@ td.success {
 }
 </style>
 
-{% assign sorted_catalog = site.data.take5s | sort %}
+{% assign sorted_catalog = site.data.take5 | sort %}
 
 <h1>Take 5 Testing: Gymnasium Production URLs</h1>
 <p>Found: <strong>{{sorted_catalog | size }}</strong> Take 5 tutorials</p>
@@ -50,9 +50,9 @@ td.success {
 <tr><!-- Course Catalog -->
     <td>N/A</td><!-- Course ID -->
     <td>Take 5 Catalog</td><!-- Title -->
-    <td><pre><a href="{{ 'static/take5/' | absolute_url }}">{{ 'static/take5/' | absolute_url }}</a></pre></td><!-- Include URL -->
-    <td><pre><a href="{{ 'static/take5/meta/catalog-meta/' | absolute_url }}">{{ 'static/take5/meta/catalog-meta/' | absolute_url }}</a></pre></td><!-- Meta tag partial -->
-    <td><a href="https://thegymnasium.com/take5/"><pre>https://thegymnasium.com/take5/</pre></a></td><!-- Gymnasium URL -->
+    <td><pre><a href="{{ '/take5/' | absolute_url }}">{{ '/take5/' | absolute_url }}</a></pre></td><!-- Include URL -->
+    <td><pre><a href="{{ '/take5/meta/catalog-meta/' | absolute_url }}">{{ '/take5/meta/catalog-meta/' | absolute_url }}</a></pre></td><!-- Meta tag partial -->
+    <td><a href="https://thegymnasium.com/courses/take5/"><pre>https://thegymnasium.com/courses/take5/</pre></a></td><!-- Gymnasium URL -->
 </tr>
 
     {% for take5_hash in sorted_catalog %}
@@ -71,13 +71,13 @@ td.success {
     <td><pre><a href="{{ item.url | absolute_url }}">{{ item.url | absolute_url }}</a></pre></td>
     
     <!-- Meta tag partial -->
-    {% assign meta_url = item.course_ID | prepend: '/static/take5/meta/' | append: '-meta/' | downcase %}
+    {% assign meta_url = item.course_ID | prepend: '/take5/meta/' | append: '-meta/' | downcase %}
     <td>
         <a href="{{ meta_url | absolute_url }}"><pre>{{ meta_url | absolute_url }}</pre></a>
     </td>
 
     <!-- Gymnasium URL -->
-    {% assign gym_url = item.title | slugify | prepend: 'https://thegymnasium.com/take5/' %}
+    {% assign gym_url = item.title | slugify | prepend: 'https://thegymnasium.com/courses/take5/' %}
     <td><a href="{{ gym_url }}" target="_blank"><pre>{{ gym_url }}</pre></a></td>
 </tr>
 {% endfor %}

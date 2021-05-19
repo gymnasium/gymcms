@@ -1,6 +1,6 @@
 ---
-layout: raw
-permalink: /static/take5/blitz
+layout: wrapper-full-default
+permalink: /take5/blitz
 ---
 {%- comment -%}
 //
@@ -8,34 +8,27 @@ permalink: /static/take5/blitz
 //
 {%- endcomment -%}
 
-{% case jekyll.environment %}
+{%- case jekyll.environment -%}
 
-{% when "development" %}
-{% assign domain_link = "https://courses.gymna.si/take5/" %}
+{%- when "development" or when "staging" -%}
+{%- assign domain_link = "https://courses.gymna.si/courses/take5/" -%}
 
-{% when "staging" %}
-{% assign domain_link = "https://courses.gymna.si/take5/" %}
+{%- when "production" -%}
+{%- assign domain_link = "https://thegymnasium.com/courses/take5/" -%}
 
-{% when "production" %}
-{% assign domain_link = "https://thegymnasium.com/take5/" %}
+{%- endcase -%}
 
-{% endcase %}
+<link rel="stylesheet" href="{{ site.url }}/css/take5.css">
 
-{%- if jekyll.environment == "development" -%}
-    {%- include take5/test-top.html -%}
-{%- endif -%}
-
-<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/take5.css">
-
-{% include take5/detail-opener-js.html %}
+{%- include take5/detail-opener-js.html -%}
 
 <main id="main" role="main">
-<header class="take5--about" id="about">
-  <div class="container">
-    <h1>Take 5</h1>
-    <p><strong>Take 5 minutes to learn a practical skill with Take 5 video tutorials.</strong> Topics covered include web design and development, user experience, prototyping, and career skills. Check back here for new videos every day this month. Just watch and learn.</p>
-  </div>
-</header>
+  <header class="take5--about" id="about">
+    <div class="container">
+      <h1>Take 5</h1>
+      <p><strong>Take 5 minutes to learn a practical skill with Take 5 video tutorials.</strong> Topics covered include web design and development, user experience, prototyping, and career skills. Check back here for new videos every day this month. Just watch and learn.</p>
+    </div>
+  </header>
 
 {%- assign pubdates = ""  | split: ", " -%}
 {%- assign publish_order = ""  | split: ", " -%}
@@ -43,23 +36,23 @@ permalink: /static/take5/blitz
 {%- assign recent = ""  | split: ", " -%}
 {%- assign upcoming = ""  | split: ", " -%}
 
-{% assign catalog = site.data.take5s | sort %}
+{%- assign catalog = site.data.take5 | sort -%}
 
-{% for take5_hash in catalog %}
-    {% assign item = take5_hash[1] %}
+{%- for take5_hash in catalog -%}
+    {%- assign item = take5_hash[1] -%}
     {%- assign pubdates = pubdates | push: item.date -%}
-{% endfor %}
+{%- endfor -%}
 
 {%- assign pubdates_sorted = pubdates | sort -%}
 
 {%- for pubdate in pubdates_sorted -%}
 
-    {% for take5_hash in catalog %}
-        {% assign item = take5_hash[1] %}
+    {%- for take5_hash in catalog -%}
+        {%- assign item = take5_hash[1] -%}
         {%- if item.date == pubdate -%}
             {%- assign publish_order = publish_order | push: item.course_ID -%}
         {%- endif -%}
-    {% endfor %}
+    {%- endfor -%}
 
 {%- endfor -%}
 
@@ -67,135 +60,123 @@ permalink: /static/take5/blitz
 
 {%- for item in publish_order -%}
 
-{%- if site.data.take5s[item].live == true -%}
+    {%- if site.data.take5[item].live == true -%}
 
-
-    {%- if site.data.take5s[item].featured == true -%}
-        {% assign featured = site.data.take5s[item].course_ID %}
-        {% assign featured_title = site.data.take5s[item].title %}
-        {% assign featured_description = site.data.take5s[item].short_description %}
-        {% assign featured_url = site.data.take5s[item].title | slugify | prepend: domain_link %}
-        {% assign featured_instructor = site.data.take5s[item].instructor %}
-        {% assign featured_topic = site.data.take5s[item].topic %}
-        {% assign featured_poster_art = site.data.take5s[item].poster_art %}
-        {% assign featured_video_duration = site.data.take5s[item].video_duration %}
+        {%- if site.data.take5[item].featured == true -%}
+            {%- assign featured = site.data.take5[item].course_ID -%}
+            {%- assign featured_title = site.data.take5[item].title -%}
+            {%- assign featured_description = site.data.take5[item].short_description -%}
+            {%- assign featured_url = site.data.take5[item].title | slugify | prepend: domain_link -%}
+            {%- assign featured_instructor = site.data.take5[item].instructor -%}
+            {%- assign featured_topic = site.data.take5[item].topic -%}
+            {%- assign featured_poster_art = site.data.take5[item].poster_art -%}
+            {%- assign featured_video_duration = site.data.take5[item].video_duration -%}
+        {%- else -%}
+            {%- comment -%} Not featured, but live? Add the course_ID to the RECENT list {%- endcomment -%}
+            {%- assign recent = recent | push: site.data.take5[item].course_ID -%}
+        {%- endif -%}
     {%- else -%}
-    {%- comment -%} Not featured, but live? Add the course_ID to the RECENT list {%- endcomment -%}
-    {%- assign recent = recent | push: site.data.take5s[item].course_ID -%}
+        {%- comment -%} Not live? Add the course_ID to the UPCOMING list {%- endcomment -%}
+        {%- assign upcoming = upcoming | push: site.data.take5[item].course_ID -%}
     {%- endif -%}
-{%- else -%}
-    {%- comment -%} Not live? Add the course_ID to the UPCOMING list {%- endcomment -%}
-    {%- assign upcoming = upcoming | push: site.data.take5s[item].course_ID -%}
-{%- endif -%}
 {%- endfor -%}
-
-
-{% if featured != null %}
-<div class="take5--main">
-
-<div class="take5--hero-content">
-    <div class="container">
+  
+  <div class="take5--main">
+{%- if featured != null -%}
+    <div class="take5--hero-content">
+      <div class="container">
         <div class="row">
-            <div class="col-md-8">
-                <div class="take5--featured" id="featured-tutorial">
+          <div class="col-md-8">
+            <div class="take5--featured" id="featured-tutorial">
+              <header>
+                <h2>New</h2>
+              </header>
+              <div class="tutorial">
+                <div class="artwork" data-duration="{{ featured_video_duration }}">
+                  <a href="{{ featured_url }}" title="Watch Video"><img alt="{{ featured_description }}" src="{{ site.url }}{{ featured_poster_art }}"></a>
+                </div><!-- .artwork -->
                 <header>
-                    <h2>New</h2>
+                  <h2 class="all-caps subhead-topic">{{ featured_topic }}</h2>
+                  <h1 class="title all-caps"><a href="{{ featured_url }}">{{ featured_title }}</a></h1>
+                  <p class="instructor">with {{ featured_instructor }}</p>
                 </header>
-                    <div class="tutorial">
-                        <div class="artwork" data-duration="{{ featured_video_duration }}">
-                        <a href="{{ featured_url }}" title="Watch Video"><img alt="{{ featured_description }}" src="{{ site.url }}{{ site.baseurl }}{{ featured_poster_art }}"></a>
-                    </div>
-                    <header>
-                        <h2 class="all-caps subhead-topic">{{ featured_topic }}</h2>
-                        <h1 class="title all-caps"><a href="{{ featured_url }}">{{ featured_title }}</a></h1>
-                        <p class="instructor">with {{ featured_instructor }}</p>
-                    </header>
-                    <p class="description">{{ featured_description }}</p>
-                    <div class="cta cta-left">
-                        <a class="gym-button" href="{{ featured_url }}"><b>Watch Video</b></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        <div class="col-md-4">
-            <!-- Upcoming Courses: Display 5 (max) of {{ upcoming | size }} Take 5s-->
+                <p class="description">{{ featured_description }}</p>
+                <div class="cta cta-left">
+                  <a class="gym-button" href="{{ featured_url }}"><b>Watch Video</b></a>
+                </div><!-- .cta -->
+              </div><!-- .tutorial -->
+            </div><!-- .take5--featured -->
+          </div><!-- .col-md-8 -->
+          <div class="col-md-4">
+              <!-- Upcoming Courses: Display 5 (max) of {{ upcoming | size }} Take 5s-->
 
-<details open class="take5--resources" id="tutorial-resources">
-        <summary aria-expanded="true/false" tabindex="0" role="button"><b role="heading">Upcoming</b></summary>
-            <div class="take5--resources-list take5--upcoming-list">
-            <ul>
+            <details open class="take5--resources" id="tutorial-resources">
+              <summary aria-expanded="true/false" tabindex="0" role="button"><b role="heading">Upcoming</b></summary>
+              <div class="take5--resources-list take5--upcoming-list">
+                <ul>
     {%- for item in upcoming limit: 5 -%}
-    {%- assign upcoming_take5 = site.data.take5s[item] -%}
+        {%- assign upcoming_take5 = site.data.take5[item] -%}
 
-    <li><time class="subhead-datetime" datetime="{{ upcoming_take5.date | date: '%Y-%m-%d' }}">
-    <b>{{ upcoming_take5.date | date: "%a" }} </b>
-    {{ upcoming_take5.date | date: "%b %-d" }}</time>
-    <h4>{{ upcoming_take5.title }}</h4>
-    </li>
-
-
+                  <li>
+                    <time class="subhead-datetime" datetime="{{ upcoming_take5.date | date: '%Y-%m-%d' }}">
+                      <b>{{ upcoming_take5.date | date: "%a" }} </b> {{ upcoming_take5.date | date: "%b %-d" }}
+                    </time>
+                    <h4>{{ upcoming_take5.title }}</h4>
+                  </li>
     {%- endfor -%}
-            </ul>
-        <p><strong>Stay Up-To-Date</strong><br><a class="gymlink" href="https://twitter.com/aquentgymnasium" target="_blank" rel="noopener">Follow Gymnasium on Twitter</a></p>
-        </div>
-    </details>
-        </div>
-    </div>
-</div>
-</div>
-
-
+                </ul>
+                <p><strong>Stay Up-To-Date</strong><br><a class="gymlink" href="https://twitter.com/aquentgymnasium" target="_blank" rel="noopener">Follow Gymnasium on Twitter</a></p>
+              </div>
+            </details>
+          </div><!-- .col-md-4 -->
+        </div><!-- .row -->
+      </div><!-- .container -->
+    </div><!-- .take5--hero-content -->
+{%- endif -%}
 
 {%- assign recent_count = recent | size -%}
 {%- if  recent_count  != 0 -%}
 
-<!-- Display {{ recent | size }} (of 19) recent Take 5s -->
+    <!-- Display {{ recent | size }} (of 19) recent Take 5s -->
+    <div class="take5--recent-content">
+      <div class="container">
+        <section class="take5--recent-tutorials" id="recent-tutorials">
+          <header>
+            <h2 class="all-caps">Recent</h2>
+          </header>
+          <div class="cols cols-max-3">
+            {%- comment -%}
+            Reverse the order of the recents (most recent = highest course_ID)
+            {%- endcomment -%}
+            <ul>
+    {%- assign recent = recent | reverse -%}
 
-
-<div class="take5--recent-content">
-    <div class="container">
-      <section class="take5--recent-tutorials" id="recent-tutorials">
-        <header>
-          <h2 class="all-caps">Recent</h2>
-        </header>
-        <div class="cols cols-max-3">
-{%- comment -%} Reverse the order of the recents (most recent = highest course_ID) {%- endcomment -%}
-<ul>
-{%- assign recent = recent | reverse -%}
-
-{%- for item in recent -%}
-{%- assign recent_take5 = site.data.take5s[item] -%}
-
-    <li>
-        <article class="tutorial">
-            <div class="artwork" data-duration="{{ recent_take5.video_duration }}">
-                <a href="{{ recent_take5.title | slugify | prepend: domain_link }}" title="Watch Video">
-                <img alt="{{ recent_take5.title }}" src="{{ site.url }}{{ site.baseurl }}{{ recent_take5.poster_art }}"></a>
-            </div>
-            <header>
-                <h4 class="all-caps subhead-topic">{{ recent_take5.topic }}</h4>
-                <h3 class="all-caps">
-                <a href="{{ recent_take5.title | slugify | prepend: domain_link }}">{{ recent_take5.title }}</a>
-                </h3>
-            </header>
-        </article>
-    </li>
-{%- endfor -%}
-</ul>
-        </div>
-      </section>
-      <div class="to-top-link">
-        <a href="#main"><b>Back to top</b></a>
-      </div>
-    </div>
-</div>
+    {%- for item in recent -%}
+        {%- assign recent_take5 = site.data.take5[item] -%}
+              <li>
+                <article class="tutorial">
+                  <div class="artwork" data-duration="{{ recent_take5.video_duration }}">
+                    <a href="{{ recent_take5.title | slugify | prepend: domain_link }}" title="Watch Video">
+                    <img alt="{{ recent_take5.title }}" src="{{ site.url }}{{ recent_take5.poster_art }}"></a>
+                  </div><!-- .artwork -->
+                  <header>
+                    <h4 class="all-caps subhead-topic">{{ recent_take5.topic }}</h4>
+                    <h3 class="all-caps">
+                    <a href="{{ recent_take5.title | slugify | prepend: domain_link }}">{{ recent_take5.title }}</a>
+                    </h3>
+                  </header>
+                </article>
+              </li>
+    {%- endfor -%}
+            </ul>
+          </div><!-- .cols -->
+        </section>
+        <div class="to-top-link">
+          <a href="#main"><b>Back to top</b></a>
+        </div><!-- .to-top-link -->
+      </div><!-- .container -->
+    </div><!-- .take5--recent-content -->
 {%- endif -%}
 
-</div>
-
+  </div><!-- .take5--main -->
 </main>
-
-{%- if jekyll.environment == "development" -%}
-    {%- include take5/test-bottom.html -%}
-{%- endif -%}

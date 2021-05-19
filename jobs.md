@@ -1,6 +1,6 @@
 ---
 layout: raw
-permalink: /static/jobs/
+permalink: /jobs/
 ---
 # Jobs
 
@@ -67,9 +67,9 @@ See how your salary stacks up to the competition.
 
 Learn career skills in 5 minutes for free. (Seriously!)
 
-- [Knowing Your Audience](https://thegymnasium.com/take5/knowing-your-audience)
-- [Self-Promotion Through Your Online Presence](https://thegymnasium.com/take5/self-promotion-through-your-online-presence)
-- [Crafting Your Story](https://thegymnasium.com/take5/crafting-your-story)
-- [How to Tell the Story of a Mid-Career Pivot](https://thegymnasium.com/take5/how-to-tell-the-story-of-a-mid-career-pivot)
-- [Storytelling for Designers](https://thegymnasium.com/take5/storytelling-for-designers)
-- [Managing Your Time Like a Pro](https://thegymnasium.com/take5/managing-your-time-like-a-pro)
+- [Knowing Your Audience](https://thegymnasium.com/courses/take5/knowing-your-audience)
+- [Self-Promotion Through Your Online Presence](https://thegymnasium.com/courses/take5/self-promotion-through-your-online-presence)
+- [Crafting Your Story](https://thegymnasium.com/courses/take5/crafting-your-story)
+- [How to Tell the Story of a Mid-Career Pivot](https://thegymnasium.com/courses/take5/how-to-tell-the-story-of-a-mid-career-pivot)
+- [Storytelling for Designers](https://thegymnasium.com/courses/take5/storytelling-for-designers)
+- [Managing Your Time Like a Pro](https://thegymnasium.com/courses/take5/managing-your-time-like-a-pro)

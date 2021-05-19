@@ -1,9 +1,21 @@
 ---
 course_ID: GYM-008
 title: "Advanced Rapid Prototyping with Axure"
+date: 2019-10-28T00:00:00-04:00
 course_type: short
-url: https://thegymnasium.com/courses/GYM/008/0/about
+live: true
+url: /courses/GYM/008/0/about
+poster_art: /img/course-artwork/png/gym-008.png
 topic: "Prototyping"
 short_description: "Learn how to use the conditional logic features in Axure in order to quickly create an interactive prototype."
 instructor: tslate
+skills:
+  - label: "Interactive prototyping"
+  - label: "Basic programming logic"
+  - label: "User flows"
+  - label: "And more…"
+audience:
+  - label: "UX Designers"
+  - label: "Interactive Designers"
+  - label: "Information Architects"
 ---

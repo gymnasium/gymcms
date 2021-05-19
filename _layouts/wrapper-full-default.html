@@ -1,0 +1,21 @@
+<!-- //
+Generated at: {{ site.time }}
+Served from: {{ page.url | absolute_url }}
+Git Hash: {{ site.data['hash']}}
+// -->
+
+{%- if jekyll.environment == "development" -%}
+  {%- include take5/test-top.html -%}
+{%- endif -%}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      {{ content }}
+    </div><!-- .col-md-12 -->
+  </div><!-- .row -->
+</div><!-- .container -->
+
+{%- if jekyll.environment == "development" -%}
+  {%- include take5/test-bottom.html -%}
+{%- endif -%}

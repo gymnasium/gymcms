@@ -1,13 +1,25 @@
 ---
 course_ID: GYM-016
 title: "Designing Accessible and Responsive Websites"
+date: 2019-10-28T00:00:00-04:00
 course_type: short
-url: https://thegymnasium.com/courses/course-v1:GYM+016+0/about
+live: true
+url: /courses/course-v1:GYM+016+0/about
+poster_art: /img/course-artwork/png/gym-016.png
 topic: "Web Design & Development"
 subtopics:
   - label: "Accessibility"
 short_description: "Learn accessible and responsive design best practices to help make a more user-friendly web for everyone."
 instructor: emarcotte
+skills:
+  - label: "Web accessibility"
+  - label: "Responsive design"
+  - label: "Intermediate HTML/CSS"
+  - label: "And more…"
+audience:
+  - label: "Anyone interested in building more accessible websites"
+  - label: "Web designers with coding chops"
+  - label: "Front-end developers"
 ---
 
 

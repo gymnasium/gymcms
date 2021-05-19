@@ -1,9 +1,21 @@
 ---
 course_ID: GYM-106
 title: "Information Design & Visualization Fundamentals"
+date: 2019-10-28T00:00:00-04:00
 course_type: full
-url: https://thegymnasium.com/courses/GYM/106/0/about
+live: true
+url: /courses/GYM/106/0/about
+poster_art: /img/course-artwork/png/gym-106.png
 topic: "Content Creation"
 short_description: "Learn the design and visual principles needed to create effective information graphics and data visualizations."
 instructor: groberts
+skills:
+ - label: "Visual design principles"
+ - label: "Interactive design principles"
+ - label: "Mapping and charting tools"
+ - label: "And more…"
+audience:
+ - label: "Designers"
+ - label: "Creatives"
+ - label: "Data scientists"
 ---

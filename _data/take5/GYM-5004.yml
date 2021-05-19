@@ -1,0 +1,32 @@
+---
+course_ID: GYM-5004
+title: "Working with CSS Feature Queries"
+date: 2019-10-31T00:00:00-04:00
+course_type: take5
+url: /courses/take5/GYM-5004/
+poster_art: /img/take5/posters/gym-5004.jpg
+topic: "Web Design & Development"
+live: true
+instructor: "Jeremy Osborn"
+video_ID: VaHkQQ5xgac
+video_duration: "4:34"
+featured: false
+short_description: "Learn how to use new CSS features for modern browsers without worrying about browser incompatibilities in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
+project_file_source: CodePen
+project_files:
+- label: "Starting Project"
+  url: "https://codepen.io/josborn/pen/vwPoYE"
+- label: "Completed Project"
+  url: "https://codepen.io/josborn/pen/oRVrOR"
+related_content:
+- label: "Gymnasium: Creating a CSS Knockout Text Effect"
+  url: "https://thegymnasium.com/courses/take5/creating-a-css-knockout-text-effect"
+- label: "How @supports works by Chris Coyier"
+  url: "https://css-tricks.com/how-supports-works/"
+- label: "Using Feature Queries in CSS by Jen Simmons"
+  url: "https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/"
+- label: "Can I Use: CSS Feature Queries"
+  url: "https://caniuse.com/#feat=css-featurequeries"
+- label: "Fit for Purpose: Making Sense of the New CSS by Eric Meyer"
+  url: "https://www.youtube.com/watch?v=0sDYhKi1qzc"
+---

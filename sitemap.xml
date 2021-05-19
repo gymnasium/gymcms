@@ -1,0 +1,200 @@
+---
+layout: null
+permalink: sitemap.xml
+---
+
+<url>
+  <loc>{{ site.produrl }}</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/about</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/accessibility</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/collections</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/courses</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+
+{%- assign catalog = "" | split: ',' -%}
+
+{% comment %}
+<!-- TODO: uncomment this chunk once we've set up about pages for the courses
+{%- assign courses = site.data.courses -%}
+{%- for course_hash in courses -%}
+    {%- assign catalog = catalog | push: course_hash -%}
+{%- endfor -%}
+ -->
+{% endcomment %}
+
+{%- assign take5_courses = site.data.take5 -%}
+{%- for course_hash in take5_courses -%}
+    {%- assign catalog = catalog | push: course_hash -%}
+{%- endfor -%}
+
+{%- assign sorted_catalog = catalog | sort -%}
+
+{%- for course_hash in sorted_catalog -%}
+    {%- assign item = course_hash[1] -%}
+
+    {%- assign url = item.url | remove: "https://thegymnasium.com" | prepend: site.produrl -%}
+
+    {%- if item.course_type == "take5" -%}
+      {%- assign slug = item.title | downcase | slugify -%}
+      {%- assign url = slug | prepend: "/courses/take5/" | prepend: site.produrl -%}
+    {%- endif -%}
+
+    {%- if item.sitemap.lastmod -%}
+        {%- assign lastmod = item.sitemap.lastmod | date: "%Y-%m-%d" -%}
+    {%- elsif item.date -%}
+        {%- assign lastmod = item.date | date_to_xmlschema -%}
+    {%- else -%}
+        {%- assign lastmod = site.time | date_to_xmlschema -%}
+    {%- endif -%}
+
+    {%- if item.sitemap.changefreq -%}
+        {%- assign changefreq = item.sitemap.changefreq -%}
+    {%- else -%}
+        {%- assign changefreq = "monthly" -%}
+    {%- endif -%}
+
+    {%- if item.sitemap.priority -%}
+        {%- assign priority = item.sitemap.priority -%}
+    {%- else -%}
+        {%- assign priority = 0.7 -%}
+    {%- endif -%}
+
+    <url>
+      <loc>{{ url }}</loc>
+      <lastmod>{{ lastmod }}</lastmod>
+      <changefreq>{{ changefreq }}</changefreq>
+      <priority>{{ priority }}</priority>
+    </url>
+{%- endfor -%}
+
+<url>
+  <loc>{{ site.produrl }}/design-systems</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/faq</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/jobs</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/privacy</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/prototyping</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/remote-work</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/support</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/ux-design</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/web-development</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>{{ site.produrl }}/webinars</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+
+{%- assign webinars = site.data.webinars | sort -%}
+
+{%- for webinar in webinars -%}
+    {%- assign item = webinar[1] -%}
+
+    {%- assign url = item.permalink | remove: "https://thegymnasium.com" | prepend: site.produrl -%}
+
+    {%- if item.sitemap.lastmod -%}
+        {%- assign lastmod = item.sitemap.lastmod | date: "%Y-%m-%d" -%}
+    {%- elsif item.date -%}
+        {%- assign lastmod = item.date | date_to_xmlschema -%}
+    {%- else -%}
+        {%- assign lastmod = site.time | date_to_xmlschema -%}
+    {%- endif -%}
+
+    {%- if item.sitemap.changefreq -%}
+        {%- assign changefreq = item.sitemap.changefreq -%}
+    {%- else -%}
+        {%- assign changefreq = "monthly" -%}
+    {%- endif -%}
+
+    {%- if item.sitemap.priority -%}
+        {%- assign priority = item.sitemap.priority -%}
+    {%- else -%}
+        {%- assign priority = 0.7 -%}
+    {%- endif -%}
+
+    <url>
+      <loc>{{ url }}</loc>
+      <lastmod>{{ lastmod }}</lastmod>
+      <changefreq>{{ changefreq }}</changefreq>
+      <priority>{{ priority }}</priority>
+    </url>
+{%- endfor -%}

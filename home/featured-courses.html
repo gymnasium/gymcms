@@ -1,14 +1,13 @@
 ---
 layout: raw
-permalink: /static/home/featured-courses/
+permalink: /home/featured-courses/
 featured_courses: GYM-017, GYM-018, GYM-019, GYM-020
 ---
 
 {%- assign featured_courses = page.featured_courses  | split: ", " -%}
 
 {%- assign item_count = featured_courses | size -%}
-
-<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/css/featured-courses.css">
+<link rel="stylesheet" href="{{ site.url }}/css/featured-courses.css">
 
 <div class="section-featured-courses">
   <div class="cols">
@@ -17,8 +16,8 @@ featured_courses: GYM-017, GYM-018, GYM-019, GYM-020
     {%- for featured in featured_courses -%}
     {%- assign artwork_png = site.data.courses[featured].course_ID | downcase | append: '.png' -%}
     {%- assign artwork_svg = site.data.courses[featured].course_ID | downcase | append: '.svg' -%}
-    {%- assign artwork_path_png = site.url | append: site.baseurl | append: "/img/course-artwork/png/"-%}
-    {%- assign artwork_path_svg = site.url | append: site.baseurl | append: "/img/course-artwork/svg/"-%}
+    {%- assign artwork_path_png = site.url | append: "/img/course-artwork/png/"-%}
+    {%- assign artwork_path_svg = site.url | append: "/img/course-artwork/svg/"-%}
 
     {%- assign instructor = site.data.courses[featured].instructor -%}
     {%- assign instructor_name = site.data.bios[instructor].name  -%}
@@ -85,5 +84,5 @@ featured_courses: GYM-017, GYM-018, GYM-019, GYM-020
 </div>
 
 <!-- polyfills -->
-<script async nomodule src="{{ site.url }}{{ site.baseurl }}/js/polyfills/prefixfree.min.js"></script>
-<script async nomodule src="{{ site.url }}{{ site.baseurl }}/js/polyfills/grid-equal-height.js"></script>
+<script async nomodule src="{{ site.url }}/js/polyfills/prefixfree.min.js"></script>
+<script async nomodule src="{{ site.url }}/js/polyfills/grid-equal-height.js"></script>

@@ -1,7 +1,8 @@
 {{ content }}
 
-{%- assign extension-check = page.url | slice: -4,4 -%}
-{%- if extension-check !="json"-%}
+{% comment %} Exclude file names by extension {% endcomment %}
+{%- assign file_ext = page.url | split: "." | last -%}
+{%- if file_ext != "json"-%}
 <!-- //
 Generated at: {{ site.time }}
 Served from: {{ page.url | absolute_url }}
