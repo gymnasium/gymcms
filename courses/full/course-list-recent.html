@@ -47,11 +47,11 @@ permalink: /courses/full/course-list-recent
   <li class="course-item" data-course-id="{{ course.course_ID | remove: 'GYM-' }}">
     <article class="row">
       <figure class="col-md-4">
-        <a href="{{ course.url | remove: 'https://thegymnasium.com' | prepend: domain_name }}">
+        <a href="{{ course.url | prepend: site.gymurl }}">
           <img class="img-responsive" src="{{ png_path | prepend: site.url }}" srcset="{{ svg_path | prepend: site.url }}" alt="{{ course.course_ID | remove: 'gym-' }} {{ course.title }} Cover Image" decoding="async">
         </a>
         <figcaption>
-          <a href="{{ course.url | remove: 'https://thegymnasium.com' | prepend: domain_name }}" class="gym-button"><b>Learn More</b></a>
+          <a href="{{ course.url | prepend: site.gymurl }}" class="gym-button"><b>Learn More</b></a>
         </figcaption>
       </figure>
       <div class="col-md-8 course-description">
