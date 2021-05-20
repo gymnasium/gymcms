@@ -1,6 +1,4 @@
-{%- include config/_domain_name -%}
-
-{%- assign base_path = "/courses/take5/" | prepend: domain_name -%}
+{%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
 
 {%- assign catalog = site.data.take5 | sort -%}
 {%- for take5_hash in catalog -%}

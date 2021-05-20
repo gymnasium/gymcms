@@ -1,6 +1,4 @@
-{%- include config/_domain_name.md -%}
-
-{% assign base_path = "/courses/take5/" | prepend: domain_name %}
+{% assign base_path = "/courses/take5/" | prepend: site.gymurl %}
 
 {% if course.topic == "Accessibility" %}
 
