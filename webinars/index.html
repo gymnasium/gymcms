@@ -2,8 +2,6 @@
 permalink: /webinars/
 layout: raw
 ---
-{%- include config/_domain_name.md -%}
-
 {%- if jekyll.environment == "development" -%}
   {%- include take5/test-top.html -%}
 {%- endif -%}
@@ -45,7 +43,7 @@ layout: raw
       {%- assign speaker_1 = item.speaker[0]  -%}
       {%- assign speaker_2 = item.speaker[1]  -%}
 
-      {%- assign webinar_url = item.permalink | prepend: domain_name -%}
+      {%- assign webinar_url = item.permalink | prepend: site.gymurl -%}
 
       {% if item.register %}
       <li class="webinar" id="featured-webinar">

@@ -2,8 +2,6 @@
 layout: raw
 permalink: /tests/catalog/
 ---
-{%- include config/_domain_name.md -%}
-
 <h1>Courses</h1>
 
 {% assign sorted_catalog = site.data.courses | sort %}
@@ -37,7 +35,7 @@ permalink: /tests/catalog/
 {%- endfor -%}
 
 <h2>Take 5</h2>
-{% assign take5_path = "/courses/take5/" | prepend: domain_name %}
+{% assign take5_path = "/courses/take5/" | prepend: site.gymurl %}
 {% assign sorted_take5catalog = site.data.take5 | sort %}
 <pre>Found: <strong>{{sorted_take5catalog | size }}</strong> Take 5 tutorials</pre>
 

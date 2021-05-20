@@ -1,8 +1,7 @@
 # Setup
 title: Gymnasium Static Content
 url: https://dev--gymcms.netlify.com
-produrl: https://thegymnasium.com
-stagurl: https://courses.gymna.si
+gymurl: https://courses.gymna.si
 timezone: America/New_York
 environment: development
    
