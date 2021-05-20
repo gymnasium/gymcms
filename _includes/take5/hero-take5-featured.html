@@ -1,15 +1,4 @@
-{%- case jekyll.environment -%}
-
-{%- when "development" -%}
-{%- assign domain_link = "https://courses.gymna.si/take5/" -%}
-
-{%- when "staging" -%}
-{%- assign domain_link = "https://courses.gymna.si/take5/" -%}
-
-{%- when "production" -%}
-{%- assign domain_link = "https://thegymnasium.com/courses/take5/" -%}
-
-{%- endcase -%}
+{%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
 
 {%- assign catalog = site.data.take5 | sort -%}
 {%- for take5_hash in catalog -%}
@@ -21,7 +10,7 @@
     {%- assign hero_instructor = item.instructor | prepend: "with " -%}
     {%- assign hero_art = item.poster_art | replace: ".jpg", "-hero.jpg" -%}
     {%- assign hero_utm = "" -%}
-    {%- assign hero_link = item.title | downcase | slugify | append: hero_utm | prepend: domain_link -%}
+    {%- assign hero_link = item.title | downcase | slugify | append: hero_utm | prepend: base_path -%}
     {%- endif -%}
 {%- endfor -%}
 
