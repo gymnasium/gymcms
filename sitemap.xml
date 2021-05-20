@@ -4,35 +4,35 @@ permalink: sitemap.xml
 ---
 
 <url>
-  <loc>{{ site.produrl }}</loc>
+  <loc>https://thegymnasium.com</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/about</loc>
+  <loc>https://thegymnasium.com/about</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.5</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/accessibility</loc>
+  <loc>https://thegymnasium.com/accessibility</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/collections</loc>
+  <loc>https://thegymnasium.com/collections</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/courses</loc>
+  <loc>https://thegymnasium.com/courses</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
@@ -59,11 +59,11 @@ permalink: sitemap.xml
 {%- for course_hash in sorted_catalog -%}
     {%- assign item = course_hash[1] -%}
 
-    {%- assign url = item.url | remove: "https://thegymnasium.com" | prepend: site.produrl -%}
+    {%- assign url = item.url | prepend: "https://thegymnasium.com" -%}
 
     {%- if item.course_type == "take5" -%}
       {%- assign slug = item.title | downcase | slugify -%}
-      {%- assign url = slug | prepend: "/courses/take5/" | prepend: site.produrl -%}
+      {%- assign url = slug | prepend: "/courses/take5/" | prepend: "https://thegymnasium.com" -%}
     {%- endif -%}
 
     {%- if item.sitemap.lastmod -%}
@@ -95,70 +95,70 @@ permalink: sitemap.xml
 {%- endfor -%}
 
 <url>
-  <loc>{{ site.produrl }}/design-systems</loc>
+  <loc>https://thegymnasium.com/design-systems</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/faq</loc>
+  <loc>https://thegymnasium.com/faq</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/jobs</loc>
+  <loc>https://thegymnasium.com/jobs</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.8</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/privacy</loc>
+  <loc>https://thegymnasium.com/privacy</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/prototyping</loc>
+  <loc>https://thegymnasium.com/prototyping</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/remote-work</loc>
+  <loc>https://thegymnasium.com/remote-work</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/support</loc>
+  <loc>https://thegymnasium.com/support</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/ux-design</loc>
+  <loc>https://thegymnasium.com/ux-design</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/web-development</loc>
+  <loc>https://thegymnasium.com/web-development</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
 </url>
 
 <url>
-  <loc>{{ site.produrl }}/webinars</loc>
+  <loc>https://thegymnasium.com/webinars</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.5</priority>
@@ -169,7 +169,7 @@ permalink: sitemap.xml
 {%- for webinar in webinars -%}
     {%- assign item = webinar[1] -%}
 
-    {%- assign url = item.permalink | remove: "https://thegymnasium.com" | prepend: site.produrl -%}
+    {%- assign url = item.permalink | prepend: "https://thegymnasium.com" -%}
 
     {%- if item.sitemap.lastmod -%}
         {%- assign lastmod = item.sitemap.lastmod | date: "%Y-%m-%d" -%}

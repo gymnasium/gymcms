@@ -43,7 +43,7 @@ valid json for any number of courses.
 {%- endif -%}
 
 {"title": "{{ site.data.courses[featured].title }}",
-    "url": "{{ site.produrl }}{{ site.data.courses[featured].url }}",
+    "url": "{{ site.data.courses[featured].url | prepend: "https://thegymnasium.com" }}",
     "description": "{{ site.data.courses[featured].short_description }}",
     "instructor_name": "{{ instructor_name }}",
     "instructor_title": "{{ instructor_title }}",

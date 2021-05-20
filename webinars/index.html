@@ -2,7 +2,6 @@
 permalink: /webinars/
 layout: raw
 ---
-
 {%- if jekyll.environment == "development" -%}
   {%- include take5/test-top.html -%}
 {%- endif -%}
@@ -44,14 +43,7 @@ layout: raw
       {%- assign speaker_1 = item.speaker[0]  -%}
       {%- assign speaker_2 = item.speaker[1]  -%}
 
-      {% case jekyll.environment %}
-        {% when "development" %}
-          {%- assign webinar_url = item.permalink | prepend: '/' | prepend: site.url  -%}
-        {% when "staging" %}
-          {%- assign webinar_url = item.permalink | prepend: 'https://courses.gymna.si' -%}
-        {% when "production" %}
-          {%- assign webinar_url = item.permalink | prepend: 'https://thegymnasium.com' -%}
-      {% endcase %}
+      {%- assign webinar_url = item.permalink | prepend: site.gymurl -%}
 
       {% if item.register %}
       <li class="webinar" id="featured-webinar">
