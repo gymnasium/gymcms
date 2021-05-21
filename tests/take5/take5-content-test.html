@@ -137,11 +137,12 @@ td.success {
     {% endif %}
 
     <!-- Meta tag partial -->
-    {% assign meta_partial = item.course_ID | prepend: '/take5/meta/' | append: '-meta.md' | downcase %}
+    {% assign meta_partial = item.course_ID | prepend: 'courses/take5/' | append: '/meta.md' %}
+    <!-- *** {{ meta_partial }} -->
     {% capture meta_partial_test %}{% file_exists {{ meta_partial }} %}{% endcapture %}
     {% if meta_partial_test == "false" %}<td class="error">MISSING FILE</td>{% else %}
     <td>
-        <a href="/take5/meta/{{ item.course_ID | append: '-meta/' | downcase }}" target="_blank">{{ meta_partial_test }}</a>
+        <a href="/courses/take5/{{ item.course_ID | append: '/meta/' | downcase }}" target="_blank">{{ meta_partial_test }}</a>
     </td>
     {% endif %}
 
