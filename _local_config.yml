@@ -46,6 +46,8 @@ plugins:
 
 ## JSON Fetch
 jekyll_get_json:
+  - data: jobs
+    json: 'https://dotcms-stag-app1a.aquent.com/api/content/render/false/type/json/query/+contentType:AquentJob%20+AquentJob.isPosted:true%20+deleted:false%20+working:true/orderby/AquentJob.postedDate%20desc/limit/0/'
   - data: privacy-index
     json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:webPageContent%20+webPageContent.title:*privacy-policy-index*%20+languageId:1%20+deleted:false%20+working:true/'
   - data: privacy-shield-notice

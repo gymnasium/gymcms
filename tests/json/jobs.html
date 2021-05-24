@@ -1,0 +1,37 @@
+---
+layout: raw
+permalink: /tests/job-feed/
+---
+{%- assign jobs = site.data.jobs.contentlets -%}
+{%- assign jobs_au = "" | split: ',' -%}
+{%- assign jobs_ca = "" | split: ',' -%}
+{%- assign jobs_de = "" | split: ',' -%}
+{%- assign jobs_jp = "" | split: ',' -%}
+{%- assign jobs_nl = "" | split: ',' -%}
+{%- assign jobs_uk = "" | split: ',' -%}
+{%- assign jobs_us = "" | split: ',' -%}
+
+{%- assign markets_au = "36, 39" | split: ", " -%}
+{%- assign markets_ca = "" | split: ',' -%}
+{%- assign markets_de = "" | split: ',' -%}
+{%- assign markets_jp = "" | split: ',' -%}
+{%- assign markets_nl = "" | split: ',' -%}
+{%- assign markets_uk = "" | split: ',' -%}
+{%- assign markets_us = "" | split: ',' -%}
+
+{%- for job in jobs -%}
+  {%- for market in markets_au -%}
+    {%- if job.locationId == market -%}
+      {%- assign jobs_au = jobs_au | push: job -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+
+<p>Found {{ jobs_au.size }} jobs for Australia.</p>
+<ul>
+{%- for job in jobs_au -%}
+<li>
+  <a href="https://aquent.com.au/find-work/{{ job.jobId }}">{{ job.title }} - {{job.marketId }}</a> 
+</li>
+{%- endfor -%}
+</ul>
