@@ -131,7 +131,7 @@ request.onload = function() {
         // Show 10 jobs
         for(var i = 0; i <= 10; i++) {
           el = items[i];
-          jobsContainer.innerHTML += '<li><a href="' + el.url + '" title="' + el.title + '">' + el.title + '</a></li>';
+          jobsContainer.innerHTML += '<li><a href="' + decodeURI(el.url) + '" title="' + el.title + '">' + el.title + '</a></li>';
         }
 
         // close our list
