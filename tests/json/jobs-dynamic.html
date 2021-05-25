@@ -54,11 +54,16 @@ function getUrlParameter(name) {
   var results = regex.exec(location.search);
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
-
 var endpoint = 'https://stag-assets.aquent.com/apps/gym/jobs.json';
+
+// For testing/debugging
+if (window.location.host == 'localhost:4000') {
+  endpoint = '/jobs.json';
+}
+
 var market = getUrlParameter('m');
 
-if (typeof market !== 'undefined' && market !== null) {
+if (market.length) {
   endpoint += '?m=' + market;
 }
 
@@ -75,11 +80,14 @@ request.onload = function() {
     data = JSON.parse(this.response);
     // console.log(data);
 
-    if (typeof data !== "undefined" && data !== null) {
+    if (typeof data.items !== "undefined" && data.items !== null) {
       var items = data.items;
+
+      console.log('number of results: ', data.items.length);
 
       jobsContainer.innerHTML += '<ul>';
 
+      // Show 10 jobs
       for(var i = 0; i <= 10; i++) {
         el = items[i];
         jobsContainer.innerHTML += '<li><a href="' + el.url + '" title="' + el.title + '">' + el.title + '</a></li>';
@@ -98,11 +106,9 @@ request.onload = function() {
 
 request.onerror = function() {
   // There was a connection error of some sort
+  jobsContainer.innerHTML = '<h4>Ooops!</h4><p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. Please try again later.</p>';
 };
 
 request.send();
-
-// https://assets.aquent.com/feeds/firebrand.xml
-
 
 </script>
