@@ -1,0 +1,105 @@
+---
+layout: default
+permalink: /tests/job-dynamic/
+---
+{%- assign markets_au = site.data.markets-au.contentlets -%}
+{%- assign markets_ca = site.data.markets-ca.contentlets -%}
+{%- assign markets_de = site.data.markets-de.contentlets -%}
+{%- assign markets_fr = site.data.markets-fr.contentlets -%}
+{%- assign markets_jp = site.data.markets-jp.contentlets -%}
+{%- assign markets_nl = site.data.markets-nl.contentlets -%}
+{%- assign markets_uk = site.data.markets-uk.contentlets -%}
+{%- assign markets_us = site.data.markets-us.contentlets -%}
+<form id="location-selector" action="{{page.permalink}}">
+  <select name="m" id="m" onchange="this.form.submit();">
+    <option value="">Select</option>
+    <optgroup label="Australia">
+      {%- for market in markets_au -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+    </optgroup>
+    <optgroup label="Canada">
+      {%- for market in markets_ca -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+    </optgroup>
+    <optgroup label="Europe">
+      {%- for market in markets_uk -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+      {%- for market in markets_nl -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+      {%- for market in markets_fr -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+    </optgroup>
+    <optgroup label="Japan">
+      {%- for market in markets_jp -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+    </optgroup>
+    <optgroup label="United States">
+      {%- for market in markets_us -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+    </optgroup>
+  </select>
+</form>
+<div id="jobs"></div>
+<script>
+function getUrlParameter(name) {
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  var results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
+var endpoint = 'https://stag-assets.aquent.com/apps/gym/jobs.json';
+var market = getUrlParameter('m');
+
+if (typeof market !== 'undefined' && market !== null) {
+  endpoint += '?m=' + market;
+}
+
+console.log('fetching: ', endpoint);
+
+var request = new XMLHttpRequest();
+var data;
+var jobsContainer = document.getElementById('jobs');
+request.open('GET', endpoint, true);
+
+request.onload = function() {
+  if (this.status >= 200 && this.status < 400) {
+    // Success!
+    data = JSON.parse(this.response);
+    // console.log(data);
+
+    if (typeof data !== "undefined" && data !== null) {
+      var items = data.items;
+
+      jobsContainer.innerHTML += '<ul>';
+
+      for(var i = 0; i <= 10; i++) {
+        el = items[i];
+        jobsContainer.innerHTML += '<li><a href="' + el.url + '" title="' + el.title + '">' + el.title + '</a></li>';
+      }
+
+      jobsContainer.innerHTML += '</ul>';
+    }
+  } else {
+    // We reached our target server, but it returned an error
+    jobsContainer.innerHTML = '<h4>Ooops!</h4><p>We were unable to retrieve the requested location. Please try again later.</p>';
+  }
+};
+
+request.onerror = function() {
+  // There was a connection error of some sort
+};
+
+request.send();
+
+// https://assets.aquent.com/feeds/firebrand.xml
+
+
+</script>
