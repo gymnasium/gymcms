@@ -86,10 +86,13 @@ request.onload = function() {
       }
 
       jobsContainer.innerHTML += '</ul>';
+    } else {
+      // No jobs in market!
+      jobsContainer.innerHTML = '<h4>Ooops!</h4><p>We were unable to find jobs for this location. Please try another location, or come back later to check for freshly posted jobs.</p>';
     }
   } else {
     // We reached our target server, but it returned an error
-    jobsContainer.innerHTML = '<h4>Ooops!</h4><p>We were unable to retrieve the requested location. Please try again later.</p>';
+    jobsContainer.innerHTML = '<h4>Ooops!</h4><p>We were unable to retrieve jobs for the requested location. Please try again later.</p>';
   }
 };
 
