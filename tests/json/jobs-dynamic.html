@@ -48,6 +48,47 @@ permalink: /tests/job-dynamic/
 </form>
 <div id="jobs"></div>
 <script>
+// Polyfill for Array.prototype.filter() via @https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+if (!Array.prototype.filter){
+  Array.prototype.filter = function(func, thisArg) {
+    'use strict';
+    if ( ! ((typeof func === 'Function' || typeof func === 'function') && this) )
+        throw new TypeError();
+
+    var len = this.length >>> 0,
+        res = new Array(len), // preallocate array
+        t = this, c = 0, i = -1;
+
+    var kValue;
+    if (thisArg === undefined){
+      while (++i !== len){
+        // checks to see if the key was set
+        if (i in this){
+          kValue = t[i]; // in case t is changed in callback
+          if (func(t[i], i, t)){
+            res[c++] = kValue;
+          }
+        }
+      }
+    }
+    else{
+      while (++i !== len){
+        // checks to see if the key was set
+        if (i in this){
+          kValue = t[i];
+          if (func.call(thisArg, t[i], i, t)){
+            res[c++] = kValue;
+          }
+        }
+      }
+    }
+
+    res.length = c; // shrink down array to proper size
+    return res;
+  };
+}
+
+// Get URL Parameter
 function getUrlParameter(name) {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
   var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -80,20 +121,25 @@ request.onload = function() {
     data = JSON.parse(this.response);
     // console.log(data);
 
-    if (typeof data.items !== "undefined" && data.items !== null) {
+    if (typeof data !== "undefined" && data !== null) {
       var items = data.items;
 
-      console.log('number of results: ', data.items.length);
+      if (data.items.length > 0) {
+        // open our UL
+        jobsContainer.innerHTML += '<ul>';
 
-      jobsContainer.innerHTML += '<ul>';
+        // Show 10 jobs
+        for(var i = 0; i <= 10; i++) {
+          el = items[i];
+          jobsContainer.innerHTML += '<li><a href="' + el.url + '" title="' + el.title + '">' + el.title + '</a></li>';
+        }
 
-      // Show 10 jobs
-      for(var i = 0; i <= 10; i++) {
-        el = items[i];
-        jobsContainer.innerHTML += '<li><a href="' + el.url + '" title="' + el.title + '">' + el.title + '</a></li>';
+        // close our list
+        jobsContainer.innerHTML += '</ul>';
+      } else {
+        // No jobs in market!
+        jobsContainer.innerHTML = '<h4>Ooops!</h4><p>We were unable to find jobs for this location. Please try another location, or come back later to check for freshly posted jobs.</p>';
       }
-
-      jobsContainer.innerHTML += '</ul>';
     } else {
       // No jobs in market!
       jobsContainer.innerHTML = '<h4>Ooops!</h4><p>We were unable to find jobs for this location. Please try another location, or come back later to check for freshly posted jobs.</p>';
