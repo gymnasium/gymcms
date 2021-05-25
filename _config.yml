@@ -46,6 +46,38 @@ plugins:
 
 ## JSON Fetch
 jekyll_get_json:
+  - data: jobs-au
+    json: 'https://assets.aquent.com/apps/gym/jobs.json?c=au&limit=40'
+  - data: jobs-ca
+    json: 'https://assets.aquent.com/apps/gym/jobs.json?c=ca&limit=10'
+  - data: jobs-de
+    json: 'https://assets.aquent.com/apps/gym/jobs.json?c=de&limit=10'
+  - data: jobs-fr
+    json: 'https://assets.aquent.com/apps/gym/jobs.json?c=fr&limit=10'
+  - data: jobs-jp
+    json: 'https://assets.aquent.com/apps/gym/jobs.json?c=jp&limit=100'
+  - data: jobs-nl
+    json: 'https://assets.aquent.com/apps/gym/jobs.json?c=nl&limit=10'
+  - data: jobs-uk
+    json: 'https://assets.aquent.com/apps/gym/jobs.json?c=uk&limit=10'
+  - data: jobs-us
+    json: 'https://assets.aquent.com/apps/gym/jobs.json?c=us&limit=1000'
+  - data: markets-au
+    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:AU%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
+  - data: markets-ca
+    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:CA%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
+  - data: markets-de
+    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:DE%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
+  - data: markets-fr
+    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:FR%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
+  - data: markets-jp
+    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:JP%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
+  - data: markets-nl
+    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:NL%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
+  - data: markets-uk
+    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:UK%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
+  - data: markets-us
+    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:US%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc/limit/100'
   - data: privacy-index
     json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:webPageContent%20+webPageContent.title:*privacy-policy-index*%20+languageId:1%20+deleted:false%20+working:true/'
   - data: privacy-shield-notice
@@ -56,3 +88,4 @@ jekyll_get_json:
     json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:webPageContent%20+webPageContent.title:*privacy-policy-data-category*%20+languageId:1%20+deleted:false%20+working:true/'
   - data: privacy-eu-rights
     json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:webPageContent%20+webPageContent.title:*privacy-policy-european-rights*%20+languageId:1%20+deleted:false%20+working:true/'
+

@@ -2,36 +2,183 @@
 layout: default
 permalink: /tests/job-feed/
 ---
-{%- assign jobs = site.data.jobs.contentlets -%}
-{%- assign jobs_au = "" | split: ',' -%}
-{%- assign jobs_ca = "" | split: ',' -%}
-{%- assign jobs_de = "" | split: ',' -%}
-{%- assign jobs_jp = "" | split: ',' -%}
-{%- assign jobs_nl = "" | split: ',' -%}
-{%- assign jobs_uk = "" | split: ',' -%}
-{%- assign jobs_us = "" | split: ',' -%}
+{%- assign jobs_au = site.data.jobs-au.items -%}
+{%- assign jobs_ca = site.data.jobs-ca.items -%}
+{%- assign jobs_de = site.data.jobs-de.items -%}
+{%- assign jobs_fr = site.data.jobs-fr.items -%}
+{%- assign jobs_jp = site.data.jobs-jp.items -%}
+{%- assign jobs_nl = site.data.jobs-nl.items -%}
+{%- assign jobs_uk = site.data.jobs-uk.items -%}
+{%- assign jobs_us = site.data.jobs-us.items -%}
 
-{%- assign markets_au = "36, 39" | split: ", " -%}
-{%- assign markets_ca = "" | split: ',' -%}
-{%- assign markets_de = "" | split: ',' -%}
-{%- assign markets_jp = "" | split: ',' -%}
-{%- assign markets_nl = "" | split: ',' -%}
-{%- assign markets_uk = "" | split: ',' -%}
-{%- assign markets_us = "" | split: ',' -%}
+{%- assign markets_au = site.data.markets-au.contentlets -%}
+{%- assign markets_ca = site.data.markets-ca.contentlets -%}
+{%- assign markets_de = site.data.markets-de.contentlets -%}
+{%- assign markets_fr = site.data.markets-fr.contentlets -%}
+{%- assign markets_jp = site.data.markets-jp.contentlets -%}
+{%- assign markets_nl = site.data.markets-nl.contentlets -%}
+{%- assign markets_uk = site.data.markets-uk.contentlets -%}
+{%- assign markets_us = site.data.markets-us.contentlets -%}
 
-{%- for job in jobs -%}
-  {%- for market in markets_au -%}
-    {%- if job.locationId == market -%}
-      {%- assign jobs_au = jobs_au | push: job -%}
+au markets: {{ markets_au.size }}<br>
+ca markets: {{ markets_ca.size }}<br>
+de markets: {{ markets_de.size }}<br>
+fr markets: {{ markets_fr.size }}<br>
+jp markets: {{ markets_jp.size }}<br>
+nl markets: {{ markets_nl.size }}<br>
+uk markets: {{ markets_uk.size }}<br>
+us markets: {{ markets_us.size }}<br>
+
+{%- if jobs_au.size > 0 -%}
+<div>
+  <h4>Australia</h4>
+  <p>Found {{ jobs_au.size }} jobs in Australia.</p>
+  <ul>
+  {%- for job in jobs_au -%}
+  <li>
+    <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
+  </li>
+  {%- endfor -%}
+  </ul>
+</div>
+{%- else -%}
+  <h4>Australia</h4>
+  <p>Found 0 jobs, skipping...</p>
+{%- endif -%}
+
+{%- if jobs_ca.size > 0 -%}
+  <h4>Canada</h4>
+  <p>Found {{ jobs_ca.size }} jobs in Canada.</p>
+  <ul>
+  {%- for job in jobs_ca -%}
+  <li>
+    <a href="{{job.url}}">{{ job.title }} - {{job.city }}</a> 
+  </li>
+  {%- endfor -%}
+  </ul>
+{%- else -%}
+  <h4>Canada</h4>
+  <p>Found 0 jobs, skipping...</p>
+{%- endif -%}
+
+{%- if jobs_de.size > 0 -%}
+  <h4>Deutschland (Germany)</h4>
+  <p>Found {{ jobs_de.size }} jobs in Deutschland (Germany).</p>
+  <ul>
+  {%- for job in jobs_de -%}
+  <li>
+    <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
+  </li>
+  {%- endfor -%}
+  </ul>
+{%- else -%}
+  <h4>Deutschland (Germany)</h4>
+  <p>Found 0 jobs, skipping...</p>
+{%- endif -%}
+
+{%- if jobs_fr.size > 0 -%}
+  <h4>France</h4>
+  <p>Found {{ jobs_fr.size }} jobs in France.</p>
+  <ul>
+  {%- for job in jobs_fr -%}
+  <li>
+    <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
+  </li>
+  {%- endfor -%}
+  </ul>
+{%- else -%}
+  <h4>France</h4>
+  <p>Found 0 jobs, skipping...</p>
+{%- endif -%}
+
+{%- if jobs_jp.size > 0 -%}
+  <h4>Japan</h4>
+  <p>Found {{ jobs_jp.size }} jobs in Japan.</p>
+  <ul>
+  {%- for job in jobs_jp -%}
+  <li>
+    <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
+  </li>
+  {%- endfor -%}
+  </ul>
+{%- else -%}
+  <h4>Japan</h4>
+  <p>Found 0 jobs, skipping...</p>
+{%- endif -%}
+
+{%- if jobs_nl.size > 0 -%}
+  <h4>Netherlands</h4>
+  <p>Found {{ jobs_nl.size }} jobs in Netherlands.</p>
+  <ul>
+  {%- for job in jobs_nl -%}
+  <li>
+    <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
+  </li>
+  {%- endfor -%}
+  </ul>
+{%- else -%}
+  <h4>Netherlands</h4>
+  <p>Found 0 jobs, skipping...</p>
+{%- endif -%}
+
+{%- if jobs_uk.size > 0 -%}
+  <h4>United Kingdom</h4>
+  <p>Found {{ jobs_uk.size }} jobs in the UK.</p>
+  <ul>
+  {%- for job in jobs_uk -%}
+  <li>
+    <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
+  </li>
+  {%- endfor -%}
+  </ul>
+{%- else -%}
+  <h4>United Kingdom</h4>
+  <p>Found 0 jobs, skipping...</p>
+{%- endif -%}
+
+{%comment%}
+Since we have so many US markets (45 as of this), we need to loop through each and generate a list of 10 jobs per market.
+{%endcomment%}
+
+{%- assign us_markets = "" | split: "," -%}
+{%- for market in markets_us -%}
+  {%- assign available_jobs = "" | split: "," -%}
+  {%- assign has_jobs = false -%}
+  {%- for job in jobs_us -%}
+    {%- if job.market == market.marketId -%}
+      {%- assign data = "" | split: "," -%}
+      {%- assign data = data | push: job.url -%}
+      {%- assign data = data | push: job.title -%}
+      {%- assign data = data | push: job.city -%}
+      {%- assign has_jobs = true -%}
+      {%- assign available_jobs = available_jobs | push: data -%}
     {%- endif -%}
   {%- endfor -%}
+  {%- if has_jobs == true -%}
+    {%- assign data = "" | split: "," -%}
+    {%- assign data = data | push: market.marketId -%}
+    {%- assign data = data | push: market.name -%}
+    {%- assign data = data | push: available_jobs -%}
+    {%- assign us_markets = us_markets | push: data -%}
+  {%- endif -%}
 {%- endfor -%}
-
-<p>Found {{ jobs_au.size }} jobs for Australia.</p>
-<ul>
-{%- for job in jobs_au -%}
-<li>
-  <a href="https://aquent.com.au/find-work/{{ job.jobId }}">{{ job.title }} - {{job.marketId }}</a> 
-</li>
+{%comment%}
+Render US markets with jobs
+{%endcomment%}
+<h4>United States</h4>
+{%- for market in us_markets -%}
+  {%- assign name = market[1] -%}
+  {%- assign id = market[0] -%}
+  {%- assign jobs = market[2] -%}
+  <div data-id="{{id}}">
+  <h5>{{name}}</h5>
+  <ul>
+  {%- for job in jobs limit:10 -%}
+    {%- assign url = job[0] -%}
+    {%- assign title = job[1] -%}
+    {%- assign loc = job[2] -%}
+    <li><a href="{{url}}" title="{{title}} - {{loc}}">{{title}} - {{loc}}</a></li>
+  {%- endfor -%}
+  </ul>
+  </div>
 {%- endfor -%}
-</ul>
