@@ -123,13 +123,20 @@ request.onload = function() {
 
     if (typeof data !== "undefined" && data !== null) {
       var items = data.items;
+      var numResults = data.items.length;
 
-      if (data.items.length > 0) {
+      if (numResults > 0) {
         // open our UL
         jobsContainer.innerHTML += '<ul>';
 
+        var limit = 10;
+
+        if (numResults < limit) {
+          limit = numResults;
+        }
+
         // Show 10 jobs
-        for(var i = 0; i <= 10; i++) {
+        for(var i = 0; i < limit; i++) {
           el = items[i];
           jobsContainer.innerHTML += '<li><a href="' + decodeURI(el.url) + '" title="' + el.title + '">' + el.title + '</a></li>';
         }
