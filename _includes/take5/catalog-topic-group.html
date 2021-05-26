@@ -5,6 +5,9 @@
 </header>
 <div class="cols cols-max-3">
   <ul>
+
+{%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
+
 {% assign sorted_catalog = site.data.take5 | sort %}
 
 {% for take5_hash in sorted_catalog reversed %}
@@ -18,13 +21,13 @@
     <li>
       <article class="tutorial">
         <div class="artwork" data-duration="{{ item.video_duration }}">
-          <a href="{{ item.title | slugify | prepend: domain_link }}" title="Watch Video">
+          <a href="{{ item.title | slugify | prepend: base_path }}" title="Watch Video">
             <img alt="{{ item.title }}" src="{{ site.url }}{{ item.poster_art }}">
           </a>
         </div>
         <header>
           <h3 class="all-caps">
-            <a href="{{ item.title | slugify | prepend: domain_link }}">{{ item.title }}</a>
+            <a href="{{ item.title | slugify | prepend: base_path }}">{{ item.title }}</a>
           </h3>
         </header>
       </article>
