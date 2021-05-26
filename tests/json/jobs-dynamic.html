@@ -110,6 +110,20 @@ if (!Array.prototype.filter){
   };
 }
 
+Array.prototype.shuffle = function () {
+  let input = this;
+
+  for (let i = input.length - 1; i >= 0; i--) {
+
+    let randomIndex = Math.floor(Math.random() * (i + 1));
+    let itemAtIndex = input[randomIndex];
+
+    input[randomIndex] = input[i];
+    input[i] = itemAtIndex;
+  }
+  return input;
+}
+
 // Get URL Parameter
 function getUrlParameter(name) {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -206,9 +220,21 @@ function processData(data) {
 
   var items = data.items;
 
+  // #* Off-site preference key
+  // 0 = Unknown
+  // 1 = On-Site
+  // 2 = Off-Site
+  // 3 = Either
+  // 4 = Partial on-site
+  // *#
+
   // Filter the jobs by market if we have a market param
   if (market.length) {
     items = items.filter(item => item.market === market);
+    console.log('showing jobs for a specific market');
+  } else {
+    items = items.filter(item => parseInt(item.remote) > 1).shuffle();
+    console.log('showing remote options…');
   }
 
   // How many results do we have?
