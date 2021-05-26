@@ -172,7 +172,7 @@ function showMsg(id) {
 if (window.sessionStorage && sessionStorage.getItem('jobs')) {
   data = sessionStorage.getItem('jobs');
   console.log('data from sessionStorage');
-  
+
   processData(data);
 } else {
   // Otherwise, get the jobs from the endpoint
@@ -225,20 +225,18 @@ function processData(data) {
 
   var items = data.items;
 
-  // #* Off-site preference key
-  // 0 = Unknown
-  // 1 = On-Site
-  // 2 = Off-Site
-  // 3 = Either
-  // 4 = Partial on-site
-  // *#
-
   // Filter the jobs by market if we have a market param
   if (typeof market !== 'undefined' && market !== null && market.length) {
     items = items.filter(item => item.market === market);
     console.log('showing jobs for a specific market');
   } else {
-    items = items.filter(item => parseInt(item.remote) > 1);
+    // Off-site preference key
+    // 0 = Unknown
+    // 1 = On-Site
+    // 2 = Off-Site
+    // 3 = Either
+    // 4 = Partial on-site
+    items = items.filter(item => parseInt(item.remote) == 2);
     updateDropdown('remote');
     console.log('showing remote options…');
   }
