@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /tests/job-dynamic/
+permalink: /tests/jobs-dynamic/
 ---
 {%- assign markets_au = site.data.markets-au.contentlets -%}
 {%- assign markets_ca = site.data.markets-ca.contentlets -%}
@@ -10,9 +10,15 @@ permalink: /tests/job-dynamic/
 {%- assign markets_nl = site.data.markets-nl.contentlets -%}
 {%- assign markets_uk = site.data.markets-uk.contentlets -%}
 {%- assign markets_us = site.data.markets-us.contentlets -%}
+
+<style>
+.hide { display: none; }
+
+</style>
+
 <form id="location-selector" action="{{page.permalink}}">
   <select name="m" id="m" onchange="this.form.submit();">
-    <option value="">Select</option>
+    <option value="">Select a location nearest you</option>
     <optgroup label="Australia">
       {%- for market in markets_au -%}
         <option value="{{market.marketId}}">{{market.name}}</option>
@@ -46,6 +52,21 @@ permalink: /tests/job-dynamic/
     </optgroup>
   </select>
 </form>
+<div id="messages">
+  <div id="error-no-jobs" class="hide">
+    <h4>Ooops!</h4>
+    <p>We were unable to find jobs for this location. Please try another location, or come back later to check for freshly posted jobs.</p>
+  </div>
+  <div id="error-server" class="hide">
+    <h4>Ooops!</h4>
+    <p>We were unable to retrieve jobs due to a server error. Please try again later.</p>
+  </div>
+  <div id="error-connection" class="hide">
+    <h4>Ooops!</h4>
+    <p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. Please try again later.</p>
+  </div>
+
+</div>
 <div id="jobs"></div>
 <script>
 // Polyfill for Array.prototype.filter() via @https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -95,6 +116,10 @@ function getUrlParameter(name) {
   var results = regex.exec(location.search);
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
+
+
+
+
 var endpoint = 'https://stag-assets.aquent.com/apps/gym/jobs.json';
 
 // For testing/debugging
@@ -106,13 +131,25 @@ var market = getUrlParameter('m');
 
 if (market.length) {
   endpoint += '?m=' + market;
+
+  updateOption(market);
 }
+
+function updateOption(m) {
+  document.querySelector('#m [value="' + m + '"]').selected = true;
+}
+
 
 console.log('fetching: ', endpoint);
 
 var request = new XMLHttpRequest();
 var data;
-var jobsContainer = document.getElementById('jobs');
+const jobsContainer = document.getElementById('jobs');
+const msgContainer = document.getElementById('messages');
+const errorResults = document.getElementById('error-no-jobs');
+const errorServer = document.getElementById('error-server');
+const errorConnection = document.getElementById('error-connection');
+
 request.open('GET', endpoint, true);
 
 request.onload = function() {
@@ -138,28 +175,28 @@ request.onload = function() {
         // Show 10 jobs
         for(var i = 0; i < limit; i++) {
           el = items[i];
-          jobsContainer.innerHTML += '<li><a href="' + decodeURI(el.url) + '" title="' + el.title + '">' + el.title + '</a></li>';
+          jobsContainer.innerHTML += '<li><a href="' + decodeURI(el.url) + '?utm_campaign=gymnasium" title="' + el.title + '">' + el.title + '</a></li>';
         }
 
         // close our list
         jobsContainer.innerHTML += '</ul>';
       } else {
-        // No jobs in market!
-        jobsContainer.innerHTML = '<h4>Ooops!</h4><p>We were unable to find jobs for this location. Please try another location, or come back later to check for freshly posted jobs.</p>';
+        // No jobs in market! Show the appropriate message.
+        errorResults.classList.remove('hide');
       }
     } else {
-      // No jobs in market!
-      jobsContainer.innerHTML = '<h4>Ooops!</h4><p>We were unable to find jobs for this location. Please try another location, or come back later to check for freshly posted jobs.</p>';
+      // No jobs in market (or there was no data)! Show the appropriate message.
+      errorResults.classList.remove('hide');
     }
   } else {
     // We reached our target server, but it returned an error
-    jobsContainer.innerHTML = '<h4>Ooops!</h4><p>We were unable to retrieve jobs for the requested location. Please try again later.</p>';
+    errorServer.classList.remove('hide');
   }
 };
 
 request.onerror = function() {
   // There was a connection error of some sort
-  jobsContainer.innerHTML = '<h4>Ooops!</h4><p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. Please try again later.</p>';
+  errorConnection.classList.remove('hide');
 };
 
 request.send();
