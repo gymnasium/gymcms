@@ -13,88 +13,6 @@ permalink: /tests/jobs-dynamic/
 
 <style>
 .hide { display: none; }
-
-/* via @https://projects.lukehaas.me/css-loaders/ */
-.loading {
-  color: black;
-  font-size: 25px;
-  text-indent: -9999rem;
-  overflow: hidden;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  margin: 3rem auto;
-  position: relative;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
-  animation: load6 1.7s infinite ease, round 1.7s infinite ease;
-}
-@-webkit-keyframes load6 {
-  0% {
-    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-  }
-  5%,
-  95% {
-    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-  }
-  10%,
-  59% {
-    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
-  }
-  20% {
-    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
-  }
-  38% {
-    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
-  }
-  100% {
-    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-  }
-}
-@keyframes load6 {
-  0% {
-    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-  }
-  5%,
-  95% {
-    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-  }
-  10%,
-  59% {
-    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
-  }
-  20% {
-    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
-  }
-  38% {
-    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
-  }
-  100% {
-    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
-  }
-}
-@-webkit-keyframes round {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes round {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
 </style>
 
 <form id="location-selector" action="{{page.permalink}}">
@@ -134,7 +52,10 @@ permalink: /tests/jobs-dynamic/
   </select>
 </form>
 <div id="messages">
-  <div id="error-no-jobs" class="hide">
+  <div id="loading" class="loading">
+    <p>Please wait while we find you some jobs…</p>
+  </div>
+  <div id="error-results" class="hide">
     <h4>Ooops!</h4>
     <p>We were unable to find jobs for this location. Please try another location, or come back later to check for freshly posted jobs.</p>
   </div>
@@ -146,7 +67,6 @@ permalink: /tests/jobs-dynamic/
     <h4>Ooops!</h4>
     <p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. Please try again later.</p>
   </div>
-  <div class="loading">Loading jobs…</div>
 </div>
 <div id="jobs"></div>
 <script>
@@ -219,9 +139,16 @@ var data;
 
 const jobsContainer = document.getElementById('jobs');
 const msgContainer = document.getElementById('messages');
-const errorResults = document.getElementById('error-no-jobs');
-const errorServer = document.getElementById('error-server');
-const errorConnection = document.getElementById('error-connection');
+
+function showMsg(id) {
+  // firstly, hide any visible messaging
+  msgContainer.querySelectorAll('div').forEach(el => {
+    el.classList.add('hide');
+  });
+
+  // show the element we want!
+  document.getElementById(id).classList.remove('hide');
+}
 
 // If we have jobs stored locally already in the browser session...
 if (window.sessionStorage && sessionStorage.getItem('jobs')) {
@@ -257,17 +184,17 @@ if (window.sessionStorage && sessionStorage.getItem('jobs')) {
 
       } else {
         // No jobs in market (or there was no data)! Show the appropriate message.
-        errorResults.classList.remove('hide');
+        showMsg('error-results');
       }
     } else {
       // We reached our target server, but it returned an error
-      errorServer.classList.remove('hide');
+      showMsg('error-server');
     }
   };
 
   request.onerror = function() {
     // There was a connection error of some sort
-    errorConnection.classList.remove('hide');
+    showMsg('error-connection');
   };
 
   request.send();
@@ -288,8 +215,8 @@ function processData(data) {
   var numResults = items.length;
 
   if (numResults > 0) {
-    // hide our loading spinner
-    document.querySelector('.loading').classList.add('hide');
+    // hide our loading message
+    document.getElementById('loading').classList.add('hide');
 
     // open our list
     jobsContainer.innerHTML += '<ul>';
@@ -311,7 +238,7 @@ function processData(data) {
     jobsContainer.innerHTML += '</ul>';
   } else {
     // No jobs in market! Show the appropriate message.
-    errorResults.classList.remove('hide');
+    showMsg('error-results');
   }
 }
 
