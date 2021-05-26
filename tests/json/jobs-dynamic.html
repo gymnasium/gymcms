@@ -117,10 +117,7 @@ function getUrlParameter(name) {
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
-
-
-
-var endpoint = 'https://stag-assets.aquent.com/apps/gym/jobs.json';
+var endpoint = 'https://stag-assets.aquent.com/apps/gym/jobs.json?limit=1500';
 
 // For testing/debugging
 if (window.location.host == 'localhost:4000') {
@@ -130,8 +127,6 @@ if (window.location.host == 'localhost:4000') {
 var market = getUrlParameter('m');
 
 if (market.length) {
-  endpoint += '?m=' + market;
-
   updateOption(market);
 }
 
@@ -139,66 +134,101 @@ function updateOption(m) {
   document.querySelector('#m [value="' + m + '"]').selected = true;
 }
 
-
-console.log('fetching: ', endpoint);
-
-var request = new XMLHttpRequest();
 var data;
+
 const jobsContainer = document.getElementById('jobs');
 const msgContainer = document.getElementById('messages');
 const errorResults = document.getElementById('error-no-jobs');
 const errorServer = document.getElementById('error-server');
 const errorConnection = document.getElementById('error-connection');
 
-request.open('GET', endpoint, true);
+// If we have jobs stored locally already in the browser session...
+if (window.sessionStorage && sessionStorage.getItem('jobs')) {
+  data = sessionStorage.getItem('jobs');
+  console.log('data from sessionStorage');
+  processData(data);
+} else {
+  // Otherwise, get the jobs from the endpoint
 
-request.onload = function() {
-  if (this.status >= 200 && this.status < 400) {
-    // Success!
-    data = JSON.parse(this.response);
-    // console.log(data);
+  var request = new XMLHttpRequest();
 
-    if (typeof data !== "undefined" && data !== null) {
-      var items = data.items;
-      var numResults = data.items.length;
+  request.open('GET', endpoint, true);
 
-      if (numResults > 0) {
-        // open our UL
-        jobsContainer.innerHTML += '<ul>';
+  request.onload = function() {
 
-        var limit = 10;
+    if (this.status >= 200 && this.status < 400) {
+      if (typeof this.response !== "undefined" && this.response !== null) {
+        var response = this.response;
 
-        if (numResults < limit) {
-          limit = numResults;
+        if (window.sessionStorage) {
+          // TODO: add an expiration?
+          // const now = new Date();
+          // response["timestamp"]= now.getTime();
+
+          sessionStorage.setItem('jobs', response);
+        } else {
+          console.warn('No browser support for sessionStorage!');
         }
 
-        // Show 10 jobs
-        for(var i = 0; i < limit; i++) {
-          el = items[i];
-          jobsContainer.innerHTML += '<li><a href="' + decodeURI(el.url) + '?utm_campaign=gymnasium" title="' + el.title + '">' + el.title + '</a></li>';
-        }
+        console.log('fetching data from endpoint: ', endpoint);
 
-        // close our list
-        jobsContainer.innerHTML += '</ul>';
+        processData(response);
+
       } else {
-        // No jobs in market! Show the appropriate message.
+        // No jobs in market (or there was no data)! Show the appropriate message.
         errorResults.classList.remove('hide');
       }
     } else {
-      // No jobs in market (or there was no data)! Show the appropriate message.
-      errorResults.classList.remove('hide');
+      // We reached our target server, but it returned an error
+      errorServer.classList.remove('hide');
     }
-  } else {
-    // We reached our target server, but it returned an error
-    errorServer.classList.remove('hide');
+  };
+
+  request.onerror = function() {
+    // There was a connection error of some sort
+    errorConnection.classList.remove('hide');
+  };
+
+  request.send();
+}
+
+// Process our JSON data
+function processData(data) {
+  data = JSON.parse(data);
+
+  var items = data.items;
+
+  // Filter the jobs by market if we have a market param
+  if (market.length) {
+    items = items.filter(item => item.market === market);
   }
-};
 
-request.onerror = function() {
-  // There was a connection error of some sort
-  errorConnection.classList.remove('hide');
-};
+  // How many results do we have?
+  var numResults = items.length;
 
-request.send();
+  if (numResults > 0) {
+    // open our list
+    jobsContainer.innerHTML += '<ul>';
+
+    // Set iteration limits
+    var limit = 10;
+
+    if (numResults < limit) {
+      limit = numResults;
+    }
+
+    // Generate job item
+    for (var i = 0; i < limit; i++) {
+      el = items[i];
+      jobsContainer.innerHTML += '<li><a href="' + decodeURI(el.url) + '?utm_campaign=gymnasium" title="' + el.title + '">' + el.title + '</a></li>';
+    }
+
+    // close our list
+    jobsContainer.innerHTML += '</ul>';
+  } else {
+    // No jobs in market! Show the appropriate message.
+    errorResults.classList.remove('hide');
+  }
+}
 
 </script>
