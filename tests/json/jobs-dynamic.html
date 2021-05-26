@@ -18,6 +18,7 @@ permalink: /tests/jobs-dynamic/
 <form id="location-selector" action="{{page.permalink}}">
   <select name="m" id="m" onchange="this.form.submit();">
     <option value="">Select a location nearest you</option>
+    <option value="remote">Remote</option>
     <optgroup label="Australia">
       {%- for market in markets_au -%}
         <option value="{{market.marketId}}">{{market.name}}</option>
@@ -139,13 +140,16 @@ if (window.location.host == 'localhost:4000') {
   endpoint = '/jobs.json';
 }
 
-var market = getUrlParameter('m');
+// Add exception for `remote` option in the markets dropdown
+var market = getUrlParameter('m') == 'remote' ? undefined : getUrlParameter('m');
 
-if (market.length) {
-  updateOption(market);
+// If we have a market populated on page load, update the dropdown
+if (typeof market !== 'undefined' && market !== null && market.length) {
+  updateDropdown(market);
 }
 
-function updateOption(m) {
+// Update dropdown to the selected option
+function updateDropdown(m) {
   document.querySelector('#m [value="' + m + '"]').selected = true;
 }
 
@@ -168,6 +172,7 @@ function showMsg(id) {
 if (window.sessionStorage && sessionStorage.getItem('jobs')) {
   data = sessionStorage.getItem('jobs');
   console.log('data from sessionStorage');
+  
   processData(data);
 } else {
   // Otherwise, get the jobs from the endpoint
@@ -229,13 +234,17 @@ function processData(data) {
   // *#
 
   // Filter the jobs by market if we have a market param
-  if (market.length) {
+  if (typeof market !== 'undefined' && market !== null && market.length) {
     items = items.filter(item => item.market === market);
     console.log('showing jobs for a specific market');
   } else {
-    items = items.filter(item => parseInt(item.remote) > 1).shuffle();
+    items = items.filter(item => parseInt(item.remote) > 1);
+    updateDropdown('remote');
     console.log('showing remote options…');
   }
+
+  // Randomize the results we show…
+  items = items.shuffle();
 
   // How many results do we have?
   var numResults = items.length;
