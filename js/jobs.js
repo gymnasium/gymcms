@@ -67,7 +67,7 @@ var endpoint = 'https://stag-assets.aquent.com/apps/gym/jobs.json?limit=1500';
 
 // For testing/debugging
 if (window.location.host == 'localhost:4000') {
-  endpoint = '/jobs/jobs.json';
+  endpoint = '/feeds/jobs.json';
 }
 
 // Add exception for `remote` option in the markets dropdown
