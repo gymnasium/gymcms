@@ -203,7 +203,7 @@ function processData(data) {
       if (optHeading.length) {
         list += '<' + optHeading + '>';
       }
-      list += '<a href="' + decodeURI(el.url) + '?utm_campaign=gymnasium" title="' + el.title + '"><span class="job-title">' + el.title + '</span> <span class="job-location">' + el.city + '</span></a>';
+      list += '<a href="' + decodeURI(el.url) + '?utm_campaign=gymnasium" title="' + el.title + '"><span class="job-title">' + el.title + ' </span><span class="job-location"> ' + el.city + '</span></a>';
       if (optHeading.length) {
         list += '</' + optHeading + '>';
       }
