@@ -5,7 +5,7 @@ Git Hash: {{ site.data['hash']}}
 // -->
 
 {%- if jekyll.environment == "development" -%}
-  {%- include take5/test-top.html -%}
+  {%- include partials/test-top.html -%}
 {%- endif -%}
 
 <div class="container">
@@ -17,5 +17,5 @@ Git Hash: {{ site.data['hash']}}
 </div><!-- .container -->
 
 {%- if jekyll.environment == "development" -%}
-  {%- include take5/test-bottom.html -%}
+  {%- include partials/test-bottom.html -%}
 {%- endif -%}

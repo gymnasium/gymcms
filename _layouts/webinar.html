@@ -1,7 +1,7 @@
 {%- if jekyll.environment == "development" -%}
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.slim.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.min.js"></script>
-  {%- include take5/test-top.html -%}
+  {%- include partials/test-top.html -%}
 {%- endif -%}
 
 {% assign webinar = site.data.webinars[page.event_ID] %}
@@ -122,5 +122,5 @@ video_ID: {{ webinar.video_ID }}
 <script src="{{ site.url }}/js/functions.js" async></script>
 
 {%- if jekyll.environment == "development" -%}
-  {%- include take5/test-bottom.html -%}
+  {%- include partials/test-bottom.html -%}
 {%- endif -%}
