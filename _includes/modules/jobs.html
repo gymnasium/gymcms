@@ -1,23 +1,78 @@
-{%- assign iframe_src = "https://gym-jobs-microservice-staging.herokuapp.com" -%}
-{%- case jekyll.environment -%}
-  {%- when "production" -%}
-    {%- assign iframe_src = "https://gym-jobs-microservice-prod.herokuapp.com" -%}
-{%- endcase -%}
+{%- assign markets_au = site.data.markets-au.contentlets -%}
+{%- assign markets_ca = site.data.markets-ca.contentlets -%}
+{%- assign markets_de = site.data.markets-de.contentlets -%}
+{%- assign markets_fr = site.data.markets-fr.contentlets -%}
+{%- assign markets_jp = site.data.markets-jp.contentlets -%}
+{%- assign markets_nl = site.data.markets-nl.contentlets -%}
+{%- assign markets_uk = site.data.markets-uk.contentlets -%}
+{%- assign markets_us = site.data.markets-us.contentlets -%}
 
-{%- if include.cwid != null -%}
-  {%- capture cwid -%}
-    {{ include.cwid }}
-  {%- endcapture -%}
-  {%- capture url_args -%}
-    ?cwid={{ cwid }}
-  {%- endcapture -%}
-{%- endif -%}
 
-<!-- Environment: {{ jekyll.environment }} -->
-<!-- CWID: {{ cwid}} -->
-<!-- url_args: {{ url_args }} -->
+{%- unless jobs_module_class -%}
+  {%- assign jobs_module_class = "default" -%}
+{%- endunless -%}
 
-<iframe src="{{ iframe_src }}/table{{ url_args }}"
-  id="jobs-microservice-frame"
-  class="gymnasium-resizable-iframe gymnasium-jobs-microservice-iframe"
-  style="width: 1px;min-width: 100%;border:0;"></iframe>
+{%- unless opt_heading -%}
+  {%- assign opt_heading = "h3" -%}
+{%- endunless -%}
+
+<link rel="stylesheet" href="{{ site.url }}/css/jobs.css">
+
+<form id="location" class="location" action="{{page.permalink}}">
+  <input type="hidden" name="submitted" value="true">
+  <select name="m" id="m" class="form-control" onchange="this.form.submit();">
+    <option value="">Select a location nearest you</option>
+    <option value="remote">Remote</option>
+    <optgroup label="Australia">
+      {%- for market in markets_au -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+    </optgroup>
+    <optgroup label="Canada">
+      {%- for market in markets_ca -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+    </optgroup>
+    <optgroup label="Europe">
+      {%- for market in markets_uk -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+      {%- for market in markets_nl -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+      {%- for market in markets_fr -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+    </optgroup>
+    <optgroup label="Japan">
+      {%- for market in markets_jp -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+    </optgroup>
+    <optgroup label="United States">
+      {%- for market in markets_us -%}
+        <option value="{{market.marketId}}">{{market.name}}</option>
+      {%- endfor -%}
+    </optgroup>
+  </select>
+</form>
+<div id="messages">
+  <div id="loading" class="loading">
+    <p>Please wait while we find you some jobs…</p>
+  </div>
+  <div id="error-results" class="hide">
+    <h4>Ooops!</h4>
+    <p>We were unable to find jobs for this location. Please try another location, or come back later to check for freshly posted jobs.</p>
+  </div>
+  <div id="error-server" class="hide">
+    <h4>Ooops!</h4>
+    <p>We were unable to retrieve jobs due to a server error. Please try again later.</p>
+  </div>
+  <div id="error-connection" class="hide">
+    <h4>Ooops!</h4>
+    <p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. Please try again later.</p>
+  </div>
+</div>
+<div id="jobs" class="jobs {{jobs_module_class}}" data-h="{{opt_heading}}"></div><!-- #jobs.jobs.{{jobs_module_class}} -->
+
+<script async defer src="{{site.url}}/js/jobs.js"></script>

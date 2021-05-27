@@ -1,7 +1,7 @@
 {% assign base_path = "/courses/take5/" | prepend: site.gymurl %}
 
 {%- if jekyll.environment == "development" -%}
-    {%- include take5/test-top.html -%}
+    {%- include partials/test-top.html -%}
 {%- endif -%}
 
 <link rel="stylesheet" href="{{ site.url }}/css/take5.css">
@@ -184,7 +184,7 @@
 
 
 {%- if jekyll.environment == "development" -%}
-    {%- include take5/test-bottom.html -%}
+    {%- include partials/test-bottom.html -%}
 {%- endif -%}
 
 <!-- //

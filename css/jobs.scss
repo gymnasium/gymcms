@@ -1,0 +1,24 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+.location {
+  margin: 1rem 0 2.666rem;
+
+  select {
+  
+    @include breakpoint(40em, min) {
+      max-width: 24rem;
+    }
+  }
+}
+
+.job-location {
+  &::before {
+    content: '\2014'; // em-dash
+    margin-right: 1rem;
+  }
+}
+
+

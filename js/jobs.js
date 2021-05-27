@@ -1,76 +1,3 @@
----
-layout: default
-permalink: /tests/jobs-dynamic/
----
-{%- assign markets_au = site.data.markets-au.contentlets -%}
-{%- assign markets_ca = site.data.markets-ca.contentlets -%}
-{%- assign markets_de = site.data.markets-de.contentlets -%}
-{%- assign markets_fr = site.data.markets-fr.contentlets -%}
-{%- assign markets_jp = site.data.markets-jp.contentlets -%}
-{%- assign markets_nl = site.data.markets-nl.contentlets -%}
-{%- assign markets_uk = site.data.markets-uk.contentlets -%}
-{%- assign markets_us = site.data.markets-us.contentlets -%}
-
-<style>
-.hide { display: none; }
-</style>
-
-<form id="location-selector" action="{{page.permalink}}">
-  <select name="m" id="m" onchange="this.form.submit();">
-    <option value="">Select a location nearest you</option>
-    <option value="remote">Remote</option>
-    <optgroup label="Australia">
-      {%- for market in markets_au -%}
-        <option value="{{market.marketId}}">{{market.name}}</option>
-      {%- endfor -%}
-    </optgroup>
-    <optgroup label="Canada">
-      {%- for market in markets_ca -%}
-        <option value="{{market.marketId}}">{{market.name}}</option>
-      {%- endfor -%}
-    </optgroup>
-    <optgroup label="Europe">
-      {%- for market in markets_uk -%}
-        <option value="{{market.marketId}}">{{market.name}}</option>
-      {%- endfor -%}
-      {%- for market in markets_nl -%}
-        <option value="{{market.marketId}}">{{market.name}}</option>
-      {%- endfor -%}
-      {%- for market in markets_fr -%}
-        <option value="{{market.marketId}}">{{market.name}}</option>
-      {%- endfor -%}
-    </optgroup>
-    <optgroup label="Japan">
-      {%- for market in markets_jp -%}
-        <option value="{{market.marketId}}">{{market.name}}</option>
-      {%- endfor -%}
-    </optgroup>
-    <optgroup label="United States">
-      {%- for market in markets_us -%}
-        <option value="{{market.marketId}}">{{market.name}}</option>
-      {%- endfor -%}
-    </optgroup>
-  </select>
-</form>
-<div id="messages">
-  <div id="loading" class="loading">
-    <p>Please wait while we find you some jobs…</p>
-  </div>
-  <div id="error-results" class="hide">
-    <h4>Ooops!</h4>
-    <p>We were unable to find jobs for this location. Please try another location, or come back later to check for freshly posted jobs.</p>
-  </div>
-  <div id="error-server" class="hide">
-    <h4>Ooops!</h4>
-    <p>We were unable to retrieve jobs due to a server error. Please try again later.</p>
-  </div>
-  <div id="error-connection" class="hide">
-    <h4>Ooops!</h4>
-    <p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. Please try again later.</p>
-  </div>
-</div>
-<div id="jobs"></div>
-<script>
 // Polyfill for Array.prototype.filter() via @https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 if (!Array.prototype.filter){
   Array.prototype.filter = function(func, thisArg) {
@@ -133,11 +60,14 @@ function getUrlParameter(name) {
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
+var data;
+const jobsContainer = document.getElementById('jobs');
+const msgContainer = document.getElementById('messages');
 var endpoint = 'https://stag-assets.aquent.com/apps/gym/jobs.json?limit=1500';
 
 // For testing/debugging
 if (window.location.host == 'localhost:4000') {
-  endpoint = '/jobs.json';
+  endpoint = '/jobs/jobs.json';
 }
 
 // Add exception for `remote` option in the markets dropdown
@@ -146,17 +76,18 @@ var market = getUrlParameter('m') == 'remote' ? undefined : getUrlParameter('m')
 // If we have a market populated on page load, update the dropdown
 if (typeof market !== 'undefined' && market !== null && market.length) {
   updateDropdown(market);
+  
+}
+
+if (getUrlParameter('submitted') === 'true') {
+  console.log('we gotta scroll to it!');
+  location.href = '#location';
 }
 
 // Update dropdown to the selected option
 function updateDropdown(m) {
   document.querySelector('#m [value="' + m + '"]').selected = true;
 }
-
-var data;
-
-const jobsContainer = document.getElementById('jobs');
-const msgContainer = document.getElementById('messages');
 
 function showMsg(id) {
   // firstly, hide any visible messaging
@@ -248,11 +179,14 @@ function processData(data) {
   var numResults = items.length;
 
   if (numResults > 0) {
+
+    var optHeading = jobsContainer.getAttribute('data-h');
+
+    // Start with an empty list
+    var list = "";
+
     // hide our loading message
     document.getElementById('loading').classList.add('hide');
-
-    // open our list
-    jobsContainer.innerHTML += '<ul>';
 
     // Set iteration limits
     var limit = 10;
@@ -264,15 +198,22 @@ function processData(data) {
     // Generate job item
     for (var i = 0; i < limit; i++) {
       el = items[i];
-      jobsContainer.innerHTML += '<li><a href="' + decodeURI(el.url) + '?utm_campaign=gymnasium" title="' + el.title + '">' + el.title + '</a></li>';
+      list += '<li>';
+      // Add optional heading prefix
+      if (optHeading.length) {
+        list += '<' + optHeading + '>';
+      }
+      list += '<a href="' + decodeURI(el.url) + '?utm_campaign=gymnasium" title="' + el.title + '"><span class="job-title">' + el.title + '</span> <span class="job-location">' + el.city + '</span></a>';
+      if (optHeading.length) {
+        list += '</' + optHeading + '>';
+      }
+      list += '</li>';
     }
 
     // close our list
-    jobsContainer.innerHTML += '</ul>';
+    jobsContainer.innerHTML += `<ul>${list}</ul>`;
   } else {
     // No jobs in market! Show the appropriate message.
     showMsg('error-results');
   }
 }
-
-</script>
