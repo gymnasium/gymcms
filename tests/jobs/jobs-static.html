@@ -2,15 +2,17 @@
 layout: default
 permalink: /tests/jobs-static/
 ---
-<!--  -->
-{%- assign jobs_au = site.data.jobs-au.items -%}
-{%- assign jobs_ca = site.data.jobs-ca.items -%}
-{%- assign jobs_de = site.data.jobs-de.items -%}
-{%- assign jobs_fr = site.data.jobs-fr.items -%}
-{%- assign jobs_jp = site.data.jobs-jp.items -%}
-{%- assign jobs_nl = site.data.jobs-nl.items -%}
-{%- assign jobs_uk = site.data.jobs-uk.items -%}
-{%- assign jobs_us = site.data.jobs-us.items -%}
+{%- assign jobs = site.data.jobs.items -%}
+
+{%- assign jobs_au = jobs | where:"country","AU" -%}
+{%- assign jobs_ca = jobs | where:"country","CA" -%}
+{%- assign jobs_de = jobs | where:"country","DE" -%}
+{%- assign jobs_fr = jobs | where:"country","FR" -%}
+{%- assign jobs_jp = jobs | where:"country","JP" -%}
+{%- assign jobs_nl = jobs | where:"country","NL" -%}
+{%- assign jobs_uk = jobs | where:"country","UK" -%}
+{%- assign jobs_us = jobs | where:"country","US" -%}
+{%- assign jobs_remote = jobs | where:"remote","2" -%}
 
 {%- assign markets_au = site.data.markets-au.contentlets -%}
 {%- assign markets_ca = site.data.markets-ca.contentlets -%}
@@ -29,6 +31,21 @@ jp markets: {{ markets_jp.size }}<br>
 nl markets: {{ markets_nl.size }}<br>
 uk markets: {{ markets_uk.size }}<br>
 us markets: {{ markets_us.size }}<br>
+
+{%- if jobs_remote.size > 0 -%}
+  <div data-id="{{id}}">
+    <h4>Remote</h4>
+    <ul>
+    {%- for job in jobs_remote limit:10 -%}
+      <li>
+        <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
+      </li>
+    {%- endfor -%}
+    </ul>
+  </div>
+{%- else -%}
+  <!-- Found 0 remote jobs, skipping… -->
+{%- endif -%}
 
 {%comment%}
   Render AU markets with jobs
@@ -202,16 +219,18 @@ us markets: {{ markets_us.size }}<br>
 {%- endif -%}
 
 {%- if jobs_nl.size > 0 -%}
-  <h4>Netherlands</h4>
-  <ul>
-  {%- for job in jobs_nl -%}
-  <li>
-    <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
-  </li>
-  {%- endfor -%}
-  </ul>
+  <div data-id="{{id}}">
+    <h4>Netherlands</h4>
+    <ul>
+    {%- for job in jobs_nl -%}
+      <li>
+        <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
+      </li>
+    {%- endfor -%}
+    </ul>
+  </div>
 {%- else -%}
-  <!-- Found 0 jobs in the Netherlands, skipping… -->
+  <!-- Found 0 jobs in Netherlands, skipping… -->
 {%- endif -%}
 
 {%- if jobs_uk.size > 0 -%}
