@@ -3,6 +3,10 @@
 @import 'variables';
 @import 'mixins';
 
+.hide {
+  display: none; // TODO: this is a repeat of what is available in the defaults mixin
+}
+
 .location {
   margin: 1rem 0 2.666rem;
 
