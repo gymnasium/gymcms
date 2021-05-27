@@ -46,6 +46,8 @@ plugins:
 
 ## JSON Fetch
 jekyll_get_json:
+  - data: jobs
+    json: 'https://stag-assets.aquent.com/apps/gym/jobs.json'
   - data: markets-au
     json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:AU%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
   - data: markets-ca
