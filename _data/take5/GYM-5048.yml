@@ -15,7 +15,7 @@ short_description: "You don’t have to forgo animation entirely to accommodate 
 related_content:
 - label: "An Introduction to the Reduced Motion Media Query"
   url: "https://css-tricks.com/introduction-reduced-motion-media-query/"
-- label: "A Guide to Creating Accessible Animations "
+- label: "A Guide to Creating Accessible Animations"
   url: "https://webdesign.tutsplus.com/tutorials/a-guide-to-creating-accessible-animations--cms-32038/"
 - label: "Web accessibility for seizures and physical reactions"
   url: "https://developer.mozilla.org/en-US/docs/Web/Accessibility/Seizure_disorders"
