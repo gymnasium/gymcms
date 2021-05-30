@@ -24,6 +24,16 @@
   font-size: 16px;
 }
 
+.hero-promo::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 7.5em;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15));
+}
+
 // structural spacing
 
 .hero-promo .container {
@@ -126,11 +136,13 @@
 // !override / reset/rescale font-size adjustment
 
 .hero-promo a.gym-button-secondary {
+  position: relative;
   font-size: 105%;
   width: auto !important;
   vertical-align: bottom;
   padding: 1.2em 1.6em !important;
   border: 2px solid $gym-white !important;
+  z-index: 1;
 }
 
 // misc details
