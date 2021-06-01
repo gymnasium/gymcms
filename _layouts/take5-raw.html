@@ -20,15 +20,15 @@
           // VIDEO
           //
           {%- endcomment -%}
-      
+
           <div class="embed-full-width" id="tutorial-video">
             <div class="embed-responsive embed-responsive-16by9">
               {% include take5/video.html video_ID=course.video_ID %}
             </div>
           </div>
-      
+
           <!-- The duration of this video is {{course.video_duration}} -->
-      
+
           <div class="take5--info" id="tutorial-info">
             <!-- Tutorial container-->
             <div class="container">
@@ -39,13 +39,13 @@
                   <div class="take5--details" id="tutorial-details">
                     <header>
                       <h1 class="title all-caps">{{ course.title }}</h1>
-      
+
                       {% if course.instructor !=null %}
                       <p class="instructor">with {{ course.instructor }}</p>
                       {% endif %}
                     </header>
                     <p class="description">{{ course.short_description }}</p>
-      
+
                     {%- comment -%}
                     //
                     // RELATED CONTENT
@@ -59,7 +59,7 @@
                 <!-- column -->
                 <div class="col-md-4">
                 <!-- Resources -->
-      
+
                 {% if course.project_files == null and course.related_content == null %}
                 <!-- No resources found! -->
                 {% else %}
@@ -74,8 +74,7 @@
                     <header>
                       {% if course.project_file_source == "GitHub" %}
                       <h3>Lesson Files</h3>
-                      {% endif %}
-                      {% if course.project_file_source == "CodePen" %}
+                      {% else course.project_file_source != "GitHub" %}
                       <h3>Project Files</h3>
                       {% endif %}
                       {% if course.project_file_source !=null %}
@@ -99,7 +98,7 @@
                   </div>
                   {% endif %}
                   <!-- /Project Files -->
-      
+
                   <div class="take5--resources-list">
                     <!-- Related Content -->
                     {% if course.related_content !=null %}
@@ -159,7 +158,7 @@
             <!-- /Tutorial container -->
           </div>
         </article>
-      
+
         {%- comment -%}
         //
         // RECOMMENDED COURSES
@@ -167,7 +166,7 @@
         // Show recommended content modules (Take 5s and courses)
         // Set rec-take5 and rec-courses to true/false to toggle the display
         {%- endcomment -%}
-      
+
         {% capture rec_content_test %}{% file_exists _includes/take5/recommended-content.html %}{% endcapture %}
           {% if rec_content_test == "true" %}
           {%- include /take5/recommended-content.html rec-take5=true rec-courses=true -%} {% else %}
@@ -178,10 +177,6 @@
     </div><!-- .col-md-12 -->
   </div><!-- .row -->
 </div><!-- .container -->
-
-
-
-
 
 {%- if jekyll.environment == "development" -%}
     {%- include take5/test-bottom.html -%}
