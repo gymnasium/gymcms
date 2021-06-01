@@ -38,6 +38,14 @@ if (!Array.prototype.filter){
   };
 }
 
+// Polyfill for trim @https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+if (!String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+  };
+}
+
+
 Array.prototype.shuffle = function () {
   let input = this;
 
@@ -76,7 +84,6 @@ var market = getUrlParameter('m') == 'remote' ? undefined : getUrlParameter('m')
 // If we have a market populated on page load, update the dropdown
 if (typeof market !== 'undefined' && market !== null && market.length) {
   updateDropdown(market);
-  
 }
 
 if (getUrlParameter('submitted') === 'true') {
@@ -150,11 +157,46 @@ if (window.sessionStorage && sessionStorage.getItem('jobs')) {
   request.send();
 }
 
+// function to help parse data options
+function parseValue(str) {
+  if ('true' === str) {
+    return true;
+  } else if ('false' === str) {
+    return false;
+  } else if (!isNaN(str * 1)) {
+    return parseFloat(str);
+  }
+
+  return str;
+}
+
 // Process our JSON data
 function processData(data) {
   data = JSON.parse(data);
 
   var items = data.items;
+
+  var opts = {};
+
+  if (jobsContainer.hasAttribute('data-options')) {
+    jobsContainer.getAttribute('data-options').split(';').forEach(function (option, _index) {
+      var opt = option.split(':').map(function (el) {
+        return el.trim();
+      });
+      if (opt[0]) {
+        opts[opt[0]] = parseValue(opt[1])
+      };
+    });
+  }
+
+  var optHeading = opts.heading ? opts.heading : false;
+
+  var category = opts.category ? opts.category : false;
+
+  if (category) {
+    items = items.filter(item => item.catSlug === category);
+    console.log('showing jobs for a specific category: ', category);
+  }
 
   // Filter the jobs by market if we have a market param
   if (typeof market !== 'undefined' && market !== null && market.length) {
@@ -178,10 +220,9 @@ function processData(data) {
   // How many results do we have?
   var numResults = items.length;
 
+
   if (numResults > 0) {
-
-    var optHeading = jobsContainer.getAttribute('data-h');
-
+    
     // Start with an empty list
     var list = "";
 
@@ -200,11 +241,11 @@ function processData(data) {
       el = items[i];
       list += '<li>';
       // Add optional heading prefix
-      if (optHeading.length) {
+      if (optHeading) {
         list += '<' + optHeading + '>';
       }
       list += '<a href="' + decodeURI(el.url) + '?utm_campaign=gymnasium" title="' + el.title + '"><span class="job-title">' + el.title + ' </span><span class="job-location"> ' + el.city + '</span></a>';
-      if (optHeading.length) {
+      if (optHeading) {
         list += '</' + optHeading + '>';
       }
       list += '</li>';
