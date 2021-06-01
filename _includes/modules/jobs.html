@@ -16,6 +16,10 @@
   {%- assign opt_heading = "h3" -%}
 {%- endunless -%}
 
+{%- unless opt_category -%}
+  {%- assign opt_category = "false" -%}
+{%- endunless -%}
+
 <link rel="stylesheet" href="{{ site.url }}/css/jobs.css">
 
 <form id="location" class="location" action="{{page.permalink}}">
@@ -73,6 +77,6 @@
     <p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. Please try again later.</p>
   </div>
 </div>
-<div id="jobs" class="jobs {{jobs_module_class}}" data-h="{{opt_heading}}"></div><!-- #jobs.jobs.{{jobs_module_class}} -->
+<div id="jobs" class="jobs {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category}}"></div><!-- #jobs.jobs.{{jobs_module_class}} -->
 
 <script async defer src="{{site.url}}/js/jobs.js"></script>
