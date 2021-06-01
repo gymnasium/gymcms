@@ -5,12 +5,12 @@ date: 2021-06-01T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5049/
 poster_art: /img/take5/posters/gym-5049.jpg
-live: false
+live: true
 instructor: "Jeremy Osborn"
 topic: "Prototyping"
 video_ID: ohEtP5MuWFk
 video_duration: "4:59"
-featured: false
+featured: true
 short_description: "Variants make working with components in Figma easier and more intuitive to use. Learn how to get up and running with the fundamentals of variants in this tutorial by Jeremy Osborn, Director of Learning for Aquent Gymnasium."
 project_file_source: Figma
 project_files:
