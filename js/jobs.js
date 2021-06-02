@@ -199,7 +199,7 @@ function processData(data) {
   var limit = opts.limit ? parseInt(opts.limit) : 10;
 
   if (category) {
-    items = items.filter(item => item.catSlug === category);
+    items = items.filter(item => item.category === category);
     console.log('showing jobs for a specific category: ', category);
   }
 
