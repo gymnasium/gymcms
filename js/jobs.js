@@ -189,9 +189,14 @@ function processData(data) {
     });
   }
 
+  // Wrap our jobs in headings or no?
   var optHeading = opts.heading ? opts.heading : false;
 
+  // Do we have a specific category?
   var category = opts.category ? opts.category : false;
+
+  // Set iteration limits
+  var limit = opts.limit ? parseInt(opts.limit) : 10;
 
   if (category) {
     items = items.filter(item => item.catSlug === category);
@@ -211,7 +216,7 @@ function processData(data) {
     // 4 = Partial on-site
     items = items.filter(item => parseInt(item.remote) == 2);
     updateDropdown('remote');
-    console.log('showing remote options…');
+    console.log('showing only remote options…');
   }
 
   // Randomize the results we show…
@@ -220,6 +225,7 @@ function processData(data) {
   // How many results do we have?
   var numResults = items.length;
 
+  console.log(`limit: ${limit} | results: ${numResults}`);
 
   if (numResults > 0) {
     
@@ -228,9 +234,6 @@ function processData(data) {
 
     // hide our loading message
     document.getElementById('loading').classList.add('hide');
-
-    // Set iteration limits
-    var limit = 10;
 
     if (numResults < limit) {
       limit = numResults;
