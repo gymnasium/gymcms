@@ -1,0 +1,3 @@
+/* This helper include file is intended to inline CSS that we are serving up in the Gymnasium theme via the system-status include, and allows us using our SCSS variables */
+
+@import "theme-hacks"; // imports scss partial
