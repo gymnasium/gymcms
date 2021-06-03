@@ -171,8 +171,8 @@ function parseValue(str) {
 }
 
 // Process our JSON data
-function processData(data) {
-  data = JSON.parse(data);
+function processData(d) {
+  data = JSON.parse(d);
 
   var items = data.items;
 
@@ -204,7 +204,7 @@ function processData(data) {
   }
 
   // Filter the jobs by market if we have a market param
-  if (typeof market !== 'undefined' && market !== null && market.length) {
+  if ((typeof market !== 'undefined' && market !== null) && market.length) {
     items = items.filter(item => item.market === market);
     console.log('showing jobs for a specific market');
   } else {
@@ -214,7 +214,7 @@ function processData(data) {
     // 2 = Off-Site
     // 3 = Either
     // 4 = Partial on-site
-    items = items.filter(item => parseInt(item.remote) == 2);
+    items = items.filter(item => parseInt(item.remote) === 2);
     updateDropdown('remote');
     console.log('showing only remote options…');
   }
