@@ -2,9 +2,13 @@
 layout: raw
 permalink: /system-status/
 ---
-{% capture inline %}
-  {% include inline.scss %}
-{% endcapture %}
+{%- comment -%}
+This renders our theme hack scss as inline content directly into the HTML
+{%- endcomment -%}
+{%- capture inline -%}
+  {%- include inline.scss -%} 
+{%- endcapture -%}
+
 <style>{{ inline | scssify }}</style>
 
 
