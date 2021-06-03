@@ -261,3 +261,15 @@ function processData(data) {
     showMsg('error-results');
   }
 }
+
+// Listen for geolocator messages from our iframe
+window.addEventListener('message', (event) => {
+  // Reject messages that are not from a valid origin domain
+  const regex = new RegExp('https:\/\/.*assets.aquent.com');
+  if (!regex.test(event.origin)) {
+    return;
+  }
+
+  // event.source is popup
+  console.log(`geolocator: ${event.data}`)
+}, false);
