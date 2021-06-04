@@ -122,11 +122,6 @@ var sessionStorage = false;
 const jobsContainer = document.getElementById('jobs');
 const msgContainer = document.getElementById('messages');
 
-if (window.sessionStorage && sessionStorage.getItem('jobs')) {
-  sessionStorage = true;
-}
-
-
 if (jobsContainer.hasAttribute('data-options')) {
   parseOptions(jobsContainer.getAttribute('data-options'),opts);
 }
@@ -161,7 +156,7 @@ function showMsg(id) {
 }
 
 // If we have jobs stored locally already in the browser session...
-if (sessionStorage) {
+if (window.sessionStorage && sessionStorage.getItem('jobs')) {
   data = sessionStorage.getItem('jobs');
   console.log('data from sessionStorage');
 
