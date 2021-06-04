@@ -171,10 +171,12 @@ if (window.sessionStorage && sessionStorage.getItem('jobs')) {
 } else {
   // Otherwise, get the jobs from the endpoint
 
-  urlExists(endpoint, function(exists) {
+  urlExists(endpoint + '?limit=1', function(exists) {
     if (!exists) {
       console.warn('original endpoint unavailable, reverting to local feed!');
       endpoint = '/feeds/jobs.json';
+    } else {
+      endpoint += '?limit=1500';
     }
   });
 
@@ -300,20 +302,17 @@ function processData(d) {
 }
 
 // Listen for geolocator messages from our iframe
-window.addEventListener('message', (event) => {
-
-
-}, false);
-
-// Listen to message from child window
 eventer(messageEvent,function(event) {
   // Reject messages that are not from a valid origin domain
   const regex = new RegExp('https:\/\/.*assets.aquent.com');
-  console.log('event from: ', event.origin)
   if (regex.test(event.origin)) {
-    console.log('received message from child');
+    console.log('received message from child: ', event.data);
     parseOptions(event.data,opts);
-  } else {
-    console.warn('child not permitted access to parent');
-  } 
+  }
 },false);
+
+
+// TODO: add iframe dynamically? 
+// window.onload = function(){
+//   document.getElementById('YOURID').src = 'https://insertYourUrlHere.com'
+// };

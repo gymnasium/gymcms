@@ -1,5 +1,5 @@
 
-{%- assign endpoint = "/apps/gym/jobs.json?limit=1500" | prepend: site.aqassetsurl -%}
+{%- assign endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl -%}
 {%- assign iframe_src = "/apps/gym/geolocator" | prepend: site.aqassetsurl -%}
 {%- if site.environment == "local" -%}
 {%comment%}
