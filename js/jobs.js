@@ -175,7 +175,7 @@ if (window.sessionStorage && sessionStorage.getItem('jobs')) {
 
   var request = new XMLHttpRequest();
 
-  request.open('GET', fetchurl, true);
+  request.open('GET', endpoint, true);
 
   request.onload = function() {
 
