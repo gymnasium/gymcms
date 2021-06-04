@@ -309,6 +309,7 @@ window.addEventListener('message', (event) => {
 eventer(messageEvent,function(event) {
   // Reject messages that are not from a valid origin domain
   const regex = new RegExp('https:\/\/.*assets.aquent.com');
+  console.log('event from: ', event.origin)
   if (regex.test(event.origin)) {
     console.log('received message from child');
     parseOptions(event.data,opts);
