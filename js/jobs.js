@@ -117,17 +117,19 @@ function parseOptions(input, output) {
 var opts = {};
 
 var data;
+var endpoint;
+var sessionStorage = false;
 const jobsContainer = document.getElementById('jobs');
 const msgContainer = document.getElementById('messages');
 
+if (window.sessionStorage && sessionStorage.getItem('jobs')) {
+  sessionStorage = true;
+}
 
 
 if (jobsContainer.hasAttribute('data-options')) {
   parseOptions(jobsContainer.getAttribute('data-options'),opts);
 }
-
-
-var endpoint = urlExists(jobsContainer.getAttribute('data-endpoint'), function(exists){ return exists; }) ? endpoint : '/feeds/jobs.json';
 
 // Add exception for `remote` option in the markets dropdown
 var market = getUrlParameter('m') == 'remote' ? undefined : getUrlParameter('m');
@@ -159,13 +161,15 @@ function showMsg(id) {
 }
 
 // If we have jobs stored locally already in the browser session...
-if (window.sessionStorage && sessionStorage.getItem('jobs')) {
+if (sessionStorage) {
   data = sessionStorage.getItem('jobs');
   console.log('data from sessionStorage');
 
   processData(data);
 } else {
   // Otherwise, get the jobs from the endpoint
+
+  endpoint = urlExists(jobsContainer.getAttribute('data-endpoint'), function(exists){ return exists; }) ? endpoint : '/feeds/jobs.json';
 
   var request = new XMLHttpRequest();
 
