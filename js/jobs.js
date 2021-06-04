@@ -118,12 +118,15 @@ var opts = {};
 
 var data;
 var endpoint;
-var sessionStorage = false;
 const jobsContainer = document.getElementById('jobs');
 const msgContainer = document.getElementById('messages');
 
 if (jobsContainer.hasAttribute('data-options')) {
   parseOptions(jobsContainer.getAttribute('data-options'),opts);
+}
+
+if (jobsContainer.hasAttribute('data-endpoint')) {
+  endpoint = jobsContainer.getAttribute('data-endpoint');
 }
 
 // Add exception for `remote` option in the markets dropdown
@@ -135,7 +138,6 @@ if (typeof market !== 'undefined' && market !== null && market.length) {
 }
 
 if (getUrlParameter('s') === 'true') {
-  console.log('we gotta scroll to it!');
   location.href = '#location';
 }
 
@@ -164,11 +166,16 @@ if (window.sessionStorage && sessionStorage.getItem('jobs')) {
 } else {
   // Otherwise, get the jobs from the endpoint
 
-  endpoint = urlExists(jobsContainer.getAttribute('data-endpoint'), function(exists){ return exists; }) ? endpoint : '/feeds/jobs.json';
+  urlExists(endpoint, function(exists) {
+    if (!exists) {
+      console.warn('original endpoint unavailable, reverting to local feed!');
+      endpoint = '/feeds/jobs.json';
+    }
+  });
 
   var request = new XMLHttpRequest();
 
-  request.open('GET', endpoint, true);
+  request.open('GET', fetchurl, true);
 
   request.onload = function() {
 
@@ -231,7 +238,7 @@ function processData(d) {
   // Filter the jobs by market if we have a market param
   if ((typeof market !== 'undefined' && market !== null) && market.length) {
     items = items.filter(item => item.market === market);
-    console.log('showing jobs for a specific market');
+    console.log('showing jobs for a specific market: ', market);
   } else {
     // Off-site preference key
     // 0 = Unknown
@@ -250,7 +257,7 @@ function processData(d) {
   // How many results do we have?
   var numResults = items.length;
 
-  console.log(`limit: ${limit} | results: ${numResults}`);
+  console.log(`results: ${numResults} | limit: ${limit})`);
 
   if (numResults > 0) {
     
