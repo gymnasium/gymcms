@@ -60,6 +60,27 @@ Array.prototype.shuffle = function () {
   return input;
 }
 
+// if-url-exist.js v1 via @https://stackoverflow.com/questions/10926880/using-javascript-to-detect-whether-the-url-exists-before-display-in-iframe
+function urlExists(url, callback) {
+  let request = new XMLHttpRequest;
+  request.open('GET', url, true);
+  request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+  request.setRequestHeader('Accept', '*/*');
+  request.onprogress = function(event) {
+    let status = event.target.status;
+    let statusFirstNumber = (status).toString()[0];
+    switch (statusFirstNumber) {
+      case '2':
+        request.abort();
+        return callback(true);
+      default:
+        request.abort();
+        return callback(false);
+    };
+  };
+  request.send('');
+};
+
 // Get URL Parameter
 function getUrlParameter(name) {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -68,15 +89,45 @@ function getUrlParameter(name) {
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
+// function to help parse data options
+function parseValue(str) {
+  if ('true' === str) {
+    return true;
+  } else if ('false' === str) {
+    return false;
+  } else if (!isNaN(str * 1)) {
+    return parseFloat(str);
+  }
+
+  return str;
+}
+
+// Create an array of options
+function parseOptions(input, output) {
+  input.split(';').forEach(function (option, _index) {
+    var opt = option.split(':').map(function (el) {
+      return el.trim();
+    });
+    if (opt[0]) {
+      output[opt[0]] = parseValue(opt[1])
+    };
+  });
+}
+
+var opts = {};
+
 var data;
 const jobsContainer = document.getElementById('jobs');
 const msgContainer = document.getElementById('messages');
-var endpoint = 'https://stag-assets.aquent.com/apps/gym/jobs.json?limit=1500';
 
-// For testing/debugging
-if (window.location.host == 'localhost:4000') {
-  endpoint = '/feeds/jobs.json';
+
+
+if (jobsContainer.hasAttribute('data-options')) {
+  parseOptions(jobsContainer.getAttribute('data-options'),opts);
 }
+
+
+var endpoint = urlExists(jobsContainer.getAttribute('data-endpoint'), function(exists){ return exists; }) ? endpoint : '/feeds/jobs.json';
 
 // Add exception for `remote` option in the markets dropdown
 var market = getUrlParameter('m') == 'remote' ? undefined : getUrlParameter('m');
@@ -86,7 +137,7 @@ if (typeof market !== 'undefined' && market !== null && market.length) {
   updateDropdown(market);
 }
 
-if (getUrlParameter('submitted') === 'true') {
+if (getUrlParameter('s') === 'true') {
   console.log('we gotta scroll to it!');
   location.href = '#location';
 }
@@ -96,6 +147,7 @@ function updateDropdown(m) {
   document.querySelector('#m [value="' + m + '"]').selected = true;
 }
 
+// Show our messaging accordingly
 function showMsg(id) {
   // firstly, hide any visible messaging
   msgContainer.querySelectorAll('div').forEach(el => {
@@ -157,37 +209,11 @@ if (window.sessionStorage && sessionStorage.getItem('jobs')) {
   request.send();
 }
 
-// function to help parse data options
-function parseValue(str) {
-  if ('true' === str) {
-    return true;
-  } else if ('false' === str) {
-    return false;
-  } else if (!isNaN(str * 1)) {
-    return parseFloat(str);
-  }
-
-  return str;
-}
-
 // Process our JSON data
 function processData(d) {
   data = JSON.parse(d);
 
   var items = data.items;
-
-  var opts = {};
-
-  if (jobsContainer.hasAttribute('data-options')) {
-    jobsContainer.getAttribute('data-options').split(';').forEach(function (option, _index) {
-      var opt = option.split(':').map(function (el) {
-        return el.trim();
-      });
-      if (opt[0]) {
-        opts[opt[0]] = parseValue(opt[1])
-      };
-    });
-  }
 
   // Wrap our jobs in headings or no?
   var optHeading = opts.heading ? opts.heading : false;
@@ -270,6 +296,6 @@ window.addEventListener('message', (event) => {
     return;
   }
 
-  // event.source is popup
-  console.log(`geolocator: ${event.data}`)
+  parseOptions(event.data,opts)
+
 }, false);

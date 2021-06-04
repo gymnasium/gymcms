@@ -14,14 +14,14 @@ permalink: /tests/jobs-static/
 {%- assign jobs_us = jobs | where:"country","US" -%}
 {%- assign jobs_remote = jobs | where:"remote","2" -%}
 
-{%- assign markets_au = site.data.markets-au.contentlets -%}
-{%- assign markets_ca = site.data.markets-ca.contentlets -%}
-{%- assign markets_de = site.data.markets-de.contentlets -%}
-{%- assign markets_fr = site.data.markets-fr.contentlets -%}
-{%- assign markets_jp = site.data.markets-jp.contentlets -%}
-{%- assign markets_nl = site.data.markets-nl.contentlets -%}
-{%- assign markets_uk = site.data.markets-uk.contentlets -%}
-{%- assign markets_us = site.data.markets-us.contentlets -%}
+{%- assign markets_au = site.data.markets.items | where: "countryCode", "AU" -%}
+{%- assign markets_ca = site.data.markets.items | where: "countryCode", "CA" -%}
+{%- assign markets_de = site.data.markets.items | where: "countryCode", "DE" -%}
+{%- assign markets_fr = site.data.markets.items | where: "countryCode", "FR" -%}
+{%- assign markets_jp = site.data.markets.items | where: "countryCode", "JP" -%}
+{%- assign markets_nl = site.data.markets.items | where: "countryCode", "NL" -%}
+{%- assign markets_uk = site.data.markets.items | where: "countryCode", "UK" -%}
+{%- assign markets_us = site.data.markets.items | where: "countryCode", "US" -%}
 
 au markets: {{ markets_au.size }}<br>
 ca markets: {{ markets_ca.size }}<br>
