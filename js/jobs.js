@@ -45,7 +45,7 @@ if (!String.prototype.trim) {
   };
 }
 
-
+// Shuffle items
 Array.prototype.shuffle = function () {
   let input = this;
 
@@ -80,6 +80,11 @@ function urlExists(url, callback) {
   };
   request.send('');
 };
+
+// Create IE + others compatible event handler via @https://davidwalsh.name/window-iframe
+var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+var eventer = window[eventMethod];
+var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
 
 // Get URL Parameter
 function getUrlParameter(name) {
@@ -296,12 +301,18 @@ function processData(d) {
 
 // Listen for geolocator messages from our iframe
 window.addEventListener('message', (event) => {
-  // Reject messages that are not from a valid origin domain
-  const regex = new RegExp('https:\/\/.*assets.aquent.com');
-  if (!regex.test(event.origin)) {
-    return;
-  }
 
-  parseOptions(event.data,opts)
 
 }, false);
+
+// Listen to message from child window
+eventer(messageEvent,function(event) {
+  // Reject messages that are not from a valid origin domain
+  const regex = new RegExp('https:\/\/.*assets.aquent.com');
+  if (regex.test(event.origin)) {
+    console.log('received message from child');
+    parseOptions(event.data,opts);
+  } else {
+    console.warn('child not permitted access to parent');
+  } 
+},false);
