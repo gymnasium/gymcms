@@ -2,9 +2,7 @@
 {%- assign endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl -%}
 {%- assign iframe_src = "/apps/gym/geolocator" | prepend: site.aqassetsurl -%}
 {%- if site.environment == "local" -%}
-{%comment%}
   {%- assign endpoint = "/feeds/jobs.json" -%}
-{%endcomment%}
   {%- assign iframe_src = "?gymdev=true" | prepend: iframe_src -%}
 {%- endif -%}
 
