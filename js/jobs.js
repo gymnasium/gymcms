@@ -162,27 +162,21 @@ function showMsg(id) {
   document.getElementById(id).classList.remove('hide');
 }
 
-// If we have jobs stored locally already in the browser session...
-if (window.sessionStorage && sessionStorage.getItem('jobs')) {
-  data = sessionStorage.getItem('jobs');
-  console.log('data from sessionStorage');
+// Store our data in session storage
+function store(name,data) {
+  if (window.sessionStorage) {
+    sessionStorage.setItem(name, data);
+  } else {
+    console.warn('No browser support for sessionStorage!');
+  }
+}
 
-  processData(data);
-} else {
-  // Otherwise, get the jobs from the endpoint
-
-  urlExists(endpoint + '?limit=1', function(exists) {
-    if (!exists) {
-      console.warn('original endpoint unavailable, reverting to local feed!');
-      endpoint = '/feeds/jobs.json';
-    } else {
-      endpoint += '?limit=1500';
-    }
-  });
+// AJAX fetch
+function fetchData(url) {
 
   var request = new XMLHttpRequest();
 
-  request.open('GET', endpoint, true);
+  request.open('GET', url, true);
 
   request.onload = function() {
 
@@ -190,15 +184,7 @@ if (window.sessionStorage && sessionStorage.getItem('jobs')) {
       if (typeof this.response !== "undefined" && this.response !== null) {
         var response = this.response;
 
-        if (window.sessionStorage) {
-          // TODO: add an expiration?
-          // const now = new Date();
-          // response["timestamp"]= now.getTime();
-
-          sessionStorage.setItem('jobs', response);
-        } else {
-          console.warn('No browser support for sessionStorage!');
-        }
+        store('jobs', response);
 
         console.log('fetching data from endpoint: ', endpoint);
 
@@ -220,6 +206,46 @@ if (window.sessionStorage && sessionStorage.getItem('jobs')) {
   };
 
   request.send();
+}
+
+// If we have jobs stored locally already in the browser session...
+if (window.sessionStorage && sessionStorage.getItem('jobs')) {
+  data = sessionStorage.getItem('jobs');
+  console.log('data from sessionStorage');
+
+  processData(data);
+} else {
+  // Check if our endpoint is available
+  urlExists(endpoint + '?limit=1', function(exists) {
+    if (exists) {
+      console.log('endpoint exists, fetching results');
+      endpoint += '?limit=1500';
+
+      fetchData(endpoint);
+    }
+    
+    // If not, fall back on the local resour e
+    if (!exists) {
+      console.warn('original endpoint unavailable, reverting to local feed!');
+      endpoint = '/feeds/jobs.json';
+
+      fetchData(endpoint);
+    }
+  });
+
+  // Stone Age Method (JSONP)
+  // function stoneAgeFetch(resp) {
+  //   data = JSON.stringify(resp);
+  //   console.log('getting data via the stone age fetch');
+  //   store('jobs', data);
+  //   processData(data);
+  // }
+  
+  // let script = document.createElement('script');
+  // script.src = `${endpoint}?callback=stoneAgeFetch`;
+  // script.id = 'stone-age-fetch';
+  // document.body.append(script);
+  
 }
 
 // Process our JSON data
