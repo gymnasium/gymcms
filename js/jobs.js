@@ -257,7 +257,7 @@ function processData(d) {
   // How many results do we have?
   var numResults = items.length;
 
-  console.log(`results: ${numResults} | limit: ${limit})`);
+  console.log(`results: ${numResults} | limit: ${limit}`);
 
   if (numResults > 0) {
     
