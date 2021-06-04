@@ -53,23 +53,9 @@ plugins:
 ## JSON Fetch
 jekyll_get_json:
   - data: jobs
-    json: 'https://assets.aquent.com/apps/gym/jobs.json'
-  - data: markets-au
-    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:AU%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
-  - data: markets-ca
-    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:CA%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
-  - data: markets-de
-    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:DE%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
-  - data: markets-fr
-    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:FR%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
-  - data: markets-jp
-    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:JP%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
-  - data: markets-nl
-    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:NL%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
-  - data: markets-uk
-    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:UK%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc'
-  - data: markets-us
-    json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:Markets%20+Markets.country:US%20+languageId:1%20+deleted:false%20+working:true/orderby/Markets.name%20asc/limit/100'
+    json: 'https://assets.aquent.com/apps/gym/jobs.json?limit=1500'
+  - data: markets
+    json: 'https://assets.aquent.com/apps/gym/markets.json'
   - data: privacy-index
     json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:webPageContent%20+webPageContent.title:*privacy-policy-index*%20+languageId:1%20+deleted:false%20+working:true/'
   - data: privacy-shield-notice
