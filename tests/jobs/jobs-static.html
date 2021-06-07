@@ -6,7 +6,7 @@ permalink: /tests/jobs-static/
 
 {%- assign jobs_au = jobs | where:"country","AU" -%}
 {%- assign jobs_ca = jobs | where:"country","CA" -%}
-{%- assign jobs_de = jobs | where:"country","DE" -%}
+{%- assign jobs_de = jobs | where:"market","115" -%}
 {%- assign jobs_fr = jobs | where:"country","FR" -%}
 {%- assign jobs_jp = jobs | where:"country","JP" -%}
 {%- assign jobs_nl = jobs | where:"country","NL" -%}
@@ -56,7 +56,7 @@ us markets: {{ markets_us.size }}<br>
   {%- assign available_jobs = "" | split: "," -%}
   {%- assign has_jobs = false -%}
   {%- for job in jobs_au -%}
-    {%- if job.market == market.marketId -%}
+    {%- if job.market == market.id -%}
       {%- assign data = "" | split: "," -%}
       {%- assign data = data | push: job.url -%}
       {%- assign data = data | push: job.title -%}
@@ -67,8 +67,8 @@ us markets: {{ markets_us.size }}<br>
   {%- endfor -%}
   {%- if has_jobs == true -%}
     {%- assign data = "" | split: "," -%}
-    {%- assign data = data | push: market.marketId -%}
-    {%- assign data = data | push: market.name -%}
+    {%- assign data = data | push: market.id -%}
+    {%- assign data = data | push: market.title -%}
     {%- assign data = data | push: available_jobs -%}
     {%- assign au_markets = au_markets | push: data -%}
   {%- endif -%}
@@ -101,7 +101,7 @@ us markets: {{ markets_us.size }}<br>
     {%- assign available_jobs = "" | split: "," -%}
     {%- assign has_jobs = false -%}
     {%- for job in jobs_ca -%}
-      {%- if job.market == market.marketId -%}
+      {%- if job.market == market.id -%}
         {%- assign data = "" | split: "," -%}
         {%- assign data = data | push: job.url -%}
         {%- assign data = data | push: job.title -%}
@@ -112,8 +112,8 @@ us markets: {{ markets_us.size }}<br>
     {%- endfor -%}
     {%- if has_jobs == true -%}
       {%- assign data = "" | split: "," -%}
-      {%- assign data = data | push: market.marketId -%}
-      {%- assign data = data | push: market.name -%}
+      {%- assign data = data | push: market.id -%}
+      {%- assign data = data | push: market.title -%}
       {%- assign data = data | push: available_jobs -%}
       {%- assign ca_markets = ca_markets | push: data -%}
     {%- endif -%}
@@ -140,9 +140,26 @@ us markets: {{ markets_us.size }}<br>
   <!-- Found 0 jobs in Canada, skipping… -->
 {%- endif -%}
 
-{%- if jobs_de.size > 0 -%}
-  <div data-id="{{id}}">
-    <h4>Deutschland (Germany)</h4>
+<h4>Europe</h4>
+
+{%- if jobs_nl.size > 0 -%}
+  <div data-id="43">
+    <h5>Amsterdam</h5>
+    <ul>
+    {%- for job in jobs_nl -%}
+      <li>
+        <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
+      </li>
+    {%- endfor -%}
+    </ul>
+  </div>
+{%- else -%}
+  <!-- Found 0 jobs in Netherlands, skipping… -->
+{%- endif -%}
+
+{%- if jobs_de.size > 0  -%}
+  <div data-id="115">
+    <h5>Berlin</h5>
     <ul>
     {%- for job in jobs_de -%}
       <li>
@@ -155,11 +172,26 @@ us markets: {{ markets_us.size }}<br>
   <!-- Found 0 jobs in Germany, skipping… -->
 {%- endif -%}
 
-{%- if jobs_fr.size > 0 -%}
-  <div data-id="{{id}}">
-    <h4>France</h4>
+{%- if jobs_uk.size > 0 -%}
+  <div data-id="29">
+    <h5>London</h5>
     <ul>
-    {%- for job in jobs_fr -%}
+    {%- for job in jobs_uk limit:10 -%}
+    <li>
+      <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
+    </li>
+    {%- endfor -%}
+    </ul>
+  </div>
+{%- else -%}
+  <!-- Found 0 jobs in the United Kingdom, skipping… -->
+{%- endif -%}
+
+{%- if jobs_fr.size > 0 -%}
+  <div data-id="35">
+    <h5>Paris</h5>
+    <ul>
+    {%- for job in jobs_fr limit:10-%}
       <li>
         <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
       </li>
@@ -170,6 +202,7 @@ us markets: {{ markets_us.size }}<br>
   <!-- Found 0 jobs in France, skipping… -->
 {%- endif -%}
 
+
 {%comment%}
   Render JP markets with jobs
 {%endcomment%}
@@ -179,7 +212,7 @@ us markets: {{ markets_us.size }}<br>
     {%- assign available_jobs = "" | split: "," -%}
     {%- assign has_jobs = false -%}
     {%- for job in jobs_jp -%}
-      {%- if job.market == market.marketId -%}
+      {%- if job.market == market.id -%}
         {%- assign data = "" | split: "," -%}
         {%- assign data = data | push: job.url -%}
         {%- assign data = data | push: job.title -%}
@@ -190,8 +223,8 @@ us markets: {{ markets_us.size }}<br>
     {%- endfor -%}
     {%- if has_jobs == true -%}
       {%- assign data = "" | split: "," -%}
-      {%- assign data = data | push: market.marketId -%}
-      {%- assign data = data | push: market.name -%}
+      {%- assign data = data | push: market.id -%}
+      {%- assign data = data | push: market.title -%}
       {%- assign data = data | push: available_jobs -%}
       {%- assign jp_markets = jp_markets | push: data -%}
     {%- endif -%}
@@ -218,34 +251,6 @@ us markets: {{ markets_us.size }}<br>
   <!-- Found 0 jobs in Japan, skipping… -->
 {%- endif -%}
 
-{%- if jobs_nl.size > 0 -%}
-  <div data-id="{{id}}">
-    <h4>Netherlands</h4>
-    <ul>
-    {%- for job in jobs_nl -%}
-      <li>
-        <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
-      </li>
-    {%- endfor -%}
-    </ul>
-  </div>
-{%- else -%}
-  <!-- Found 0 jobs in Netherlands, skipping… -->
-{%- endif -%}
-
-{%- if jobs_uk.size > 0 -%}
-  <h4>United Kingdom</h4>
-  <ul>
-  {%- for job in jobs_uk -%}
-  <li>
-    <a href="{{ job.url }}">{{ job.title }} - {{job.city }}</a> 
-  </li>
-  {%- endfor -%}
-  </ul>
-{%- else -%}
-  <!-- Found 0 jobs in the United Kingdom, skipping… -->
-{%- endif -%}
-
 {%comment%}
 Since we have so many US markets (45 as of this), we need to loop through each and generate a list of 10 jobs per market.
 {%endcomment%}
@@ -255,7 +260,7 @@ Since we have so many US markets (45 as of this), we need to loop through each a
   {%- assign available_jobs = "" | split: "," -%}
   {%- assign has_jobs = false -%}
   {%- for job in jobs_us -%}
-    {%- if job.market == market.marketId -%}
+    {%- if job.market == market.id -%}
       {%- assign data = "" | split: "," -%}
       {%- assign data = data | push: job.url -%}
       {%- assign data = data | push: job.title -%}
@@ -266,8 +271,8 @@ Since we have so many US markets (45 as of this), we need to loop through each a
   {%- endfor -%}
   {%- if has_jobs == true -%}
     {%- assign data = "" | split: "," -%}
-    {%- assign data = data | push: market.marketId -%}
-    {%- assign data = data | push: market.name -%}
+    {%- assign data = data | push: market.id -%}
+    {%- assign data = data | push: market.title -%}
     {%- assign data = data | push: available_jobs -%}
     {%- assign us_markets = us_markets | push: data -%}
   {%- endif -%}
