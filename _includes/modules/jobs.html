@@ -40,33 +40,36 @@
     <option value="remote">Remote</option>
     <optgroup label="Australia">
       {%- for market in markets_au -%}
-        <option value="{{market.id}}">{{market.city}}</option>
+        <option value="{{market.id}}">{{market.title}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="Canada">
       {%- for market in markets_ca -%}
-        <option value="{{market.id}}">{{market.city}}</option>
+        <option value="{{market.id}}">{{market.title}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="Europe">
-      {%- for market in markets_uk -%}
+      {%- for market in markets_nl -%}
+        <option value="{{market.id}}">{{market.title}}</option>
+      {%- endfor -%}
+      {%- for market in markets_de -%}
         <option value="{{market.id}}">{{market.city}}</option>
       {%- endfor -%}
-      {%- for market in markets_nl -%}
-        <option value="{{market.id}}">{{market.city}}</option>
+      {%- for market in markets_uk -%}
+        <option value="{{market.id}}">{{market.title}}</option>
       {%- endfor -%}
       {%- for market in markets_fr -%}
-        <option value="{{market.id}}">{{market.city}}</option>
+        <option value="{{market.id}}">{{market.title}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="Japan">
       {%- for market in markets_jp -%}
-        <option value="{{market.id}}">{{market.city}}</option>
+        <option value="{{market.id}}">{{market.title}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="United States">
       {%- for market in markets_us -%}
-        <option value="{{market.id}}">{{market.city}}</option>
+        <option value="{{market.id}}">{{market.title}}</option>
       {%- endfor -%}
     </optgroup>
   </select>
