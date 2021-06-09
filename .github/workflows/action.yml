@@ -23,7 +23,7 @@ jobs:
       with:
         website_url: 'https://courses.gymna.si'
         exclude_url_prefix: 'mailto:,tel:'
-        exclude_url_contained: 'linkedin.com,twitter.com,facebook.com,instagram.com,medium.com'
+        exclude_url_contained: 'linkedin.com,twitter.com,facebook.com,instagram.com,medium.com,/login?next='
         verbose: 'true' # true/false/yes/no/on/off/debug/info/warning/error/critical
         max_retry_time: 30
         max_retries: 5
