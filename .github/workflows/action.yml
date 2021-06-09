@@ -13,23 +13,33 @@ on:
   #     - production
 
 jobs:
-  broken_link_checker_job:
+  # broken_link_checker_job:
+  #   runs-on: ubuntu-latest
+  #   name: broken-link-check
+  #   steps:
+  #   - name: broken-link-check
+  #     id: link-report
+  #     uses: ScholliYT/Broken-Links-Crawler-Action@v3
+  #     with:
+  #       website_url: 'https://courses.gymna.si'
+  #       resolve_before_filtering: 'true'
+  #       include_url_contained: 'thegymnasium.com,courses.gymna.si,thegymcms.com'
+  #       exclude_url_prefix: 'mailto:,tel:'
+  #       exclude_url_contained: 'linkedin.com,twitter.com,facebook.com,instagram.com,medium.com,/login?next='
+  #       verbose: 'error' # true/false/yes/no/on/off/debug/info/warning/error/critical
+  #       max_retry_time: 30
+  #       max_retries: 5
+  #       max_depth: -1 # -1 = unlimited depth (default -1)
+  #       connect_limit_per_host: 10 # default
+  #   - name: get-result
+  #     run: echo "${{steps.link-report.outputs}}"
+  my-broken-link-checker:
+    name: Check broken links
     runs-on: ubuntu-latest
-    name: broken-link-check
     steps:
-    - name: broken-link-check
-      id: link-report
-      uses: ScholliYT/Broken-Links-Crawler-Action@v3
-      with:
-        website_url: 'https://courses.gymna.si'
-        resolve_before_filtering: 'true'
-        include_url_contained: 'thegymnasium.com,courses.gymna.si,thegymcms.com'
-        exclude_url_prefix: 'mailto:,tel:'
-        exclude_url_contained: 'linkedin.com,twitter.com,facebook.com,instagram.com,medium.com,/login?next='
-        verbose: 'error' # true/false/yes/no/on/off/debug/info/warning/error/critical
-        max_retry_time: 30
-        max_retries: 5
-        max_depth: -1 # -1 = unlimited depth (default -1)
-        connect_limit_per_host: 10 # default
-    - name: get-result
-      run: echo "${{steps.link-report.outputs}}"
+      - name: Check
+        uses: ruzickap/action-my-broken-link-checker@v1
+        with:
+          url: https://courses.gymna.si
+          cmd_params: "--buffer-size=8192 --max-connections=10 -- max-connections-per-host=10 --color=always --skip-tls-verification --limit-redirections=5 --timeout=20 --follow-sitemap-xml=true --follow-robots-txt=false"
+          run_timeout: 300 # seconds
