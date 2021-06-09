@@ -1,0 +1,34 @@
+name: Broken link check
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - 'feature/**'
+      - 'bug/**'
+      - 'patch/**'
+  pull_request:
+    branches:
+      - staging
+      - production
+
+jobs:
+  broken_link_checker_job:
+    runs-on: ubuntu-latest
+    name: broken-link-check
+    steps:
+    - name: broken-link-check
+      id: link-report
+      uses: celinekurpershoek/link-checker@v1.0.1
+      with:
+        # Required:
+        url: 'https://courses.gymna.si'
+        # optional:
+        # honorRobotExclusions: true
+        ignorePatterns: 'github,google'
+        maxSocketsPerHost: 2 # Reduces concurrent requests
+        rateLimit: 250 # wait (in milliseconds) before each request
+        # userAgent
+        recursiveLinks: false # Check all URLs on all reachable pages (could take a while)
+    - name: get-result
+      run: echo "${{steps.link-report.outputs.result}}"
