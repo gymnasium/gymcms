@@ -1,0 +1,17 @@
+<!-- //
+Generated at: {{ site.time }}
+Served from: {{ page.url | absolute_url }}
+Git Hash: {{ site.data['hash']}}
+// -->
+
+{%- if jekyll.environment == "development" -%}
+  {%- include partials/test-top.html -%}
+{%- endif -%}
+
+<div class="home">
+{{ content }}
+</div><!-- .home -->
+
+{%- if jekyll.environment == "development" -%}
+  {%- include partials/test-bottom.html -%}
+{%- endif -%}

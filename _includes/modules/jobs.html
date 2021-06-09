@@ -16,15 +16,15 @@
 {%- assign markets_us = site.data.markets.items | where: "countryCode", "US" -%}
 
 {%- unless jobs_module_class -%}
-  {%- assign jobs_module_class = "default" -%}
+  {%- assign jobs_module_class = "list-hr" -%}
 {%- endunless -%}
 
-{%- unless opt_heading -%}
+{%- if opt_heading == nil -%}
   {%- assign opt_heading = "h3" -%}
-{%- endunless -%}
+{%- endif -%}
 
 {%- unless opt_category -%}
-  {%- assign opt_category = "false" -%}
+  {%- assign opt_category = false -%}
 {%- endunless -%}
 
 {%- unless opt_limit -%}
