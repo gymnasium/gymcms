@@ -22,11 +22,11 @@ jobs:
       uses: ScholliYT/Broken-Links-Crawler-Action@v3
       with:
         website_url: 'https://courses.gymna.si'
-        include_url_prefix: 'https://thegymnasium.com,https://courses.gymna.si,https://thegymcms.com,https://staging.thegymcms.com'
         resolve_before_filtering: 'true'
+        include_url_contained: 'thegymnasium.com,courses.gymna.si,thegymcms.com'
         exclude_url_prefix: 'mailto:,tel:'
         exclude_url_contained: 'linkedin.com,twitter.com,facebook.com,instagram.com,medium.com,/login?next='
-        verbose: 'debug' # true/false/yes/no/on/off/debug/info/warning/error/critical
+        verbose: 'error' # true/false/yes/no/on/off/debug/info/warning/error/critical
         max_retry_time: 30
         max_retries: 5
         max_depth: -1 # -1 = unlimited depth (default -1)
