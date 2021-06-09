@@ -11,11 +11,18 @@
   margin: 1rem 0 2.666rem;
 
   select {
+    color: $gym-dark-gray !important; // needed to override a very greedy wildcard selector on the home page
   
     @include breakpoint(40em, min) {
       max-width: 24rem;
     }
   }
+}
+
+// Someday we'll make this part of our global CSS
+.list-hr ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 .job-location {
