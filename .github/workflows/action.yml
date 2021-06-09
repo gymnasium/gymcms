@@ -32,4 +32,4 @@ jobs:
         max_depth: -1 # -1 = unlimited depth (default -1)
         connect_limit_per_host: 10 # default
     - name: get-result
-      run: echo "${{steps.link-report.outputs.result}}"
+      run: echo "${{steps.link-report.outputs}}"
