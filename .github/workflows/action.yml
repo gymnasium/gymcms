@@ -51,5 +51,5 @@ jobs:
           --timeout=20 
           --verbose 
           --ignore-fragments 
-          --exclude=.*(facebook|instagram|twitter|medium|linkedin)\\.(com)$"
+          --exclude=.*(facebook|instagram|twitter|medium|linkedin)\.(com)"
           run_timeout: 300 # seconds
