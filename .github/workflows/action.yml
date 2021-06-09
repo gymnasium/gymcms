@@ -7,10 +7,10 @@ on:
       - 'feature/**'
       - 'bug/**'
       - 'patch/**'
-  pull_request:
-    branches:
-      - staging
-      - production
+  # pull_request:
+  #   branches:
+  #     - staging
+  #     - production
 
 jobs:
   broken_link_checker_job:
@@ -22,9 +22,11 @@ jobs:
       uses: ScholliYT/Broken-Links-Crawler-Action@v3
       with:
         website_url: 'https://courses.gymna.si'
+        include_url_contained: 'thegymcms.com,thegymnasium.com'
+        resolve_before_filtering: 'true'
         exclude_url_prefix: 'mailto:,tel:'
         exclude_url_contained: 'linkedin.com,twitter.com,facebook.com,instagram.com,medium.com,/login?next='
-        verbose: 'true' # true/false/yes/no/on/off/debug/info/warning/error/critical
+        verbose: 'debug' # true/false/yes/no/on/off/debug/info/warning/error/critical
         max_retry_time: 30
         max_retries: 5
         max_depth: -1 # -1 = unlimited depth (default -1)
