@@ -41,15 +41,5 @@ jobs:
         uses: ruzickap/action-my-broken-link-checker@v2.2.3
         with:
           url: https://courses.gymna.si
-          cmd_params: "
-          --buffer-size=8192 
-          --max-connections=10 
-          --max-connections-per-host=10 
-          --color=always 
-          --skip-tls-verification 
-          --rate-limit=10
-          --timeout=20 
-          --verbose 
-          --ignore-fragments 
-          --exclude=.*(facebook|instagram|twitter|medium|linkedin)\\.(com)|(\\?login\\=next.*)$
+          cmd_params: "--buffer-size=8192 --max-connections=10 --max-connections-per-host=10 --color=always --skip-tls-verification --rate-limit=10 --timeout=20 --verbose --ignore-fragments --exclude=.*(facebook|instagram|twitter|medium|linkedin)\\.(com)|(\\?login\\=next.*)$"
           run_timeout: 300
