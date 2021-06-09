@@ -22,7 +22,7 @@ jobs:
       uses: ScholliYT/Broken-Links-Crawler-Action@v3
       with:
         website_url: 'https://courses.gymna.si'
-        include_url_contained: 'thegymcms.com,thegymnasium.com'
+        include_url_prefix: 'https://thegymnasium.com,https://courses.gymna.si,https://thegymcms.com,https://staging.thegymcms.com'
         resolve_before_filtering: 'true'
         exclude_url_prefix: 'mailto:,tel:'
         exclude_url_contained: 'linkedin.com,twitter.com,facebook.com,instagram.com,medium.com,/login?next='
