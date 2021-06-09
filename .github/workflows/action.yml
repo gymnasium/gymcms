@@ -52,4 +52,4 @@ jobs:
           --verbose 
           --ignore-fragments 
           --exclude=.*(facebook|instagram|twitter|medium|linkedin)\\.(com)|(\\?login\\=next.*)$
-          run_timeout: 300 # seconds
+          run_timeout: 300
