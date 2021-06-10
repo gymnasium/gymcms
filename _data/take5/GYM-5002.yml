@@ -28,5 +28,5 @@ related_content:
 - label: "Using Feature Queries in CSS by Jen Simmons"
   url: "https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/"
 - label: "Can I Use: CSS3 Background-image options"
-  url: "https://caniuse.com/#feat=background-img-opts"
+  url: "https://caniuse.com/background-img-opts"
 ---
