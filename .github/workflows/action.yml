@@ -42,7 +42,7 @@ jobs:
         uses: ruzickap/action-my-broken-link-checker@v2.2.3
         with:
           url: https://courses.gymna.si
-          cmd_params: --buffer-size=8192 --max-connections=10 --max-connections-per-host=10 --color=always --rate-limit=10 --timeout=120 --ignore-fragments --exclude=".*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple)\\.(com)|(\\/login\\?next.*)$" --header="Accept:text/html"
+          cmd_params: --buffer-size=8192 --max-connections=10 --max-connections-per-host=10 --color=always --rate-limit=10 --timeout=120 --ignore-fragments --exclude=".*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple)\\.(com)|(\\/login\\?next.*)$" --header="Accept:text/html" --header="User-Agent:Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0"
           run_timeout: 600
 
   # linkChecker:
