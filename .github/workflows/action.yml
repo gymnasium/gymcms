@@ -51,7 +51,7 @@ jobs:
       - name: Link Checker
         uses: lycheeverse/lychee-action@v1.0.8
         with:
-          args: "https://courses.gymna.si/**/*" --verbose --exclude=.*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple|doubleclick)\\.(com|net)|(\\/login\\?next.*)$ --headers "accept=text/html"
+          args: https://courses.gymna.si/**/* --verbose --exclude=.*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple|doubleclick)\\.(com|net)|(\\/login\\?next.*)$ --headers "accept=text/html"
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
