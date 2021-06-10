@@ -33,30 +33,32 @@ jobs:
   #       connect_limit_per_host: 10 # default
   #   - name: get-result
   #     run: echo "${{steps.link-report.outputs}}"
-  # my-broken-link-checker:
-  #   name: Check broken links
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Check
-  #       uses: ruzickap/action-my-broken-link-checker@v2.2.3
-  #       with:
-  #         url: https://courses.gymna.si
-  #         cmd_params: "--buffer-size=8192 --max-connections=10 --max-connections-per-host=10 --color=always --rate-limit=10 --timeout=120 --ignore-fragments --exclude=.*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple)\\.(com)|(\\/login\\?next.*)$"
-  #         run_timeout: 600
-  linkChecker:
+
+  my-broken-link-checker:
+    name: Check broken links with Muffet
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Link Checker
-        uses: lycheeverse/lychee-action@v1.0.8
+      - name: Check
+        uses: ruzickap/action-my-broken-link-checker@v2.2.3
         with:
-          args: https://courses.gymna.si/**/* --verbose --exclude=.*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple|doubleclick)\\.(com|net)|(\\/login\\?next.*)$ --headers "accept=text/html"
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          url: https://courses.gymna.si
+          cmd_params: --buffer-size=8192 --max-connections=10 --max-connections-per-host=10 --color=always --rate-limit=10 --timeout=120 --ignore-fragments --exclude=.*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple)\\.(com)|(\\/login\\?next.*)$ --header "accept=text/html"
+          run_timeout: 600
 
-      - name: Fail if there were link errors
-        run: exit ${{ steps.lychee.outputs.exit_code }}
+  # linkChecker:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+
+  #     - name: Link Checker
+  #       uses: lycheeverse/lychee-action@v1.0.8
+  #       with:
+  #         args: https://courses.gymna.si/**/* --verbose --exclude=.*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple|doubleclick)\\.(com|net)|(\\/login\\?next.*)$ --headers "accept=text/html"
+  #       env:
+  #         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+  #     - name: Fail if there were link errors
+  #       run: exit ${{ steps.lychee.outputs.exit_code }}
         
       # - name: Create Issue From File
       #   uses: peter-evans/create-issue-from-file@v2
