@@ -34,6 +34,6 @@ Lastly, if you want more control over that bottom color, you could always use an
 
 [1]: https://codepen.io/josborn/pen/WWzBwO
 [2]: https://codepen.io/josborn/pen/JVavQN
-[3]: http://hslpicker.com
+[3]: https://hslpicker.com
 [4]: https://thegymnasium.com/take5
 [5]: https://thegymnasium.com/courses
