@@ -20,7 +20,7 @@ project_files:
   url: "https://codepen.io/josborn/pen/joNmyO"
 related_content:
 - label: "Can I Use: Background Attachment"
-  url: "https://caniuse.com/#feat=background-attachment"
+  url: "https://caniuse.com/background-attachment"
 - label: "Stack Overflow: Background size on iOS"
   url: "https://stackoverflow.com/questions/21476380/background-size-on-ios"
 - label: "MDN: Viewport concepts"

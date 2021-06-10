@@ -24,7 +24,7 @@ related_content:
 - label: "CSS Custom Properties in the Cascade by Miriam Suzanne"
   url: "https://www.smashingmagazine.com/2019/07/css-custom-properties-cascade/"
 - label: "Can I Use: CSS Variables"
-  url: "https://caniuse.com/#feat=css-variables"
+  url: "https://caniuse.com/css-variables"
 - label: "CSS Vars Ponyfill by John Hildenbiddle"
   url: "https://jhildenbiddle.github.io/css-vars-ponyfill/#/"
 - label: "Naming CSS Stuff is Really Hard by Ethan Muller"
