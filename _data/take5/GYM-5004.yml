@@ -26,7 +26,7 @@ related_content:
 - label: "Using Feature Queries in CSS by Jen Simmons"
   url: "https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/"
 - label: "Can I Use: CSS Feature Queries"
-  url: "https://caniuse.com/#feat=css-featurequeries"
+  url: "https://caniuse.com/css-featurequeries"
 - label: "Fit for Purpose: Making Sense of the New CSS by Eric Meyer"
   url: "https://www.youtube.com/watch?v=0sDYhKi1qzc"
 ---
