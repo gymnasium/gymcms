@@ -13,8 +13,7 @@ on:
   #     - production
 
 jobs:
-
-  remote-link-checker:
+  my-broken-link-checker:
     name: Check broken links with Muffet
     runs-on: ubuntu-latest
     steps:
@@ -22,7 +21,7 @@ jobs:
         uses: ruzickap/action-my-broken-link-checker@v2.2.3
         with:
           url: https://courses.gymna.si
-          cmd_params: --buffer-size=8192 --max-connections=20 --skip-tls-verification --max-connections-per-host=10 --color=always --rate-limit=20 --timeout=120 --ignore-fragments --max-redirections=128 --exclude=".*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple)\\.(com)|(\\/login\\?next.*)$" --header="Accept:*/*"
+          cmd_params: --buffer-size=8192 --max-connections=10 --skip-tls-verification --max-connections-per-host=10 --color=always --rate-limit=10 --timeout=120 --ignore-fragments --max-redirections=128 --exclude=".*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple)\\.(com)|(\\/login\\?next.*)$" --header="Accept:*/*"
           run_timeout: 600
 
   # linkChecker:
