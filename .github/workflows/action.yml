@@ -19,7 +19,6 @@ jobs:
       - uses: JustinBeckwith/linkinator-action@v1.5.4
         with:
           paths: https://courses.gymna.si
-      - run: echo ${{ steps.linkinator.outputs.results }}
 
 
   # linkChecker:

@@ -1,6 +1,6 @@
 {
-  "concurrency": 50,
-  "directoryListing": true,
+  "concurrency": 100,
+  "directoryListing": false,
   "format": "json",
   "markdown": false,
   "recurse": true,
@@ -10,17 +10,21 @@
     ".*\\/login\\?next\\=.*",
     ".*apple\\.com",
     ".*bootstrapcdn\\.com",
+    ".*bower\\.io",
+    ".*cloudflare\\.com",
     ".*doubleclick\\.net",
     ".*facebook\\.com",
     ".*google\\.com",
+    ".*gulpjs\\.org",
     ".*instagram\\.com",
     ".*linkedin\\.com",
     ".*medium\\.com",
     ".*mozilla\\.org",
+    ".*nodejs\\.org",
     ".*openedx\\.org",
     ".*twitter\\.com",
     ".*vitamintalent\\.com"
   ],
   "timeout": 360,
-  "verbosity": "DEBUG"
+  "verbosity": "warning"
 }
