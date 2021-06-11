@@ -1,7 +1,7 @@
 {
   "concurrency": 100,
   "directoryListing": false,
-  "format": "json",
+  // "format": "json",
   "markdown": false,
   "recurse": true,
   "retry": true,
