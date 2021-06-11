@@ -30,9 +30,8 @@ jobs:
       uses: mattorb/actions-muffet@v2.4.2-b
       with: 
         args: >
-          --exclude .*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple|doubleclick)\\.(com|net)|(\\/login\\?next.*)$
+          --exclude=".*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple|doubleclick)\\.(com|net)|(\\/login\\?next.*)$"
           --timeout 600
-          --verbose
           --skip-tls-verification
           https://courses.gymna.si
 
