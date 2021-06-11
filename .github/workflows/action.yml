@@ -1,7 +1,6 @@
 name: Broken link check
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
+  # Trigger the workflow on push for specific branches
   push:
     branches:
       - 'feature/**'
@@ -32,11 +31,13 @@ jobs:
       with: 
         args: >
           --timeout 300
-          --exclude ".*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple)\\.(com)|(\\/login\\?next.*)$
-          --skip-tls-verification
-          --color=always
-          --ignore-fragments
           https://courses.gymna.si
+
+
+  # --exclude ".*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple)\\.(com)|(\\/login\\?next.*)$
+  # --skip-tls-verification
+  # --color=always
+  # --ignore-fragments
 
   # linkChecker:
   #   runs-on: ubuntu-latest
