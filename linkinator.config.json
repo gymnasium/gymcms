@@ -1,0 +1,9 @@
+{
+  "verbosity": "DEBUG",
+  "retry": true,
+  "concurrency": 100,
+  "recurse": true,
+  "skip": ".*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple|doubleclick)\\.(com|net)|(\\/login\\?next.*)$",
+  "timeout": 30,
+  "markdown": false
+}
