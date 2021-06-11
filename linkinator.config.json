@@ -1,21 +1,26 @@
 {
-  "verbosity": "DEBUG",
-  "retry": true,
   "concurrency": 50,
+  "directoryListing": true,
+  "format": "json",
+  "markdown": false,
   "recurse": true,
+  "retry": true,
+  "silent": false,
   "skip": [
-    ".*facebook\\.com",
-    ".*instagram\\.com",
-    ".*twitter\\.com",
-    ".*medium\\.com",
-    ".*linkedin\\.com",
-    ".*google\\.com",
-    ".*vitamintalent\\.com",
+    ".*\\/login\\?next\\=.*",
     ".*apple\\.com",
-    ".*mozilla\\.org",
+    ".*bootstrapcdn\\.com",
     ".*doubleclick\\.net",
-    ".*\\/login\\?next\\=.*"
+    ".*facebook\\.com",
+    ".*google\\.com",
+    ".*instagram\\.com",
+    ".*linkedin\\.com",
+    ".*medium\\.com",
+    ".*mozilla\\.org",
+    ".*openedx\\.org",
+    ".*twitter\\.com",
+    ".*vitamintalent\\.com"
   ],
-  "timeout": 120,
-  "markdown": false
+  "timeout": 360,
+  "verbosity": "DEBUG"
 }

@@ -12,16 +12,6 @@ on:
   #     - production
 
 jobs:
-  # my-broken-link-checker:
-  #   name: Check broken links with Muffet
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Check
-  #       uses: ruzickap/action-my-broken-link-checker@v2.2.3
-  #       with:
-  #         url: https://courses.gymna.si
-  #         cmd_params: --buffer-size=8192 --max-connections=10 --skip-tls-verification --max-connections-per-host=10 --color=always --rate-limit=10 --timeout=120 --ignore-fragments --max-redirections=128 --exclude=".*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple)\\.(com)|(\\/login\\?next.*)$" --header="Accept:*/*"
-  #         run_timeout: 600
   linkinator:
     runs-on: ubuntu-latest
     steps:
@@ -29,24 +19,9 @@ jobs:
       - uses: JustinBeckwith/linkinator-action@v1.5.4
         with:
           paths: https://courses.gymna.si
-          
-  # check-broken-links:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - name: Check links with Muffet alt
-  #     uses: mattorb/actions-muffet@v2.4.2-b
-  #     with: 
-  #       args: >
-  #         --exclude ".*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple|doubleclick)\\.(com|net)|(\\/login\\?next.*)$"
-  #         --timeout 600
-  #         --skip-tls-verification
-  #         https://courses.gymna.si
+      - run: |
+        echo ${{ steps.linkinator.outputs.results }}
 
-
-  # --exclude ".*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple)\\.(com)|(\\/login\\?next.*)$
-  # --skip-tls-verification
-  # --color=always
-  # --ignore-fragments
 
   # linkChecker:
   #   runs-on: ubuntu-latest
