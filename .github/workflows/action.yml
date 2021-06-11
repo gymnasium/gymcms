@@ -27,9 +27,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check links with Muffet alt
-      uses: mattorb/actions-muffet@v1.3.1
+      uses: mattorb/actions-muffet@v2.4.2-b
       with: 
         args: >
+          --exclude ".*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple)\\.(com)|(\\/login\\?next.*)$"
           --timeout 300
           https://courses.gymna.si
 
