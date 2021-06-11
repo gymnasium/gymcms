@@ -3,7 +3,19 @@
   "retry": true,
   "concurrency": 50,
   "recurse": true,
-  "skip": "*facebook.com,*instagram.com,*twitter.com,*medium.com,*linkedin.com,*google.com,vitamintalent.com,apple.com,*mozilla.org,doubleclick.net,**/login?next=*",
+  "skip": [
+    "*facebook.com",
+    "*instagram.com",
+    "*twitter.com",
+    "*medium.com",
+    "*linkedin.com",
+    "*google.com",
+    "*vitamintalent.com",
+    "*apple.com",
+    "*mozilla.org",
+    "*doubleclick.net",
+    "*/login?next=*"
+  ],
   "timeout": 120,
   "markdown": false
 }
