@@ -30,8 +30,8 @@ jobs:
       uses: mattorb/actions-muffet@v2.4.2-b
       with: 
         args: >
-          --exclude .*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple)\\.(com)|(\\/login\\?next.*)$
-          --timeout 300
+          --exclude .*(facebook|instagram|twitter|medium|linkedin|google|vitamintalent|apple)\\.(com)|(\\/login\\?next.*)|.*(www\\.linkedin\\.com)$
+          --timeout 600
           https://courses.gymna.si
 
 
