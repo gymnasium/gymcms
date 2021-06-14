@@ -8,7 +8,7 @@ poster_art: /img/take5/posters/gym-5050.jpg
 live: true
 instructor: "Jeremy Osborn"
 topic: "Prototyping"
-video_ID:
+video_ID: 5wvVjAZgf0Y
 video_duration: "4:59"
 featured: true
 short_description: "Auto Layout in Figma allows you to create frames, components or even entire layouts, that reflow as the contents change, making designing interfaces easier than ever. Learn how to get up and running with the fundamentals of auto layout in this tutorial by Jeremy Osborn, Director of Learning for Aquent Gymnasium."
@@ -17,7 +17,7 @@ project_files:
 - label: "Starting Project"
   url: "https://bit.ly/3x880Tu"
 - label: "Completed Project"
-  url: ""
+  url: "https://bit.ly/3xpGYY7"
 related_content:
 - label: "Create dynamic designs with auto layout"
   url: "https://help.figma.com/hc/en-us/articles/360040451373"
