@@ -24,9 +24,9 @@ project_files:
   url: "https://codepen.io/josborn/pen/JVavQN"
 related_content:
 - label: "HSL Color Picker"
-  url: "http://hslpicker.com"
+  url: "https://hslpicker.com"
 - label: "Multiple Backgrounds and CSS Gradients by Jonathan Snook"
   url: "https://snook.ca/archives/html_and_css/multiple-bg-css-gradients"
 - label: "Can I Use: CSS Gradients"
-  url: "https://caniuse.com/#feat=css-gradients"
+  url: "https://caniuse.com/css-gradients"
 ---
