@@ -1,23 +1,98 @@
-{%- assign iframe_src = "https://gym-jobs-microservice-staging.herokuapp.com" -%}
-{%- case jekyll.environment -%}
-  {%- when "production" -%}
-    {%- assign iframe_src = "https://gym-jobs-microservice-prod.herokuapp.com" -%}
-{%- endcase -%}
 
-{%- if include.cwid != null -%}
-  {%- capture cwid -%}
-    {{ include.cwid }}
-  {%- endcapture -%}
-  {%- capture url_args -%}
-    ?cwid={{ cwid }}
-  {%- endcapture -%}
+{%- assign endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl -%}
+{%- assign iframe_src = "/apps/gym/geolocator" | prepend: site.aqassetsurl -%}
+{%- if site.environment == "local" -%}
+  {%- assign endpoint = "/feeds/jobs.json" -%}
+  {%- assign iframe_src = "?gymdev=true" | prepend: iframe_src -%}
 {%- endif -%}
 
-<!-- Environment: {{ jekyll.environment }} -->
-<!-- CWID: {{ cwid}} -->
-<!-- url_args: {{ url_args }} -->
+{%- assign markets_au = site.data.markets.items | where: "countryCode", "AU" -%}
+{%- assign markets_ca = site.data.markets.items | where: "countryCode", "CA" -%}
+{%- assign markets_de = site.data.markets.items | where: "countryCode", "DE" -%}
+{%- assign markets_fr = site.data.markets.items | where: "countryCode", "FR" -%}
+{%- assign markets_jp = site.data.markets.items | where: "countryCode", "JP" -%}
+{%- assign markets_nl = site.data.markets.items | where: "countryCode", "NL" -%}
+{%- assign markets_uk = site.data.markets.items | where: "countryCode", "UK" -%}
+{%- assign markets_us = site.data.markets.items | where: "countryCode", "US" -%}
 
-<iframe src="{{ iframe_src }}/table{{ url_args }}"
-  id="jobs-microservice-frame"
-  class="gymnasium-resizable-iframe gymnasium-jobs-microservice-iframe"
-  style="width: 1px;min-width: 100%;border:0;"></iframe>
+{%- unless jobs_module_class -%}
+  {%- assign jobs_module_class = "list-hr" -%}
+{%- endunless -%}
+
+{%- if opt_heading == nil -%}
+  {%- assign opt_heading = "h3" -%}
+{%- endif -%}
+
+{%- unless opt_category -%}
+  {%- assign opt_category = false -%}
+{%- endunless -%}
+
+{%- unless opt_limit -%}
+  {%- assign opt_limit = 10 -%}
+{%- endunless -%}
+
+<link rel="stylesheet" href="{{ site.url }}/css/jobs.css">
+
+<form id="location" class="location" action="{{page.permalink}}">
+  <input type="hidden" name="s" value="true">
+  <select name="m" id="m" class="form-control" onchange="this.form.submit();">
+    <option value="">Select a location nearest you</option>
+    <option value="remote">Remote</option>
+    <optgroup label="Australia">
+      {%- for market in markets_au -%}
+        <option value="{{market.id}}">{{market.title}}</option>
+      {%- endfor -%}
+    </optgroup>
+    <optgroup label="Canada">
+      {%- for market in markets_ca -%}
+        <option value="{{market.id}}">{{market.title}}</option>
+      {%- endfor -%}
+    </optgroup>
+    <optgroup label="Europe">
+      {%- for market in markets_nl -%}
+        <option value="{{market.id}}">{{market.title}}</option>
+      {%- endfor -%}
+      {%- for market in markets_de -%}
+        <option value="{{market.id}}">{{market.city}}</option>
+      {%- endfor -%}
+      {%- for market in markets_uk -%}
+        <option value="{{market.id}}">{{market.title}}</option>
+      {%- endfor -%}
+      {%- for market in markets_fr -%}
+        <option value="{{market.id}}">{{market.title}}</option>
+      {%- endfor -%}
+    </optgroup>
+    <optgroup label="Japan">
+      {%- for market in markets_jp -%}
+        <option value="{{market.id}}">{{market.title}}</option>
+      {%- endfor -%}
+    </optgroup>
+    <optgroup label="United States">
+      {%- for market in markets_us -%}
+        <option value="{{market.id}}">{{market.title}}</option>
+      {%- endfor -%}
+    </optgroup>
+  </select>
+</form>
+<div id="messages">
+  <div id="loading" class="loading">
+    <p>Please wait while we find you some jobs…</p>
+  </div>
+  <div id="error-results" class="hide">
+    <h4>Ooops!</h4>
+    <p>We were unable to find jobs for this location. Please try another location, or come back later to check for freshly posted jobs.</p>
+  </div>
+  <div id="error-server" class="hide">
+    <h4>Ooops!</h4>
+    <p>We were unable to retrieve jobs due to a server error. Please try again later.</p>
+  </div>
+  <div id="error-connection" class="hide">
+    <h4>Ooops!</h4>
+    <p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. Please try again later.</p>
+  </div>
+</div>
+<div id="jobs" class="jobs {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category}};limit:{{opt_limit}};" data-endpoint="{{endpoint}}"></div><!-- #jobs.jobs.{{jobs_module_class}} -->
+
+<iframe id="geolocator" src="{{ iframe_src }}" frameborder="0" style="width:1px;height:1px;visibility:hidden;"></iframe>
+
+<script async defer src="{{site.url}}/js/jobs.js"></script>
