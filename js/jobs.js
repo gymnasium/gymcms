@@ -123,7 +123,7 @@ var opts = {};
 
 var data;
 var endpoint;
-const jobsContainer = document.getElementById('jobs');
+const jobsContainer = document.getElementById('jobs-container');
 const msgContainer = document.getElementById('messages');
 
 if (jobsContainer.hasAttribute('data-options')) {
