@@ -6,6 +6,13 @@
   {%- assign iframe_src = "?gymdev=true" | prepend: iframe_src -%}
 {%- endif -%}
 
+
+{%- if page.permalink contains "index" -%}
+  {%- assign action = "/" -%}
+{%- else -%}
+  {%- assign action = page.permalink | remove: '-collection' -%}
+{%- endif -%}
+
 {%- assign markets_au = site.data.markets.items | where: "countryCode", "AU" -%}
 {%- assign markets_ca = site.data.markets.items | where: "countryCode", "CA" -%}
 {%- assign markets_de = site.data.markets.items | where: "countryCode", "DE" -%}
