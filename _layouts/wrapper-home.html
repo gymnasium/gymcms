@@ -1,0 +1,67 @@
+<!-- //
+Generated at: {{ site.time }}
+Served from: {{ page.url | absolute_url }}
+Git Hash: {{ site.data['hash']}}
+// -->
+
+{%- assign hero = site.data.hero -%}
+
+{%- if jekyll.environment == "development" -%}
+  {%- include partials/test-top.html -%}
+{%- endif -%}
+
+<div class="home">
+
+  {%- if hero.live_coding == true -%}
+    <!-- Display live coding on both hero includes -->
+    {%- include hero-livecoding.html -%}
+  {%- elsif page.permalink contains "home/index-auth/" and hero.auth_promo -%}
+    <!-- Display something specific on the authenticated hero include -->
+    {%- include {{hero.auth_promo}} -%} 
+  {%- else -%}
+    <!-- Display the current promo on both hero includes -->
+    {%- include {{hero.current_promo}} -%}
+  {%- endif -%}
+
+  <section class="container-fluid subsection">
+    <div class="container">
+      {%- include home/how-it-works.html -%}
+  
+      <div class="row">
+        <section class="highlighted-courses col-md-12">
+  
+          <header class="text-center header-tab">
+            <h1>Featured Courses</h1>
+          </header>
+  
+          <section class="courses row">
+            {%- include home/featured-courses.html -%}
+          </section>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <header class="header-tab text-center">
+            <h1>Find Work</h1>
+          </header>
+      
+          {%- comment -%} Get our jobs module {%- endcomment -%}
+          {%- assign opt_heading = false -%}
+          {%- include /modules/jobs.html -%}
+  
+        </div><!-- .col-md-8.col-md-offset-2 -->
+      </div><!-- .row -->
+    </div>
+  </section>
+  
+  {%- include home/as-seen-in.html -%}
+</div><!-- .home -->
+
+{%- if jekyll.environment == "development" -%}
+  {%- include partials/test-bottom.html -%}
+{%- endif -%}

@@ -1,0 +1,12 @@
+---
+layout: null
+permalink: /feeds/jobs.json
+---
+{%- comment -%}
+This component spits out a statically-generated fallback feed for the jobs module (just in case dynamic JSON loading doesn't work)
+{%- endcomment -%}
+{%- if site.data.jobs -%}
+{{ site.data.jobs | replace: "=>", ":" }}
+{%- else -%}
+{"error": "no JSON feed found!"}
+{%- endif -%}

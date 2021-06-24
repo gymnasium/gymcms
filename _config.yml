@@ -2,6 +2,7 @@
 title: Gymnasium Static Content
 url: https://staging.thegymcms.com
 gymurl: https://courses.gymna.si
+aqassetsurl: https://stag-assets.aquent.com
 timezone: America/New_York
 environment: staging
 
@@ -46,6 +47,10 @@ plugins:
 
 ## JSON Fetch
 jekyll_get_json:
+  - data: jobs
+    json: 'https://stag-assets.aquent.com/apps/gym/jobs.json?limit=1500'
+  - data: markets
+    json: 'https://stag-assets.aquent.com/apps/gym/markets.json'
   - data: privacy-index
     json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:webPageContent%20+webPageContent.title:*privacy-policy-index*%20+languageId:1%20+deleted:false%20+working:true/'
   - data: privacy-shield-notice
@@ -56,3 +61,4 @@ jekyll_get_json:
     json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:webPageContent%20+webPageContent.title:*privacy-policy-data-category*%20+languageId:1%20+deleted:false%20+working:true/'
   - data: privacy-eu-rights
     json: 'https://assets.aquent.com/api/content/render/false/type/json/query/+contentType:webPageContent%20+webPageContent.title:*privacy-policy-european-rights*%20+languageId:1%20+deleted:false%20+working:true/'
+
