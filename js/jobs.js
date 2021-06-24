@@ -217,20 +217,30 @@ if (window.sessionStorage && sessionStorage.getItem('jobs')) {
 } else {
   // Check if our endpoint is available
   urlExists(endpoint + '?limit=1', function(exists) {
-    if (exists) {
-      console.log('endpoint exists, fetching results');
-      endpoint += '?limit=1500';
-
+    try {
+      if (exists) {
+        console.log('endpoint exists, fetching results');
+        endpoint += '?limit=1500';
+  
+        fetchData(endpoint);
+      }
+      
+      // If not, fall back on the local resour e
+      if (!exists) {
+        console.warn('original endpoint unavailable, reverting to local feed!');
+        endpoint = '/feeds/jobs.json';
+  
+        fetchData(endpoint);
+      }
+    } catch (error) {
+      console.warn('an error occurred, falling back to local feed! ', error);
+      // expected output: ReferenceError: nonExistentFunction is not defined
+      // Note - error messages will vary depending on browser
+      endpoint = '/feeds/jobs.json';
+  
       fetchData(endpoint);
     }
     
-    // If not, fall back on the local resour e
-    if (!exists) {
-      console.warn('original endpoint unavailable, reverting to local feed!');
-      endpoint = '/feeds/jobs.json';
-
-      fetchData(endpoint);
-    }
   });
 
   // Stone Age Method (JSONP)
