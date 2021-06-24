@@ -6,11 +6,15 @@
   {%- assign iframe_src = "?gymdev=true" | prepend: iframe_src -%}
 {%- endif -%}
 
-
 {%- if page.permalink contains "index" -%}
   {%- assign action = "/" -%}
 {%- else -%}
   {%- assign action = page.permalink | remove: '-collection' -%}
+  {%- comment -%}
+  Trim the trailing slash to prevent 404s
+  {%- endcomment -%}
+  {%- assign size = action | size | minus: 1 -%}
+  {%- assign action = action | slice: 0, size -%}
 {%- endif -%}
 
 {%- assign markets_au = site.data.markets.items | where: "countryCode", "AU" -%}
@@ -38,7 +42,7 @@
   {%- assign opt_limit = 10 -%}
 {%- endunless -%}
 
-<link rel="stylesheet" href="{{ site.url }}/css/jobs.css">
+<link rel="stylesheet" href="{{ site.url }}/css/jobs.css?{{ site.time | date:'%s' }}">
 
 <form id="location" class="location" action="{{action}}">
   <input type="hidden" name="s" value="true">
@@ -102,4 +106,4 @@
 
 <iframe id="geolocator" src="{{ iframe_src }}" frameborder="0" style="width:1px;height:1px;visibility:hidden;"></iframe>
 
-<script async defer src="{{site.url}}/js/jobs.js"></script>
+<script async defer src="{{site.url}}/js/jobs.js?{{ site.time | date:'%s' }}"></script>
