@@ -1,0 +1,8 @@
+---
+layout: raw
+permalink: /partials/theme-bottom/
+---
+{%-comment-%}
+This component is intended to inject javascript and/or tracking pixels to the bottom of the Gymnasium theme (just before the closing body tag)
+{%-endcomment-%}
+<script async defer src="{{site.url}}/js/gymnasium.js?{{ site.time | date:'%s' }}"></script>

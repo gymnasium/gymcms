@@ -1,61 +1,42 @@
 ---
+layout: wrapper-full-default
 permalink: /collections/
-layout: raw
+
 ---
-
-{%- if jekyll.environment == "development" -%}
-  {%- include take5/test-top.html -%}
-{%- endif -%}
-
 <link rel="stylesheet" href="{{ site.url }}/css/collections.css">
+<main id="main" role="main">
+  <header class="collections--about" id="about">
+    <div class="container">
+      <h1>Collections</h1>
+      <p>Explore a specific topic and learn practical skills with free courses, tutorials, and resources.</p>
+    </div>
+  </header>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-
-      <main id="main" role="main">
-
-        <header class="collections--about" id="about">
-          <div class="container">
-            <h1>Collections</h1>
-            <p>Explore a specific topic and learn practical skills with free courses, tutorials, and resources.</p>
+  <div class="container">
+    <div class="cols">
+      <ul>
+      {%- assign collections_sorted = site.data.collections | sort -%}
+      {%- for collection_hash in collections_sorted -%}
+        {%- assign hub_page = collection_hash[1] -%}
+        {%- unless hub_page.exclude -%}
+        <li class="collection">
+          <div class="collection--card {{ hub_page.topic | slugify }}">
+            <div class="collection--main">
+              <header>
+                <h2 class="title">{{ hub_page.title }}</h2>
+                <p class="short-description">{{ hub_page.short_description }}</p>
+              </header>
+            </div>
+            <div class="collection--cta">
+              <a class="gym-button gym-button-secondary" href="{{ hub_page.url }}">
+                <b>Explore</b>
+              </a>
+            </div>
           </div>
-        </header>
-
-        <div class="container">
-          <div class="cols">
-            <ul>
-            {%- assign collections_sorted = site.data.collections | sort -%}
-            {%- for collection_hash in collections_sorted -%}
-              {%- assign hub_page = collection_hash[1] -%}
-              {%- unless hub_page.exclude -%}
-              <li class="collection">
-                <div class="collection--card {{ hub_page.topic | slugify }}">
-                  <div class="collection--main">
-                    <header>
-                      <h2 class="title">{{ hub_page.title }}</h2>
-                      <p class="short-description">{{ hub_page.short_description }}</p>
-                    </header>
-                  </div>
-                  <div class="collection--cta">
-                    <a class="gym-button gym-button-secondary" href="{{ hub_page.url }}">
-                      <b>Explore</b>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              {%- endunless -%}
-            {%- endfor -%}
-            </ul>
-          </div>
-        </div>
-
-      </main>
-
-    </div><!-- .col-md-12 -->
-  </div><!-- .row -->
-</div><!-- .container -->
-
-{%- if jekyll.environment == "development" -%}
-  {%- include take5/test-bottom.html -%}
-{%- endif -%}
+        </li>
+        {%- endunless -%}
+      {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</main>
