@@ -6,7 +6,7 @@ permalink: /courses/take5/gym-5051
 
 Jeremy Osborn: Creating complex responsive interfaces in Figma can be done very quickly using Auto Layout. But it does require a solid understanding of alignment, distribution, resizing, and nesting, all of which I’ll be covering in this video.
 
-You can follow along with me by going to this [URL on Figma Community][1]{: target="_blank" rel="noopener"} , where you can duplicate the project. You can also find this link in the [**Resources**](#tutorial-resources) section for this video.
+You can follow along with me by going to this [URL on Figma Community][1]{: target="_blank" rel="noopener"}, where you can duplicate the project. You can also find this link in the [**Resources**](#tutorial-resources) section for this video.
 
 This project has two frames, both of which already have Auto Layout. You’re going to start with these two frames (**activity-meta** and **activity-content**) and then use nesting and Auto Layout to create a responsive activity feed that looks something like this.
 
