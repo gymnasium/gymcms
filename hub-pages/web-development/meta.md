@@ -1,6 +1,6 @@
 ---
 layout: meta-large
-permalink: /web-development-collection/meta/
+permalink: /web-development/meta/
 page_title: "Web Development | Gymnasium"
 og_title: "Web Development Collection"
 og_description: "Explore our free collection of web development courses, tutorials, webinars, articles, and jobs."
