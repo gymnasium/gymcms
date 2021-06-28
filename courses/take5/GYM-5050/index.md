@@ -6,7 +6,7 @@ permalink: /courses/take5/gym-5050
 
 Jeremy Osborn: Auto Layout in Figma is a feature that allows you to create frames or components that reflow as their contents change. And it’s incredibly useful for prototyping.
 
-Now, you can follow along with me by going to this [URL on Figma Community][1]{: target="_blank" rel="noopener"} , where you can duplicate this project. And you can also find this link in the [**Resources**](#tutorial-resources) section for this video.
+Now, you can follow along with me by going to this [URL on Figma Community][1]{: target="_blank" rel="noopener"}, where you can duplicate this project. And you can also find this link in the [**Resources**](#tutorial-resources) section for this video.
 
 Let’s start by creating an Auto Layout button. Choose the Type (Text) tool. Type the word **Upgrade**. Then click anywhere in the canvas and use the keyboard shortcut for applying Auto Layout, <kbd><kbd>Shift</kbd>+<kbd>A</kbd></kbd>. Figma notifies you that Auto Layout has been applied.
 

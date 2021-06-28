@@ -6,7 +6,7 @@ permalink: /courses/take5/gym-5049
 
 Jeremy Osborn: Variants are a feature in Figma that allow anyone to add a component to a page, browse through multiple variations, and then choose the one they want. This is a huge benefit because it cuts down the number of components you need to create and makes it easy for anyone working with this project to find what they need.
 
-You can follow along with me by going to this [URL on Figma Community][1]{: target="_blank" rel="noopener"}  where you can duplicate this project. You can also find that link in the [**Resources**](#tutorial-resources) section for this video. To begin, we have a gray frame with two text layers grouped inside. Select that and then choose **Object** > **Create component** or <kbd><kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd></kbd> on the Mac or <kbd><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd></kbd> on the PC.
+You can follow along with me by going to this [URL on Figma Community][1]{: target="_blank" rel="noopener"}, where you can duplicate this project. You can also find that link in the [**Resources**](#tutorial-resources) section for this video. To begin, we have a gray frame with two text layers grouped inside. Select that and then choose **Object** > **Create component** or <kbd><kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd></kbd> on the Mac or <kbd><kbd>Control</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd></kbd> on the PC.
 
 When you click on the **Assets** panel, you can see the component here and could drag it onto the page and reuse it throughout the project. However, you’ll be doing that later. So click back on the **Layers** panel. Next, rename this component **Feedback-block/AccountStatus/Success**.
 
