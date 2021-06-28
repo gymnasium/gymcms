@@ -1,3 +1,8 @@
+{%- assign homelink = "/" -%}
+{%- if site.environment == 'local' -%}
+  {%- assign homelink = "/home/index/" -%}
+{%- endif -%}
+
 <!DOCTYPE html>
 <!--[if lte IE 9]><html class="ie ie9 lte9" lang="en" data-cwenv="my"><![endif]-->
 <!--[if !IE]><!--><html lang="en" data-cwenv="cw-beta"><!--<![endif]-->
@@ -233,7 +238,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="/">
+                  <a class="navbar-brand" href="{{homelink}}">
                     <img
                       class="gymnasium-logo"
                       src="{{site.gymurl}}/static/gymnasium/images/gymnasiumLogo.png"
