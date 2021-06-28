@@ -186,7 +186,7 @@ function fetchData(url) {
 
         store('jobs', response);
 
-        console.log('fetching data from endpoint: ', endpoint);
+        // console.log('fetching data from endpoint: ', endpoint);
 
         processData(response);
 
@@ -211,7 +211,7 @@ function fetchData(url) {
 // If we have jobs stored locally already in the browser session...
 if (window.sessionStorage && sessionStorage.getItem('jobs')) {
   data = sessionStorage.getItem('jobs');
-  console.log('data from sessionStorage');
+  // console.log('data from sessionStorage');
 
   processData(data);
 } else {
@@ -219,7 +219,7 @@ if (window.sessionStorage && sessionStorage.getItem('jobs')) {
   urlExists(endpoint + '?limit=1', function(exists) {
     try {
       if (exists) {
-        console.log('endpoint exists, fetching results');
+        // console.log('endpoint exists, fetching results');
         endpoint += '?limit=1500';
   
         fetchData(endpoint);
@@ -275,13 +275,13 @@ function processData(d) {
 
   if (category) {
     items = items.filter(item => item.category === category);
-    console.log('showing jobs for a specific category: ', category);
+    // console.log('showing jobs for a specific category: ', category);
   }
 
   // Filter the jobs by market if we have a market param
   if ((typeof market !== 'undefined' && market !== null) && market.length) {
     items = items.filter(item => item.market === market);
-    console.log('showing jobs for a specific market: ', market);
+    // console.log('showing jobs for a specific market: ', market);
   } else {
     // Off-site preference key
     // 0 = Unknown
@@ -291,7 +291,7 @@ function processData(d) {
     // 4 = Partial on-site
     items = items.filter(item => parseInt(item.remote) === 2);
     updateDropdown('remote');
-    console.log('showing only remote options…');
+    // console.log('showing only remote options…');
   }
 
   // Randomize the results we show…
@@ -300,7 +300,7 @@ function processData(d) {
   // How many results do we have?
   var numResults = items.length;
 
-  console.log(`results: ${numResults} | limit: ${limit}`);
+  // console.log(`results: ${numResults} | limit: ${limit}`);
 
   if (numResults > 0) {
     
@@ -342,7 +342,7 @@ eventer(messageEvent,function(event) {
   // Reject messages that are not from a valid origin domain
   const regex = new RegExp('https:\/\/.*assets.aquent.com');
   if (regex.test(event.origin)) {
-    console.log('received message from child: ', event.data);
+    // console.log('received message from child: ', event.data);
     parseOptions(event.data,opts);
   }
 },false);
