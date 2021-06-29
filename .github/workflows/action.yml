@@ -12,6 +12,7 @@ on:
   #     - production
 
 jobs:
+  ## Linkinator uses the linkinator.config.json file for additional options
   linkinator:
     runs-on: ubuntu-latest
     steps:
