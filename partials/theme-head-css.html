@@ -1,0 +1,17 @@
+---
+layout: raw
+permalink: /partials/theme-head-css/
+---
+{%-comment-%}
+This component is intended to inject any stylesheets into the Gymnasium theme head
+{%-endcomment-%}
+
+
+{%- comment -%}
+This renders our theme hack scss as inline content directly into the HTML
+{%- endcomment -%}
+{%- capture inline -%}
+  {%- include inline.scss -%} 
+{%- endcapture -%}
+
+<style>{{ inline | scssify }}</style>

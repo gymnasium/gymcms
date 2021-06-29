@@ -1,0 +1,46 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+.hide {
+  display: none; // TODO: this is a repeat of what is available in the defaults mixin
+}
+
+.location {
+  margin: 1rem 0 2.666rem;
+
+  select {
+    color: $gym-dark-gray !important; // needed to override a very greedy wildcard selector on the home page
+  
+    @include breakpoint(40em, min) {
+      max-width: 24rem;
+    }
+  }
+}
+
+// Someday we'll make this part of our global CSS
+.list-hr ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.job-location {
+  &::before {
+    content: '\2014'; // em-dash
+  }
+}
+
+.home .jobs-container {
+  li {
+    border-bottom: font-calc(2) solid white;
+    margin-top: font-calc(8);
+    padding-bottom: font-calc(8);
+
+    .job-title {
+      font-weight: bold;
+    }
+  }
+}
+
+

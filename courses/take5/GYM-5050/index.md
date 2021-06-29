@@ -6,7 +6,7 @@ permalink: /courses/take5/gym-5050
 
 Jeremy Osborn: Auto Layout in Figma is a feature that allows you to create frames or components that reflow as their contents change. And it’s incredibly useful for prototyping.
 
-Now, you can follow along with me by going to this [URL on Figma Community][1], where you can duplicate this project. And you can also find this link in the [**Resources**](#tutorial-resources) section for this video.
+Now, you can follow along with me by going to this [URL on Figma Community][1]{: target="_blank" rel="noopener"}, where you can duplicate this project. And you can also find this link in the [**Resources**](#tutorial-resources) section for this video.
 
 Let’s start by creating an Auto Layout button. Choose the Type (Text) tool. Type the word **Upgrade**. Then click anywhere in the canvas and use the keyboard shortcut for applying Auto Layout, <kbd><kbd>Shift</kbd>+<kbd>A</kbd></kbd>. Figma notifies you that Auto Layout has been applied.
 
@@ -16,7 +16,7 @@ Go ahead and click the plus sign (+) in the **Fill** section to apply a white ba
 
 Now, if you happen to apply it to an object not in the frame, Figma will generate one for you. And that’s exactly what happened with our button. Let’s dig a little deeper and look at how you can control some of the properties of Auto Layout.
 
-In the left side bar, click on the second page [Auto Layout (exploring properties)]. And notice that we have two frames. The top one has Auto Layout, and this bottom one does not. Click on that top frame. And then over to the right, in the **Auto layout** controls, you’ll be examining direction, spacing, and padding.
+In the left side bar, click on the second page [**Auto Layout (exploring properties)**]. And notice that we have two frames. The top one has Auto Layout, and this bottom one does not. Click on that top frame. And then over to the right, in the **Auto layout** controls, you’ll be examining direction, spacing, and padding.
 
 Let’s start with direction, which is currently set to vertical. Click on the right-facing arrow (→) to apply **Horizontal direction**. And all of the objects are reordered horizontally. And this leads to another important point.
 
@@ -28,7 +28,7 @@ Padding is the space between these items and the surrounding frame. So go ahead 
 
 Now, this last property is padding and alignment combined. And we’re going to come back to that in a minute. But first, I want to cover resizing.
 
-So go ahead and click on the frame below this one (icons/stars without Auto-Layout). Remember, this does not have Auto Layout. But you’re going to edit now by clicking the plus sign (+) or use that <kbd><kbd>Shift</kbd>+<kbd>A</kbd></kbd> shortcut. Huh, expecting that?
+So go ahead and click on the frame below this one (**icons/stars without Auto-Layout**). Remember, this does not have Auto Layout. But you’re going to edit now by clicking the plus sign (+) or use that <kbd><kbd>Shift</kbd>+<kbd>A</kbd></kbd> shortcut. Huh, expecting that?
 
 This behavior is due to a feature in the **Resizing** section called **Hug contents**, which removes any extra space around the child objects in a frame. And it works for both horizontal and vertical space.
 

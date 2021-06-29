@@ -3,7 +3,7 @@ permalink: /webinars/
 layout: raw
 ---
 {%- if jekyll.environment == "development" -%}
-  {%- include take5/test-top.html -%}
+  {%- include partials/test-top.html -%}
 {%- endif -%}
 
 {%- assign webinars_ascending_date = "" | split: ", " -%}
@@ -119,5 +119,5 @@ layout: raw
 </main>
 
 {%- if jekyll.environment == "development" -%}
-  {%- include take5/test-bottom.html -%}
+  {%- include partials/test-bottom.html -%}
 {%- endif -%}

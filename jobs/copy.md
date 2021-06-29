@@ -1,7 +1,3 @@
----
-layout: raw
-permalink: /jobs/
----
 # Jobs
 
 Welcome to our free collection of career resources where you can find articles, tutorials, and more. Whether you’re a student creating a portfolio or a client building a team, we’ve got you covered.
