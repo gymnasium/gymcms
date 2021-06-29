@@ -1,6 +1,6 @@
 ---
 layout: meta-large
-permalink: /accessibility-collection/meta/
+permalink: /accessibility/meta/
 page_title: "Accessibility | Gymnasium"
 og_title: "Accessibility Collection"
 og_description: "Explore our free collection of web accessibility courses, tutorials, resources, and services."
