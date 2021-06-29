@@ -94,6 +94,38 @@ function getUrlParameter(name) {
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
+// Clear results completely
+function clearResults() {
+  jobsContainer.innerHTML = '';
+}
+
+var url = new URL(window.location.href);
+
+// What to do when the select updates
+function selectChange() {
+  if (this.value === 'remote') {
+    market = undefined;
+  } else {
+    market = this.value;
+  }
+
+  let params = new URLSearchParams(url.search);
+
+  // add "topic" parameter
+  params.set('m', market);
+
+  params.toString();
+
+  window.history.pushState({}, '', '?' + params + '#location');
+  
+  console.log('[job module] market selected: ', market);
+
+  hideMsg();
+  clearResults();
+
+  conductData();
+}
+
 // function to help parse data options
 function parseValue(str) {
   if ('true' === str) {
@@ -125,6 +157,7 @@ var data;
 var endpoint;
 const jobsContainer = document.getElementById('jobs-container');
 const msgContainer = document.getElementById('messages');
+const form = document.getElementById('m');
 
 if (jobsContainer.hasAttribute('data-options')) {
   parseOptions(jobsContainer.getAttribute('data-options'),opts);
@@ -151,12 +184,17 @@ function updateDropdown(m) {
   document.querySelector('#m [value="' + m + '"]').selected = true;
 }
 
-// Show our messaging accordingly
-function showMsg(id) {
+function hideMsg() {
   // firstly, hide any visible messaging
   msgContainer.querySelectorAll('div').forEach(el => {
     el.classList.add('hide');
   });
+}
+
+// Show our messaging accordingly
+function showMsg(id) {
+  // firstly, hide any visible messaging
+  hideMsg();
 
   // show the element we want!
   document.getElementById(id).classList.remove('hide');
@@ -167,7 +205,7 @@ function store(name,data) {
   if (window.sessionStorage) {
     sessionStorage.setItem(name, data);
   } else {
-    console.warn('No browser support for sessionStorage!');
+    console.warn('[job module] No browser support for sessionStorage!');
   }
 }
 
@@ -186,7 +224,7 @@ function fetchData(url) {
 
         store('jobs', response);
 
-        // console.log('fetching data from endpoint: ', endpoint);
+        console.log('[job module] fetching data from endpoint: ', endpoint);
 
         processData(response);
 
@@ -208,54 +246,56 @@ function fetchData(url) {
   request.send();
 }
 
-// If we have jobs stored locally already in the browser session...
-if (window.sessionStorage && sessionStorage.getItem('jobs')) {
-  data = sessionStorage.getItem('jobs');
-  // console.log('data from sessionStorage');
+function conductData() {
+  // If we have jobs stored locally already in the browser session...
+  if (window.sessionStorage && sessionStorage.getItem('jobs')) {
+    data = sessionStorage.getItem('jobs');
+    // console.log('[job module] data from sessionStorage');
 
-  processData(data);
-} else {
-  // Check if our endpoint is available
-  urlExists(endpoint + '?limit=1', function(exists) {
-    try {
-      if (exists) {
-        // console.log('endpoint exists, fetching results');
-        endpoint += '?limit=1500';
-  
+    processData(data);
+  } else {
+    // Check if our endpoint is available
+    urlExists(endpoint + '?limit=1', function(exists) {
+      try {
+        if (exists) {
+          // console.log('[job module] endpoint exists, fetching results');
+          endpoint += '?limit=1500';
+    
+          fetchData(endpoint);
+        }
+        
+        // If not, fall back on the local resour e
+        if (!exists) {
+          console.warn('[job module] original endpoint unavailable, reverting to local feed!');
+          endpoint = '/feeds/jobs.json';
+    
+          fetchData(endpoint);
+        }
+      } catch (error) {
+        console.warn('[job module] an error occurred, falling back to local feed! ', error);
+        // expected output: ReferenceError: nonExistentFunction is not defined
+        // Note - error messages will vary depending on browser
+        endpoint = '/feeds/jobs.json';
+    
         fetchData(endpoint);
       }
       
-      // If not, fall back on the local resour e
-      if (!exists) {
-        console.warn('original endpoint unavailable, reverting to local feed!');
-        endpoint = '/feeds/jobs.json';
-  
-        fetchData(endpoint);
-      }
-    } catch (error) {
-      console.warn('an error occurred, falling back to local feed! ', error);
-      // expected output: ReferenceError: nonExistentFunction is not defined
-      // Note - error messages will vary depending on browser
-      endpoint = '/feeds/jobs.json';
-  
-      fetchData(endpoint);
-    }
-    
-  });
+    });
 
-  // Stone Age Method (JSONP)
-  // function stoneAgeFetch(resp) {
-  //   data = JSON.stringify(resp);
-  //   console.log('getting data via the stone age fetch');
-  //   store('jobs', data);
-  //   processData(data);
-  // }
-  
-  // let script = document.createElement('script');
-  // script.src = `${endpoint}?callback=stoneAgeFetch`;
-  // script.id = 'stone-age-fetch';
-  // document.body.append(script);
-  
+    // Stone Age Method (JSONP)
+    // function stoneAgeFetch(resp) {
+    //   data = JSON.stringify(resp);
+    //   console.log('[job module] getting data via the stone age fetch');
+    //   store('jobs', data);
+    //   processData(data);
+    // }
+    
+    // let script = document.createElement('script');
+    // script.src = `${endpoint}?callback=stoneAgeFetch`;
+    // script.id = 'stone-age-fetch';
+    // document.body.append(script);
+    
+  }
 }
 
 // Process our JSON data
@@ -275,13 +315,13 @@ function processData(d) {
 
   if (category) {
     items = items.filter(item => item.category === category);
-    // console.log('showing jobs for a specific category: ', category);
+    console.log('[job module] showing jobs for a specific category: ', category);
   }
 
   // Filter the jobs by market if we have a market param
   if ((typeof market !== 'undefined' && market !== null) && market.length) {
     items = items.filter(item => item.market === market);
-    // console.log('showing jobs for a specific market: ', market);
+    console.log('[job module] showing jobs for a specific market: ', market);
   } else {
     // Off-site preference key
     // 0 = Unknown
@@ -291,7 +331,7 @@ function processData(d) {
     // 4 = Partial on-site
     items = items.filter(item => parseInt(item.remote) === 2);
     updateDropdown('remote');
-    // console.log('showing only remote options…');
+    console.log('[job module] showing only remote options…');
   }
 
   // Randomize the results we show…
@@ -300,7 +340,7 @@ function processData(d) {
   // How many results do we have?
   var numResults = items.length;
 
-  // console.log(`results: ${numResults} | limit: ${limit}`);
+  console.log(`[job module] results: ${numResults} | limit: ${limit}`);
 
   if (numResults > 0) {
     
@@ -337,15 +377,22 @@ function processData(d) {
   }
 }
 
+if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
+  conductData();
+}
+
+// Listen for change events from form select
+form.addEventListener('change', selectChange, false);
+
 // Listen for geolocator messages from our iframe
 eventer(messageEvent,function(event) {
   // Reject messages that are not from a valid origin domain
   const regex = new RegExp('https:\/\/.*assets.aquent.com');
   if (regex.test(event.origin)) {
-    // console.log('received message from child: ', event.data);
+    console.log('[geolocator] ', event.data);
     parseOptions(event.data,opts);
   }
-},false);
+}, false);
 
 
 // TODO: add iframe dynamically? 
