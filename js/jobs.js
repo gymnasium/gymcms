@@ -121,7 +121,7 @@ function parseOptions(input, output) {
 }
 
 var opts = {};
-
+var debug = getUrlParameter('debug') ? true : false;
 var data;
 var endpoint;
 var fallback;
@@ -143,15 +143,17 @@ if (jobsContainer.hasAttribute('data-fallback')) {
 }
 
 // Add exception for `remote` option in the markets dropdown
-var market = getUrlParameter('m') == 'remote' ? undefined : getUrlParameter('m');
+var market = getUrlParameter('m') === 'remote' ? undefined : getUrlParameter('m');
 
 // If we have a market populated on page load, update the dropdown
 if (typeof market !== 'undefined' && market !== null && market.length) {
   updateDropdown(market);
 }
 
-if (getUrlParameter('s') === 'true') {
-  location.href = '#location';
+function outputDebug(message) {
+  if (debug) {
+    console.log(message);
+  }
 }
 
 // Clear results completely
@@ -161,22 +163,27 @@ function clearResults() {
 
 // What to do when the select updates
 function selectChange() {
-  if (this.value === 'remote') {
+  var value = this.value
+  if (value === 'remote') {
     market = undefined;
   } else {
-    market = this.value;
+    market = value;
   }
 
   let params = new URLSearchParams(url.search);
 
   // add "topic" parameter
-  params.set('m', market);
+  params.set('m', value);
+
+  if(debug) {
+    params.set('debug', true);
+  }
 
   params.toString();
 
   window.history.pushState({}, '', '?' + params + '#location');
   
-  console.log('[job module] market selected: ', market);
+  outputDebug('[job module] market selected: ' + market);
 
   hideMsg();
   clearResults();
@@ -229,7 +236,7 @@ function fetchData(url) {
 
         store('jobs', response);
 
-        console.log('[job module] fetching data from endpoint: ', endpoint);
+        outputDebug('[job module] fetching data from endpoint: ' + endpoint);
 
         processData(response);
 
@@ -255,7 +262,8 @@ function conductData() {
   // If we have jobs stored locally already in the browser session...
   if (window.sessionStorage && sessionStorage.getItem('jobs')) {
     data = sessionStorage.getItem('jobs');
-    // console.log('[job module] data from sessionStorage');
+
+    outputDebug('[job module] data from sessionStorage');
 
     processData(data);
   } else {
@@ -263,7 +271,9 @@ function conductData() {
     urlExists(endpoint + '?limit=1', function(exists) {
       try {
         if (exists) {
-          // console.log('[job module] endpoint exists, fetching results');
+
+          outputDebug('[job module] endpoint exists, fetching results');
+
           endpoint += '?limit=1500';
     
           fetchData(endpoint);
@@ -320,13 +330,15 @@ function processData(d) {
 
   if (category) {
     items = items.filter(item => item.category === category);
-    console.log('[job module] showing jobs for a specific category: ', category);
+
+    outputDebug('[job module] showing jobs for a specific category: ' + category);
   }
 
   // Filter the jobs by market if we have a market param
   if ((typeof market !== 'undefined' && market !== null) && market.length) {
     items = items.filter(item => item.market === market);
-    console.log('[job module] showing jobs for a specific market: ', market);
+
+    outputDebug('[job module] showing jobs for a specific market: ' + market);
   } else {
     // Off-site preference key
     // 0 = Unknown
@@ -336,7 +348,8 @@ function processData(d) {
     // 4 = Partial on-site
     items = items.filter(item => parseInt(item.remote) === 2);
     updateDropdown('remote');
-    console.log('[job module] showing only remote options…');
+
+    outputDebug('[job module] showing only remote options…');
   }
 
   // Randomize the results we show…
@@ -345,7 +358,7 @@ function processData(d) {
   // How many results do we have?
   var numResults = items.length;
 
-  console.log(`[job module] results: ${numResults} | limit: ${limit}`);
+  outputDebug(`[job module] results: ${numResults} | limit: ${limit}`);
 
   if (numResults > 0) {
     
@@ -394,7 +407,8 @@ eventer(messageEvent,function(event) {
   // Reject messages that are not from a valid origin domain
   const regex = new RegExp('https:\/\/.*assets.aquent.com');
   if (regex.test(event.origin)) {
-    console.log('[geolocator] ', event.data);
+    outputDebug('[geolocator] ' + event.data);
+
     parseOptions(event.data,opts);
   }
 }, false);
