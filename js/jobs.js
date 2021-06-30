@@ -94,37 +94,6 @@ function getUrlParameter(name) {
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
-// Clear results completely
-function clearResults() {
-  jobsContainer.innerHTML = '';
-}
-
-var url = new URL(window.location.href);
-
-// What to do when the select updates
-function selectChange() {
-  if (this.value === 'remote') {
-    market = undefined;
-  } else {
-    market = this.value;
-  }
-
-  let params = new URLSearchParams(url.search);
-
-  // add "topic" parameter
-  params.set('m', market);
-
-  params.toString();
-
-  window.history.pushState({}, '', '?' + params + '#location');
-  
-  console.log('[job module] market selected: ', market);
-
-  hideMsg();
-  clearResults();
-
-  conductData();
-}
 
 // function to help parse data options
 function parseValue(str) {
@@ -155,6 +124,8 @@ var opts = {};
 
 var data;
 var endpoint;
+var fallback;
+var url = new URL(window.location.href);
 const jobsContainer = document.getElementById('jobs-container');
 const msgContainer = document.getElementById('messages');
 const form = document.getElementById('m');
@@ -167,6 +138,10 @@ if (jobsContainer.hasAttribute('data-endpoint')) {
   endpoint = jobsContainer.getAttribute('data-endpoint');
 }
 
+if (jobsContainer.hasAttribute('data-fallback')) {
+  fallback = jobsContainer.getAttribute('data-fallback');
+}
+
 // Add exception for `remote` option in the markets dropdown
 var market = getUrlParameter('m') == 'remote' ? undefined : getUrlParameter('m');
 
@@ -177,6 +152,36 @@ if (typeof market !== 'undefined' && market !== null && market.length) {
 
 if (getUrlParameter('s') === 'true') {
   location.href = '#location';
+}
+
+// Clear results completely
+function clearResults() {
+  jobsContainer.innerHTML = '';
+}
+
+// What to do when the select updates
+function selectChange() {
+  if (this.value === 'remote') {
+    market = undefined;
+  } else {
+    market = this.value;
+  }
+
+  let params = new URLSearchParams(url.search);
+
+  // add "topic" parameter
+  params.set('m', market);
+
+  params.toString();
+
+  window.history.pushState({}, '', '?' + params + '#location');
+  
+  console.log('[job module] market selected: ', market);
+
+  hideMsg();
+  clearResults();
+
+  conductData();
 }
 
 // Update dropdown to the selected option
@@ -267,7 +272,7 @@ function conductData() {
         // If not, fall back on the local resour e
         if (!exists) {
           console.warn('[job module] original endpoint unavailable, reverting to local feed!');
-          endpoint = '/feeds/jobs.json';
+          endpoint = fallback;
     
           fetchData(endpoint);
         }
@@ -275,7 +280,7 @@ function conductData() {
         console.warn('[job module] an error occurred, falling back to local feed! ', error);
         // expected output: ReferenceError: nonExistentFunction is not defined
         // Note - error messages will vary depending on browser
-        endpoint = '/feeds/jobs.json';
+        endpoint = fallback;
     
         fetchData(endpoint);
       }

@@ -1,6 +1,5 @@
 {{ content }}
-
-{% comment %} Exclude file names by extension {% endcomment %}
+{%- comment -%} Exclude file names by extension {%- endcomment -%}
 {%- assign file_ext = page.url | split: "." | last -%}
 {%- if file_ext != "json"-%}
 <!-- //
