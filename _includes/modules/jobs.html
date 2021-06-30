@@ -30,6 +30,12 @@
   {%- assign opt_category = false -%}
 {%- endunless -%}
 
+{%- assign cat_text = "" -%}
+{%- if opt_category != false -%}
+  {%- assign cat_text = opt_category -%}
+{%- endif -%}
+
+
 {%- unless opt_limit -%}
   {%- assign opt_limit = 10 -%}
 {%- endunless -%}
@@ -82,7 +88,7 @@
   </div>
   <div id="error-results" class="hide">
     <h4>Ooops!</h4>
-    <p>We were unable to find jobs for this location. Please try another location, or come back later to check for freshly posted jobs.</p>
+    <p>We were unable to find {{ cat_text }} jobs for this location. Please try another location, or come back later to check for freshly posted jobs.</p>
   </div>
   <div id="error-server" class="hide">
     <h4>Ooops!</h4>
@@ -93,7 +99,7 @@
     <p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. Please try again later.</p>
   </div>
 </div>
-<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category}};limit:{{opt_limit}};" data-endpoint="{{endpoint}}" data-fallback="{{fallback}}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
+<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-endpoint="{{endpoint}}" data-fallback="{{fallback}}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
 
 <iframe id="geolocator" src="{{ iframe_src }}" frameborder="0" style="width:1px;height:1px;visibility:hidden;"></iframe>
 
