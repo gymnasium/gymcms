@@ -3,5 +3,5 @@
 {%- if site.environment == "local" -%}
   {%- assign geolocator_src = "?gymdev=true" | prepend: geolocator_src -%}
 {%- endif -%}
-<link rel="preload" href="{{jobs_endpoint}}" as="fetch" crossorigin="use-credentials">
-<link rel="preload" href="{{geolocator_src}}" as="embed" crossorigin="use-credentials">
+<link rel="preload" href="{{jobs_endpoint}}" as="fetch" crossorigin="anonymous">
+<link rel="preload" href="{{geolocator_src}}" as="embed" crossorigin="anonymous">
