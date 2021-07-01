@@ -3,15 +3,8 @@ layout: raw
 permalink: /system-status/
 ---
 {%- comment -%}
-TODO: use of this as a CSS inlining hack will be deprecated in favor of /partials/theme-head/
-
-This renders our theme hack scss as inline content directly into the HTML
+TODO: use of this as a CSS inlining hack will be deprecated in favor of /partials/theme-head-css/
 {%- endcomment -%}
-{%- capture inline -%}
-  {%- include inline.scss -%} 
-{%- endcapture -%}
-
-<style>{{ inline | scssify }}</style>
 
 
 
