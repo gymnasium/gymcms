@@ -1,0 +1,7 @@
+{%- assign jobs_endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl | append: "?limit=1500" -%}
+{%- assign geolocator_src = "/apps/gym/geolocator" | prepend: site.aqassetsurl -%}
+{%- if site.environment == "local" -%}
+  {%- assign geolocator_src = "?gymdev=true" | prepend: geolocator_src -%}
+{%- endif -%}
+<link rel="preload" href="{{jobs_endpoint}}" as="fetch" crossorigin="anonymous">
+<link rel="preload" href="{{geolocator_src}}" as="embed" crossorigin="anonymous">
