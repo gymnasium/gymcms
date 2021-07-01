@@ -4,7 +4,7 @@ services:
     image: jekyll/jekyll:latest
     command: jekyll serve --watch --force_polling --config _local_config.yml
     ports:
-        - 4000:4000
+        - 8080:8080
         - 35729:35729
     volumes:
       - .:/srv/jekyll

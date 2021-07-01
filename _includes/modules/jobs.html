@@ -1,12 +1,11 @@
-
-{%- assign endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl -%}
-{%- assign iframe_src = "/apps/gym/geolocator" | prepend: site.aqassetsurl -%}
-{%- assign fallback = "/feeds/jobs.json" | prepend: site.url -%}
+{%- assign jobs_endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl -%}
+{%- assign geolocator_src = "/apps/gym/geolocator" | prepend: site.aqassetsurl -%}
+{%- assign jobs_fallback = "/feeds/jobs.json" | prepend: site.url -%}
 
 {%- if site.environment == "local" -%}
-  {%- assign endpoint = "/feeds/jobs.json" -%}
-  {%- assign iframe_src = "?gymdev=true" | prepend: iframe_src -%}
-  {%- assign fallback = endpoint -%}
+  {%- assign jobs_endpoint = "/feeds/jobs.json" -%}
+  {%- assign geolocator_src = "?gymdev=true" | prepend: geolocator_src -%}
+  {%- assign jobs_fallback = jobs_endpoint -%}
 {%- endif -%}
 
 {%- assign markets_au = site.data.markets.items | where: "countryCode", "AU" -%}
@@ -99,8 +98,8 @@
     <p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. Please try again later.</p>
   </div>
 </div>
-<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-endpoint="{{endpoint}}" data-fallback="{{fallback}}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
+<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-endpoint="{{jobs_endpoint}}" data-fallback="{{jobs_fallback}}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
 
-<iframe id="geolocator" src="{{ iframe_src }}" frameborder="0" style="width:1px;height:1px;visibility:hidden;"></iframe>
+<iframe id="geolocator" src="{{ geolocator_src }}" frameborder="0" style="width:1px;height:1px;visibility:hidden;"></iframe>
 
 <script async defer src="{{site.url}}/js/jobs.js?{{ site.time | date:'%s' }}"></script>
