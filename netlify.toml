@@ -1,3 +1,7 @@
+# Define which paths this specific [[headers]] block will cover.
+for = "/favicon/*"
+  [headers.values]
+  Access-Control-Allow-Origin = "*"
 # dev branch build
 # https://dev--gymcms.netlify.com/
 [context.dev]
