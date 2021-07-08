@@ -8,7 +8,7 @@
   background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-720w.jpg"), linear-gradient(30deg, #162f65, #746b61);
   padding-top: 15px;
   padding-bottom: 15px;
-  transition: padding-top .25s ease-in-out, padding-bottom .25s ease-in-out;
+  transition: padding-top 0.25s ease-in-out, padding-bottom 0.25s ease-in-out;
 }
 
 .hero-promo .content {
@@ -21,12 +21,9 @@
   z-index: 1;
   background-color: $gym-white;
   background-color: rgba(255, 255, 255, 0.75);
-  transition: background-color .5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
   padding: 2.4em;
-  margin-top: 0;
-  margin-bottom: 2em;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 2em;
 }
 
 .hero-promo header h1 {
@@ -49,9 +46,9 @@
   background: #746b61 no-repeat center center / cover;
   background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-720w.jpg");
   padding-bottom: 50%;
-  margin-top: .5em;
-  margin-bottom: .5em;
-  transition: padding-bottom .25s ease-in-out;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  transition: padding-bottom 0.25s ease-in-out;
 }
 
 .hero-promo .content .date {
@@ -62,8 +59,8 @@
   font-family: $gym-text-font-stack;
   font-size: 1.142857142857143em;
   line-height: 1.45;
-  color: #333;
-  margin-top: .525em;
+  color: $gym-dark-gray;
+  margin-top: 0.525em;
 }
 
 .hero-promo .cta {
@@ -93,7 +90,6 @@
 
   .hero-promo header {
     float: left;
-    width: 41em;
   }
 
   .hero-promo header h1::after {
@@ -126,6 +122,16 @@
 
 .hero-promo a.gym-button-secondary b {
   color: $gym-white !important;
+}
+
+.hero-promo a.gym-button-secondary:hover,
+.hero-promo a.gym-button-secondary:focus {
+  background-color: $gym-white !important;
+}
+
+.hero-promo a.gym-button-secondary:hover b,
+.hero-promo a.gym-button-secondary:focus b {
+  color: $gym-black !important;
 }
 
 .hero-promo .no-wrap {
