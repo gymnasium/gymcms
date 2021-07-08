@@ -1,8 +1,4 @@
-<!-- //
-Generated at: {{ site.time }}
-Served from: {{ page.url | absolute_url }}
-Git Hash: {{ site.data['hash']}}
-// -->
+{% include build-timestamp.html %}
 {%- if jekyll.environment == "development" -%}
   {%- include partials/test-top.html -%}
 {%- endif -%}
