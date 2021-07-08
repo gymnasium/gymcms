@@ -2,6 +2,6 @@
 {%- comment -%} Exclude file names by extension {%- endcomment -%}
 {%- assign file_ext = page.url | split: "." | last -%}
 {%- if file_ext != "json"-%}
-{% include build-timestamp.html %}
+{%- include build-timestamp.html -%}
 {%- endif -%}
 
