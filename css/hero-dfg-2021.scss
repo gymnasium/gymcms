@@ -4,8 +4,8 @@
 @import 'mixins';
 
 #hero-dfg-2021 {
-    background: #152248 no-repeat center center / cover;
-    background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-720w.jpg"), linear-gradient(30deg, #152248, #746b61);
+  background: #162f65 no-repeat center center / cover;
+  background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-720w.jpg"), linear-gradient(30deg, #162f65, #746b61);
   padding-top: 15px;
   padding-bottom: 15px;
   transition: padding-top .25s ease-in-out, padding-bottom .25s ease-in-out;
@@ -31,7 +31,7 @@
 
 .hero-promo header h1 {
   font-family: "Arial Black", Gadget, sans-serif;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 3.428571428571429em;
   line-height: 1.125;
   color: #333;
@@ -46,8 +46,8 @@
   content: "";
   width: 100%;
   height: 0;
-    background: #152248 no-repeat center center / cover;
-    background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-720w.jpg"), linear-gradient(30deg, #152248, #746b61);
+  background: #746b61 no-repeat center center / cover;
+  background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-720w.jpg");
   padding-bottom: 50%;
   margin-top: .5em;
   margin-bottom: .5em;
@@ -59,6 +59,7 @@
 }
 
 .hero-promo p {
+  font-family: $gym-text-font-stack;
   font-size: 1.142857142857143em;
   line-height: 1.45;
   color: #333;
@@ -85,8 +86,7 @@
 @include breakpoint(48em, min) {
 
   #hero-dfg-2021 {
-    background: #152248 no-repeat center center / cover;
-    background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-1440w.jpg"), linear-gradient(30deg, #152248, #746b61);
+    background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-1440w.jpg"), currentColor;
     padding-top: 3%;
     padding-bottom: 3%;
   }
@@ -111,8 +111,7 @@
 (min-resolution: 1.25dppx) {
 
   #hero-dfg-2021 {
-    background: #152248 no-repeat center center / cover;
-    background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-2000w.jpg"), linear-gradient(30deg, #152248, #746b61);
+    background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-2000w.jpg"), currentColor;
   }
 
 }
