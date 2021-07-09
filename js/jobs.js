@@ -267,35 +267,18 @@ function conductData() {
 
     processData(data);
   } else {
-    // Check if our endpoint is available
-    urlExists(endpoint + '?limit=1', function(exists) {
-      try {
-        if (exists) {
 
-          outputDebug('[job module] endpoint exists, fetching results');
-
-          endpoint += '?limit=1500';
+    try {
+      endpoint += '?limit=1500';
     
-          fetchData(endpoint);
-        }
-        
-        // If not, fall back on the local resour e
-        if (!exists) {
-          console.warn('[job module] original endpoint unavailable, reverting to local feed!');
-          endpoint = fallback;
-    
-          fetchData(endpoint);
-        }
-      } catch (error) {
-        console.warn('[job module] an error occurred, falling back to local feed! ', error);
-        // expected output: ReferenceError: nonExistentFunction is not defined
-        // Note - error messages will vary depending on browser
-        endpoint = fallback;
-    
-        fetchData(endpoint);
-      }
+      fetchData(endpoint);
+    } catch(err) {
       
-    });
+      console.warn('[job module] original endpoint unavailable, reverting to local feed! ', err);
+      endpoint = fallback;
+
+      fetchData(endpoint);
+    }
 
     // Stone Age Method (JSONP)
     // function stoneAgeFetch(resp) {
