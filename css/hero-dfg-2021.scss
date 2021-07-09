@@ -1,0 +1,139 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+#hero-dfg-2021 {
+  background: #162f65 no-repeat center center / cover;
+  background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-720w.jpg"), linear-gradient(30deg, #162f65, #746b61);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: padding-top 0.25s ease-in-out, padding-bottom 0.25s ease-in-out;
+}
+
+.hero-promo .content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.hero-promo header {
+  position: relative;
+  z-index: 1;
+  background-color: $gym-white;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: background-color 0.5s ease-in-out;
+  padding: 2.4em;
+  margin: 0 auto 2em;
+}
+
+.hero-promo header h1 {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-weight: bolder;
+  font-size: 3.428571428571429em;
+  line-height: 1.125;
+  color: $gym-dark-gray-2;
+  letter-spacing: -0.05rem;
+  word-spacing: -0.2rem;
+  margin-top: -1rem;
+  margin-bottom: -0.5rem;
+}
+
+.hero-promo header h1::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 0;
+  background: #746b61 no-repeat center center / cover;
+  background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-720w.jpg");
+  padding-bottom: 50%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  transition: padding-bottom 0.25s ease-in-out;
+}
+
+.hero-promo .content .date {
+  color: #fe6720;
+}
+
+.hero-promo p {
+  font-family: $gym-text-font-stack;
+  font-size: 1.142857142857143em;
+  line-height: 1.45;
+  color: $gym-dark-gray-2;
+  margin-top: 0.525em;
+}
+
+.hero-promo .cta {
+  margin-top: 2em;
+}
+
+@include breakpoint(36em, min) {
+
+  #hero-dfg-2021 {
+    padding-top: 1.75em;
+    padding-bottom: 1.75em;
+  }
+
+  .hero-promo header {
+    max-width: 41em;
+  }
+
+}
+
+@include breakpoint(48em, min) {
+
+  #hero-dfg-2021 {
+    background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-1440w.jpg"), currentColor;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+
+  .hero-promo header {
+    float: left;
+  }
+
+  .hero-promo header h1::after {
+    padding-bottom: 0;
+    background: transparent none;
+  }
+
+}
+
+@media
+(min-width: 76em),
+(min-width: 76em) and
+(min-resolution: 200dpi),
+(min-width: 76em) and
+(min-resolution: 1.25dppx) {
+
+  #hero-dfg-2021 {
+    background-image: url("{{ site.url }}/home/img/hero-dfg-2021/designing-for-good-2021-hero-2000w.jpg"), currentColor;
+  }
+
+}
+
+.hero-promo a.gym-button-secondary {
+  width: auto !important;
+  background-color: #1877C8;
+  padding-left: 2.2em;
+  padding-right: 2.2em;
+  vertical-align: bottom;
+}
+
+.hero-promo a.gym-button-secondary b {
+  color: $gym-white !important;
+}
+
+.hero-promo a.gym-button-secondary:hover,
+.hero-promo a.gym-button-secondary:focus {
+  background-color: $gym-white !important;
+}
+
+.hero-promo a.gym-button-secondary:hover b,
+.hero-promo a.gym-button-secondary:focus b {
+  color: $gym-black !important;
+}
+
+.hero-promo .no-wrap {
+  white-space: nowrap;
+}
