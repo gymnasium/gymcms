@@ -60,27 +60,6 @@ Array.prototype.shuffle = function () {
   return input;
 }
 
-// if-url-exist.js v1 via @https://stackoverflow.com/questions/10926880/using-javascript-to-detect-whether-the-url-exists-before-display-in-iframe
-function urlExists(url, callback) {
-  let request = new XMLHttpRequest;
-  request.open('GET', url, true);
-  request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-  request.setRequestHeader('Accept', '*/*');
-  request.onprogress = function(event) {
-    let status = event.target.status;
-    let statusFirstNumber = (status).toString()[0];
-    switch (statusFirstNumber) {
-      case '2':
-        request.abort();
-        return callback(true);
-      default:
-        request.abort();
-        return callback(false);
-    };
-  };
-  request.send('');
-};
-
 // Create IE + others compatible event handler via @https://davidwalsh.name/window-iframe
 var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
 var eventer = window[eventMethod];
@@ -93,7 +72,6 @@ function getUrlParameter(name) {
   var results = regex.exec(location.search);
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
-
 
 // function to help parse data options
 function parseValue(str) {
@@ -125,6 +103,7 @@ var debug = getUrlParameter('debug') ? true : false;
 var data;
 var endpoint;
 var fallback;
+var endpointExists = false;
 var url = new URL(window.location.href);
 const jobsContainer = document.getElementById('jobs-container');
 const msgContainer = document.getElementById('messages');
@@ -222,7 +201,13 @@ function store(name,data) {
 }
 
 function handleEvent(e) {
-  console.log(`${e.type}: ${e.loaded} bytes transferred\n`);
+  outputDebug(`[job module] ${e.type}: ${e.loaded} bytes transferred\n`)
+
+  if (e.type === 'error' || e.type === 'abort') {
+    endpointExists = false;
+  } else if (e.type === 'loadend') {
+    endpointExists = true;
+  }
 }
 
 function addListeners(xhr) {
@@ -234,13 +219,24 @@ function addListeners(xhr) {
   xhr.addEventListener('abort', handleEvent);
 }
 
+function testEndpoint(url, cb) {
+  var request = new XMLHttpRequest();
+
+  addListeners(request);
+  request.open('GET', url, true);
+
+  request.send();
+
+  if (cb) {
+    cb();
+  }
+}
+
 // AJAX fetch
 function fetchData(url) {
 
   var request = new XMLHttpRequest();
-
-  addListeners(request);
-
+  
   request.open('GET', url, true);
 
   request.send();
@@ -276,8 +272,6 @@ function fetchData(url) {
     // There was a connection error of some sort
     showMsg('error-connection');
   };
-
-  
 }
 
 function conductData() {
@@ -291,12 +285,23 @@ function conductData() {
   } else {
 
     try {
-      endpoint += '?limit=1500';
-    
-      fetchData(endpoint);
+      testEndpoint(endpoint + '?limit=1', function(){
+        outputDebug(`[job module] endpoint ${endpoint} exists: ${endpointExists}`)
+        if (endpointExists) {
+          endpoint += '?limit=1500';
+        } else {
+          endpoint = fallback;
+        }
+
+        outputDebug(`[job module] fetching ${endpoint}`);
+
+        fetchData(endpoint);
+      });
+
     } catch(err) {
 
-      console.warn('[job module] original endpoint unavailable, reverting to local feed! ', err);
+      console.warn('[job module] some type of error occurred, reverting to local feed! ', err);
+
       endpoint = fallback;
 
       fetchData(endpoint);
