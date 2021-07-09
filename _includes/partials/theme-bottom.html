@@ -4,8 +4,8 @@
   {%- assign geolocator_src = "?gymdev=true" | prepend: geolocator_src -%}
 {%- endif -%}
 
-<script async defer src="{{site.url}}/js/gymnasium.js?{{ site.time | date:'%s' }}"></script>
+<script async src="{{site.url}}/js/gymnasium.js?{{ site.time | date:'%s' }}"></script>
 
-<iframe id="geolocator" src="{{ geolocator_src }}" frameborder="0" style="width:1px;height:1px;visibility:hidden;"></iframe>
-
-
+{%- comment -%} Disabling for now...
+<iframe id="geolocator" src="{{ geolocator_src }}" frameborder="0" style="width:1px;height:1px;visibility:hidden;display:none;"></iframe>
+{%- endcomment -%}
