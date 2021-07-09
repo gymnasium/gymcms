@@ -1,8 +1,20 @@
 # Define which paths this specific [[headers]] block will cover.
 [[headers]]
-  for = "/*"
+  for = "/favicon/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+[[headers]]
+  for = "/feeds/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+[[headers]]
+  for = "*.js" # js files should be set this way
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+[[headers]]
+  for = "*.css" # css files too
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
 
 # dev branch build
 # https://dev--gymcms.netlify.com/
