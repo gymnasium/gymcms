@@ -677,6 +677,14 @@ Creation Date: 12/02/2015
 </script>
 <!-- Performance beacon for onload times -->
 
-  {%- include build-timestamp.html -%}
+
+
+
+
+  <!-- //
+  Generated at: {{ site.time }}
+  Served from: {{ page.url | absolute_url }}
+  Git Hash: {{ site.data['hash']}}
+  // -->
   </body>
 </html>
