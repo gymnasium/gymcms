@@ -1,3 +1,12 @@
+[[headers]]
+  for = "/favicon/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+[[headers]]
+  for = "/feeds/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+
 # dev branch build
 # https://dev--gymcms.netlify.com/
 [context.dev]
