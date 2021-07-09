@@ -60,19 +60,6 @@
     {%- comment -%}Include meta components for DRYness{%- endcomment -%}
     {%- include /partials/theme-head-meta.html -%}
 
-    <link rel="preload" href="{{site.gymurl}}/static/gymnasium/fonts/brandon_reg-webfont.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="{{site.gymurl}}/static/gymnasium/fonts/brandon_reg-webfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{site.gymurl}}/static/gymnasium/fonts/brandon_reg_it-webfont.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="{{site.gymurl}}/static/gymnasium/fonts/brandon_reg_it-webfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{site.gymurl}}/static/gymnasium/fonts/brandon_bld-webfont.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="{{site.gymurl}}/static/gymnasium/fonts/brandon_bld-webfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{site.gymurl}}/static/gymnasium/fonts/brandon_bld_it-webfont.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="{{site.gymurl}}/static/gymnasium/fonts/brandon_bld_it-webfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{site.gymurl}}/static/gymnasium/fonts/brandon_blk-webfont.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="{{site.gymurl}}/static/gymnasium/fonts/brandon_blk-webfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{site.gymurl}}/static/gymnasium/fonts/brandon_blk_it-webfont.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="{{site.gymurl}}/static/gymnasium/fonts/brandon_blk_it-webfont.woff2" as="font" type="font/woff2" crossorigin>
-
     <!-- insert typekit font references -->
     <script async src="//use.typekit.net/rhf0qta.js"></script>
     <script>
@@ -90,10 +77,10 @@
     {%- comment -%}Include CSS components for DRYness{%- endcomment -%}
     {%- include /partials/theme-head-css.html -%}
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script defer src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"></script>
     <script async
       src="{{site.gymurl}}/static/gymnasium/js/cookiebanner.0960edf8dcf3.js"
       id="cookiebanner"
@@ -114,7 +101,6 @@
       // is in use
 
       $(function () {
-        iFrameResize({ log: false }, ".gymnasium-resizable-iframe");
 
         // This function returns Internet Explorer's major version number,
         // or 0 for others. It works by finding the "MSIE " string and
@@ -194,7 +180,7 @@
     TODO: probably removing this from the theme for reasons.
     <div class="window-wrap" dir="ltr"></div>
     {%-endcomment-%}
-    
+
       <a class="nav-skip sr-only sr-only-focusable" href="#main"
         >Skip to main content</a
       >
