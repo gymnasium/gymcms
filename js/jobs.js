@@ -221,12 +221,29 @@ function store(name,data) {
   }
 }
 
+function handleEvent(e) {
+  console.log(`${e.type}: ${e.loaded} bytes transferred\n`);
+}
+
+function addListeners(xhr) {
+  xhr.addEventListener('loadstart', handleEvent);
+  xhr.addEventListener('load', handleEvent);
+  xhr.addEventListener('loadend', handleEvent);
+  xhr.addEventListener('progress', handleEvent);
+  xhr.addEventListener('error', handleEvent);
+  xhr.addEventListener('abort', handleEvent);
+}
+
 // AJAX fetch
 function fetchData(url) {
 
   var request = new XMLHttpRequest();
 
+  addListeners(request);
+
   request.open('GET', url, true);
+
+  request.send();
 
   request.onload = function() {
 
@@ -255,7 +272,12 @@ function fetchData(url) {
     showMsg('error-connection');
   };
 
-  request.send();
+  request.onabort = function() {
+    // There was a connection error of some sort
+    showMsg('error-connection');
+  };
+
+  
 }
 
 function conductData() {
@@ -273,7 +295,7 @@ function conductData() {
     
       fetchData(endpoint);
     } catch(err) {
-      
+
       console.warn('[job module] original endpoint unavailable, reverting to local feed! ', err);
       endpoint = fallback;
 
