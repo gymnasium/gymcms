@@ -41,7 +41,7 @@ TODO: this title block doesn't do anything when rendered in the main site. We sh
   <div class="row">
     <div class="col-md-12">
 
-<link rel="stylesheet" href="{{ site.url }}/css/webinars.css">
+<link rel="stylesheet" href="{{ site.url }}/css/webinars.css?{{ site.time | date:'%s' }}">
 
 <div class="container">
   <main class="content webinar-content" id="main" role="main">
