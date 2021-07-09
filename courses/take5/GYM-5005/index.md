@@ -35,5 +35,5 @@ And then for the second one, *type* the following: `@supports (mix-blend-mode: d
 *Thanks for watching.* If you like this video and want to learn more, well, [check out our other Take 5 videos][2] as well as [the rest of our gig at Gymnasium][3]
 
 [1]: https://codepen.io/josborn/pen/bydwJo
-[2]: https://thegymnasium.com/take5
+[2]: https://thegymnasium.com/courses/take5
 [3]: https://thegymnasium.com/courses

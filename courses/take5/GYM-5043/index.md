@@ -25,5 +25,5 @@ If I use the slider to make the text a little bit lighter, you can see now that 
 For more tips, check out our [**Resources**](#tutorial-resources) section for links to articles and other tutorials that can help you expand on the concepts we’ve covered here. Thanks so much for watching. Don’t forget to check out [the other Take 5 videos][2], as well as the entire [course catalog][3] here at Gymnasium.
 
 [1]: https://webaim.org/resources/contrastchecker/
-[2]: https://thegymnasium.com/take5
+[2]: https://thegymnasium.com/courses/take5
 [3]: https://thegymnasium.com/courses

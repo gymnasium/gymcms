@@ -38,5 +38,5 @@ In our `clip` class, if you add the text shadow property and give it some values
 [2]: https://codepen.io/josborn/pen/YMVdVe
 [3]: https://www.heropatterns.com
 [4]: https://www.svgbackgrounds.com
-[5]: https://thegymnasium.com/take5
+[5]: https://thegymnasium.com/courses/take5
 [6]: https://thegymnasium.com/courses

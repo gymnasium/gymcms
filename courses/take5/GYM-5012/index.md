@@ -98,5 +98,5 @@ On one hand, a developer could easily recreate this layout using any technique s
 
 [1]: https://codepen.io/josborn/pen/VwwvaVq
 [2]: https://open.nytimes.com/css-grid-for-designers-f74a883b98f5
-[3]: https://thegymnasium.com/take5
+[3]: https://thegymnasium.com/courses/take5
 [4]: https://thegymnasium.com/courses
