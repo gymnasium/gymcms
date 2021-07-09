@@ -6,6 +6,8 @@
   {%- include partials/test-top.html -%}
 {%- endif -%}
 
+<div class="content-wrapper main-container" id="content">
+
 <div class="home">
 
   {%- if hero.live_coding == true -%}
@@ -57,6 +59,8 @@
   
   {%- include home/as-seen-in.html -%}
 </div><!-- .home -->
+
+</div><!-- #content.content-wrapper.main-container -->
 
 {%- if jekyll.environment == "development" -%}
   {%- include partials/test-bottom.html -%}

@@ -30,7 +30,12 @@ video_ID: {{ webinar.video_ID }}
 {%- elsif webinar.register -%}
 {%- assign page_title = "Webinar Registration | The Gymnasium" -%}
 {% endif %}
+{%- comment -%}
+TODO: this title block doesn't do anything when rendered in the main site. We should probably remove it, because all the title logic is in the open edx theme.
+{%- endcomment -%}
 <title>{{ page_title }}</title>
+
+<div class="content-wrapper main-container" id="content">
 
 <div class="container">
   <div class="row">
@@ -119,6 +124,12 @@ video_ID: {{ webinar.video_ID }}
   </div><!-- .row -->
 </div><!-- .container -->
 
+</div><!-- #content.content-wrapper.main-container -->
+
+
+{%- comment -%}
+TODO: probably combine the contents this JS file with the main gymnasium.js file being served from gymcms. Might need to scope stuff appropriately to prevent collisions.
+{%- endcomment -%}
 <script src="{{ site.url }}/js/functions.js" async></script>
 
 {%- if jekyll.environment == "development" -%}

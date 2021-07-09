@@ -9,6 +9,8 @@
 {% include take5/detail-opener-js.html %}
 {% assign course = site.data.take5[page.course_ID] %}
 
+<div class="content-wrapper main-container" id="content"></div>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
@@ -177,6 +179,8 @@
     </div><!-- .col-md-12 -->
   </div><!-- .row -->
 </div><!-- .container -->
+
+</div><!-- #content.content-wrapper.main-container -->
 
 {%- if jekyll.environment == "development" -%}
     {%- include partials/test-bottom.html -%}

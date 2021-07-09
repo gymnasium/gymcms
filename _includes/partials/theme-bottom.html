@@ -1,11 +1,17 @@
+{%- comment -%}
+This gets included at the bottom of the footer...
+{%- endcomment -%}
 {%- assign geolocator_src = "/apps/gym/geolocator" | prepend: site.aqassetsurl -%}
 
 {%- if site.environment == "local" -%}
   {%- assign geolocator_src = "?gymdev=true" | prepend: geolocator_src -%}
 {%- endif -%}
 
-<script async defer src="{{site.url}}/js/gymnasium.js?{{ site.time | date:'%s' }}"></script>
-
+<script async src="{{site.url}}/js/gymnasium.js?{{ site.time | date:'%s' }}"></script>
+{%-comment-%}
+TODO: commenting this out for now, will try to add it back via asynchronous JS
 <iframe id="geolocator" src="{{ geolocator_src }}" frameborder="0" style="width:1px;height:1px;visibility:hidden;"></iframe>
+{%-endcomment-%}
+
 
 
