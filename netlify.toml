@@ -3,20 +3,21 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
-  for = "/feeds/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
+
 # dev branch build
 # https://dev--gymcms.netlify.com/
 [context.dev]
   command = "JEKYLL_ENV=development bundle exec jekyll build --config _dev_config.yml"
+
 # staging branch build
 # https://staging.thegymcms.com/
 [context.staging]
   command = "JEKYLL_ENV=staging bundle exec jekyll build"
+
 # Deploy preview build
 [context.deploy-preview]
   command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _config_netlify.yml; JEKYLL_ENV=staging bundle exec jekyll build --config _config.yml,_config_netlify.yml"
+
 # production branch build
 # https://thegymcms.com/
 [context.production]
