@@ -96,7 +96,9 @@
 {%- if page.robots -%}
   <meta name="robots" content="{{page.robots}}">
 {%- endif -%}
+
 {%- include meta-static.html -%}
-{%- include build-timestamp.html -%}
 
 {{content}}
+
+{%- include build-timestamp.html -%}
