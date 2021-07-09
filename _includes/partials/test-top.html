@@ -41,11 +41,11 @@
     ></script>
 
 
-    <meta property="og:url" content="{{site.gymurl}}" />
+    <meta property="og:url" content="https://thegymnasium.com/" />
     <meta property="og:title" content="Aquent Gymnasium" />
     <meta
       property="og:image"
-      content="{{site.gymurl}}/static/gymnasium/images/social-share-400.f9715ec47ea8.png"
+      content="https://thegymnasium.com/static/gymnasium/images/social-share-400.f9715ec47ea8.png"
     />
 
     <meta
@@ -61,7 +61,7 @@
     {%- include /partials/theme-head-meta.html -%}
 
     <!-- insert typekit font references -->
-    <script async src="//use.typekit.net/rhf0qta.js"></script>
+    <script src="//use.typekit.net/rhf0qta.js"></script>
     <script>
       try {
         Typekit.load();
@@ -77,11 +77,14 @@
     {%- comment -%}Include CSS components for DRYness{%- endcomment -%}
     {%- include /partials/theme-head-css.html -%}
 
-    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script defer src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
 
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"></script>
-    <script async
+    <!-- iframe resize script for responsive job modules-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.0/iframeResizer.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.22.0/prism.min.js"></script>
+    <script
       src="{{site.gymurl}}/static/gymnasium/js/cookiebanner.0960edf8dcf3.js"
       id="cookiebanner"
       data-link="#f89820"
@@ -94,13 +97,17 @@
       var CW_ENV = "cw-beta";
     </script>
 
-    <script defer src="{{site.gymurl}}/static/gymnasium/js/gymnasium.js"></script>
+    <script src="{{site.gymurl}}/static/gymnasium/js/gymnasium.js"></script>
+
+    {%- comment -%}Include JS components for DRYness{%- endcomment -%}
+    {%- include /partials/theme-head-js.html -%}
 
     <script>
       // check for unsupported browsers; display warning message if an old browser
       // is in use
 
       $(function () {
+        iFrameResize({ log: false }, ".gymnasium-resizable-iframe");
 
         // This function returns Internet Explorer's major version number,
         // or 0 for others. It works by finding the "MSIE " string and
@@ -176,11 +183,7 @@
 
   <body class="ltr gymnasium-home lang_en">
     <div id="page-prompt"></div>
-    {%-comment-%}
-    TODO: probably removing this from the theme for reasons.
-    <div class="window-wrap" dir="ltr"></div>
-    {%-endcomment-%}
-
+    <div class="window-wrap" dir="ltr">
       <a class="nav-skip sr-only sr-only-focusable" href="#main"
         >Skip to main content</a
       >
@@ -311,7 +314,11 @@
         </div>
       </header>
 
-      {%- include build-timestamp.html -%}
+      <!-- //
+Generated at: 2021-05-26 09:20:28 -0400
+Served from: https://thegymcms.com/system-status/
+Git Hash: 5ef0c65
+// -->
 
       <script>
         $(function () {
@@ -334,3 +341,5 @@
       </script>
 
       <div class="marketing-hero"></div>
+
+      <div class="content-wrapper main-container" id="content">
