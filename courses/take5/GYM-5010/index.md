@@ -68,6 +68,6 @@ Oh and one more thing, it turns out that updating the intranet’s server will h
 *Thanks for watching.* Be sure to [check out the rest of the series][2] as well as [our entire course catalog at Gymnasium][3].
 
 [1]: https://miro.com
-[2]: https://thegymnasium.com/take5
+[2]: https://thegymnasium.com/courses/take5
 [3]: https://thegymnasium.com/courses
 

@@ -152,5 +152,5 @@ And now you’ve got a responsive layout that’s built not just with flexible g
 
 [1]: https://cdpn.io/ZEbXxeX
 [2]: https://cdpn.io/bGVovRp
-[3]: https://thegymnasium.com/take5
+[3]: https://thegymnasium.com/courses/take5
 [4]: https://thegymnasium.com/courses

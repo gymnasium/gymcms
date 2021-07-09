@@ -29,5 +29,5 @@ So you might be wondering where else feature queries come in useful. One popular
 *So that’s it.* **CSS Feature Queries** will likely become more and more useful as the web continues to become more complex. I hope you learned a little bit about how they worked. If you like this video and want to learn more stuff, be sure to [check out our other Take 5 videos][1] as well as [the rest of the course catalog at Gymnasium][2].
 
 [1]: https://codepen.io/josborn/pen/WWzBwO
-[2]: https://thegymnasium.com/take5
+[2]: https://thegymnasium.com/courses/take5
 [3]: https://thegymnasium.com/courses

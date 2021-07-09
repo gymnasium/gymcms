@@ -87,5 +87,5 @@ In this example, you note that 42 people agreed that the items “Patient Billin
 
 [1]: https://www.interaction-design.org/literature/article/the-pros-and-cons-of-card-sorting-in-ux-research
 [2]: https://www.optimalworkshop.com/optimalsort
-[3]: https://thegymnasium.com/take5
+[3]: https://thegymnasium.com/courses/take5
 [4]: https://thegymnasium.com/courses
