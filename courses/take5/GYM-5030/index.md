@@ -29,5 +29,5 @@ But there’s still one more issue to take care of. Remember that semitransparen
 But let’s change the behavior to **Close Overlay**. And we want that delay to be super quick. So let’s go back up and change this to **10ms**. As a result, in preview, when that confirmation message fades out, we end up on our original screen. *That’s it.* Thank you, and don’t forget to [watch our other Take 5 video tutorials][2] and [check out our entire course catalog at Gymnasium][3].
 
 [1]: https://gymnasium.github.io/take5/gym-5030.zip
-[2]: https://thegymnasium.com/take5
+[2]: https://thegymnasium.com/courses/take5
 [3]: https://thegymnasium.com/courses

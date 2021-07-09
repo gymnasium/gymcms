@@ -38,5 +38,5 @@ For more tips, check out our [**Resources**](#tutorial-resources) section for li
 
 [1]: https://epilepsy.com/learn/triggers-seizures/photosensitivity-and-seizures
 [2]: https://w3.org/tr/understanding-wcag20/seizure-does-not-violate.html
-[3]: https://thegymnasium.com/take5
+[3]: https://thegymnasium.com/courses/take5
 [4]: https://thegymnasium.com/courses
