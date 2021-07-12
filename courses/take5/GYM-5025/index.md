@@ -49,5 +49,5 @@ But again, check out our **Resources** section for links to articles on how to h
 [3]: https://seesparkbox.com/foundry/naming_css_stuff_is_really_hard
 [4]: https://caniuse.com/#feat=css-variables
 [5]: https://jhildenbiddle.github.io/css-vars-ponyfill/#/
-[6]: https://thegymnasium.com/take5
+[6]: https://thegymnasium.com/courses/take5
 [7]: https://thegymnasium.com/courses

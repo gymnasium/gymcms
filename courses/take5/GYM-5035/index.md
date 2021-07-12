@@ -116,5 +116,5 @@ We’ve covered a lot of ground in this lesson, showing different techniques for
 
 [1]: https://cdpn.io/ExVwEop
 [2]: https://cdpn.io/WNQZzJR
-[3]: https://thegymnasium.com/take5
+[3]: https://thegymnasium.com/courses/take5
 [4]: https://thegymnasium.com/courses
