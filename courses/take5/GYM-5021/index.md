@@ -43,5 +43,5 @@ Finally, be sure to [check out the rest of our Take 5 tutorials][4], as well as 
 [1]: https://codepen.io/josborn/pen/arwyMP
 [2]: https://unicode-table.com
 [3]: https://codepen.io/josborn/pen/byYLGG
-[4]: https://thegymnasium.com/take5
+[4]: https://thegymnasium.com/courses/take5
 [5]: https://thegymnasium.com/courses

@@ -32,5 +32,5 @@ Back in your project, *copy* the HSL color value here, *scroll* down to **line 8
 
 [1]: https://codepen.io/josborn/pen/QWwbxyM
 [2]: https://codepen.io/josborn/pen/JjooGVQ
-[3]: https://thegymnasium.com/take5
+[3]: https://thegymnasium.com/courses/take5
 [4]: https://thegymnasium.com/courses

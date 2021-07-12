@@ -37,5 +37,5 @@ So back in the project, go ahead and change all of your animation speeds to **50
 *Thanks* and don’t forget to [watch our other Take 5 video tutorials][2] and [check out the entire course catalog at Gymnasium][3].
 
 [1]: https://gymnasium.github.io/take5/gym-5029.zip
-[2]: https://thegymnasium.com/take5
+[2]: https://thegymnasium.com/courses/take5
 [3]: https://thegymnasium.com/courses

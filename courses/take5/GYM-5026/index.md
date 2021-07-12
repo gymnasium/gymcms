@@ -92,5 +92,5 @@ Your changes will be pushed and shortly you will see the updates again. You’ll
 [3]: https://code.visualstudio.com
 [4]: https://thegymnasium.com/courses/GYM/006/0/about
 [5]: https://en.wikipedia.org/wiki/Shoebill
-[6]: https://thegymnasium.com/take5
+[6]: https://thegymnasium.com/courses/take5
 [7]: https://thegymnasium.com/courses

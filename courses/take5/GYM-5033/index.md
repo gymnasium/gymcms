@@ -135,5 +135,5 @@ For more tips, check out our [**Resources**](#tutorial-resources) section for li
 [1]: https://webaim.org/techniques/keyboard/
 [2]: https://cdpn.io/ExVXrEQ
 [3]: https://cdpn.io/PoPjVyo
-[4]: https://thegymnasium.com/take5
+[4]: https://thegymnasium.com/courses/take5
 [5]: https://thegymnasium.com/courses

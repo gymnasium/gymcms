@@ -29,5 +29,5 @@ Go ahead and *press* the **Preview** button. *Click* anywhere in the bottom left
 *That’s it. Thanks for watching.* If you like this Take 5 clip, be sure to [check out the rest of the series][2], as well as [the entire course catalog at Gymnasium][3].
 
 [1]: https://gymnasium.github.io/take5/gym-5015.zip
-[2]: https://thegymnasium.com/take5
+[2]: https://thegymnasium.com/courses/take5
 [3]: https://thegymnasium.com/courses
