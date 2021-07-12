@@ -16,13 +16,8 @@
           <div class="content-wrapper" id="content">  
     {{ content | markdownify }}
   </div>
-    <!-- //
-Generated at: {{ site.time }}
-Served from: {{ page.url | absolute_url }}
-Git Hash: {{ site.data['hash']}}
-// -->
-
+  {%- include build-timestamp.html -%}
 
 </main>
-  </body>
+</body>
 </html>
