@@ -4,6 +4,22 @@
 /// Description:  library containing helper functions used on Gymnasium
 /// Author:       @mbifulco && @rediris
 
+// Document 
+document.writeText = document.write;
+
+document.write = function(parameter) {
+  if (!parameter) return; 
+  var scriptPattern = /<script.*?src=['|"](.*?)['|"]/;
+  if (scriptPattern.test(parameter)) {
+    var srcAttribute = scriptPattern.exec(parameter)[1];
+    var script = document.createElement('script');
+    script.src = srcAttribute;
+    document.head.appendChild(script); 
+  } else {
+    document.writeText(parameter);
+  }   
+};
+
 class gym {
   constructor() {}
 
