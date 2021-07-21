@@ -23,6 +23,28 @@ document.write = function(parameter) {
 class Gymnasium {
   constructor() {}
 
+  // Show/hide the caret in the nav login/logout dropdown
+  dropdownCaret() {
+    var button = document.getElementById('dropdown');
+      
+    if (typeof button !== 'undefined' && button !== null) {
+      var caret = button.querySelector('.caret');
+      var menu = document.getElementById('dropdown-menu');
+
+      button.addEventListener('click', function(event) {
+        console.log('logout button clicked ', event);
+
+        if (menu.style.display !== 'inline') {
+          menu.style.display = 'inline';
+          caret.classList.add('hide');
+        } else {
+          menu.style.display = 'none';
+          caret.classList.remove('hide');
+        }
+      }, false);
+    }
+  }
+
   ///get a URL parameter passed in with HTTP GET
   ///NOTE: this function is not case sensitive
   getUrlParameter(sParam) {
@@ -158,3 +180,7 @@ class Gymnasium {
 
 // Initialize
 var gym = new Gymnasium();
+
+
+// initialize nav caret
+gym.dropdownCaret();
