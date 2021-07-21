@@ -1,3 +1,7 @@
+{%- comment -%}
+TODO: this component will be deprecated in favor of passing meta tags via the meta include
+{%- endcomment -%}
+
 {%- assign jobs_endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl | append: "?limit=1500" -%}
 {%- assign geolocator_src = "/apps/gym/geolocator" | prepend: site.aqassetsurl -%}
 {%- if site.environment == "local" -%}
