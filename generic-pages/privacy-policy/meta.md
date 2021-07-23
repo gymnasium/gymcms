@@ -1,5 +1,5 @@
 ---
-layout: meta-large
+layout: meta
 permalink: /privacy-policy/meta/
 page_title: "Privacy Policy | Gymnasium"
 catalog: false

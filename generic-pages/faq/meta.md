@@ -1,5 +1,5 @@
 ---
-layout: meta-large
+layout: meta
 permalink: /faq/meta/
 page_title: "FAQ | Gymnasium"
 catalog: false

@@ -1,5 +1,5 @@
 ---
-layout: meta-large
+layout: meta
 permalink: /about/meta/
 page_title: "About | Gymnasium"
 catalog: false

@@ -1,5 +1,5 @@
 ---
-layout: meta-large
+layout: meta
 permalink: /support/meta/
 page_title: "Support | Gymnasium"
 catalog: false
