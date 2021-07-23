@@ -410,16 +410,17 @@ class Gymnasium {
 // Initialize
 var gym = new Gymnasium();
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  // Do wicked stuff to course tabs
-  gym.courseTabs();
+// Do wicked stuff to course tabs
+gym.courseTabs();
 
-  // initialize nav caret
-  gym.dropdownCaret();
+// initialize nav caret
+gym.dropdownCaret();
+
+// check ie browser version
+gym.ieCheck();
+
+document.addEventListener('DOMContentLoaded', (event) => {
 
   // check exam
   gym.exam();
-
-  // check ie browser version
-  gym.ieCheck();
 });
