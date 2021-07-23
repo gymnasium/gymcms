@@ -90,7 +90,6 @@ class Gymnasium {
 
     if (typeof examProblem !== 'undefined' && examProblem !== null) {
       
-
       examProblem.onload = setTimeout(function() {
         var [test] = $('.problem-progress').text().split(' ');
   
@@ -235,7 +234,7 @@ class Gymnasium {
         }
       
         // scroll to show the results message
-        $('#check-button').click(function() {
+        $('#check-button').on('click', function() {
           $('#course_passed_message')[0].scrollIntoView();
         });
       }, 100);
@@ -411,15 +410,16 @@ class Gymnasium {
 // Initialize
 var gym = new Gymnasium();
 
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Do wicked stuff to course tabs
+  gym.courseTabs();
 
-// Do wicked stuff to course tabs
-gym.courseTabs();
+  // initialize nav caret
+  gym.dropdownCaret();
 
-// initialize nav caret
-gym.dropdownCaret();
+  // check exam
+  gym.exam();
 
-// check exam
-gym.exam();
-
-// check ie browser version
-gym.ieCheck();
+  // check ie browser version
+  gym.ieCheck();
+});
