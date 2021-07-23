@@ -89,6 +89,10 @@ class Gymnasium {
     const examProblem = document.getElementById('exam-problem');
 
     if (typeof examProblem !== 'undefined' && examProblem !== null) {
+      console.log('exam function active');
+      
+      let id = examProblem.getAttribute('data-id');
+
       let progress_status_check; // this is the interval we'll set to track status on this problem
 
       // this helper function gets a ton of information about the score for this particular problem
@@ -214,7 +218,7 @@ class Gymnasium {
         });
     
         observer.observe(
-          document.getElementById('${ id }-problem-progress'),
+          document.getElementById(id + '-problem-progress'),
           {
             characterData: false,
             attributes: false,
