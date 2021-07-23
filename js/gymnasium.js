@@ -23,6 +23,47 @@ document.write = function(parameter) {
 class Gymnasium {
   constructor() {}
 
+  courseTabs() {
+    /* this is a nonsense hack to make courseware subnavigation look like
+    what we want it to look like until we move to Cypress
+    TODO: Unhackify this. */
+
+    $('.course-tabs li a b:contains("Course")').each(function(idx, value){
+      value.innerHTML = "Lessons";
+    });
+  
+    $('.course-tabs li a b:contains("Home")').each(function(idx,value){
+      value.innerHTML = "Syllabus";
+    });
+  
+    $('.course-tabs li a b:contains("Discussion")').each(function(idx, value) {
+      value.innerHTML = "Forum";
+    });
+  
+    // make sure lessons tab comes first
+    var syllabusTab = $('.course-tabs li:contains("Lessons")');
+
+    $(syllabusTab).prependTo(
+      $(syllabusTab).parent()
+    );
+  
+    $('.course-tabs li a:contains("Forum")').each(function(idx,value){
+    /* TODO: Unhack this silly logic to hide forum tab for gym shorts
+  
+      we're looking at the href property of this anchor to see if it contains
+      a course link that has "Gym/00" in it.  All gym shorts start with "0"
+      so that should hide this link. Note that this does _not_ disable
+      forums... those pages will still exist, but we won't like to them. */
+      if ($(value).attr("href").toLowerCase().indexOf("gym/0") > 0)
+      {
+        $(value).parent().hide();
+      }
+    })
+  
+    $('.course-tabs li:contains("Progress")').hide();
+    $('.course-tabs').show();
+  }
+
   // Show/hide the caret in the nav login/logout dropdown
   dropdownCaret() {
     var button = document.getElementById('dropdown');
@@ -32,8 +73,6 @@ class Gymnasium {
       var menu = document.getElementById('dropdown-menu');
 
       button.addEventListener('click', function(event) {
-        console.log('logout button clicked ', event);
-
         if (menu.style.display !== 'inline') {
           menu.style.display = 'inline';
           caret.classList.add('hide');
@@ -56,6 +95,37 @@ class Gymnasium {
       if (sParameterName[0].toLowerCase() === sParam.toLowerCase()) {
         return sParameterName[1] === undefined ? true : sParameterName[1];
       }
+    }
+  }
+
+  /* This function returns Internet Explorer's major version number,
+  or 0 for others. It works by finding the "MSIE " string and
+  extracting the version number following the space, up to the decimal
+  point, ignoring the minor version number
+  for more info, see: https://support.microsoft.com/en-us/kb/167820 */
+  ieVersion() {
+    var ua = window.navigator.userAgent
+    var msie = ua.indexOf ( "MSIE " )
+
+    // If Internet Explorer, return version number
+    if ( msie > 0 ) {
+      return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+    } else {
+      // If another browser, return 0
+      return 0
+    }
+  }
+
+  displayBrowserWarning() {
+    document.getElementById('browserWarning').style.display = 'block';
+  }
+
+  ieCheck() {
+    var version = gym.ieVersion();
+
+    // make sure that we are using IE > 9
+    if (version > 0 && version < 11) {
+      gym.displayBrowserWarning();
     }
   }
 
@@ -184,3 +254,8 @@ var gym = new Gymnasium();
 
 // initialize nav caret
 gym.dropdownCaret();
+
+// check ie browser version
+gym.ieCheck();
+
+gym.courseTabs();
