@@ -89,9 +89,13 @@ class Gymnasium {
     const examProblem = document.getElementById('exam-problem');
 
     if (typeof examProblem !== 'undefined' && examProblem !== null) {
-      console.log('exam function active');
+      
 
       examProblem.onload = setTimeout(function() {
+        var [test] = $('.problem-progress').text().split(' ');
+  
+        console.log('grade fraction: ' + [test]);
+        console.log('exam function active');
         
         let id = examProblem.getAttribute('data-id');
   
@@ -122,8 +126,6 @@ class Gymnasium {
           //    80/100 Points (Graded)
           // so we use .split(' ') to separate the fraction from the rest
           var [fraction] = $('.problem-progress').text().split(' ');
-  
-          console.log('grade fraction: ' + [fraction]);
       
           // next we split the fraction in half by "/" to get the numerator and denominator
           var [numerator, denominator] = fraction.split('/');
