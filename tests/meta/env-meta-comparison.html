@@ -40,9 +40,9 @@ td.success {
 
 <pre>Environment: <b>{{ jekyll.environment | upcase }}</b></pre>
 
+{% assign sortedpages = site.pages | where_exp: 'page', "page.url contains '/courses/'" | sort: "url" %}
 
-{% assign sortedpages = site.pages | sort: "url" %}
-
+<h2>Courses</h2>
 <table border="0" style="width:100%">
     <thead>
         <th>Local/Development/Deploy Preview</th>
@@ -50,8 +50,6 @@ td.success {
         <th>Production</th>
     </thead>
     <tbody>
-    
-
     {% for page in sortedpages %}
       {%- if page.url contains '/meta/' -%}
         <tr>
@@ -71,4 +69,62 @@ td.success {
   </tbody>
 </table>
 
+{% assign sortedpages = site.pages | where_exp: 'page', "page.url contains '/webinars/'" | sort: "url" %}
 
+<h2>Webinars</h2>
+<table border="0" style="width:100%">
+    <thead>
+        <th>Local/Development/Deploy Preview</th>
+        <th>Staging</th>
+        <th>Production</th>
+    </thead>
+    <tbody>
+    {% for page in sortedpages %}
+      {%- if page.url contains '/meta/' -%}
+        <tr>
+          <td>
+            <a target="_blank" href="{{ page.url }}">{{ page.url }}</a>
+          </td>
+          <td>
+            <a target="_blank" href="{{ page.url | prepend: 'https://staging.thegymcms.com'}}">{{ page.url | prepend: 'https://staging.thegymcms.com'}}</a>
+          </td>
+          <td>
+            <a target="_blank" href="{{ page.url | prepend: 'https://thegymcms.com'}}">{{ page.url | prepend: 'https://thegymcms.com'}}</a>
+          </td>
+        </tr>
+        
+      {%- endif -%}
+    {% endfor %}
+  </tbody>
+</table>
+
+{% assign sortedpages = site.pages | sort: "url" %}
+
+<h2>Everything Else</h2>
+<table border="0" style="width:100%">
+    <thead>
+        <th>Local/Development/Deploy Preview</th>
+        <th>Staging</th>
+        <th>Production</th>
+    </thead>
+    <tbody>
+
+    {% for page in sortedpages %}
+      {%- unless page.url contains '/courses/' or page.url contains '/webinars/' or page.url contains '/tests/' -%}
+        {%- if page.url contains '/meta/' -%}  
+        <tr>
+          <td>
+            <a target="_blank" href="{{ page.url }}">{{ page.url }}</a>
+          </td>
+          <td>
+            <a target="_blank" href="{{ page.url | prepend: 'https://staging.thegymcms.com'}}">{{ page.url | prepend: 'https://staging.thegymcms.com'}}</a>
+          </td>
+          <td>
+            <a target="_blank" href="{{ page.url | prepend: 'https://thegymcms.com'}}">{{ page.url | prepend: 'https://thegymcms.com'}}</a>
+          </td>
+        </tr>
+        {%- endif -%}
+      {%- endunless -%}
+    {% endfor %}
+  </tbody>
+</table>
