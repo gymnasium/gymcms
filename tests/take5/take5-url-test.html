@@ -74,13 +74,14 @@ td.success {
     <td><pre><a href="{{ item.url | absolute_url }}">{{ item.url | absolute_url }}</a></pre></td>
     
     <!-- Meta tag partial -->
-    {% assign meta_url = item.course_ID | prepend: base_path | append: '/meta/' | downcase %}
+    {% assign meta_url = item.course_ID | prepend: '/' | prepend: base_path | append: '/meta/' | downcase %}
     <td>
         <a target="_blank" href="{{ meta_url | absolute_url }}"><pre>{{ meta_url | absolute_url }}</pre></a>
     </td>
 
     <!-- Gymnasium URL -->
-    {% assign gym_url = item.title | slugify | prepend: 'https://thegymnasium.com{{base_path}}/' %}
+    {% assign gym_url = item.title | slugify | prepend: '/' | prepend: base_path %}
+    {% assign gym_url = gym_url | prepend: 'https://thegymnasium.com' %}
     <td><a href="{{ gym_url }}" target="_blank"><pre>{{ gym_url }}</pre></a></td>
 </tr>
 {% endfor %}
