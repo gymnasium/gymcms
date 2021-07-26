@@ -1,5 +1,5 @@
 ---
-layout: meta-large
+layout: meta
 permalink: /index/meta/
 page_title: "Aquent Gymnasium"
 catalog: false

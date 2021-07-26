@@ -2,16 +2,16 @@
     Global Settings
 {%- endcomment -%}
 
-{%- assign twitter_card_style = "summary_large_image"-%}
 {%- assign og_url = page.og_url -%}
 {%- assign og_title = page.og_title -%}
-{%- assign page_title =  page.page_title -%}
 {%- assign og_art = page.og_art -%}
 {%- assign og_description = page.og_description -%}
+{%- assign page_title =  page.page_title -%}
 {%- assign short_description = og_description -%}
+{%- assign twitter_card_style = "summary_large_image"-%}
 
 {%- if page.permalink contains "/courses" -%}
-    {%- if page.catalog -%}    
+    {%- if page.catalog -%}
         {%- comment -%}
         Set up meta tags for course CATALOG page meta includes
         {%- endcomment -%}
@@ -38,24 +38,7 @@
     {%- endif -%}
 {%- endif -%}
 
-<meta name="description" content="{{ short_description | strip_html }}">
-<meta property="og:url" content="{{ og_url }}">
-<meta property="og:site_name" content="{{ page_title }}">
-<meta property="og:title" content="{{ og_title | strip_html }}">
-<meta property="og:description" content="{{ short_description | strip_html }}">
-<meta property="og:image:alt" content="{{ og_title | strip_html }}">
-<meta property="og:image" content="{{ site.url }}/{{ og_art }}">
-<meta name="twitter:card" content="{{ twitter_card_style }}">
-<meta name="twitter:url" property="og:url" content="{{ og_url }}">
-<meta name="twitter:title" property="og:title" content="{{ og_title | strip_html }}">
-<meta name="twitter:description" property="og:description" content="{{ short_description | strip_html }}">
-<meta property="og:image:alt" content="{{ og_title | strip_html }}">
-<meta name="twitter:image" property="og:image" content="{{ site.url }}/{{ og_art }}">
-
-{%- if page.robots -%}
-  <meta name="robots" content="{{page.robots}}">
-{%- endif -%}
-
+{%- include meta-dynamic.html -%}
 {%- include meta-static.html -%}
 
 {{content}}

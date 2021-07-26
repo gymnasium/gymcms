@@ -1,5 +1,5 @@
 ---
-layout: meta-large
+layout: meta
 permalink: /prototyping/meta/
 page_title: "Prototyping | Gymnasium"
 og_title: "Prototyping Collection"
