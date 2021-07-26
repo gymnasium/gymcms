@@ -9,56 +9,21 @@ permalink: /tests/catalog/metas
     {%- for course_hash in sorted_catalog -%}
     {%- assign item = course_hash[1] -%}
 
-<!-- {{ item | inspect }} -->
-{%- assign course = site.data.courses[item.course_ID] -%}
-    {%- assign og_description = course.short_description -%}
-    {%- assign short_description = og_description -%}
+    <!-- {{ item | inspect }} -->
+    {%- assign course = site.data.courses[item.course_ID] -%}
+    {%- assign og_description = course.short_description | strip_html -%}
     {%- assign og_url = course.url -%}
-    {%- assign og_title = course.title -%}
+    {%- assign og_title = course.title | strip_html -%}
     {%- assign page_title =  course.title | append: " | Gymnasium" -%}
-    {%- assign og_art = course.course_ID | downcase | append: "-social.png" | prepend: "img/social/courses/" -%}
+    {%- assign og_art = course.course_ID | downcase | append: "-social.png" | prepend: "/img/social/courses/" | prepend: site.url -%}
     {%- assign twitter_card_style = "summary"-%}
 
-
 <h3>{{course.course_ID }} - {{ course.title }}</h3>
+{%- capture inline -%}
+  {%- include partials/meta-tags.html -%}
+{%- endcapture -%}
 <pre>
-
-name="description" content="{{ short_description | strip_html }}"
-name="author" content="Aquent Gymnasium"
-property="og:url" content="{{ og_url }}"
-property="og:type" content="website"
-property="og:locale" content="en_US"
-property="og:site_name" content="{{ page_title }}"
-property="og:title" content="{{ og_title | strip_html }}"
-property="og:description" content="{{ short_description | strip_html }}"
-property="og:image:alt" content="{{ og_title | strip_html }}"
-property="og:image" content="{{ site.url }}/{{ og_art }}"
-name="twitter:card" content="{{ twitter_card_style }}"
-name="twitter:site" content="@AquentGymnasium"
-name="twitter:creator" content="@AquentGymnasium"
-name="twitter:url" property="og:url" content="{{ og_url }}"
-name="twitter:title" property="og:title" content="{{ og_title | strip_html }}"
-name="twitter:description" property="og:description" content="{{ short_description | strip_html }}"
-property="og:image:alt" content="{{ og_title | strip_html }}"
-name="twitter:image" property="og:image" content="{{ site.url }}/{{ og_art }}"
-rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}/favicon/apple-icon-57x57.png"
-rel="apple-touch-icon" sizes="60x60" href="{{ site.url }}/favicon/apple-icon-60x60.png"
-rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/favicon/apple-icon-72x72.png"
-rel="apple-touch-icon" sizes="76x76" href="{{ site.url }}/favicon/apple-icon-76x76.png"
-rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/favicon/apple-icon-114x114.png"
-rel="apple-touch-icon" sizes="120x120" href="{{ site.url }}/favicon/apple-icon-120x120.png"
-rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/favicon/apple-icon-144x144.png"
-rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/favicon/apple-icon-152x152.png"
-rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/favicon/apple-icon-180x180.png"
-rel="icon" type="image/png" sizes="192x192"  href="{{ site.url }}/favicon/android-icon-192x192.png"
-rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/favicon/favicon-32x32.png"
-rel="icon" type="image/png" sizes="96x96" href="{{ site.url }}/favicon/favicon-96x96.png"
-rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/favicon/favicon-16x16.png"
-rel="manifest" href="{{ site.url }}/favicon/manifest.json"
-name="msapplication-TileColor" content="#ffffff"
-name="msapplication-TileImage" content="{{ site.url }}/favicon/ms-icon-144x144.png"
-name="theme-color" content="#ffffff"
-
+{{ inline | escape }}
 </pre>
 
 {%- endfor -%}
