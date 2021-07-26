@@ -1,5 +1,5 @@
 ---
-layout: meta-large
+layout: meta
 permalink: /webinars/meta/
 page_title: "Webinars | Gymnasium"
 og_title: "Webinars"

@@ -1,5 +1,5 @@
 ---
-layout: meta-large
+layout: meta
 permalink: /dev/meta/
 page_title: "DEV"
 catalog: false

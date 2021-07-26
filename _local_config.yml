@@ -39,7 +39,7 @@ kramdown:
 ## CSS Preprocessing/SASS (see @https://github.com/jekyll/jekyll-sass-converter)
 sass:
   sass_dir: _sass
-  style: expanded
+  style: compressed
 
 ## Additional Plugins
 plugins:
