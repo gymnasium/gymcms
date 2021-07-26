@@ -1,0 +1,81 @@
+{%- comment -%}
+Set defaults
+{%- endcomment -%}
+
+{%- assign og_url = page.og_url -%}
+{%- assign og_title = page.og_title -%}
+{%- assign og_art = page.og_art -%}
+{%- assign og_img_alt = og_title -%}
+{%- assign og_description = page.og_description -%}
+{%- assign page_title =  page.page_title -%}
+{%- assign twitter_card_style = "summary_large_image"-%}
+
+{%- if page.permalink contains "/webinars" and page.permalink != "/webinars/meta/" -%}
+    {%- comment -%}
+    Set up meta tags for a webinar meta include
+    {%- endcomment -%}
+    {%- assign event = site.data.webinars[page.event_ID] -%}
+    {%- assign og_description = event.short_description | strip_html -%}
+    {%- assign twitter_card_style = "summary_large_image"-%}
+    {%- if event.event_ID == "web0005-state-of-responsive-web-design" -%}
+        {%- assign og_url = "https://thegymnasium.com/webinars/state-of-responsive-web-design" -%}
+        {%- assign og_title = event.event_title -%}
+
+    {%- else -%}
+
+        {%- assign path = event.event_ID -%}
+        {%- assign path =  path | slice: 8,path.size   -%}
+        {%- assign og_url = path | prepend: "https://thegymnasium.com/webinars/" -%}
+        {%- assign og_title = event.event_title -%}
+    {%- endif -%}
+
+    {%- if event.register == true -%}
+        {%- assign page_title = "Webinar Registration | Gymnasium" -%}
+        {%- assign og_art = event.event_ogimage | prepend: "/img/social/webinars/" -%}
+    {%- endif -%}
+
+    {%- if event.video == true -%}
+        {%- assign page_title = "Webinar Recording | Gymnasium" -%}
+        {%- assign og_art = event.recording_ogimage | prepend: "/img/social/webinars/" -%}
+    {%- endif -%}
+{%- comment -%}
+Set up meta tags for all course pages (excluding indices, which are handled by the defaults above)
+{%- endcomment -%}
+{%- elsif page.permalink contains "/courses" and page.permalink != "/courses/meta/" and page.permalink != "/courses/full/meta/" and page.permalink != "/courses/gym-shorts/meta/" and page.permalink != "/courses/take5/meta/" -%}
+  {%- if page.permalink contains "/courses/take5" -%}
+    {%- comment -%}
+    Set up meta tags for a Take 5 meta include
+    {%- endcomment -%}
+    {%- assign course = site.data.take5[page.course_ID] -%}
+    {%- assign og_description = course.short_description -%}
+    {%- assign og_url = course.title | slugify | prepend: "/courses/take5/" -%}
+    {%- assign page_title = "Take 5 | Gymnasium" -%}
+    {%- assign og_art = course.course_ID | downcase | append: "-og.png" | prepend: "/img/take5/og/" -%}
+    {%- assign og_img_alt = course.title | prepend: "Video poster for tutorial titled " -%}
+    {%- assign twitter_card_style = "summary_large_image"-%}
+
+  {%- else -%}
+    {%- comment -%}
+    Set up meta tags for remaining courses
+    {%- endcomment -%}
+    {%- assign course = site.data.courses[page.course_ID] -%}
+    {%- assign og_description = course.short_description -%}
+    {%- assign og_url = course.url -%}
+    {%- assign og_title = course.title -%}
+    {%- assign og_img_alt = og_title -%}
+    {%- assign page_title =  course.title | append: " | Gymnasium" -%}
+    {%- assign og_art = course.course_ID | downcase | append: "-social.png" | prepend: "/img/social/courses/" -%}
+    {%- assign twitter_card_style = "summary"-%}
+
+  {%- endif -%}
+
+{%- endif -%}
+
+{%- comment -%}
+sanitize and clean up
+{%- endcomment -%}
+
+{%- assign og_url = og_url | remove: 'https://thegymnasium.com' | prepend: 'https://thegymnasium.com' -%}
+{%- assign og_art = og_art | remove: 'https://thegymnasium.com' | remove: site.url | prepend: site.url -%}
+{%- assign og_title = og_title | strip_html -%}
+{%- assign og_description = og_description | strip_html -%}
