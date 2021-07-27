@@ -448,6 +448,11 @@ if (hasClass(document.body, 'view-dashboard')) {
   });
 }
 
+// course lessons bg colorize
+if (hasClass(document.body, 'view-courseware')) {
+  gym.setBgFromImage('#course-title-header', '#course-image');
+}
+
 // account deletion message
 gym.accountDeletion();
 
