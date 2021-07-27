@@ -28,10 +28,11 @@ class Gymnasium {
   constructor() {}
 
   accountDeletion() {
-    var deletionContainer = document.getElementById('account-deletion-container');
-  
-    if (typeof deletionContainer !== 'undefined' && deletionContainer !== null) {
-      deletionContainer.innerHTML = document.getElementById('deletion-helper').innerHTML;
+    if (hasClass(document.body, 'gym-account-settings')) {
+      var deletionContainer = document.getElementById('account-deletion-container');
+      if (typeof deletionContainer !== 'undefined' && deletionContainer !== null) {
+        deletionContainer.innerHTML = document.getElementById('deletion-helper').innerHTML;
+      }
     }
   }
 
@@ -447,11 +448,11 @@ if (hasClass(document.body, 'view-dashboard')) {
   });
 }
 
-document.addEventListener('load', (event) => {
+// account deletion message
+gym.accountDeletion();
+
+document.addEventListener('DOMContentLoaded', (event) => {
 
   // check exam
   gym.exam();
-
-  // account deletion message
-  gym.accountDeletion();
 });
