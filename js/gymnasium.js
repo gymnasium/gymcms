@@ -392,16 +392,12 @@ class Gymnasium {
 
     img.onload = function() {
 
-      console.log(`image loaded: ${img} | target: ${bgTarget}`);
-
       dummyImg.setAttribute('src', img.getAttribute('src'));
 
       var context = canvas.getContext('2d');
       context.drawImage(dummyImg, 0, 0);
 
       var data = context.getImageData(1, 1, 1, 1).data;
-
-      console.log(`data: ${data}`);
 
       var r = data[0];
       var g = data[1];
@@ -447,7 +443,6 @@ if (hasClass(document.body, 'view-dashboard')) {
     var header = el.querySelector('header');
     var img = el.querySelector('img');
 
-    console.log('processing course image: ', header.id, img.id);
     gym.setBgFromImage('#' + header.id, '#' + img.id);
   });
 }
