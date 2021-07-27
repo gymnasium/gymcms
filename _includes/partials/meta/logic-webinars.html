@@ -1,0 +1,27 @@
+{%- comment -%}
+Set up meta tags for a webinar meta include
+{%- endcomment -%}
+{%- assign event = site.data.webinars[page.event_ID] -%}
+{%- assign og_description = event.short_description | strip_html -%}
+{%- assign twitter_card_style = "summary_large_image"-%}
+{%- if event.event_ID == "web0005-state-of-responsive-web-design" -%}
+    {%- assign og_url = "https://thegymnasium.com/webinars/state-of-responsive-web-design" -%}
+    {%- assign og_title = event.event_title -%}
+
+{%- else -%}
+
+    {%- assign path = event.event_ID -%}
+    {%- assign path =  path | slice: 8,path.size   -%}
+    {%- assign og_url = path | prepend: "https://thegymnasium.com/webinars/" -%}
+    {%- assign og_title = event.event_title -%}
+{%- endif -%}
+
+{%- if event.register == true -%}
+    {%- assign page_title = "Webinar Registration | Gymnasium" -%}
+    {%- assign og_art = event.event_ogimage | prepend: "/img/social/webinars/" -%}
+{%- endif -%}
+
+{%- if event.video == true -%}
+    {%- assign page_title = "Webinar Recording | Gymnasium" -%}
+    {%- assign og_art = event.recording_ogimage | prepend: "/img/social/webinars/" -%}
+{%- endif -%}

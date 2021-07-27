@@ -5,25 +5,60 @@ permalink: /tests/catalog/metas
 
 <title>Course Catalog: Meta Content Tests</title>
 
-{% assign sorted_catalog = site.data.courses | sort %}
-    {%- for course_hash in sorted_catalog -%}
-    {%- assign item = course_hash[1] -%}
+<style>
+pre {
+  max-width: 100%;
+  white-space: pre-line;
+  background-color: aliceblue;
+  padding: 10px;
+}
+th, td {
+  text-align: left;
+  border: 1px solid black;
+}
 
-    <!-- {{ item | inspect }} -->
-    {%- assign course = site.data.courses[item.course_ID] -%}
-    {%- assign og_description = course.short_description | strip_html -%}
-    {%- assign og_url = course.url | prepend: site.gymurl -%}
-    {%- assign og_title = course.title | strip_html -%}
-    {%- assign page_title =  course.title | append: " | Gymnasium" -%}
-    {%- assign og_art = course.course_ID | downcase | append: "-social.png" | prepend: "/img/social/courses/" | prepend: site.url -%}
-    {%- assign twitter_card_style = "summary"-%}
-
-<h3>{{course.course_ID }} - {{ course.title }}</h3>
-{%- capture inline -%}
-  {%- include partials/meta-tags.html -%}
-{%- endcapture -%}
-<pre>
-{{ inline | escape }}
-</pre>
-
+</style>
+{% comment %}
+Combine all course types into one array
+{% endcomment %}
+{% assign main = site.data['courses'] | sort %}
+{% assign take5 = site.data['take5'] | sort %}
+{% assign catalog = "" | split: ',' %}
+{%- for item in main -%}
+  {% assign catalog = catalog | push: item[1] %}
 {%- endfor -%}
+{%- for item in take5 -%}
+  {% assign catalog = catalog | push: item[1] %}
+{%- endfor -%}
+
+<h1>Course Meta Inspector</h1>
+<p>This test page is intended to help diagnose any missing meta tag data.</p>
+<table>
+
+{%- for item in catalog -%}
+
+    {%- assign id = item.course_ID -%}
+
+    {%- assign course_prefix = id | remove: "GYM-" | slice: 0, 2 -%}
+    {% comment %} Exceptions for Take5™ tutorials {% endcomment %}
+    {% if course_prefix == "50" %}
+      {%- include partials/meta/logic-take5.html -%}
+    {% comment %} Exceptions for full courses {% endcomment %}
+    {% elsif course_prefix == "10" %}
+      {%- include partials/meta/logic-courses.html -%}
+    {% comment %} Exceptions for Gym Shorts™ {% endcomment %}
+    {% else %}
+      {%- include partials/meta/logic-courses.html -%}
+    {% endif %}
+    <tr><th>{{ id }} - {{ og_title }}</th></tr>
+    
+    {%- capture inline -%}
+      {%- include partials/meta/tags.html -%}
+    {%- endcapture -%}
+    <tr><td>
+      <pre>
+      {{ inline | escape }}
+      </pre>
+    </td></tr>
+{%- endfor -%}
+</table>

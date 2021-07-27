@@ -48,7 +48,7 @@ plugins:
 ## JSON Fetch
 jekyll_get_json:
   - data: jobs
-    json: 'https://stag-assets.aquent.com/apps/gym/jobs.json?limit=1500'
+    json: 'https://stag-assets.aquent.com/apps/gym/jobs.json?limit=300'
   - data: markets
     json: 'https://stag-assets.aquent.com/apps/gym/markets.json'
   - data: privacy-index

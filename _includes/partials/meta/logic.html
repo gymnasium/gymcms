@@ -1,0 +1,25 @@
+{%- comment -%}
+Set defaults
+{%- endcomment -%}
+{%- assign id = page.course_ID -%}
+{%- assign og_url = page.og_url -%}
+{%- assign og_title = page.og_title -%}
+{%- assign og_art = page.og_art -%}
+{%- assign og_img_alt = og_title -%}
+{%- assign og_description = page.og_description -%}
+{%- assign page_title =  page.page_title -%}
+{%- assign twitter_card_style = "summary_large_image"-%}
+
+{%- if page.permalink contains "/webinars" and page.permalink != "/webinars/meta/" -%}
+  {%- include partials/meta/logic-webinars.html -%}
+{%- comment -%} Set up meta tags for all course pages (excluding indices, which are handled by the defaults above) {%- endcomment -%}
+{%- elsif page.permalink contains "/courses" and page.permalink != "/courses/meta/" and page.permalink != "/courses/full/meta/" and page.permalink != "/courses/gym-shorts/meta/" and page.permalink != "/courses/take5/meta/" -%}
+  {%- if page.permalink contains "/courses/take5" -%}
+    {%- include partials/meta/logic-take5.html -%}
+  {%- else -%}
+    {%- include partials/meta/logic-courses.html -%}
+  {%- endif -%}
+{%- endif -%}
+
+
+{%- include partials/meta/logic-sanitize.html -%}
