@@ -406,6 +406,10 @@ class Gymnasium {
 
       bgTarget.style = 'background-color: rgba(' + r + ',' + g + ',' + b + ',' + a + ');';
     }
+
+    img.onerror = function () {
+      console.warn('image not loaded! ', img);
+    }
   }
 }
 
