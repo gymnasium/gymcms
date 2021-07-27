@@ -449,7 +449,7 @@ if (hasClass(document.body, 'view-dashboard')) {
 }
 
 // course lessons bg colorize
-if (hasClass(document.body, 'view-courseware')) {
+if (hasClass(document.body, 'view-in-course')) {
   gym.setBgFromImage('#course-title-header', '#course-image');
 }
 
