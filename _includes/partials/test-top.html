@@ -58,7 +58,7 @@
     />
 
     {%- comment -%}Include meta components for DRYness{%- endcomment -%}
-    {%- include /partials/theme-head-meta.html -%}
+    {%- include /partials/meta.html -%}
 
     <!-- insert typekit font references -->
     <script src="//use.typekit.net/rhf0qta.js"></script>
@@ -73,9 +73,6 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
-
-    {%- comment -%}Include CSS components for DRYness{%- endcomment -%}
-    {%- include /partials/theme-head-css.html -%}
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
@@ -96,11 +93,6 @@
     <script>
       var CW_ENV = "cw-beta";
     </script>
-
-    <script src="{{site.gymurl}}/static/gymnasium/js/gymnasium.js"></script>
-
-    {%- comment -%}Include JS components for DRYness{%- endcomment -%}
-    {%- include /partials/theme-head-js.html -%}
 
     <script>
       // check for unsupported browsers; display warning message if an old browser
