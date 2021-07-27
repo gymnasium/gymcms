@@ -20,6 +20,10 @@ document.write = function(parameter) {
   }
 };
 
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
 class Gymnasium {
   constructor() {}
 
@@ -442,4 +446,17 @@ document.addEventListener('load', (event) => {
 
   // account deletion message
   gym.accountDeletion();
+
+  // dashboard image/bg colorize
+  if (hasClass(document.body, 'view-dashboard')) {
+    var courses = document.querySelectorAll('article.course');
+
+    courses.forEach(function(el) {
+      var header = el.querySelector('header');
+      var img = el.querySelector('img');
+
+      console.log('processing course image: ', header.id, img.id);
+      gym.setBgFromImage('#' + header.id, '#' + img.id);
+    });
+  }
 });
