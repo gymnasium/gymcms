@@ -50,6 +50,9 @@ Combine all course types into one array
     {% else %}
       {%- include partials/meta/logic-courses.html -%}
     {% endif %}
+
+    {%- include partials/meta/logic-sanitize.html -%}
+
     <tr><th>{{ id }} - {{ og_title }}</th></tr>
     
     {%- capture inline -%}
