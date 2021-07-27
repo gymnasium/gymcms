@@ -23,6 +23,14 @@ document.write = function(parameter) {
 class Gymnasium {
   constructor() {}
 
+  accountDeletion() {
+    var deletionContainer = document.getElementById('account-deletion-container');
+  
+    if (typeof deletionContainer !== 'undefined' && deletionContainer !== null) {
+      deletionContainer.innerHTML = document.getElementById('deletion-helper').innerHTML;
+    }
+  }
+
   courseTabs() {
     /* this is a nonsense hack to make courseware subnavigation look like
     what we want it to look like until we move to Cypress
@@ -419,8 +427,11 @@ gym.dropdownCaret();
 // check ie browser version
 gym.ieCheck();
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('load', (event) => {
 
   // check exam
   gym.exam();
+
+  // account deletion message
+  gym.accountDeletion();
 });
