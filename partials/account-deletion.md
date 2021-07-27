@@ -1,5 +1,5 @@
 ---
 layout: raw
-permalink: /account-deletion/
+permalink: /partials/account-deletion/
 ---
 ## <mark>This is placeholder content</mark>
