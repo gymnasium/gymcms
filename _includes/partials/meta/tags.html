@@ -38,10 +38,20 @@
   <meta name="robots" content="{{page.robots}}">
 {%- endif -%}
 
-{%- if page.css -%}
-  {%- for css_file in page.css -%}
-    <link rel="stylesheet" href="{{ site.url }}{{ css_file }}?{{ site.time | date:'%s' }}">
-  {% endfor %}
-{%- endif -%}
+{%- comment -%}
+Exclude rendered CSS in meta tags on localhost, for development/convenience reasons
+{%- endcomment -%}
+{%- unless site.environment == 'local' -%}
 
-{%- include /partials/theme-head-css.html -%}
+  {%- if page.css -%}
+    {%- for css_file in page.css -%}
+      <link rel="stylesheet" href="{{ site.url }}{{ css_file }}?{{ site.time | date:'%s' }}">
+    {% endfor %}
+  {%- endif -%}
+
+  {%- capture inline -%}
+    {%- include inline.scss -%} 
+  {%- endcapture -%}
+
+  <style>{{ inline | scssify }}</style>
+{%- endunless -%}
