@@ -1,6 +1,6 @@
 ---
 layout: meta
-permalink: /index/meta/
+permalink: /home/meta/
 page_title: "Aquent Gymnasium"
 catalog: false
 og_title: "Aquent Gymnasium"
