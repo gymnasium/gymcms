@@ -388,12 +388,16 @@ class Gymnasium {
 
     img.onload = function() {
 
+      console.log(`image loaded: ${img} | target: ${bgTarget}`);
+
       dummyImg.setAttribute('src', img.getAttribute('src'));
 
       var context = canvas.getContext('2d');
       context.drawImage(dummyImg, 0, 0);
 
       var data = context.getImageData(1, 1, 1, 1).data;
+
+      console.log(`data: ${data}`);
 
       var r = data[0];
       var g = data[1];
