@@ -12,7 +12,7 @@ permalink: /tests/catalog/metas
     <!-- {{ item | inspect }} -->
     {%- assign course = site.data.courses[item.course_ID] -%}
     {%- assign og_description = course.short_description | strip_html -%}
-    {%- assign og_url = course.url -%}
+    {%- assign og_url = course.url | prepend: site.gymurl -%}
     {%- assign og_title = course.title | strip_html -%}
     {%- assign page_title =  course.title | append: " | Gymnasium" -%}
     {%- assign og_art = course.course_ID | downcase | append: "-social.png" | prepend: "/img/social/courses/" | prepend: site.url -%}
