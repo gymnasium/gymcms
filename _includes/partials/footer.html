@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="{{site.url}}/css/footer.css?{{ site.time | date:'%s' }}">
+<link rel="stylesheet" href="{{site.url}}/css/footer.css?{{ site.time | date:'%s' }}" crossorigin>
 <div class="wrapper-footer">
   <footer id="contentinfo">
     <div class="container">
@@ -119,7 +119,7 @@ JS or tracking pixels to be included at the bottom of the theme
   {%- assign geolocator_src = "?gymdev=true" | prepend: geolocator_src -%}
 {%- endif -%}
 
-<script id="gymjs" async defer src="{{site.url}}/js/gymnasium.js?{{ site.time | date:'%s' }}"></script>
+<script id="gymjs" async defer crossorigin src="{{site.url}}/js/gymnasium.js?{{ site.time | date:'%s' }}"></script>
 
 {%- comment -%} Disabling for now...- RE
 <iframe id="geolocator" src="{{ geolocator_src }}" frameborder="0" style="width:1px;height:1px;visibility:hidden;display:none;"></iframe>
