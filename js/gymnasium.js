@@ -422,7 +422,8 @@ class Gymnasium {
 
     if (helper.getAttribute('data-active') === 'true') {
       banner.innerHTML = helper.innerHTML;
-      console.log('system status banner active!');
+      banner.classList.remove('hide');
+      console.log('[gym] system status banner active!');
     }
   }
 }
