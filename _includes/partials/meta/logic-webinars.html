@@ -3,7 +3,6 @@ Set up meta tags for a webinar meta include
 {%- endcomment -%}
 {%- assign event = site.data.webinars[id] -%}
 {%- assign og_description = event.short_description | strip_html -%}
-{%- assign twitter_card_style = "summary_large_image"-%}
 {%- if event.event_ID == "web0005-state-of-responsive-web-design" -%}
     {%- assign og_url = "https://thegymnasium.com/webinars/state-of-responsive-web-design" -%}
     {%- assign og_title = event.event_title -%}
