@@ -46,7 +46,7 @@
                   <img alt="{{ title }}" srcset="{{ artwork_svg | prepend: artwork_path_svg }}" src="{{ artwork_png | prepend: artwork_path_png }}" width="574" height="488" decoding="async">
                 </a>
               </div>
-              <h2><a href="{{ url }}" title="Learn More">{{ title }}</a></h2>
+              <h2><a href="{{ url }}" title="Learn more about {{ title }}">{{ title }}</a></h2>
               <p>{{ description }}</p>
             </header>
           </div>
@@ -58,7 +58,7 @@
               </dl>
             </div>
             <div class="card-cta">
-              <a class="gym-button" href="{{ url }}"><b>Learn More</b></a>
+              <a class="gym-button" href="{{ url }}"><b>Learn More <span class="sr-only sr-only-focusable"> about {{ title }}</span></b></a>
             </div>
           </div>
         </div>
