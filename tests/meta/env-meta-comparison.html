@@ -42,7 +42,7 @@ td.success {
 
 {% assign sortedpages = site.pages | where_exp: 'page', "page.url contains '/courses/'" | sort: "url" %}
 
-<h2>Courses</h2>
+<h2 id="courses">Courses</h2>
 <table border="0" style="width:100%">
     <thead>
         <th>Local/Development/Deploy Preview</th>
@@ -71,7 +71,7 @@ td.success {
 
 {% assign sortedpages = site.pages | where_exp: 'page', "page.url contains '/webinars/'" | sort: "url" %}
 
-<h2>Webinars</h2>
+<h2 id="webinars">Webinars</h2>
 <table border="0" style="width:100%">
     <thead>
         <th>Local/Development/Deploy Preview</th>
@@ -100,7 +100,7 @@ td.success {
 
 {% assign sortedpages = site.pages | sort: "url" %}
 
-<h2>Everything Else</h2>
+<h2 id="everything-else">Everything Else</h2>
 <table border="0" style="width:100%">
     <thead>
         <th>Local/Development/Deploy Preview</th>
