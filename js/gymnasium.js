@@ -415,6 +415,16 @@ class Gymnasium {
       console.warn('image not loaded! ', img);
     }
   }
+
+  systemStatus() {
+    const helper = document.getElementById('system-status-helper');
+    var banner = document.getElementById('system-status');
+
+    if (helper.getAttribute('data-active') === 'true') {
+      banner.innerHTML = helper.innerHTML;
+      console.log('system status banner active!');
+    }
+  }
 }
 
 // Facebook Pixel Code
@@ -438,6 +448,9 @@ gym.dropdownCaret();
 
 // check ie browser version
 gym.ieCheck();
+
+// Adds dynamic system status banner
+gym.systemStatus();
 
 // dashboard image/bg colorize
 if (hasClass(document.body, 'view-dashboard')) {
