@@ -37,7 +37,7 @@
   {%- assign opt_limit = 10 -%}
 {%- endunless -%}
 
-<link rel="stylesheet" href="{{ site.url }}/css/jobs.css?{{ site.time | date:'%s' }}" crossorigin>
+<link rel="stylesheet" href="{{ site.url }}/css/jobs.css?{{ site.time | date:'%s' }}">
 
 <form id="location" class="location">
   <select name="m" id="m" class="form-control">
@@ -98,4 +98,4 @@
 </div>
 <div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-endpoint="{{jobs_endpoint}}" data-fallback="{{jobs_fallback}}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
 
-<script async defer crossorigin src="{{site.url}}/js/jobs.js?{{ site.time | date:'%s' }}"></script>
+<script async defer src="{{site.url}}/js/jobs.js?{{ site.time | date:'%s' }}"></script>
