@@ -1,2 +1,6 @@
 # Redirect /static/ to root
-/static/*           /:splat     301
+/static/*               /:splat                         301
+/system-status/         /partials/system-status/        301
+/final-exam-modal-top/  /partials/final-exam-modal-top/ 301
+/final-exam-modal/      /partials/final-exam-modal/     301
+/dashboard/             /partials/dashboard/            301
