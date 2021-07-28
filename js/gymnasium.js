@@ -377,9 +377,23 @@ class Gymnasium {
   }
 
   setBgFromImage(element, image) {
+    var img;
+    var bgTarget;
+
+    if (typeof image === 'object') {
+      img = image;
+    } else {
+      img = document.querySelector(image);
+    }
+
+    if (typeof element === 'object') {
+      bgTarget = element;
+    } else {
+      bgTarget = document.querySelector(element);
+    }
+
     var canvas = document.createElement('canvas');
     var dummyImg = document.createElement('img');
-    var img = document.querySelector(image);
     var bgTarget = document.querySelector(element);
 
     img.onload = function() {
@@ -429,15 +443,16 @@ gym.ieCheck();
 
 // dashboard image/bg colorize
 if (hasClass(document.body, 'view-dashboard')) {
-  var courses = document.querySelectorAll('article.course');
+  var images = document.querySelectorAll('*[id^="course-image-"]');
 
-  courses.forEach(function(el) {
-    console.log('courses:', courses, 'el: ', el);
-    var header = el.querySelector('header');
-    var img = el.querySelector('img');
-
-    gym.setBgFromImage('#' + header.id, '#' + img.id);
-  });
+  if (typeof images !== 'undefined' && images !== null) {
+    images.forEach(function(img) {
+      var courseNum = img.id.replace('course-image-','');
+      var header = document.getElementById('course-header-' + courseNum);
+  
+      setTimeout(gym.setBgFromImage(header, img), 100);
+    });
+  }
 }
 
 // course lessons bg colorize
