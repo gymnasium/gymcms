@@ -427,6 +427,24 @@ gym.dropdownCaret();
 // check ie browser version
 gym.ieCheck();
 
+// dashboard image/bg colorize
+if (hasClass(document.body, 'view-dashboard')) {
+  var courses = document.querySelectorAll('article.course');
+
+  courses.forEach(function(el) {
+    console.log('courses:', courses, 'el: ', el);
+    var header = el.querySelector('header');
+    var img = el.querySelector('img');
+
+    gym.setBgFromImage('#' + header.id, '#' + img.id);
+  });
+}
+
+// course lessons bg colorize
+if (hasClass(document.body, 'view-in-course')) {
+  gym.setBgFromImage('#course-title-header', '#course-image');
+}
+
 document.addEventListener('DOMContentLoaded', (event) => {
 
   // check exam
@@ -434,21 +452,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 window.addEventListener('load', (event) => {
-  // dashboard image/bg colorize
-  if (hasClass(document.body, 'view-dashboard')) {
-    var courses = document.querySelectorAll('article.course');
 
-    courses.forEach(function(el) {
-      var header = el.querySelector('header');
-      var img = el.querySelector('img');
-
-      gym.setBgFromImage('#' + header.id, '#' + img.id);
-    });
-  }
-
-  // course lessons bg colorize
-  if (hasClass(document.body, 'view-in-course')) {
-    gym.setBgFromImage('#course-title-header', '#course-image');
-  }
 });
 
