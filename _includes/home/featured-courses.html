@@ -43,7 +43,7 @@
               <b class="course-type">{{ topic }}</b>
               <div class="mask">
                 <a href="{{ url }}" title="Learn More">
-                  <img alt="{{ title }}" srcset="{{ artwork_svg | prepend: artwork_path_svg }}" src="{{ artwork_png | prepend: artwork_path_png }}" width="574" height="488" decoding="async">
+                  <img alt="{{ title }}" srcset="{{ artwork_svg | prepend: artwork_path_svg }}" src="{{ artwork_png | prepend: artwork_path_png }}" width="574" height="488" decoding="async" loading="lazy">
                 </a>
               </div>
               <h2><a href="{{ url }}" title="Learn more about {{ title }}">{{ title }}</a></h2>
