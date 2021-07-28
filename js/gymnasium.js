@@ -394,7 +394,6 @@ class Gymnasium {
 
     var canvas = document.createElement('canvas');
     var dummyImg = document.createElement('img');
-    var bgTarget = document.querySelector(element);
 
     img.onload = function() {
 
