@@ -48,7 +48,7 @@ permalink: /courses/gym-shorts/course-list-recent
     <article class="row">
       <figure class="col-md-4">
         <a href="{{ course.url | prepend: site.gymurl }}">
-          <img class="img-responsive" src="{{ png_path | prepend: site.url }}" srcset="{{ svg_path | prepend: site.url }}" alt="{{ course.course_ID | remove: 'gym-' }} {{ course.title }} Cover Image" decoding="async">
+          <img class="img-responsive" src="{{ png_path | prepend: site.url }}" srcset="{{ svg_path | prepend: site.url }}" alt="{{ course.course_ID | remove: 'gym-' }} {{ course.title }} Cover Image" decoding="async" loading="lazy">
         </a>
         <figcaption>
           <a href="{{ course.url | prepend: site.gymurl }}" class="gym-button"><b>Learn More</b></a>
