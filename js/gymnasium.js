@@ -316,7 +316,7 @@ class Gymnasium {
 
   recordExamGrade(email,courseId,grade,callback) {
     var data = {
-      leadDestination: CW_ENV,
+      leadDestination: window.CW_ENV,
       email: email,
       score: grade,
       course_id: courseId,
@@ -350,7 +350,7 @@ class Gymnasium {
     jsonData.agent_id = "1694600";
     jsonData.agent_name = "TALENT LEAD NURTURING";
     jsonData.carrot = "thegymnasium.com";
-    jsonData.subdomain = CW_ENV;
+    jsonData.subdomain = window.CW_ENV;
     jsonData.language = "en_US";
     jsonData.medium = "1009";
     jsonData.referring_site = "thegymnasium.com";
@@ -379,6 +379,8 @@ class Gymnasium {
   setBgFromImage(element, image) {
     var img;
     var bgTarget;
+    var canvas = document.createElement('canvas');
+    var dummyImg = document.createElement('img');
 
     if (typeof image === 'object') {
       img = image;
@@ -391,9 +393,6 @@ class Gymnasium {
     } else {
       bgTarget = document.querySelector(element);
     }
-
-    var canvas = document.createElement('canvas');
-    var dummyImg = document.createElement('img');
 
     img.onload = function() {
 
