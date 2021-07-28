@@ -20,8 +20,8 @@ document.write = function(parameter) {
   }
 };
 
-function hasClass(ele,cls) {
-  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+function hasClass(elem,cls) {
+  return elem.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
 }
 
 class Gymnasium {
