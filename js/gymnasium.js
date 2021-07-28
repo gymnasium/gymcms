@@ -27,15 +27,6 @@ function hasClass(elem,cls) {
 class Gymnasium {
   constructor() {}
 
-  accountDeletion() {
-    if (hasClass(document.body, 'gym-account-settings')) {
-      var deletionContainer = document.getElementById('account-deletion-container');
-      if (typeof deletionContainer !== 'undefined' && deletionContainer !== null) {
-        deletionContainer.innerHTML = document.getElementById('deletion-helper').innerHTML;
-      }
-    }
-  }
-
   courseTabs() {
     /* this is a nonsense hack to make courseware subnavigation look like
     what we want it to look like until we move to Cypress
@@ -452,9 +443,6 @@ if (hasClass(document.body, 'view-dashboard')) {
 if (hasClass(document.body, 'view-in-course')) {
   gym.setBgFromImage('#course-title-header', '#course-image');
 }
-
-// account deletion message
-gym.accountDeletion();
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
