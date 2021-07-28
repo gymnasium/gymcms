@@ -57,7 +57,7 @@ class Gymnasium {
       we're looking at the href property of this anchor to see if it contains
       a course link that has "Gym/00" in it.  All gym shorts start with "0"
       so that should hide this link. Note that this does _not_ disable
-      forums... those pages will still exist, but we won't like to them. */
+      forums... those pages will still exist, but we won't link to them. */
       if ($(value).attr("href").toLowerCase().indexOf("gym/0") > 0)
       {
         $(value).parent().hide();
@@ -427,25 +427,28 @@ gym.dropdownCaret();
 // check ie browser version
 gym.ieCheck();
 
-// dashboard image/bg colorize
-if (hasClass(document.body, 'view-dashboard')) {
-  var courses = document.querySelectorAll('article.course');
-
-  courses.forEach(function(el) {
-    var header = el.querySelector('header');
-    var img = el.querySelector('img');
-
-    gym.setBgFromImage('#' + header.id, '#' + img.id);
-  });
-}
-
-// course lessons bg colorize
-if (hasClass(document.body, 'view-in-course')) {
-  gym.setBgFromImage('#course-title-header', '#course-image');
-}
-
 document.addEventListener('DOMContentLoaded', (event) => {
 
   // check exam
   gym.exam();
 });
+
+window.addEventListener('load', (event) => {
+  // dashboard image/bg colorize
+  if (hasClass(document.body, 'view-dashboard')) {
+    var courses = document.querySelectorAll('article.course');
+
+    courses.forEach(function(el) {
+      var header = el.querySelector('header');
+      var img = el.querySelector('img');
+
+      gym.setBgFromImage('#' + header.id, '#' + img.id);
+    });
+  }
+
+  // course lessons bg colorize
+  if (hasClass(document.body, 'view-in-course')) {
+    gym.setBgFromImage('#course-title-header', '#course-image');
+  }
+});
+
