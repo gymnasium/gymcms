@@ -59,7 +59,7 @@ Exclude rendered CSS in meta tags on localhost, for development/convenience reas
 
   {%- if page.css -%}
     {%- for css_file in page.css -%}
-      <link rel="stylesheet" href="{{ site.url }}{{ css_file }}?{{ site.time | date:'%s' }}" crossorigin>
+      <link rel="stylesheet" href="{{ site.url }}{{ css_file }}?{{ site.time | date:'%s' }}">
     {% endfor %}
   {%- endif -%}
 
