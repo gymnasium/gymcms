@@ -455,37 +455,40 @@ gym.ieCheck();
 gym.systemStatus();
 
 // dashboard image/bg colorize
-if (hasClass(document.body, 'view-dashboard')) {
-  var images = document.querySelectorAll('*[id^="course-image-"]');
-
-  if (typeof images !== 'undefined' && images !== null) {
-    images.forEach(function(courseImg) {
-      var courseNum = courseImg.id.replace('course-image-','');
-      var header = document.getElementById('course-header-' + courseNum);
-
-      courseImg.onload = function() {
-        console.log(`courseImg: ${courseImg.id} | header: ${header.id}`);
-        setTimeout(gym.setBgFromImage(header, courseImg), 200);
-      }
-
-      courseImg.onerror = function () {
-        console.warn('image not loaded! ', courseImg);
-      }
-    });
+function dashboardCourseHeaders() {
+  if (hasClass(document.body, 'view-dashboard')) {
+    var images = document.querySelectorAll('*[id^="course-image-"]');
+  
+    if (typeof images !== 'undefined' && images !== null) {
+      images.forEach(function(courseImg) {
+        var courseNum = courseImg.id.replace('course-image-','');
+        var header = document.getElementById('course-header-' + courseNum);
+  
+        courseImg.onload = function() {
+          setTimeout(gym.setBgFromImage(header, courseImg), 200);
+        }
+  
+        courseImg.onerror = function () {
+          console.warn('image not loaded! ', courseImg);
+        }
+      });
+    }
   }
 }
 
 // course lessons bg colorize
-if (hasClass(document.body, 'view-in-course')) {
-  var courseImg = document.getElementById('course-image');
-  if (typeof courseImg !== 'undefined' && courseImg !== null) {
-
-    courseImg.onload = function() {
-      setTimeout(gym.setBgFromImage('#course-title-header', courseImg), 200)
-    }
-
-    courseImg.onerror = function () {
-      console.warn('image not loaded! ', courseImg);
+function courseHeader() {
+  if (hasClass(document.body, 'view-in-course')) {
+    var courseImg = document.getElementById('course-image');
+    if (typeof courseImg !== 'undefined' && courseImg !== null) {
+  
+      courseImg.onload = function() {
+        setTimeout(gym.setBgFromImage('#course-title-header', courseImg), 200)
+      }
+  
+      courseImg.onerror = function () {
+        console.warn('image not loaded! ', courseImg);
+      }
     }
   }
 }
@@ -497,6 +500,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 window.addEventListener('load', (event) => {
-
+  dashboardCourseHeaders();
+  courseHeader();
 });
 
