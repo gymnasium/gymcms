@@ -377,43 +377,36 @@ class Gymnasium {
     });
   }
 
-  setBgFromImage(element, image) {
-    var img;
-    var bgTarget;
+  getPixel(url) {
+    var img = new Image();
+    img.src = url;
     var canvas = document.createElement('canvas');
-    var dummyImg = document.createElement('img');
+    var context = canvas.getContext('2d');
+    context.drawImage(img, 0, 0);
+    return context.getImageData(1, 1, 1, 1).data;
+  }
 
-    if (typeof image === 'object') {
-      img = image;
-    } else {
-      img = document.querySelector(image);
-    }
+  setBgFromImage() {
 
-    if (typeof element === 'object') {
-      bgTarget = element;
-    } else {
-      bgTarget = document.querySelector(element);
-    }
+    var images = document.querySelectorAll('[data-bg="source"');
 
-    img.onload = function() {
+    if (typeof images !== 'undefined' && images !== null) {
+      images.forEach((image, index) => {
+        console.log(`[gym] image (${index})  found, processing`);
+        var bgTarget = document.querySelectorAll('[data-bg="target"')[index];
+  
+        var data = gym.getPixel(image.src);
 
-      dummyImg.setAttribute('src', img.getAttribute('src'));
+        console.log(`image data: ${data}`)
+  
+        var r = data[0];
+        var g = data[1];
+        var b = data[2];
+        var a = data[3];
+  
+        bgTarget.style = 'background-color: rgba(' + r + ',' + g + ',' + b + ',' + a + ');';
 
-      var context = canvas.getContext('2d');
-      context.drawImage(dummyImg, 0, 0);
-
-      var data = context.getImageData(1, 1, 1, 1).data;
-
-      var r = data[0];
-      var g = data[1];
-      var b = data[2];
-      var a = data[3];
-
-      bgTarget.style = 'background-color: rgba(' + r + ',' + g + ',' + b + ',' + a + ');';
-    }
-
-    img.onerror = function () {
-      console.warn('image not loaded! ', img);
+      });
     }
   }
 
@@ -454,45 +447,6 @@ gym.ieCheck();
 // Adds dynamic system status banner
 gym.systemStatus();
 
-// dashboard image/bg colorize
-function dashboardCourseHeaders() {
-  if (hasClass(document.body, 'view-dashboard')) {
-    var images = document.querySelectorAll('*[id^="course-image-"]');
-  
-    if (typeof images !== 'undefined' && images !== null) {
-      images.forEach(function(courseImg) {
-        var courseNum = courseImg.id.replace('course-image-','');
-        var header = document.getElementById('course-header-' + courseNum);
-  
-        courseImg.onload = function() {
-          setTimeout(gym.setBgFromImage(header, courseImg), 200);
-        }
-  
-        courseImg.onerror = function () {
-          console.warn('image not loaded! ', courseImg);
-        }
-      });
-    }
-  }
-}
-
-// course lessons bg colorize
-function courseHeader() {
-  if (hasClass(document.body, 'view-in-course')) {
-    var courseImg = document.getElementById('course-image');
-    if (typeof courseImg !== 'undefined' && courseImg !== null) {
-  
-      courseImg.onload = function() {
-        setTimeout(gym.setBgFromImage('#course-title-header', courseImg), 200)
-      }
-  
-      courseImg.onerror = function () {
-        console.warn('image not loaded! ', courseImg);
-      }
-    }
-  }
-}
-
 document.addEventListener('DOMContentLoaded', (event) => {
 
   // check exam
@@ -500,7 +454,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 window.addEventListener('load', (event) => {
-  dashboardCourseHeaders();
-  courseHeader();
+  gym.setBgFromImage();
 });
-
