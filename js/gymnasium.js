@@ -1,10 +1,11 @@
-// Gymnasium JS
+/* Main JS for Gymnasium
 
-/// File:         gymnasium.js
-/// Description:  library containing helper functions used on Gymnasium
-/// Author:       @mbifulco && @rediris
+File:         gymnasium.js
+Description:  library containing helper functions used on Gymnasium
+Author:       @mbifulco && @rediris
+*/
 
-// Document 
+// Intercept 3rd party script injection via @https://digitalrumpus.wordpress.com/2017/01/18/a-tiny-cross-browser-script-to-intercept-third-party-javascript-injection-via-document-write/
 document.writeText = document.write;
 
 document.write = function(parameter) {
@@ -461,15 +462,18 @@ if (hasClass(document.body, 'view-dashboard')) {
     images.forEach(function(img) {
       var courseNum = img.id.replace('course-image-','');
       var header = document.getElementById('course-header-' + courseNum);
-  
-      setTimeout(gym.setBgFromImage(header, img), 100);
+
+      img.addEventListener('load', setTimeout(gym.setBgFromImage(header, img), 100), false);
     });
   }
 }
 
 // course lessons bg colorize
 if (hasClass(document.body, 'view-in-course')) {
-  gym.setBgFromImage('#course-title-header', '#course-image');
+  var courseImg = document.getElementById('course-image');
+  if (typeof images !== 'undefined' && images !== null) {
+    courseImg.addEventListener('load', setTimeout(gym.setBgFromImage('#course-title-header', courseImg), 100), false);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
