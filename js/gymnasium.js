@@ -464,8 +464,8 @@ if (hasClass(document.body, 'view-dashboard')) {
       var header = document.getElementById('course-header-' + courseNum);
 
       courseImg.onload = function() {
-        console.log(`courseImg: ${courseImg} | header: ${header}`);
-        gym.setBgFromImage(header, courseImg);
+        console.log(`courseImg: ${courseImg.id} | header: ${header.id}`);
+        setTimeout(gym.setBgFromImage(header, courseImg), 200);
       }
 
       courseImg.onerror = function () {
@@ -478,8 +478,15 @@ if (hasClass(document.body, 'view-dashboard')) {
 // course lessons bg colorize
 if (hasClass(document.body, 'view-in-course')) {
   var courseImg = document.getElementById('course-image');
-  if (typeof images !== 'undefined' && images !== null) {
-    courseImg.addEventListener('load', setTimeout(gym.setBgFromImage('#course-title-header', courseImg), 100), false);
+  if (typeof courseImg !== 'undefined' && courseImg !== null) {
+
+    courseImg.onload = function() {
+      setTimeout(gym.setBgFromImage('#course-title-header', courseImg), 200)
+    }
+
+    courseImg.onerror = function () {
+      console.warn('image not loaded! ', courseImg);
+    }
   }
 }
 
