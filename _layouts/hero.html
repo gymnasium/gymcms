@@ -13,3 +13,5 @@
     <!-- Display the current promo on both hero includes -->
     {%- include {{hero.current_promo | prepend: "/heros/"}} -%}
 {%- endif -%}
+
+{%- include build-timestamp.html -%}
