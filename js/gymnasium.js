@@ -460,6 +460,8 @@ if (hasClass(document.body, 'view-dashboard')) {
 
   if (typeof images !== 'undefined' && images !== null) {
     images.forEach(function(img) {
+
+      console.log('typeof img:', typeof img);
       var courseNum = img.id.replace('course-image-','');
       var header = document.getElementById('course-header-' + courseNum);
 
