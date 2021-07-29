@@ -459,13 +459,18 @@ if (hasClass(document.body, 'view-dashboard')) {
   var images = document.querySelectorAll('*[id^="course-image-"]');
 
   if (typeof images !== 'undefined' && images !== null) {
-    images.forEach(function(img) {
-
-      console.log('typeof img:', typeof img);
-      var courseNum = img.id.replace('course-image-','');
+    images.forEach(function(courseImg) {
+      var courseNum = courseImg.id.replace('course-image-','');
       var header = document.getElementById('course-header-' + courseNum);
 
-      img.addEventListener('load', setTimeout(gym.setBgFromImage(header, img), 100), false);
+      courseImg.onload = function() {
+        console.log(`courseImg: ${courseImg} | header: ${header}`);
+        gym.setBgFromImage(header, courseImg);
+      }
+
+      courseImg.onerror = function () {
+        console.warn('image not loaded! ', courseImg);
+      }
     });
   }
 }
