@@ -2,10 +2,7 @@
 layout: raw
 permalink: /partials/sidebar-generic/
 ---
-{%-comment-%}
-TODO: move to /partials/sidebar-generic.html for consistency
-{%-endcomment-%}
-<link rel="stylesheet" href="{{ site.url }}/css/static-sidebar-content.css">
+<link rel="stylesheet" href="{{ site.url }}/css/static-sidebar-content.css?{{ site.time | date:'%s' }}">
 
 <!-- Temporary HTML for style hooks -->
 <div class="find-courses">
@@ -17,7 +14,7 @@ TODO: move to /partials/sidebar-generic.html for consistency
 <section>
   <figure>
     <a href="{{ site.gymurl }}/courses/course-v1:GYM+016+0/about">
-      <img class="img-responsive" alt="Designing Accessible and Responsive Websites cover image." srcset="{{ site.url }}/img/course-artwork/svg/gym-016.svg" src="{{ site.url }}/img/course-artwork/png/gym-016.png" width="574" height="488">
+      <img class="img-responsive" loading="lazy" alt="Designing Accessible and Responsive Websites cover image." srcset="{{ site.url }}/img/course-artwork/svg/gym-016.svg" src="{{ site.url }}/img/course-artwork/png/gym-016.png" width="574" height="488">
     </a>
     <figcaption>
       <a href="{{ site.gymurl }}/courses/course-v1:GYM+016+0/about" class="gym-button"><b>Learn More</b></a>
@@ -30,7 +27,7 @@ TODO: move to /partials/sidebar-generic.html for consistency
 <section>
   <figure>
     <a href="{{ site.gymurl }}/courses/GYM/103/0/about">
-      <img class="img-responsive" alt="UX Fundamentals cover image." srcset="{{ site.url }}/img/course-artwork/svg/gym-103.svg" src="{{ site.url }}/img/course-artwork/png/gym-103.png" width="574" height="488">
+      <img class="img-responsive" loading="lazy" alt="UX Fundamentals cover image." srcset="{{ site.url }}/img/course-artwork/svg/gym-103.svg" src="{{ site.url }}/img/course-artwork/png/gym-103.png" width="574" height="488">
     </a>
     <figcaption>
       <a href="{{ site.gymurl }}/courses/GYM/103/0/about" class="gym-button"><b>Learn More</b></a>

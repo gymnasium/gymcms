@@ -2,7 +2,7 @@
 layout: wrapper-full-default
 permalink: /jobs/
 ---
-<link rel="stylesheet" href="{{ site.url }}/css/hub-pages.css">
+<link rel="stylesheet" href="{{ site.url }}/css/hub-pages.css?{{ site.time | date:'%s' }}">
 <main id="main" role="main">
   <section id="about">
     <div class="banner-content container-fluid">
@@ -409,4 +409,3 @@ permalink: /jobs/
 <!-- polyfills -->
 <script async nomodule src="{{ site.url }}/js/polyfills/prefixfree.min.js"></script>
 <script async nomodule src="{{ site.url }}/js/polyfills/grid-equal-height.js"></script>
-
