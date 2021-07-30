@@ -94,11 +94,9 @@ class Gymnasium {
     const examProblem = document.getElementById('exam-problem');
 
     if (typeof examProblem !== 'undefined' && examProblem !== null) {
-      
+
       examProblem.onload = setTimeout(function() {
-        var [test] = $('.problem-progress').text().split(' ');
-  
-        console.log('grade fraction: ' + [test]);
+
         console.log('exam function active');
         
         let id = examProblem.getAttribute('data-id');
@@ -113,8 +111,11 @@ class Gymnasium {
             GYM_SHORT: 'GYM_SHORT',
           };
       
-          const COURSE_ID = parseInt($('#__course_number__').text(), 10);
+          const COURSE_ID = parseInt(id, 10);
           const COURSE_TYPE = COURSE_ID >= 100 ? COURSE_TYPES.FULL_COURSE : COURSE_TYPES.GYM_SHORT;
+
+          console.log(`[gym] course id: ${COURSE_ID} | course type: ${COURSE_TYPE}`);
+
           let PASSING_SCORE = 85;
       
           if (COURSE_TYPE === COURSE_TYPES.FULL_COURSE) {
@@ -167,9 +168,10 @@ class Gymnasium {
           if (!correct || !outOf) {
             return
           }
+
+          var storedScore = score ? score : 0;
       
           $('.exam-score-container').text(score);
-      
       
           //we have a score
           if (score >= passingScore) {
