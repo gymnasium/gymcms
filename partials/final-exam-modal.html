@@ -207,7 +207,7 @@ $(function() {
     };
   };
 
-  var show_problem_progress = function(){
+  var show_problem_progress = function() {
     let {
       attempts_used,
       attempts_total,
@@ -220,11 +220,10 @@ $(function() {
     } = processScore();
 
     if (!correct || !outOf) {
-      return
+      return;
     }
 
     $('.exam-score-container').text(score);
-
 
     //we have a score
     if (score >= passingScore) {
@@ -238,8 +237,9 @@ $(function() {
         type:     'POST',
         url:      '/accredible/request_certificate',
         async:     false,
-        data:     {'course_id': $$course_id},
+        data:     {'course_id': window.$$course_id},
         success:  function(data) {
+          console.log('[gym] certificate request successful: ', data);
         }
       });
     } else {
@@ -268,11 +268,16 @@ $(function() {
     }
   }
 
-
+  // This determines if we are on the exam page?
   if ($('.problem-header').text().trim() === "Final Exam") {
+
+    let problem_id = document.getElementById('exam-problem').getAttribute('data-id');
+
+    console.log('[gym] exam page | problem id: ' + problem_id);
+
     let observer = new MutationObserver(mutationRecords => {
       // reset interval if we detect a grade change
-      console.log(mutationRecords);
+      console.log('[gym] mutation records: ', mutationRecords);
       if (typeof progress_status_check !== 'undefined'){
         clearInterval(progress_status_check);
       }
@@ -281,7 +286,7 @@ $(function() {
     });
 
     observer.observe(
-      document.getElementById('${ id }-problem-progress'),
+      document.getElementById(problem_id + '-problem-progress'),
       {
         characterData: false,
         attributes: false,
@@ -295,6 +300,7 @@ $(function() {
 
   // scroll to show the results message
   $('#check-button').click(function() {
+    console.log('[gym] check exam button clicked');
     $('#course_passed_message')[0].scrollIntoView();
   });
 
