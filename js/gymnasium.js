@@ -96,9 +96,6 @@ class Gymnasium {
     if (typeof examProblem !== 'undefined' && examProblem !== null) {
       
       examProblem.onload = setTimeout(function() {
-        var [test] = $('.problem-progress').text().split(' ');
-  
-        console.log('grade fraction: ' + [test]);
         console.log('exam function active');
         
         let id = examProblem.getAttribute('data-id');
@@ -170,9 +167,10 @@ class Gymnasium {
       
           $('.exam-score-container').text(score);
       
-      
           //we have a score
           if (score >= passingScore) {
+            console.log('exam passed, submitting to accredible');
+
             //we passed! show passing div for the type of course they took
             $(".passed_modal." + courseType).removeClass('hidden');
             $(".try_again_modal").addClass('hidden');
@@ -183,17 +181,22 @@ class Gymnasium {
               type:     'POST',
               url:      '/accredible/request_certificate',
               async:     false,
-              data:     {'course_id': $$course_id},
+              data:     {'course_id': window.$$course_id},
               success:  function(data) {
+                console.log('certificate successfully requested: ', data);
               }
             });
           } else {
+            console.log('exam failed. attempts remaining: ', attempts_remaining);
+
             //we failed :( see if we have another attempt
             if (attempts_remaining > 0) {
+
               $(".passed_modal").addClass('hidden');
               $(".try_again_modal." + courseType).removeClass('hidden');
               $(".failed_modal").addClass('hidden');
             } else {
+
               $(".passed_modal").addClass('hidden');
               $(".try_again_modal").addClass('hidden');
               $(".failed_modal").removeClass('hidden');
