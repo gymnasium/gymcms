@@ -393,12 +393,12 @@ class Gymnasium {
 
     if (typeof images !== 'undefined' && images !== null) {
       images.forEach((image, index) => {
-        console.log(`[gym] image (${index})  found, processing`);
+        // console.log(`[gym] image (${index})  found, processing`);
         var bgTarget = document.querySelectorAll('[data-bg="target"')[index];
   
         var data = gym.getPixel(image.src);
 
-        console.log(`image data: ${data}`)
+        // console.log(`image data: ${data}`)
   
         var r = data[0];
         var g = data[1];
