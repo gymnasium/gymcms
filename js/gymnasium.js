@@ -95,7 +95,7 @@ class Gymnasium {
 
     if (typeof examProblem !== 'undefined' && examProblem !== null) {
       
-      examProblem.onload = setTimeout(function() {
+      examProblem.onload = function() {
         console.log('exam function active');
         
         let id = examProblem.getAttribute('data-id');
@@ -162,7 +162,7 @@ class Gymnasium {
           } = processScore();
       
           if (!correct || !outOf) {
-            return
+            return;
           }
       
           $('.exam-score-container').text(score);
@@ -218,6 +218,7 @@ class Gymnasium {
       
       
         if ($('.problem-header').text().trim() === "Final Exam") {
+          console.log('Final Exam');
           let observer = new MutationObserver(mutationRecords => {
             // reset interval if we detect a grade change
             console.log(mutationRecords);
@@ -245,7 +246,7 @@ class Gymnasium {
         $('#check-button').on('click', function() {
           $('#course_passed_message')[0].scrollIntoView();
         });
-      }, 100);
+      }
     } else {
       console.warn('exam not active');
     }
@@ -452,10 +453,12 @@ gym.systemStatus();
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
-  // check exam
-  gym.exam();
+
 });
 
 window.addEventListener('load', (event) => {
+  // check exam
+  gym.exam();
+
   gym.setBgFromImage();
 });
