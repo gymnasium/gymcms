@@ -238,9 +238,9 @@ $(function() {
       hideModals();
 
       if (courseType) {
-        elem = document.querySelector(step + '_modal.' + courseType);
+        elem = document.querySelector('.' + step + '_modal.' + courseType);
       } else {
-        elem = document.querySelector(step + '_modal');
+        elem = document.querySelector('.' + step + '_modal');
       }
 
       elem.classList.remove('hidden');
