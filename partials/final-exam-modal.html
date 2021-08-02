@@ -157,17 +157,15 @@ a.gym-button.gym-button-secondary:focus {
 Adding exam script here for proper inlining
 {%- endcomment -%}
 <script>
-$(function() {
-  let progress_status_check; // this is the interval we'll set to track status on this problem
+let progress_status_check; // this is the interval we'll set to track status on this problem
 
-  let probElem;
-  let graded;
-  let attempts_used;
-  let attempts_total;
-  let numerator;
-  let denominator;
-  let SCORE;
-  let PREV_SCORE;
+let probElem;
+let numerator;
+let denominator;
+let SCORE;
+let PREV_SCORE;
+
+$(function() {
 
   // hide all exam messages
   function hideModals() {
@@ -216,12 +214,11 @@ $(function() {
     }
 
     probElem = document.querySelectorAll('[data-problem-id')[0];
-    graded = probElem.getAttribute('data-graded');
-    attempts_used = Number(document.getElementById('attempts-used').innerText);
-    attempts_total = Number(document.getElementById('attempts-allowed').innerText);
     numerator = Number(probElem.getAttribute('data-score'));
     denominator = Number(probElem.getAttribute('data-problem-total-possible'));
     SCORE = Number(numerator / denominator * 100);
+    let attempts_used = Number(document.getElementById('attempts-used').innerText);
+    let attempts_total = Number(document.getElementById('attempts-allowed').innerText);
     let correct = numerator;
     let outOf = denominator;
 
@@ -260,7 +257,7 @@ $(function() {
       //we passed! show passing div for the type of course they took
       modalVisibility('passed', courseType);
 
-      console.log('previous score: ', PREV_SCORE, 'score: ', SCORE);
+      console.log('previous score: ', PREV_SCORE, 'score: ', SCORE, 'attempts remaining: ', attempts_remaining);
 
       //generate the certificate through the API
       $.ajax({
@@ -273,6 +270,7 @@ $(function() {
         }
       });
     } else {
+      console.log('[gym] failed, attempts remaining: ', attempts_remaining);
       //we failed :( see if we have another attempt
       if (attempts_remaining > 0) {
         modalVisibility('try_again', courseType);
@@ -300,19 +298,20 @@ $(function() {
     let problem_id = document.getElementById('exam-problem').getAttribute('data-id');
 
     probElem = document.querySelectorAll('[data-problem-id')[0];
-    graded = probElem.getAttribute('data-graded');
-    attempts_used = Number(document.getElementById('attempts-used').innerText);
-    attempts_total = Number(document.getElementById('attempts-allowed').innerText);
     numerator = Number(probElem.getAttribute('data-score'));
     denominator = Number(probElem.getAttribute('data-problem-total-possible'));
     SCORE = Number(numerator / denominator * 100);
 
     if (SCORE > 0) {
-      console.log('[gym] previous score found: ', previousScore);
       PREV_SCORE = SCORE;
+    } else {
+      PREV_SCORE = 0;
     }
 
-    console.log('[gym] exam page | problem id: ' + problem_id);
+    console.log('[gym] exam page | problem id: ' + problem_id,
+      'score: ', SCORE,
+      'previous score: ', PREV_SCORE
+    );
 
     let observer = new MutationObserver(mutationRecords => {
       // reset interval if we detect a grade change
