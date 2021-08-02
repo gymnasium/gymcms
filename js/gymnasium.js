@@ -452,13 +452,11 @@ gym.ieCheck();
 gym.systemStatus();
 
 document.addEventListener('DOMContentLoaded', (event) => {
-
+  // check exam
+  gym.exam();
 
 });
 
 window.addEventListener('load', (event) => {
-  // check exam
-  gym.exam();
-
   gym.setBgFromImage();
 });
