@@ -158,11 +158,6 @@ Adding exam script here for proper inlining
 {%- endcomment -%}
 <script>
 let progress_status_check; // this is the interval we'll set to track status on this problem
-
-let probElem;
-let numerator;
-let denominator;
-let SCORE;
 let PREV_SCORE;
 
 $(function() {
@@ -170,6 +165,7 @@ $(function() {
   // hide all exam messages
   function hideModals() {
     document.querySelectorAll('.message').forEach(function(msg) {
+      console.log('[gym] hiding element: ', msg);
       msg.classList.add('hidden');
       msg.setAttribute('aria-hidden', true);
     });
@@ -188,6 +184,7 @@ $(function() {
     }
 
     elems.forEach(function(elem) {
+      console.log('[gym] showing element: ', elem);
       elem.classList.remove('hidden');
       elem.setAttribute('aria-hidden', false);
     });
@@ -213,10 +210,10 @@ $(function() {
       PASSING_SCORE = 80;
     }
 
-    probElem = document.querySelector('[data-problem-id]');
-    numerator = Number(probElem.getAttribute('data-problem-score'));
-    denominator = Number(probElem.getAttribute('data-problem-total-possible'));
-    SCORE = Number(numerator / denominator * 100);
+    let probElem = document.querySelector('[data-problem-id]');
+    let numerator = Number(probElem.getAttribute('data-problem-score'));
+    let denominator = Number(probElem.getAttribute('data-problem-total-possible'));
+    let SCORE = Number(numerator / denominator * 100);
     let attempts_used = Number(document.getElementById('attempts-used').innerText);
     let attempts_total = Number(document.getElementById('attempts-allowed').innerText);
     let correct = numerator;
@@ -250,14 +247,18 @@ $(function() {
       return;
     }
 
-    document.querySelector('.exam-score-container').innerText = SCORE;
+    document.querySelector('.exam-score-container').innerText = score;
 
     //we have a score
     if (score >= passingScore) {
       //we passed! show passing div for the type of course they took
       modalVisibility('passed', courseType);
 
-      console.log('previous score: ', PREV_SCORE, 'score: ', SCORE, 'attempts remaining: ', attempts_remaining);
+      console.log('[gym] previous score: ', window.PREV_SCORE, 'score: ', score, 'attempts remaining: ', attempts_remaining);
+      
+      if (score > window.PREV_SCORE && attempts_remaining > 0) {
+        console.log('[gym] new score is greater than previous score. We should update!')
+      }
 
       //generate the certificate through the API
       $.ajax({
@@ -297,10 +298,10 @@ $(function() {
 
     let problem_id = document.getElementById('exam-problem').getAttribute('data-id');
 
-    probElem = document.querySelector('[data-problem-id');
-    numerator = Number(probElem.getAttribute('data-problem-score'));
-    denominator = Number(probElem.getAttribute('data-problem-total-possible'));
-    SCORE = Number(numerator / denominator * 100);
+    let probElem = document.querySelector('[data-problem-id');
+    let numerator = Number(probElem.getAttribute('data-problem-score'));
+    let denominator = Number(probElem.getAttribute('data-problem-total-possible'));
+    let SCORE = Number(numerator / denominator * 100);
 
     if (SCORE > 0) {
       PREV_SCORE = SCORE;
