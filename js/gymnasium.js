@@ -450,7 +450,7 @@ gym.systemStatus();
 
 document.addEventListener('DOMContentLoaded', (event) => {
   // check exam
-  gym.exam();
+  // gym.exam();
 
 });
 
