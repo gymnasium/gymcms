@@ -169,7 +169,9 @@ class Gymnasium {
             return
           }
 
-          var storedScore = score ? score : 0;
+          var existingScore = score ? score : 0;
+
+          console.log(`existingScore: ${existingScore}`);
       
           $('.exam-score-container').text(score);
       
