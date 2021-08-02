@@ -213,8 +213,8 @@ $(function() {
       PASSING_SCORE = 80;
     }
 
-    probElem = document.querySelectorAll('[data-problem-id')[0];
-    numerator = Number(probElem.getAttribute('data-score'));
+    probElem = document.querySelector('[data-problem-id]');
+    numerator = Number(probElem.getAttribute('data-problem-score'));
     denominator = Number(probElem.getAttribute('data-problem-total-possible'));
     SCORE = Number(numerator / denominator * 100);
     let attempts_used = Number(document.getElementById('attempts-used').innerText);
@@ -297,8 +297,8 @@ $(function() {
 
     let problem_id = document.getElementById('exam-problem').getAttribute('data-id');
 
-    probElem = document.querySelectorAll('[data-problem-id')[0];
-    numerator = Number(probElem.getAttribute('data-score'));
+    probElem = document.querySelector('[data-problem-id');
+    numerator = Number(probElem.getAttribute('data-problem-score'));
     denominator = Number(probElem.getAttribute('data-problem-total-possible'));
     SCORE = Number(numerator / denominator * 100);
 
