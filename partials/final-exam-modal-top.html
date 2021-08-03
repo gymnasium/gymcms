@@ -2,7 +2,12 @@
 layout: raw
 permalink: /partials/final-exam-modal-top/
 ---
-<!-- styles are in final-exam-modal.html in cms -->
+{%- comment -%} 
+styles are in final-exam-modal.html in gymcms
+
+This unique anchor is for a post successful exam scroll event. Please do not remove or duplicate to the top modal.
+{%- endcomment -%}
+<a id="course_passed_message"></a>
 <main role="main">
   <div class="message hidden passed_modal final-exam-status FULL_COURSE" aria-hidden="true">
     <h2>Congratulations!</h2>
