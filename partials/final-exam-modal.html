@@ -175,10 +175,10 @@ $(function() {
     var [numerator, denominator] = fraction.split('/');
     var score2 = Number(numerator / denominator * 100);
 
+    prev_score = score1;
+
     if (score2 > score1) {
       prev_score = score2;
-    } else {
-      prev_score = score1;
     }
 
     console.log('[gym] score1: ', score1, 'score2: ', score2, 'previous score: ', prev_score);
@@ -296,7 +296,7 @@ $(function() {
     if (score >= passingScore) {
 
       if (score > previous_score && attempts_remaining > 0) {
-        console.log('[gym] score: ', score, 'previous score: ', previous_score);
+        console.log('[gym] new high score: ', score, 'previous score: ', previous_score);
       }
 
       //we passed! show passing div for the type of course they took
