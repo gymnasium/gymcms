@@ -219,19 +219,19 @@ $(function() {
         previous = score1;
       }
 
-      console.log('[gym] score1: ', score1, 'score2: ', score2, 'previous score: ', previous);
-
       return previous;
     }
 
     if (storageAvailable('localStorage')) {
       if (localStorage.getItem('grades')) {
         grades = JSON.parse(localStorage.getItem('grades'));
-        prevScore = grades[courseId];
+        prevScore = grades[courseId] ? grades[courseId] : 0;
+        console.log('[gym] localStorage: ', courseId, prevScore);
       } else {
         prevScore = compareScore();
         grades[courseId] = prevScore;
         localStorage.setItem('grades', JSON.stringify(grades));
+        console.log('[gym] no localStorage, setting: ', courseId, prevScore);
       }
       
     } else {
