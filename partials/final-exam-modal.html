@@ -203,7 +203,7 @@ $(function() {
 
   function getPrevScore(courseId) {
     let prevScore;
-    let grades;
+    let grades = {};
 
     function compareScore() {
       let previous;
@@ -343,11 +343,10 @@ $(function() {
       return;
     }
 
-    
-
+    // update exam score span
     $('.exam-score-container').text(score);
 
-    //we have a score
+    // we have a score, let's do stuff
     if (score >= passingScore) {
 
       if (score > previous_score && attempts_remaining > 0) {
