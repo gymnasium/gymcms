@@ -193,8 +193,24 @@ function getStorage(obj) {
   }
 }
 
+function compareScore() {
+  let previous;
+  let probElem = document.querySelector('[data-problem-score]');
+  let score1 = Number(probElem.getAttribute('data-problem-score'));
+  let [fraction] = document.querySelector('.problem-progress').innerText.split(' ');
+  let [numerator, denominator] = fraction.split('/');
+  let score2 = Number(numerator / denominator * 100);
 
-document.addEventListener('DOMContentLoaded', (event) => {
+  if (score2 > score1) {
+    previous = score2;
+  } else {
+    previous = score1;
+  }
+
+  return previous;
+}
+
+$(function() {
   let progress_status_check; // this is the interval we'll set to track status on this problem
 
   let previous_score;
@@ -204,23 +220,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
   function getPrevScore(courseId) {
     let prevScore;
     let grades = {};
-
-    function compareScore() {
-      let previous;
-      let probElem = document.querySelector('[data-problem-score]');
-      let score1 = Number(probElem.getAttribute('data-problem-score'));
-      let [fraction] = document.querySelector('.problem-progress').innerText.split(' ');
-      let [numerator, denominator] = fraction.split('/');
-      let score2 = Number(numerator / denominator * 100);
-
-      if (score2 > score1) {
-        previous = score2;
-      } else {
-        previous = score1;
-      }
-
-      return previous;
-    }
 
     if (storageAvailable('localStorage')) {
       if (localStorage.getItem('grades')) {
