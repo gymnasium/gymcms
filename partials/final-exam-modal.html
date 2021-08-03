@@ -161,29 +161,84 @@ a.gym-button.gym-button-secondary:focus {
 Adding exam script here for proper inlining
 {%- endcomment -%}
 <script>
+function storageAvailable(type) {
+  var storage;
+  try {
+    storage = window[type];
+    var x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch(e) {
+    return e instanceof DOMException && (
+      // everything except Firefox
+      e.code === 22 ||
+      // Firefox
+      e.code === 1014 ||
+      // test name field too, because code might not be present
+      // everything except Firefox
+      e.name === 'QuotaExceededError' ||
+      // Firefox
+      e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      (storage && storage.length !== 0);
+  }
+}
+
+function getStorage(obj) {
+  if (storageAvailable('localStorage')) {
+    
+  } else {
+    console.warn('[gym] no local storage available, fall back to cookie');
+  }
+}
+
+
 $(function() {
   let progress_status_check; // this is the interval we'll set to track status on this problem
 
   let previous_score;
 
-  function getPrevScore() {
-    let probElem = document.querySelector('[data-problem-score]');
-    let score1 = Number(probElem.getAttribute('data-problem-score'));
-    let prev_score;
+  let COURSE_ID;
 
-    var [fraction] = document.querySelector('.problem-progress').innerText.split(' ');
-    var [numerator, denominator] = fraction.split('/');
-    var score2 = Number(numerator / denominator * 100);
+  function getPrevScore(courseId) {
+    let prevScore;
+    let grades;
 
-    prev_score = score1;
+    function compareScore() {
+      let previous;
+      let probElem = document.querySelector('[data-problem-score]');
+      let score1 = Number(probElem.getAttribute('data-problem-score'));
+      let [fraction] = document.querySelector('.problem-progress').innerText.split(' ');
+      let [numerator, denominator] = fraction.split('/');
+      let score2 = Number(numerator / denominator * 100);
 
-    if (score2 > score1) {
-      prev_score = score2;
+      if (score2 > score1) {
+        previous = score2;
+      } else {
+        previous = score1;
+      }
+
+      console.log('[gym] score1: ', score1, 'score2: ', score2, 'previous score: ', previous);
+
+      return previous;
     }
 
-    console.log('[gym] score1: ', score1, 'score2: ', score2, 'previous score: ', prev_score);
+    if (storageAvailable('localStorage')) {
+      if (localStorage.getItem('grades')) {
+        grades = JSON.parse(localStorage.getItem('grades'));
+        prevScore = grades[courseId];
+      } else {
+        prevScore = compareScore();
+        grades[courseId] = prevScore;
+        localStorage.setItem('grades', JSON.stringify(grades));
+      }
+      
+    } else {
+      console.warn('[gym] no local storage available');
+    }
 
-    return prev_score;
+    return prevScore;
   }
 
     // hide all exam messages
@@ -233,7 +288,7 @@ $(function() {
       GYM_SHORT: 'GYM_SHORT',
     };
 
-    const COURSE_ID = parseInt($('#__course_number__').text(), 10);
+    COURSE_ID = parseInt($('#__course_number__').text(), 10);
     const COURSE_TYPE = COURSE_ID >= 100 ? COURSE_TYPES.FULL_COURSE : COURSE_TYPES.GYM_SHORT;
     let PASSING_SCORE = 85;
 
@@ -288,7 +343,7 @@ $(function() {
       return;
     }
 
-    previous_score = getPrevScore();
+    
 
     $('.exam-score-container').text(score);
 
@@ -345,7 +400,9 @@ $(function() {
 
     let problem_id = document.getElementById('exam-problem').getAttribute('data-id');
 
-    previous_score = getPrevScore();
+    COURSE_ID = parseInt(document.getElementById('__course_number__').innerText, 10);
+
+    previous_score = getPrevScore(COURSE_ID);
 
     console.log('[gym] exam page | previous score: ', previous_score);
 
