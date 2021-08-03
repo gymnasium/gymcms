@@ -100,8 +100,12 @@ a.gym-button.gym-button-secondary:focus {
 
 </style>
 
+{%- comment -%} This unique anchor is for a post successful exam scroll event. Please do not remove or duplicate to the top modal.{%- endcomment -%}
+
+<a id="course_passed_message"></a>
+
 <main role="main">
-  <div class="message hidden passed_modal final-exam-status FULL_COURSE" aria-hidden="true" id="course_passed_message">
+  <div class="message hidden passed_modal final-exam-status FULL_COURSE" aria-hidden="true">
     <h2>Congratulations!</h2>
     <p>Congrats on completing the course and passing the final exam.</p>
     <p><strong>You really know your stuff!</strong> Now show off to your network by sharing your certificate on LinkedIn. You can access it right from your <a href="/dashboard">Dashboard</a>.</p>
@@ -112,7 +116,7 @@ a.gym-button.gym-button-secondary:focus {
     </div>
   </div>
 
-  <div class="message hidden passed_modal final-exam-status GYM_SHORT" aria-hidden="true" id="course_passed_message">
+  <div class="message hidden passed_modal final-exam-status GYM_SHORT" aria-hidden="true">
     <h2>Congratulations!</h2>
     <p>Congrats on completing the course and passing the final exam.</p>
     <p><strong>You really know your stuff!</strong> Now show off to your network by sharing your badge on LinkedIn. You can access it right from your <a href="/dashboard">Dashboard</a>.</p>
@@ -159,6 +163,28 @@ Adding exam script here for proper inlining
 <script>
 $(function() {
   let progress_status_check; // this is the interval we'll set to track status on this problem
+
+  let previous_score;
+
+  function getPrevScore() {
+    let probElem = document.querySelector('[data-problem-score]');
+    let score1 = probElem.getAttribute('data-problem-score');
+    let prev_score;
+
+    var [fraction] = document.querySelector('.problem-progress').innerText.split(' ');
+    var [numerator, denominator] = fraction.split('/');
+    var score2 = Number(numerator / denominator * 100);
+
+    if (score2 > score1) {
+      prev_score = score2;
+    } else {
+      prev_score = score1;
+    }
+
+    console.log('[gym] score1: ', score1, 'score2: ', score2, 'previous score: ', prev_score);
+
+    return prev_score;
+  }
 
     // hide all exam messages
   function hideModals(cb) {
@@ -228,11 +254,11 @@ $(function() {
     // next we split the fraction in half by "/" to get the numerator and denominator
     var [numerator, denominator] = fraction.split('/');
 
-    var attempts_used = Number($('#attempts-used').text());
-    var attempts_total = Number($('#attempts-allowed').text());
-
     var correct = Number(numerator);
     var outOf = Number(denominator);
+
+    var attempts_used = Number($('#attempts-used').text());
+    var attempts_total = Number($('#attempts-allowed').text());
 
     return {
       courseType: COURSE_TYPE,
@@ -262,7 +288,7 @@ $(function() {
       return;
     }
 
-    let previous_score = Number(document.querySelector('[data-problem-id]').getAttribute('data-problem-score'));
+    previous_score = getPrevScore();
 
     $('.exam-score-container').text(score);
 
@@ -270,7 +296,7 @@ $(function() {
     if (score >= passingScore) {
 
       if (score > previous_score && attempts_remaining > 0) {
-        console.log('[gym] we have a new high score. Update!');
+        console.log('[gym] score: ', score, 'previous score: ', previous_score);
       }
 
       //we passed! show passing div for the type of course they took
@@ -319,11 +345,15 @@ $(function() {
 
     let problem_id = document.getElementById('exam-problem').getAttribute('data-id');
 
-    console.log('[gym] exam page');
+    previous_score = getPrevScore();
+
+    console.log('[gym] exam page | previous score: ', previous_score);
 
     let observer = new MutationObserver(mutationRecords => {
-      // reset interval if we detect a grade change
+      // log
       console.log('[gym] mutation records: ', mutationRecords);
+
+      // reset interval if we detect a grade change
       if (typeof progress_status_check !== 'undefined'){
         clearInterval(progress_status_check);
       }
@@ -347,7 +377,8 @@ $(function() {
   // scroll to show the results message
   $('#check-button').click(function() {
     console.log('[gym] check exam button clicked');
-    $('#course_passed_message')[0].scrollIntoView();
+
+    document.getElementById('course_passed_message').scrollIntoView();
   });
 
 });
