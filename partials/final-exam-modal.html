@@ -225,22 +225,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (storageAvailable('localStorage')) {
       if (localStorage.getItem('grades')) {
         grades = JSON.parse(localStorage.getItem('grades'));
+        prevScore = grades[courseId] ? grades[courseId] : compareScore();
 
-        if (typeof grades[courseId] !== 'undefined' && grades[courseId] !== null) {
-          // if we have a stored grade for this course, retrieve it
-          prevScore = grades[courseId];
-        } else {
-          // if we don't have a stored grade for this course, store a value
-          prevScore = compareScore();
-          grades[courseId] = prevScore;
-          localStorage.setItem('grades', JSON.stringify(grades));
-        }
       } else {
-        // if there's no local storage object for grades, create one
         prevScore = compareScore();
-        grades[courseId] = prevScore;
-        localStorage.setItem('grades', JSON.stringify(grades));
       }
+
+      // update grades object & store
+      grades[courseId] = prevScore;
+      localStorage.setItem('grades', JSON.stringify(grades));
       
     } else {
       console.warn('[gym] no local storage available');
