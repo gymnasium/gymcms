@@ -168,7 +168,7 @@ $(function() {
 
   function getPrevScore() {
     let probElem = document.querySelector('[data-problem-score]');
-    let score1 = probElem.getAttribute('data-problem-score');
+    let score1 = Number(probElem.getAttribute('data-problem-score'));
     let prev_score;
 
     var [fraction] = document.querySelector('.problem-progress').innerText.split(' ');
