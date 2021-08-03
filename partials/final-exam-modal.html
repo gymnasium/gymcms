@@ -193,6 +193,45 @@ function getStorage(obj) {
   }
 }
 
+// hide all exam messages
+function hideModals(cb) {
+  document.querySelectorAll('.message').forEach(function(elem) {
+    console.log('hiding modal: ', elem);
+    elem.classList.add('hidden');
+    elem.setAttribute('aria-hidden', true);
+  });
+
+  // callback
+  if (cb) {
+    cb();
+  }
+}
+
+// show specific exam messages (passed, try_again, failed)
+function modalVisibility(status, courseType) {
+  let modalsHidden = false;
+
+  hideModals(()=> {
+    modalsHidden = true;
+  });
+
+  if (modalsHidden) {
+    let elems;
+    if (courseType) {
+      elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
+    } else {
+      elems = document.querySelectorAll('.' + status + '_modal');
+    }
+
+    elems.forEach(function(elem) {
+      console.log('showing modal: ', elem);
+      elem.classList.remove('hidden');
+      elem.setAttribute('aria-hidden', false);
+    });
+  }
+  
+}
+
 function compareScore() {
   let previous;
   let probElem = document.querySelector('[data-problem-score]');
@@ -210,76 +249,37 @@ function compareScore() {
   return previous;
 }
 
-$(function() {
+function getPrevScore(courseId) {
+  let prevScore;
+  let grades = {};
+
+  if (storageAvailable('localStorage')) {
+    if (localStorage.getItem('grades')) {
+      grades = JSON.parse(localStorage.getItem('grades'));
+      prevScore = grades[courseId] ? grades[courseId] : compareScore();
+
+    } else {
+      prevScore = compareScore();
+    }
+
+    // update grades object & store
+    grades[courseId] = prevScore;
+    localStorage.setItem('grades', JSON.stringify(grades));
+    
+  } else {
+    console.warn('[gym] no local storage available');
+    // TODO: add alternate options
+  }
+
+  return prevScore;
+}
+
+function exam() {
   let progress_status_check; // this is the interval we'll set to track status on this problem
 
   let previous_score;
 
   let COURSE_ID;
-
-  function getPrevScore(courseId) {
-    let prevScore;
-    let grades = {};
-
-    if (storageAvailable('localStorage')) {
-      if (localStorage.getItem('grades')) {
-        grades = JSON.parse(localStorage.getItem('grades'));
-        prevScore = grades[courseId] ? grades[courseId] : compareScore();
-
-      } else {
-        prevScore = compareScore();
-      }
-
-      // update grades object & store
-      grades[courseId] = prevScore;
-      localStorage.setItem('grades', JSON.stringify(grades));
-      
-    } else {
-      console.warn('[gym] no local storage available');
-      // TODO: add alternate options
-    }
-
-    return prevScore;
-  }
-
-    // hide all exam messages
-  function hideModals(cb) {
-    document.querySelectorAll('.message').forEach(function(elem) {
-      console.log('hiding modal: ', elem);
-      elem.classList.add('hidden');
-      elem.setAttribute('aria-hidden', true);
-    });
-
-    // callback
-    if (cb) {
-      cb();
-    }
-  }
-
-  // show specific exam messages (passed, try_again, failed)
-  function modalVisibility(status, courseType) {
-    let modalsHidden = false;
-
-    hideModals(()=> {
-      modalsHidden = true;
-    });
-
-    if (modalsHidden) {
-      let elems;
-      if (courseType) {
-        elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
-      } else {
-        elems = document.querySelectorAll('.' + status + '_modal');
-      }
-
-      elems.forEach(function(elem) {
-        console.log('showing modal: ', elem);
-        elem.classList.remove('hidden');
-        elem.setAttribute('aria-hidden', false);
-      });
-    }
-    
-  }
 
   // this helper function gets a ton of information about the score for this particular problem
   // based on information embedded on this page
@@ -344,19 +344,18 @@ $(function() {
       return;
     }
 
-    previous_score = getPrevScore(COURSE_ID);
-
     // update exam score span
     $('.exam-score-container').text(score);
 
     // we have a score, let's do stuff
     if (score >= passingScore) {
+      // previous_score = getPrevScore(COURSE_ID);
 
-      if (score > previous_score && attempts_remaining > 0) {
-        console.log('[gym] new high score! ', score, '\nprevious score: ', previous_score);
-      } else {
-        console.log('[gym] score is not higher than previous score');
-      }
+      // if (score > previous_score && attempts_remaining > 0) {
+      //   console.log('[gym] new high score! ', score, '\nprevious score: ', previous_score);
+      // } else {
+      //   console.log('[gym] score is not higher than previous score');
+      // }
 
       //we passed! show passing div for the type of course they took
       $(".passed_modal." + courseType).removeClass('hidden');
@@ -406,7 +405,7 @@ $(function() {
 
     COURSE_ID = parseInt(document.getElementById('__course_number__').innerText, 10);
 
-    previous_score = getPrevScore(COURSE_ID);
+    // previous_score = getPrevScore(COURSE_ID);
 
     // console.log('[gym] exam page | previous score: ', previous_score);
 
@@ -441,6 +440,10 @@ $(function() {
 
     document.getElementById('course_passed_message').scrollIntoView();
   });
+}
+
+$(function() {
+  exam();
 
 });
 
