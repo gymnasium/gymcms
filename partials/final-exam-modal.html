@@ -463,9 +463,11 @@ function exam() {
   });
 }
 
-$(function() {
-  exam();
-
-});
+// Native JS equivalent of jQuery's document.ready
+document.onreadystatechange = function () {
+  if (document.readyState === "interactive") {
+    exam();
+  }
+};
 
 </script>
