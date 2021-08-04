@@ -1,0 +1,451 @@
+---
+layout: raw
+permalink: /partials/final-exam-modal/
+---
+<style>
+
+.message {
+  color: #333;
+  text-align: center;
+  padding: 1.8em;
+  border: 1.2em solid #444;
+  border-radius: 2px;
+  margin-top: 1.8em;
+  margin-bottom: 1.8em;
+}
+
+.message h2 {
+  font: 900 1.8em/1.1 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  text-align: center;
+  margin-bottom: .8em;
+}
+
+.message p {
+  font-family: brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.message h2 + p {
+  font-size: 1.4em;
+}
+
+.message p {
+  text-align: left;
+  margin-top: .6em;
+}
+
+.message hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin-top: 1.4em;
+}
+
+.message .survey {
+  display: inline-block;
+  background: #ebebeb;
+  padding: 1.2em;
+  border: 1px solid #ccc;
+  margin-top: 1.4em;
+}
+
+.message .survey p {
+  margin-top: 0;
+}
+
+.message .gym-button {
+  margin-top: 1.2em;
+}
+
+a.gym-button-primary {
+  display: inline-block;
+  font: bold 1.2em/1 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  color: #fff;
+  letter-spacing: .025em;
+  vertical-align: normal;
+  background: #f8971d;
+  padding: 1em 2em;
+  border: 0;
+  border-radius: 2px;
+  margin-top: .5em;
+  margin-right: .84em;
+  margin-bottom: .5em;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: auto !important;
+  }
+
+a.gym-button-primary:hover {
+  background: #a6a6a6;
+}
+
+a.gym-button.gym-button-secondary {
+  color: #333;
+  background: none;
+  border: 2px solid #333;
+  width: auto !important;
+}
+
+a.gym-button.gym-button-secondary:hover,
+a.gym-button.gym-button-secondary:focus {
+  color: #fff !important;
+  background: #a6a6a6 !important;
+  border: 2px solid #333 !important;
+}
+
+</style>
+
+{%- comment -%} 
+This unique anchor is for a post successful exam scroll event. Please do not remove or duplicate to the top modal.
+{%- endcomment -%}
+<a id="course_passed_message"></a>
+
+<main role="main">
+  <div class="message hidden passed_modal final-exam-status FULL_COURSE" aria-hidden="true">
+    <h2>Congratulations!</h2>
+    <p>Congrats on completing the course and passing the final exam.</p>
+    <p><strong>You really know your stuff!</strong> Now show off to your network by sharing your certificate on LinkedIn. You can access it right from your <a href="/dashboard">Dashboard</a>.</p>
+    <a class="btn gym-button gym-button-primary" href="/dashboard">View Your Certificate</a>
+    <div class="survey">
+      <p>Before you go, would you mind taking a sec to fill out our quick survey? Your feedback will help shape future courses and let us know how <em>we’re</em> doing.</p>
+      <a class="gym-button gym-button-secondary" href="https://www.surveymonkey.com/s/JYJPMSS" target="_blank">Take Our Survey</a>
+    </div>
+  </div>
+
+  <div class="message hidden passed_modal final-exam-status GYM_SHORT" aria-hidden="true">
+    <h2>Congratulations!</h2>
+    <p>Congrats on completing the course and passing the final exam.</p>
+    <p><strong>You really know your stuff!</strong> Now show off to your network by sharing your badge on LinkedIn. You can access it right from your <a href="/dashboard">Dashboard</a>.</p>
+    <a class="btn gym-button gym-button-primary" href="/dashboard">View Your Badge</a>
+    <div class="survey">
+      <p>Before you go, would you mind taking a sec to fill out our quick survey? Your feedback will help shape future courses and let us know how <em>we’re</em> doing.</p>
+      <a class="gym-button gym-button-secondary" href="https://www.surveymonkey.com/s/JYJPMSS" target="_blank">Take Our Survey</a>
+    </div>
+  </div>
+
+  <div class="message hidden try_again_modal final-exam-status GYM_SHORT" aria-hidden="true">
+    <h2>You’re Close!</h2>
+    <p>We’re thrilled you’ve made it this far. You’ve scored a <span class="exam-score-container"></span> on the exam. To pass you need to get greater than an 80.</p>
+
+    <p>Lucky for you, you’ve still got one more chance to pass. This would be a great time to go back and review the course material. Take a look at things you may have struggled with and have another go when you feel prepared. </p>
+
+    <p>Good luck!</p>
+  </div>
+
+  <div class="message hidden try_again_modal final-exam-status FULL_COURSE" aria-hidden="true">
+    <h2>You’re close!</h2>
+    <p>We’re thrilled you’ve made it this far. You’ve scored a <span class="exam-score-container"></span> on the exam. To pass you need to get greater than an 85.</p>
+
+    <p>Lucky for you, you’ve still got one more chance to pass. This would be a great time to go back and review the course material. Then try again when you feel prepared.</p>
+    <p>Good luck!</p>
+  </div>
+
+  <div class="message hidden failed_modal final-exam-status" aria-hidden="true">
+    <h2>Aw, shucks.</h2>
+    <p>Unfortunately, you’ve run out of chances to pass. You still deserve a lot of credit for finishing our course! Only 1 in 10 online learners actually completes a course.</p>
+
+    <div class="survey">
+      <p>Could you please take a moment to share your thoughts with us on a quick survey? Your feedback will help shape our future courses and let us know how <em>we’re</em> doing.</p>
+      <a class="gym-button gym-button-primary" href="https://www.surveymonkey.com/s/JYJPMSS" target="_blank">
+        Take Our Survey
+      </a>
+    </div>
+  </div>
+</main>
+
+{%- comment -%}
+Adding exam script here for proper inlining
+{%- endcomment -%}
+<script>
+function storageAvailable(type) {
+  var storage;
+  try {
+    storage = window[type];
+    var x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch(e) {
+    return e instanceof DOMException && (
+      // everything except Firefox
+      e.code === 22 ||
+      // Firefox
+      e.code === 1014 ||
+      // test name field too, because code might not be present
+      // everything except Firefox
+      e.name === 'QuotaExceededError' ||
+      // Firefox
+      e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+      // acknowledge QuotaExceededError only if there's something already stored
+      (storage && storage.length !== 0);
+  }
+}
+
+function getStorage(obj) {
+  if (storageAvailable('localStorage')) {
+    
+  } else {
+    console.warn('[gym] no local storage available, fall back to cookie');
+  }
+}
+
+// hide all exam messages
+function hideModals(cb) {
+  document.querySelectorAll('.message').forEach(function(elem) {
+    console.log('hiding modal: ', elem);
+    elem.classList.add('hidden');
+    elem.setAttribute('aria-hidden', true);
+  });
+
+  // callback
+  if (cb) {
+    cb();
+  }
+}
+
+// show specific exam messages (passed, try_again, failed)
+function modalVisibility(status, courseType) {
+  let modalsHidden = false;
+
+  hideModals(()=> {
+    modalsHidden = true;
+  });
+
+  if (modalsHidden) {
+    let elems;
+    if (courseType) {
+      elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
+    } else {
+      elems = document.querySelectorAll('.' + status + '_modal');
+    }
+
+    elems.forEach(function(elem) {
+      console.log('showing modal: ', elem);
+      elem.classList.remove('hidden');
+      elem.setAttribute('aria-hidden', false);
+    });
+  }
+  
+}
+
+function compareScore() {
+  let previous;
+  let probElem = document.querySelector('[data-problem-score]');
+  let score1 = Number(probElem.getAttribute('data-problem-score'));
+  let [fraction] = document.querySelector('.problem-progress').innerText.split(' ');
+  let [numerator, denominator] = fraction.split('/');
+  let score2 = Number(numerator / denominator * 100);
+
+  if (score2 > score1) {
+    previous = score2;
+  } else {
+    previous = score1;
+  }
+
+  return previous;
+}
+
+function getPrevScore(courseId) {
+  let prevScore;
+  let grades = {};
+
+  if (storageAvailable('localStorage')) {
+    if (localStorage.getItem('grades')) {
+      grades = JSON.parse(localStorage.getItem('grades'));
+      prevScore = grades[courseId] ? grades[courseId] : compareScore();
+
+    } else {
+      prevScore = compareScore();
+    }
+
+    // update grades object & store
+    grades[courseId] = prevScore;
+    localStorage.setItem('grades', JSON.stringify(grades));
+    
+  } else {
+    console.warn('[gym] no local storage available');
+    // TODO: add alternate options
+  }
+
+  return prevScore;
+}
+
+function exam() {
+  let progress_status_check; // this is the interval we'll set to track status on this problem
+
+  let previous_score;
+
+  let COURSE_ID;
+
+  // this helper function gets a ton of information about the score for this particular problem
+  // based on information embedded on this page
+  var processScore = () => {
+    const COURSE_TYPES = {
+      FULL_COURSE: 'FULL_COURSE',
+      GYM_SHORT: 'GYM_SHORT',
+    };
+
+    COURSE_ID = parseInt($('#__course_number__').text(), 10);
+    const COURSE_TYPE = COURSE_ID >= 100 ? COURSE_TYPES.FULL_COURSE : COURSE_TYPES.GYM_SHORT;
+    let PASSING_SCORE = 85;
+
+    if (COURSE_TYPE === COURSE_TYPES.FULL_COURSE) {
+      // full courses have a passing grade of 85
+      PASSING_SCORE = 85;
+    } else {
+      // gym shorts have a passing grade of 80
+      PASSING_SCORE = 80;
+    }
+
+    // look into the div with a class of .problem-progress for our score
+    // it contains a string that looks like:
+    //    80/100 Points (Graded)
+    // so we use .split(' ') to separate the fraction from the rest
+    var [fraction] = $('.problem-progress').text().split(' ');
+
+    // next we split the fraction in half by "/" to get the numerator and denominator
+    var [numerator, denominator] = fraction.split('/');
+
+    var correct = Number(numerator);
+    var outOf = Number(denominator);
+
+    var attempts_used = Number($('#attempts-used').text());
+    var attempts_total = Number($('#attempts-allowed').text());
+
+    return {
+      courseType: COURSE_TYPE,
+      passingScore: PASSING_SCORE,
+      score: Number(numerator / denominator * 100),
+      correct,
+      outOf,
+      attempts_used,
+      attempts_total,
+      attempts_remaining: attempts_total - attempts_used,
+    };
+  };
+
+  var show_problem_progress = function() {
+    let {
+      attempts_used,
+      attempts_total,
+      attempts_remaining,
+      correct,
+      courseType,
+      outOf,
+      score,
+      passingScore,
+    } = processScore();
+
+    if (!correct || !outOf) {
+      return;
+    }
+
+    // update exam score span
+    $('.exam-score-container').text(score);
+
+    // we have a score, let's do stuff
+    if (score >= passingScore) {
+      // previous_score = getPrevScore(COURSE_ID);
+
+      // if (score > previous_score && attempts_remaining > 0) {
+      //   console.log('[gym] new high score! ', score, '\nprevious score: ', previous_score);
+      // } else {
+      //   console.log('[gym] score is not higher than previous score');
+      // }
+
+      //we passed! show passing div for the type of course they took
+      $(".passed_modal." + courseType).removeClass('hidden');
+      $(".try_again_modal").addClass('hidden');
+      $(".failed_modal").addClass('hidden');
+
+      //generate the certificate through the API
+      $.ajax({
+        type:     'POST',
+        url:      '/accredible/request_certificate',
+        async:     false,
+        data:     {'course_id': window.$$course_id},
+        success:  function(data) {
+          // console.log('[gym] certificate request successful: ', data);
+        }
+      });
+    } else {
+      //we failed :( see if we have another attempt
+      if (attempts_remaining > 0) {
+        $(".passed_modal").addClass('hidden');
+        $(".try_again_modal." + courseType).removeClass('hidden');
+        $(".failed_modal").addClass('hidden');
+      } else {
+        $(".passed_modal").addClass('hidden');
+        $(".try_again_modal").addClass('hidden');
+        $(".failed_modal").removeClass('hidden');
+      }
+    }
+  }
+
+  function check_status(){
+    const {
+      attempts_used,
+      correct,
+    } = processScore();
+
+    if (attempts_used > 0 || correct > 0) {
+      clearInterval(progress_status_check);
+      show_problem_progress();
+    }
+  }
+
+  // This determines if we are on the exam page?
+  if ($('.problem-header').text().trim() === "Final Exam") {
+
+    let problem_id = document.getElementById('exam-problem').getAttribute('data-id');
+
+    COURSE_ID = parseInt(document.getElementById('__course_number__').innerText, 10);
+
+    // previous_score = getPrevScore(COURSE_ID);
+
+    // console.log('[gym] exam page | previous score: ', previous_score);
+
+    let observer = new MutationObserver(mutationRecords => {
+      // log
+      // console.log('[gym] mutation records: ', mutationRecords);
+
+      // reset interval if we detect a grade change
+      if (typeof progress_status_check !== 'undefined'){
+        clearInterval(progress_status_check);
+      }
+      // set interval on initial page load
+      progress_status_check = setInterval(check_status, 200);
+    });
+
+    observer.observe(
+      document.getElementById(problem_id + '-problem-progress'),
+      {
+        characterData: false,
+        attributes: false,
+        childList: true,
+        subtree: false
+      },
+    );
+  } else {
+    return;
+  }
+
+  // scroll to show the results message
+  $('#check-button').click(function() {
+    // console.log('[gym] check exam button clicked');
+
+    document.getElementById('course_passed_message').scrollIntoView();
+  });
+}
+
+$(function() {
+  exam();
+
+});
+
+</script>

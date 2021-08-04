@@ -79,7 +79,7 @@ layout: raw
               {%- if item.register and site.data.bios[speaker].headshot != null -%}
                 <li>
                   <figure>
-                    <img src="{{ site.url }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
+                    <img src="{{ site.url }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}" loading="lazy">
                     <figcaption>{{ site.data.bios[speaker].name }}</figcaption>
                   </figure>
                 </li>

@@ -1,0 +1,10 @@
+{%- include build-timestamp.html -%}
+{%- if jekyll.environment == "development" -%}
+  {%- include partials/test-top.html -%}
+{%- endif -%}
+
+{{ content }}
+
+{%- if jekyll.environment == "development" -%}
+  {%- include partials/test-bottom.html -%}
+{%- endif -%}

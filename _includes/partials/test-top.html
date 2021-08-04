@@ -13,52 +13,32 @@
 
     <title>Free online courses on design and web development | Gymnasium</title>
 
-    <script src="{{site.gymurl}}/static/js/i18n/en/djangojs.e37eef1ffc63.js"></script>
-    <script src="{{site.gymurl}}/static/js/ie11_find_array.bd1c6dc7a133.js"></script>
-
     <link
       rel="icon"
       type="image/x-icon"
-      href="{{site.gymurl}}/static/gymnasium/images/favicon.f729730b6e79.ico"
+      href="{{site.gymurl}}/static/gymnasium/images/favicon.ico"
     />
 
     <link
-      href="{{site.gymurl}}/static/gymnasium/css/lms-style-vendor.68e48093f5dd.css"
+      href="{{site.gymurl}}/static/gymnasium/css/lms-style-vendor.css"
       rel="stylesheet"
       type="text/css"
     />
 
     <link
-      href="{{site.gymurl}}/static/gymnasium/css/lms-main-v1.d803db09b7be.css"
+      href="{{site.gymurl}}/static/gymnasium/css/lms-main-v1.css"
       rel="stylesheet"
       type="text/css"
     />
 
     <script
       type="text/javascript"
-      src="{{site.gymurl}}/static/js/lms-main_vendor.a04b73033169.js"
+      src="{{site.gymurl}}/static/js/lms-main_vendor.js"
       charset="utf-8"
     ></script>
 
-
-    <meta property="og:url" content="https://thegymnasium.com/" />
-    <meta property="og:title" content="Aquent Gymnasium" />
-    <meta
-      property="og:image"
-      content="https://thegymnasium.com/static/gymnasium/images/social-share-400.f9715ec47ea8.png"
-    />
-
-    <meta
-      property="og:description"
-      content="Gymnasium offers free online courses on web development, design, user experience, and content creation."
-    />
-    <meta
-      property="og:keywords"
-      content="free online courses designers design user experience UX javascript node nodejs sketch wordpress drupal UI"
-    />
-
     {%- comment -%}Include meta components for DRYness{%- endcomment -%}
-    {%- include /partials/theme-head-meta.html -%}
+    {%- include /partials/meta.html -%}
 
     <!-- insert typekit font references -->
     <script src="//use.typekit.net/rhf0qta.js"></script>
@@ -73,9 +53,6 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
-
-    {%- comment -%}Include CSS components for DRYness{%- endcomment -%}
-    {%- include /partials/theme-head-css.html -%}
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
@@ -96,11 +73,6 @@
     <script>
       var CW_ENV = "cw-beta";
     </script>
-
-    <script src="{{site.gymurl}}/static/gymnasium/js/gymnasium.js"></script>
-
-    {%- comment -%}Include JS components for DRYness{%- endcomment -%}
-    {%- include /partials/theme-head-js.html -%}
 
     <script>
       // check for unsupported browsers; display warning message if an old browser
@@ -183,11 +155,11 @@
 
   <body class="ltr gymnasium-home lang_en">
     <div id="page-prompt"></div>
-    <div class="window-wrap" dir="ltr">
       <a class="nav-skip sr-only sr-only-focusable" href="#main"
         >Skip to main content</a
       >
-
+      <aside id="system-status" class="system-status hide"></aside>
+      
       <header class="global" aria-label="Global Navigation">
         <nav id="primary-nav" class="black-background container-fluid">
           <div class="container">
@@ -251,8 +223,8 @@
                   <a class="navbar-brand" href="{{homelink}}">
                     <img
                       class="gymnasium-logo"
-                      src="{{site.gymurl}}/static/gymnasium/images/gymnasiumLogo.png"
-                      srcset="{{site.gymurl}}/static/gymnasium/images/gymnasium-logo-white.svg"
+                      src="{{site.url}}/img/brand/svg/gymnasium-logo-white.svg"
+                      srcset="{{site.url}}/img/brand/svg/gymnasium-logo-white.svg"
                       width="200"
                       height="23"
                       alt="Aquent Gymnasium home page"
@@ -313,12 +285,6 @@
           </div>
         </div>
       </header>
-
-      <!-- //
-Generated at: 2021-05-26 09:20:28 -0400
-Served from: https://thegymcms.com/system-status/
-Git Hash: 5ef0c65
-// -->
 
       <script>
         $(function () {

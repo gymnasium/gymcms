@@ -5,60 +5,63 @@ permalink: /tests/catalog/metas
 
 <title>Course Catalog: Meta Content Tests</title>
 
-{% assign sorted_catalog = site.data.courses | sort %}
-    {%- for course_hash in sorted_catalog -%}
-    {%- assign item = course_hash[1] -%}
+<style>
+pre {
+  max-width: 100%;
+  white-space: pre-line;
+  background-color: aliceblue;
+  padding: 10px;
+}
+th, td {
+  text-align: left;
+  border: 1px solid black;
+}
 
-<!-- {{ item | inspect }} -->
-{%- assign course = site.data.courses[item.course_ID] -%}
-    {%- assign og_description = course.short_description -%}
-    {%- assign short_description = og_description -%}
-    {%- assign og_url = course.url -%}
-    {%- assign og_title = course.title -%}
-    {%- assign page_title =  course.title | append: " | Gymnasium" -%}
-    {%- assign og_art = course.course_ID | downcase | append: "-social.png" | prepend: "img/social/courses/" -%}
-    {%- assign twitter_card_style = "summary"-%}
-
-
-<h3>{{course.course_ID }} - {{ course.title }}</h3>
-<pre>
-
-name="description" content="{{ short_description | strip_html }}"
-name="author" content="Aquent Gymnasium"
-property="og:url" content="{{ og_url }}"
-property="og:type" content="website"
-property="og:locale" content="en_US"
-property="og:site_name" content="{{ page_title }}"
-property="og:title" content="{{ og_title | strip_html }}"
-property="og:description" content="{{ short_description | strip_html }}"
-property="og:image:alt" content="{{ og_title | strip_html }}"
-property="og:image" content="{{ site.url }}/{{ og_art }}"
-name="twitter:card" content="{{ twitter_card_style }}"
-name="twitter:site" content="@AquentGymnasium"
-name="twitter:creator" content="@AquentGymnasium"
-name="twitter:url" property="og:url" content="{{ og_url }}"
-name="twitter:title" property="og:title" content="{{ og_title | strip_html }}"
-name="twitter:description" property="og:description" content="{{ short_description | strip_html }}"
-property="og:image:alt" content="{{ og_title | strip_html }}"
-name="twitter:image" property="og:image" content="{{ site.url }}/{{ og_art }}"
-rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}/favicon/apple-icon-57x57.png"
-rel="apple-touch-icon" sizes="60x60" href="{{ site.url }}/favicon/apple-icon-60x60.png"
-rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/favicon/apple-icon-72x72.png"
-rel="apple-touch-icon" sizes="76x76" href="{{ site.url }}/favicon/apple-icon-76x76.png"
-rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/favicon/apple-icon-114x114.png"
-rel="apple-touch-icon" sizes="120x120" href="{{ site.url }}/favicon/apple-icon-120x120.png"
-rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/favicon/apple-icon-144x144.png"
-rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/favicon/apple-icon-152x152.png"
-rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/favicon/apple-icon-180x180.png"
-rel="icon" type="image/png" sizes="192x192"  href="{{ site.url }}/favicon/android-icon-192x192.png"
-rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/favicon/favicon-32x32.png"
-rel="icon" type="image/png" sizes="96x96" href="{{ site.url }}/favicon/favicon-96x96.png"
-rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/favicon/favicon-16x16.png"
-rel="manifest" href="{{ site.url }}/favicon/manifest.json"
-name="msapplication-TileColor" content="#ffffff"
-name="msapplication-TileImage" content="{{ site.url }}/favicon/ms-icon-144x144.png"
-name="theme-color" content="#ffffff"
-
-</pre>
-
+</style>
+{% comment %}
+Combine all course types into one array
+{% endcomment %}
+{% assign main = site.data['courses'] | sort %}
+{% assign take5 = site.data['take5'] | sort %}
+{% assign catalog = "" | split: ',' %}
+{%- for item in main -%}
+  {% assign catalog = catalog | push: item[1] %}
 {%- endfor -%}
+{%- for item in take5 -%}
+  {% assign catalog = catalog | push: item[1] %}
+{%- endfor -%}
+
+<h1>Course Meta Inspector</h1>
+<p>This test page is intended to help diagnose any missing meta tag data.</p>
+<table>
+
+{%- for item in catalog -%}
+
+    {%- assign id = item.course_ID -%}
+
+    {%- assign course_prefix = id | remove: "GYM-" | slice: 0, 2 -%}
+    {% comment %} Exceptions for Take5™ tutorials {% endcomment %}
+    {% if course_prefix == "50" %}
+      {%- include partials/meta/logic-take5.html -%}
+    {% comment %} Exceptions for full courses {% endcomment %}
+    {% elsif course_prefix == "10" %}
+      {%- include partials/meta/logic-courses.html -%}
+    {% comment %} Exceptions for Gym Shorts™ {% endcomment %}
+    {% else %}
+      {%- include partials/meta/logic-courses.html -%}
+    {% endif %}
+
+    {%- include partials/meta/logic-sanitize.html -%}
+
+    <tr><th>{{ id }} - {{ og_title }}</th></tr>
+    
+    {%- capture inline -%}
+      {%- include partials/meta/tags.html -%}
+    {%- endcapture -%}
+    <tr><td>
+      <pre>
+      {{ inline | escape }}
+      </pre>
+    </td></tr>
+{%- endfor -%}
+</table>

@@ -53,6 +53,9 @@ main {
   gap: 1.2rem;
 }
 
+}
+
+@media (min-width: 64em) and (min-height: 42.5em) {
 
 main > header > div {
   position: sticky;
