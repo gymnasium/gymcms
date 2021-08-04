@@ -100,8 +100,13 @@ a.gym-button.gym-button-secondary:focus {
 
 </style>
 
+{%- comment -%} 
+This unique anchor is for a post successful exam scroll event. Please do not remove or duplicate to the top modal.
+{%- endcomment -%}
+<a id="course_passed_message"></a>
+
 <main role="main">
-  <div class="message hidden passed_modal final-exam-status FULL_COURSE" aria-hidden="true" id="course_passed_message">
+  <div class="message hidden passed_modal final-exam-status FULL_COURSE" aria-hidden="true">
     <h2>Congratulations!</h2>
     <p>Congrats on completing the course and passing the final exam.</p>
     <p><strong>You really know your stuff!</strong> Now show off to your network by sharing your certificate on LinkedIn. You can access it right from your <a href="/dashboard">Dashboard</a>.</p>
@@ -112,7 +117,7 @@ a.gym-button.gym-button-secondary:focus {
     </div>
   </div>
 
-  <div class="message hidden passed_modal final-exam-status GYM_SHORT" aria-hidden="true" id="course_passed_message">
+  <div class="message hidden passed_modal final-exam-status GYM_SHORT" aria-hidden="true">
     <h2>Congratulations!</h2>
     <p>Congrats on completing the course and passing the final exam.</p>
     <p><strong>You really know your stuff!</strong> Now show off to your network by sharing your badge on LinkedIn. You can access it right from your <a href="/dashboard">Dashboard</a>.</p>

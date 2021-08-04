@@ -89,169 +89,6 @@ class Gymnasium {
     }
   }
 
-  // Handle exam/grading/certificate
-  exam() {
-    const examProblem = document.getElementById('exam-problem');
-
-    if (typeof examProblem !== 'undefined' && examProblem !== null) {
-
-      examProblem.onload = setTimeout(function() {
-
-        console.log('exam function active');
-        
-        let id = examProblem.getAttribute('data-id');
-  
-        let progress_status_check; // this is the interval we'll set to track status on this problem
-  
-        // this helper function gets a ton of information about the score for this particular problem
-        // based on information embedded on this page
-        var processScore = () => {
-          const COURSE_TYPES = {
-            FULL_COURSE: 'FULL_COURSE',
-            GYM_SHORT: 'GYM_SHORT',
-          };
-      
-          const COURSE_ID = parseInt(id, 10);
-          const COURSE_TYPE = COURSE_ID >= 100 ? COURSE_TYPES.FULL_COURSE : COURSE_TYPES.GYM_SHORT;
-
-          console.log(`[gym] course id: ${COURSE_ID} | course type: ${COURSE_TYPE}`);
-
-          let PASSING_SCORE = 85;
-      
-          if (COURSE_TYPE === COURSE_TYPES.FULL_COURSE) {
-            // full courses have a passing grade of 85
-            PASSING_SCORE = 85;
-          } else {
-            // gym shorts have a passing grade of 80
-            PASSING_SCORE = 80;
-          }
-      
-          // look into the div with a class of .problem-progress for our score
-          // it contains a string that looks like:
-          //    80/100 Points (Graded)
-          // so we use .split(' ') to separate the fraction from the rest
-          var [fraction] = $('.problem-progress').text().split(' ');
-      
-          // next we split the fraction in half by "/" to get the numerator and denominator
-          var [numerator, denominator] = fraction.split('/');
-      
-          var attempts_used = Number($('#attempts-used').text());
-          var attempts_total = Number($('#attempts-allowed').text());
-      
-          var correct = Number(numerator);
-          var outOf = Number(denominator);
-      
-          return {
-            courseType: COURSE_TYPE,
-            passingScore: PASSING_SCORE,
-            score: Number(numerator / denominator * 100),
-            correct,
-            outOf,
-            attempts_used,
-            attempts_total,
-            attempts_remaining: attempts_total - attempts_used,
-          };
-        };
-      
-        var show_problem_progress = function(){
-          let {
-            attempts_used,
-            attempts_total,
-            attempts_remaining,
-            correct,
-            courseType,
-            outOf,
-            score,
-            passingScore,
-          } = processScore();
-      
-          if (!correct || !outOf) {
-            return
-          }
-
-          var existingScore = score ? score : 0;
-
-          console.log(`existingScore: ${existingScore}`);
-      
-          $('.exam-score-container').text(score);
-      
-          //we have a score
-          if (score >= passingScore) {
-            //we passed! show passing div for the type of course they took
-            $(".passed_modal." + courseType).removeClass('hidden');
-            $(".try_again_modal").addClass('hidden');
-            $(".failed_modal").addClass('hidden');
-      
-            //generate the certificate through the API
-            $.ajax({
-              type:     'POST',
-              url:      '/accredible/request_certificate',
-              async:     false,
-              data:     {'course_id': $$course_id},
-              success:  function(data) {
-              }
-            });
-          } else {
-            //we failed :( see if we have another attempt
-            if (attempts_remaining > 0) {
-              $(".passed_modal").addClass('hidden');
-              $(".try_again_modal." + courseType).removeClass('hidden');
-              $(".failed_modal").addClass('hidden');
-            } else {
-              $(".passed_modal").addClass('hidden');
-              $(".try_again_modal").addClass('hidden');
-              $(".failed_modal").removeClass('hidden');
-            }
-          }
-        }
-      
-        function check_status(){
-          const {
-            attempts_used,
-            correct,
-          } = processScore();
-      
-          if (attempts_used > 0 || correct > 0) {
-            clearInterval(progress_status_check);
-            show_problem_progress();
-          }
-        }
-      
-      
-        if ($('.problem-header').text().trim() === "Final Exam") {
-          let observer = new MutationObserver(mutationRecords => {
-            // reset interval if we detect a grade change
-            console.log(mutationRecords);
-            if (typeof progress_status_check !== 'undefined'){
-              clearInterval(progress_status_check);
-            }
-            // set interval on initial page load
-            progress_status_check = setInterval(check_status, 200);
-          });
-      
-          observer.observe(
-            document.getElementById(id + '-problem-progress'),
-            {
-              characterData: false,
-              attributes: false,
-              childList: true,
-              subtree: false
-            },
-          );
-        } else {
-          return;
-        }
-      
-        // scroll to show the results message
-        $('#check-button').on('click', function() {
-          $('#course_passed_message')[0].scrollIntoView();
-        });
-      }, 100);
-    } else {
-      console.warn('exam not active');
-    }
-  }
-
   ///get a URL parameter passed in with HTTP GET
   ///NOTE: this function is not case sensitive
   getUrlParameter(sParam) {
@@ -396,12 +233,12 @@ class Gymnasium {
 
     if (typeof images !== 'undefined' && images !== null) {
       images.forEach((image, index) => {
-        console.log(`[gym] image (${index})  found, processing`);
+        // console.log(`[gym] image (${index})  found, processing`);
         var bgTarget = document.querySelectorAll('[data-bg="target"')[index];
   
         var data = gym.getPixel(image.src);
 
-        console.log(`image data: ${data}`)
+        // console.log(`image data: ${data}`)
   
         var r = data[0];
         var g = data[1];
@@ -453,8 +290,6 @@ gym.systemStatus();
 
 document.addEventListener('DOMContentLoaded', (event) => {
 
-  // check exam
-  gym.exam();
 });
 
 window.addEventListener('load', (event) => {
