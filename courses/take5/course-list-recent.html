@@ -5,27 +5,25 @@ permalink: /courses/take5/course-list-recent
 
 {%- assign pubdates = ""  | split: ", " -%}
 {%- assign publish_order = ""  | split: ", " -%}
-
 {%- assign recent = "" | split: ", " -%}
 {%- assign upcoming = ""  | split: ", " -%}
+{%- assign catalog = site.data.take5 | sort -%}
 
-{% assign catalog = site.data.take5 | sort %}
-
-{% for course_hash in catalog %}
-  {% assign item = course_hash[1] %}
+{%- for course_hash in catalog -%}
+  {%- assign item = course_hash[1] -%}
   {%- assign pubdates = pubdates | push: item.date -%}
-{% endfor %}
+{%- endfor -%}
 
 {%- assign pubdates_sorted = pubdates | sort -%}
 
 {%- for pubdate in pubdates_sorted -%}
 
-  {% for course_hash in catalog %}
-    {% assign item = course_hash[1] %}
+  {%- for course_hash in catalog -%}
+    {%- assign item = course_hash[1] -%}
     {%- if item.date == pubdate -%}
       {%- assign publish_order = publish_order | push: item.course_ID -%}
     {%- endif -%}
-  {% endfor %}
+  {%- endfor -%}
 
 {%- endfor -%}
 
