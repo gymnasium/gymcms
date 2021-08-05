@@ -1,8 +1,12 @@
-{% if include.video_ID %}
+{%- comment -%}
+TODO: this include is basically the same as the one used for event-video.html. These could be combined into one, assuming the logic were adjusted.
+{%- endcomment -%}
+
+{%- if include.video_ID -%}
     <!-- The YouTube embed: -->
     <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ include.video_ID }}?feature=oembed" frameborder="0" allowfullscreen></iframe>
     
     {% else %}
     <h3><mark>No video ID provided!</mark></h3>
-{% endif %}
+{%- endif -%}
 

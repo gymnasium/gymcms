@@ -1,6 +1,6 @@
 <link rel="preload" href="{{ site.url }}/home/img/hero-webinar-05-2020/ethanmarcotte-2020-1080w.jpg" as="image" media="(min-width: 70em)">
 <link rel="preload" href="{{ site.url }}/home/img/hero-webinar-05-2020/ala-306-rwd-2010-20-720w.png" as="image" media="(min-width: 70em)">
-<link rel="stylesheet" href="{{ site.url }}/css/hero-webinar-05-2020.css">
+<link rel="stylesheet" href="{{ site.url }}/css/hero-webinar-05-2020.css?{{ site.time | date:'%s' }}">
 
 <div class="hero-promo hero-promo-webinar">
   <div class="container">
@@ -23,9 +23,9 @@
             <div class="cta">
               <a class="gym-button gym-button-secondary" href="https://thegymnasium.com/webinars/decade-of-responsive-web-design">
               <b>
-              {% if site.data.webinars.web0013-decade-of-responsive-web-design.video == true %}
+              {%- if site.data.webinars.web0013-decade-of-responsive-web-design.video == true -%}
               Watch Now
-              {% else %}
+              {%- else -%}
               Register Now
               {%- endif -%}
               </b>
