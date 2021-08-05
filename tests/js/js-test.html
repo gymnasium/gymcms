@@ -11,12 +11,12 @@ permalink: /tests/js-tester
 </div>
 
 
-
-{%- include partials/theme-bottom.html -%}
+<script async src="/js/gymnasium.js?{{ site.time | date:'%s' }}"></script>
 
 <script>
-document.getElementById('gymjs').onload = function() {
-  // do stuff once the script loads
-  
-}
+document.onreadystatechange = function () {
+  if (document.readyState === "interactive") {
+    // do stuff once the script loads
+  }
+};
 </script>
