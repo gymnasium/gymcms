@@ -7,16 +7,15 @@
   <ul>
 
 {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
+{%- assign sorted_catalog = site.data.take5 | sort -%}
 
-{% assign sorted_catalog = site.data.take5 | sort %}
+{%- for take5_hash in sorted_catalog reversed -%}
 
-{% for take5_hash in sorted_catalog reversed %}
+  {%- assign item = take5_hash[1] -%}
 
-{% assign item = take5_hash[1] %}
+  {%- if item.topic == include.topic -%}
 
-{% if item.topic == include.topic %}
-
-{% if item.live == true %}
+    {%- if item.live == true -%}
 
     <li>
       <article class="tutorial">
@@ -33,9 +32,8 @@
       </article>
     </li>
 
-{% endif %}
-{% endif %}
-
-{% endfor %}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
   </ul>
 </div>
