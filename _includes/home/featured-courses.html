@@ -42,11 +42,11 @@
             <header>
               <b class="course-type">{{ topic }}</b>
               <div class="mask">
-                <a href="{{ url }}" title="Learn More">
+                <a href="{{ url }}">
                   <img alt="{{ title }}" srcset="{{ artwork_svg | prepend: artwork_path_svg }}" src="{{ artwork_png | prepend: artwork_path_png }}" width="574" height="488" decoding="async" loading="lazy">
                 </a>
               </div>
-              <h2><a href="{{ url }}" title="Learn more about {{ title }}">{{ title }}</a></h2>
+              <h2><a href="{{ url }}">{{ title }}</a></h2>
               <p>{{ description }}</p>
             </header>
           </div>
