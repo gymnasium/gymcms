@@ -15,45 +15,41 @@ permalink: /courses/take5/
       <p><strong>Learn a new skill in 5 minutes.</strong> Video tutorials on accessibility, career skills, prototyping, user experience, and web design and development.</p>
     </div>
   </header>
-  
+
   {%- assign pubdates = "" | split: ", " -%}
   {%- assign publish_order = "" | split: ", " -%}
   {%- assign topics = "" | split: ', ' -%}
-  
   {%- assign recent = "" | split: ", " -%}
-  
   {%- assign catalog = site.data.take5 | sort -%}
-  
+
   {%- for take5_hash in catalog -%}
       {%- assign item = take5_hash[1] -%}
       {%- if item.live == true -%}
           {%- assign topics = topics | push: item.topic -%}
           {%- assign pubdates = pubdates | push: item.date -%}
       {%- endif -%}
-  
   {%- endfor -%}
-  
+
   {%- assign unique_topics = topics | uniq | reverse | join: ', '|split: ', ' -%}
-  
   {%- assign pubdates_sorted = pubdates | sort -%}
-  
+
   {%- for pubdate in pubdates_sorted -%}
-  
+
       {%- for take5_hash in catalog -%}
           {%- assign item = take5_hash[1] -%}
           {%- if item.date == pubdate -%}
               {%- assign publish_order = publish_order | push: item.course_ID -%}
           {%- endif -%}
       {%- endfor -%}
-  
+
   {%- endfor -%}
-  
+
   {%- assign publish_order = publish_order | uniq | join: ', '|split: ', ' -%}
-  
+
   {%- for item in publish_order -%}
-  
+
       {%- if site.data.take5[item].live == true -%}
-      
+
           {%- if site.data.take5[item].featured == true -%}
               {%- assign featured = site.data.take5[item].course_ID -%}
               {%- assign featured_title = site.data.take5[item].title -%}
@@ -72,7 +68,7 @@ permalink: /courses/take5/
           {%- assign upcoming = upcoming | push: site.data.take5[item].course_ID -%}
       {%- endif -%}
   {%- endfor -%}
-  
+
   {%- if featured != null -%}
   <div class="take5--main">
     <div class="take5--info take5--hero-content">
@@ -128,14 +124,14 @@ permalink: /courses/take5/
         </div><!-- .row -->
       </div><!-- .container -->
     </div><!-- .take5--info.take5--hero-content -->
-    
+
     <!-- Display {{ recent | size }} Take 5s -->
-    
+
     {%- for catalog_topic in unique_topics -%}
-    
+
         {%- assign recent_count = recent | size -%}
         {%- if  recent_count  != 0 -%}
-        
+
         <div class="take5--recent-content take5--catalog-section">
           <div class="container">
             <section class="take5--recent-tutorials" id="{{ catalog_topic | slugify }}">
