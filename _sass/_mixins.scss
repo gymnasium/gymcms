@@ -298,11 +298,11 @@
   @media (min-width: 64em) {
     .cols > ul li {
       width: 33.333333333333333%;
+    }
 
-      // Hide 4th panel if it exists
-      &:nth-child(4) {
-        display: none;
-      }
+    // Hide 4th panel if it exists; see featured-courses.html
+    .list-featured-courses li:last-child {
+      display: none;
     }
   }
 
@@ -339,8 +339,9 @@
       }
     }
 
+   // Hide 4th panel if it exists; see featured-courses.html
     @media (min-width: 62em) {
-      .cols ul li:nth-child(4) {
+      .list-featured-courses li:last-child {
         display: none;
       }
     }
