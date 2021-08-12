@@ -1,60 +1,63 @@
-{% assign base_path = "/courses/take5/" | prepend: site.gymurl %}
+{%- comment -%}
+TODO: rather than hard-coding values here, a more flexible method would be to create a variable in a course's data file, which permits the course to be rendered in the recommended content include
+{%- endcomment -%}
+{%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
 
-{% if course.topic == "Accessibility" %}
+{%- if course.topic == "Accessibility" -%}
 
-  {% assign course1 = site.data.courses.GYM-016 %}
-  {% assign course2 = site.data.courses.GYM-007 %}
-  {% assign course3 = site.data.courses.GYM-011 %}
+  {%- assign course1 = site.data.courses.GYM-016 -%}
+  {%- assign course2 = site.data.courses.GYM-007 -%}
+  {%- assign course3 = site.data.courses.GYM-011 -%}
 
-{% elsif course.topic == "Career Skills" %}
+{%- elsif course.topic == "Career Skills" -%}
 
-  {% assign course1 = site.data.courses.GYM-001 %}
-  {% assign course2 = site.data.courses.GYM-106 %}
-  {% assign course3 = site.data.courses.GYM-015 %}
+  {%- assign course1 = site.data.courses.GYM-001 -%}
+  {%- assign course2 = site.data.courses.GYM-106 -%}
+  {%- assign course3 = site.data.courses.GYM-015 -%}
 
-{% elsif course.topic == "Prototyping" %}
+{%- elsif course.topic == "Prototyping" -%}
 
-  {% assign course1 = site.data.courses.GYM-015 %}
-  {% assign course2 = site.data.courses.GYM-005 %}
-  {% assign course3 = site.data.courses.GYM-008 %}
+  {%- assign course1 = site.data.courses.GYM-015 -%}
+  {%- assign course2 = site.data.courses.GYM-005 -%}
+  {%- assign course3 = site.data.courses.GYM-008 -%}
 
-{% elsif course.topic == "User Experience" %}
+{%- elsif course.topic == "User Experience" -%}
 
-  {% assign course1 = site.data.courses.GYM-103 %}
-  {% assign course2 = site.data.courses.GYM-015 %}
-  {% assign course3 = site.data.courses.GYM-008 %}
+  {%- assign course1 = site.data.courses.GYM-103 -%}
+  {%- assign course2 = site.data.courses.GYM-015 -%}
+  {%- assign course3 = site.data.courses.GYM-008 -%}
 
-{% elsif course.topic == "Web Design & Development" %}
+{%- elsif course.topic == "Web Design & Development" -%}
 
-  {% assign course1 = site.data.courses.GYM-109 %}
-  {% assign course2 = site.data.courses.GYM-107 %}
-  {% assign course3 = site.data.courses.GYM-011 %}
+  {%- assign course1 = site.data.courses.GYM-109 -%}
+  {%- assign course2 = site.data.courses.GYM-107 -%}
+  {%- assign course3 = site.data.courses.GYM-011 -%}
 
-{% else %}
-{% assign course1 = "" %}
-{% assign course2 = "" %}
-{% assign course3 = "" %}
-{% endif %}
+{%- else -%}
+{%- assign course1 = "" -%}
+{%- assign course2 = "" -%}
+{%- assign course3 = "" -%}
+{%- endif -%}
 
 {%- assign recommendations = ""  | split: ", " -%}
 {%- assign this_tutorial = page.course_ID -%}
 {%- assign this_topic = site.data.take5.[page.course_ID].topic -%}
 
-{% assign sorted_catalog = site.data.take5 | sort %}
+{%- assign sorted_catalog = site.data.take5 | sort -%}
 
-{% for take5_hash in sorted_catalog reversed %}
+{%- for take5_hash in sorted_catalog reversed -%}
 
-  {% assign item = take5_hash[1] %}
+  {%- assign item = take5_hash[1] -%}
 
-  {% if item.topic == this_topic %}
+  {%- if item.topic == this_topic -%}
 
-        {% if item.live == true %}
-            {% if item.course_ID != this_tutorial %}
+        {%- if item.live == true -%}
+            {%- if item.course_ID != this_tutorial -%}
               {%- assign recommendations = recommendations | push: item.course_ID -%}
-            {% endif %}
-        {% endif %}
-      {% endif %}
-  {% endfor %}
+            {%- endif -%}
+        {%- endif -%}
+      {%- endif -%}
+  {%- endfor -%}
 
  {%- assign random_recommendations = recommendations | sample: 3 -%}
 
@@ -62,9 +65,9 @@
  {%- assign rec2 = random_recommendations[1] -%}
  {%- assign rec3 = random_recommendations[2] -%}
 
-{% assign tutorial1 = site.data.take5.[rec1] %}
-{% assign tutorial2 = site.data.take5.[rec2] %}
-{% assign tutorial3 = site.data.take5.[rec3] %}
+{%- assign tutorial1 = site.data.take5.[rec1] -%}
+{%- assign tutorial2 = site.data.take5.[rec2] -%}
+{%- assign tutorial3 = site.data.take5.[rec3] -%}
 
 
 {%- if tutorial1 != "" -%}
@@ -72,7 +75,7 @@
 <div class="take5--recommended-content">
   <div class="container">
 
-{% if include.rec-take5 %}
+{%- if include.rec-take5 -%}
 
     <section class="take5--recommended" id="recommended-tutorials">
       <header>
@@ -132,9 +135,9 @@
       </div>
     </section>
 
-{% endif %}
+{%- endif -%}
 
-{% if include.rec-courses %}
+{%- if include.rec-courses -%}
 
     <section class="take5--recommended" id="recommended-courses">
       <header>
@@ -209,7 +212,7 @@
   </div>
 </div>
 
-{% endif %}
+{%- endif -%}
 {%- else -%}
 <!-- There is no recommended courses module here -->
 {%- endif -%}
