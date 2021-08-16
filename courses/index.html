@@ -2,6 +2,8 @@
 layout: raw
 permalink: /courses/
 ---
+<!-- TODO: maybe create a new CSS file for the entire course catalog page? -->
+<link rel="stylesheet" href="{{ site.url }}/css/take5-course-catalog.css?{{ site.time | date:'%s' }}">
 <section class="find-courses" id="gym-catalog">
 
   <header class="course-title">
@@ -35,12 +37,12 @@ permalink: /courses/
           <p class="hero">
             Full Courses are taught by industry experts and focus on current skills and technologies. Each includes 3 to 6 hours of video instruction, optional quizzes and assignments, a final exam, and certificate (if and) when you pass.
           </p>
-          
+
           <ul class="listing-courses">
             {%- assign base_path = "/courses/full/" | prepend: site.gymurl -%}
             {%- include_relative full/course-list-recent.html -%}
           </ul>
-        
+
           <h1 id="gymshorts">Gym Shorts</h1>
           <p class="hero">
             Gym Shorts are short courses that all last under an hour. Like our Full Courses, they are taught by industry experts and focus on current skills and technologies. Each includes approximately one hour of video instruction, a final exam, and a badge (if and) when you pass.
@@ -49,23 +51,20 @@ permalink: /courses/
             {%- assign base_path = "/courses/gym-shorts/" | prepend: site.gymurl -%}
             {%- include_relative gym-shorts/course-list-recent.html -%}
           </ul>
-        
-          <!-- TODO: maybe create a new CSS file for the entire course catalog page? -->
-          <link rel="stylesheet" href="{{ site.url }}/css/take5-course-catalog.css">
-        
-          {% assign base_path = "/courses/take5/" | prepend: site.gymurl %}
-          
+
+          {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
+
           <h1 id="take5">Take 5</h1>
           {%- include take5/course-catalog-description.html -%}
-        
+
           <ul class="listing-courses" id="take5-list">
           {%- include_relative take5/course-list-recent.html -%}
           </ul>
         </section>
       </div>
       <div class="col-md-3 sidebar">
-        <!-- Get Upcoming/Featured Courses Sidebar -->
-        {%- include_relative featured.html -%}
+        {%- comment -%} Get Upcoming/Featured Courses Sidebar {%- endcomment -%}
+        {%- include featured.html -%}
       </div>
     </div> 
   </main>

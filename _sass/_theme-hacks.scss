@@ -214,31 +214,31 @@ https://github.com/gymnasium/tracker/issues/143
   .problems-wrapper {
     font-size: 16px;
   }
-  
+
   .problem-header {
     font: 900 2.25em $gym-font-stack;
   }
-  
+
   .problem-progress {
     font: bold 1em $gym-text-font-stack;
     margin-bottom: 5rem;
   }
-  
+
   .problem-progress + * + main .message:not([hidden]),
   .problem .solution-span > span {
     margin-top: -2rem;
     margin-bottom: 5rem;
   }
-  
+
   .problem .response-fieldset-legend {
     font-size: inherit;
     border-bottom: 0;
   }
-  
+
   .choicegroup legend {
     margin-bottom: 1rem;
   }
-  
+
   .problem .response-fieldset-legend img {
     box-sizing: border-box;
     width: auto;
@@ -248,32 +248,32 @@ https://github.com/gymnasium/tracker/issues/143
     border: 1px solid #999;
     margin-top: 1.6rem;
   }
-  
+
   .problem .choicegroup_correct:before,
   .problem .choicetextgroup_correct:before {
     margin-top: 4px;
   }
-  
+
   .problem .choicegroup_incorrect:before,
   .problem .choicetextgroup_incorrect:before {
     margin-top: -3px;
   }
-  
+
   .message h2 {
     text-transform: uppercase;
   }
-  
+
   .message p a:not(.btn),
   .message  p a:visited:not(.btn) {
     font: inherit;
   }
-  
+
   /* pre-hawthorn markup patterns */
-  
+
   .problem strong + .wrapper-problem-response {
     margin-top: 1rem;
   }
-  
+
   .problem strong + pre {
     margin-top: 1.6rem;
   }
@@ -500,6 +500,40 @@ nav.discussion .new-post-btn {
 }
 
 /* ---
+Courseware misc. styling for:
+About, Info, Quizzes, and Final Exam pages
+--- */
+
+#course-exam-instructions,
+.course-quiz-reminder {
+  margin-bottom: 5rem;
+}
+
+.course-lessons:before {
+  content: "🎬" "\00a0";
+}
+
+.course-quizzes:before {
+  content: "🤓" "\00a0";
+}
+
+.course-forum:before {
+  content: "📣" "\00a0";
+}
+
+.course-exam:before {
+  content: "📝" "\00a0";
+}
+
+.course-credential:before {
+  content: "🎉" "\00a0";
+}
+
+.course-reminder:before {
+  content: "👋" "\00a0";
+}
+
+/* ---
 https://github.com/gymnasium/tracker/issues/40
 --- */
 
@@ -510,4 +544,3 @@ https://github.com/gymnasium/tracker/issues/40
   margin-top: -1.4em;
   margin-left: -1.4em;
 }
-
