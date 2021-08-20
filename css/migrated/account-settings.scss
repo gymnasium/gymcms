@@ -108,56 +108,10 @@ a:visited:not(.btn):disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-.content-wrapper {
-  max-width: 1920px;
-  margin-top: 20px;
-  padding: 0 0 10px;
-}
-@media (min-width: 768px) {
-  .content-wrapper {
-    padding: 0 20px 10px;
-  }
-}
-@media print {
-  .content-wrapper {
-    padding-bottom: 0;
-  }
-}
 
 
-.nav-skip {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: -600px;
-  overflow: hidden;
-  background: #fff;
-  border-bottom: 1px solid #fcfcfc;
-  padding: 15px 0;
-}
-.nav-skip:focus,
-.nav-skip:active {
-  left: 45%;
-  margin-left: -30px;
-  position: absolute;
-  top: 5px;
-  width: 10%;
-  height: auto;
-  background-color: black;
-  margin: 0;
-  opacity: 0.8;
-  color: white !important;
-  text-decoration: none !important;
-  outline: none;
-  text-align: center;
-}
-@media (max-width: 991px) {
-  .nav-skip:focus,
-  .nav-skip:active {
-    left: 40%;
-    width: 20%;
-  }
-}
+
+
 .account-settings-sections
   .section
   .account-settings-section-body
@@ -677,11 +631,6 @@ input[type="text"]:focus {
 .window-wrap {
   background: #fff;
 }
-@media print {
-  a[href]::after {
-    content: none !important;
-  }
-}
 
 
 .wrapper-account-settings .wrapper-header .account-nav button {
@@ -823,9 +772,7 @@ body p a:hover {
 body a:focus {
   border-bottom: 0 none;
 }
-.container {
-  min-width: 0px !important;
-}
+
 body div.window-wrap {
   min-width: inherit;
 }
@@ -851,53 +798,10 @@ body div.window-wrap {
   box-shadow: none;
   max-width: 1180px;
 }
-.wrapper-footer footer .copyright {
-  text-align: center;
-  margin-top: 1em;
-}
-.wrapper-footer footer .copyright a {
-  color: #f89820 !important;
-}
 
-.content-wrapper#content {
-  padding-bottom: 1em;
-  background-color: #ebebeb;
-}
-div.wrapper-footer {
-  margin-top: 0;
-  background-color: #222;
-  border-top: 10px solid rgba(248, 151, 32, 0.9);
-  color: white;
-  min-height: 170px;
-}
-div.wrapper-footer footer .gymnasium-logo {
-  height: 50px;
-  margin-top: 15px;
-  margin-left: 5px;
-}
-div.wrapper-footer footer .footer-link-list {
-  margin-top: 30px;
-}
-div.wrapper-footer footer .footer-link-list li {
-  border-right: 1px solid #444;
-  height: 100%;
-  padding-right: 8px;
-}
-div.wrapper-footer footer .footer-link-list li a,
-div.wrapper-footer footer .footer-link-list li a:link {
-  color: white;
-  font-family: "brandon-grotesque";
-}
-div.wrapper-footer footer .footer-link-list li a:hover {
-  color: #f89820;
-}
-div.wrapper-footer footer .footer-link-list li:last-child {
-  border-right: 0px;
-}
-div.wrapper-footer footer a:hover {
-  text-decoration: none;
-  border: 0px;
-}
+
+
+
 
 .black-background {
   top: 0px;
@@ -945,30 +849,7 @@ body
   color: white;
   font-family: brandon-grotesque;
 }
-.aquent-icon,
-.vitamin-t-icon {
-  width: 35px;
-  height: 25px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  background-position-x: center;
-  filter: gray;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
-}
-.aquent-icon:hover,
-.vitamin-t-icon:hover {
-  filter: none;
-  -webkit-filter: grayscale(0);
-  background-color: transparent;
-}
-.aquent-icon {
-  background-image: url("https://thegymnasium.com/static/gymnasium/images/aquent-icon.56d05be37e9a.png");
-}
-.vitamin-t-icon {
-  background-image: url("https://thegymnasium.com/static/gymnasium/images/vitamin-t-icon.32e5d567b8ca.png");
-}
+
 html body h1,
 html body h2,
 html body h3 {
@@ -1069,56 +950,10 @@ a:visited:not(.btn):disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-.content-wrapper {
-  max-width: 1920px;
-  margin-top: 20px;
-  padding: 0 0 10px;
-}
-@media (min-width: 768px) {
-  .content-wrapper {
-    padding: 0 20px 10px;
-  }
-}
-@media print {
-  .content-wrapper {
-    padding-bottom: 0;
-  }
-}
 
 
-.nav-skip {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: -600px;
-  overflow: hidden;
-  background: #fff;
-  border-bottom: 1px solid #fcfcfc;
-  padding: 15px 0;
-}
-.nav-skip:focus,
-.nav-skip:active {
-  left: 45%;
-  margin-left: -30px;
-  position: absolute;
-  top: 5px;
-  width: 10%;
-  height: auto;
-  background-color: black;
-  margin: 0;
-  opacity: 0.8;
-  color: white !important;
-  text-decoration: none !important;
-  outline: none;
-  text-align: center;
-}
-@media (max-width: 991px) {
-  .nav-skip:focus,
-  .nav-skip:active {
-    left: 40%;
-    width: 20%;
-  }
-}
+
+
 @media print {
   .nav-skip,
   .container > div {
@@ -1411,20 +1246,8 @@ label {
   margin-bottom: 5px;
   font-weight: 700;
 }
-.collapse {
-  display: none;
-}
-.caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top: 4px dashed;
-  border-top: 4px solid\9;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-}
+
+
 
 
 .hidden {

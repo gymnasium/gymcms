@@ -900,9 +900,7 @@ body p a:hover {
 body a:focus {
   border-bottom: 0 none;
 }
-.container {
-  min-width: 0px !important;
-}
+
 body div.window-wrap {
   min-width: inherit;
 }
@@ -928,55 +926,12 @@ body div.window-wrap {
   box-shadow: none;
   max-width: 1180px;
 }
-.wrapper-footer footer .copyright {
-  text-align: center;
-  margin-top: 1em;
-}
-.wrapper-footer footer .copyright a {
-  color: #f89820 !important;
-}
 
 
 
-.content-wrapper#content {
-  padding-bottom: 1em;
-  background-color: #ebebeb;
-}
-div.wrapper-footer {
-  margin-top: 0;
-  background-color: #222;
-  border-top: 10px solid rgba(248, 151, 32, 0.9);
-  color: white;
-  min-height: 170px;
-}
-div.wrapper-footer footer .gymnasium-logo {
-  height: 50px;
-  margin-top: 15px;
-  margin-left: 5px;
-}
-div.wrapper-footer footer .footer-link-list {
-  margin-top: 30px;
-}
-div.wrapper-footer footer .footer-link-list li {
-  border-right: 1px solid #444;
-  height: 100%;
-  padding-right: 8px;
-}
-div.wrapper-footer footer .footer-link-list li a,
-div.wrapper-footer footer .footer-link-list li a:link {
-  color: white;
-  font-family: "brandon-grotesque";
-}
-div.wrapper-footer footer .footer-link-list li a:hover {
-  color: #f89820;
-}
-div.wrapper-footer footer .footer-link-list li:last-child {
-  border-right: 0px;
-}
-div.wrapper-footer footer a:hover {
-  text-decoration: none;
-  border: 0px;
-}
+
+
+
 
 .black-background {
   top: 0px;
@@ -1035,30 +990,7 @@ body .gym-button:active:hover {
   letter-spacing: 0.025em;
   vertical-align: bottom;
 }
-.aquent-icon,
-.vitamin-t-icon {
-  width: 35px;
-  height: 25px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  background-position-x: center;
-  filter: gray;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
-}
-.aquent-icon:hover,
-.vitamin-t-icon:hover {
-  filter: none;
-  -webkit-filter: grayscale(0);
-  background-color: transparent;
-}
-.aquent-icon {
-  background-image: url("https://thegymnasium.com/static/gymnasium/images/aquent-icon.56d05be37e9a.png");
-}
-.vitamin-t-icon {
-  background-image: url("https://thegymnasium.com/static/gymnasium/images/vitamin-t-icon.32e5d567b8ca.png");
-}
+
 html body h1,
 html body h2 {
   text-align: left;
@@ -2540,9 +2472,7 @@ body p a:hover {
 body a:focus {
   border-bottom: 0 none;
 }
-.container {
-  min-width: 0px !important;
-}
+
 body div.window-wrap {
   min-width: inherit;
 }
@@ -2568,55 +2498,12 @@ body div.window-wrap {
   box-shadow: none;
   max-width: 1180px;
 }
-.wrapper-footer footer .copyright {
-  text-align: center;
-  margin-top: 1em;
-}
-.wrapper-footer footer .copyright a {
-  color: #f89820 !important;
-}
 
 
 
-.content-wrapper#content {
-  padding-bottom: 1em;
-  background-color: #ebebeb;
-}
-div.wrapper-footer {
-  margin-top: 0;
-  background-color: #222;
-  border-top: 10px solid rgba(248, 151, 32, 0.9);
-  color: white;
-  min-height: 170px;
-}
-div.wrapper-footer footer .gymnasium-logo {
-  height: 50px;
-  margin-top: 15px;
-  margin-left: 5px;
-}
-div.wrapper-footer footer .footer-link-list {
-  margin-top: 30px;
-}
-div.wrapper-footer footer .footer-link-list li {
-  border-right: 1px solid #444;
-  height: 100%;
-  padding-right: 8px;
-}
-div.wrapper-footer footer .footer-link-list li a,
-div.wrapper-footer footer .footer-link-list li a:link {
-  color: white;
-  font-family: "brandon-grotesque";
-}
-div.wrapper-footer footer .footer-link-list li a:hover {
-  color: #f89820;
-}
-div.wrapper-footer footer .footer-link-list li:last-child {
-  border-right: 0px;
-}
-div.wrapper-footer footer a:hover {
-  text-decoration: none;
-  border: 0px;
-}
+
+
+
 
 .black-background {
   top: 0px;
@@ -2675,30 +2562,7 @@ body .gym-button:active:hover {
   letter-spacing: 0.025em;
   vertical-align: bottom;
 }
-.aquent-icon,
-.vitamin-t-icon {
-  width: 35px;
-  height: 25px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  background-position-x: center;
-  filter: gray;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
-}
-.aquent-icon:hover,
-.vitamin-t-icon:hover {
-  filter: none;
-  -webkit-filter: grayscale(0);
-  background-color: transparent;
-}
-.aquent-icon {
-  background-image: url("https://thegymnasium.com/static/gymnasium/images/aquent-icon.56d05be37e9a.png");
-}
-.vitamin-t-icon {
-  background-image: url("https://thegymnasium.com/static/gymnasium/images/vitamin-t-icon.32e5d567b8ca.png");
-}
+
 html body h1,
 html body h2 {
   text-align: left;
@@ -3171,20 +3035,8 @@ input[type="search"] {
   text-decoration: underline;
   background-color: transparent;
 }
-.collapse {
-  display: none;
-}
-.caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top: 4px dashed;
-  border-top: 4px solid\9;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-}
+
+
 .nav {
   padding-left: 0;
   margin-bottom: 0;
