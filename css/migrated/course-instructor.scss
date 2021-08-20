@@ -1,0 +1,6006 @@
+/*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-style-vendor.68e48093f5dd.css */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-times-circle:before {
+  content: "\f057";
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+/*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-main-v1.3b45b3e424a4.css */
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+}
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+a:not(.btn) {
+  color: #0075b4;
+}
+a:visited:not(.btn) {
+  color: #003655;
+}
+a:hover:not(.btn),
+a:focus:not(.btn) {
+  color: #0079bc;
+}
+b,
+strong {
+  font-weight: bold;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+small {
+  font-size: 85%;
+}
+ul,
+ol {
+  padding: 0 0 0 40px;
+  margin: 1em 0;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+form {
+  margin: 0;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+label {
+  cursor: pointer;
+}
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+  white-space: normal;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+input[type="button"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+button[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *width: 13px;
+  *height: 13px;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button:-moz-focusring {
+  outline: 1px dotted black;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td {
+  vertical-align: top;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+@media print {
+  * {
+    background: transparent;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  html,
+  body {
+    background: transparent !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+a:not(.btn):disabled,
+a:visited:not(.btn):disabled {
+  pointer-events: none;
+  outline: none;
+  cursor: default;
+}
+.sr,
+.sr-only,
+.nav-skip {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+  margin: -1px;
+  height: 1px;
+  width: 1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  word-wrap: normal;
+}
+.sr,
+.sr-only {
+  background: #fff;
+  color: #000;
+}
+.btn-link {
+  color: #0075b4;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: #0075b4;
+}
+.btn-link:hover,
+.btn-link:focus {
+  text-decoration: underline !important;
+}
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+}
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+a:not(.btn) {
+  color: #0075b4;
+}
+a:visited:not(.btn) {
+  color: #003655;
+}
+a:hover:not(.btn),
+a:focus:not(.btn) {
+  color: #0079bc;
+}
+b,
+strong {
+  font-weight: bold;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+small {
+  font-size: 85%;
+}
+ul,
+ol {
+  padding: 0 0 0 40px;
+  margin: 1em 0;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+form {
+  margin: 0;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+label {
+  cursor: pointer;
+}
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+  white-space: normal;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+input[type="button"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+button[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *width: 13px;
+  *height: 13px;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button:-moz-focusring {
+  outline: 1px dotted black;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td {
+  vertical-align: top;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+@media print {
+  * {
+    background: transparent;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  html,
+  body {
+    background: transparent !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+a:not(.btn):disabled,
+a:visited:not(.btn):disabled {
+  pointer-events: none;
+  outline: none;
+  cursor: default;
+}
+.sr,
+.sr-only,
+.nav-skip {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+  margin: -1px;
+  height: 1px;
+  width: 1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  word-wrap: normal;
+}
+.sr,
+.sr-only {
+  background: #fff;
+  color: #000;
+}
+.btn-link {
+  color: #0075b4;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: #0075b4;
+}
+.btn-link:hover,
+.btn-link:focus {
+  text-decoration: underline !important;
+}
+@media print {
+  .nav-skip,
+  .wrapper-footer {
+    display: none;
+  }
+}
+html,
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1em;
+}
+html {
+  background: #fff;
+}
+body {
+  background: #fff;
+}
+[tabindex="-1"] {
+  outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #313131;
+  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
+  margin: 0;
+}
+h1 {
+  color: #313131;
+  font: normal 2em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
+}
+h2 {
+  color: #646464;
+  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
+  margin-bottom: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+p {
+  color: inherit;
+  margin: 0;
+}
+span {
+  color: inherit;
+  font: inherit;
+}
+p + p {
+  margin-top: 20px;
+}
+p a:not(.btn),
+p a:visited:not(.btn) {
+  color: #0075b4;
+  font: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  transition: all 0.1s linear 0s;
+}
+p a:not(.btn):hover,
+p a:not(.btn):focus,
+p a:visited:not(.btn):hover,
+p a:visited:not(.btn):focus {
+  color: #065683;
+  text-decoration: underline;
+}
+a:not(.btn),
+a:visited:not(.btn) {
+  color: #0075b4;
+  font: inherit;
+  text-decoration: none;
+  transition: all 0.1s linear 0s;
+}
+a:not(.btn):hover,
+a:not(.btn):focus,
+a:visited:not(.btn):hover,
+a:visited:not(.btn):focus {
+  color: #065683;
+  text-decoration: underline;
+}
+a:not(.btn):disabled,
+a:visited:not(.btn):disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.content-wrapper {
+  max-width: 1920px;
+  margin-top: 20px;
+  padding: 0 0 10px;
+}
+@media (min-width: 768px) {
+  .content-wrapper {
+    padding: 0 20px 10px;
+  }
+}
+@media print {
+  .content-wrapper {
+    padding-bottom: 0;
+  }
+}
+.container {
+  box-sizing: border-box;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    padding: 40px 0;
+    max-width: 1180px;
+    min-width: 760px;
+    width: 100%;
+  }
+}
+.nav-skip {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -600px;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #fcfcfc;
+  padding: 15px 0;
+}
+.nav-skip:focus,
+.nav-skip:active {
+  left: 45%;
+  margin-left: -30px;
+  position: absolute;
+  top: 5px;
+  width: 10%;
+  height: auto;
+  background-color: black;
+  margin: 0;
+  opacity: 0.8;
+  color: white !important;
+  text-decoration: none !important;
+  outline: none;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .nav-skip:focus,
+  .nav-skip:active {
+    left: 40%;
+    width: 20%;
+  }
+}
+.btn-link {
+  border-radius: 0;
+  border-color: transparent;
+  padding: 1px;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  white-space: nowrap;
+}
+.btn-link:focus,
+.btn-link:hover {
+  background-image: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.btn-link {
+  font-weight: 600;
+}
+.wrapper-msg .msg-content .copy,
+.wrapper-msg .msg-content .copy p {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.wrapper-msg .msg-content .copy,
+.wrapper-msg .msg-content .copy p {
+  font-size: 14px;
+  line-height: 20.72px;
+}
+.btn-link {
+  font-size: 14px;
+  line-height: 20.72px;
+}
+form {
+  font-size: 1em;
+}
+label {
+  color: #313131;
+  font: italic 300 1rem/1.6rem Georgia, Cambria, "Times New Roman", Times, serif;
+  margin-bottom: 5px;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.4);
+  -webkit-font-smoothing: antialiased;
+}
+textarea,
+input[type="text"] {
+  background: #fff;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.6),
+    inset 0 0 3px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  font: italic 300 1rem/1.6rem Georgia, Cambria, "Times New Roman", Times, serif;
+  height: 35px;
+  padding: 5px 12px;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+}
+textarea:last-child,
+input[type="text"]:last-child {
+  margin-right: 0;
+}
+textarea:focus,
+input[type="text"]:focus {
+  border-color: #6f6f6f;
+  box-shadow: 0 0 6px 0 #6f6f6f, inset 0 0 4px 0 rgba(0, 0, 0, 0.15);
+}
+textarea {
+  height: 60px;
+}
+input[type="button"],
+button,
+.button {
+  border-radius: 3px;
+  border: 1px solid #000663;
+  border-bottom: 1px solid #00003a;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 0 0 #2592c0;
+  color: #fff;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: #0075b4;
+  background-image: -webkit-linear-gradient(
+    top,
+    #0075b4 0%,
+    #004393 50%,
+    #002a84 50%,
+    #002f86 100%
+  );
+  background-image: linear-gradient(
+    to bottom,
+    #0075b4 0%,
+    #004393 50%,
+    #002a84 50%,
+    #002f86 100%
+  );
+  padding: 7px 18px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #000042;
+  font: normal 1.2rem/1.6rem "Open Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  letter-spacing: 1px;
+  padding: 4px 20px;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+}
+input[type="button"]:disabled,
+button:disabled,
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+input[type="button"]:disabled,
+button:disabled,
+.button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.wrapper-footer {
+  box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #c5c6c7;
+  padding: 25px 10px 30px 10px;
+  background: #fff;
+  clear: both;
+}
+.msg {
+  margin: 10px 0 10px 26px;
+}
+.window-wrap {
+  background: #fff;
+}
+@media print {
+  a[href]::after {
+    content: none !important;
+  }
+}
+a:not(.btn):disabled,
+a:visited:not(.btn):disabled {
+  pointer-events: none;
+  outline: none;
+  cursor: default;
+}
+.wrapper-msg {
+  display: block;
+  background: #383838;
+  padding: 20px 30px;
+}
+.wrapper-msg .msg {
+  max-width: 1180px;
+  min-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+}
+.wrapper-msg .msg:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.wrapper-msg .msg-content {
+  display: inline-block;
+  vertical-align: middle;
+}
+.wrapper-msg .msg-content .copy {
+  color: inherit;
+}
+.wrapper-msg .msg-content .copy p {
+  color: inherit;
+}
+.wrapper-msg.urgency-high {
+  background: #383838;
+}
+.wrapper-msg.urgency-high .msg {
+  color: #fff;
+}
+.divider-lv1 {
+  border-top: 2px solid #e4e4e4;
+}
+p {
+  font: "Helvetica Neue";
+}
+html .container > div {
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+button,
+html button,
+html body button {
+  box-shadow: none;
+  text-shadow: none;
+}
+.content-wrapper .container,
+.container {
+  border: none;
+  background: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div#content,
+div.content-wrapper,
+div#content.content-wrapper {
+  max-width: none;
+  margin: auto;
+  padding: 0;
+}
+body.view-in-course .wrapper-course-material div.course-material {
+  padding: 0;
+}
+body.view-in-course div.wrapper-footer {
+  margin-top: 0;
+}
+body.view-in-course .container,
+body.view-in-course div.container {
+  max-width: 1180px;
+  min-width: 760px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+body.view-in-course .content-wrapper#content {
+  background-color: #ebebeb;
+  padding-bottom: 1em;
+}
+.content-wrapper .wrapper-course-material .course-material {
+  max-width: inherit;
+}
+#course-title-header {
+  background-color: #999;
+}
+#course-title-header h1 {
+  font-size: 20pt;
+  margin: 15px 0 15px 0;
+}
+#course-title-header h1 span {
+  color: white;
+  font-weight: 900;
+}
+.course-title {
+  background: #777;
+}
+.course-title h1 {
+  font: 900 1.8em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  color: #fff;
+  letter-spacing: 0.05em;
+  word-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+body ul.list-input label {
+  font: 1em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  color: #222;
+  letter-spacing: 0.03em;
+  word-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.wrapper-course-material .course-material ol.course-tabs {
+  font-weight: normal;
+  padding: 0;
+  margin-left: 0;
+}
+.wrapper-course-material .course-material ol.course-tabs {
+  padding: 0.5em 0;
+}
+.wrapper-course-material .course-material ol.course-tabs li a,
+.wrapper-course-material .course-material ol.course-tabs li a:focus {
+  padding-left: 0px;
+  border-bottom: none;
+  color: currentColor !important;
+}
+.wrapper-course-material .course-material ol.course-tabs li a b,
+.wrapper-course-material .course-material ol.course-tabs li a:focus b {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px dashed transparent;
+  vertical-align: -0.15em;
+  font-size: 1.2em;
+}
+.wrapper-course-material .course-material ol.course-tabs li a:hover,
+.wrapper-course-material .course-material ol.course-tabs li a:focus:hover {
+  color: currentColor !important;
+  border: none;
+  background: none;
+  text-decoration: none;
+}
+.wrapper-course-material .course-material ol.course-tabs li a:hover b,
+.wrapper-course-material .course-material ol.course-tabs li a:focus:hover b {
+  color: currentColor !important;
+  border-bottom: 1px solid currentColor !important;
+  text-decoration: none;
+}
+.wrapper-course-material .course-material ol.course-tabs li a.active,
+.wrapper-course-material .course-material ol.course-tabs li a.active:hover,
+.wrapper-course-material .course-material ol.course-tabs li a.active:focus,
+.wrapper-course-material
+  .course-material
+  ol.course-tabs
+  li
+  a.active:focus:hover {
+  box-shadow: none;
+  text-shadow: none;
+  background: none;
+  color: #f89820;
+  border: none;
+  text-decoration: none;
+}
+.wrapper-course-material .course-material ol.course-tabs li a.active b,
+.wrapper-course-material .course-material ol.course-tabs li a.active:hover b,
+.wrapper-course-material .course-material ol.course-tabs li a.active:focus b,
+.wrapper-course-material
+  .course-material
+  ol.course-tabs
+  li
+  a.active:focus:hover
+  b {
+  color: currentColor !important;
+  border-bottom: 2px solid currentColor !important;
+}
+p {
+  font-size: 1.2em/1.6em;
+}
+body a:link,
+body a:visited,
+body a:link:visited,
+body a:active,
+body a:link:active,
+body p a,
+body p a:link,
+body p a:visited {
+  color: #f89820;
+  font-family: "Helvetica Neue";
+  border-bottom: none;
+}
+body a:hover,
+body a:visited:hover,
+body a:link:hover,
+body a:link:visited:hover,
+body a:active:hover,
+body a:link:active:hover,
+body p a:link:hover,
+body p a:hover {
+  border-bottom: 1px solid #f89820;
+  color: #f89820;
+  text-decoration: none;
+}
+body a:focus {
+  border-bottom: 0 none;
+}
+.container {
+  min-width: 0px !important;
+}
+body div.window-wrap,
+body.view-in-course div.window-wrap {
+  min-width: inherit;
+}
+#primary-nav .row,
+#secondary-nav .row {
+  display: block;
+}
+#primary-nav .container,
+#primary-nav .container > div,
+#primary-nav div.container,
+#primary-nav div.container > div,
+#secondary-nav .container,
+#secondary-nav .container > div,
+#secondary-nav div.container,
+#secondary-nav div.container > div,
+.wrapper-footer .container,
+.wrapper-footer .container > div,
+.wrapper-footer div.container,
+.wrapper-footer div.container > div {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  max-width: 1180px;
+}
+.wrapper-footer footer .copyright {
+  text-align: center;
+  margin-top: 1em;
+}
+.wrapper-footer footer .copyright a {
+  color: #f89820 !important;
+}
+#primary-nav {
+  height: auto;
+}
+#primary-nav .gym-nav-icon-container:hover {
+  background-color: transparent;
+}
+#primary-nav .navbar {
+  height: auto;
+  border: 0;
+  margin: 0;
+}
+#primary-nav .navbar-nav > li > a {
+  padding: 10px;
+  margin-left: 4px;
+  margin-top: 2px;
+}
+#primary-nav .nav li a {
+  background-color: transparent;
+  color: #f89820;
+}
+#primary-nav .nav li a .caret {
+  color: #f89820;
+}
+#primary-nav .nav li a:hover {
+  background-color: transparent;
+  color: #ebebeb;
+  border-bottom: none;
+}
+#primary-nav .nav li a:hover .caret {
+  color: #ebebeb;
+}
+#primary-nav .navbar-right li > a {
+  font: normal 1.2em/1 brandon-grotesque, "Helvetica Neue", Helvetica,
+    sans-serif;
+}
+#primary-nav #dropdown {
+  display: inline-block;
+  color: #f89820;
+  border: none;
+}
+#primary-nav #dropdown:hover,
+#primary-nav #dropdown:hover span,
+#primary-nav #dropdown:hover span.caret {
+  color: #f89820;
+}
+#primary-nav #dropdown-menu {
+  display: none;
+}
+#primary-nav #dropdown-menu li {
+  display: inline;
+}
+#primary-nav #dropdown-menu li a {
+  color: white;
+}
+#primary-nav #dropdown-menu li a:hover {
+  color: #f89820;
+  text-decoration: none;
+}
+#primary-nav #dropdown-menu::before {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  content: " ";
+  line-height: 0;
+  background: #000;
+  padding: 0 0.2em;
+  vertical-align: middle;
+  border-top: 0.25em dashed transparent;
+  border-left: 0.25em solid #f89820;
+  border-bottom: 0.25em dashed transparent;
+  margin-left: -0.8em;
+}
+#secondary-nav {
+  height: 70px;
+  background-color: #222;
+  position: relative;
+  z-index: 999;
+}
+#secondary-nav > .container {
+  padding-top: 10px;
+}
+#secondary-nav a {
+  font-size: 1.2em;
+  color: #ebebeb;
+  font-family: brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+}
+#secondary-nav a:hover {
+  color: #f89820;
+  border-bottom: none;
+}
+#secondary-nav .navbar-brand {
+  height: auto;
+  padding: 0;
+  margin-top: 1.75rem;
+  margin-left: 15px;
+}
+#secondary-nav .navbar-brand:hover,
+#secondary-nav .navbar-brand:active,
+#secondary-nav .navbar-brand:link {
+  background: transparent;
+}
+#secondary-nav .navbar-default {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 5px;
+  background-color: #222;
+  border-color: transparent;
+  border: none;
+  margin-bottom: 0;
+  z-index: 100;
+}
+#secondary-nav .navbar-right {
+  position: relative;
+}
+#secondary-nav .navbar-toggle {
+  margin-top: 15px;
+}
+#secondary-nav .navbar-toggle:hover,
+#secondary-nav .navbar-toggle:focus {
+  border: 1px solid white;
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-collapse {
+    margin: 9px auto 10px;
+  }
+  #primary-nav .navbar-nav {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #secondary-nav .navbar-nav li:last-child {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-collapse.collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #secondary-nav .navbar-right {
+    margin-top: 3px;
+  }
+  #primary-nav .row,
+  #secondary-nav .row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #primary-nav .navbar,
+  #secondary-nav .navbar {
+    border-radius: 0;
+    margin: 0;
+  }
+  #primary-nav .navbar-left {
+    margin-left: 15px;
+  }
+  #primary-nav .navbar-right,
+  #secondary-nav .navbar-right {
+    margin-right: 15px;
+  }
+}
+.caret {
+  color: #999;
+}
+header.global {
+  margin: 0px;
+  box-shadow: none;
+  border: none;
+  width: inherit;
+  height: 120px;
+  background-color: #222;
+}
+header.global .container {
+  min-width: inherit;
+}
+header.global nav .container {
+  background: transparent;
+}
+.content-wrapper#content {
+  padding-bottom: 1em;
+  background-color: #ebebeb;
+}
+div.wrapper-footer {
+  margin-top: 0;
+  background-color: #222;
+  border-top: 10px solid rgba(248, 151, 32, 0.9);
+  color: white;
+  min-height: 170px;
+}
+div.wrapper-footer footer .gymnasium-logo {
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+div.wrapper-footer footer .footer-link-list {
+  margin-top: 30px;
+}
+div.wrapper-footer footer .footer-link-list li {
+  border-right: 1px solid #444;
+  height: 100%;
+  padding-right: 8px;
+}
+div.wrapper-footer footer .footer-link-list li a,
+div.wrapper-footer footer .footer-link-list li a:link {
+  color: white;
+  font-family: "brandon-grotesque";
+}
+div.wrapper-footer footer .footer-link-list li a:hover {
+  color: #f89820;
+}
+div.wrapper-footer footer .footer-link-list li:last-child {
+  border-right: 0px;
+}
+div.wrapper-footer footer a:hover {
+  text-decoration: none;
+  border: 0px;
+}
+section {
+  padding: 0px;
+}
+.black-background {
+  top: 0px;
+  background-color: black;
+  z-index: 0;
+}
+.aquent-icon,
+.vitamin-t-icon {
+  width: 35px;
+  height: 25px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  background-position-x: center;
+  filter: gray;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+}
+.aquent-icon:hover,
+.vitamin-t-icon:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+  background-color: transparent;
+}
+.aquent-icon {
+  background-image: url("https://thegymnasium.com/static/gymnasium/images/aquent-icon.56d05be37e9a.png");
+}
+.vitamin-t-icon {
+  background-image: url("https://thegymnasium.com/static/gymnasium/images/vitamin-t-icon.32e5d567b8ca.png");
+}
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5 {
+  text-align: left;
+  text-transform: uppercase;
+  font-family: brandon-grotesque;
+}
+html body h1,
+html body h2 {
+  font-weight: 900;
+}
+html body h3,
+html body h4,
+html body h5 {
+  font-weight: bold;
+}
+h1 {
+  font: 900 2.4em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 0.04em;
+  word-spacing: 0.05em;
+  text-transform: uppercase;
+}
+h2 {
+  font: 900 1em/1.3 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 0.06em;
+  word-spacing: 0.04em;
+  text-transform: uppercase;
+}
+/*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-course.0f892cd7170b.css */
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+}
+body {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4;
+}
+a:not(.btn) {
+  color: #0075b4;
+}
+a:visited:not(.btn) {
+  color: #003655;
+}
+a:hover:not(.btn),
+a:focus:not(.btn) {
+  color: #0079bc;
+}
+b,
+strong {
+  font-weight: bold;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+small {
+  font-size: 85%;
+}
+ul,
+ol {
+  padding: 0 0 0 40px;
+  margin: 1em 0;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+form {
+  margin: 0;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+label {
+  cursor: pointer;
+}
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+  white-space: normal;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+input[type="button"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+button[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *width: 13px;
+  *height: 13px;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button:-moz-focusring {
+  outline: 1px dotted black;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td {
+  vertical-align: top;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+@media print {
+  * {
+    background: transparent;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  html,
+  body {
+    background: transparent !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+a:not(.btn):disabled,
+a:visited:not(.btn):disabled {
+  pointer-events: none;
+  outline: none;
+  cursor: default;
+}
+.sr,
+.sr-only,
+.nav-skip {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+  margin: -1px;
+  height: 1px;
+  width: 1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  word-wrap: normal;
+}
+.sr,
+.sr-only {
+  background: #fff;
+  color: #000;
+}
+.instructor-dashboard-content-2 .instructor-nav,
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .discussions-wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+.instructor-dashboard-content-2 .instructor-nav li,
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .discussions-wrapper
+  li {
+  margin: 0;
+  padding: 0;
+}
+.btn-link {
+  color: #0075b4;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: #0075b4;
+}
+.btn-link:hover,
+.btn-link:focus {
+  text-decoration: underline !important;
+}
+html,
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1em;
+}
+html {
+  background: #fff;
+}
+body {
+  background: #fff;
+}
+[tabindex="-1"] {
+  outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #313131;
+  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
+  margin: 0;
+}
+h1 {
+  color: #313131;
+  font: normal 2em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
+}
+h2 {
+  color: #646464;
+  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
+  margin-bottom: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+p {
+  color: inherit;
+  margin: 0;
+}
+span {
+  color: inherit;
+  font: inherit;
+}
+p + p {
+  margin-top: 20px;
+}
+p a:not(.btn),
+p a:visited:not(.btn) {
+  color: #0075b4;
+  font: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  transition: all 0.1s linear 0s;
+}
+p a:not(.btn):hover,
+p a:not(.btn):focus,
+p a:visited:not(.btn):hover,
+p a:visited:not(.btn):focus {
+  color: #065683;
+  text-decoration: underline;
+}
+a:not(.btn),
+a:visited:not(.btn) {
+  color: #0075b4;
+  font: inherit;
+  text-decoration: none;
+  transition: all 0.1s linear 0s;
+}
+a:not(.btn):hover,
+a:not(.btn):focus,
+a:visited:not(.btn):hover,
+a:visited:not(.btn):focus {
+  color: #065683;
+  text-decoration: underline;
+}
+a:not(.btn):disabled,
+a:visited:not(.btn):disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.content-wrapper {
+  max-width: 1920px;
+  margin-top: 20px;
+  padding: 0 0 10px;
+}
+@media (min-width: 768px) {
+  .content-wrapper {
+    padding: 0 20px 10px;
+  }
+}
+@media print {
+  .content-wrapper {
+    padding-bottom: 0;
+  }
+}
+.container {
+  box-sizing: border-box;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    padding: 40px 0;
+    max-width: 1180px;
+    min-width: 760px;
+    width: 100%;
+  }
+}
+.nav-skip {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -600px;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #fcfcfc;
+  padding: 15px 0;
+}
+.nav-skip:focus,
+.nav-skip:active {
+  left: 45%;
+  margin-left: -30px;
+  position: absolute;
+  top: 5px;
+  width: 10%;
+  height: auto;
+  background-color: black;
+  margin: 0;
+  opacity: 0.8;
+  color: white !important;
+  text-decoration: none !important;
+  outline: none;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .nav-skip:focus,
+  .nav-skip:active {
+    left: 40%;
+    width: 20%;
+  }
+}
+.hd-2,
+.hd-3,
+.hd-4,
+.hd-5 {
+  margin: 0;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: inherit;
+  color: #474747;
+}
+.hd-2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+.hd-3 {
+  margin-bottom: 10px;
+  font-size: 1.35em;
+  font-weight: 400;
+  line-height: 1.4em;
+}
+.hd-4 {
+  margin-bottom: 10px;
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+.hd-5 {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+.instructor-dashboard-content-2 .instructor-nav,
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .discussions-wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+.instructor-dashboard-content-2 .instructor-nav li,
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .discussions-wrapper
+  li {
+  margin: 0;
+  padding: 0;
+}
+@media print {
+  .nav-skip,
+  .wrapper-course-material,
+  .container > div,
+  .wrap-instructor-info,
+  .wrap-instructor-info .instructor-info-action {
+    display: none;
+  }
+}
+.btn-link {
+  font-weight: 600;
+}
+.wrapper-course-material .course-tabs .tab a,
+.wrapper-course-material .course-tabs .tab a:visited {
+  font-weight: 400;
+}
+.idash-section .subsection-title,
+.wrapper-course-material .course-tabs .tab a,
+.wrapper-course-material .course-tabs .tab a:visited {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.idash-section .subsection-title,
+.wrapper-course-material .course-tabs .tab a,
+.wrapper-course-material .course-tabs .tab a:visited {
+  font-size: 14px;
+  line-height: 20.72px;
+}
+.instructor-dashboard-content-2 .instructor-nav .nav-item,
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .label,
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .member-list
+  th,
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .member-list
+  td,
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-management-supplemental,
+.wrap-instructor-info .instructor-info-action,
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .enroll-option
+  .hint {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.instructor-dashboard-content-2 .instructor-nav .nav-item {
+  font-size: 16px;
+  line-height: 23.68px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .label,
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .member-list
+  th,
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .member-list
+  td,
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-management-supplemental {
+  font-size: 14px;
+  line-height: 20.72px;
+}
+.wrap-instructor-info .instructor-info-action,
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .enroll-option
+  .hint {
+  font-size: 12px;
+  line-height: 17.76px;
+}
+.btn-link {
+  font-size: 14px;
+  line-height: 20.72px;
+}
+.idash-section .subsection-title {
+  font-weight: 600;
+}
+.idash-section .subsection-title {
+  margin: 0 0 5px 0;
+  color: #050505;
+}
+.btn-link {
+  border-radius: 0;
+  border-color: transparent;
+  padding: 1px;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  white-space: nowrap;
+}
+.btn-link:focus,
+.btn-link:hover {
+  background-image: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.wrapper-course-material {
+  box-sizing: border-box;
+  border-bottom: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+.wrapper-course-material:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 991px) {
+  .wrapper-course-material .course-material {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+}
+.wrapper-course-material .course-tabs {
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-topleft-radius: 4px;
+  border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-topright-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 15px 0 15px 0;
+}
+.wrapper-course-material .course-tabs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.wrapper-course-material .course-tabs .tab {
+  display: inline-block;
+  list-style: none;
+}
+.wrapper-course-material .course-tabs .tab a,
+.wrapper-course-material .course-tabs .tab a:visited {
+  padding: 10px 15px 13px 15px;
+  color: #313131;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 4px hidden #0075b4;
+}
+.wrapper-course-material .course-tabs .tab a:hover,
+.wrapper-course-material .course-tabs .tab a:focus,
+.wrapper-course-material .course-tabs .tab a.active,
+.wrapper-course-material .course-tabs .tab a:visited:hover,
+.wrapper-course-material .course-tabs .tab a:visited:focus,
+.wrapper-course-material .course-tabs .tab a:visited.active {
+  color: #0075b4;
+  border-bottom-style: solid;
+  background-color: transparent;
+}
+footer {
+  box-shadow: none;
+  margin-top: 0;
+}
+.content-wrapper {
+  background: none;
+  border: none;
+}
+.container {
+  padding: 0;
+}
+.container > div {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border: 1px solid #c8c8c8;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+body {
+  min-height: 100%;
+  background-color: #f5f5f5;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+label {
+  text-align: left;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+main {
+  outline: none;
+}
+table {
+  table-layout: fixed;
+}
+a:hover,
+a:focus {
+  text-decoration: none !important;
+}
+@media print {
+  a {
+    text-decoration: underline !important;
+  }
+  a:visited {
+    text-decoration: underline !important;
+  }
+}
+form label {
+  display: block;
+}
+textarea,
+input[type="text"] {
+  background: #fff;
+  border: 1px solid #c8c8c8;
+  border-radius: 0;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.6),
+    inset 0 0 3px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  font: normal 1em "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 35px;
+  padding: 5px 12px;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+}
+textarea:last-child,
+input[type="text"]:last-child {
+  margin-right: 0;
+}
+textarea:focus,
+input[type="text"]:focus {
+  border-color: #1bafff;
+  box-shadow: 0 0 6px 0 rgba(0, 117, 180, 0.4),
+    inset 0 0 4px 0 rgba(0, 0, 0, 0.15);
+}
+label {
+  font-weight: normal;
+  font-style: normal;
+}
+img {
+  max-width: 100%;
+}
+.wrapper-course-material .course-material {
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+}
+input[type="button"],
+button,
+.button,
+form button,
+form .button,
+.instructor-dashboard-content-2 input[type="button"],
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  input[type="button"].add,
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .form-submit {
+  text-transform: none;
+  letter-spacing: 0;
+}
+input[type="button"]:hover,
+button:hover,
+.button:hover,
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  input[type="button"].add:hover,
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .form-submit:hover,
+input[type="button"]:focus,
+button:focus,
+.button:focus,
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  input[type="button"].add:focus,
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .form-submit:focus {
+  text-decoration: none;
+}
+input[type="button"],
+button,
+.button,
+form button,
+form .button {
+  border: 1px solid #d2c9c9;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 #fff;
+  color: #333;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: #f1f1f1;
+  background-image: -webkit-linear-gradient(#f1f1f1, #d9d1d1);
+  background-image: linear-gradient(#f1f1f1, #d9d1d1);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fcfbfb;
+  background-clip: padding-box;
+  font-size: 0.8125em;
+}
+.instructor-dashboard-content-2 {
+  box-sizing: border-box;
+  display: table-cell;
+  padding: 2em 2.5em;
+  vertical-align: top;
+  width: 76.27119%;
+}
+@media print {
+  .instructor-dashboard-content-2 {
+    box-shadow: none;
+  }
+}
+html {
+  height: 100%;
+  max-height: 100%;
+}
+.wrap-instructor-info {
+  margin: 10px 5px 0 0;
+  display: none;
+}
+@media (min-width: 768px) {
+  .wrap-instructor-info {
+    display: block;
+  }
+}
+.wrap-instructor-info.studio-view {
+  margin: 0;
+  display: inline;
+}
+.wrap-instructor-info .instructor-info-action {
+  float: right;
+  margin-left: 10px;
+  text-align: right;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  color: #c2387d;
+  text-transform: uppercase;
+}
+.wrap-instructor-info .instructor-info-action:hover {
+  background-color: #c2387d;
+  color: #fff;
+}
+.instructor-dashboard-wrapper-2 {
+  position: relative;
+}
+.instructor-dashboard-wrapper-2 .msg {
+  border-radius: 1px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.instructor-dashboard-wrapper-2 .msg-confirm {
+  display: none;
+  background: #f2f9f2;
+  border-top: 2px solid #008401;
+  color: #008401;
+}
+.instructor-dashboard-wrapper-2 .msg-error {
+  border-top: 2px solid #d0021b;
+  background: #fae6e8;
+}
+.instructor-dashboard-content-2 {
+  display: block;
+  width: 100%;
+  padding: 40px;
+}
+.instructor-dashboard-content-2 .wrap-instructor-info {
+  display: inline;
+  top: 0;
+}
+.instructor-dashboard-content-2 .request-response-error {
+  margin: 0;
+  padding-bottom: 20px;
+  color: #cb0712;
+}
+.instructor-dashboard-content-2 .instructor-dashboard-title {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.instructor-dashboard-content-2 input[type="button"] {
+  border: 1px solid #cfc6c6;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 #fff;
+  color: #333;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: #eee;
+  background-image: -webkit-linear-gradient(#eee, #d6cece);
+  background-image: linear-gradient(#eee, #d6cece);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #f9f8f8;
+  background-clip: padding-box;
+  margin-bottom: 1em;
+  padding: 8px 17px;
+  font-size: 0.8125em;
+  line-height: 1.3em;
+}
+.instructor-dashboard-content-2 input[type="button"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.instructor-dashboard-content-2 .instructor-nav {
+  border-bottom: 1px solid #c8c8c8;
+}
+.instructor-dashboard-content-2 .instructor-nav .nav-item {
+  display: inline-block;
+}
+.instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link {
+  display: inline-block;
+  padding: 10px;
+  border: 0;
+  box-shadow: none;
+  text-shadow: none;
+}
+.instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link:hover,
+.instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link:focus {
+  border-bottom: 3px solid #0075b4;
+}
+.instructor-dashboard-content-2
+  .instructor-nav
+  .nav-item
+  .btn-link.active-section {
+  border-bottom: 3px solid #0075b4;
+  color: #000;
+}
+.idash-section {
+  display: none;
+  margin-top: 30px;
+}
+.idash-section.active-section {
+  display: block;
+}
+.idash-section .running-tasks-section {
+  display: none;
+}
+.idash-section .no-pending-tasks-message {
+  display: none;
+}
+.idash-section .no-pending-tasks-message p {
+  color: #474747;
+  font-style: italic;
+}
+.idash-section .subsection-title {
+  margin-bottom: 10px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .membership-section {
+  margin-bottom: 30px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .membership-section:last-child {
+  margin-bottom: 0;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .membership-section
+  legend {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .batch-enrollment
+  textarea,
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .batch-beta-testers
+  textarea {
+  margin-top: 0.2em;
+  height: auto;
+  width: 90%;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .batch-enrollment
+  .role {
+  margin: 20px 0;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .batch-enrollment
+  .role
+  select {
+  margin-left: 15px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .batch-enrollment
+  input,
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .batch-beta-testers
+  input {
+  margin-right: 5px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .enroll-option {
+  margin: 10px 0;
+  position: relative;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .enroll-option
+  .hint {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: -9999em;
+  padding: 10px;
+  width: 50%;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .enroll-option
+  .hint
+  .hint-caret {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -15px;
+  border-right: 8px solid #f9f9f9;
+  border-left: 8px solid transparent;
+  border-top: 8px solid #f9f9f9;
+  border-bottom: 8px solid transparent;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .enroll-option
+  .has-hint:hover
+  > .hint {
+  left: 200px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .enroll-option
+  .has-hint
+  input:focus
+  ~ .hint {
+  left: 200px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .wrapper-member-select {
+  padding: 10px;
+  background-color: #ddd;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .member-lists-selector {
+  display: block;
+  margin: 5px 0;
+  padding: 5px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container {
+  display: none;
+  margin-bottom: 30px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container.active {
+  display: block;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .header {
+  box-sizing: border-box;
+  border-top-left-radius: 3;
+  border-top-right-radius: 3;
+  position: relative;
+  padding: 10px;
+  background-color: #efefef;
+  border: 1px solid #ddd;
+  display: none;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .title {
+  font-size: 16px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .label {
+  color: #646464;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .info {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ddd;
+  color: #646464;
+  line-height: 1.3em;
+  font-size: 0.85em;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .member-list {
+  box-sizing: border-box;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .member-list
+  table {
+  width: 100%;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .member-list
+  thead {
+  background-color: #ddd;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .member-list
+  tr {
+  border-bottom: 1px solid #ddd;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .member-list
+  th,
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .member-list
+  td {
+  vertical-align: middle;
+  padding: 10px 5px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  word-wrap: break-word;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  .bottom-bar {
+  box-sizing: border-box;
+  border-bottom-left-radius: 3;
+  border-bottom-right-radius: 3;
+  position: relative;
+  padding: 10px;
+  margin-top: -1px;
+  border: 1px solid #ddd;
+  background-color: #efefef;
+  box-shadow: inset #bbb 0 1px 1px 0;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  input[type="button"].add {
+  border: 1px solid #00476d;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 #0ca3f5;
+  color: #fff;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: #0075b4;
+  background-image: -webkit-linear-gradient(#0075b4, #00517c);
+  background-image: linear-gradient(#0075b4, #00517c);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #003958;
+  background-clip: padding-box;
+  margin-bottom: 1em;
+  padding: 8px 17px;
+  font-size: 0.8125em;
+  line-height: 1.3em;
+  position: absolute;
+  right: 20px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .member-list-widget
+  input[type="button"].add:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .revoke {
+  color: #646464;
+  cursor: pointer;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .revoke:hover,
+.instructor-dashboard-wrapper-2
+  section.idash-section#membership
+  .member-lists-management
+  .auth-list-container
+  .revoke:focus {
+  color: #d44040;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .division-scheme-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .division-scheme-container
+  .division-scheme {
+  font-size: 18px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .division-scheme-container
+  .division-scheme-item {
+  padding-left: 1%;
+  padding-right: 1%;
+  float: left;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .division-scheme-container
+  .two-column-layout {
+  max-width: 47%;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .division-scheme-container
+  .field-message {
+  font-size: 13px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .form-submit {
+  border: 1px solid #00476d;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 #0ca3f5;
+  color: #fff;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: #0075b4;
+  background-image: -webkit-linear-gradient(#0075b4, #00517c);
+  background-image: linear-gradient(#0075b4, #00517c);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #003958;
+  background-clip: padding-box;
+  margin-bottom: 1em;
+  padding: 8px 17px;
+  font-size: 0.8125em;
+  line-height: 1.3em;
+  font-size: 14px;
+  line-height: 20.72px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  text-shadow: none;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-management-supplemental {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #f8f8f8;
+  border-radius: 2px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .cohort-course-wide-discussions-form
+  .form-actions {
+  padding-top: 10px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .topic-name,
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .all-inline-discussions,
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .always_divide_inline_discussions,
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .divide_inline_discussions {
+  padding-left: 10px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .always_divide_inline_discussions,
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .divide_inline_discussions {
+  padding-top: 10px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .subcategory-item {
+  padding-top: 10px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .divided-discussion-text {
+  color: #0075b4;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#discussions_management
+  .discussions-nav
+  .discussions-wrapper {
+  padding: 0 10px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#student_admin
+  .action-type-container {
+  margin-bottom: 40px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#student_admin
+  .progress-link-wrapper {
+  margin-top: 0.7em;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#student_admin
+  .task-history-all-table {
+  margin-top: 1em;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#student_admin
+  .task-history-single-table {
+  margin-top: 1em;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#student_admin
+  .running-tasks-table {
+  margin-top: 1em;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#student_admin
+  input[type="text"] {
+  width: 651px;
+}
+.instructor-dashboard-wrapper-2
+  section.idash-section#student_admin
+  .location-example {
+  font-style: italic;
+  font-size: 0.9em;
+}
+.instructor-dashboard-wrapper-2 section.idash-section#data_download input {
+  margin-bottom: 1em;
+  line-height: 1.3em;
+}
+.enrollment-wrapper {
+  margin-bottom: 40px;
+}
+.enrollment-wrapper table tr {
+  height: 21px;
+}
+.enrollment-wrapper table tr td {
+  width: 120px;
+}
+.enrollment-wrapper {
+  margin-bottom: 40px;
+}
+body.view-in-course {
+  background-color: #fff;
+}
+body.view-in-course .wrapper-course-material {
+  padding: 0;
+}
+body.view-in-course .wrapper-course-material .course-material {
+  width: auto;
+}
+body.view-in-course .wrapper-course-material .course-material {
+  padding: 0;
+}
+body.view-in-course .wrapper-course-material .course-material .course-tabs {
+  padding: 0;
+}
+body.view-in-course .container {
+  max-width: none;
+  min-width: initial;
+  width: auto;
+}
+body.view-in-course .instructor-dashboard-wrapper-2 {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+}
+body.view-in-course .wrapper-footer {
+  margin-top: 40px;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+/*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+aside,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+[hidden] {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+b,
+strong {
+  font-weight: 700;
+}
+h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+}
+small {
+  font-size: 80%;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+hr {
+  height: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+fieldset {
+  padding: 0.35em 0.625em 0.75em;
+  margin: 0 2px;
+  border: 1px solid silver;
+}
+legend {
+  padding: 0;
+  border: 0;
+}
+textarea {
+  overflow: auto;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 0;
+}
+@media print {
+  *,
+  :after,
+  :before {
+    color: #000 !important;
+    text-shadow: none !important;
+    background: 0 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  a[href^="#"]:after {
+    content: "";
+  }
+  thead {
+    display: table-header-group;
+  }
+  img,
+  tr {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  h2,
+  h3,
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .navbar {
+    display: none;
+  }
+  .label {
+    border: 1px solid #000;
+  }
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:focus,
+a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+img {
+  vertical-align: middle;
+}
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+[role="button"] {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+h1,
+h2,
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+h4,
+h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 14px;
+}
+p {
+  margin: 0 0 10px;
+}
+small {
+  font-size: 85%;
+}
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ul ul {
+  margin-bottom: 0;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-sm-10,
+.col-xs-12,
+.col-xs-6 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-xs-12,
+.col-xs-6 {
+  float: left;
+}
+.col-xs-12 {
+  width: 100%;
+}
+.col-xs-6 {
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .col-sm-10 {
+    float: left;
+  }
+  .col-sm-10 {
+    width: 83.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-12,
+  .col-md-2,
+  .col-md-3 {
+    float: left;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-2 {
+    width: 16.66666667%;
+  }
+}
+table {
+  background-color: transparent;
+}
+caption {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #777;
+  text-align: left;
+}
+th {
+  text-align: left;
+}
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  color: #333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 4px 0 0;
+  margin-top: 1px\9;
+  line-height: normal;
+}
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn-link {
+  font-weight: 400;
+  color: #337ab7;
+  border-radius: 0;
+}
+.btn-link,
+.btn-link:active {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.btn-link,
+.btn-link:active,
+.btn-link:focus,
+.btn-link:hover {
+  border-color: transparent;
+}
+.btn-link:focus,
+.btn-link:hover {
+  color: #23527c;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.collapse {
+  display: none;
+}
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid\9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.nav > li {
+  position: relative;
+  display: block;
+}
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.nav > li > a:focus,
+.nav > li > a:hover {
+  text-decoration: none;
+  background-color: #eee;
+}
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 4px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-header {
+    float: left;
+  }
+}
+.navbar-collapse {
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+@media (min-width: 768px) {
+  .navbar-collapse {
+    width: auto;
+    border-top: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+}
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.navbar-brand:focus,
+.navbar-brand:hover {
+  text-decoration: none;
+}
+.navbar-brand > img {
+  display: block;
+}
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.navbar-toggle:focus {
+  outline: 0;
+}
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+.navbar-nav {
+  margin: 7.5px -15px;
+}
+.navbar-nav > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+@media (min-width: 768px) {
+  .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  .navbar-nav > li {
+    float: left;
+  }
+  .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-left {
+    float: left !important;
+  }
+  .navbar-right {
+    float: right !important;
+    margin-right: -15px;
+  }
+}
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+.navbar-default .navbar-brand {
+  color: #777;
+}
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #777;
+}
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+  color: #333;
+  background-color: transparent;
+}
+.navbar-default .navbar-toggle {
+  border-color: #ddd;
+}
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background-color: #ddd;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.navbar-default .navbar-collapse {
+  border-color: #e7e7e7;
+}
+.label {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+.label:empty {
+  display: none;
+}
+.container-fluid:after,
+.container-fluid:before,
+.container:after,
+.container:before,
+.nav:after,
+.nav:before,
+.navbar-collapse:after,
+.navbar-collapse:before,
+.navbar-header:after,
+.navbar-header:before,
+.navbar:after,
+.navbar:before,
+.row:after,
+.row:before {
+  display: table;
+  content: " ";
+}
+.container-fluid:after,
+.container:after,
+.nav:after,
+.navbar-collapse:after,
+.navbar-header:after,
+.navbar:after,
+.row:after {
+  clear: both;
+}
+.hide {
+  display: none !important;
+}
+.hidden {
+  display: none !important;
+}
+.visible-xs {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  .visible-xs {
+    display: block !important;
+  }
+}
+/*! CSS Used from: Embedded */
+.intercom-lightweight-app {
+  position: fixed;
+  z-index: 2147483001;
+  width: 0;
+  height: 0;
+  font-family: intercom-font, "Helvetica Neue", "Apple Color Emoji", Helvetica,
+    Arial, sans-serif;
+}
+.intercom-lightweight-app-launcher {
+  position: fixed;
+  z-index: 2147483003;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f8971d;
+  cursor: pointer;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);
+  animation: intercom-lightweight-app-launcher 250ms ease;
+}
+.intercom-lightweight-app-launcher:focus {
+  outline: none;
+}
+.intercom-lightweight-app-launcher-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  transition: transform 100ms linear, opacity 80ms linear;
+}
+.intercom-lightweight-app-launcher-icon-open {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+.intercom-lightweight-app-launcher-icon-open svg {
+  width: 28px;
+  height: 32px;
+}
+.intercom-lightweight-app-launcher-icon-open svg path {
+  fill: rgb(255, 255, 255);
+}
+.intercom-lightweight-app-launcher-icon-minimize {
+  opacity: 0;
+  transform: rotate(-60deg) scale(0);
+}
+.intercom-lightweight-app-launcher-icon-minimize svg {
+  width: 16px;
+}
+.intercom-lightweight-app-launcher-icon-minimize svg path {
+  fill: rgb(255, 255, 255);
+}
+@media print {
+  .intercom-lightweight-app {
+    display: none;
+  }
+}
+/*! CSS Used keyframes */
+@keyframes intercom-lightweight-app-launcher {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/*! CSS Used fontfaces */
+@font-face {
+  font-family: "FontAwesome";
+  src: url("https://thegymnasium.com/static/fonts/vendor/fontawesome-webfont.25a32416abee.eot?v=4.6.3");
+  src: url("https://thegymnasium.com/static/fonts/vendor/fontawesome-webfont.25a32416abee.eot#iefix&v=4.6.3")
+      format("embedded-opentype"),
+    url("https://thegymnasium.com/static/fonts/vendor/fontawesome-webfont.e6cf7c6ec7c2.woff2?v=4.6.3")
+      format("woff2"),
+    url("https://thegymnasium.com/static/fonts/vendor/fontawesome-webfont.c8ddf1e5e5bf.woff?v=4.6.3")
+      format("woff"),
+    url("https://thegymnasium.com/static/fonts/vendor/fontawesome-webfont.1dc35d25e61d.ttf?v=4.6.3")
+      format("truetype"),
+    url("https://thegymnasium.com/static/fonts/vendor/fontawesome-webfont.d7c639084f68.svg?v=4.6.3#fontawesomeregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Udc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0ddc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Vdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0adc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Wdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Xdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Udc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0ddc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Vdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0adc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Wdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Xdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Udc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0ddc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Vdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0adc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Wdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Xdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Udc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0ddc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Vdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0adc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Wdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Xdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Udc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0ddc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Vdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0adc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Wdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Xdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Udc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0ddc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Vdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0adc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Wdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Xdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Udc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0ddc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Vdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0adc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Wdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Xdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Udc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0ddc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Vdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0adc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Wdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Xdc1GAK6bt6o.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem6YaGs126MiZpBA-UFUK0Zdc1GAK6b.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN_r8OUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWZ0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXuhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+1F00-1FFF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0370-03FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXehpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/opensans/v23/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: brandon-grotesque;
+  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg-webfont.010bf4d26b70.woff2")
+      format("woff2"),
+    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg-webfont.705897ac8ade.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: brandon-grotesque;
+  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg_it-webfont.a048e1a2ba4a.woff2")
+      format("woff2"),
+    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg_it-webfont.e3cd01108645.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: brandon-grotesque;
+  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld-webfont.f2069d035aac.woff2")
+      format("woff2"),
+    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld-webfont.a05d93e37f29.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: brandon-grotesque;
+  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld_it-webfont.95fc67f8053e.woff2")
+      format("woff2"),
+    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld_it-webfont.bae49154d300.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: brandon-grotesque;
+  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk-webfont.8886240de273.woff2")
+      format("woff2"),
+    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk-webfont.aeb559fb9125.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: brandon-grotesque;
+  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk_it-webfont.33e8d7de2916.woff2")
+      format("woff2"),
+    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk_it-webfont.94096809d8e8.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: 900;
+}
+@font-face {
+  font-family: brandon-grotesque;
+  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg-webfont.010bf4d26b70.woff2")
+      format("woff2"),
+    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg-webfont.705897ac8ade.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: brandon-grotesque;
+  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg_it-webfont.a048e1a2ba4a.woff2")
+      format("woff2"),
+    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg_it-webfont.e3cd01108645.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: brandon-grotesque;
+  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld-webfont.f2069d035aac.woff2")
+      format("woff2"),
+    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld-webfont.a05d93e37f29.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: brandon-grotesque;
+  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld_it-webfont.95fc67f8053e.woff2")
+      format("woff2"),
+    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld_it-webfont.bae49154d300.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: brandon-grotesque;
+  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk-webfont.8886240de273.woff2")
+      format("woff2"),
+    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk-webfont.aeb559fb9125.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: brandon-grotesque;
+  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk_it-webfont.33e8d7de2916.woff2")
+      format("woff2"),
+    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk_it-webfont.94096809d8e8.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: 900;
+}
