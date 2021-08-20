@@ -45,10 +45,7 @@
 
 
 
-b,
-strong {
-  font-weight: bold;
-}
+
 hr {
   display: block;
   height: 1px;
@@ -82,9 +79,7 @@ nav ol {
 }
 
 
-form {
-  margin: 0;
-}
+
 fieldset {
   border: 0;
   margin: 0;
@@ -226,10 +221,7 @@ td {
 
 
 
-b,
-strong {
-  font-weight: bold;
-}
+
 hr {
   display: block;
   height: 1px;
@@ -263,9 +255,7 @@ nav ol {
 }
 
 
-form {
-  margin: 0;
-}
+
 fieldset {
   border: 0;
   margin: 0;
@@ -399,12 +389,7 @@ td {
   border-color: #d2d0d0;
   color: #6b6969;
 }
-@media print {
-  .nav-skip,
-  .wrapper-footer {
-    display: none;
-  }
-}
+
 
 
 
@@ -1595,10 +1580,7 @@ main p > a:not([class]):active {
 
 
 
-b,
-strong {
-  font-weight: bold;
-}
+
 hr {
   display: block;
   height: 1px;
@@ -1632,9 +1614,7 @@ nav ol {
 }
 
 
-form {
-  margin: 0;
-}
+
 fieldset {
   border: 0;
   margin: 0;
@@ -3332,9 +3312,7 @@ h1 {
   margin: 0.67em 0;
   font-size: 2em;
 }
-small {
-  font-size: 80%;
-}
+
 
 
 hr {
@@ -3358,17 +3336,9 @@ select {
   font: inherit;
   color: inherit;
 }
-button {
-  overflow: visible;
-}
-button,
-select {
-  text-transform: none;
-}
-button {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
+
+
+
 button[disabled] {
   cursor: default;
 }
@@ -3468,9 +3438,7 @@ a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-img {
-  vertical-align: middle;
-}
+
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -3478,9 +3446,7 @@ hr {
   border-top: 1px solid #eee;
 }
 
-[role="button"] {
-  cursor: pointer;
-}
+
 h1,
 h2,
 h3 {
@@ -3495,18 +3461,12 @@ h3 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-h1 {
-  font-size: 36px;
-}
-h2 {
-  font-size: 30px;
-}
+
+
 h3 {
   font-size: 24px;
 }
-p {
-  margin: 0 0 10px;
-}
+
 
 ol,
 ul {
@@ -3548,37 +3508,7 @@ pre code {
   background-color: transparent;
   border-radius: 0;
 }
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-.container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
-}
+
 .col-md-12,
 .col-md-2,
 .col-md-3,
@@ -3994,23 +3924,14 @@ input[type="radio"]:focus {
 .row:after {
   clear: both;
 }
-.hide {
-  display: none !important;
-}
+
 .show {
   display: block !important;
 }
 .hidden {
   display: none !important;
 }
-.visible-xs {
-  display: none !important;
-}
-@media (max-width: 767px) {
-  .visible-xs {
-    display: block !important;
-  }
-}
+
 /*! CSS Used from: Embedded */
 #MathJax_Message {
   position: fixed;

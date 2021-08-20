@@ -42,9 +42,7 @@ hr {
 
 
 
-form {
-  margin: 0;
-}
+
 fieldset {
   border: 0;
   margin: 0;
@@ -80,38 +78,7 @@ input[type="checkbox"] {
 
 
 
-@media print {
-  * {
-    background: transparent;
-    color: black !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important;
-  }
-  html,
-  body {
-    background: transparent !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
-  p,
-  h2 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2 {
-    page-break-after: avoid;
-  }
-}
+
 
 .modal,
 .modal .inner-wrapper,
@@ -150,9 +117,7 @@ hr {
 
 
 
-form {
-  margin: 0;
-}
+
 fieldset {
   border: 0;
   margin: 0;
@@ -188,38 +153,7 @@ input[type="checkbox"] {
 
 
 
-@media print {
-  * {
-    background: transparent;
-    color: black !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important;
-  }
-  html,
-  body {
-    background: transparent !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
-  p,
-  h2 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2 {
-    page-break-after: avoid;
-  }
-}
+
 
 .modal,
 .modal .inner-wrapper,
@@ -269,12 +203,7 @@ button.close-modal {
   letter-spacing: 0 !important;
   text-transform: none !important;
 }
-@media print {
-  .nav-skip,
-  .wrapper-footer {
-    display: none;
-  }
-}
+
 
 
 
@@ -1243,9 +1172,7 @@ h1 {
   margin: 0.67em 0;
   font-size: 2em;
 }
-small {
-  font-size: 80%;
-}
+
 
 
 hr {
@@ -1260,9 +1187,7 @@ input {
   font: inherit;
   color: inherit;
 }
-button {
-  overflow: visible;
-}
+
 button {
   text-transform: none;
 }
@@ -1318,9 +1243,7 @@ a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-img {
-  vertical-align: middle;
-}
+
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -1328,9 +1251,7 @@ hr {
   border-top: 1px solid #eee;
 }
 
-[role="button"] {
-  cursor: pointer;
-}
+
 h1,
 h2 {
   font-family: inherit;
@@ -1343,15 +1264,9 @@ h2 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-h1 {
-  font-size: 36px;
-}
-h2 {
-  font-size: 30px;
-}
-p {
-  margin: 0 0 10px;
-}
+
+
+
 
 ul {
   margin-top: 0;
@@ -1360,37 +1275,7 @@ ul {
 ul ul {
   margin-bottom: 0;
 }
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-.container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
-}
+
 .col-md-12,
 .col-md-2,
 .col-md-3,
@@ -1739,20 +1624,11 @@ input[type="checkbox"]:focus {
 .row:after {
   clear: both;
 }
-.hide {
-  display: none !important;
-}
+
 .hidden {
   display: none !important;
 }
-.visible-xs {
-  display: none !important;
-}
-@media (max-width: 767px) {
-  .visible-xs {
-    display: block !important;
-  }
-}
+
 /*! CSS Used from: Embedded */
 
 /*! CSS Used fontfaces */

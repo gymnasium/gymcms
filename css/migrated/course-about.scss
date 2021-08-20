@@ -14,10 +14,7 @@ button {
 }
 
 
-b,
-strong {
-  font-weight: bold;
-}
+
 
 
 
@@ -56,10 +53,7 @@ button {
 }
 
 
-b,
-strong {
-  font-weight: bold;
-}
+
 
 
 
@@ -88,12 +82,7 @@ button::-moz-focus-inner {
 }
 
 
-@media print {
-  .nav-skip,
-  .wrapper-footer {
-    display: none;
-  }
-}
+
 
 
 
@@ -120,9 +109,7 @@ h2 {
 }
 
 
-.text-center {
-  text-align: center;
-}
+
 p a:not(.btn),
 p a:visited:not(.btn) {
   color: #0075b4;
@@ -736,9 +723,7 @@ h1 {
   margin: 0.67em 0;
   font-size: 2em;
 }
-small {
-  font-size: 80%;
-}
+
 
 
 button {
@@ -746,20 +731,12 @@ button {
   font: inherit;
   color: inherit;
 }
-button {
-  overflow: visible;
-}
+
 button {
   text-transform: none;
 }
-button {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
+
+
 @media print {
   *,
   :after,
@@ -822,18 +799,10 @@ a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-img {
-  vertical-align: middle;
-}
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 
-[role="button"] {
-  cursor: pointer;
-}
+
+
+
 h1,
 h2,
 h3 {
@@ -848,22 +817,14 @@ h3 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-h1 {
-  font-size: 36px;
-}
-h2 {
-  font-size: 30px;
-}
+
+
 h3 {
   font-size: 24px;
 }
-p {
-  margin: 0 0 10px;
-}
 
-.text-center {
-  text-align: center;
-}
+
+
 ul {
   margin-top: 0;
   margin-bottom: 10px;
@@ -871,37 +832,7 @@ ul {
 ul ul {
   margin-bottom: 0;
 }
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-.container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
-}
+
 .col-md-12,
 .col-md-2,
 .col-md-3,
@@ -1173,25 +1104,12 @@ ul ul {
 .row:after {
   clear: both;
 }
-.center-block {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
+
 .pull-right {
   float: right !important;
 }
-.hide {
-  display: none !important;
-}
-.visible-xs {
-  display: none !important;
-}
-@media (max-width: 767px) {
-  .visible-xs {
-    display: block !important;
-  }
-}
+
+
 /*! CSS Used from: Embedded */
 
 /*! CSS Used fontfaces */

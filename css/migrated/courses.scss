@@ -48,38 +48,7 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-@media print {
-  * {
-    background: transparent;
-    color: black !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important;
-  }
-  html,
-  body {
-    background: transparent !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
-  p,
-  h2 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2 {
-    page-break-after: avoid;
-  }
-}
+
 
 
 
@@ -130,47 +99,11 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-@media print {
-  * {
-    background: transparent;
-    color: black !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important;
-  }
-  html,
-  body {
-    background: transparent !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
-  p,
-  h2 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2 {
-    page-break-after: avoid;
-  }
-}
 
 
 
-@media print {
-  .nav-skip,
-  .wrapper-footer {
-    display: none;
-  }
-}
+
+
 
 
 
@@ -810,9 +743,7 @@ h1 {
   margin: 0.67em 0;
   font-size: 2em;
 }
-small {
-  font-size: 80%;
-}
+
 
 
 figure {
@@ -823,20 +754,12 @@ button {
   font: inherit;
   color: inherit;
 }
-button {
-  overflow: visible;
-}
+
 button {
   text-transform: none;
 }
-button {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
+
+
 
 
 
@@ -863,18 +786,10 @@ a:focus {
 figure {
   margin: 0;
 }
-img {
-  vertical-align: middle;
-}
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 
-[role="button"] {
-  cursor: pointer;
-}
+
+
+
 h1,
 h2 {
   font-family: inherit;
@@ -887,15 +802,9 @@ h2 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-h1 {
-  font-size: 36px;
-}
-h2 {
-  font-size: 30px;
-}
-p {
-  margin: 0 0 10px;
-}
+
+
+
 
 ul {
   margin-top: 0;
@@ -918,37 +827,7 @@ dt {
 dd {
   margin-left: 0;
 }
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-.container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
-}
+
 .col-md-2,
 .col-md-3,
 .col-md-4,
@@ -1024,17 +903,8 @@ dd {
   border-left: 4px solid transparent;
 }
 
-.hide {
-  display: none !important;
-}
-.visible-xs {
-  display: none !important;
-}
-@media (max-width: 767px) {
-  .visible-xs {
-    display: block !important;
-  }
-}
+
+
 /*! CSS Used from: Embedded */
 
 /*! CSS Used fontfaces */

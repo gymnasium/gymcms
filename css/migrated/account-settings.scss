@@ -50,12 +50,7 @@
   .u-field-link:active {
   box-shadow: none;
 }
-@media print {
-  .nav-skip,
-  .wrapper-footer {
-    display: none;
-  }
-}
+
 
 h1,
 h2,
@@ -1248,9 +1243,7 @@ h1 {
   margin: 0.67em 0;
   font-size: 2em;
 }
-small {
-  font-size: 80%;
-}
+
 
 
 button,
@@ -1260,17 +1253,9 @@ select {
   font: inherit;
   color: inherit;
 }
-button {
-  overflow: visible;
-}
-button,
-select {
-  text-transform: none;
-}
-button {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
+
+
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   padding: 0;
@@ -1343,13 +1328,9 @@ a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-img {
-  vertical-align: middle;
-}
 
-[role="button"] {
-  cursor: pointer;
-}
+
+
 h1,
 h2,
 h3 {
@@ -1364,18 +1345,12 @@ h3 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-h1 {
-  font-size: 36px;
-}
-h2 {
-  font-size: 30px;
-}
+
+
 h3 {
   font-size: 24px;
 }
-p {
-  margin: 0 0 10px;
-}
+
 
 ul {
   margin-top: 0;
@@ -1389,37 +1364,7 @@ ul ul {
   margin-left: -5px;
   list-style: none;
 }
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-.container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
-}
+
 .col-md-2,
 .col-md-3,
 .col-sm-10,
@@ -1481,20 +1426,11 @@ label {
   border-left: 4px solid transparent;
 }
 
-.hide {
-  display: none !important;
-}
+
 .hidden {
   display: none !important;
 }
-.visible-xs {
-  display: none !important;
-}
-@media (max-width: 767px) {
-  .visible-xs {
-    display: block !important;
-  }
-}
+
 /*! CSS Used from: Embedded */
 
 /*! CSS Used fontfaces */
