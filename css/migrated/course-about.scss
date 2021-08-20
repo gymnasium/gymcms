@@ -7,11 +7,7 @@
 article,
 
 
-html,
-button {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
-}
+
 
 
 
@@ -46,11 +42,7 @@ button::-moz-focus-inner {
 article,
 
 
-html,
-button {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
-}
+
 
 
 
@@ -240,9 +232,7 @@ a:visited:not(.btn):disabled {
 .wrapper-msg.urgency-high .msg {
   color: #fff;
 }
-p {
-  font: "Helvetica Neue";
-}
+
 html .container > div {
   border-radius: 0;
   border: 0;
@@ -387,9 +377,7 @@ main li:not([class]) > a:not([class]):active {
   border-bottom-width: 2px !important;
   margin-bottom: -0.125rem;
 }
-p {
-  font-size: 1.2em/1.6em;
-}
+
 body a:link,
 body a:visited,
 body a:link:visited,
@@ -589,14 +577,7 @@ main li:not([class]) > a:not([class]):active {
 
 
 article,
-aside,
-footer,
-header,
-main,
-nav,
-section {
-  display: block;
-}
+
 
 
 
@@ -618,46 +599,7 @@ button {
 }
 
 
-@media print {
-  *,
-  :after,
-  :before {
-    color: #000 !important;
-    text-shadow: none !important;
-    background: 0 0 !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  a[href^="#"]:after {
-    content: "";
-  }
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
-  h2,
-  h3,
-  p {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-  .navbar {
-    display: none;
-  }
-}
+
 
 
 
@@ -667,19 +609,7 @@ button {
   font-size: inherit;
   line-height: inherit;
 }
-a {
-  color: #337ab7;
-  text-decoration: none;
-}
-a:focus,
-a:hover {
-  color: #23527c;
-  text-decoration: underline;
-}
-a:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
+
 
 
 

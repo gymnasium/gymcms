@@ -26,17 +26,8 @@ input {
 }
 
 
-b {
-  font-weight: bold;
-}
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
+
+
 
 
 
@@ -101,17 +92,8 @@ input {
 }
 
 
-b {
-  font-weight: bold;
-}
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
+
+
 
 
 
@@ -515,9 +497,7 @@ input[type="submit"]:disabled,
 button.close-modal:focus {
   border: none !important;
 }
-p {
-  font: "Helvetica Neue";
-}
+
 html .container > div {
   border-radius: 0;
   border: 0;
@@ -723,9 +703,7 @@ body * .modal input {
   border-color: transparent;
   text-decoration: underline;
 }
-p {
-  font-size: 1.2em/1.6em;
-}
+
 .break-word {
   word-break: break-all;
 }
@@ -1044,9 +1022,7 @@ section {
 }
 
 
-b {
-  font-weight: 700;
-}
+
 h1 {
   margin: 0.67em 0;
   font-size: 2em;
@@ -1054,12 +1030,7 @@ h1 {
 
 
 
-hr {
-  height: 0;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
+
 button,
 input {
   margin: 0;
@@ -1109,19 +1080,7 @@ input {
   font-size: inherit;
   line-height: inherit;
 }
-a {
-  color: #337ab7;
-  text-decoration: none;
-}
-a:focus,
-a:hover {
-  color: #23527c;
-  text-decoration: underline;
-}
-a:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
+
 
 hr {
   margin-top: 20px;

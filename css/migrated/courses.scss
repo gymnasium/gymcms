@@ -12,25 +12,17 @@ section {
   display: block;
 }
 
-html,
-button {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
-}
-
-
-b {
-  font-weight: bold;
-}
 
 
 
 
 
 
-figure {
-  margin: 0;
-}
+
+
+
+
+
 button {
   font-size: 100%;
   margin: 0;
@@ -61,25 +53,17 @@ section {
   display: block;
 }
 
-html,
-button {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
-}
-
-
-b {
-  font-weight: bold;
-}
 
 
 
 
 
 
-figure {
-  margin: 0;
-}
+
+
+
+
+
 button {
   font-size: 100%;
   margin: 0;
@@ -231,9 +215,7 @@ a:visited:not(.btn):disabled {
 .wrapper-msg.urgency-high .msg {
   color: #fff;
 }
-p {
-  font: "Helvetica Neue";
-}
+
 html .container > div {
   border-radius: 0;
   border: 0;
@@ -424,9 +406,7 @@ div#content.content-wrapper {
   margin-bottom: 15px;
   text-align: left;
 }
-p {
-  font-size: 1.2em/1.6em;
-}
+
 body a:link,
 body a:visited,
 body a:link:visited,
@@ -613,9 +593,7 @@ section {
 }
 
 
-b {
-  font-weight: 700;
-}
+
 h1 {
   margin: 0.67em 0;
   font-size: 2em;
@@ -647,22 +625,8 @@ button {
   font-size: inherit;
   line-height: inherit;
 }
-a {
-  color: #337ab7;
-  text-decoration: none;
-}
-a:focus,
-a:hover {
-  color: #23527c;
-  text-decoration: underline;
-}
-a:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-figure {
-  margin: 0;
-}
+
+
 
 
 

@@ -60,12 +60,22 @@ body {
   outline: none;
 }
 
+// Resets
+article,
 aside,
+details,
+figure,
 footer,
 header,
+main,
 nav,
-section {
+section,
+summary {
   display: block;
+}
+
+figure {
+  margin: 0;
 }
 
 html,
@@ -74,6 +84,21 @@ input,
 select {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
+}
+
+// Links
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:focus,
+a:hover {
+  color: #23527c;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
 
@@ -99,6 +124,49 @@ a:focus:not(.btn) {
   color: #0079bc;
 }
 
+a:link,
+a:visited,
+a:link:visited,
+a:active,
+a:link:active {
+  color: #f89820;
+  font-family: "Helvetica Neue";
+  border-bottom: none;
+}
+
+a:hover,
+a:visited:hover,
+a:link:hover,
+a:link:visited:hover,
+a:active:hover,
+a:link:active:hover {
+  border-bottom: 1px solid #f89820;
+  color: #f89820;
+  text-decoration: none;
+}
+
+body a:focus {
+  border-bottom: 0 none;
+}
+
+hr {
+  height: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+
+
 b,
 strong {
   font-weight: 700;
@@ -113,11 +181,7 @@ ul {
   margin: 1em 0;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+
 
 img {
   border: 0;
@@ -246,6 +310,47 @@ svg:not(:root) {
 }
 
 @media print {
+  *,
+  :after,
+  :before {
+    color: #000 !important;
+    text-shadow: none !important;
+    background: 0 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  a[href^="#"]:after {
+    content: "";
+  }
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  h2,
+  h3,
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .navbar {
+    display: none;
+  }
+}
+
+@media print {
   .nav-skip,
   .wrapper-footer {
     display: none;
@@ -257,6 +362,8 @@ svg:not(:root) {
     content: none !important;
   }
 }
+
+
 
 
 a:not(.btn):disabled,
@@ -293,6 +400,11 @@ a:visited:not(.btn):disabled {
 
 
 // Navigation
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .aquent-icon,
 .vitamin-t-icon {
@@ -711,11 +823,11 @@ section {
 
 p {
   color: inherit;
-  margin: 0;
+  margin: 0 0 10px;
 }
 
 p {
-  margin: 0 0 10px;
+  font-family: "Helvetica Neue";
 }
 
 span {
@@ -734,7 +846,6 @@ h2 {
 h4 {
   font-size: 18px;
 }
-
 
 // Lists
 ul {
@@ -1037,6 +1148,16 @@ optgroup {
 
 
 // Visibility/Accessibility
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
 .sr-only {
   position: absolute;
   width: 1px;

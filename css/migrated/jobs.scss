@@ -1,88 +1,6 @@
 /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-style-vendor.68e48093f5dd.css */
 
 /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-main-v1.3b45b3e424a4.css */
-article,
-aside,
-figure,
-footer,
-header,
-nav,
-section {
-  display: block;
-}
-
-
-
-
-b {
-  font-weight: bold;
-}
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-
-
-
-
-figure {
-  margin: 0;
-}
-
-
-
-
-
-
-
-article,
-aside,
-figure,
-footer,
-header,
-nav,
-section {
-  display: block;
-}
-
-
-
-
-b {
-  font-weight: bold;
-}
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-
-
-
-
-figure {
-  margin: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 h1,
 h2,
@@ -154,10 +72,6 @@ a:visited:not(.btn):disabled {
   line-height: 20.72px;
 }
 
-
-
-
-
 .msg {
   margin: 10px 0 10px 26px;
 }
@@ -197,9 +111,7 @@ a:visited:not(.btn):disabled {
 .wrapper-msg.urgency-high .msg {
   color: #fff;
 }
-p {
-  font: "Helvetica Neue";
-}
+
 html .container > div {
   border-radius: 0;
   border: 0;
@@ -226,9 +138,7 @@ div#content.content-wrapper {
   margin: auto;
   padding: 0;
 }
-p {
-  font-size: 1.2em/1.6em;
-}
+
 body a:link,
 body a:visited,
 body a:link:visited,
@@ -282,12 +192,6 @@ body div.window-wrap {
   box-shadow: none;
   max-width: 1180px;
 }
-
-
-
-
-
-
 
 .black-background {
   top: 0px;
@@ -402,105 +306,23 @@ main p > a:not([class]):active {
 }
 /*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
 
-
-article,
-aside,
-figure,
-footer,
-header,
-main,
-nav,
-section {
-  display: block;
-}
-
-
-b {
-  font-weight: 700;
-}
 h1 {
   margin: 0.67em 0;
   font-size: 2em;
 }
 
-
-
 figure {
   margin: 1em 40px;
 }
-hr {
-  height: 0;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
 
 
 
 
 
 
-@media print {
-  *,
-  :after,
-  :before {
-    color: #000 !important;
-    text-shadow: none !important;
-    background: 0 0 !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  a[href^="#"]:after {
-    content: "";
-  }
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
-  h2,
-  h3,
-  p {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-  .navbar {
-    display: none;
-  }
-}
 
 
 
-
-
-a {
-  color: #337ab7;
-  text-decoration: none;
-}
-a:focus,
-a:hover {
-  color: #23527c;
-  text-decoration: underline;
-}
-a:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-figure {
-  margin: 0;
-}
 
 hr {
   margin-top: 20px;
@@ -534,8 +356,6 @@ h4 {
 h3 {
   font-size: 24px;
 }
-
-
 
 ul {
   margin-top: 0;
@@ -591,112 +411,6 @@ ul ul {
   }
 }
 
-
-
-
-
-
 /*! CSS Used from: Embedded */
 
 /*! CSS Used fontfaces */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

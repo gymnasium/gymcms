@@ -1,28 +1,6 @@
 /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-style-vendor.68e48093f5dd.css */
 
 /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-main-v1.3b45b3e424a4.css */
-article,
-aside,
-details,
-footer,
-header,
-nav,
-section {
-  display: block;
-}
-
-html,
-button {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
-}
-
-
-
-
-
-
-
 
 button {
   font-size: 100%;
@@ -39,33 +17,6 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-
-
-
-
-article,
-aside,
-details,
-footer,
-header,
-nav,
-section {
-  display: block;
-}
-
-html,
-button {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
-}
-
-
-
-
-
-
-
-
 button {
   font-size: 100%;
   margin: 0;
@@ -80,15 +31,6 @@ button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-
-
-
-
-
-
-
-
-
 
 h1,
 h2,
@@ -159,9 +101,6 @@ a:visited:not(.btn):disabled {
   line-height: 20.72px;
 }
 
-
-
-
 .msg {
   margin: 10px 0 10px 26px;
 }
@@ -201,9 +140,7 @@ a:visited:not(.btn):disabled {
 .wrapper-msg.urgency-high .msg {
   color: #fff;
 }
-p {
-  font: "Helvetica Neue";
-}
+
 html .container > div {
   border-radius: 0;
   border: 0;
@@ -235,9 +172,7 @@ main li:not([class]) > a:not([class]):active {
   border-bottom-width: 2px !important;
   margin-bottom: -0.125rem;
 }
-p {
-  font-size: 1.2em/1.6em;
-}
+
 body a:link,
 body a:visited,
 body a:link:visited,
@@ -410,26 +345,11 @@ main li:not([class]) > a:not([class]):active {
 /*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
 
 
-article,
-aside,
-details,
-footer,
-header,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-
-
 
 h1 {
   margin: 0.67em 0;
   font-size: 2em;
 }
-
-
 
 button {
   margin: 0;
@@ -441,71 +361,11 @@ button {
   text-transform: none;
 }
 
-
-@media print {
-  *,
-  :after,
-  :before {
-    color: #000 !important;
-    text-shadow: none !important;
-    background: 0 0 !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  a[href^="#"]:after {
-    content: "";
-  }
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
-  h2,
-  h3,
-  p {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-  .navbar {
-    display: none;
-  }
-}
-
-
-
-
 button {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
-a {
-  color: #337ab7;
-  text-decoration: none;
-}
-a:focus,
-a:hover {
-  color: #23527c;
-  text-decoration: underline;
-}
-a:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-
 
 h1,
 h2,
@@ -588,110 +448,6 @@ ul ul {
 }
 
 
-
-
-
 /*! CSS Used from: Embedded */
 
 /*! CSS Used fontfaces */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -132,22 +132,13 @@ html {
 }
 
 article,
-aside,
-footer,
-header,
-main,
-nav,
-section {
-  display: block;
-}
+
 [hidden] {
   display: none;
 }
 
 
-b {
-  font-weight: bold;
-}
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -737,9 +728,7 @@ body {
   background-color: transparent !important;
   box-shadow: none !important;
 }
-p {
-  font: "Helvetica Neue";
-}
+
 html .container > div {
   border-radius: 0;
   border: 0;
@@ -870,9 +859,7 @@ div#content.content-wrapper {
   color: currentColor !important;
   border-bottom: 2px solid currentColor !important;
 }
-p {
-  font-size: 1.2em/1.6em;
-}
+
 body a:link,
 body a:visited,
 body a:link:visited,
@@ -1096,22 +1083,13 @@ html {
 }
 
 article,
-aside,
-footer,
-header,
-main,
-nav,
-section {
-  display: block;
-}
+
 [hidden] {
   display: none;
 }
 
 
-b {
-  font-weight: bold;
-}
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -2309,9 +2287,7 @@ section.discussion::after {
 .forum-nav-sort-control {
   font: inherit;
 }
-p {
-  font: "Helvetica Neue";
-}
+
 html .container > div {
   border-radius: 0;
   border: 0;
@@ -2442,9 +2418,7 @@ div#content.content-wrapper {
   color: currentColor !important;
   border-bottom: 2px solid currentColor !important;
 }
-p {
-  font-size: 1.2em/1.6em;
-}
+
 body a:link,
 body a:visited,
 body a:link:visited,
@@ -2677,22 +2651,13 @@ h2 {
 
 
 article,
-aside,
-footer,
-header,
-main,
-nav,
-section {
-  display: block;
-}
+
 [hidden] {
   display: none;
 }
 
 
-b {
-  font-weight: 700;
-}
+
 h1 {
   margin: 0.67em 0;
   font-size: 2em;
@@ -2806,19 +2771,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
-a {
-  color: #337ab7;
-  text-decoration: none;
-}
-a:focus,
-a:hover {
-  color: #23527c;
-  text-decoration: underline;
-}
-a:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
+
 
 
 
