@@ -106,7 +106,6 @@ a:focus {
   outline-offset: -2px;
 }
 
-
 a {
   background-color: transparent;
 }
@@ -170,8 +169,6 @@ hr {
   padding: 0;
 }
 
-
-
 b,
 strong {
   font-weight: 700;
@@ -185,8 +182,6 @@ ul {
   padding: 0 0 0 40px;
   margin: 1em 0;
 }
-
-
 
 img {
   border: 0;
@@ -204,9 +199,6 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-
-
-
 @media print {
   * {
     background: transparent;
@@ -324,32 +316,36 @@ svg:not(:root) {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }
+
   a,
   a:visited {
     text-decoration: underline;
   }
+
   a[href]:after {
     content: " (" attr(href) ")";
   }
   a[href^="#"]:after {
     content: "";
   }
+
   img {
     page-break-inside: avoid;
-  }
-  img {
     max-width: 100% !important;
   }
+
   h2,
   h3,
   p {
     orphans: 3;
     widows: 3;
   }
+
   h2,
   h3 {
     page-break-after: avoid;
   }
+
   .navbar {
     display: none;
   }
@@ -367,9 +363,6 @@ svg:not(:root) {
     content: none !important;
   }
 }
-
-
-
 
 a:not(.btn):disabled,
 a:visited:not(.btn):disabled {
@@ -398,11 +391,6 @@ a:visited:not(.btn):disabled {
   background: #fff;
   color: #000;
 }
-
-
-
-
-
 
 // Navigation
 nav ul {
@@ -653,7 +641,6 @@ nav ol {
   }
 }
 
-
 .navbar-collapse {
   padding-right: 15px;
   padding-left: 15px;
@@ -830,8 +817,6 @@ section {
   padding: 0px;
 }
 
-
-
 // Typography
 
 p {
@@ -859,7 +844,6 @@ h2 {
 h4 {
   font-size: 18px;
 }
-
 
 pre,
 code {
@@ -988,7 +972,6 @@ dd {
   background-color: #ebebeb;
 }
 
-
 // Form Components
 form {
   margin: 0;
@@ -1035,8 +1018,6 @@ input::-moz-focus-inner {
 button:-moz-focusring {
   outline: 1px dotted black;
 }
-
-
 
 button {
   border-radius: 3px;
@@ -1333,7 +1314,6 @@ body a:link:visited.gym-button:hover {
   vertical-align: bottom;
 }
 
-
 // Visibility/Accessibility
 .visuallyhidden {
   border: 0;
@@ -1401,23 +1381,25 @@ body a:link:visited.gym-button:hover {
   background: #fff;
   border-bottom: 1px solid #fcfcfc;
   padding: 15px 0;
+
+  &:focus,
+  &:active {
+    left: 45%;
+    margin-left: -30px;
+    position: absolute;
+    top: 5px;
+    width: 10%;
+    height: auto;
+    background-color: black;
+    margin: 0;
+    opacity: 0.8;
+    color: white !important;
+    text-decoration: none !important;
+    outline: none;
+    text-align: center;
+  }
 }
-.nav-skip:focus,
-.nav-skip:active {
-  left: 45%;
-  margin-left: -30px;
-  position: absolute;
-  top: 5px;
-  width: 10%;
-  height: auto;
-  background-color: black;
-  margin: 0;
-  opacity: 0.8;
-  color: white !important;
-  text-decoration: none !important;
-  outline: none;
-  text-align: center;
-}
+
 @media (max-width: 991px) {
   .nav-skip:focus,
   .nav-skip:active {
@@ -1425,7 +1407,6 @@ body a:link:visited.gym-button:hover {
     width: 20%;
   }
 }
-
 
 // Alignment classes
 .center-block {
@@ -1505,14 +1486,8 @@ body a:link:visited.gym-button:hover {
 }
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  z-index: 100;
-}
-.modal {
   position: fixed;
   top: 0;
   right: 0;
@@ -1582,110 +1557,121 @@ button.close-modal {
   border: 1.2em solid #444;
   border-radius: 0.125em;
   margin: auto;
+
+  legend {
+    width: 100%;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 1.2em;
+
+    b {
+      font: 900 1.6em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+      color: #222;
+      letter-spacing: 0.06em;
+      word-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+  }
+
+  .error {
+    background: #f2dede;
+    padding: 1em;
+    border: 1px solid #d9534f;
+    border-radius: 0.12em;
+    margin-bottom: 1.2em;
+    font-size: 1em;
+    color: #d9534f;
+    font-weight: bold;
+  }
+
+  p {
+    font: 0.9em/1.4 "Helvetica Neue", Helvetica, sans-serif;
+    color: #444;
+    letter-spacing: 0.01em;
+  }
+
+  fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li,
+  ul li,
+  ul li:last-child {
+    border-bottom: 0.15em solid #f89820;
+    margin-bottom: 1.2em;
+    box-sizing: border-box;
+  }
+  form label,
+  form input {
+    display: block;
+  }
+  form label {
+    font: 1.1em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+    color: #222;
+    letter-spacing: 0.03em;
+    word-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  form input {
+    background: none;
+    border: none;
+    box-shadow: none;
+    font: 1em/1 "Helvetica Neue", Helvetica, sans-serif;
+    width: 100%;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    border: 0;
+    margin-top: 0.3em;
+    box-sizing: border-box;
+  }
+
+  .message {
+    padding-right: 1.2em;
+    padding-bottom: 1.2em;
+    padding-left: 1.2em;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 1.2em;
+  }
+  ul + .message {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  form button {
+    margin-top: 1.2em;
+  }
 }
-.dialog legend {
-  width: 100%;
-  text-align: center;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #ebebeb;
-  margin-bottom: 1.2em;
-}
-.dialog legend b {
-  font: 900 1.6em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
-  color: #222;
-  letter-spacing: 0.06em;
-  word-spacing: 0.05em;
-  text-transform: uppercase;
-}
-.dialog .error {
-  background: #f2dede;
-  padding: 1em;
-  border: 1px solid #d9534f;
-  border-radius: 0.12em;
-  margin-bottom: 1.2em;
-  font-size: 1em;
-  color: #d9534f;
-  font-weight: bold;
-}
-.dialog p {
-  font: 0.9em/1.4 "Helvetica Neue", Helvetica, sans-serif;
-  color: #444;
-  letter-spacing: 0.01em;
-}
-.dialog fieldset {
-  padding: 0;
-  border: 0;
-  margin: 0;
-}
-.dialog ul {
-  list-style: none;
-  padding-left: 0;
-}
-.dialog li,
-.dialog ul li,
-.dialog ul li:last-child {
-  border-bottom: 0.15em solid #f89820;
-  margin-bottom: 1.2em;
-  box-sizing: border-box;
-}
-.dialog form label,
-.dialog form input {
-  display: block;
-}
-.dialog form label {
-  font: 1.1em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
-  color: #222;
-  letter-spacing: 0.03em;
-  word-spacing: 0.05em;
-  text-transform: uppercase;
-}
-.dialog form input {
-  background: none;
-  border: none;
-  box-shadow: none;
-  font: 1em/1 "Helvetica Neue", Helvetica, sans-serif;
-  width: 100%;
-  padding-top: 0.6em;
-  padding-bottom: 0.6em;
-  border: 0;
-  margin-top: 0.3em;
-  box-sizing: border-box;
-}
-.dialog .message {
-  padding-right: 1.2em;
-  padding-bottom: 1.2em;
-  padding-left: 1.2em;
-  border-bottom: 1px solid #ebebeb;
-  margin-bottom: 1.2em;
-}
-.dialog ul + .message {
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-.dialog form button {
-  margin-top: 1.2em;
-}
-.close-modal-content {
-  width: auto;
-  padding: 0.3em 1em;
-  border: 0;
-  border-radius: 0 0 0.125em 0.125em;
-  margin-top: -1.2em;
-}
-.close-modal b {
-  font: bold 0.8em/1.3 "Helvetica Neue", Helvetica, sans-serif;
-  letter-spacing: 0.1em;
-  word-spacing: normal;
-  text-transform: uppercase;
-  padding: 0.7em 1.5em;
-  border-radius: 0 0 0.27em 0.27em;
-}
+
 .close-modal {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: -1.2em;
+
+  b {
+    font: bold 0.8em/1.3 "Helvetica Neue", Helvetica, sans-serif;
+    letter-spacing: 0.1em;
+    word-spacing: normal;
+    text-transform: uppercase;
+    padding: 0.7em 1.5em;
+    border-radius: 0 0 0.27em 0.27em;
+  }
+
+  &-content {
+    width: auto;
+    padding: 0.3em 1em;
+    border: 0;
+    border-radius: 0 0 0.125em 0.125em;
+    margin-top: -1.2em;
+  }
 }
 
 // Footer
@@ -1693,50 +1679,53 @@ button.close-modal {
   box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.1);
   border-top: 1px solid #c5c6c7;
   padding: 25px 10px 30px 10px;
-  background: #fff;
   clear: both;
-}
 
-.wrapper-footer footer .copyright {
-  text-align: center;
-  margin-top: 1em;
-}
-.wrapper-footer footer .copyright a {
-  color: #f89820 !important;
-}
-
-div.wrapper-footer {
   margin-top: 0;
   background-color: #222;
   border-top: 10px solid rgba(248, 151, 32, 0.9);
   color: white;
   min-height: 170px;
-}
-div.wrapper-footer footer .gymnasium-logo {
-  height: 50px;
-  margin-top: 15px;
-  margin-left: 5px;
-}
-div.wrapper-footer footer .footer-link-list {
-  margin-top: 30px;
-}
-div.wrapper-footer footer .footer-link-list li {
-  border-right: 1px solid #444;
-  height: 100%;
-  padding-right: 8px;
-}
-div.wrapper-footer footer .footer-link-list li a,
-div.wrapper-footer footer .footer-link-list li a:link {
-  color: white;
-  font-family: "brandon-grotesque";
-}
-div.wrapper-footer footer .footer-link-list li a:hover {
-  color: #f89820;
-}
-div.wrapper-footer footer .footer-link-list li:last-child {
-  border-right: 0px;
-}
-div.wrapper-footer footer a:hover {
-  text-decoration: none;
-  border: 0px;
+
+  footer {
+    .copyright {
+      text-align: center;
+      margin-top: 1em;
+      a {
+        color: #f89820 !important;
+      }
+    }
+
+    .gymnasium-logo {
+      height: 50px;
+      margin-top: 15px;
+      margin-left: 5px;
+    }
+    .footer-link-list {
+      margin-top: 30px;
+
+      li {
+        border-right: 1px solid #444;
+        height: 100%;
+        padding-right: 8px;
+
+        a,
+        a:link {
+          color: white;
+          font-family: "brandon-grotesque";
+        }
+
+        a:hover {
+          color: #f89820;
+          text-decoration: none;
+          border: 0;
+        }
+
+        &:last-child {
+          border-right: 0px;
+        }
+      }
+    }
+
+  }
 }
