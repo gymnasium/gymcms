@@ -32,28 +32,6 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-h1,
-h2,
-h3 {
-  color: #313131;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin: 0;
-}
-h1 {
-  color: #313131;
-  font: normal 2em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  margin-bottom: 30px;
-  text-align: center;
-}
-h2 {
-  color: #646464;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin-bottom: 15px;
-  -webkit-font-smoothing: antialiased;
-}
-
-
 p a:not(.btn),
 p a:visited:not(.btn) {
   color: #0075b4;
@@ -88,8 +66,6 @@ a:visited:not(.btn):disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-
-
 
 .wrapper-msg .msg-content .copy,
 .wrapper-msg .msg-content .copy p {
@@ -209,16 +185,6 @@ body div.window-wrap {
   display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
 html body h1,
 html body h2,
 html body h3 {
@@ -250,13 +216,6 @@ main li:not([class]) > a:not([class]):active {
   margin-bottom: -0.125rem;
 }
 /*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
-
-
-
-h1 {
-  margin: 0.67em 0;
-  font-size: 2em;
-}
 
 button {
   margin: 0;
@@ -302,58 +261,6 @@ ul {
 ul ul {
   margin-bottom: 0;
 }
-
-.col-md-2,
-.col-md-3,
-.col-md-4,
-.col-md-8,
-.col-sm-10,
-.col-xs-12,
-.col-xs-6 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.col-xs-12,
-.col-xs-6 {
-  float: left;
-}
-.col-xs-12 {
-  width: 100%;
-}
-.col-xs-6 {
-  width: 50%;
-}
-@media (min-width: 768px) {
-  .col-sm-10 {
-    float: left;
-  }
-  .col-sm-10 {
-    width: 83.33333333%;
-  }
-}
-@media (min-width: 992px) {
-  .col-md-2,
-  .col-md-3,
-  .col-md-4,
-  .col-md-8 {
-    float: left;
-  }
-  .col-md-8 {
-    width: 66.66666667%;
-  }
-  .col-md-4 {
-    width: 33.33333333%;
-  }
-  .col-md-3 {
-    width: 25%;
-  }
-  .col-md-2 {
-    width: 16.66666667%;
-  }
-}
-
 
 /*! CSS Used from: Embedded */
 

@@ -52,26 +52,8 @@
 }
 
 
-h1,
-h2,
-h3 {
-  color: #313131;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin: 0;
-}
-h1 {
-  color: #313131;
-  font: normal 2em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  margin-bottom: 30px;
-  text-align: center;
-}
-h2 {
-  color: #646464;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin-bottom: 15px;
-  -webkit-font-smoothing: antialiased;
-}
+
+
 
 
 p a:not(.btn),
@@ -858,26 +840,8 @@ main p > a:not([class]):active {
 /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-course.0f892cd7170b.css */
 
 
-h1,
-h2,
-h3 {
-  color: #313131;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin: 0;
-}
-h1 {
-  color: #313131;
-  font: normal 2em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  margin-bottom: 30px;
-  text-align: center;
-}
-h2 {
-  color: #646464;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin-bottom: 15px;
-  -webkit-font-smoothing: antialiased;
-}
+
+
 
 
 p a:not(.btn),
@@ -1027,20 +991,6 @@ button {
 
 /*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
 
-h1 {
-  margin: 0.67em 0;
-  font-size: 2em;
-}
-
-button,
-input,
-select {
-  margin: 0;
-  font: inherit;
-  color: inherit;
-}
-
-
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -1051,10 +1001,6 @@ input {
   line-height: normal;
 }
 
-
-
-
-
 button,
 input,
 select {
@@ -1062,9 +1008,6 @@ select {
   font-size: inherit;
   line-height: inherit;
 }
-
-
-
 
 h1,
 h2,
@@ -1081,11 +1024,9 @@ h3 {
   margin-bottom: 10px;
 }
 
-
 h3 {
   font-size: 24px;
 }
-
 
 ul {
   margin-top: 0;

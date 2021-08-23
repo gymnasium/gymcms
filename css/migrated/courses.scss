@@ -2,18 +2,6 @@
 
 /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-main-v1.3b45b3e424a4.css */
 
-
-
-
-
-
-
-
-
-
-
-
-
 button {
   font-size: 100%;
   margin: 0;
@@ -29,23 +17,6 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 button {
   font-size: 100%;
   margin: 0;
@@ -60,15 +31,6 @@ button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-
-
-
-
-
-
-
-
-
 
 h1,
 h2 {
@@ -76,19 +38,7 @@ h2 {
   font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
   margin: 0;
 }
-h1 {
-  color: #313131;
-  font: normal 2em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  margin-bottom: 30px;
-  text-align: center;
-}
-h2 {
-  color: #646464;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin-bottom: 15px;
-  -webkit-font-smoothing: antialiased;
-}
+
 
 
 p a:not(.btn),
@@ -137,9 +87,6 @@ a:visited:not(.btn):disabled {
   font-size: 14px;
   line-height: 20.72px;
 }
-
-
-
 
 .msg {
   margin: 10px 0 10px 26px;
@@ -469,27 +416,6 @@ html body h2 {
 /*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
 
 
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-main,
-nav,
-section {
-  display: block;
-}
-
-
-
-h1 {
-  margin: 0.67em 0;
-  font-size: 2em;
-}
-
-
-
 figure {
   margin: 1em 40px;
 }
@@ -503,22 +429,11 @@ button {
   text-transform: none;
 }
 
-
-
-
-
-
-
 button {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
-
-
-
-
-
 
 h1,
 h2 {
@@ -532,9 +447,6 @@ h2 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-
-
-
 
 ul {
   margin-top: 0;
@@ -558,172 +470,8 @@ dd {
   margin-left: 0;
 }
 
-.col-md-2,
-.col-md-3,
-.col-md-4,
-.col-md-6,
-.col-md-8,
-.col-md-9,
-.col-sm-10,
-.col-xs-12,
-.col-xs-6 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.col-xs-12,
-.col-xs-6 {
-  float: left;
-}
-.col-xs-12 {
-  width: 100%;
-}
-.col-xs-6 {
-  width: 50%;
-}
-@media (min-width: 768px) {
-  .col-sm-10 {
-    float: left;
-  }
-  .col-sm-10 {
-    width: 83.33333333%;
-  }
-}
-@media (min-width: 992px) {
-  .col-md-2,
-  .col-md-3,
-  .col-md-4,
-  .col-md-6,
-  .col-md-8,
-  .col-md-9 {
-    float: left;
-  }
-  .col-md-9 {
-    width: 75%;
-  }
-  .col-md-8 {
-    width: 66.66666667%;
-  }
-  .col-md-6 {
-    width: 50%;
-  }
-  .col-md-4 {
-    width: 33.33333333%;
-  }
-  .col-md-3 {
-    width: 25%;
-  }
-  .col-md-2 {
-    width: 16.66666667%;
-  }
-}
-
-
-
-
 
 /*! CSS Used from: Embedded */
 
 /*! CSS Used fontfaces */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

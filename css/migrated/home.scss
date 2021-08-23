@@ -314,10 +314,7 @@ html body h4 {
 
 /*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
 
-h1 {
-  margin: 0.67em 0;
-  font-size: 2em;
-}
+
 
 h1,
 h2,
@@ -335,73 +332,6 @@ h2 {
 h4 {
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-.col-md-12,
-.col-md-2,
-.col-md-3,
-.col-md-8,
-.col-sm-10,
-.col-sm-2,
-.col-sm-6,
-.col-xs-12,
-.col-xs-6 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.col-xs-12,
-.col-xs-6 {
-  float: left;
-}
-.col-xs-12 {
-  width: 100%;
-}
-.col-xs-6 {
-  width: 50%;
-}
-@media (min-width: 768px) {
-  .col-sm-10,
-  .col-sm-2,
-  .col-sm-6 {
-    float: left;
-  }
-  .col-sm-10 {
-    width: 83.33333333%;
-  }
-  .col-sm-6 {
-    width: 50%;
-  }
-  .col-sm-2 {
-    width: 16.66666667%;
-  }
-  .col-sm-offset-1 {
-    margin-left: 8.33333333%;
-  }
-}
-@media (min-width: 992px) {
-  .col-md-12,
-  .col-md-2,
-  .col-md-3,
-  .col-md-8 {
-    float: left;
-  }
-  .col-md-12 {
-    width: 100%;
-  }
-  .col-md-8 {
-    width: 66.66666667%;
-  }
-  .col-md-3 {
-    width: 25%;
-  }
-  .col-md-2 {
-    width: 16.66666667%;
-  }
-  .col-md-offset-2 {
-    margin-left: 16.66666667%;
-  }
 }
 
 /*! CSS Used from: Embedded */

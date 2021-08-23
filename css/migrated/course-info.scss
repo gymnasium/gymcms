@@ -1,84 +1,6 @@
 /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-style-vendor.68e48093f5dd.css */
 
 /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-main-v1.3b45b3e424a4.css */
-article,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-article,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-h1,
-h2,
-h3 {
-  color: #313131;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin: 0;
-}
-h1 {
-  color: #313131;
-  font: normal 2em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  margin-bottom: 30px;
-  text-align: center;
-}
-h2 {
-  color: #646464;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin-bottom: 15px;
-  -webkit-font-smoothing: antialiased;
-}
-
 
 p + p {
   margin-top: 20px;
@@ -471,15 +393,6 @@ body.view-in-course div.window-wrap {
   display: block;
 }
 
-
-
-
-
-
-
-
-
-
 html body div.info-wrapper section.updates h1,
 html body h1,
 html body h2,
@@ -535,35 +448,6 @@ div.info-wrapper section.updates div article {
   *zoom: 1;
 }
 
-
-
-
-
-
-
-
-h1,
-h2,
-h3 {
-  color: #313131;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin: 0;
-}
-h1 {
-  color: #313131;
-  font: normal 2em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  margin-bottom: 30px;
-  text-align: center;
-}
-h2 {
-  color: #646464;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin-bottom: 15px;
-  -webkit-font-smoothing: antialiased;
-}
-
-
 p + p {
   margin-top: 20px;
 }
@@ -601,8 +485,6 @@ a:visited:not(.btn):disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-
-
 
 .hd-2 {
   margin: 0;
@@ -1078,30 +960,6 @@ main p > a:not([class]):active {
 }
 /*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
 
-
-article,
-
-
-
-
-
-h1 {
-  margin: 0.67em 0;
-  font-size: 2em;
-}
-
-
-
-button,
-input,
-select {
-  margin: 0;
-  font: inherit;
-  color: inherit;
-}
-
-
-
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   padding: 0;
@@ -1111,10 +969,6 @@ input {
   line-height: normal;
 }
 
-
-
-
-
 button,
 input,
 select {
@@ -1122,9 +976,6 @@ select {
   font-size: inherit;
   line-height: inherit;
 }
-
-
-
 
 h1,
 h2,
@@ -1170,51 +1021,6 @@ dd {
   margin-left: 0;
 }
 
-.col-md-12,
-.col-md-2,
-.col-md-3,
-.col-sm-10,
-.col-xs-12,
-.col-xs-6 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.col-xs-12,
-.col-xs-6 {
-  float: left;
-}
-.col-xs-12 {
-  width: 100%;
-}
-.col-xs-6 {
-  width: 50%;
-}
-@media (min-width: 768px) {
-  .col-sm-10 {
-    float: left;
-  }
-  .col-sm-10 {
-    width: 83.33333333%;
-  }
-}
-@media (min-width: 992px) {
-  .col-md-12,
-  .col-md-2,
-  .col-md-3 {
-    float: left;
-  }
-  .col-md-12 {
-    width: 100%;
-  }
-  .col-md-3 {
-    width: 25%;
-  }
-  .col-md-2 {
-    width: 16.66666667%;
-  }
-}
 label {
   display: inline-block;
   max-width: 100%;
@@ -1222,212 +1028,6 @@ label {
   font-weight: 700;
 }
 
-
-
-
-
-
 /*! CSS Used from: Embedded */
 
 /*! CSS Used fontfaces */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,20 +1,25 @@
 /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-style-vendor.68e48093f5dd.css */
-.pull-right {
-  float: right;
-}
 
 /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-main-v1.3b45b3e424a4.css */
-article,
+button {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button {
+  line-height: normal;
+}
 
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
 
-
-
-
-
-
-
-
-
+.modal,
+.modal .inner-wrapper {
+  z-index: 10;
+}
 
 button {
   font-size: 100%;
@@ -31,74 +36,11 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-
-
 .modal,
 .modal .inner-wrapper {
   z-index: 10;
 }
 
-
-article,
-
-
-
-
-
-
-
-
-
-
-
-button {
-  font-size: 100%;
-  margin: 0;
-  vertical-align: baseline;
-  *vertical-align: middle;
-}
-button {
-  line-height: normal;
-}
-
-button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-
-
-.modal,
-.modal .inner-wrapper {
-  z-index: 10;
-}
-
-
-
-
-
-
-
-h1,
-h2,
-h3 {
-  color: #313131;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin: 0;
-}
-h1 {
-  color: #313131;
-  font: normal 2em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  margin-bottom: 30px;
-  text-align: center;
-}
-h2 {
-  color: #646464;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin-bottom: 15px;
-  -webkit-font-smoothing: antialiased;
-}
 
 
 
@@ -415,16 +357,6 @@ body div.window-wrap {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 html body h1,
 html body h2,
 html body h3 {
@@ -475,19 +407,6 @@ main li:not([class]) > a:not([class]):active {
 }
 /*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
 
-
-article,
-
-
-
-
-h1 {
-  margin: 0.67em 0;
-  font-size: 2em;
-}
-
-
-
 button {
   margin: 0;
   font: inherit;
@@ -498,21 +417,11 @@ button {
   text-transform: none;
 }
 
-
-
-
-
-
-
 button {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
-
-
-
-
 
 h1,
 h2,
@@ -529,12 +438,9 @@ h3 {
   margin-bottom: 10px;
 }
 
-
 h3 {
   font-size: 24px;
 }
-
-
 
 ul {
   margin-top: 0;
@@ -543,63 +449,6 @@ ul {
 ul ul {
   margin-bottom: 0;
 }
-
-.col-md-12,
-.col-md-2,
-.col-md-3,
-.col-md-5,
-.col-md-9,
-.col-sm-10,
-.col-xs-12,
-.col-xs-6 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.col-xs-12,
-.col-xs-6 {
-  float: left;
-}
-.col-xs-12 {
-  width: 100%;
-}
-.col-xs-6 {
-  width: 50%;
-}
-@media (min-width: 768px) {
-  .col-sm-10 {
-    float: left;
-  }
-  .col-sm-10 {
-    width: 83.33333333%;
-  }
-}
-@media (min-width: 992px) {
-  .col-md-12,
-  .col-md-2,
-  .col-md-3,
-  .col-md-5,
-  .col-md-9 {
-    float: left;
-  }
-  .col-md-12 {
-    width: 100%;
-  }
-  .col-md-9 {
-    width: 75%;
-  }
-  .col-md-5 {
-    width: 41.66666667%;
-  }
-  .col-md-3 {
-    width: 25%;
-  }
-  .col-md-2 {
-    width: 16.66666667%;
-  }
-}
-
 
 .nav {
   padding-left: 0;
@@ -758,114 +607,6 @@ ul ul {
   border-color: #e7e7e7;
 }
 
-
-
-.pull-right {
-  float: right !important;
-}
-
-
 /*! CSS Used from: Embedded */
 
 /*! CSS Used fontfaces */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

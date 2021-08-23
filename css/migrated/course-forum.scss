@@ -131,18 +131,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-article,
-
-
-
-
-
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-
-
 
 button,
 input,
@@ -152,9 +144,6 @@ textarea {
   font: inherit;
   margin: 0;
 }
-
-
-
 
 input {
   line-height: normal;
@@ -193,6 +182,7 @@ th {
 * {
   box-sizing: border-box;
 }
+
 iframe,
 img,
 svg {
@@ -2588,21 +2578,11 @@ article,
 
 
 
-h1 {
-  margin: 0.67em 0;
-  font-size: 2em;
-}
 
 
 
-button,
-input,
-select,
-textarea {
-  margin: 0;
-  font: inherit;
-  color: inherit;
-}
+
+
 
 
 
@@ -3077,310 +3057,3 @@ input[type="search"] {
 /*! CSS Used from: Embedded */
 
 /*! CSS Used fontfaces */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 300;
-  src: url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Light-webfont.39d27e13dce3.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Light-webfont.df04ed7fc7d8.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Light-webfont.557ad65e492b.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: italic;
-  font-weight: 300;
-  src: url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-LightItalic-webfont.e7cc7120e670.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-LightItalic-webfont.02d04d22784f.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-LightItalic-webfont.05e99ea9cf0b.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Regular-webfont.55835483c304.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Regular-webfont.87119b577169.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Regular-webfont.4c7e867ae422.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Italic-webfont.383eba0e55ed.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Italic-webfont.b9812e74f089.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Italic-webfont.2416d120632b.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 600;
-  src: url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Semibold-webfont.08952b029e4d.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Semibold-webfont.dbbfd9e667c7.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Semibold-webfont.f75c4b742376.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: italic;
-  font-weight: 600;
-  src: url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.3343e5436871.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.f386291c234e.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.e84740526b8c.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Bold-webfont.3326e4d74d39.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Bold-webfont.6dbaf63547f2.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-Bold-webfont.ad0eb070a07f.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-BoldItalic-webfont.5aaceea2d60d.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-BoldItalic-webfont.7dae097d5db8.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/edx-pattern-library/fonts/OpenSans/OpenSans-BoldItalic-webfont.f9103010ab55.ttf")
-      format("truetype");
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 300;
-  src: url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Light-webfont.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Light-webfont.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Light-webfont.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: italic;
-  font-weight: 300;
-  src: url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-LightItalic-webfont.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-LightItalic-webfont.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-LightItalic-webfont.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Regular-webfont.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Regular-webfont.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Regular-webfont.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Italic-webfont.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Italic-webfont.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Italic-webfont.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 600;
-  src: url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Semibold-webfont.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Semibold-webfont.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Semibold-webfont.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: italic;
-  font-weight: 600;
-  src: url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-SemiboldItalic-webfont.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Bold-webfont.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Bold-webfont.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-Bold-webfont.ttf")
-      format("truetype");
-}
-@font-face {
-  font-family: "Open Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-BoldItalic-webfont.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-BoldItalic-webfont.woff")
-      format("woff"),
-    url("https://thegymnasium.com/static/css/fonts/OpenSans/OpenSans-BoldItalic-webfont.ttf")
-      format("truetype");
-}
-
-@font-face {
-  font-family: brandon-grotesque;
-  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg-webfont.010bf4d26b70.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg-webfont.705897ac8ade.woff")
-      format("woff");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: brandon-grotesque;
-  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg_it-webfont.a048e1a2ba4a.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_reg_it-webfont.e3cd01108645.woff")
-      format("woff");
-  font-style: italic;
-  font-weight: normal;
-}
-@font-face {
-  font-family: brandon-grotesque;
-  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld-webfont.f2069d035aac.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld-webfont.a05d93e37f29.woff")
-      format("woff");
-  font-style: normal;
-  font-weight: bold;
-}
-@font-face {
-  font-family: brandon-grotesque;
-  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld_it-webfont.95fc67f8053e.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_bld_it-webfont.bae49154d300.woff")
-      format("woff");
-  font-style: italic;
-  font-weight: bold;
-}
-@font-face {
-  font-family: brandon-grotesque;
-  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk-webfont.8886240de273.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk-webfont.aeb559fb9125.woff")
-      format("woff");
-  font-style: normal;
-  font-weight: 900;
-}
-@font-face {
-  font-family: brandon-grotesque;
-  src: url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk_it-webfont.33e8d7de2916.woff2")
-      format("woff2"),
-    url("https://thegymnasium.com/static/gymnasium/fonts/brandon_blk_it-webfont.94096809d8e8.woff")
-      format("woff");
-  font-style: italic;
-  font-weight: 900;
-}

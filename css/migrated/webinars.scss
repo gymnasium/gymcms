@@ -3,8 +3,6 @@
 /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-main-v1.3b45b3e424a4.css */
 
 
-
-
 button {
   font-size: 100%;
   margin: 0;
@@ -19,8 +17,6 @@ button::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-
-
 
 button {
   font-size: 100%;
@@ -43,19 +39,7 @@ h2 {
   font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
   margin: 0;
 }
-h1 {
-  color: #313131;
-  font: normal 2em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  margin-bottom: 30px;
-  text-align: center;
-}
-h2 {
-  color: #646464;
-  font: normal 1.2em/1.2em Georgia, Cambria, "Times New Roman", Times, serif;
-  margin-bottom: 15px;
-  -webkit-font-smoothing: antialiased;
-}
+
 p + h2 {
   margin-top: 40px;
 }
@@ -226,11 +210,6 @@ html body h2 {
 
 /*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
 
-h1 {
-  margin: 0.67em 0;
-  font-size: 2em;
-}
-
 button {
   margin: 0;
   font: inherit;
@@ -266,47 +245,6 @@ ul {
 }
 ul ul {
   margin-bottom: 0;
-}
-
-.col-md-2,
-.col-md-3,
-.col-sm-10,
-.col-xs-12,
-.col-xs-6 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.col-xs-12,
-.col-xs-6 {
-  float: left;
-}
-.col-xs-12 {
-  width: 100%;
-}
-.col-xs-6 {
-  width: 50%;
-}
-@media (min-width: 768px) {
-  .col-sm-10 {
-    float: left;
-  }
-  .col-sm-10 {
-    width: 83.33333333%;
-  }
-}
-@media (min-width: 992px) {
-  .col-md-2,
-  .col-md-3 {
-    float: left;
-  }
-  .col-md-3 {
-    width: 25%;
-  }
-  .col-md-2 {
-    width: 16.66666667%;
-  }
 }
 
 /*! CSS Used from: Embedded */
