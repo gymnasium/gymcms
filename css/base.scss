@@ -19,7 +19,7 @@
 html {
   // font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  color: #222;
+  color: $gym-black;
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -90,7 +90,7 @@ button,
 input,
 select {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  color: $gym-black;
 }
 
 // Links
@@ -135,7 +135,7 @@ a:visited,
 a:link:visited,
 a:active,
 a:link:active {
-  color: #f89820;
+  color: $gym-orange;
   font-family: "Helvetica Neue";
   border-bottom: none;
 }
@@ -146,8 +146,8 @@ a:link:hover,
 a:link:visited:hover,
 a:active:hover,
 a:link:active:hover {
-  border-bottom: 1px solid #f89820;
-  color: #f89820;
+  border-bottom: 1px solid $gym-orange;
+  color: $gym-orange;
   text-decoration: none;
 }
 
@@ -705,7 +705,7 @@ nav ol {
     }
 
     .logged-in-username {
-      color: #f89820;
+      color: $gym-orange;
     }
   }
 
@@ -760,7 +760,7 @@ nav ol {
     padding: 0 0.2rem;
     vertical-align: middle;
     border-top: 0.25rem dashed transparent;
-    border-left: 0.25rem solid #f89820;
+    border-left: 0.25rem solid $gym-orange;
     border-bottom: 0.25rem dashed transparent;
     margin-left: -0.8rem;
   }
@@ -929,7 +929,7 @@ header.global {
   border: none;
   width: inherit;
   height: 120px;
-  background-color: #222;
+  background-color: $gym-black;
 }
 header.global .container {
   min-width: inherit;
@@ -943,17 +943,23 @@ section {
 }
 
 // Typography
-h1 {
-  font: 900 2.4rem/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
-  letter-spacing: 0.04rem;
-  word-spacing: 0.05rem;
+h1,h2,h3,h4,h5,h6 {
+  font-family: $gym-font-stack;
   text-transform: uppercase;
 }
+h1 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.04rem;
+  word-spacing: 0.05rem;
+}
 h2 {
-  font: 900 1rem/1.3 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.3;
   letter-spacing: 0.06rem;
   word-spacing: 0.04rem;
-  text-transform: uppercase;
 }
 
 
@@ -1718,24 +1724,10 @@ dd {
 
 // Content Wrappers
 .content-wrapper {
-  max-width: 1920px;
-  margin-top: 20px;
-  padding: 0 0 10px;
-}
-@media (min-width: 768px) {
-  .content-wrapper {
-    padding: 0 20px 10px;
-  }
-}
-@media print {
-  .content-wrapper {
-    padding-bottom: 0;
-  }
-}
-
-.content-wrapper#content {
-  padding-bottom: 1rem;
-  background-color: #ebebeb;
+  max-width: none;
+  margin: auto;
+  padding: 0;
+  background-color: $gym-light-page-background;
 }
 
 // Form Components
@@ -1814,8 +1806,7 @@ button {
   text-align: center;
   text-decoration: none;
   text-shadow: 0 -1px 1px #000042;
-  font: normal 1.2rem/1.6rem "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: normal 1.2rem/1.6rem $gym-font-stack;
   letter-spacing: 1px;
   padding: 4px 20px;
   vertical-align: top;
@@ -2036,7 +2027,7 @@ a.gym-button:link {
   cursor: pointer;
   border: 0;
   border-radius: 0.125rem;
-  background-color: #f89820;
+  background-color: $gym-orange;
   color: white;
   font-weight: bold;
   font-size: 1rem;
@@ -2611,12 +2602,12 @@ button.close-modal {
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid $gym-light-page-background;
     margin-bottom: 1.2rem;
 
     b {
       font: 900 1.6rem/1.2 $gym-font-stack;
-      color: #222;
+      color: $gym-black;
       letter-spacing: 0.06rem;
       word-spacing: 0.05rem;
       text-transform: uppercase;
@@ -2654,7 +2645,7 @@ button.close-modal {
   li,
   ul li,
   ul li:last-child {
-    border-bottom: 0.15rem solid #f89820;
+    border-bottom: 0.15rem solid $gym-orange;
     margin-bottom: 1.2rem;
     box-sizing: border-box;
   }
@@ -2664,7 +2655,7 @@ button.close-modal {
   }
   form label {
     font: 1.1rem/1.2 $gym-font-stack;
-    color: #222;
+    color: $gym-black;
     letter-spacing: 0.03rem;
     word-spacing: 0.05rem;
     text-transform: uppercase;
@@ -2686,7 +2677,7 @@ button.close-modal {
     padding-right: 1.2rem;
     padding-bottom: 1.2rem;
     padding-left: 1.2rem;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid $gym-light-page-background;
     margin-bottom: 1.2rem;
   }
   ul + .message {
@@ -2730,7 +2721,7 @@ button.close-modal {
   clear: both;
 
   margin-top: 0;
-  background-color: #222;
+  background-color: $gym-black;
   border-top: 10px solid rgba(248, 151, 32, 0.9);
   color: white;
   min-height: 170px;
@@ -2740,7 +2731,7 @@ button.close-modal {
       text-align: center;
       margin-top: 1rem;
       a {
-        color: #f89820 !important;
+        color: $gym-orange !important;
       }
     }
 
@@ -2764,7 +2755,7 @@ button.close-modal {
         }
 
         a:hover {
-          color: #f89820;
+          color: $gym-orange;
           text-decoration: none;
           border: 0;
         }
