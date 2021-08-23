@@ -438,11 +438,7 @@ body div.window-wrap {
 
 
 
-.black-background {
-  top: 0px;
-  background-color: black;
-  z-index: 0;
-}
+
 
 
 
@@ -460,18 +456,7 @@ html body h2 {
 html body h3 {
   font-weight: bold;
 }
-h1 {
-  font: 900 2.4em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
-  letter-spacing: 0.04em;
-  word-spacing: 0.05em;
-  text-transform: uppercase;
-}
-h2 {
-  font: 900 1em/1.3 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
-  letter-spacing: 0.06em;
-  word-spacing: 0.04em;
-  text-transform: uppercase;
-}
+
 main.course .hero-banner img {
   max-width: 100%;
 }
@@ -790,32 +775,7 @@ ul ul {
   border-color: #e7e7e7;
 }
 
-.container-fluid:after,
-.container-fluid:before,
-.container:after,
-.container:before,
-.nav:after,
-.nav:before,
-.navbar-collapse:after,
-.navbar-collapse:before,
-.navbar-header:after,
-.navbar-header:before,
-.navbar:after,
-.navbar:before,
-.row:after,
-.row:before {
-  display: table;
-  content: " ";
-}
-.container-fluid:after,
-.container:after,
-.nav:after,
-.navbar-collapse:after,
-.navbar-header:after,
-.navbar:after,
-.row:after {
-  clear: both;
-}
+
 
 .pull-right {
   float: right !important;

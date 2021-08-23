@@ -635,8 +635,22 @@ nav ol {
   }
 }
 
+.black-background {
+  top: 0px;
+  background-color: black;
+  z-index: 0;
+}
+
 #primary-nav {
   height: auto;
+
+  div {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    max-width: 1180px;
+  }
 
   .gym-nav-icon-container:hover {
     background-color: transparent;
@@ -756,6 +770,14 @@ nav ol {
   background-color: $gym-black;
   position: relative;
   z-index: 999;
+
+  div {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    max-width: 1180px;
+  }
 
   a {
     font-size: 1.2em;
@@ -921,6 +943,19 @@ section {
 }
 
 // Typography
+h1 {
+  font: 900 2.4em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 0.04em;
+  word-spacing: 0.05em;
+  text-transform: uppercase;
+}
+h2 {
+  font: 900 1em/1.3 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: 0.06em;
+  word-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 
 p {
   color: inherit;

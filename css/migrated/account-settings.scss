@@ -799,11 +799,7 @@ body div.window-wrap {
 
 
 
-.black-background {
-  top: 0px;
-  background-color: black;
-  z-index: 0;
-}
+
 .account-settings-sections
   .section
   .account-settings-section-body
@@ -860,18 +856,7 @@ html body h2 {
 html body h3 {
   font-weight: bold;
 }
-h1 {
-  font: 900 2.4em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
-  letter-spacing: 0.04em;
-  word-spacing: 0.05em;
-  text-transform: uppercase;
-}
-h2 {
-  font: 900 1em/1.3 brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
-  letter-spacing: 0.06em;
-  word-spacing: 0.04em;
-  text-transform: uppercase;
-}
+
 /*! CSS Used from: Embedded */
 main p > a:not([class]) {
   line-height: inherit;
@@ -1059,16 +1044,10 @@ button {
 
 /*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
 
-
-
-
-
 h1 {
   margin: 0.67em 0;
   font-size: 2em;
 }
-
-
 
 button,
 input,
@@ -1138,46 +1117,6 @@ ul ul {
   list-style: none;
 }
 
-.col-md-2,
-.col-md-3,
-.col-sm-10,
-.col-xs-12,
-.col-xs-6 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.col-xs-12,
-.col-xs-6 {
-  float: left;
-}
-.col-xs-12 {
-  width: 100%;
-}
-.col-xs-6 {
-  width: 50%;
-}
-@media (min-width: 768px) {
-  .col-sm-10 {
-    float: left;
-  }
-  .col-sm-10 {
-    width: 83.33333333%;
-  }
-}
-@media (min-width: 992px) {
-  .col-md-2,
-  .col-md-3 {
-    float: left;
-  }
-  .col-md-3 {
-    width: 25%;
-  }
-  .col-md-2 {
-    width: 16.66666667%;
-  }
-}
 label {
   display: inline-block;
   max-width: 100%;
@@ -1185,213 +1124,6 @@ label {
   font-weight: 700;
 }
 
-
-
-
-
-
 /*! CSS Used from: Embedded */
 
 /*! CSS Used fontfaces */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
