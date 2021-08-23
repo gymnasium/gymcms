@@ -25,7 +25,7 @@ html {
   -ms-text-size-adjust: 100%;
   height: 100%;
   max-height: 100%;
-  background: #fff;
+  background: $gym-white;
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -33,32 +33,23 @@ html {
 
 html,
 body {
-  // font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: 1rem;
   font-style: normal;
   line-height: 1rem;
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333;
-  background-color: #fff;
-}
-
-body {
-  background: #fff;
-}
-
-body {
+  color: $gym-black;
+  background: $gym-white;
   margin: 0;
-}
+  font-style: normal;
 
-body {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.4;
+  a:focus {
+    border-bottom: 0 none;
+  }
 }
 
 [tabindex="-1"] {
@@ -89,7 +80,7 @@ html,
 button,
 input,
 select {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   color: $gym-black;
 }
 
@@ -151,9 +142,6 @@ a:link:active:hover {
   text-decoration: none;
 }
 
-body a:focus {
-  border-bottom: 0 none;
-}
 
 hr {
   height: 0;
@@ -390,7 +378,7 @@ a:visited:not(.btn):disabled {
 
 .sr,
 .sr-only {
-  background: #fff;
+  background: $gym-white;
   color: #000;
 }
 
@@ -946,22 +934,20 @@ section {
 h1,h2,h3,h4,h5,h6 {
   font-family: $gym-font-stack;
   text-transform: uppercase;
+  font-weight: bold;
 }
 h1 {
   font-size: 2.4rem;
-  font-weight: 900;
   line-height: 1.2;
   letter-spacing: 0.04rem;
   word-spacing: 0.05rem;
 }
 h2 {
   font-size: 1rem;
-  font-weight: 900;
   line-height: 1.3;
   letter-spacing: 0.06rem;
   word-spacing: 0.04rem;
 }
-
 
 p {
   color: inherit;
@@ -969,7 +955,7 @@ p {
 }
 
 p {
-  font-family: "Helvetica Neue";
+  font-family: $gym-text-font-stack;
 }
 
 span {
@@ -1783,7 +1769,7 @@ button {
   border-bottom: 1px solid #00003a;
   border-radius: 5px;
   box-shadow: inset 0 1px 0 0 #2592c0;
-  color: #fff;
+  color: $gym-white;
   display: inline-block;
   font-size: inherit;
   font-weight: bold;
@@ -1815,9 +1801,6 @@ button {
 
 button {
   overflow: visible;
-}
-
-button {
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -1829,11 +1812,6 @@ button {
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
-}
-
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 
 button:disabled {
@@ -1890,7 +1868,7 @@ optgroup {
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
-  background-color: #fff;
+  background-color: $gym-white;
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -2041,15 +2019,15 @@ a.gym-button:link b {
   letter-spacing: 0.025rem;
   color: white;
 }
-body .gym-button:hover,
-body .gym-button:active,
-body .gym-button:active:hover,
-body a.gym-button:hover,
-body a.gym-button:active,
-body a.gym-button:active:hover,
-body a:visited.gym-button:hover,
-body a:link.gym-button:hover,
-body a:link:visited.gym-button:hover {
+.gym-button:hover,
+.gym-button:active,
+.gym-button:active:hover,
+a.gym-button:hover,
+a.gym-button:active,
+a.gym-button:active:hover,
+a:visited.gym-button:hover,
+a:link.gym-button:hover,
+a:link:visited.gym-button:hover {
   background-color: #a6a6a6;
   color: white;
   background-image: none;
@@ -2423,7 +2401,7 @@ body a:link:visited.gym-button:hover {
   left: 0;
   top: -600px;
   overflow: hidden;
-  background: #fff;
+  background: $gym-white;
   border-bottom: 1px solid #fcfcfc;
   padding: 15px 0;
 
@@ -2471,7 +2449,7 @@ body a:link:visited.gym-button:hover {
   color: #313131;
 }
 .modal .inner-wrapper {
-  background: #fff;
+  background: $gym-white;
   border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.9);
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
@@ -2514,7 +2492,7 @@ body a:link:visited.gym-button:hover {
   color: #313131;
 }
 .modal .inner-wrapper form input[type="text"] {
-  background: #fff;
+  background: $gym-white;
   display: block;
   height: 45px;
   margin-bottom: 20px;
@@ -2591,7 +2569,7 @@ button.close-modal {
   position: relative;
   top: 10%;
   width: 37rem;
-  background: #fff;
+  background: $gym-white;
   padding: 1.2rem;
   border: 1.2rem solid #444;
   border-radius: 0.125rem;
