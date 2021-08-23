@@ -624,7 +624,7 @@ nav ol {
 }
 
 .black-background {
-  top: 0px;
+  top: 0;
   background-color: black;
   z-index: 0;
 }
@@ -923,7 +923,7 @@ nav ol {
 }
 
 header.global {
-  margin: 0px;
+  margin: 0;
   box-shadow: none;
   border: none;
   width: inherit;
@@ -938,7 +938,7 @@ header.global nav .container {
 }
 
 section {
-  padding: 0px;
+  padding: 0;
 }
 
 // Typography
@@ -2752,10 +2752,150 @@ button.close-modal {
         }
 
         &:last-child {
-          border-right: 0px;
+          border-right: 0;
         }
       }
     }
 
+  }
+}
+
+
+// Home page
+.home {
+  position: relative;
+
+  header {
+    border-bottom: #ebebeb;
+  }
+  .how-gymnasium-works p {
+    font-size: 1.3em;
+    line-height: 1.4em;
+  }
+  #as-seen-in h2 {
+    padding-bottom: 30px;
+  }
+
+  .container header {
+    display: block;
+  }
+
+  .container .header-tab {
+    text-align: center;
+  }
+
+  .container .header-tab h1:before {
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    content: " ";
+    line-height: 0;
+    padding-right: 1em;
+    padding-left: 1em;
+    border-right: 1.4em dashed transparent;
+    border-left: 1.4em dashed transparent;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: top;
+    position: relative;
+    z-index: 100;
+  }
+
+  .container .header-tab h1 {
+    display: inline-block;
+    font-size: 1.75em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    vertical-align: 1.2em;
+    margin-top: -1em;
+    text-align: center;
+  }
+
+  .container-fluid {
+    padding-bottom: 4em;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    h2 {
+      font-size: 24px;
+      text-transform: none;
+      font-weight: bold;
+    }
+  }
+  
+  .container-fluid:nth-of-type(odd) {
+    background-color: #ebebeb;
+
+    * {
+      color: #444;
+    }
+
+    header.header-tab h1:before {
+      border-bottom: 1.4em solid #ebebeb;
+    }
+
+    .gym-button,
+    .gym-button b {
+      color: #ebebeb;
+    }
+
+    p {
+      color: #999;
+    }
+    h1 {
+      color: #444;
+      background-color: transparent;
+
+      &:before,
+      &:after {
+        color: #ebebeb;
+      }
+    }
+  }
+
+  .container-fluid:nth-of-type(even) {
+    background-color: #444;
+
+    * {
+      color: #ebebeb;
+    }
+
+    header.header-tab h1:before {
+      border-bottom: 1.4em solid #444;
+    }
+    h1,
+    h1:before,
+    h1:after {
+      color: #ebebeb;
+      background-color: transparent;
+    }
+  }
+
+  .highlighted-courses {
+    padding-top: 3em;
+
+    .header-tab {
+      border-top: 2px solid #ccc;
+  
+      h1 {
+        position: relative;
+        top: -0.75em;
+        background: #ebebeb;
+        margin-bottom: -0.75em;
+      }
+    }
+  }
+
+  .courses {
+    padding-top: 0;
+
+    p {
+      color: $gym-orange;
+    }
   }
 }
