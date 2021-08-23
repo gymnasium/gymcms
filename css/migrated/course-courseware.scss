@@ -38,49 +38,6 @@
 
 /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-main-v1.3b45b3e424a4.css */
 
-[hidden] {
-  display: none;
-}
-
-
-
-
-
-
-pre,
-code {
-  font-family: monospace, serif;
-  _font-family: "courier new", monospace;
-  font-size: 1em;
-}
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-ul,
-ol {
-  padding: 0 0 0 40px;
-  margin: 1em 0;
-}
-nav ul,
-nav ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-
-
 
 button[disabled] {
   cursor: default;
@@ -141,180 +98,7 @@ td {
   }
 }
 
-.modal,
-.modal .inner-wrapper,
-.modal .inner-wrapper header {
-  z-index: 10;
-}
 
-
-.sr-is-focusable,
-.sr-is-focusable:focus,
-.sr-is-focusable:active {
-  outline: none;
-}
-.btn-link {
-  color: #0075b4;
-}
-.btn-link:hover,
-.btn-link:focus {
-  color: #0075b4;
-}
-.btn-link:hover,
-.btn-link:focus {
-  text-decoration: underline !important;
-}
-.btn-default:disabled {
-  pointer-events: none;
-  outline: none;
-  cursor: not-allowed;
-}
-.btn-small.btn-default {
-  padding: 0.625rem 0.625rem;
-  font-size: 14px;
-}
-.btn-default {
-  display: inline-block;
-  background-color: transparent;
-  background-image: none;
-  border-style: solid;
-  border-radius: 0.1875rem;
-  border-width: 1px;
-  box-shadow: none;
-  padding: 0.625rem 1.25rem;
-  font-size: 16px;
-  font-weight: normal;
-  text-shadow: none;
-  text-transform: capitalize;
-}
-.btn-default {
-  border-color: transparent;
-  background: transparent;
-  color: #0075b4;
-}
-.btn-default:hover,
-.btn-default:focus {
-  border-color: #0075b4;
-  background-color: transparent;
-  color: #0075b4;
-}
-.btn-default:active {
-  border-color: #0075b4;
-  color: #0075b4;
-}
-.btn-default:disabled {
-  border-color: #d2d0d0;
-  color: #6b6969;
-}
-
-[hidden] {
-  display: none;
-}
-
-
-
-
-
-
-pre,
-code {
-  font-family: monospace, serif;
-  _font-family: "courier new", monospace;
-  font-size: 1em;
-}
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-ul,
-ol {
-  padding: 0 0 0 40px;
-  margin: 1em 0;
-}
-nav ul,
-nav ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-
-button[disabled] {
-  cursor: default;
-}
-input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-  *width: 13px;
-  *height: 13px;
-}
-
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-td {
-  vertical-align: top;
-}
-
-@media print {
-  * {
-    background: transparent;
-    color: black !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important;
-  }
-  html,
-  body {
-    background: transparent !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  pre {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
-
-.modal,
-.modal .inner-wrapper,
-.modal .inner-wrapper header {
-  z-index: 10;
-}
 
 
 .sr-is-focusable,
@@ -379,6 +163,141 @@ td {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button[disabled] {
+  cursor: default;
+}
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *width: 13px;
+  *height: 13px;
+}
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td {
+  vertical-align: top;
+}
+
+@media print {
+  * {
+    background: transparent;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  html,
+  body {
+    background: transparent !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  pre {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+
+
+.sr-is-focusable,
+.sr-is-focusable:focus,
+.sr-is-focusable:active {
+  outline: none;
+}
+.btn-link {
+  color: #0075b4;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: #0075b4;
+}
+.btn-link:hover,
+.btn-link:focus {
+  text-decoration: underline !important;
+}
+.btn-default:disabled {
+  pointer-events: none;
+  outline: none;
+  cursor: not-allowed;
+}
+.btn-small.btn-default {
+  padding: 0.625rem 0.625rem;
+  font-size: 14px;
+}
+.btn-default {
+  display: inline-block;
+  background-color: transparent;
+  background-image: none;
+  border-style: solid;
+  border-radius: 0.1875rem;
+  border-width: 1px;
+  box-shadow: none;
+  padding: 0.625rem 1.25rem;
+  font-size: 16px;
+  font-weight: normal;
+  text-shadow: none;
+  text-transform: capitalize;
+}
+.btn-default {
+  border-color: transparent;
+  background: transparent;
+  color: #0075b4;
+}
+.btn-default:hover,
+.btn-default:focus {
+  border-color: #0075b4;
+  background-color: transparent;
+  color: #0075b4;
+}
+.btn-default:active {
+  border-color: #0075b4;
+  color: #0075b4;
+}
+.btn-default:disabled {
+  border-color: #d2d0d0;
+  color: #6b6969;
+}
 
 h1,
 h2,
@@ -533,70 +452,7 @@ button.disabled {
   width: 100%;
   z-index: 100;
 }
-.modal {
-  display: none;
-  position: absolute;
-  left: 50%;
-  padding: 8px;
-  width: 480px;
-  border-radius: 3px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
-  background: #313131;
-  color: #313131;
-}
-.modal .inner-wrapper {
-  background: #fff;
-  border-radius: 0;
-  border: 1px solid rgba(0, 0, 0, 0.9);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
-  overflow: hidden;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  position: relative;
-}
-.modal .inner-wrapper header {
-  margin-bottom: 30px;
-  overflow: hidden;
-  padding: 28px 20px 0;
-  position: relative;
-}
-.modal .inner-wrapper header::before {
-  content: "";
-  display: block;
-  height: 400px;
-  left: 0;
-  margin: 0 auto;
-  position: absolute;
-  top: -140px;
-  width: 100%;
-  z-index: 1;
-}
-.modal .inner-wrapper header h2 {
-  position: relative;
-  text-align: center;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.4);
-  z-index: 2;
-}
-.modal .inner-wrapper form {
-  margin-bottom: 12px;
-  padding: 0 40px 20px;
-  position: relative;
-  z-index: 2;
-}
-.modal .inner-wrapper form label {
-  color: #313131;
-}
-.modal .inner-wrapper form input[type="text"] {
-  background: #fff;
-  display: block;
-  height: 45px;
-  margin-bottom: 20px;
-  width: 100%;
-}
-.modal .inner-wrapper form .submit {
-  padding-top: 10px;
-}
+
 .msg {
   margin: 10px 0 10px 26px;
 }
@@ -610,11 +466,7 @@ button.disabled {
   display: none;
 }
 
-.modal,
-.modal .inner-wrapper,
-.modal .inner-wrapper header {
-  z-index: 10;
-}
+
 
 .wrapper-msg {
   display: block;
@@ -1328,14 +1180,7 @@ body .xmodule_display.xmodule_CapaModule div.problem .action .save:hover {
 .gym-button.natural {
   width: auto;
 }
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-}
+
 
 html body h1,
 html body h2,
@@ -1434,46 +1279,20 @@ main p > a:not([class]):active {
 }
 /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-course.0f892cd7170b.css */
 
-[hidden] {
-  display: none;
-}
 
 
 
 
 
 
-pre,
-code {
-  font-family: monospace, serif;
-  _font-family: "courier new", monospace;
-  font-size: 1em;
-}
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-ul,
-ol {
-  padding: 0 0 0 40px;
-  margin: 1em 0;
-}
-nav ul,
-nav ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
 
 
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
+
+
+
+
+
 
 
 
@@ -3103,9 +2922,7 @@ body.view-in-course .wrapper-footer {
 
 
 
-[hidden] {
-  display: none;
-}
+
 
 
 
@@ -3380,43 +3197,7 @@ input[type="radio"]:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-.btn {
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-.btn:active:focus,
-.btn:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-.btn:focus,
-.btn:hover {
-  color: #333;
-  text-decoration: none;
-}
-.btn:active {
-  background-image: none;
-  outline: 0;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
+
 .btn-default {
   color: #333;
   background-color: #fff;
@@ -3506,15 +3287,7 @@ input[type="radio"]:focus {
     float: left;
   }
 }
-.navbar-collapse {
-  padding-right: 15px;
-  padding-left: 15px;
-  overflow-x: visible;
-  -webkit-overflow-scrolling: touch;
-  border-top: 1px solid transparent;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
+
 @media (min-width: 768px) {
   .navbar-collapse {
     width: auto;
@@ -3635,18 +3408,7 @@ input[type="radio"]:focus {
 .navbar-default .navbar-collapse {
   border-color: #e7e7e7;
 }
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1050;
-  display: none;
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
-  outline: 0;
-}
+
 .tooltip {
   position: absolute;
   z-index: 1070;
@@ -3700,9 +3462,7 @@ input[type="radio"]:focus {
 .show {
   display: block !important;
 }
-.hidden {
-  display: none !important;
-}
+
 
 /*! CSS Used from: Embedded */
 #MathJax_Message {
@@ -3798,220 +3558,3 @@ a.gym-button.gym-button-secondary:focus {
 /*! CSS Used from: Embedded */
 
 /*! CSS Used fontfaces */
-@font-face {
-  font-family: "FontAwesome";
-  src: url("https://thegymnasium.com/static/fonts/vendor/fontawesome-webfont.25a32416abee.eot?v=4.6.3");
-  src: url("https://thegymnasium.com/static/fonts/vendor/fontawesome-webfont.25a32416abee.eot#iefix&v=4.6.3")
-      format("embedded-opentype"),
-    url("https://thegymnasium.com/static/fonts/vendor/fontawesome-webfont.e6cf7c6ec7c2.woff2?v=4.6.3")
-      format("woff2"),
-    url("https://thegymnasium.com/static/fonts/vendor/fontawesome-webfont.c8ddf1e5e5bf.woff?v=4.6.3")
-      format("woff"),
-    url("https://thegymnasium.com/static/fonts/vendor/fontawesome-webfont.1dc35d25e61d.ttf?v=4.6.3")
-      format("truetype"),
-    url("https://thegymnasium.com/static/fonts/vendor/fontawesome-webfont.d7c639084f68.svg?v=4.6.3#fontawesomeregular")
-      format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
