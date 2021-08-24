@@ -47,6 +47,8 @@ body {
   background: $gym-white;
   margin: 0;
   font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   a:focus {
     border-bottom: 0 none;
