@@ -794,8 +794,8 @@ nav ol {
   .navbar-brand {
     height: auto;
     padding: 0;
-    margin-top: 1.75rem;
-    margin-left: 15px;
+    margin-top: 1.125rem;
+    margin-left: 0.938rem;
   }
 
   .navbar-brand:hover,
@@ -943,6 +943,8 @@ h5,
 h6 {
   font-family: $gym-font-stack;
   font-weight: bold;
+  margin-top: 1.250rem;
+  margin-bottom: 0.625rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
