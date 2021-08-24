@@ -448,21 +448,21 @@ nav ol {
   margin-bottom: 0;
   list-style: none;
 
-  > li {
+  li {
     position: relative;
     display: block;
+  }
 
-    > a {
-      position: relative;
-      display: block;
-      padding: 10px 15px;
-      border: 0;
+  a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    border: 0;
 
-      &:focus,
-      &:hover {
-        text-decoration: none;
-        background-color: #eee;
-      }
+    &:focus,
+    &:hover {
+      text-decoration: none;
+      background-color: #eee;
     }
   }
 }
@@ -637,17 +637,6 @@ nav ol {
   z-index: 0;
 }
 
-.white-panel {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  padding: 2.2rem;
-  padding-top: 1rem;
-  font: 1.2rem/1.5 $gym-text-font-stack;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 #primary-nav {
   height: auto;
 
@@ -696,7 +685,7 @@ nav ol {
   }
 
   .nav li.dropdown.open {
-    background-color: white;
+    background-color: $gym-white;
     a {
       color: $gym-orange;
     }
@@ -746,7 +735,7 @@ nav ol {
       display: inline;
 
       a {
-        color: white;
+        color: $gym-white;
       }
 
       a:hover,
@@ -792,7 +781,7 @@ nav ol {
     font-family: $gym-font-stack;
 
     &.gym-button {
-      color: white;
+      color: $gym-white;
     }
   }
 
@@ -835,7 +824,7 @@ nav ol {
 
     &:hover,
     &:focus {
-      border: 1px solid white;
+      border: 1px solid $gym-white;
     }
   }
 }
@@ -990,7 +979,7 @@ p {
   &.hero-text {
     font: normal 1.6rem/1.4 $gym-font-stack;
     word-spacing: 0.032em;
-    margin: 0.67rem 0;
+    margin: 1.125rem 0;
   }
 }
 
@@ -1838,6 +1827,14 @@ dd {
   background-color: $gym-light-page-background;
 }
 
+.white-panel {
+  background-color: $gym-white;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 1.050rem 2.310rem 2.310rem;
+  margin: 1.250rem auto;
+}
+
 // Form Components
 form {
   margin: 0;
@@ -2110,7 +2107,7 @@ input[type="checkbox"]:focus {
 
 .gym-button:link,
 .gym-button:visited {
-  color: white;
+  color: $gym-white;
   font-family: $gym-font-stack;
 }
 .gym-button,
@@ -2128,38 +2125,34 @@ a.gym-button:link {
   border: 0;
   border-radius: 0.125rem;
   background-color: $gym-orange;
-  color: white;
+  color: $gym-white;
   font-weight: bold;
   font-size: 1rem;
   text-align: center;
   font: bold 1.2rem/1 $gym-font-stack;
+
+  b {
+    font: bold 1.2rem/1 $gym-font-stack;
+    letter-spacing: 0.025rem;
+    color: $gym-white;
+  }
 }
-.gym-button b,
-a.gym-button b,
-a.gym-button:link b {
-  font: bold 1.2rem/1 $gym-font-stack;
-  letter-spacing: 0.025rem;
-  color: white;
-}
+
+
 .gym-button:hover,
 .gym-button:active,
-.gym-button:active:hover,
-a.gym-button:hover,
-a.gym-button:active,
-a.gym-button:active:hover,
-a:visited.gym-button:hover,
-a:link.gym-button:hover,
-a:link:visited.gym-button:hover {
+.gym-button:active:hover {
   background-color: #a6a6a6;
-  color: white;
+  color: $gym-white;
   background-image: none;
   box-shadow: none;
   text-decoration: none;
   font-weight: bold;
   border: none;
-  color: white;
+  color: $gym-white;
   font-family: $gym-font-stack;
 }
+
 .gym-button:focus,
 .gym-button:active {
   text-decoration: none !important;
@@ -2831,7 +2824,7 @@ button.close-modal {
   margin-top: 0;
   background-color: $gym-black;
   border-top: 10px solid rgba(248, 151, 32, 0.9);
-  color: white;
+  color: $gym-white;
   min-height: 170px;
 
   footer {
@@ -2859,7 +2852,7 @@ button.close-modal {
 
         a,
         a:link {
-          color: white;
+          color: $gym-white;
           font-family: $gym-font-stack;
 
           &:hover {
