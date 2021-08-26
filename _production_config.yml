@@ -15,7 +15,7 @@ exclude:
   - 'README.md'
   - 'netlify.toml'
   - '.jekyll-cache'
-  - 'generators'  
+  - 'local'  
 
 include:
   - '_redirects'
