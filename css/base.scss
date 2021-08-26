@@ -448,21 +448,21 @@ nav ol {
   margin-bottom: 0;
   list-style: none;
 
-  li {
+  > li {
     position: relative;
     display: block;
-  }
 
-  a {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-    border: 0;
+    > a {
+      position: relative;
+      display: block;
+      padding: 10px 15px;
+      border: 0;
 
-    &:focus,
-    &:hover {
-      text-decoration: none;
-      background-color: #eee;
+      &:focus,
+      &:hover {
+        text-decoration: none;
+        background-color: #eee;
+      }
     }
   }
 }
