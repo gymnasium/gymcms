@@ -1,7 +1,7 @@
 ---
 title: "Asset Generators"
 layout: default
-permalink: generators
+permalink: local/generators
 ---
 
 # Asset Generators
