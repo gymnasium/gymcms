@@ -285,8 +285,7 @@ class Gymnasium {
 var gym = new Gymnasium();
 
 // Countdown timer on info page
-countDown('[data-countdown]', 10, '/login?next=' + encodeURIComponent(window.location.href));
-
+gym.countDown('[data-countdown]', 10, '/login?next=' + encodeURIComponent(window.location.href));
 
 // Do wicked stuff to course tabs
 gym.courseTabs();
