@@ -28,6 +28,27 @@ function hasClass(elem,cls) {
 class Gymnasium {
   constructor() {}
 
+  // countdown timer
+  countDown(selector, time, url) {
+    var elem = document.querySelector(selector);
+  
+    if (typeof elem !== 'undefined' && elem !== null) {
+      var counter = parseInt(time);
+
+      var redirectTimer = setInterval(function() {
+
+        if (counter <= 0){
+          clearInterval(redirectTimer);
+          window.location.href = url;
+        } else {
+          elem.innerHTML = counter;
+        }
+
+        counter -= 1;
+      }, 1000);
+    }
+  }
+
   courseTabs() {
     /* this is a nonsense hack to make courseware subnavigation look like
     what we want it to look like until we move to Cypress
@@ -263,6 +284,9 @@ class Gymnasium {
 // Initialize
 var gym = new Gymnasium();
 
+// Countdown timer on info page
+gym.countDown('[data-countdown]', 10, '/login?next=' + encodeURIComponent(window.location.href));
+
 // Do wicked stuff to course tabs
 gym.courseTabs();
 
@@ -274,6 +298,8 @@ gym.ieCheck();
 
 // Adds dynamic system status banner
 gym.systemStatus();
+
+
 
 document.addEventListener('DOMContentLoaded', (event) => {
 

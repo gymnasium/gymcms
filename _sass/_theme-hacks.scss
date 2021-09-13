@@ -533,6 +533,13 @@ About, Info, Quizzes, and Final Exam pages
   content: "👋" "\00a0";
 }
 
+/* Undo outline lesson/chapter title case */
+
+.course-overview .course-about h3,
+#course-outline h3 {
+  text-transform: none;
+}
+
 /* ---
 https://github.com/gymnasium/tracker/issues/40
 --- */
