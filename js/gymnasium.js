@@ -193,7 +193,7 @@ class Gymnasium {
       location: cityId,
       utm_campaign: "Registration",
       carrot_type: "Gymnasium Registration",
-      carrot_topic: "GYM REG",
+      carrot_topic: "GYM REG", // How Heard Other in CW
       PROC: "AWUISubmitExternalLead",
     };
 
