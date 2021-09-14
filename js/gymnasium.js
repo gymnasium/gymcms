@@ -192,8 +192,8 @@ class Gymnasium {
       email: emailAddress,
       location: cityId,
       utm_campaign: "Registration",
-      carrot_type: "Gymnasium Registration",
-      carrot_topic: "GYM REG",
+      carrot_type: "Gymnasium Registration", // Lead Source Type in CW
+      carrot_topic: "GYM REG", // How Heard Other in CW
       PROC: "AWUISubmitExternalLead",
     };
 
