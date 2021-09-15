@@ -488,14 +488,15 @@ document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'interactive') {
     console.log('interactive state');
 
+
+  } else if (event.target.readyState === 'complete') {
+    console.log('complete state');
+
     // show pretty score
     prettyScore();
 
     // process exam stuff
     exam();
-  }
-  else if (event.target.readyState === 'complete') {
-    console.log('complete state');
   }
 });
 
