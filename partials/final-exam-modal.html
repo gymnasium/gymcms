@@ -484,8 +484,8 @@ function prettyScore() {
 }
 
 // Native JS equivalent of jQuery's document.ready
-document.onreadystatechange = function () {
-  if (document.readyState === "interactive") {
+document.addEventListener('readystatechange', event => {
+  if (event.target.readyState === 'interactive') {
     console.log('interactive state');
 
     // show pretty score
@@ -494,6 +494,9 @@ document.onreadystatechange = function () {
     // process exam stuff
     exam();
   }
-};
+  else if (event.target.readyState === 'complete') {
+    console.log('complete state');
+  }
+});
 
 </script>
