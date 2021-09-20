@@ -476,11 +476,9 @@ function exam() {
 }
 
 function prettyScore() {
-  let score = getFraction()[1] + '/' + getFraction()[2];
-
   let examGrade = document.getElementById('exam-grade');
 
-  examGrade.innerText = score + ' points.';
+  examGrade.innerText = 'Your score: ' + getScoreFromFraction();
 }
 
 // Native JS equivalent of jQuery's document.ready
