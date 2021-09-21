@@ -1,0 +1,29 @@
+---
+layout: wrapper-full-white
+permalink: /404/
+---
+{%- if site.environment == 'local' -%}
+<link rel="stylesheet" href="{{ site.url }}/css/static-main-content.css?{{ site.time | date:'%s' }}">
+{%- endif -%}
+
+<!-- Temporary HTML for style hooks -->
+<div class="main-content-static">
+
+  <h1>404 - Page Not Found</h1>
+
+  <p class="hero-text">👋 You discovered a page that doesn’t exist.</p>
+
+  <p>Some might call you lost. Others might call you a creative genius. </p>
+
+  <p>Either way, we suggest that you check out our frequently visited pages below:</p>
+
+  <ul>
+    <li><a href="/">Homepage</a></li>
+    <li><a href="/courses#full">Full Courses</a></li>
+    <li><a href="/courses#gymshorts">Gym Shorts</a></li>
+    <li><a href="/courses#take5">Tutorials</a></li>
+  </ul>
+
+  <p>Need to get in touch? You can email us at <strong><a href="{{ 'mailto:help@thegymnasium.com?subject=Get+In+Touch' | encode_email }}">{{ 'help@thegymnasium.com' | encode_email }}</a></strong>.</p>
+
+</div><!-- .main-content-static -->
