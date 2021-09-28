@@ -342,13 +342,18 @@ summary {
 #design:target nav [href="#web-design"],
 #web-design:target nav [href="#web-design"],
 #html:target nav [href="#web-design"],
+#html:target nav [href="#web-development"],
+#html:target nav [href="#accessibility"],
 #css:target nav [href="#web-design"],
+#css:target nav [href="#web-development"],
+#css:target nav [href="#accessibility"],
 #figma:target nav [href="#web-design"],
 #sketch:target nav [href="#web-design"],
 #adobe-xd:target nav [href="#web-design"],
 #invision-studio:target nav [href="#web-design"],
 #virtual-reality:target nav [href="#web-design"],
 #web-development:target nav [href="#web-development"],
+#javascript:target nav [href="#web-design"],
 #javascript:target nav [href="#web-development"],
 #php:target nav [href="#web-development"],
 #github:target nav [href="#web-development"],
@@ -357,11 +362,14 @@ summary {
 #accessibility:target nav [href="#accessibility"],
 #career-skills:target nav [href="#career-skills"],
 #productivity:target nav [href="#career-skills"],
+#time-management:target nav [href="#career-skills"],
 #full:target nav [href="#full"],
 #short:target nav [href="#short"],
 #tutorial:target nav [href="#tutorial"],
 #view-all-courses:target nav [href="#view-all-courses"],
-#view-all-formats:target nav [href="#view-all-formats"] {
+#view-all-formats:target nav [href="#view-all-formats"],
+#prototyping:target [is="comp-2"] nav [href="#web-design"],
+#prototyping:target [is="comp-2"] nav [href="#ux"] {
   background-color: #ff9;
 }
 
