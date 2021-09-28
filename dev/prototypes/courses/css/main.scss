@@ -44,6 +44,11 @@ main {
   margin-bottom: 2rem;
 }
 
+main a:hover,
+main a:focus {
+  margin-bottom: -1px;
+}
+
 @media (min-width: 64em) {
 
 main {
@@ -104,7 +109,7 @@ nav ul {
 }
 
 nav li {
-  margin-top: 0.8rem;
+  margin-top: 0.6rem;
 }
 
 nav p {
@@ -115,8 +120,9 @@ nav p {
 nav a {
   display: inline-block;
   line-height: 1;
-  padding: 0.4rem;
-  margin: -0.4rem;
+  padding: 0.2rem;
+  margin-left: -0.2rem;
+  margin-right: -0.2rem;
 }
 
 ul[role="list"] {
@@ -186,7 +192,8 @@ li aside {
 
 .topics a {
   display: inline-block;
-  padding: 0.125rem;
+  padding: 0.125rem 0.125rem 0;
+  margin-top: 0.4rem;
   margin-left: -0.125rem;
   margin-right: 0.125rem;
 }
@@ -196,7 +203,7 @@ li aside {
   font-weight: bolder;
   text-transform: capitalize;
   margin-top: 0;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
 }
 
 .full .format::after,
@@ -305,6 +312,7 @@ summary {
 }
 
 #design:target .design,
+#web-design:target .web-design,
 #html:target .html,
 #css:target .css,
 #figma:target .figma,
@@ -314,7 +322,7 @@ summary {
 #virtual-reality:target .virtual-reality,
 #accessibility:target .accessibility,
 #design-systems:target .design-systems,
-#development:target .development,
+#web-development:target .web-development,
 #javascript:target .javascript,
 #php:target .php,
 #github:target .github,
@@ -322,25 +330,28 @@ summary {
 #prototyping:target .prototyping,
 #career-skills:target .career-skills,
 #productivity:target .productivity,
-#view-all:target li[class],
+#time-management:target .time-management,
 #full:target .full,
 #short:target .short,
-#tutorial:target .tutorial {
+#tutorial:target .tutorial,
+#view-all-courses:target li[class],
+#view-all-formats:target li[class] {
   display: grid;
 }
 
-#design:target nav [href="#design"],
-#html:target nav [href="#design"],
-#css:target nav [href="#design"],
-#figma:target nav [href="#design"],
-#sketch:target nav [href="#design"],
-#adobe-xd:target nav [href="#design"],
-#invision-studio:target nav [href="#design"],
-#virtual-reality:target nav [href="#design"],
-#development:target nav [href="#development"],
-#javascript:target nav [href="#development"],
-#php:target nav [href="#development"],
-#github:target nav [href="#development"],
+#design:target nav [href="#web-design"],
+#web-design:target nav [href="#web-design"],
+#html:target nav [href="#web-design"],
+#css:target nav [href="#web-design"],
+#figma:target nav [href="#web-design"],
+#sketch:target nav [href="#web-design"],
+#adobe-xd:target nav [href="#web-design"],
+#invision-studio:target nav [href="#web-design"],
+#virtual-reality:target nav [href="#web-design"],
+#web-development:target nav [href="#web-development"],
+#javascript:target nav [href="#web-development"],
+#php:target nav [href="#web-development"],
+#github:target nav [href="#web-development"],
 #ux:target nav [href="#ux"],
 #prototyping:target nav [href="#prototyping"],
 #accessibility:target nav [href="#accessibility"],
@@ -349,7 +360,8 @@ summary {
 #full:target nav [href="#full"],
 #short:target nav [href="#short"],
 #tutorial:target nav [href="#tutorial"],
-#view-all:target nav [href="#view-all"] {
+#view-all-courses:target nav [href="#view-all-courses"],
+#view-all-formats:target nav [href="#view-all-formats"] {
   background-color: #ff9;
 }
 
