@@ -359,6 +359,8 @@ summary {
 #github:target nav [href="#web-development"],
 #ux:target nav [href="#ux"],
 #prototyping:target nav [href="#prototyping"],
+#prototyping:target nav [href="#web-design"],
+#prototyping:target [is="comp-2"] nav [href="#ux"],
 #accessibility:target nav [href="#accessibility"],
 #career-skills:target nav [href="#career-skills"],
 #productivity:target nav [href="#career-skills"],
@@ -367,9 +369,7 @@ summary {
 #short:target nav [href="#short"],
 #tutorial:target nav [href="#tutorial"],
 #view-all-courses:target nav [href="#view-all-courses"],
-#view-all-formats:target nav [href="#view-all-formats"],
-#prototyping:target [is="comp-2"] nav [href="#web-design"],
-#prototyping:target [is="comp-2"] nav [href="#ux"] {
+#view-all-formats:target nav [href="#view-all-formats"] {
   background-color: #ff9;
 }
 
