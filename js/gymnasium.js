@@ -261,9 +261,9 @@ class Gymnasium {
         var r = data[0];
         var g = data[1];
         var b = data[2];
-        var a = data[3];
+        var a = data[3]; // we will likely never need non-opaque values
   
-        bgTarget.style = 'background-color: rgba(' + r + ',' + g + ',' + b + ',' + a + ');';
+        bgTarget.style = 'background-color: rgb(' + r + ',' + g + ',' + b + ');';
 
       });
     }
