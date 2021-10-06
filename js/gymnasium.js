@@ -30,11 +30,19 @@ class Gymnasium {
 
   // account deletion
   accountDeletion() {
-    var deletionContainer = document.getElementById('account-deletion-container'); 
 
-    if (typeof deletionContainer !== 'undefined' && deletionContainer !== null) {
-      deletionContainer.innerHTML = document.getElementById('deletion-helper').innerHTML;
-    }
+    var updateDeletionContainer = setInterval(function() {
+      var deletionContainer = document.getElementById('account-deletion-container'); 
+
+      if (typeof deletionContainer !== 'undefined' && deletionContainer !== null) {
+        deletionContainer.innerHTML = document.getElementById('deletion-helper').innerHTML;
+
+        clearInterval(updateDeletionContainer);
+      } else {
+        console.log('waiting for account deletion message');
+      }
+    }, 100);
+
   }
 
   // countdown timer
@@ -308,19 +316,9 @@ gym.ieCheck();
 // Adds dynamic system status banner
 gym.systemStatus();
 
-
-
-document.addEventListener('DOMContentLoaded', (event) => {
-
-});
-
-window.addEventListener('load', (event) => {
-  
-});
-
-
-document.onreadystatechange = function () {
+document.onreadystatechange = function() {
   if (document.readyState === 'complete') {
+    console.log('document ready state complete');
     gym.setBgFromImage();
     gym.accountDeletion();
   }
