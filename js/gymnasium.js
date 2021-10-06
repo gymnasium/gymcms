@@ -316,7 +316,6 @@ gym.systemStatus();
 
 document.onreadystatechange = function() {
   if (document.readyState === 'complete') {
-    console.log('document ready state complete');
     gym.setBgFromImage();
     gym.accountDeletion();
   }
