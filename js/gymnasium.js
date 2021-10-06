@@ -28,6 +28,15 @@ function hasClass(elem,cls) {
 class Gymnasium {
   constructor() {}
 
+  // account deletion
+  accountDeletion() {
+    var deletionContainer = document.getElementById('account-deletion-container'); 
+
+    if (typeof deletionContainer !== 'undefined' && deletionContainer !== null) {
+      deletionContainer.innerHTML = document.getElementById('deletion-helper').innerHTML;
+    }
+  }
+
   // countdown timer
   countDown(selector, time, url) {
     var elem = document.querySelector(selector);
@@ -306,5 +315,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 window.addEventListener('load', (event) => {
-  gym.setBgFromImage();
+  
 });
+
+
+document.onreadystatechange = function () {
+  if (document.readyState === 'complete') {
+    gym.setBgFromImage();
+    gym.accountDeletion();
+  }
+};
