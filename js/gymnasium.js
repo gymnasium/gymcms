@@ -38,10 +38,8 @@ class Gymnasium {
         deletionContainer.innerHTML = document.getElementById('deletion-helper').innerHTML;
 
         clearInterval(updateDeletionContainer);
-      } else {
-        console.log('waiting for account deletion message');
       }
-    }, 100);
+    }, 250);
 
   }
 
