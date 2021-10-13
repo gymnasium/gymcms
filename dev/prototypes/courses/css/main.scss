@@ -40,6 +40,7 @@ html {
 #comp {
 
 main {
+  position: relative;
   margin-top: 0.8rem;
   margin-bottom: 2rem;
 }
@@ -60,15 +61,15 @@ main {
 
 }
 
-@media (min-width: 64em) and (min-height: 42.5em) {
-
-main > header > div {
-  position: sticky;
-  top: 1.6rem;
-  width: 100%;
-}
-
-}
+// @media (min-width: 64em) and (min-height: 42.5em) {
+//
+// main > header > div {
+//   position: sticky;
+//   top: 1.6rem;
+//   width: 100%;
+// }
+//
+// }
 
 main > header h1 {
   margin-top: 1rem;
@@ -106,6 +107,10 @@ nav ul {
   list-style: initial;
   padding-left: 1rem;
   margin-bottom: 0;
+}
+
+nav > div:last-child ul {
+  list-style: none;
 }
 
 nav li {
@@ -307,6 +312,63 @@ summary {
   margin-left: 0.8rem;
 }
 
+label[for="toggle-full"],
+label[for="toggle-short"],
+label[for="toggle-tutorial"] {
+  position: absolute;
+  left: 1rem;
+  font-weight: bold;
+}
+
+#toggle-full,
+#toggle-short,
+#toggle-tutorial {
+  display: inline-block;
+  position: absolute;
+  left: -0.5rem;
+}
+
+label[for="toggle-full"],
+#toggle-full {
+  top: 28.125rem;
+}
+
+label[for="toggle-short"],
+#toggle-short {
+  top: 31.65rem;
+}
+
+label[for="toggle-tutorial"],
+#toggle-tutorial {
+  top: 35.2rem;
+}
+
+#toggle-full:not(:checked) ~ [role="list"] .full,
+#toggle-short:not(:checked) ~ [role="list"] .short,
+#toggle-tutorial:not(:checked) ~ [role="list"] .tutorial {
+  display: none;
+}
+
+[is="comp-1"] .topics :link,
+[is="comp-1"] .topics :hover,
+[is="comp-1"] .topics :focus {
+  text-decoration: none;
+  border-bottom: 0 none;
+  margin-bottom: 0;
+  pointer-events: none;
+}
+
+// #career-skills:target #toggle-full,
+// #career-skills:target #toggle-short {
+//   cursor: not-allowed;
+//   pointer-events: none;
+//   filter: grayscale(1);
+// }
+//
+// #career-skills:target #toggle-full {
+//   opacity: 0.5;
+// }
+
 :target li[class] {
   display: none;
 }
@@ -339,47 +401,57 @@ summary {
   display: grid;
 }
 
-#design:target nav [href="#web-design"],
 #web-design:target nav [href="#web-design"],
-#html:target nav [href="#web-design"],
-#html:target nav [href="#web-development"],
-#html:target nav [href="#accessibility"],
-#css:target nav [href="#web-design"],
-#css:target nav [href="#web-development"],
-#css:target nav [href="#prototyping"],
-#css:target nav [href="#accessibility"],
-#figma:target nav [href="#web-design"],
-#figma:target [is="comp-2"] nav [href="#ux"],
-#figma:target nav [href="#prototyping"],
-#sketch:target nav [href="#web-design"],
-#sketch:target nav [href="#ux"],
-#sketch:target nav [href="#prototyping"],
-#adobe-xd:target nav [href="#web-design"],
-#adobe-xd:target [is="comp-2"] nav [href="#ux"],
-#adobe-xd:target nav [href="#prototyping"],
-#invision-studio:target nav [href="#web-design"],
-#invision-studio:target [is="comp-2"] nav [href="#ux"],
-#invision-studio:target nav [href="#prototyping"]
-#virtual-reality:target nav [href="#web-design"],
 #web-development:target nav [href="#web-development"],
-#javascript:target nav [href="#web-design"],
-#javascript:target nav [href="#web-development"],
-#php:target nav [href="#web-development"],
-#github:target nav [href="#web-development"],
 #ux:target nav [href="#ux"],
 #prototyping:target nav [href="#prototyping"],
-#prototyping:target [is="comp-2"] nav [href="#web-design"],
-#prototyping:target [is="comp-2"] nav [href="#ux"],
 #accessibility:target nav [href="#accessibility"],
 #career-skills:target nav [href="#career-skills"],
-#productivity:target nav [href="#career-skills"],
-#time-management:target nav [href="#career-skills"],
-#full:target nav [href="#full"],
-#short:target nav [href="#short"],
-#tutorial:target nav [href="#tutorial"],
-#view-all-courses:target nav [href="#view-all-courses"],
-#view-all-formats:target nav [href="#view-all-formats"] {
+#view-all-courses:target nav [href="#view-all-courses"] {
   background-color: #ff9;
 }
+
+// #design:target nav [href="#web-design"],
+// #web-design:target nav [href="#web-design"],
+// #html:target nav [href="#web-design"],
+// #html:target nav [href="#web-development"],
+// #html:target nav [href="#accessibility"],
+// #css:target nav [href="#web-design"],
+// #css:target nav [href="#web-development"],
+// #css:target nav [href="#prototyping"],
+// #css:target nav [href="#accessibility"],
+// #figma:target nav [href="#web-design"],
+// #figma:target [is="comp-2"] nav [href="#ux"],
+// #figma:target nav [href="#prototyping"],
+// #sketch:target nav [href="#web-design"],
+// #sketch:target nav [href="#ux"],
+// #sketch:target nav [href="#prototyping"],
+// #adobe-xd:target nav [href="#web-design"],
+// #adobe-xd:target [is="comp-2"] nav [href="#ux"],
+// #adobe-xd:target nav [href="#prototyping"],
+// #invision-studio:target nav [href="#web-design"],
+// #invision-studio:target [is="comp-2"] nav [href="#ux"],
+// #invision-studio:target nav [href="#prototyping"]
+// #virtual-reality:target nav [href="#web-design"],
+// #web-development:target nav [href="#web-development"],
+// #javascript:target nav [href="#web-design"],
+// #javascript:target nav [href="#web-development"],
+// #php:target nav [href="#web-development"],
+// #github:target nav [href="#web-development"],
+// #ux:target nav [href="#ux"],
+// #prototyping:target nav [href="#prototyping"],
+// #prototyping:target [is="comp-2"] nav [href="#web-design"],
+// #prototyping:target [is="comp-2"] nav [href="#ux"],
+// #accessibility:target nav [href="#accessibility"],
+// #career-skills:target nav [href="#career-skills"],
+// #productivity:target nav [href="#career-skills"],
+// #time-management:target nav [href="#career-skills"],
+// #full:target nav [href="#full"],
+// #short:target nav [href="#short"],
+// #tutorial:target nav [href="#tutorial"],
+// #view-all-courses:target nav [href="#view-all-courses"],
+// #view-all-formats:target nav [href="#view-all-formats"] {
+//   background-color: #ff9;
+// }
 
 }
