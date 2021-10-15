@@ -1,5 +1,6 @@
 <link rel="preload" href="{{ site.url }}/dev/prototypes/courses/css/main.css?{{ site.time | date:'%s' }}" as="style">
 <link rel="stylesheet" href="{{ site.url }}/dev/prototypes/courses/css/main.css?{{ site.time | date:'%s' }}">
+<script src="{{ site.url }}/dev/prototypes/courses/js/main.js?{{ site.time | date:'%s' }}" defer></script>
 
 <div id="comp">
 
@@ -23,11 +24,11 @@
 <div class="topic" id="career-skills">
 <div class="topic" id="productivity">
 <div class="topic" id="time-management">
-<div class="topic" id="view-all-courses">
+<div class="topic" id="all-courses">
 <div class="format" id="full">
 <div class="format" id="short">
 <div class="format" id="tutorial">
-<div class="format" id="view-all-formats">
+<div class="format" id="all-formats">
 
 <main id="courses" is="comp-2">
 
@@ -36,8 +37,11 @@
     <h1>Courses</h1>
     <nav>
       <div>
-        <h2>View by Topic</h2>
+        <h2>Main Topics</h2>
         <ul>
+          <li>
+            <a href="#all-courses"><b>All Courses</b></a>
+          </li>
           <li>
             <a href="#web-design"><b>Web Design</b></a>
           </li>
@@ -53,34 +57,37 @@
           <li>
             <a href="#career-skills"><b>Career Skills</b></a>
           </li>
-          <li>
-            <a href="#view-all-courses"><b>View All Courses</b></a>
-          </li>
         </ul>
       </div>
       <div>
-        <h2>View by Format</h2>
+        <h2>Formats</h2>
         <ul>
           <li>
-            <a href="#full"><b>Full Course</b></a>
+            <br class="fpo">
             <p>Earn a certificate in 1 hour or more.</p>
           </li>
           <li>
-            <a href="#short"><b>Short Course</b></a>
+            <br class="fpo">
             <p>Earn a badge in 1 hour or less.</p>
           </li>
           <li>
-            <a href="#tutorial"><b>Tutorial</b></a>
+            <br class="fpo">
             <p>Learn a new skill in 5 minutes or less.</p>
-          </li>
-          <li>
-            <a href="#view-all-formats"><b>View All Formats</b></a>
           </li>
         </ul>
       </div>
     </nav>
   </div>
 </header>
+
+<label for="toggle-full" class="label-toggle"><b>Full Course</b></label>
+<input type="checkbox" value="selected" class="input-toggle" id="toggle-full" checked>
+
+<label for="toggle-short" class="label-toggle"><b>Short Course</b></label>
+<input type="checkbox" value="selected" class="input-toggle" id="toggle-short" checked>
+
+<label for="toggle-tutorial" class="label-toggle"><b>Tutorial</b></label>
+<input type="checkbox" value="selected" class="input-toggle" id="toggle-tutorial" checked>
 
 <ul role="list">
 <!-- FULL COURSES -->
@@ -322,8 +329,8 @@
       full
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
       <li><a href="#web-development">Web Development</a></li>
+      <li><a href="#web-design">Web Design</a></li>
       <li><a href="#html">HTML</a></li>
       <li><a href="#css">CSS</a></li>
       <li><a href="#javascript">JavaScript</a></li>
@@ -2356,6 +2363,14 @@
       <li><a href="#figma">Figma</a></li>
     </ul>
   </aside>
+  </li>
+  <li class="response">
+    <header>
+      <h2>
+        <a class="courses-refresh" href="#view-all-courses">Wait… That’s Not Right, We Have a Course or Two for You</a>
+      </h2>
+      <a class="button courses-refresh" href="#view-all-courses"><b>View All Courses</b></a>
+    </header>
   </li>
 </ul>
 
