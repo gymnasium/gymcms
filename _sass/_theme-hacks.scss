@@ -279,8 +279,6 @@ https://github.com/gymnasium/tracker/issues/143
   }
 }
 
-
-
 /*
 https://github.com/gymnasium/tracker/issues/127
 */
@@ -292,11 +290,16 @@ https://github.com/gymnasium/tracker/issues/127
   min-width: none;
 }
 
-#passwordreset-form {
+#password-reset {
   padding: 1.8em 1.8em 2.2em;
+  border: 1px solid #ccc;
 }
 
-#passwordreset-form h2.section-title {
+#password-reset > br {
+  display: none;
+}
+
+#password-reset h2.section-title {
   font: 900 2.571428571428571em/1 $gym-font-stack;
   color: #333;
   letter-spacing: 0.01em;
@@ -304,15 +307,15 @@ https://github.com/gymnasium/tracker/issues/127
   margin-top: 0;
 }
 
-#passwordreset-form h2.lines {
+#password-reset h2.lines {
   text-align: left;
 }
 
-#passwordreset-form h2.lines::after {
+#password-reset h2.lines::after {
   display: none;
 }
 
-#passwordreset-form h2.lines .text {
+#password-reset h2.lines .text {
   position: static;
   top: 0;
   z-index: auto;
@@ -321,15 +324,15 @@ https://github.com/gymnasium/tracker/issues/127
   padding: 0;
 }
 
-#passwordreset-form .paragon__invalid-feedback {
+#password-reset .paragon__invalid-feedback {
   font-size: unset;
 }
 
-#passwordreset-form .action-primary {
+#password-reset .action-primary {
   margin-top: 0;
 }
 
-#passwordreset-form .action-primary {
+#password-reset .action-primary {
   width: 100%;
   font: bold 1.5em/1 $gym-font-stack;
   background-color: #f8971d;
@@ -337,9 +340,9 @@ https://github.com/gymnasium/tracker/issues/127
   border-radius: .125em;
 }
 
-#passwordreset-form .action-primary:hover,
-#passwordreset-form .action-primary:focus,
-#passwordreset-form .action-primary:active {
+#password-reset .action-primary:hover,
+#password-reset .action-primary:focus,
+#password-reset .action-primary:active {
   background-color: #a6a6a6;
 }
 
@@ -350,9 +353,9 @@ https://github.com/gymnasium/tracker/issues/127
   font-family: $gym-font-stack;
 }
 
-/*--
+/* ---
 https://github.com/gymnasium/tracker/issues/84
---*/
+--- */
 
 /* update color contrast ratio */
 
