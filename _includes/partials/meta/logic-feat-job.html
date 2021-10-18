@@ -1,0 +1,14 @@
+{%- comment -%}
+Set up meta tags for featured jobs
+{%- endcomment -%}
+{%- assign job = site.data.featured_jobs[id] -%}
+{%- if job.short_description -%}
+  {%- assign og_description = job.short_description -%}
+{%- endif -%}
+{%- if job.title -%}
+  {%- assign og_title =  job.title | append: " | Featured Jobs | Gymnasium" -%}
+{%- endif -%}
+{%- if job.og_art -%}
+  {%- assign og_art =  job.og_art -%}
+{%- endif -%}
+

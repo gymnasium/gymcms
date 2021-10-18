@@ -14,4 +14,12 @@
   {%- endif -%}
 {%- endif -%}
 
+{%- comment -%}
+Logic to handle featured job meta
+{%- endcomment -%}
+{%- if page.job_id -%}
+  {%- assign id = page.job_id -%}
+  {%- include partials/meta/logic-feat-job.html -%}
+{%- endif -%}
+
 {%- include partials/meta/logic-sanitize.html -%}
