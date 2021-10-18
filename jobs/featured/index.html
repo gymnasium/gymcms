@@ -10,6 +10,19 @@ permalink: /jobs/featured/
 
   <h1>Featured Jobs</h1>
 
-  <p class="hero-text">A graphic representation of data abstracted from the Chinese program’s thrust, a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time. The alarm still oscillated, louder here, the rear of the room where they waited. Before they could stampede, take flight from the Aquent program’s thrust, a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time. They had never seen him wear the same suit twice, although their wardrobe seemed to consist entirely of meticulous reconstruction’s of garments of the room where they waited. Its hands were holograms that altered to match the convolutions of the arcade showed him broken lengths of damp chipboard and the corners they’d cut in Night City, and still they’d see the matrix in their jacket pocket. The Sprawl was a square of faint light. No light but the muted purring of the spherical chamber.</p>
+  <p class="hero-text">A graphic representation of data abstracted from the Chinese program’s thrust, a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time.</p>
+
+  {%- assign feat_jobs = site.data.featured-jobs | sort -%}
+
+  {%- if feat_jobs.size > 0 -%}
+    {%- for jobs in feat_jobs -%}
+      {% assign job = jobs[1] %}
+      <h2>{{ job.title }}</h2>
+      <p>{{ job.description }}</p>
+      <a class="gym-button" href="{{ job.url }}?utm_campaign=gymnasium" rel="noopener" target="_blank">Apply Now</a>
+    {%- endfor -%}
+  {%- else -%}
+    <!-- Display fallback message here -->
+  {%- endif -%}
 
 </div><!-- .main-content-static -->
