@@ -84,11 +84,36 @@ main label a:not([class]):active {
   }
 
   .form-field {
+
+    margin-top: 0.6em;
+    margin-bottom: 1.4em;
+
+    label,
+    input {
+      margin-bottom: 0.6em;
+    }
+  
+    input + .tip-input {
+      margin-top: 0.6em;
+    }
+
     label {
       font-size: 1.1em;
       text-transform: uppercase;
       font-family: $gym-font-stack;
       font-weight: bold;
+
+      &[for="register-terms_of_service"] {
+        margin: 0;
+      }
+
+      &.focus-out {
+        position: static;
+        padding-top: 0;
+        padding-left: 0;
+        opacity: 1;
+        z-index: auto;
+      }
     }
 
     input {
@@ -102,10 +127,11 @@ main label a:not([class]):active {
 
     .tip {
       color: $gym-dark-gray;
-    }
+      display: inline-block;
 
-    .tip-input {
-      font: normal 1em/1.15 $gym-text-font-stack;
+      &-input {
+        font: normal 1em/1.15 $gym-text-font-stack;
+      }
     }
   }
 
@@ -159,36 +185,6 @@ main label a:not([class]):active {
 
   .checkbox-terms_of_service {
     margin: 1em 0;
-  }
-
-  .form-field {
-    margin-top: 0.6em;
-    margin-bottom: 1.4em;
-  }
-
-  .form-field label,
-  .form-field input {
-    margin-bottom: 0.6em;
-  }
-
-  .form-field input + .tip-input {
-    margin-top: 0.6em;
-  }
-
-  .form-field label.focus-out {
-    position: static;
-    padding-top: 0;
-    padding-left: 0;
-    opacity: 1;
-    z-index: auto;
-  }
-
-  .form-field .tip {
-    display: inline-block;
-  }
-
-  .form-field label[for="register-terms_of_service"] {
-    margin: 0;
   }
 
   .status.account-activation,
@@ -259,36 +255,34 @@ main label a:not([class]):active {
   }
 
   .err-message {
-    display: none;
-  }
-
-  .err-message.is-shown {
-    display: block;
-  }
-  .err-message {
     background: #f2dede;
+    display: none;
     padding: 1.8em;
     border: 1px solid $error-color;
     border-radius: 0.12em;
     margin-bottom: 1em;
-  }
 
-  .err-message h3 {
-    color: $error-color;
-    margin-top: 0;
-    margin-bottom: -0.2em;
-  }
+    &.is-shown {
+      display: block;
+    }
 
-  .err-message ul {
-    margin-top: 1.4em;
-    color: $error-color;
-  }
-
-  .err-message li {
-    font: bold 1em/1.5 $gym-text-font-stack;
-    color: $error-color;
-    letter-spacing: 0.01em;
-    margin-top: 1em;
+    h3 {
+      color: $error-color;
+      margin-top: 0;
+      margin-bottom: -0.2em;
+    }
+  
+    ul {
+      margin-top: 1.4em;
+      color: $error-color;
+    }
+  
+    li {
+      font: bold 1em/1.5 $gym-text-font-stack;
+      color: $error-color;
+      letter-spacing: 0.01em;
+      margin-top: 1em;
+    }
   }
 }
 
@@ -377,26 +371,44 @@ body {
 .edx-block-resources {
   font-size: 16px !important;
   color: $gym-black;
-}
 
-.edx-block-resources header {
-  font-size: 16px !important;
-  padding-bottom: 0 !important;
-  margin-bottom: 1em !important;
-}
+  header {
+    font-size: 16px !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 1em !important;
+  }
 
-.edx-block-resources section {
-  padding-top: 1.2em;
-  border-top: 1px dashed $gym-gray;
-  margin-top: 1.4em;
-}
+  section {
+    padding-top: 1.2em;
+    border-top: 1px dashed $gym-gray;
+    margin-top: 1.4em;
+  }
 
-.edx-block-resources h2,
-.edx-block-resources h3,
-.edx-block-resources p {
-  margin-top: 0;
-  margin-bottom: 0 !important;
- }
+  h2, h3, p {
+    margin-top: 0;
+    margin-bottom: 0 !important;
+  }
+
+  h3 {
+    font-size: 1.4em !important;
+    line-height: 1.15 !important;
+  }
+
+  p {
+    font: 1em/1.35 $gym-text-font-stack;
+    margin-top: 0.5rem;
+  }
+
+  ul {
+    margin-top: 0 !important;
+  }
+  
+  li {
+    line-height: 1.35;
+    margin-top: 1rem;
+    margin-bottom: 0 !important;
+  }
+}
 
 .handouts .handouts-header,
 .edx-block-resources h2 {
@@ -405,19 +417,9 @@ body {
   letter-spacing: 0.035rem !important;
 }
 
-.edx-block-resources h3 {
-  font-size: 1.4em !important;
-  line-height: 1.15 !important;
-}
-
 .handouts .handouts-header {
   text-transform: uppercase !important;
   margin-bottom: 1.2rem !important;
-}
-
-.edx-block-resources p {
-  font: 1em/1.35 $gym-text-font-stack;
-  margin-top: 0.5rem;
 }
 
 .handouts p,
@@ -428,16 +430,6 @@ body {
 .handouts dt,
 .handouts dd {
   line-height: 1.35;
-}
-
-.edx-block-resources ul {
-  margin-top: 0 !important;
-}
-
-.edx-block-resources li {
-  line-height: 1.35;
-  margin-top: 1rem;
-  margin-bottom: 0 !important;
 }
 
 /* ---
