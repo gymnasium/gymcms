@@ -15,10 +15,10 @@
 {%- endif -%}
 
 {%- comment -%}
-Logic to handle featured job meta
+Logic to handle featured job meta (note: the capture is used to ensure the job_id is a string)
 {%- endcomment -%}
 {%- if page.job_id -%}
-  {%- assign id = page.job_id -%}
+  {%- capture id -%}{{page.job_id}}{%- endcapture -%}
   {%- include partials/meta/logic-feat-job.html -%}
 {%- endif -%}
 
