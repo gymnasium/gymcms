@@ -67,7 +67,6 @@ main label a:not([class]):active {
     font: normal 1.6em/1.4 $gym-font-stack;
     margin-bottom: 1em;
   }
-  $linked-in-blue: #0077b5;
 
   button.gym-button.button-oa2-linkedin-oauth2.login-provider.login-oa2-linkedin-oauth2,
   button.gym-button.button-oa2-linkedin-oauth2.login-provider.register-oa2-linkedin-oauth2 {
@@ -96,13 +95,13 @@ main label a:not([class]):active {
       height: auto;
       font-size: 1em;
       padding: 1em;
-      border: 1px solid #ccc;
+      border: 1px solid $gym-gray;
       border-bottom: 2px solid $gym-orange;
       margin-bottom: 0.6em;
     }
 
     .tip {
-      color: #444;
+      color: $gym-dark-gray;
     }
 
     .tip-input {
@@ -211,7 +210,7 @@ main label a:not([class]):active {
 .register.container,
 .login.container {
   background-color: white;
-  border: 1px solid #ccc;
+  border: 1px solid $gym-gray;
   margin-top: 1.8em;
   border-radius: 2px;
 
@@ -220,7 +219,7 @@ main label a:not([class]):active {
   }
 
   .sign-up {
-    border-right: 1px dashed #ccc;
+    border-right: 1px dashed $gym-gray;
     padding: 1.6em;
   }
 
@@ -269,25 +268,25 @@ main label a:not([class]):active {
   .err-message {
     background: #f2dede;
     padding: 1.8em;
-    border: 1px solid #d9534f;
+    border: 1px solid $error-color;
     border-radius: 0.12em;
     margin-bottom: 1em;
   }
 
   .err-message h3 {
-    color: #d9534f;
+    color: $error-color;
     margin-top: 0;
     margin-bottom: -0.2em;
   }
 
   .err-message ul {
     margin-top: 1.4em;
-    color: #d9534f;
+    color: $error-color;
   }
 
   .err-message li {
     font: bold 1em/1.5 $gym-text-font-stack;
-    color: #d9534f;
+    color: $error-color;
     letter-spacing: 0.01em;
     margin-top: 1em;
   }
@@ -654,7 +653,7 @@ https://github.com/gymnasium/tracker/issues/127
 
 #password-reset {
   padding: 1.8em 1.8em 2.2em;
-  border: 1px solid #ccc;
+  border: 1px solid $gym-gray;
 }
 
 #password-reset > br {
@@ -663,7 +662,7 @@ https://github.com/gymnasium/tracker/issues/127
 
 #password-reset h2.section-title {
   font: 900 2.571428571428571em/1 $gym-font-stack;
-  color: #333;
+  color: $gym-dark-gray-2;
   letter-spacing: 0.01em;
   word-spacing: 0.04em;
   margin-top: 0;
@@ -697,7 +696,7 @@ https://github.com/gymnasium/tracker/issues/127
 #password-reset .action-primary {
   width: 100%;
   font: bold 1.5em/1 $gym-font-stack;
-  background-color: #f8971d;
+  background-color: $gym-orange;
   padding: 1em;
   border-radius: .125em;
 }
@@ -705,7 +704,7 @@ https://github.com/gymnasium/tracker/issues/127
 #password-reset .action-primary:hover,
 #password-reset .action-primary:focus,
 #password-reset .action-primary:active {
-  background-color: #a6a6a6;
+  background-color: $gym-light-gray;
 }
 
 /* update font-family for catalog navigation */
@@ -859,7 +858,7 @@ nav.discussion .new-post-btn {
   font-size: 1em;
   font-family: $gym-font-stack;
   color: $gym-white;
-  background-color: #f8971d;
+  background-color: $gym-orange;
   padding: .75em 1em;
   border: 0;
 }
@@ -911,7 +910,7 @@ https://github.com/gymnasium/tracker/issues/40
 
 .sidebar #jobs-microservice-frame {
   min-width: 116% !important;
-  background-color: #444;
+  background-color: $gym-dark-gray;
   padding: 1.4em;
   margin-top: -1.4em;
   margin-left: -1.4em;
