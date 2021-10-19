@@ -1,8 +1,6 @@
 ---
 layout: meta
 permalink: /jobs/featured/meta/
-# If a job id is set, (some of) the values below will be overriden by the featured job data file
-job_id: 167906
 page_title: "Featured Jobs | Gymnasium"
 og_title: "Featured Jobs: Onsite & Remote Opportunties"
 og_description: "Explore our free career resources."

@@ -12,17 +12,4 @@ permalink: /jobs/featured/
 
   <p class="hero-text">A graphic representation of data abstracted from the Chinese program’s thrust, a worrying impression of solid fluidity, as though the shards of a broken mirror bent and elongated as they rotated, but it never told the correct time.</p>
 
-  {%- assign feat_jobs = site.data.featured_jobs | sort -%}
-
-  {%- if feat_jobs.size > 0 -%}
-    {%- for jobs in feat_jobs -%}
-      {% assign job = jobs[1] %}
-      <h2>{{ job.title }}</h2>
-      <p>{{ job.description }}</p>
-      <a class="gym-button" href="{{ job.url }}?utm_campaign=gymnasium" rel="noopener" target="_blank">Apply Now</a>
-    {%- endfor -%}
-  {%- else -%}
-    <!-- Display fallback message here -->
-  {%- endif -%}
-
 </div><!-- .main-content-static -->
