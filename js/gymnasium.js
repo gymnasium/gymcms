@@ -28,6 +28,42 @@ function hasClass(elem,cls) {
 class Gymnasium {
   constructor() {}
 
+  // account deletion
+  accountDeletion() {
+
+    var updateDeletionContainer = setInterval(function() {
+      var deletionContainer = document.getElementById('account-deletion-container'); 
+
+      if (typeof deletionContainer !== 'undefined' && deletionContainer !== null) {
+        deletionContainer.innerHTML = document.getElementById('deletion-helper').innerHTML;
+
+        clearInterval(updateDeletionContainer);
+      }
+    }, 250);
+
+  }
+
+  // countdown timer
+  countDown(selector, time, url) {
+    var elem = document.querySelector(selector);
+  
+    if (typeof elem !== 'undefined' && elem !== null) {
+      var counter = parseInt(time);
+
+      var redirectTimer = setInterval(function() {
+
+        if (counter <= 0){
+          clearInterval(redirectTimer);
+          window.location.href = url;
+        } else {
+          elem.innerHTML = counter;
+        }
+
+        counter -= 1;
+      }, 1000);
+    }
+  }
+
   courseTabs() {
     /* this is a nonsense hack to make courseware subnavigation look like
     what we want it to look like until we move to Cypress
@@ -171,8 +207,8 @@ class Gymnasium {
       email: emailAddress,
       location: cityId,
       utm_campaign: "Registration",
-      carrot_type: "Gymnasium Registration",
-      carrot_topic: "GYM REG",
+      carrot_type: "Gymnasium Registration", // Lead Source Type in CW
+      carrot_topic: "GYM REG", // How Heard Other in CW
       PROC: "AWUISubmitExternalLead",
     };
 
@@ -240,9 +276,9 @@ class Gymnasium {
         var r = data[0];
         var g = data[1];
         var b = data[2];
-        var a = data[3];
+        var a = data[3]; // we will likely never need non-opaque values
   
-        bgTarget.style = 'background-color: rgba(' + r + ',' + g + ',' + b + ',' + a + ');';
+        bgTarget.style = 'background-color: rgb(' + r + ',' + g + ',' + b + ');';
 
       });
     }
@@ -263,6 +299,9 @@ class Gymnasium {
 // Initialize
 var gym = new Gymnasium();
 
+// Countdown timer on info page
+gym.countDown('[data-countdown]', 10, '/login?next=' + encodeURIComponent(window.location.href));
+
 // Do wicked stuff to course tabs
 gym.courseTabs();
 
@@ -275,10 +314,9 @@ gym.ieCheck();
 // Adds dynamic system status banner
 gym.systemStatus();
 
-document.addEventListener('DOMContentLoaded', (event) => {
-
-});
-
-window.addEventListener('load', (event) => {
-  gym.setBgFromImage();
-});
+document.onreadystatechange = function() {
+  if (document.readyState === 'complete') {
+    gym.setBgFromImage();
+    gym.accountDeletion();
+  }
+};
