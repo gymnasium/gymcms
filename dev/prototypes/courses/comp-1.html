@@ -7,7 +7,6 @@
 <div class="topic" id="web-design">
 <div class="topic" id="html">
 <div class="topic" id="css">
-<div class="topic" id="design">
 <div class="topic" id="figma">
 <div class="topic" id="sketch">
 <div class="topic" id="adobe-xd">
@@ -15,6 +14,7 @@
 <div class="topic" id="virtual-reality">
 <div class="topic" id="accessibility">
 <div class="topic" id="design-systems">
+<div class="topic" id="data-visualization">
 <div class="topic" id="web-development">
 <div class="topic" id="javascript">
 <div class="topic" id="php">
@@ -28,7 +28,6 @@
 <div class="format" id="full">
 <div class="format" id="short">
 <div class="format" id="tutorial">
-<div class="format" id="all-formats">
 
 <main id="courses" is="comp-1">
 
@@ -37,11 +36,8 @@
     <h1>Courses</h1>
     <nav>
       <div>
-        <h2>Main Topics</h2>
+        <h2>Topics</h2>
         <ul>
-          <li>
-            <a href="#all-courses"><b>All Courses</b></a>
-          </li>
           <li>
             <a href="#web-design"><b>Web Design</b></a>
           </li>
@@ -61,20 +57,75 @@
             <a href="#career-skills"><b>Career Skills</b></a>
           </li>
         </ul>
+        <details>
+          <summary><b>Subtopics</b></summary>
+          <ul>
+            <li>
+              <a href="#html"><b>HTML</b></a>
+            </li>
+            <li>
+              <a href="#css"><b>CSS</b></a>
+            </li>
+            <li>
+              <a href="#javascript"><b>JavaScript</b></a>
+            </li>
+            <li>
+              <a href="#php"><b>PHP</b></a>
+            </li>
+            <li>
+              <a href="#github"><b>GitHub</b></a>
+            </li>
+            <li>
+              <a href="#design-systems"><b>Design Systems</b></a>
+            </li>
+            <li>
+              <a href="#data-visualization"><b>Data Visualization</b></a>
+            </li>
+            <li>
+              <a href="#figma"><b>Figma</b></a>
+            </li>
+            <li>
+              <a href="#sketch"><b>Sketch</b></a>
+            </li>
+            <li>
+              <a href="#adobe-xd"><b>Adobe XD</b></a>
+            </li>
+            <li>
+              <a href="#invision-studio"><b>InVision Studio</b></a>
+            </li>
+            <li>
+              <a href="#virtual-reality"><b>Virtual Reality</b></a>
+            </li>
+            <li>
+              <a href="#productivity"><b>Productivity</b></a>
+            </li>
+            <li>
+              <a href="#time-management"><b>Time Management</b></a>
+            </li>
+          </ul>
+        </details>
+        <ul>
+          <li>
+            <a href="#view-all-courses"><b>View All Courses</b></a>
+          </li>
+        </ul>
       </div>
       <div>
         <h2>Formats</h2>
         <ul>
           <li>
-            <br class="fpo">
+            <label for="toggle-full-ui" class="label-toggle"><b>Full Course</b></label>
+            <input type="checkbox" value="selected" class="input-toggle" id="toggle-full-ui" checked>
             <p>Earn a certificate in 1 hour or more.</p>
           </li>
           <li>
-            <br class="fpo">
+            <label for="toggle-short-ui" class="label-toggle"><b>Short Course</b></label>
+            <input type="checkbox" value="selected" class="input-toggle" id="toggle-short-ui" checked>
             <p>Earn a badge in 1 hour or less.</p>
           </li>
           <li>
-            <br class="fpo">
+            <label for="toggle-tutorial-ui" class="label-toggle"><b>Tutorial</b></label>
+            <input type="checkbox" value="selected" class="input-toggle" id="toggle-tutorial-ui" checked>
             <p>Learn a new skill in 5 minutes or less.</p>
           </li>
         </ul>
@@ -130,9 +181,9 @@
       full
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#html">HTML</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="html">HTML</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -171,8 +222,8 @@
       full
     </p>
     <ul class="topics">
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#javascript">JavaScript</a></li>
+      <li class="web-development">Web Development</li>
+      <li class="javascript">JavaScript</li>
     </ul>
   </aside>
   </li>
@@ -212,8 +263,8 @@
       full
     </p>
     <ul class="topics">
-      <li><a href="#ux">UX</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
+      <li class="ux">UX</li>
+      <li class="prototyping">Prototyping</a></li>
     </ul>
   </aside>
   </li>
@@ -252,13 +303,13 @@
       full
     </p>
     <ul class="topics">
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#javascript">JavaScript</a></li>
+      <li class="web-development">Web Development</li>
+      <li class="javascript">JavaScript</li>
     </ul>
   </aside>
   </li>
 <!-- GYM-106 -->
-  <li class="full design web-design">
+  <li class="full web-design data-visualization">
   <header>
     <h2>
       <a href="{{ site.gymurl }}/courses/GYM/106/0/about">Information Design & Visualization Fundamentals</a>
@@ -292,8 +343,8 @@
       full
     </p>
     <ul class="topics">
-      <li><a href="#design">Design</a></li>
-      <li><a href="#web-design">Web Design</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="data-visualization">Data Visualization</li>
     </ul>
   </aside>
   </li>
@@ -332,11 +383,11 @@
       full
     </p>
     <ul class="topics">
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#html">HTML</a></li>
-      <li><a href="#css">CSS</a></li>
-      <li><a href="#javascript">JavaScript</a></li>
+      <li class="web-development">Web Development</li>
+      <li class="web-design">Web Design</li>
+      <li class="html">HTML</li>
+      <li class="css">CSS</li>
+      <li class="javascript">JavaScript</li>
     </ul>
   </aside>
   </li>
@@ -375,8 +426,8 @@
       full
     </p>
     <ul class="topics">
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#javascript">JavaScript</a></li>
+      <li class="web-development">Web Development</li>
+      <li class="javascript">JavaScript</li>
     </ul>
   </aside>
   </li>
@@ -415,11 +466,11 @@
       full
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#html">HTML</a></li>
-      <li><a href="#css">CSS</a></li>
-      <li><a href="#javascript">JavaScript</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="web-development">Web Development</li>
+      <li class="html">HTML</li>
+      <li class="css">CSS</li>
+      <li class="javascript">JavaScript</li>
     </ul>
   </aside>
   </li>
@@ -459,9 +510,9 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#career-skills">Career Skills</a></li>
-      <li><a href="#productivity">Productivity</a></li>
-      <li><a href="#time-management">Time Management</a></li>
+      <li class="career-skills">Career Skills</li>
+      <li class="productivity">Productivity</li>
+      <li class="time-management">Time Management</li>
     </ul>
   </aside>
   </li>
@@ -500,8 +551,8 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#php">PHP</a></li>
+      <li class="web-development">Web Development</li>
+      <li class="php">PHP</li>
     </ul>
   </aside>
   </li>
@@ -540,9 +591,9 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#ux">UX</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
-      <li><a href="#sketch">Sketch</a></li>
+      <li class="ux">UX</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="sketch">Sketch</li>
     </ul>
   </aside>
   </li>
@@ -581,8 +632,8 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#github">GitHub</a></li>
+      <li class="web-development">Web Development</li>
+      <li class="github">GitHub</li>
     </ul>
   </aside>
   </li>
@@ -621,10 +672,10 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#html">HTML</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-development">Web Development</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -663,8 +714,8 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#ux">UX</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
+      <li class="ux">UX</li>
+      <li class="prototyping">Prototyping</a></li>
     </ul>
   </aside>
   </li>
@@ -703,8 +754,8 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#php">PHP</a></li>
+      <li class="web-development">Web Development</li>
+      <li class="php">PHP</li>
     </ul>
   </aside>
   </li>
@@ -743,7 +794,7 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#web-development">Web Development</a></li>
+      <li class="web-development">Web Development</li>
     </ul>
   </aside>
   </li>
@@ -782,8 +833,8 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#javascript">JavaScript</a></li>
+      <li class="web-development">Web Development</li>
+      <li class="javascript">JavaScript</li>
     </ul>
   </aside>
   </li>
@@ -822,8 +873,8 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#virtual-reality">Virtual Reality</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="virtual-reality">Virtual Reality</li>
     </ul>
   </aside>
   </li>
@@ -862,10 +913,10 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#design-systems">Design Systems</a></li>
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#ux">UX</a></li>
+      <li class="web-development">Web Development</li>
+      <li class="design-systems">Design Systems</li>
+      <li class="web-design">Web Design</li>
+      <li class="ux">UX</li>
     </ul>
   </aside>
   </li>
@@ -904,8 +955,8 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#ux">UX</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
+      <li class="ux">UX</li>
+      <li class="prototyping">Prototyping</a></li>
     </ul>
   </aside>
   </li>
@@ -944,10 +995,10 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#html">HTML</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -986,9 +1037,9 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#design-systems">Design Systems</a></li>
-      <li><a href="#ux">UX</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="design-systems">Design Systems</li>
+      <li class="ux">UX</li>
     </ul>
   </aside>
   </li>
@@ -1027,9 +1078,9 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#design-systems">Design Systems</a></li>
-      <li><a href="#ux">UX</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="design-systems">Design Systems</li>
+      <li class="ux">UX</li>
     </ul>
   </aside>
   </li>
@@ -1068,10 +1119,10 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#design-systems">Design Systems</a></li>
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#ux">UX</a></li>
+      <li class="web-development">Web Development</li>
+      <li class="design-systems">Design Systems</li>
+      <li class="web-design">Web Design</li>
+      <li class="ux">UX</li>
     </ul>
   </aside>
   </li>
@@ -1110,9 +1161,9 @@
       short
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#design-systems">Design Systems</a></li>
-      <li><a href="#ux">UX</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="design-systems">Design Systems</li>
+      <li class="ux">UX</li>
     </ul>
   </aside>
   </li>
@@ -1136,8 +1187,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1160,8 +1211,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1184,8 +1235,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1208,8 +1259,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1232,8 +1283,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1256,7 +1307,7 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#ux">UX</a></li>
+      <li class="ux">UX</li>
     </ul>
   </aside>
   </li>
@@ -1279,7 +1330,7 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#ux">UX</a></li>
+      <li class="ux">UX</li>
     </ul>
   </aside>
   </li>
@@ -1302,7 +1353,7 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#ux">UX</a></li>
+      <li class="ux">UX</li>
     </ul>
   </aside>
   </li>
@@ -1325,7 +1376,7 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#ux">UX</a></li>
+      <li class="ux">UX</li>
     </ul>
   </aside>
   </li>
@@ -1348,7 +1399,7 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#ux">UX</a></li>
+      <li class="ux">UX</li>
     </ul>
   </aside>
   </li>
@@ -1371,9 +1422,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
-      <li><a href="#sketch">Sketch</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="sketch">Sketch</li>
     </ul>
   </aside>
   </li>
@@ -1396,9 +1447,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1421,9 +1472,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
-      <li><a href="#invision-studio">Invision Studio</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="invision-studio">InVision Studio</li>
     </ul>
   </aside>
   </li>
@@ -1446,9 +1497,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
-      <li><a href="#adobe-xd">Adobe XD</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="adobe-xd">Adobe XD</li>
     </ul>
   </aside>
   </li>
@@ -1471,9 +1522,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
-      <li><a href="#figma">Figma</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="figma">Figma</li>
     </ul>
   </aside>
   </li>
@@ -1496,8 +1547,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#career-skills">Career Skills</a></li>
-      <li><a href="#ux">UX</a></li>
+      <li class="career-skills">Career Skills</li>
+      <li class="ux">UX</li>
     </ul>
   </aside>
   </li>
@@ -1520,8 +1571,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#career-skills">Career Skills</a></li>
-      <li><a href="#ux">UX</a></li>
+      <li class="career-skills">Career Skills</li>
+      <li class="ux">UX</li>
     </ul>
   </aside>
   </li>
@@ -1544,8 +1595,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#career-skills">Career Skills</a></li>
-      <li><a href="#web-design">Web Design</a></li>
+      <li class="career-skills">Career Skills</li>
+      <li class="web-design">Web Design</li>
     </ul>
   </aside>
   </li>
@@ -1568,8 +1619,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#career-skills">Career Skills</a></li>
-      <li><a href="#web-design">Web Design</a></li>
+      <li class="career-skills">Career Skills</li>
+      <li class="web-design">Web Design</li>
     </ul>
   </aside>
   </li>
@@ -1592,8 +1643,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#career-skills">Career Skills</a></li>
-      <li><a href="#ux">UX</a></li>
+      <li class="career-skills">Career Skills</li>
+      <li class="ux">UX</li>
     </ul>
   </aside>
   </li>
@@ -1616,8 +1667,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1640,8 +1691,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#sketch">Sketch</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="sketch">Sketch</li>
     </ul>
   </aside>
   </li>
@@ -1664,8 +1715,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1688,8 +1739,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1712,8 +1763,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1736,8 +1787,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#github">GitHub</a></li>
+      <li class="web-development">Web Development</li>
+      <li class="github">GitHub</li>
     </ul>
   </aside>
   </li>
@@ -1760,9 +1811,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#career-skills">Career Skills</a></li>
-      <li><a href="#productivity">Productivity</a></li>
-      <li><a href="#time-management">Time Management</a></li>
+      <li class="career-skills">Career Skills</li>
+      <li class="productivity">Productivity</li>
+      <li class="time-management">Time Management</li>
     </ul>
   </aside>
   </li>
@@ -1785,8 +1836,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1809,9 +1860,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
-      <li><a href="#figma">Figma</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="figma">Figma</li>
     </ul>
   </aside>
   </li>
@@ -1834,9 +1885,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
-      <li><a href="#figma">Figma</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="figma">Figma</li>
     </ul>
   </aside>
   </li>
@@ -1859,11 +1910,11 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#html">HTML</a></li>
-      <li><a href="#css">CSS</a></li>
-      <li><a href="#javascript">JavaScript</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="web-development">Web Development</li>
+      <li class="html">HTML</li>
+      <li class="css">CSS</li>
+      <li class="javascript">JavaScript</li>
     </ul>
   </aside>
   </li>
@@ -1886,8 +1937,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#html">HTML</a></li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
     </ul>
   </aside>
   </li>
@@ -1910,9 +1961,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1935,9 +1986,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1960,9 +2011,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -1985,9 +2036,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#html">HTML</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
     </ul>
   </aside>
   </li>
@@ -2010,9 +2061,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#html">HTML</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
     </ul>
   </aside>
   </li>
@@ -2035,9 +2086,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#html">HTML</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
     </ul>
   </aside>
   </li>
@@ -2060,9 +2111,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#html">HTML</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
     </ul>
   </aside>
   </li>
@@ -2085,9 +2136,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#html">HTML</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
     </ul>
   </aside>
   </li>
@@ -2110,9 +2161,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#html">HTML</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
     </ul>
   </aside>
   </li>
@@ -2135,9 +2186,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -2160,9 +2211,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -2185,9 +2236,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#html">HTML</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
     </ul>
   </aside>
   </li>
@@ -2210,11 +2261,11 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#web-development">Web Development</a></li>
-      <li><a href="#ux">UX</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#html">HTML</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="web-development">Web Development</li>
+      <li class="ux">UX</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
     </ul>
   </aside>
   </li>
@@ -2237,8 +2288,8 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
     </ul>
   </aside>
   </li>
@@ -2261,9 +2312,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -2286,9 +2337,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#accessibility">Accessibility</a></li>
-      <li><a href="#css">CSS</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
     </ul>
   </aside>
   </li>
@@ -2311,9 +2362,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
-      <li><a href="#figma">Figma</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="figma">Figma</li>
     </ul>
   </aside>
   </li>
@@ -2336,9 +2387,9 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
-      <li><a href="#figma">Figma</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="figma">Figma</li>
     </ul>
   </aside>
   </li>
@@ -2361,16 +2412,16 @@
       tutorial
     </p>
     <ul class="topics">
-      <li><a href="#web-design">Web Design</a></li>
-      <li><a href="#prototyping">Prototyping</a></li>
-      <li><a href="#figma">Figma</a></li>
+      <li class="web-design">Web Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="figma">Figma</li>
     </ul>
   </aside>
   </li>
-  <li class="response">
+  <li class="response" hidden>
     <header>
       <h2>
-        <a class="courses-refresh" href="#view-all-courses">Wait… That’s Not Right, We Have a Course or Two for You</a>
+        <a class="courses-refresh" href="#view-all-courses">Oops! Let’s Find You That Course…</a>
       </h2>
       <a class="button courses-refresh" href="#view-all-courses"><b>View All Courses</b></a>
     </header>
@@ -2379,7 +2430,6 @@
 
 </main>
 
-</div>
 </div>
 </div>
 </div>
