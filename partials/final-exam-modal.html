@@ -319,18 +319,11 @@ function exam() {
       PASSING_SCORE = 80;
     }
 
-    // look into the div with a class of .problem-progress for our score
-    // it contains a string that looks like:
-    //    80/100 Points (Graded)
-    // so we use .split(' ') to separate the fraction from the rest
-
-    // next we split the fraction in half by "/" to get the numerator and denominator
-
     var correct = Number(getFraction()[1]);
     var outOf = Number(getFraction()[2]);
 
-    var attempts_used = Number($('#attempts-used').text());
-    var attempts_total = Number($('#attempts-allowed').text());
+    var attempts_used = Number(document.getElementById('#attempts-used').innerText);
+    var attempts_total = Number(document.getElementById('#attempts-allowed').innerText);
 
     return {
       courseType: COURSE_TYPE,
@@ -361,7 +354,11 @@ function exam() {
     }
 
     // update exam score span
-    $('.exam-score-container').text(score);
+    let examScoreMessage = document.querySelectorAll('.exam-score-container');
+
+    examScoreMessage.forEach(function(el) {
+      el.innerText = score;
+    });
 
     // we have a score, let's do stuff
     if (score >= passingScore) {
@@ -383,7 +380,9 @@ function exam() {
         type:     'POST',
         //url:      '/accredible/request_certificate',
         async:     false,
-        data:     {'course_id': window.$$course_id},
+        data:     {
+          'course_id': window.$$course_id
+        },
         success:  function(data) {
           // console.log('[gym] certificate request successful: ', data);
         }
