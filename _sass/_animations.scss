@@ -302,30 +302,104 @@
 
 // Fades animation
 @mixin fades {
-  @for $n from 1 through 5 {
-    @keyframes fade-#{$n} {
-      $counter: 0;
-
-      @for $i from 0 through 100 {
-        @if ($i % 20 == 0) {
-          // increment our counter only every 20 steps
-          $counter: $counter + 1;
-
-          // stash our interpolated step as a variable to prevent linter errors
-          $x: "#{$i}%";
-
-          // Render percentage (keyframe step)
-          #{$x} {
-
-            // If the counter matches $n, set opacity to 1
-            @if $n == $counter {
-              opacity: 1;
-            } @else {
-              opacity: 0;
-            }
-          }
-        }
-      }
+  @keyframes fade-1 {
+    0% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-2 {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fade-3 {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fade-4 {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fade-5 {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
   }
 }
