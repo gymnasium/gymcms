@@ -157,7 +157,7 @@ body.view-in-course {
 
 .white-panel,
 .container.white-panel {
-  background-color: white;
+  background-color: $gym-white;
   border: 1px solid #ccc;
   border-radius: 2px;
   padding: 2.2em;
@@ -230,7 +230,7 @@ body.view-in-course {
   }
 
   .nav li.dropdown.open {
-    background-color: white;
+    background-color: $gym-white;
     a {
       color: $gym-orange;
     }
@@ -280,7 +280,7 @@ body.view-in-course {
       display: inline;
 
       a {
-        color: white;
+        color: $gym-white;
       }
 
       a:hover,
@@ -323,7 +323,7 @@ body.view-in-course {
     font-family: $gym-font-stack;
 
     &.gym-button {
-      color: white;
+      color: $gym-white;
     }
   }
 
@@ -366,12 +366,12 @@ body.view-in-course {
 
     &:hover,
     &:focus {
-      border: 1px solid white;
+      border: 1px solid $gym-white;
     }
   }
 }
 
-@include media-breakpoint-down(sm) {
+@include breakpoint(small, max) {
   .navbar-default {
     .navbar-collapse,
     .navbar-form {
@@ -394,7 +394,7 @@ body.view-in-course {
   }
 }
 
-@include media-breakpoint-up(md) {
+@include breakpoint(medium, min) {
   .navbar-collapse.collapse {
     padding-left: 0;
     padding-right: 0;
@@ -490,7 +490,7 @@ div.wrapper-footer {
   margin-top: 0;
   background-color: $gym-black;
   border-top: 10px solid $gym-orange-light;
-  color: white;
+  color: $gym-white;
   min-height: 170px;
 
   footer {
@@ -513,7 +513,7 @@ div.wrapper-footer {
 
         a,
         a:link {
-          color: white;
+          color: $gym-white;
           font-family: $gym-font-stack;
         }
         a:hover {
@@ -572,7 +572,7 @@ section {
 
 .gym-button:link,
 .gym-button:visited {
-  color: white;
+  color: $gym-white;
   font-family: $gym-font-stack;
 }
 
@@ -619,7 +619,7 @@ a.gym-button:link,
   border-radius: 0.125em;
 
   background-color: $gym-orange;
-  color: white;
+  color: $gym-white;
   font-weight: bold;
   font-size: 1em;
   text-align: center;
@@ -629,7 +629,7 @@ a.gym-button:link,
   a:link,
   a:visited,
   a b {
-    color: white;
+    color: $gym-white;
     font: bold 1.2em/1 $gym-font-stack;
   }
   a:hover {
@@ -639,7 +639,7 @@ a.gym-button:link,
   b {
     font: bold 1.2em/1 $gym-font-stack;
     letter-spacing: 0.025em;
-    color: white;
+    color: $gym-white;
   }
 }
 
@@ -674,13 +674,13 @@ body {
   .register .form-actions button[type="submit"].gym-button:hover,
   .courseware-bookmarks-button .bookmarks-list-button:hover {
     background-color: $gym-button-background-hover;
-    color: white;
+    color: $gym-white;
     background-image: none;
     box-shadow: none;
     text-decoration: none;
     font-weight: bold;
     border: none;
-    color: white;
+    color: $gym-white;
     font-family: $gym-font-stack;
 
     a,
@@ -689,10 +689,10 @@ body {
     a:link:visited,
     a:link:visited:hover {
       text-decoration: none;
-      color: white;
+      color: $gym-white;
 
       b {
-        color: white;
+        color: $gym-white;
       }
     }
   }
@@ -751,7 +751,7 @@ body {
   position: relative;
   top: 10%;
   width: 37em;
-  background: #fff;
+  background: $gym-white;
   padding: 1.2em;
   border: 1.2em solid #444;
   border-radius: 0.125em;
@@ -996,14 +996,14 @@ div.status,
 
   .message-title {
     font: bold 2em/1.25 $gym-font-stack;
-    color: #fff !important;
+    color: $gym-white !important;
     text-transform: capitalize;
     margin-top: 0;
     margin-bottom: 0.625em;
   }
 
   .message-copy {
-    color: #fff !important;
+    color: $gym-white !important;
   }
 
   div.status p.message-copy {
@@ -1011,13 +1011,13 @@ div.status,
   }
 
   a {
-    color: white !important;
-    border-bottom: 1px solid white !important;
+    color: $gym-white !important;
+    border-bottom: 1px solid $gym-white !important;
   }
 
   a:hover,
   a:focus {
-    border-bottom: 1px solid #fff !important;
+    border-bottom: 1px solid $gym-white !important;
   }
 
   ul {
@@ -1027,7 +1027,7 @@ div.status,
   li {
     font: bold 1em/1.5 $gym-text-font-stack;
     letter-spacing: 0.01em;
-    color: #fff;
+    color: $gym-white;
     margin-top: 1em;
   }
 
@@ -1043,7 +1043,7 @@ div.status,
 .login-register div.form-field label.error,
 div.form-field label.error {
   display: inline-block;
-  color: #fff;
+  color: $gym-white;
   padding: 0.5em;
   background: #d43f3a;
   border-radius: 2px;
@@ -1115,7 +1115,7 @@ main label a:not([class]):active {
   }
 
   form {
-    background: white;
+    background: $gym-white;
   }
   /*** linkedin Login button styles ***/
 
@@ -1219,7 +1219,7 @@ main label a:not([class]):active {
   }
 
   form {
-    background: white;
+    background: $gym-white;
   }
 
   .note {
@@ -1261,7 +1261,7 @@ main label a:not([class]):active {
 
 .register.container,
 .login.container {
-  background-color: white;
+  background-color: $gym-white;
   border: 1px solid $gym-gray;
   margin-top: 1.8em;
   border-radius: 2px;
