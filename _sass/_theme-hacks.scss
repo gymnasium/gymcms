@@ -370,7 +370,7 @@ body.view-in-course {
   }
 }
 
-@include media-breakpoint-down(sm) {
+@include breakpoint(small, max) {
   .navbar-default {
     .navbar-collapse,
     .navbar-form {
@@ -393,7 +393,7 @@ body.view-in-course {
   }
 }
 
-@include media-breakpoint-up(md) {
+@include breakpoint(medium, min) {
   .navbar-collapse.collapse {
     padding-left: 0;
     padding-right: 0;
@@ -1514,7 +1514,7 @@ https://github.com/gymnasium/tracker/issues/81
 
 /* syllabus / add single-column breakpoint fix */
 
-@media (max-width: 62em) {
+@include breakpoint(medium, max) {
 
   #main .info-wrapper .updates {
     padding-bottom: 0;
@@ -1532,7 +1532,7 @@ https://github.com/gymnasium/tracker/issues/81
 
 /* dashboard / update single-column layout style */
 
-@media (max-width: 62em) {
+@include breakpoint(medium, max) {
 
   #dashboard-main #my-courses {
     border-right: 0;
@@ -1550,7 +1550,7 @@ https://github.com/gymnasium/tracker/issues/81
   padding-top: 1.2em;
 }
 
-@media (max-width: 62em) {
+@include breakpoint(medium, max) {
 
   .course-about .course-about-overview {
     padding-right: 0;
@@ -1781,7 +1781,7 @@ https://github.com/gymnasium/tracker/issues/77
   padding-bottom: 1rem !important;
 }
 
-@media (max-width: 75em) {
+@include breakpoint(large, max) {
 
   .cookiebanner {
     text-align: left !important;
