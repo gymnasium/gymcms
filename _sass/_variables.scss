@@ -35,6 +35,10 @@ $gym-teal-darker: adjust-color($gym-teal, $lightness: -26.9%); // #2b4d4b
 $gym-text-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $gym-font-stack: "brandon-grotesque", $gym-text-font-stack;
 
+// TODO: move these to gymcms
+$aquent-icon-image: url("https://thegymnasium.com/static/gymnasium/images/aquent-icon.png");
+$vitamin-t-icon-image: url("https://thegymnasium.com/static/gymnasium/images/vitamin-t-icon.png");
+
 
 // A map of (commonly used) breakpoints.
 // TODO: we have a lot of other breakpoints specified in our CSS - maybe we can work to combine/reduce some of these rules
