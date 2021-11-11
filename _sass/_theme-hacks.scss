@@ -6,6 +6,7 @@
 
 /* --- BEGIN: Migrated from gymnasium.scss in the open edx theme --- */
 /* negate a silly style rule inherited from the platform */
+/* negate a silly style rule inherited from the platform */
 html {
   .container > div,
   .home .container.grey.div {
@@ -178,7 +179,7 @@ body.view-in-course {
 
   h3 {
     font: bold 1.2em/1.4 $gym-font-stack;
-    color: #222;
+    color: $gym-black;
     letter-spacing: 0.02em;
     word-spacing: 0.04em;
     margin-top: 1em;
@@ -240,7 +241,7 @@ body.view-in-course {
     .dropdown-menu {
       border: none;
       a:hover {
-        color: $gym-dark-gray;
+        color: $gym-black;
       }
     }
 
@@ -308,7 +309,7 @@ body.view-in-course {
 
 #secondary-nav {
   height: 70px;
-  background-color: $gym-dark-gray;
+  background-color: $gym-black;
   position: relative;
   z-index: 999;
 
@@ -348,7 +349,7 @@ body.view-in-course {
     padding-left: 0;
     padding-right: 0;
     padding-top: 5px;
-    background-color: $gym-dark-gray;
+    background-color: $gym-black;
     border-color: transparent;
     border: none;
     margin-bottom: 0;
@@ -370,7 +371,7 @@ body.view-in-course {
   }
 }
 
-@include breakpoint(small, max) {
+@include media-breakpoint-down(sm) {
   .navbar-default {
     .navbar-collapse,
     .navbar-form {
@@ -393,7 +394,7 @@ body.view-in-course {
   }
 }
 
-@include breakpoint(medium, min) {
+@include media-breakpoint-up(md) {
   .navbar-collapse.collapse {
     padding-left: 0;
     padding-right: 0;
@@ -446,7 +447,7 @@ header.global {
   border: none;
   width: inherit;
   height: 120px;
-  background-color: $gym-dark-gray;
+  background-color: $gym-black;
 
   .container,
   .container.grey {
@@ -487,7 +488,7 @@ header.global {
 
 div.wrapper-footer {
   margin-top: 0;
-  background-color: $gym-dark-gray;
+  background-color: $gym-black;
   border-top: 10px solid $gym-orange-light;
   color: white;
   min-height: 170px;
@@ -768,7 +769,7 @@ body {
 
 .dialog legend b {
   font: 900 1.6em/1.2 $gym-font-stack;
-  color: $gym-dark-gray;
+  color: $gym-black;
   letter-spacing: 0.06em;
   word-spacing: 0.05em;
   text-transform: uppercase;
@@ -818,7 +819,7 @@ body {
 
 .dialog form label {
   font: 1.1em/1.2 $gym-font-stack;
-  color: $gym-dark-gray;
+  color: $gym-black;
   letter-spacing: 0.03em;
   word-spacing: 0.05em;
   text-transform: uppercase;
@@ -1006,7 +1007,7 @@ div.status,
   }
 
   div.status p.message-copy {
-    color: $gym-dark-gray !important;
+    color: $gym-black !important;
   }
 
   a {
