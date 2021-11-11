@@ -240,7 +240,7 @@ body.view-in-course {
     .dropdown-menu {
       border: none;
       a:hover {
-        color: $gym-dark-grey;
+        color: $gym-dark-gray;
       }
     }
 
@@ -308,7 +308,7 @@ body.view-in-course {
 
 #secondary-nav {
   height: 70px;
-  background-color: $gym-dark-grey;
+  background-color: $gym-dark-gray;
   position: relative;
   z-index: 999;
 
@@ -348,7 +348,7 @@ body.view-in-course {
     padding-left: 0;
     padding-right: 0;
     padding-top: 5px;
-    background-color: $gym-dark-grey;
+    background-color: $gym-dark-gray;
     border-color: transparent;
     border: none;
     margin-bottom: 0;
@@ -446,7 +446,7 @@ header.global {
   border: none;
   width: inherit;
   height: 120px;
-  background-color: $gym-dark-grey;
+  background-color: $gym-dark-gray;
 
   .container,
   .container.grey {
@@ -768,7 +768,7 @@ body {
 
 .dialog legend b {
   font: 900 1.6em/1.2 $gym-font-stack;
-  color: $gym-dark-grey;
+  color: $gym-dark-gray;
   letter-spacing: 0.06em;
   word-spacing: 0.05em;
   text-transform: uppercase;
@@ -818,7 +818,7 @@ body {
 
 .dialog form label {
   font: 1.1em/1.2 $gym-font-stack;
-  color: $gym-dark-grey;
+  color: $gym-dark-gray;
   letter-spacing: 0.03em;
   word-spacing: 0.05em;
   text-transform: uppercase;
@@ -1006,7 +1006,7 @@ div.status,
   }
 
   div.status p.message-copy {
-    color: $gym-dark-grey !important;
+    color: $gym-dark-gray !important;
   }
 
   a {
