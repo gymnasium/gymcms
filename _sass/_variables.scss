@@ -10,6 +10,10 @@ $gym-dark-gray-2: #333;
 $gym-light-gray: #a6a6a6;
 $gym-light-page-background: #ebebeb;
 
+$gym-button-background-hover: $gym-light-gray;
+$gym-button-background-active: #939393;
+$gym-button-background-focus: $gym-button-background-active;
+
 // Fancy colors
 $gym-green: #2c9959;
 $gym-green-dark: adjust-color($gym-green, $lightness: -7.7%); // #237b47
