@@ -38,10 +38,6 @@
 
 // reset default (text) links
 
-#main .title a {
-  font-weight: bold;
-}
-
 #main .title a,
 #main [class="all-caps"] a {
   line-height: 1.35;
@@ -449,6 +445,11 @@ main h3 {
 .course header,
 .tutorial header {
   margin-top: .8em;
+}
+
+.course header h3,
+.tutorial header h3 {
+  font-weight: bold;
 }
 
 .subhead-topic,
