@@ -157,31 +157,39 @@ body.view-in-course {
 .white-panel,
 .container.white-panel {
   background-color: $gym-white;
-  border: 1px solid #ccc;
+  border: 1px solid $gym-gray;
   border-radius: 2px;
-  padding: 2.2em;
-  padding-top: 1em;
-  font: 1.2em/1.5 $gym-text-font-stack;
+  font-family: $gym-text-font-stack;
+  font-size: 1.2em;
+  line-height: 1.5;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding: 1em 2.2em 2.2em;
 
   ul {
     padding-left: 0;
   }
+
   a {
     font-family: $gym-text-font-stack;
   }
 
   h2 {
-    font: 900 1em/1.3 $gym-font-stack;
+    font-family: $gym-font-stack;
+    font-size: 1.2em;
+    font-weight: 900;
+    line-height: 1.3;
   }
 
   h3 {
-    font: bold 1.2em/1.4 $gym-font-stack;
+    font-weight: bold;
     color: $gym-black;
+    font-family: $gym-font-stack;
+    font-size: 1.2em;
     letter-spacing: 0.02em;
-    word-spacing: 0.04em;
+    line-height: 1.4;
     margin-top: 1em;
+    word-spacing: 0.04em;
   }
 }
 
