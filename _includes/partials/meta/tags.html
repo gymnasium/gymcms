@@ -41,24 +41,16 @@
 Add DNS preload/prefetch meta tags to help prime the browser to fetch our 1st and 3rd party resources
 {%- endcomment -%}
 <link rel="preconnect" href="{{ site.url }}">
-
 <link rel="dns-prefetch" href="https://api.segment.io">
 <link rel="dns-prefetch" href="https://cdn.segment.com">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="{{ site.url }}/css/main.css?{{ site.time | date:'%s' }}">
 
 {%- comment -%}
 Exclude rendered CSS in meta tags on localhost, for development/convenience reasons
 {%- endcomment -%}
 {%- unless site.environment == 'local' -%}
-
-  {%- capture inline -%}
-    {%- comment -%}This file is at the root of the _includes folder{%- endcomment -%}
-    {%- include inline.scss -%} 
-  {%- endcapture -%}
-
-  <style>{{ inline | scssify }}</style>
-
   {%- if page.css -%}
     {%- for css_file in page.css -%}
       <link rel="stylesheet" href="{{ site.url }}{{ css_file }}?{{ site.time | date:'%s' }}">
