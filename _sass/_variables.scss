@@ -1,5 +1,6 @@
 // Colors
 $gym-orange: #f8971d;
+$gym-orange-light: rgba(248, 151, 32, 0.9);
 $gym-black: #222;
 $gym-white: #fff;
 $gym-gray: #ccc;
@@ -8,6 +9,10 @@ $gym-dark-gray: #444;
 $gym-dark-gray-2: #333;
 $gym-light-gray: #a6a6a6;
 $gym-light-page-background: #ebebeb;
+
+$gym-button-background-hover: $gym-light-gray;
+$gym-button-background-active: #939393;
+$gym-button-background-focus: $gym-button-background-active;
 
 // Fancy colors
 $gym-green: #2c9959;
@@ -29,6 +34,10 @@ $gym-teal-darker: adjust-color($gym-teal, $lightness: -26.9%); // #2b4d4b
 // Fonts
 $gym-text-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $gym-font-stack: "brandon-grotesque", $gym-text-font-stack;
+
+// TODO: move these to gymcms
+$aquent-icon-image: url("https://thegymnasium.com/static/gymnasium/images/aquent-icon.png");
+$vitamin-t-icon-image: url("https://thegymnasium.com/static/gymnasium/images/vitamin-t-icon.png");
 
 
 // A map of (commonly used) breakpoints.
