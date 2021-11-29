@@ -125,6 +125,9 @@ JS or tracking pixels to be included at the bottom of the theme
 <iframe id="geolocator" src="{{ geolocator_src }}" frameborder="0" style="width:1px;height:1px;visibility:hidden;display:none;"></iframe>
 {%- endcomment -%}
 
+{%- comment -%}
+Add vendor JS file here instead of theme
+{%- endcomment -%}
 <script defer src="{{site.url}}/js/vendor/bootstrap.min.js?{{ site.time | date:'%s' }}"></script>
 <script async defer src="{{site.url}}/js/vendor/jquery.validate.min.js?{{ site.time | date:'%s' }}"></script>
 <script async defer src="{{site.url}}/js/vendor/prism.min.js?{{ site.time | date:'%s' }}"></script>
