@@ -2097,3 +2097,27 @@ Footer CSS (migrated from footer.scss)
     }
   }
 }
+
+/* ---
+Discussion Forum Related
+TODO: migrate discussion CSS out of theme
+--- */
+
+#discussion-container {
+
+  // Add post button wrapper
+  .forum-actions {
+    margin-left: 10px;
+
+    // Add post button
+    button {
+      background-color: $gym-orange;
+      border-color: $gym-orange;
+      
+      &:active,
+      &:hover {
+        border-color: $gym-orange;
+      }
+    }
+  }
+}
