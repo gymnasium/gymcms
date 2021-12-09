@@ -9,6 +9,7 @@ poster_art: /img/course-artwork/png/gym-103.png
 topic: "User Experience"
 short_description: "Learn how to apply user-centered design principles to improve your website and mobile app design. A must-take course for anyone working in web design and development."
 instructor: jwebb
+credential: "Certificate"
 skills:
  - label: "User research"
  - label: "Wireframing and prototyping"

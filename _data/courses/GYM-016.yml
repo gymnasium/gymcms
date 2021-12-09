@@ -11,6 +11,7 @@ subtopics:
   - label: "Accessibility"
 short_description: "Learn accessible and responsive design best practices to help make a more user-friendly web for everyone."
 instructor: emarcotte
+credential: "Badge"
 skills:
   - label: "Web accessibility"
   - label: "Responsive design"

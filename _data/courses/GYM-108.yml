@@ -7,10 +7,11 @@ live: true
 url: /courses/course-v1:GYM+108+0/about
 poster_art: /img/course-artwork/png/gym-108.png
 topic: "JavaScript"
-subtopics: 
+subtopics:
  - label: "jQuery"
 short_description: "This course will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples."
 instructor: kchisholm
+credential: "Certificate"
 skills:
  - label: "Developer Tools"
  - label: "Events and Event Handlers"

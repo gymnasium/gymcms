@@ -9,7 +9,8 @@ poster_art: /img/course-artwork/png/gym-109.png
 topic: "Web Design & Development"
 short_description: "This is a hands-on, code-intensive course on how to build high-performance, responsive websites that look great across multiple screen sizes and devices."
 instructor: jpamental
-skills: 
+credential: "Certificate"
+skills:
   - label: "Strategic thinking about responsive process"
   - label: "Page layout structure with HTML & CSS"
   - label: "Responsive typography and image techniques"
