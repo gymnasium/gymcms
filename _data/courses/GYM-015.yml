@@ -15,7 +15,8 @@ subtopics:
   - label: "Adobe XD"
 short_description: "Learn how to use prototypes as a communication and collaboration device for building digital products and websites."
 instructor: jbantjes
-credential: "Badge"
+credential: badge
+course_level: null
 skills:
   - label: "How to choose the right method of prototyping"
   - label: "How to articulate the benefits of prototyping"

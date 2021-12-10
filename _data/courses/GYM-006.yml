@@ -9,7 +9,8 @@ poster_art: /img/course-artwork/png/gym-006.png
 topic: "Web Design & Development"
 short_description: "Learn the basics of version control and get a high-level overview of both Git and GitHub. Perfect for someone with little to no first-hand experience with either."
 instructor: jausura
-credential: "Badge"
+credential: badge
+course_level: null
 skills:
   - label: "Version control"
   - label: "Project workflow"

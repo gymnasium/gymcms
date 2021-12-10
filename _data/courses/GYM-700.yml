@@ -9,7 +9,8 @@ poster_art: /img/course-artwork/png/gym-700.png
 topic: "Portfolio Workshop"
 short_description: "Portfolio Workshop"
 instructor: josborn
-credential: ""
+credential: null
+course_level: null
 skills:
   - label: "Populate me"
   - label: "Populate me"

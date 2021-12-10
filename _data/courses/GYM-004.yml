@@ -9,7 +9,8 @@ poster_art: /img/course-artwork/png/gym-004.png
 topic: "Web Design & Development"
 short_description: "Learn how to convert your HTML/CSS design into a WordPress website. Discover how to set up a local development environment, and add WordPress tags to your design."
 instructor: ghodgkinson
-credential: "Badge"
+credential: badge
+course_level: null
 skills:
   - label: "Intermediate HTML/CSS"
   - label: "WordPress themes"

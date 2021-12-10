@@ -9,7 +9,8 @@ poster_art: /img/course-artwork/png/gym-012.png
 topic: "JavaScript"
 short_description: "In this course, you will learn how to build a simple web app using Node.js."
 instructor: tsellon
-credential: "Badge"
+credential: badge
+course_level: null
 skills:
   - label: "Installing Node.js"
   - label: "Using npm to install various packages for your project"

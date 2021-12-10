@@ -9,7 +9,8 @@ poster_art: /img/course-artwork/png/gym-013.png
 topic: "Content Creation"
 short_description: "Learn how to create 3D generated imagery in Maya for use in Virtual Reality production."
 instructor: groberts
-credential: "Badge"
+credential: badge
+course_level: null
 skills:
   - label: "Basic 3D Modeling, Animation and Rigging"
   - label: "Basic 3D Lighting, Rendering and Cameras"
