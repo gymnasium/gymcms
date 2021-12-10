@@ -1156,7 +1156,7 @@ main label a:not([class]):active {
     input {
       margin-bottom: 0.6em;
     }
-  
+
     input + .tip-input {
       margin-top: 0.6em;
     }
@@ -1335,12 +1335,12 @@ main label a:not([class]):active {
       margin-top: 0;
       margin-bottom: -0.2em;
     }
-  
+
     ul {
       margin-top: 1.4em;
       color: $error-color;
     }
-  
+
     li {
       font: bold 1em/1.5 $gym-text-font-stack;
       color: $error-color;
@@ -1466,7 +1466,7 @@ body {
   ul {
     margin-top: 0 !important;
   }
-  
+
   li {
     line-height: 1.35;
     margin-top: 1rem;
@@ -2000,21 +2000,21 @@ Footer CSS (migrated from footer.scss)
   .gym-brand {
     margin-bottom: 1em;
   }
-  
+
   .gymnasium-logo {
     width: 12.5em;
     height: auto;
     margin-top: 0;
     margin-left: 0;
   }
-  
+
   .gym-brand p {
     width: 95%;
     font-size: 1em;
     line-height: 1.55;
     margin-top: 1.2em;
   }
-  
+
   .resources {
     clear: left;
 
@@ -2022,24 +2022,24 @@ Footer CSS (migrated from footer.scss)
       clear: none;
     }
   }
-  
+
   .footer-link-list {
     padding-top: 0.625em;
     margin-top: 0;
     margin-bottom: 1.2em;
   }
-  
+
   ul {
     list-style-type: "";
     padding-left: 0;
     margin-top: 0.95em;
     margin-left: 0;
   }
-  
+
   ul ::marker {
     color: transparent;
   }
-  
+
   li {
     line-height: 1.35;
     height: auto;
@@ -2047,11 +2047,11 @@ Footer CSS (migrated from footer.scss)
     border-right: 0;
     margin-top: 0.6em;
   }
-  
+
   li a {
     color: $gym-white;
   }
-  
+
   a:hover,
   a:focus,
   a:active {
@@ -2062,11 +2062,11 @@ Footer CSS (migrated from footer.scss)
   .open-edx-logo {
     height: auto;
   }
-  
+
   .copyright {
     text-align: left;
   }
-  
+
   .copyright small {
     font-size: 80%;
   }
@@ -2076,14 +2076,14 @@ Footer CSS (migrated from footer.scss)
   li {
     position: relative;
   }
-  
+
   a[data-title] {
     display: inline-block;
 
     &:hover {
       padding-right: 6ch;
     }
-    
+
     &:hover::after,
     &:focus::after,
     &:active::after {
@@ -2113,12 +2113,119 @@ TODO: migrate discussion CSS out of theme
     button {
       background-color: $gym-orange;
       border: 1px solid $gym-orange;
-      
+
       &:active,
       &:hover {
         background-color: $gym-light-gray;
         border: 1px solid $gym-light-gray;
       }
+    }
+  }
+}
+
+#course-content {
+
+  font-size: 16px;
+
+  :link, :visited, :hover, :focus {
+    color: currentColor;
+  }
+
+  .btn-link {
+    font: inherit;
+    color: currentColor;
+  }
+}
+
+.forum-nav-thread.never-read .forum-nav-thread-link {
+  border-color: $gym-orange;
+
+  .icon {
+    color: $gym-orange;
+  }
+}
+
+#course-content {
+
+  .xmodule_HtmlModule {
+    *:not(h1, h2, h3, h4, h5, h6) {
+      font-family: $gym-text-font-stack;
+      font-size: 1em;
+      color: #222;
+    }
+
+    h1 {
+      font: 900 2.25em/1.2 $gym-font-stack;
+      letter-spacing: 0.04em;
+      word-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0 !important;
+    }
+
+    h2 {
+      font: 900 1.8em/1.3 $gym-font-stack;
+      letter-spacing: 0.04em;
+      word-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font: 900 1.2em/1.3 $gym-font-stack;
+      letter-spacing: 0.04em;
+      word-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    h4 {
+      font: 900 1em/1.3 $gym-font-stack;
+      text-transform: none;
+    }
+
+    h5, h6 {
+      text-transform: none;
+    }
+
+    > * {
+      margin-top: 0;
+    }
+
+    * + * {
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .discussion-module .add_post_btn_container {
+    position: relative;
+    top: -1.6em;
+  }
+
+  .add_post_btn_container .btn-link {
+    font-weight: bold;
+
+    &:hover,
+    &:focus {
+      margin-bottom: 2px;
+    }
+  }
+
+  .discussion-module {
+    button.discussion-show {
+      display: none;
+    }
+
+    .discussion-module-title {
+      font-size: 1.4em;
+      font-weight: 900;
+    }
+
+    .inline-discussion-topic, .forum-nav-thread-title, .thread-preview-body {
+      font-family: "Helvetica Neue", sans-serif;
+      font-size: 1em;
+    }
+
+    .forum-nav-thread-title {
+      font-weight: bold;
     }
   }
 }
