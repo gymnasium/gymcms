@@ -6,6 +6,12 @@
   font-size: 100%;
 }
 
+/* Comp-only override  */
+
+.content-wrapper#content {
+  background-color: #fff;
+}
+
 /* Update brand/logo layout */
 
 #secondary-nav .navbar-brand {
@@ -40,8 +46,14 @@ html {
 #comp {
 
 main {
+  position: relative;
   margin-top: 0.8rem;
   margin-bottom: 2rem;
+}
+
+main a:hover,
+main a:focus {
+  margin-bottom: -1px;
 }
 
 @media (min-width: 64em) {
@@ -55,14 +67,17 @@ main {
 
 }
 
-@media (min-width: 64em) and (min-height: 42.5em) {
+@supports (position: sticky) {
+@media (min-width: 64em) and (min-height: 40em) {
 
 main > header > div {
   position: sticky;
   top: 1.6rem;
   width: 100%;
+  height: min-content;
 }
 
+}
 }
 
 main > header h1 {
@@ -93,9 +108,9 @@ nav {
   margin-bottom: 2rem;
 }
 
-nav > div:not(div:first-child) {
-  margin-top: 0.6rem;
-}
+// nav > div:not(div:first-child) {
+//   margin-top: 0.6rem;
+// }
 
 nav ul {
   list-style: initial;
@@ -103,23 +118,61 @@ nav ul {
   margin-bottom: 0;
 }
 
-nav li {
-  margin-top: 0.8rem;
+nav div:first-child li:first-child {
+  list-style: none;
+  margin-left: -1rem;
+}
+
+// nav > div details,
+// nav > div:first-child ul ~ ul {
+//   border-top: 1px dashed #ccc;
+//   padding-top: 0.8rem;
+//   margin-top: 1rem;
+// }
+//
+// nav details summary b {
+//   font-size: 1.2em;
+//   text-decoration: underline;
+//   margin-left: 0.125rem;
+// }
+//
+// nav details ul {
+//   columns: 2 auto;
+//   column-gap: 1.6rem;
+//   margin-top: 1rem;
+//   margin-right: -0.4rem;
+// }
+//
+// nav details li {
+//   line-height: 1.3;
+// }
+//
+// nav details li > * {
+//   display: inline;
+// }
+
+nav > div:last-child ul {
+  list-style: none;
+}
+
+nav li:not(li:first-child) {
+  margin-top: 0.6rem;
 }
 
 nav p {
   font-size: 0.9em;
-  margin-top: 0.6rem;
+  margin-top: 0.4rem;
 }
 
 nav a {
   display: inline-block;
-  line-height: 1;
-  padding: 0.4rem;
-  margin: -0.4rem;
+  padding: 0.2rem;
+  margin-left: -0.2rem;
+  margin-right: -0.2rem;
 }
 
 ul[role="list"] {
+  position: relative;
   list-style: none;
   padding-left: 0;
   margin: 1.2rem 0 0;
@@ -131,6 +184,7 @@ ul[role="list"] {
 
 ul[role="list"] > li {
   position: relative;
+  z-index: 1;
   display: grid;
   grid-auto-rows: 1fr auto;
   background-color: #eee;
@@ -170,7 +224,9 @@ li aside {
 }
 
 .topics {
+  display: none;
   padding-left: 0;
+  margin-top: 0.4rem;
   margin-bottom: 0;
 }
 
@@ -181,22 +237,23 @@ li aside {
   line-height: 1.65;
   text-transform: uppercase;
   letter-spacing: 0.06rem;
+  white-space: nowrap;
   margin-right: 0.4rem;
 }
 
-.topics a {
-  display: inline-block;
-  padding: 0.125rem;
-  margin-left: -0.125rem;
-  margin-right: 0.125rem;
-}
+// .topics a {
+//   display: inline-block;
+//   padding: 0.125rem 0.125rem 0;
+//   margin-top: 0.4rem;
+//   margin-left: -0.125rem;
+//   margin-right: 0.125rem;
+// }
 
 .format:not(div) {
   font-size: 0.9em;
   font-weight: bolder;
   text-transform: capitalize;
   margin-top: 0;
-  margin-bottom: 0.6rem;
 }
 
 .full .format::after,
@@ -241,12 +298,12 @@ summary {
   width: 100%;
 }
 
-.info[open] summary b {
-  visibility: hidden;
+.info summary b::before {
+  content: "Show ";
 }
 
 .info[open] summary b::before {
-  content: "Close ";
+  content: "Hide ";
   visibility: visible;
 }
 
@@ -282,7 +339,7 @@ summary {
 .info-details div {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 1rem;
+  gap: 1.2rem;
   margin-top: 1rem;
 }
 
@@ -300,58 +357,250 @@ summary {
   margin-left: 0.8rem;
 }
 
-:target li[class] {
+nav .input-toggle {
+  float: left;
+  margin-left: -1.25rem;
+  margin-right: 0.25rem;
+}
+
+header ~ label,
+header ~ input {
+  position: absolute;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  overflow: hidden;
+}
+
+#toggle-full:not(:checked) ~ ul[role="list"] > li.full,
+#toggle-short:not(:checked) ~ ul[role="list"] > li.short,
+#toggle-tutorial:not(:checked) ~ ul[role="list"] > li.tutorial {
   display: none;
 }
 
-#design:target .design,
-#html:target .html,
-#css:target .css,
-#figma:target .figma,
-#sketch:target .sketch,
-#adobe-xd:target .adobe-xd,
-#invision-studio:target .invision-studio,
-#virtual-reality:target .virtual-reality,
-#accessibility:target .accessibility,
-#design-systems:target .design-systems,
-#development:target .development,
-#javascript:target .javascript,
-#php:target .php,
-#github:target .github,
-#ux:target .ux,
-#prototyping:target .prototyping,
-#career-skills:target .career-skills,
-#productivity:target .productivity,
-#view-all:target li[class],
-#full:target .full,
-#short:target .short,
-#tutorial:target .tutorial {
+#accessibility:target #toggle-full-ui,
+#career-skills:target #toggle-full-ui {
+  cursor: no-drop;
+  user-select: none;
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+
+:target ul[role="list"] > li[class]:not(li.response) {
+  display: none;
+}
+
+ul[role="list"] li.response {
+  position: absolute;
+  z-index: 0;
+  display: grid;
+  background-color: #ff9;
+}
+
+@media (max-width: 64em) {
+
+ul[role="list"]::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 10em;
+}
+
+}
+
+#design:target ul[role="list"] > .design,
+#web-design:target ul[role="list"] > .web-design,
+#html:target ul[role="list"] > .html,
+#css:target ul[role="list"] > .css,
+#figma:target ul[role="list"] > .figma,
+#sketch:target ul[role="list"] > .sketch,
+#adobe-xd:target ul[role="list"] > .adobe-xd,
+#invision-studio:target ul[role="list"] > .invision-studio,
+#data-visualization:target ul[role="list"] > .data-visualization,
+#virtual-reality:target ul[role="list"] > .virtual-reality,
+#accessibility:target ul[role="list"] > .accessibility,
+#design-systems:target ul[role="list"] > .design-systems,
+#web-development:target ul[role="list"] > .web-development,
+#javascript:target ul[role="list"] > .javascript,
+#php:target ul[role="list"] > .php,
+#github:target ul[role="list"] > .github,
+#ux:target ul[role="list"] > .ux,
+#prototyping:target ul[role="list"] > .prototyping,
+#career-skills:target ul[role="list"] > .career-skills,
+#productivity:target ul[role="list"] > .productivity,
+#time-management:target ul[role="list"] > .time-management,
+#full:target ul[role="list"] > .full,
+#short:target ul[role="list"] > .short,
+#tutorial:target ul[role="list"] > .tutorial,
+#all:target ul[role="list"] > li[class] {
   display: grid;
 }
 
-#design:target nav [href="#design"],
-#html:target nav [href="#design"],
-#css:target nav [href="#design"],
-#figma:target nav [href="#design"],
-#sketch:target nav [href="#design"],
-#adobe-xd:target nav [href="#design"],
-#invision-studio:target nav [href="#design"],
-#virtual-reality:target nav [href="#design"],
-#development:target nav [href="#development"],
-#javascript:target nav [href="#development"],
-#php:target nav [href="#development"],
-#github:target nav [href="#development"],
+nav [href="#all"],
+#web-design:target nav [href="#web-design"],
+#web-development:target nav [href="#web-development"],
 #ux:target nav [href="#ux"],
 #prototyping:target nav [href="#prototyping"],
 #accessibility:target nav [href="#accessibility"],
 #career-skills:target nav [href="#career-skills"],
-#productivity:target nav [href="#career-skills"],
-#full:target nav [href="#full"],
-#short:target nav [href="#short"],
-#tutorial:target nav [href="#tutorial"],
-#view-all:target nav [href="#view-all"] {
+#html:target nav [href="#html"],
+#css:target nav [href="#css"],
+#javascript:target nav [href="#javascript"],
+#php:target nav [href="#php"],
+#github:target nav [href="#github"],
+#design-systems:target nav [href="#design-systems"],
+#figma:target nav [href="#figma"],
+#sketch:target nav [href="#sketch"],
+#adobe-xd:target nav [href="#adobe-xd"],
+#invision-studio:target nav [href="#invision-studio"],
+#data-visualization:target nav [href="#data-visualization"],
+#virtual-reality:target nav [href="#virtual-reality"],
+#productivity:target nav [href="#productivity"],
+#time-management:target nav [href="#time-management"],
+#all:target nav [href="#all"] {
   background-color: #ff9;
+  border-radius: 0.1875rem;
+}
+
+:target nav [href="#all"] {
+  background-color: transparent;
+  outline: initial;
+}
+
+#web-design:target .topics li.web-design:not(li.web-design:first-child),
+#web-development:target .topics li.web-development:not(li.web-development:first-child),
+#ux:target .topics li.ux:not(li.ux:first-child),
+#prototyping:target .topics li.prototyping:not(li.prototyping:first-child),
+#accessibility:target .topics li.accessibility:not(li.accessibility:first-child),
+#career-skills:target .topics li.career-skills:not(li.career-skills:first-child),
+#html:target .topics li.html:not(li.html:first-child),
+#css:target .topics li.css:not(li.css:first-child),
+#javascript:target .topics li.javascript:not(li.javascript:first-child),
+#php:target .topics li.php:not(li.php:first-child),
+#github:target .topics li.github:not(li.github:first-child),
+#design-systems:target .topics li.design-systems:not(li.design-systems:first-child),
+#figma:target .topics li.figma:not(li.figma:first-child),
+#sketch:target .topics li.sketch:not(li.sketch:first-child),
+#adobe-xd:target .topics li.adobe-xd:not(li.adobe-xd:first-child),
+#invision-studio:target .topics li.invision-studio:not(li.invision-studio:first-child),
+#data-visualization:target .topics li.data-visualization:not(li.data-visualization:first-child),
+#virtual-reality:target .topics li.virtual-reality:not(li.virtual-reality:first-child),
+#productivity:target .topics li.productivity:not(li.productivity:first-child),
+#time-management:target .topics li.time-management:not(li.time-management:first-child) {
+  display: none;
+}
+
+#web-design:target .topics li:first-child:not(li.web-design:first-child)::before {
+  content: "web design";
+  white-space: nowrap;
+  margin-right: 0.625rem;
+}
+
+#web-development:target .topics li:first-child:not(li.web-development:first-child)::before {
+  content: "web development";
+  white-space: nowrap;
+  margin-right: 0.625rem;
+}
+
+#ux:target .topics li:first-child:not(li.ux:first-child)::before {
+  content: "ux";
+  margin-right: 0.625rem;
+}
+
+#prototyping:target .topics li:first-child:not(li.prototyping:first-child)::before {
+  content: "prototyping";
+  margin-right: 0.625rem;
+}
+
+#accessibility:target .topics li:first-child:not(li.accessibility:first-child)::before {
+  content: "accessibility";
+  margin-right: 0.625rem;
+}
+
+#career-skills:target .topics li:first-child:not(li.career-skills:first-child)::before {
+  content: "career skills";
+  white-space: nowrap;
+  margin-right: 0.625rem;
+}
+
+#html:target .topics li:first-child:not(li.html:first-child)::before {
+  content: "html";
+  margin-right: 0.625rem;
+}
+
+#css:target .topics li:first-child:not(li.css:first-child)::before {
+  content: "css";
+  margin-right: 0.625rem;
+}
+
+#javascript:target .topics li:first-child:not(li.javascript:first-child)::before {
+  content: "javascript";
+  margin-right: 0.625rem;
+}
+
+#php:target .topics li:first-child:not(li.php:first-child)::before {
+  content: "php";
+  margin-right: 0.625rem;
+}
+
+#github:target .topics li:first-child:not(li.github:first-child)::before {
+  content: "github";
+  margin-right: 0.625rem;
+}
+
+#design-systems:target .topics li:first-child:not(li.design-systems:first-child)::before {
+  content: "design systems";
+  white-space: nowrap;
+  margin-right: 0.625rem;
+}
+
+#figma:target .topics li:first-child:not(li.figma:first-child)::before {
+  content: "figma";
+  margin-right: 0.625rem;
+}
+
+#sketch:target .topics li:first-child:not(li.sketch:first-child)::before {
+  content: "sketch";
+  margin-right: 0.625rem;
+}
+
+#adobe-xd:target .topics li:first-child:not(li.adobe-xd:first-child)::before {
+  content: "adobe-xd";
+  white-space: nowrap;
+  margin-right: 0.625rem;
+}
+
+#invision-studio:target .topics li:first-child:not(li.invision-studio:first-child)::before {
+  content: "invision studio";
+  white-space: nowrap;
+  margin-right: 0.625rem;
+}
+
+#data-visualization:target .topics li:first-child:not(li.data-visualization:first-child)::before {
+  content: "data visualization";
+  white-space: nowrap;
+  margin-right: 0.625rem;
+}
+
+#virtual-reality:target .topics li:first-child:not(li.virtual-reality:first-child)::before {
+  content: "virtual reality";
+  white-space: nowrap;
+  margin-right: 0.625rem;
+}
+
+#productivity:target .topics li:first-child:not(li.productivity:first-child)::before {
+  content: "productivity";
+  margin-right: 0.625rem;
+}
+
+#time-management:target .topics li:first-child:not(li.time-management:first-child)::before {
+  content: "time management";
+  white-space: nowrap;
+  margin-right: 0.625rem;
 }
 
 }
-

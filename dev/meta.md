@@ -6,6 +6,6 @@ catalog: false
 og_title: "DEV"
 og_description: "..."
 og_art: /img/brand/og/gym-brand-og.png
-og_url: https://thegymnasium.com/
+og_url: https://thegymnasium.com
 robots: none
 ---
