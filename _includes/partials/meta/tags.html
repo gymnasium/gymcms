@@ -48,7 +48,7 @@ Add DNS preload/prefetch meta tags to help prime the browser to fetch our 1st an
 <link rel="dns-prefetch" href="https://api-iam.intercom.io">
 <link rel="stylesheet" href="{{ site.url }}/css/main.css?{{ site.time | date:'%s' }}">
 
-{%- comment -%}
+{% comment -%}
 Exclude rendered CSS in meta tags on localhost, for development/convenience reasons
 {%- endcomment -%}
 {%- unless site.environment == 'local' -%}
@@ -70,7 +70,9 @@ Migrate from theme to gymcms
 <link rel="preload" href="{{ site.url }}/fonts/brandon_blk-webfont.woff2" as="font" type="font/woff2">
 <link rel="preload" href="{{ site.url }}/fonts/brandon_blk_it-webfont.woff2" as="font" type="font/woff2">
 
+{%- comment -%} Do we really need to load typekit?
 <script async defer src="//use.typekit.net/rhf0qta.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
+{%- endcomment -%}
 
 <link rel="stylesheet" href="{{ site.url }}/css/vendor/bootstrap.css?{{ site.time | date:'%s' }}">
