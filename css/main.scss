@@ -2132,7 +2132,7 @@ TODO: migrate discussion CSS out of theme
   }
 
   .forum-nav-browse-filter-input {
-    font-weight: 12px !important;
+    font-size: 12px !important;
   }
 
   .forum-search .search-button,
@@ -2145,6 +2145,7 @@ TODO: migrate discussion CSS out of theme
     font-family: $gym-font-stack;
     font-weight: bold;
     font-size: 1.2em;
+    line-height: 1;
     text-align: center;
 
     &:hover {
