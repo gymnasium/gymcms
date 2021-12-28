@@ -32,7 +32,6 @@
   background-size: cover;
   background-blend-mode: luminosity;
   animation: 60s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite running;
-  will-change: background-image;
 }
 
 // animation: 60s ease-in-out infinite running slide-show;
