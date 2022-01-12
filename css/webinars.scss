@@ -1,5 +1,7 @@
 ---
 ---
+// TODO: refactor webinars.scss and collections.scss into one holistic, agnostic stylesheet
+
 @import 'variables';
 @import 'mixins';
 
@@ -57,7 +59,11 @@
   }
 }
 
-// --- webinar ---
+// --- webinar catalog ---
+#main > .container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 
 // --- webinar--card ---
 .webinar {
