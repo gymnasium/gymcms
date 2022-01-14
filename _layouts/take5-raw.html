@@ -21,12 +21,6 @@
           //
           {%- endcomment -%}
 
-          <div class="embed-full-width" id="tutorial-video">
-            <div class="embed-responsive embed-responsive-16by9">
-              {% include take5/video.html video_ID=course.video_ID %}
-            </div>
-          </div>
-
           <!-- The duration of this video is {{course.video_duration}} -->
 
           <div class="take5--info" id="tutorial-info">
@@ -45,19 +39,24 @@
                       {% endif %}
                     </header>
                     <p class="description">{{ course.short_description }}</p>
-
-                    {%- comment -%}
-                    //
-                    // RELATED CONTENT
-                    //
-                    (Code and other links)
-                    //
-                    {%- endcomment -%}
+                    <div class="embed" id="tutorial-video">
+                      <div class="embed-responsive embed-responsive-16by9">
+                        {% include take5/video.html video_ID=course.video_ID %}
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <!-- /column -->
                 <!-- column -->
                 <div class="col-md-4">
+                {%- comment -%}
+                //
+                // RELATED CONTENT
+                //
+                (Code and other links)
+                //
+                {%- endcomment -%}
+
                 <!-- Resources -->
 
                 {% if course.project_files == null and course.related_content == null %}
