@@ -215,6 +215,16 @@ main h3 {
   &--main {
     background-color: $gym-white;
 
+    // in-page column layout
+
+    .embed {
+      background-color: #d2d2d2;
+      border: 1px solid $gym-gray-2;
+      margin-top: 1.6em;
+    }
+
+    // in-page banner layout-
+
     .embed-full-width {
       background-color: #d2d2d2;
       border-top: 1px solid $gym-dark-gray;
