@@ -2265,7 +2265,7 @@ TODO: migrate discussion CSS out of theme
 // Info/Courseware pages
 
 [src*="gym-100"][hidden] + *:before {
-  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
+  content: "{{ site.data.courses.GYM-100.retired_message[2] }}" !important;
 }
 
 [src*="gym-100"] + *:before,
