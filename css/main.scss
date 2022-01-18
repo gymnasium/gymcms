@@ -2245,29 +2245,52 @@ TODO: migrate discussion CSS out of theme
   }
 }
 
-// Retired courses
+// Retired (interim) message
 
-.retired {
-
-  .course-description p:before {
-    display: block;
-    white-space: pre-wrap;
-    font-weight: bold;
-    line-height: inherit;
-    color: $gym-black;
-    background-color: #fef7db;
-    padding: 1.75rem 2rem 2rem;
-    border: 1px solid #222;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
+.retired-message .course-description p:before,
+[src*="gym-100"] + *:before,
+[src*="gym-100"][hidden] + *:before {
+  display: block;
+  font-weight: bold;
+  line-height: inherit;
+  white-space: pre-wrap;
+  color: $gym-black;
+  background-color: #fef7db;
+  padding: 1.675rem 2rem 2rem;
+  border: 1px solid $gym-black;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-.retired[data-course-id="100"] {
+.retired-message[data-course-id="100"] .course-description p:before {
+  content: "{{ site.data.courses.GYM-100.retired_message | replace: '<br>', '\a' }}";
+}
 
-  .course-description p:before {
-    content: "This course is retiring on March 25, 2022. \a Enrollment ends on January 31, 2022.";
-  }
+// Courseware pages
 
+[src*="gym-100"] + *:before,
+[src*="gym-100"][hidden] + *:before {
+  position: relative;
+  content: "{{ site.data.courses.GYM-100.retired_message | replace: '<br>', '' }}";
+  font-size: 1.3225em;;
+  padding: 2rem;
+  border-top: 0;
+  margin: 0;
+}
+
+// About page
+
+[src*="gym-100"]:not([hidden]) {
+  margin-top: 5em;
+}
+
+.retired-message [src*="gym-100"] {
+  margin-top: 0
+}
+
+[src*="gym-100"] + *:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
