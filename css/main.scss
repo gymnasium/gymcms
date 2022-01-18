@@ -2294,7 +2294,7 @@ TODO: migrate discussion CSS out of theme
   top: 0;
   left: 0;
   width: 100%;
-  content: "{{ site.data.courses.GYM-100.retired_message[1] | remove: '<br>' }}";
+  content: "{{ site.data.courses.GYM-100.retired_message[1] | remove: '<br>' }}" !important;
 }
 
 // Catalog page
