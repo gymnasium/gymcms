@@ -40,7 +40,7 @@ permalink: /courses/take5/course-list-recent
 {%- for item in recent -%}
   {%- assign course = site.data.take5[item] -%}
 
-  <li class="course-item {% if course.retired %}retired{% endif %}" data-course-id="{{ course.course_ID | remove: 'GYM-' }}">
+  <li class="course-item" data-course-id="{{ course.course_ID | remove: 'GYM-' }}">
     <article class="row">
       <figure class="col-md-4">
         <a href="{{ course.title | slugify | prepend: base_path }}">
