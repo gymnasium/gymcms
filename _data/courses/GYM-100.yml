@@ -4,7 +4,9 @@ title: "Coding for Designers"
 date: 2019-10-28T00:00:00-04:00
 course_type: full
 live: true
-retired_message: "This course is retiring on March 25, 2022.<br> Enrollment ends on January 31, 2022."
+retired_message:
+  1: "This course is retiring on March 25, 2022.<br> Enrollment ends on January 31, 2022."
+  2: "This course is retiring and all coursework needs be completed by March 25, 2022."
 url: /courses/GYM/100/0/about
 poster_art: /img/course-artwork/png/gym-100.png
 topic: "Web Design & Development"
@@ -20,5 +22,4 @@ audience:
   - label: "Creatives"
   - label: "Copy Editors"
   - label: "Anyone struggling with HTML"
-
 ---
