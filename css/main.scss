@@ -2262,35 +2262,45 @@ TODO: migrate discussion CSS out of theme
   margin-bottom: 1em;
 }
 
-.retired-message[data-course-id="100"] .course-description p:before {
-  content: "{{ site.data.courses.GYM-100.retired_message | replace: '<br>', '\a' }}";
-}
+// Info/Courseware pages
 
-// Courseware pages
+[src*="gym-100"][hidden] + *:before {
+  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
+}
 
 [src*="gym-100"] + *:before,
 [src*="gym-100"][hidden] + *:before {
   position: relative;
-  content: "{{ site.data.courses.GYM-100.retired_message | replace: '<br>', '' }}";
   font-size: 1.3225em;;
   padding: 2rem;
   border-top: 0;
   margin: 0;
 }
 
-// About page
-
 [src*="gym-100"]:not([hidden]) {
   margin-top: 5em;
 }
 
-.retired-message [src*="gym-100"] {
-  margin-top: 0
+// Catalog/About page
+
+.retired-message[data-course-id="100"] .course-description p:before {
+  content: "{{ site.data.courses.GYM-100.retired_message[1] | replace: '<br>', '\a' }}";
 }
+
+// About page
 
 [src*="gym-100"] + *:before {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  content: "{{ site.data.courses.GYM-100.retired_message[1] | remove: '<br>' }}";
 }
+
+// Catalog page
+
+.retired-message [src*="gym-100"] {
+  margin-top: 0
+}
+
+// and all coursework needs be completed by March 25, 2022."
