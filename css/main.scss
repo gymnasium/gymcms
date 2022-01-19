@@ -2247,9 +2247,12 @@ TODO: migrate discussion CSS out of theme
 
 // Retired (interim) message
 
+// Catalog, About, Info/Courseware, Dashboard pages
+
 .retired-message .course-description p:before,
-[src*="gym-100"] + *:before,
-[src*="gym-100"][hidden] + *:before {
+.hero-banner #course-image[src*="gym-100"] + *:before,
+#course-title-header [src*="gym-100"][hidden] + *:before,
+#dashboard-main #course-header-100 h1 + *:before {
   display: block;
   font-weight: bold;
   line-height: inherit;
@@ -2262,45 +2265,53 @@ TODO: migrate discussion CSS out of theme
   margin-bottom: 1em;
 }
 
-// Info/Courseware pages
+// About, Info/Courseware, Dashboard pages
 
-[src*="gym-100"][hidden] + *:before {
-  content: "{{ site.data.courses.GYM-100.retired_message[2] }}" !important;
+.hero-banner #course-image[src*="gym-100"] + *:before,
+#course-title-header [src*="gym-100"][hidden] + *:before,
+#dashboard-main #course-header-100 h1 + *:before {
+  font-size: 1.3225em;
 }
 
-[src*="gym-100"] + *:before,
-[src*="gym-100"][hidden] + *:before {
+// Info/Courseware, Dashboard pages
+
+#course-title-header [src*="gym-100"][hidden] + *:before,
+#dashboard-main #course-header-100 h1 + *:before {
   position: relative;
-  font-size: 1.3225em;;
+  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
+}
+
+// About, Info/Courseware pages
+
+.hero-banner #course-image[src*="gym-100"] + *:before,
+#course-title-header [src*="gym-100"][hidden] + *:before {
   padding: 2rem;
   border-top: 0;
   margin: 0;
 }
 
-[src*="gym-100"]:not([hidden]) {
+.hero-banner #course-image[src*="gym-100"]:not([hidden]) {
   margin-top: 5em;
 }
 
-// Catalog/About page
+// Catalog
 
 .retired-message[data-course-id="100"] .course-description p:before {
   content: "{{ site.data.courses.GYM-100.retired_message[1] | replace: '<br>', '\a' }}";
 }
 
-// About page
+// About
 
-[src*="gym-100"] + *:before {
+.hero-banner #course-image[src*="gym-100"] + *:before {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  content: "{{ site.data.courses.GYM-100.retired_message[1] | remove: '<br>' }}" !important;
+  content: "{{ site.data.courses.GYM-100.retired_message[1] | remove: '<br>' }}";
 }
 
-// Catalog page
+// Dashboard
 
-.retired-message [src*="gym-100"] {
-  margin-top: 0
+#dashboard-main #course-header-100 h1 + *:before{
+  margin: 1em;
 }
-
-// and all coursework needs be completed by March 25, 2022."
