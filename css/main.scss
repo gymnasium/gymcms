@@ -1156,7 +1156,7 @@ main label a:not([class]):active {
     input {
       margin-bottom: 0.6em;
     }
-  
+
     input + .tip-input {
       margin-top: 0.6em;
     }
@@ -1335,12 +1335,12 @@ main label a:not([class]):active {
       margin-top: 0;
       margin-bottom: -0.2em;
     }
-  
+
     ul {
       margin-top: 1.4em;
       color: $error-color;
     }
-  
+
     li {
       font: bold 1em/1.5 $gym-text-font-stack;
       color: $error-color;
@@ -1466,7 +1466,7 @@ body {
   ul {
     margin-top: 0 !important;
   }
-  
+
   li {
     line-height: 1.35;
     margin-top: 1rem;
@@ -2000,21 +2000,21 @@ Footer CSS (migrated from footer.scss)
   .gym-brand {
     margin-bottom: 1em;
   }
-  
+
   .gymnasium-logo {
     width: 12.5em;
     height: auto;
     margin-top: 0;
     margin-left: 0;
   }
-  
+
   .gym-brand p {
     width: 95%;
     font-size: 1em;
     line-height: 1.55;
     margin-top: 1.2em;
   }
-  
+
   .resources {
     clear: left;
 
@@ -2022,24 +2022,24 @@ Footer CSS (migrated from footer.scss)
       clear: none;
     }
   }
-  
+
   .footer-link-list {
     padding-top: 0.625em;
     margin-top: 0;
     margin-bottom: 1.2em;
   }
-  
+
   ul {
     list-style-type: "";
     padding-left: 0;
     margin-top: 0.95em;
     margin-left: 0;
   }
-  
+
   ul ::marker {
     color: transparent;
   }
-  
+
   li {
     line-height: 1.35;
     height: auto;
@@ -2047,11 +2047,11 @@ Footer CSS (migrated from footer.scss)
     border-right: 0;
     margin-top: 0.6em;
   }
-  
+
   li a {
     color: $gym-white;
   }
-  
+
   a:hover,
   a:focus,
   a:active {
@@ -2062,11 +2062,11 @@ Footer CSS (migrated from footer.scss)
   .open-edx-logo {
     height: auto;
   }
-  
+
   .copyright {
     text-align: left;
   }
-  
+
   .copyright small {
     font-size: 80%;
   }
@@ -2076,14 +2076,14 @@ Footer CSS (migrated from footer.scss)
   li {
     position: relative;
   }
-  
+
   a[data-title] {
     display: inline-block;
 
     &:hover {
       padding-right: 6ch;
     }
-    
+
     &:hover::after,
     &:focus::after,
     &:active::after {
@@ -2168,7 +2168,7 @@ TODO: migrate discussion CSS out of theme
     button {
       background-color: $gym-orange;
       border: 1px solid $gym-orange;
-      
+
       &:active,
       &:hover {
         background-color: $gym-light-gray;
@@ -2243,4 +2243,95 @@ TODO: migrate discussion CSS out of theme
   &:hover {
     color: inherit;
   }
+}
+
+// Retired (interim) message
+
+// Catalog, About, Info/Courseware, Dashboard pages
+
+.retired-message .course-description p:before,
+.hero-banner #course-image[src*="gym-100"] + *:before,
+#course-title-header [src*="gym-100"][hidden] + *:before,
+#dashboard-main #course-header-100 h1 + *:before {
+  display: block;
+  font-weight: bold;
+  line-height: inherit;
+  white-space: pre-wrap;
+  color: $gym-black;
+  background-color: #fef7db;
+  padding: 1.675rem 2rem 2rem;
+  border: 1px solid $gym-black;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+// About, Info/Courseware, Dashboard pages
+
+.hero-banner #course-image[src*="gym-100"] + *:before,
+#course-title-header [src*="gym-100"][hidden] + *:before,
+#dashboard-main #course-header-100 h1 + *:before {
+  font-size: 1.3225em;
+}
+
+// Info/Courseware, Dashboard pages
+
+#course-title-header [src*="gym-100"][hidden] + *:before,
+#dashboard-main #course-header-100 h1 + *:before {
+  position: relative;
+  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
+}
+
+// About, Info/Courseware pages
+
+.hero-banner #course-image[src*="gym-100"] + *:before,
+#course-title-header [src*="gym-100"][hidden] + *:before {
+  padding: 2rem;
+  border-top: 0;
+  margin: 0;
+}
+
+.hero-banner #course-image[src*="gym-100"]:not([hidden]) {
+  position: relative;
+  top: 9em;
+  margin-bottom: 9em;
+}
+
+@media (min-width: 26em) {
+
+  .hero-banner #course-image[src*="gym-100"]:not([hidden]) {
+    top: 7em;
+    margin-bottom: 7em;
+  }
+
+}
+
+@media (min-width: 48em) {
+
+  .hero-banner #course-image[src*="gym-100"]:not([hidden]) {
+    top: 5em;
+    margin-bottom: 5em;
+  }
+
+}
+
+// Catalog
+
+.retired-message[data-course-id="100"] .course-description p:before {
+  content: "{{ site.data.courses.GYM-100.retired_message[1] | replace: '<br>', '\a' }}";
+}
+
+// About
+
+.hero-banner #course-image[src*="gym-100"] + *:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  content: "{{ site.data.courses.GYM-100.retired_message[1] | remove: '<br>' }}";
+}
+
+// Dashboard
+
+#dashboard-main #course-header-100 h1 + *:before {
+  margin: 1em 1em 0;
 }
