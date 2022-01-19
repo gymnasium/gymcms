@@ -2291,7 +2291,27 @@ TODO: migrate discussion CSS out of theme
 }
 
 .hero-banner #course-image[src*="gym-100"]:not([hidden]) {
-  margin-top: 5em;
+  position: relative;
+  top: 9em;
+  margin-bottom: 9em;
+}
+
+@media (min-width: 30em) {
+
+  .hero-banner #course-image[src*="gym-100"]:not([hidden]) {
+    top: 7em;
+    margin-bottom: 7em;
+  }
+
+}
+
+@media (min-width: 40em) {
+
+  .hero-banner #course-image[src*="gym-100"]:not([hidden]) {
+    top: 5em;
+    margin-bottom: 5em;
+  }
+
 }
 
 // Catalog
