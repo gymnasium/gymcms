@@ -2312,7 +2312,7 @@ TODO: migrate discussion CSS out of theme
 #course-title-header [src*="gym-100"][hidden] + *:before,
 #dashboard-main #course-header-100 h1 + *:before {
   position: relative;
-  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
+  content: "{{ site.data.courses.GYM-100.retired_message[1] | remove: '<br>' }}";
 }
 
 // About, Info/Courseware pages
