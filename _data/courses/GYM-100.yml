@@ -6,7 +6,7 @@ course_type: full
 live: false
 retired_message:
   1: "This course is retiring on March 25, 2022.<br> All coursework needs to be completed by that date."
-  2: ""
+  2: "This course has retired."
 url: /courses/GYM/100/0/about
 poster_art: /img/course-artwork/png/gym-100.png
 topic: "Web Design & Development"
