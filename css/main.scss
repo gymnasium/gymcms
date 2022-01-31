@@ -2351,7 +2351,7 @@ TODO: migrate discussion CSS out of theme
 // Catalog
 
 .retired-message[data-course-id="100"] .course-description p:before {
-  content: "{{ site.data.courses.GYM-100.retired_message[1] | replace: '<br>', '\a' }}";
+  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
 }
 
 // About
@@ -2361,7 +2361,7 @@ TODO: migrate discussion CSS out of theme
   top: 0;
   left: 0;
   width: 100%;
-  content: "{{ site.data.courses.GYM-100.retired_message[1] | remove: '<br>' }}";
+  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
 }
 
 // Dashboard
