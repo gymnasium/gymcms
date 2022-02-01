@@ -2428,7 +2428,7 @@ TODO: migrate discussion CSS out of theme
     }
   }
 
-  & > .msg-content {
+  & .msg-content {
     @include breakpoint(large, min) {
       padding-left: 15px;
       padding-right: 15px;
