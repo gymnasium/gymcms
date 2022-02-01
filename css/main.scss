@@ -2369,3 +2369,38 @@ TODO: migrate discussion CSS out of theme
 #dashboard-main #course-header-100 h1 + *:before {
   margin: 1em 1em 0;
 }
+
+// Enrollment disabled
+
+.course-metabar .register.disabled {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.3225em;
+  color: $gym-black;
+  background-color: #fef7db;
+  padding: 1em;
+  border: 1px solid $gym-black;
+  margin: 1em 0 0;
+}
+
+@media (min-width: 62em) {
+
+  .course-metabar .register.disabled {
+    position: relative;
+    left: 6%;
+    margin: -0.25rem -3em 0;
+  }
+
+}
+
+@media (min-width: 74em) {
+
+  .course-metabar .register.disabled {
+    left: 16%;
+  }
+
+}
+
+#failed-verification-banner {
+  display: none;
+}
