@@ -2383,7 +2383,7 @@ TODO: migrate discussion CSS out of theme
   margin: 1em 0 0;
 }
 
-@media (min-width: 62em) {
+@include breakpoint(medium, min) {
 
   .course-metabar .register.disabled {
     position: relative;
@@ -2393,7 +2393,7 @@ TODO: migrate discussion CSS out of theme
 
 }
 
-@media (min-width: 74em) {
+@include breakpoint(large, min) {
 
   .course-metabar .register.disabled {
     left: 16%;
@@ -2402,5 +2402,37 @@ TODO: migrate discussion CSS out of theme
 }
 
 #failed-verification-banner {
-  display: none;
+
+  * {
+    font-family: $gym-text-font-stack;
+  }
+
+  .title:first-child {
+    margin-top: 5px;
+  }
+
+  a:not([class]) {
+    font: inherit;
+    color: currentColor;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+    margin-bottom: -2px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: currentColor;
+      text-decoration: none;
+      border-bottom: 2px solid currentColor !important;
+    }
+  }
+
+  & > .msg-content {
+    @include breakpoint(large, min) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
 }
