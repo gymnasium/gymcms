@@ -1101,6 +1101,17 @@ main label a:not([class]):active {
 }
 
 .login-form {
+  h1 {
+    font-size: 2.57143em; // output: 36px
+    line-height: 1.15;
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+
+  br:first-child {
+    display: none;
+  }
+
   a.forgot-password {
     &:hover,
     &:focus,
@@ -1113,13 +1124,36 @@ main label a:not([class]):active {
 }
 
 .login-register {
-  h1 {
-    margin-top: 0;
-  }
 
-  div.section-title.lines h2 {
-    font: bold 1.8em/1.15 $gym-font-stack;
-    font-family: $gym-font-stack;
+  div.section-title.lines {
+    & {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+    h2 {
+      & {
+        font: 900 2.25em/1.15 $gym-font-stack; // output: 36px
+        font-family: $gym-font-stack;
+        letter-spacing: 0.04em;
+        word-spacing: 0.05em;
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      .text {
+        position: static;
+        top: 0;
+        font-size: inherit;
+        background-color: transparent;
+        z-index: auto;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   form {
@@ -2278,7 +2312,7 @@ TODO: migrate discussion CSS out of theme
 #course-title-header [src*="gym-100"][hidden] + *:before,
 #dashboard-main #course-header-100 h1 + *:before {
   position: relative;
-  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
+  content: "{{ site.data.courses.GYM-100.retired_message[1] | remove: '<br>' }}";
 }
 
 // About, Info/Courseware pages
@@ -2296,7 +2330,7 @@ TODO: migrate discussion CSS out of theme
   margin-bottom: 9em;
 }
 
-@media (min-width: 26em) {
+@media (min-width: 30em) {
 
   .hero-banner #course-image[src*="gym-100"]:not([hidden]) {
     top: 7em;
