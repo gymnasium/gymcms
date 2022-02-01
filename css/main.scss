@@ -2369,3 +2369,70 @@ TODO: migrate discussion CSS out of theme
 #dashboard-main #course-header-100 h1 + *:before {
   margin: 1em 1em 0;
 }
+
+// Enrollment disabled
+
+.course-metabar .register.disabled {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.3225em;
+  color: $gym-black;
+  background-color: #fef7db;
+  padding: 1em;
+  border: 1px solid $gym-black;
+  margin: 1em 0 0;
+}
+
+@include breakpoint(medium, min) {
+
+  .course-metabar .register.disabled {
+    position: relative;
+    left: 6%;
+    margin: -0.25rem -3em 0;
+  }
+
+}
+
+@include breakpoint(large, min) {
+
+  .course-metabar .register.disabled {
+    left: 16%;
+  }
+
+}
+
+#failed-verification-banner {
+
+  * {
+    font-family: $gym-text-font-stack;
+  }
+
+  .title:first-child {
+    margin-top: 5px;
+  }
+
+  a:not([class]) {
+    font: inherit;
+    color: currentColor;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+    margin-bottom: -2px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: currentColor;
+      text-decoration: none;
+      border-bottom: 2px solid currentColor !important;
+    }
+  }
+
+  & > .msg-content {
+    @include breakpoint(large, min) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+}
