@@ -44,7 +44,7 @@ permalink: /courses/full/course-list-recent
   {%- assign png_path = "/img/course-artwork/png/" | append: course.course_ID | downcase | append: ".png" -%}
   {%- assign svg_path = "/img/course-artwork/svg/" | append: course.course_ID | downcase | append: ".svg" -%}
 
-  <li class="course-item" data-course-id="{{ course.course_ID | remove: 'GYM-' }}">
+  <li class="course-item {% if course.retired_message %}retired-message{% endif %}" data-course-id="{{ course.course_ID | remove: 'GYM-' }}">
     <article class="row">
       <figure class="col-md-4">
         <a href="{{ course.url | prepend: site.gymurl }}">
