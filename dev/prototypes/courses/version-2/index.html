@@ -60,55 +60,6 @@
             <a href="#career-skills">Career Skills</a>
           </li>
         </ul>
-<!--
-        <details>
-          <summary><b>Topics</b></summary>
-          <ul>
-            <li>
-              <a href="#html"><b>HTML</b></a>
-            </li>
-            <li>
-              <a href="#css"><b>CSS</b></a>
-            </li>
-            <li>
-              <a href="#javascript"><b>JavaScript</b></a>
-            </li>
-            <li>
-              <a href="#php"><b>PHP</b></a>
-            </li>
-            <li>
-              <a href="#github"><b>GitHub</b></a>
-            </li>
-            <li>
-              <a href="#design-systems"><b>Design Systems</b></a>
-            </li>
-            <li>
-              <a href="#data-visualization"><b>Data Visualization</b></a>
-            </li>
-            <li>
-              <a href="#figma"><b>Figma</b></a>
-            </li>
-            <li>
-              <a href="#sketch"><b>Sketch</b></a>
-            </li>
-            <li>
-              <a href="#adobe-xd"><b>Adobe XD</b></a>
-            </li>
-            <li>
-              <a href="#invision-studio"><b>InVision Studio</b></a>
-            </li>
-            <li>
-              <a href="#virtual-reality"><b>Virtual Reality</b></a>
-            </li>
-            <li>
-              <a href="#productivity"><b>Productivity</b></a>
-            </li>
-            <li>
-              <a href="#time-management"><b>Time Management</b></a>
-            </li>
-          </ul>
-        </details>
- -->
       </div>
       <div>
         <h2>Format</h2>
@@ -132,12 +83,21 @@
       </div>
       <div class="sort-by">
         <h2>Sort</h2>
-        <button class="sort" data-sort="level">
-          Skill Level
-        </button>
-        <button class="sort" data-sort="rank">
-          Popularity
-        </button>
+        <div class="sort skill-level">
+          <label for="select-level" class="label-level">Skill Level:</label>
+          <select name="level" id="select-level" autocomplete="off">
+            <option value="mixed" selected>Mixed</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+          </select>
+        </div>
+        <div class="sort date-order">
+          <label for="select-order" class="label-order">Publish Date:</label>
+          <select name="order" id="select-order" autocomplete="off">
+            <option value="newest" selected>Newest</option>
+            <option value="oldest">Oldest</option>
+          </select>
+        </div>
       </div>
     </nav>
   </div>
@@ -152,7 +112,7 @@
 <label for="toggle-tutorial" class="label-toggle"><b>Tutorial</b></label>
 <input type="checkbox" value="selected" class="input-toggle" id="toggle-tutorial" checked>
 
-<ul class="courses" role="list">
+<ul class="courses" id="catalog" role="list">
   <li class="full">
     <header>
       <h2>Full Courses</h2>
@@ -661,7 +621,7 @@
     <header>
       <h2>Short Courses</h2>
     </header>
-    <ul role="list">
+    <ul class="list" role="list">
 <!-- GYM SHORTS -->
 <!-- GYM-020 -->
   <li class="short design development beginner">
@@ -1718,7 +1678,7 @@
     <header>
       <h2>Tutorials</h2>
     </header>
-    <ul role="list">
+    <ul class="list" role="list">
 <!-- TAKE 5 -->
 <!-- GYM-5051 -->
   <li class="tutorial design prototyping figma">
@@ -3075,7 +3035,7 @@
     </ul>
   </li>
   <!--
-<li class="response" hidden>
+  <li class="response" hidden>
     <header>
       <h2>
         <a class="courses-refresh" href="#all">Oops! Let’s Find You That Course…</a>
@@ -3114,5 +3074,3 @@
 </div>
 
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.0/list.min.js?{{ site.time | date:'%s' }}"></script>
