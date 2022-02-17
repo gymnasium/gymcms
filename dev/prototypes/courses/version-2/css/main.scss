@@ -222,38 +222,92 @@ ul[role="list"] {
   display: inline;
 }
 
-.sort-by button,
-.sort-by button:hover,
-.sort-by button:focus,
-.sort-by button:active {
-  all: revert;
-  display: block;
-  max-width: max-content;
-  padding: 0.25rem 1.2rem;
-  margin-bottom: 0.75rem;
+// Sort
+
+.sort-by .sort {
+  margin-top: 1rem;
 }
 
-.sort:after,
-.sort.asc:after,
-.sort.desc:after {
-  content: "";
-  position: relative;
-  right: -0.325rem;
-  width: 0;
-  height: 0;
-  border-left: 0.3125rem dashed transparent;
-  border-right: 0.3125rem dashed transparent;
-  border-bottom: 0.3125rem dashed transparent;
-}
-.sort.asc:after {
-  top: 0.7125rem;
-  border-top: 0.3125rem solid #222;
+.courses.mixed .beginner,
+.courses.mixed .intermediate {
+  order: initial;
 }
 
-.sort.desc:after {
-  top: -0.625rem;
-  border-bottom: 0.3125rem solid #222;
+.courses.beginner .beginner,
+.courses.intermediate .intermediate {
+  order: 0;
 }
+
+.courses.beginner .intermediate,
+.courses.intermediate .beginner {
+  order: 1;
+}
+
+.courses.newest .full .list > li[class] {
+  order: initial;
+}
+
+.courses.oldest .full .list > li:nth-child(1) {
+  order: 7;
+}
+
+.courses.oldest .full .list > li:nth-child(2) {
+  order: 6;
+}
+
+.courses.oldest .full .list > li:nth-child(3) {
+  order: 5;
+}
+
+.courses.oldest .full .list > li:nth-child(4) {
+  order: 4;
+}
+
+.courses.oldest .full .list > li:nth-child(5) {
+  order: 3;
+}
+
+.courses.oldest .full .list > li:nth-child(6) {
+  order: 2;
+}
+
+.courses.oldest .full .list > li:nth-child(7) {
+  order: 1;
+}
+
+// .sort-by button,
+// .sort-by button:hover,
+// .sort-by button:focus,
+// .sort-by button:active {
+//   all: revert;
+//   display: block;
+//   max-width: max-content;
+//   padding: 0.25rem 1.2rem;
+//   margin-bottom: 0.75rem;
+// }
+//
+// .sort:after,
+// .sort.asc:after,
+// .sort.desc:after {
+//   content: "";
+//   position: relative;
+//   right: -0.325rem;
+//   width: 0;
+//   height: 0;
+//   border-left: 0.3125rem dashed transparent;
+//   border-right: 0.3125rem dashed transparent;
+//   border-bottom: 0.3125rem dashed transparent;
+// }
+//
+// .sort.asc:after {
+//   top: 0.7125rem;
+//   border-top: 0.3125rem solid #222;
+// }
+//
+// .sort.desc:after {
+//   top: -0.625rem;
+//   border-bottom: 0.3125rem solid #222;
+// }
 
 ul[role="list"] li header h2 {
   font-weight: bolder;
