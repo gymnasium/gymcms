@@ -228,18 +228,15 @@ ul[role="list"] {
   margin-top: 1rem;
 }
 
-.courses .list > li[class] {
-  order: initial;
-}
-
-.courses.beginner .list .beginner {
+.courses.beginner .list .beginner,
+.courses.intermediate .list .intermediate {
   order: 0;
 }
 
-.courses.beginner .list .intermediate {
+.courses.beginner .list .intermediate,
+.courses.intermediate .list .beginner {
   order: 1;
 }
-
 
 // Full
 
@@ -565,29 +562,6 @@ ul[role="list"] {
   vertical-align: middle;
   margin-left: 0.25rem;
 }
-
-// .sort:after,
-// .sort.asc:after,
-// .sort.desc:after {
-//   content: "";
-//   position: relative;
-//   right: -0.325rem;
-//   width: 0;
-//   height: 0;
-//   border-left: 0.3125rem dashed transparent;
-//   border-right: 0.3125rem dashed transparent;
-//   border-bottom: 0.3125rem dashed transparent;
-// }
-//
-// .sort.asc:after {
-//   top: 0.7125rem;
-//   border-top: 0.3125rem solid #222;
-// }
-//
-// .sort.desc:after {
-//   top: -0.625rem;
-//   border-bottom: 0.3125rem solid #222;
-// }
 
 ul[role="list"] li header h2 {
   font-weight: bolder;
