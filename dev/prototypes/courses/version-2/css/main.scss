@@ -228,24 +228,20 @@ ul[role="list"] {
   margin-top: 1rem;
 }
 
-.courses.mixed .beginner,
-.courses.mixed .intermediate {
+.courses .list > li[class] {
   order: initial;
 }
 
-.courses.beginner .beginner,
-.courses.intermediate .intermediate {
+.courses.beginner .list .beginner {
   order: 0;
 }
 
-.courses.beginner .intermediate,
-.courses.intermediate .beginner {
+.courses.beginner .list .intermediate {
   order: 1;
 }
 
-.courses.newest .full .list > li[class] {
-  order: initial;
-}
+
+// Full
 
 .courses.oldest .full .list > li:nth-child(1) {
   order: 7;
@@ -275,17 +271,301 @@ ul[role="list"] {
   order: 1;
 }
 
-// .sort-by button,
-// .sort-by button:hover,
-// .sort-by button:focus,
-// .sort-by button:active {
-//   all: revert;
-//   display: block;
-//   max-width: max-content;
-//   padding: 0.25rem 1.2rem;
-//   margin-bottom: 0.75rem;
-// }
-//
+// short
+
+.courses.oldest .short .list > li:nth-child(1) {
+  order: 17;
+}
+
+.courses.oldest .short .list > li:nth-child(2) {
+  order: 16;
+}
+
+.courses.oldest .short .list > li:nth-child(3) {
+  order: 15;
+}
+
+.courses.oldest .short .list > li:nth-child(4) {
+  order: 14;
+}
+
+.courses.oldest .short .list > li:nth-child(5) {
+  order: 13;
+}
+
+.courses.oldest .short .list > li:nth-child(6) {
+  order: 12;
+}
+
+.courses.oldest .short .list > li:nth-child(7) {
+  order: 11;
+}
+
+.courses.oldest .short .list > li:nth-child(8) {
+  order: 10;
+}
+
+.courses.oldest .short .list > li:nth-child(9) {
+  order: 9;
+}
+
+.courses.oldest .short .list > li:nth-child(10) {
+  order: 8;
+}
+
+.courses.oldest .short .list > li:nth-child(11) {
+  order: 7;
+}
+
+.courses.oldest .short .list > li:nth-child(12) {
+  order: 6;
+}
+
+.courses.oldest .short .list > li:nth-child(13) {
+  order: 5;
+}
+
+.courses.oldest .short .list > li:nth-child(14) {
+  order: 4;
+}
+
+.courses.oldest .short .list > li:nth-child(15) {
+  order: 3;
+}
+
+.courses.oldest .short .list > li:nth-child(16) {
+  order: 2;
+}
+
+.courses.oldest .short .list > li:nth-child(17) {
+  order: 1;
+}
+
+// tutorial
+
+.courses.oldest .tutorial .list > li:nth-child(1) {
+  order: 51;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(2) {
+  order: 50;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(3) {
+  order: 49;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(4) {
+  order: 48;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(5) {
+  order: 47;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(6) {
+  order: 46;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(7) {
+  order: 45;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(8) {
+  order: 44;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(9) {
+  order: 43;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(10) {
+  order: 42;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(11) {
+  order: 41;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(12) {
+  order: 40;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(13) {
+  order: 39;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(14) {
+  order: 38;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(15) {
+  order: 37;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(16) {
+  order: 36;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(17) {
+  order: 35;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(18) {
+  order: 34;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(19) {
+  order: 33;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(20) {
+  order: 32;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(21) {
+  order: 31;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(22) {
+  order: 30;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(23) {
+  order: 29;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(24) {
+  order: 28;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(25) {
+  order: 27;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(26) {
+  order: 26;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(27) {
+  order: 25;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(28) {
+  order: 24;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(29) {
+  order: 23;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(30) {
+  order: 22;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(31) {
+  order: 21;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(32) {
+  order: 20;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(33) {
+  order: 19;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(34) {
+  order: 18;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(35) {
+  order: 17;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(36) {
+  order: 16;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(37) {
+  order: 15;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(38) {
+  order: 14;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(39) {
+  order: 13;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(40) {
+  order: 12;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(41) {
+  order: 11;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(42) {
+  order: 10;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(43) {
+  order: 9;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(44) {
+  order: 8;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(45) {
+  order: 7;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(46) {
+  order: 6;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(47) {
+  order: 5;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(48) {
+  order: 4;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(49) {
+  order: 3;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(50) {
+  order: 2;
+}
+
+.courses.oldest .tutorial .list > li:nth-child(51) {
+  order: 1;
+}
+
+.sort-by ul {
+  margin-left: 0;
+}
+
+.sort-by button,
+.sort-by button:hover,
+.sort-by button:focus,
+.sort-by button:active {
+  all: revert;
+  max-width: max-content;
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.125rem;
+}
+
+.sort-by button span {
+  vertical-align: middle;
+  margin-left: 0.25rem;
+}
+
 // .sort:after,
 // .sort.asc:after,
 // .sort.desc:after {
@@ -521,19 +801,23 @@ header ~ input {
 #toggle-full:not(:checked) ~ ul[role="list"] .full,
 #toggle-short:not(:checked) ~ ul[role="list"] .short,
 #toggle-tutorial:not(:checked) ~ ul[role="list"] .tutorial,
+#prototyping:target .courses > .full,
 #accessibility:target .courses > .full,
 #career-skills:target .courses > .full {
   display: none;
 }
 
+#prototyping:target #toggle-full-ui,
+#prototyping:target label[for="toggle-full"],
 #accessibility:target #toggle-full-ui,
 #accessibility:target label[for="toggle-full"],
 #career-skills:target #toggle-full-ui,
 #career-skills:target label[for="toggle-full"] {
-  pointer-events: none;
   user-select: none;
+  cursor: not-allowed;
 }
 
+#prototyping:target #toggle-full-ui,
 #accessibility:target #toggle-full-ui,
 #career-skills:target #toggle-full-ui {
   filter: grayscale(1);
@@ -649,7 +933,7 @@ nav [href="#all"],
 #design:target .courses > li:first-child > header:before,
 #development:target .courses > li:first-child > header:before,
 #ux:target .courses > li:first-child > header:before,
-#prototyping:target .courses > li:first-child > header:before,
+#prototyping:target .courses > li:first-child  + li > header:before,
 #accessibility:target .courses > li:first-child + li > header:before,
 #career-skills:target .courses > li:first-child + li > header:before,
 #all:target .courses > li:first-child > header:before {
@@ -673,7 +957,7 @@ nav [href="#all"],
   content: "UX";
 }
 
-#prototyping:target .courses > li:first-child > header:before {
+#prototyping:target .courses > li:first-child + li > header:before {
   content: "Prototyping";
 }
 

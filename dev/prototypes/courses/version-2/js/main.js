@@ -1,19 +1,38 @@
 // Sort
 
+// Date
+
+var catalog = document.querySelector('.courses');
+var toggleDate = document.querySelector('#toggle-date');
+toggleDate.addEventListener('click', function() {
+  catalog.classList.toggle('oldest');
+});
+
 // Level
 
-var selectLevel = document.querySelector('#select-level');
-selectLevel.onchange = function() {
-  document.querySelector('#catalog').className = 'courses ' + this.value;
-};
+var toggleLevel = document.querySelector('#toggle-level');
+toggleLevel.addEventListener('click', function() {
+  catalog.classList.remove('oldest');
+  if (catalog.classList.contains('beginner')) {
+    catalog.classList.remove('beginner');
+    catalog.classList.add('intermediate');
+  } else {
+    catalog.classList.remove('intermediate');
+    catalog.classList.add('beginner');
+  }
+});
 
-// Order
+var radioLevel = document.querySelector('#skill-level');
+radioLevel.addEventListener('click', function () {
+  toggleLevel.removeAttribute('disabled');
+  toggleDate.setAttribute('disabled', 'disabled');
+});
 
-var selectOrder = document.querySelector('#select-order');
-selectOrder.onchange = function() {
-  document.querySelector('#catalog').className = 'courses ' + this.value;
-};
-
+var radioDate = document.querySelector('#publish-date');
+radioDate.addEventListener('click', function () {
+  toggleDate.removeAttribute('disabled');
+  toggleLevel.setAttribute('disabled', 'disabled');
+});
 
 // Format toggle
 
