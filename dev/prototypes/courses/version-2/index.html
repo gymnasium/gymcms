@@ -83,20 +83,17 @@
       </div>
       <div class="sort-by">
         <h2>Sort</h2>
-        <div class="sort skill-level">
-          <label for="select-level" class="label-level">Skill Level:</label>
-          <select name="level" id="select-level" autocomplete="off">
-            <option value="mixed" selected>Mixed</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-          </select>
-        </div>
-        <div class="sort date-order">
-          <label for="select-order" class="label-order">Publish Date:</label>
-          <select name="order" id="select-order" autocomplete="off">
-            <option value="newest" selected>Newest</option>
-            <option value="oldest">Oldest</option>
-          </select>
+        <div>
+          <ul role="list">
+            <li class="sort">
+          <input type="radio" name="sort" id="publish-date" value="date" checked autocomplete="off">
+          <button class="button-sort" id="toggle-date">↕ <span>Publish Date</span></button>
+            </li>
+            <li class="sort">
+          <input type="radio" name="sort" id="skill-level" value="level" autocomplete="off">
+          <button class="button-sort" id="toggle-level" disabled>↕ <span>Skill Level</span></button>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
