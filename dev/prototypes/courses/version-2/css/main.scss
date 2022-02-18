@@ -553,13 +553,19 @@ ul[role="list"] {
 .sort-by button:focus,
 .sort-by button:active {
   all: revert;
-  max-width: max-content;
-  padding: 0.25rem 0.5rem;
+  font-size: 16px;
+  line-height: 1;
+  max-width: 16ex;
+  background-color: #eee;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.3125rem;
+  border: 1px solid #222;
   margin-left: 0.125rem;
 }
 
 .sort-by button span {
-  vertical-align: middle;
+  font-size: 0.9em;
+  line-height: 1.35;
   margin-left: 0.25rem;
 }
 
