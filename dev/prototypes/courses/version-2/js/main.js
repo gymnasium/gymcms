@@ -1,85 +1,93 @@
-// Sort
-
-// Date
-
-var catalog = document.querySelector('.courses');
-var toggleDate = document.querySelector('#toggle-date');
-toggleDate.addEventListener('click', function() {
-  catalog.classList.toggle('oldest');
-});
-
-// Level
-
-var toggleLevel = document.querySelector('#toggle-level');
-toggleLevel.addEventListener('click', function() {
-  catalog.classList.remove('oldest');
-  if (catalog.classList.contains('beginner')) {
-    catalog.classList.remove('beginner');
-    catalog.classList.add('intermediate');
-  } else {
-    catalog.classList.remove('intermediate');
-    catalog.classList.add('beginner');
-  }
-});
-
-var radioLevel = document.querySelector('#skill-level');
-radioLevel.addEventListener('click', function () {
-  toggleLevel.removeAttribute('disabled');
-  toggleDate.setAttribute('disabled', 'disabled');
-});
+// Sort Date
 
 var radioDate = document.querySelector('#publish-date');
-radioDate.addEventListener('click', function () {
+radioDate.addEventListener('click', function() {
   toggleDate.removeAttribute('disabled');
   toggleLevel.setAttribute('disabled', 'disabled');
 });
 
+var courses = document.querySelector('.courses');
+var toggleDate = document.querySelector('#toggle-date');
+toggleDate.addEventListener('click', function() {
+  if (courses.classList.contains('beginner')) {
+    courses.classList.remove('beginner');
+  } else if (courses.classList.contains('intermediate')) {
+    courses.classList.remove('intermediate');
+  } else {
+    courses.classList.toggle('oldest');
+  }
+});
+
+// Sort Level
+
+var radioLevel = document.querySelector('#skill-level');
+radioLevel.addEventListener('click', function() {
+  toggleLevel.removeAttribute('disabled');
+  toggleDate.setAttribute('disabled', 'disabled');
+});
+
+var toggleLevel = document.querySelector('#toggle-level');
+toggleLevel.addEventListener('click', function() {
+  courses.classList.remove('oldest');
+  if (courses.classList.contains('beginner')) {
+    courses.classList.replace('beginner', 'intermediate');
+  } else {
+    courses.classList.remove('intermediate');
+    courses.classList.toggle('beginner');
+  }
+});
+
 // Format toggle
 
-var toggleFull = document.querySelector('#toggle-full-ui');
-toggleFull.addEventListener('click', function() {
-  if (document.querySelector('#toggle-full-ui').checked == true) {
-    document.querySelector('#toggle-full').checked = true;
+var toggleFullUi = document.querySelector('#toggle-full-ui');
+var toggleFull = document.querySelector('#toggle-full');
+toggleFullUi.addEventListener('click', function() {
+  if (toggleFullUi.checked == true) {
+    toggleFull.checked = true;
   } else {
-    document.querySelector('#toggle-full').checked = false;
+    toggleFull.checked = false;
   }
 });
 
-var toggleShort = document.querySelector('#toggle-short-ui');
-toggleShort.addEventListener('click', function() {
-  if (document.querySelector('#toggle-short-ui').checked == true) {
-    document.querySelector('#toggle-short').checked = true;
+var toggleShortUi = document.querySelector('#toggle-short-ui');
+var toggleShort = document.querySelector('#toggle-short');
+toggleShortUi.addEventListener('click', function() {
+  if (toggleShortUi.checked == true) {
+    toggleShort.checked = true;
   } else {
-    document.querySelector('#toggle-short').checked = false;
+    toggleShort.checked = false;
   }
 });
 
-var toggleTutorial = document.querySelector('#toggle-tutorial-ui');
-toggleTutorial.addEventListener('click', function() {
-  if (document.querySelector('#toggle-tutorial-ui').checked == true) {
-    document.querySelector('#toggle-tutorial').checked = true;
+var toggleTutorialUi = document.querySelector('#toggle-tutorial-ui');
+var toggleTutorial = document.querySelector('#toggle-tutorial');
+toggleTutorialUi.addEventListener('click', function() {
+  if (toggleTutorialUi.checked == true) {
+    toggleTutorial.checked = true;
   } else {
-    document.querySelector('#toggle-tutorial').checked = false;
+    toggleTutorial.checked = false;
   }
-});
-
-// Course card disclosure
-
-[].forEach.call(document.querySelectorAll('.info'), function(expanded) {
-  expanded.addEventListener('toggle', function() {
-    expanded.parentElement.parentElement.classList.toggle('expanded');
-  })
 });
 
 // Courses refresh
 
-[].forEach.call(document.querySelectorAll('.courses-refresh'), function(refresh) {
+var coursesRefresh = document.querySelectorAll('.courses-refresh');
+[].forEach.call(coursesRefresh, function(refresh) {
   refresh.addEventListener('click', function() {
-    document.querySelector('#toggle-full-ui').checked = true;
-    document.querySelector('#toggle-short-ui').checked = true;
-    document.querySelector('#toggle-tutorial-ui').checked = true;
-    document.querySelector('#toggle-full').checked = true;
-    document.querySelector('#toggle-short').checked = true;
-    document.querySelector('#toggle-tutorial').checked = true;
+    toggleFullUi.checked = true;
+    toggleShortlUi.checked = true;
+    toggleTutorialUi.checked = true;
+    toggleFull.checked = true;
+    toggleShort.checked = true;
+    toggleTutorial.checked = true;
+  })
+});
+
+// Course card disclosure
+
+var toggleDetails = document.querySelectorAll('.info');
+[].forEach.call(toggleDetails, function(expanded) {
+  expanded.addEventListener('toggle', function() {
+    expanded.parentElement.parentElement.classList.toggle('expanded');
   })
 });
