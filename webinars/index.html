@@ -2,7 +2,7 @@
 permalink: /webinars/
 layout: raw
 ---
-{%- if jekyll.environment == "development" -%}
+{%- if jekyll.environment == "local" -%}
   {%- include partials/test-top.html -%}
 {%- endif -%}
 
@@ -62,7 +62,7 @@ layout: raw
             </header>
             <div class="webinar--info">
             {%- comment -%}
-              {%- if jekyll.environment == "development" -%}
+              {%- if jekyll.environment == "local" -%}
                 <pre>({{ complete_webinar_title }})</pre>
                 <img src="{{ site.url }}/img/social/webinars/{{ webinar.event_ogimage }}">
               {%- endif -%}
@@ -118,6 +118,6 @@ layout: raw
 
 </main>
 
-{%- if jekyll.environment == "development" -%}
+{%- if jekyll.environment == "local" -%}
   {%- include partials/test-bottom.html -%}
 {%- endif -%}
