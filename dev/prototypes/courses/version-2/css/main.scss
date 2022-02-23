@@ -803,29 +803,6 @@ header ~ input {
   opacity: 0.5;
 }
 
-:target .courses ul[role="list"] > li[class],
-.courses ul[role="list"] > li.message {
-  display: none;
-}
-
-#prototyping:target .courses ul[role="list"] li.sans-course,
-#accessibility:target .courses ul[role="list"] li.sans-course,
-#career-skills:target .courses ul[role="list"] li.sans-course {
-  display: grid;
-}
-
-.courses ul[role="list"] li.sans-course {
-  min-height: 8rem;
-}
-
-.courses ul[role="list"] li.view-all,
-:target .courses ul[role="list"] li.view-all {
-  display: grid;
-  position: absolute;
-  top: 4.81rem;
-  z-index: 0;
-}
-
 @media (max-width: 64em) {
 
 ul[role="list"]::after {
@@ -860,8 +837,31 @@ ul[role="list"]::after {
 #full:target .courses ul[role="list"] > .full,
 #short:target .courses ul[role="list"] > .short,
 #tutorial:target .courses ul[role="list"] > .tutorial,
-#all:target .courses ul[role="list"] > li[class] {
+#all:target .courses ul[role="list"] > li[class]:not(li.message) {
   display: grid;
+}
+
+:target .courses ul[role="list"] > li[class],
+.courses ul[role="list"] > li.message {
+  display: none;
+}
+
+#prototyping:target .courses ul[role="list"] li.sans-course,
+#accessibility:target .courses ul[role="list"] li.sans-course,
+#career-skills:target .courses ul[role="list"] li.sans-course {
+  display: grid;
+}
+
+.courses ul[role="list"] li.sans-course {
+  min-height: 8rem;
+}
+
+.courses ul[role="list"] li.view-all,
+:target .courses ul[role="list"] li.view-all {
+  display: grid;
+  position: absolute;
+  top: 4.81rem;
+  z-index: 0;
 }
 
 nav [href="#all"],
