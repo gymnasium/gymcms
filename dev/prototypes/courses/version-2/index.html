@@ -82,18 +82,15 @@
         </ul>
       </div>
       <div class="sort-by">
-        <h2>Sort</h2>
-        <div>
-          <ul role="list">
-            <li class="sort">
-          <input type="radio" name="sort" id="publish-date" value="date" checked autocomplete="off">
-          <button class="button-sort" id="toggle-date">↕ <span>Publish Date</span></button>
-            </li>
-            <li class="sort">
-          <input type="radio" name="sort" id="skill-level" value="level" autocomplete="off">
-          <button class="button-sort" id="toggle-level" disabled>↕ <span>Skill Level</span></button>
-            </li>
-          </ul>
+        <h2>Sort by</h2>
+        <div class="sort-by">
+          <!-- <label for="select-layout" class="select-label">Sort by:</label> -->
+          <select name="sorts" id="select-sort" autocomplete="off">
+            <option value="newest" selected>Newest to Oldest</option>
+            <option value="oldest" >Oldest to Newest</option>
+            <option value="beginner">Easy to Difficult</option>
+            <option value="intermediate">Difficult to Easy</option>
+          </select>
         </div>
       </div>
     </nav>
