@@ -75,7 +75,7 @@ var coursesRefresh = document.querySelectorAll('.courses-refresh');
 [].forEach.call(coursesRefresh, function(refresh) {
   refresh.addEventListener('click', function() {
     toggleFullUi.checked = true;
-    toggleShortlUi.checked = true;
+    toggleShortUi.checked = true;
     toggleTutorialUi.checked = true;
     toggleFull.checked = true;
     toggleShort.checked = true;

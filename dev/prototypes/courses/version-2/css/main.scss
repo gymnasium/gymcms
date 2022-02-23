@@ -176,19 +176,17 @@ nav a {
 }
 
 ul[role="list"] {
+  position: relative;
   list-style: none;
   padding-left: 0;
 }
 
 .courses ul[role="list"] {
-  position: relative;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
   grid-auto-rows: minmax(min-content, max-content);
   gap: 1.2rem;
+  margin: 0;
 }
 
 .courses ul[role="list"] > li {
@@ -784,10 +782,7 @@ header ~ input {
 
 #toggle-full:not(:checked) ~ ul[role="list"] .full,
 #toggle-short:not(:checked) ~ ul[role="list"] .short,
-#toggle-tutorial:not(:checked) ~ ul[role="list"] .tutorial,
-#prototyping:target .courses > .full,
-#accessibility:target .courses > .full,
-#career-skills:target .courses > .full {
+#toggle-tutorial:not(:checked) ~ ul[role="list"] .tutorial {
   display: none;
 }
 
@@ -808,15 +803,27 @@ header ~ input {
   opacity: 0.5;
 }
 
-:target .courses ul[role="list"] > li {
+:target .courses ul[role="list"] > li[class],
+.courses ul[role="list"] > li.message {
   display: none;
 }
 
-.courses li.response {
+#prototyping:target .courses ul[role="list"] li.sans-course,
+#accessibility:target .courses ul[role="list"] li.sans-course,
+#career-skills:target .courses ul[role="list"] li.sans-course {
+  display: grid;
+}
+
+.courses ul[role="list"] li.sans-course {
+  min-height: 8rem;
+}
+
+.courses ul[role="list"] li.view-all,
+:target .courses ul[role="list"] li.view-all {
+  display: grid;
   position: absolute;
+  top: 4.81rem;
   z-index: 0;
-  background-color: #ff9;
-  padding: 2rem;
 }
 
 @media (max-width: 64em) {
@@ -913,48 +920,47 @@ nav [href="#all"],
   display: none;
 }
 
-.courses > li:first-child > header:before,
-#design:target .courses > li:first-child > header:before,
-#development:target .courses > li:first-child > header:before,
-#ux:target .courses > li:first-child > header:before,
-#prototyping:target .courses > li:first-child  + li > header:before,
-#accessibility:target .courses > li:first-child + li > header:before,
-#career-skills:target .courses > li:first-child + li > header:before,
-#all:target .courses > li:first-child > header:before {
+.courses > li:first-child:before,
+#design:target .courses > li:first-child:before,
+#development:target .courses > li:first-child:before,
+#ux:target .courses > li:first-child:before,
+#prototyping:target .courses > li:first-child:before,
+#accessibility:target .courses > li:first-child:before,
+#career-skills:target .courses > li:first-child:before,
+#all:target .courses > li:first-child:before {
   display: block;
   font: bold 1.8em/1.15 sans-serif;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.6rem;
   border-bottom: 1px dashed #ccc;
-  margin-top: 0.5rem;
-  margin-bottom: 1.4rem;
+  margin-top: 0.4rem;
 }
 
-#design:target .courses > li:first-child > header:before {
+#design:target .courses > li:first-child:before {
   content: "Design";
 }
 
-#development:target .courses > li:first-child > header:before {
+#development:target .courses > li:first-child:before {
   content: "Development";
 }
 
-#ux:target .courses > li:first-child > header:before {
+#ux:target .courses > li:first-child:before {
   content: "UX";
 }
 
-#prototyping:target .courses > li:first-child + li > header:before {
+#prototyping:target .courses > li:first-child:before {
   content: "Prototyping";
 }
 
-#accessibility:target .courses > li:first-child + li > header:before {
+#accessibility:target .courses > li:first-child:before {
   content: "Accessibility";
 }
 
-#career-skills:target .courses > li:first-child + li > header:before {
+#career-skills:target .courses > li:first-child:before {
   content: "Career Skills";
 }
 
-.courses > li:first-child > header:before,
-#all:target .courses > li:first-child > header:before {
+.courses > li:first-child:before,
+#all:target .courses > li:first-child:before {
   content: "All Categories";
 }
 
