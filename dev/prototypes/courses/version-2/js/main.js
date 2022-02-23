@@ -1,42 +1,3 @@
-// Sort Date
-
-var radioDate = document.querySelector('#publish-date');
-radioDate.addEventListener('click', function() {
-  toggleDate.removeAttribute('disabled');
-  toggleLevel.setAttribute('disabled', 'disabled');
-});
-
-var courses = document.querySelector('.courses');
-var toggleDate = document.querySelector('#toggle-date');
-toggleDate.addEventListener('click', function() {
-  if (courses.classList.contains('beginner')) {
-    courses.classList.remove('beginner');
-  } else if (courses.classList.contains('intermediate')) {
-    courses.classList.remove('intermediate');
-  } else {
-    courses.classList.toggle('oldest');
-  }
-});
-
-// Sort Level
-
-var radioLevel = document.querySelector('#skill-level');
-radioLevel.addEventListener('click', function() {
-  toggleLevel.removeAttribute('disabled');
-  toggleDate.setAttribute('disabled', 'disabled');
-});
-
-var toggleLevel = document.querySelector('#toggle-level');
-toggleLevel.addEventListener('click', function() {
-  courses.classList.remove('oldest');
-  if (courses.classList.contains('beginner')) {
-    courses.classList.replace('beginner', 'intermediate');
-  } else {
-    courses.classList.remove('intermediate');
-    courses.classList.toggle('beginner');
-  }
-});
-
 // Format toggle
 
 var toggleFullUi = document.querySelector('#toggle-full-ui');
@@ -68,6 +29,14 @@ toggleTutorialUi.addEventListener('click', function() {
     toggleTutorial.checked = false;
   }
 });
+
+// Sort by
+
+var catalog = document.querySelector('#catalog');
+var selectSort = document.querySelector('#select-sort');
+selectSort.onchange = function() {
+  catalog.className = 'courses ' + this.value;
+};
 
 // Courses refresh
 
