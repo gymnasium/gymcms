@@ -222,10 +222,6 @@ ul[role="list"] {
 
 // Sort
 
-.sort-by .sort {
-  margin-top: 1rem;
-}
-
 .courses.beginner .list .beginner,
 .courses.intermediate .list .intermediate {
   order: 0;
@@ -542,29 +538,17 @@ ul[role="list"] {
   order: 1;
 }
 
+.sort-by {
+  margin-top: 1rem;
+}
+
 .sort-by ul {
   margin-left: 0;
 }
 
-.sort-by button,
-.sort-by button:hover,
-.sort-by button:focus,
-.sort-by button:active {
-  all: revert;
-  font-size: 16px;
-  line-height: 1;
-  max-width: 16ex;
-  background-color: #eee;
-  padding: 0.625rem 0.875rem;
-  border-radius: 0.3125rem;
-  border: 1px solid #222;
-  margin-left: 0.125rem;
-}
-
-.sort-by button span {
-  font-size: 0.9em;
+#select-sort {
+  font-size: 1em;
   line-height: 1.35;
-  margin-left: 0.25rem;
 }
 
 ul[role="list"] li header h2 {
