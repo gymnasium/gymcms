@@ -641,7 +641,8 @@ li aside {
 }
 
 .button:hover,
-.button:focus {
+.button:focus,
+.button:active {
   color: #fff;
   background-color: #666;
 }
@@ -656,6 +657,11 @@ li aside {
 
 .button + * {
   margin-top: 1.4rem;
+}
+
+.button[href$="/info"]:focus,
+.button[href$="/info"]:active {
+  pointer-events: none;
 }
 
 summary {
