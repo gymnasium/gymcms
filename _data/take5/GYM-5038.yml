@@ -13,7 +13,7 @@ video_duration: "4:39"
 featured: false
 short_description: "Learn how to make the headings and lists in your HTML documents more accessible for everyone in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
 related_content:
-- label: "Web Accessibility Tutorials: Headings"
+- label: "Accessibility Tutorials: Headings"
   url: "https://www.w3.org/WAI/tutorials/page-structure/headings/"
 - label: "HTML5 Accessibility: Headings"
   url: "https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/headings.html"

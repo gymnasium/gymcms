@@ -6,7 +6,7 @@ course_type: short
 live: true
 url: /courses/course-v1:GYM+019+0/about
 poster_art: /img/course-artwork/png/gym-019.png
-topic: "Web Design & Development"
+topic: "Design & Development"
 subtopics:
   - label: "Design Systems"
 short_description: "Learn how to use your development skills to help build and support an effective and thriving design system."
