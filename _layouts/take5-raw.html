@@ -1,6 +1,6 @@
 {% assign base_path = "/courses/take5/" | prepend: site.gymurl %}
 
-{%- if jekyll.environment == "development" -%}
+{%- if jekyll.environment == "local" -%}
     {%- include partials/test-top.html -%}
 {%- endif -%}
 
@@ -177,7 +177,7 @@
   </div><!-- .row -->
 </div><!-- .container -->
 
-{%- if jekyll.environment == "development" -%}
+{%- if jekyll.environment == "local" -%}
     {%- include partials/test-bottom.html -%}
 {%- endif -%}
 
