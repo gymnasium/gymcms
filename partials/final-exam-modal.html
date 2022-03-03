@@ -237,34 +237,23 @@ function getScoreFromFraction() {
 // Get highest score available?
 function getHighestScore(courseId) {
   let _score;
-  let score1;
-  let score2;
-  let score3;
+  let dataProblemScore;
+  // Score derived from the fraction displayed on the problem progress div
+  let scoreFromFraction = getScoreFromFraction();
+  //let score3;
 
-  // Score 1, stored in a data attribute 
+  // Score stored in a data attribute 
   // TODO: if a score greater than 0 is stored in a data attribute when the page loads, then we can unhide one of the modals
   let probElem = document.querySelector('[data-problem-score]');
-  score1 = Number(probElem.getAttribute('data-problem-score'));
+  dataProblemScore = Number(probElem.getAttribute('data-problem-score'));
 
-  // Score 2, derived from the fraction displayed on the problem progress div
-  score2 = getScoreFromFraction();
-
-  // Score 3, derived from localStorage
-  if (storageAvailable('localStorage')) {
-    if (localStorage.getItem('grades')) {
-      grades = JSON.parse(localStorage.getItem('grades'));
-      score3 = grades[courseId] ? grades[courseId] : 0;
-    }
-  } else {
-    console.warn('[gym] no local storage available');
-    // TODO: add alternate options
-  }
-
-  _score = Math.max(score1, score2, score3);
+  // Check the highest score
+  _score = Math.max(dataProblemScore, scoreFromFraction);
 
   return _score;
 }
 
+// Not sure if localStorage is the best way to go about this, since that value won't persist across different devices
 function getPrevScore(courseId) {
   let prevScore;
   let grades = {};
@@ -290,7 +279,11 @@ function getPrevScore(courseId) {
   return prevScore;
 }
 
+// Main function to handle exam page stuff
 function exam() {
+  // TODO: add a check to only execute this on the exam page
+
+
   let progress_status_check; // this is the interval we'll set to track status on this problem
 
   let pretty_score_check;
@@ -378,6 +371,7 @@ function exam() {
       //generate the certificate through the API
       $.ajax({
         type:     'POST',
+        // TODO: use accredible sandbox to test?
         //url:      '/accredible/request_certificate',
         async:     false,
         data:     {
@@ -414,6 +408,7 @@ function exam() {
   }
 
   // This determines if we are on the exam page?
+  // TODO: this is silly. We can check for the existence of #exam-problem to determine if any of the exam thing should run.
   if ($('.problem-header').text().trim() === "Final Exam") {
 
     let problem_id = document.getElementById('exam-problem').getAttribute('data-id');
@@ -459,6 +454,7 @@ function exam() {
   // scroll to show the results message
   $('#check-button').on('click', function() {
     // console.log('[gym] check exam button clicked');
+    // TODO: re-process the exam score.
 
     document.getElementById('course_passed_message').scrollIntoView();
   });
@@ -479,11 +475,16 @@ document.addEventListener('readystatechange', event => {
   } else if (event.target.readyState === 'complete') {
     console.log('complete state');
 
-    // show pretty score
-    prettyScore();
+    // Only execute these functions on the exam page
+    var examProblem = document.getElementById('exam-problem);
 
-    // process exam stuff
-    exam();
+    if (typeof examProblem !== 'undefined' && examProblem !== null) {
+      // show pretty score
+      prettyScore();
+
+      // process exam stuff
+      exam();
+    }
   }
 });
 
