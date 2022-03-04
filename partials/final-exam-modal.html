@@ -279,137 +279,140 @@ function getPrevScore(courseId) {
   return prevScore;
 }
 
+function prettyScore() {
+  let examGrade = document.getElementById('exam-grade');
+
+  examGrade.innerText = 'Your score: ' + getScoreFromFraction();
+}
+
 // Main function to handle exam page stuff
 function exam() {
   // TODO: add a check to only execute this on the exam page
+  let examProblem = document.getElementById('exam-problem');
 
+  if (typeof examProblem !== 'undefined' && examProblem !== null) {
+    let progress_status_check; // this is the interval we'll set to track status on this problem
 
-  let progress_status_check; // this is the interval we'll set to track status on this problem
+    let pretty_score_check;
 
-  let pretty_score_check;
+    let previous_score;
 
-  let previous_score;
+    let COURSE_ID;
 
-  let COURSE_ID;
+    // this helper function gets a ton of information about the score for this particular problem
+    // based on information embedded on this page
+    var processScore = () => {
+      const COURSE_TYPES = {
+        FULL_COURSE: 'FULL_COURSE',
+        GYM_SHORT: 'GYM_SHORT',
+      };
 
-  // this helper function gets a ton of information about the score for this particular problem
-  // based on information embedded on this page
-  var processScore = () => {
-    const COURSE_TYPES = {
-      FULL_COURSE: 'FULL_COURSE',
-      GYM_SHORT: 'GYM_SHORT',
-    };
+      COURSE_ID = parseInt($('#__course_number__').text(), 10);
+      const COURSE_TYPE = COURSE_ID >= 100 ? COURSE_TYPES.FULL_COURSE : COURSE_TYPES.GYM_SHORT;
+      let PASSING_SCORE = 85;
 
-    COURSE_ID = parseInt($('#__course_number__').text(), 10);
-    const COURSE_TYPE = COURSE_ID >= 100 ? COURSE_TYPES.FULL_COURSE : COURSE_TYPES.GYM_SHORT;
-    let PASSING_SCORE = 85;
-
-    if (COURSE_TYPE === COURSE_TYPES.FULL_COURSE) {
-      // full courses have a passing grade of 85
-      PASSING_SCORE = 85;
-    } else {
-      // gym shorts have a passing grade of 80
-      PASSING_SCORE = 80;
-    }
-
-    var correct = Number(getFraction()[1]);
-    var outOf = Number(getFraction()[2]);
-
-    var attempts_used = Number(document.getElementById('#attempts-used').innerText);
-    var attempts_total = Number(document.getElementById('#attempts-allowed').innerText);
-
-    return {
-      courseType: COURSE_TYPE,
-      passingScore: PASSING_SCORE,
-      score: getScoreFromFraction(),
-      correct,
-      outOf,
-      attempts_used,
-      attempts_total,
-      attempts_remaining: attempts_total - attempts_used,
-    };
-  };
-
-  var show_problem_progress = function() {
-    let {
-      attempts_used,
-      attempts_total,
-      attempts_remaining,
-      correct,
-      courseType,
-      outOf,
-      score,
-      passingScore,
-    } = processScore();
-
-    if (!correct || !outOf) {
-      return;
-    }
-
-    // update exam score span
-    let examScoreMessage = document.querySelectorAll('.exam-score-container');
-
-    examScoreMessage.forEach(function(el) {
-      el.innerText = score;
-    });
-
-    // we have a score, let's do stuff
-    if (score >= passingScore) {
-      // previous_score = getPrevScore(COURSE_ID);
-
-      // if (score > previous_score && attempts_remaining > 0) {
-      //   console.log('[gym] new high score! ', score, '\nprevious score: ', previous_score);
-      // } else {
-      //   console.log('[gym] score is not higher than previous score');
-      // }
-
-      //we passed! show passing div for the type of course they took
-      $(".passed_modal." + courseType).removeClass('hidden');
-      $(".try_again_modal").addClass('hidden');
-      $(".failed_modal").addClass('hidden');
-
-      //generate the certificate through the API
-      $.ajax({
-        type:     'POST',
-        // TODO: use accredible sandbox to test?
-        //url:      '/accredible/request_certificate',
-        async:     false,
-        data:     {
-          'course_id': window.$$course_id
-        },
-        success:  function(data) {
-          // console.log('[gym] certificate request successful: ', data);
-        }
-      });
-    } else {
-      //we failed :( see if we have another attempt
-      if (attempts_remaining > 0) {
-        $(".passed_modal").addClass('hidden');
-        $(".try_again_modal." + courseType).removeClass('hidden');
-        $(".failed_modal").addClass('hidden');
+      if (COURSE_TYPE === COURSE_TYPES.FULL_COURSE) {
+        // full courses have a passing grade of 85
+        PASSING_SCORE = 85;
       } else {
-        $(".passed_modal").addClass('hidden');
+        // gym shorts have a passing grade of 80
+        PASSING_SCORE = 80;
+      }
+
+      var correct = Number(getFraction()[1]);
+      var outOf = Number(getFraction()[2]);
+
+      var attempts_used = Number(document.getElementById('#attempts-used').innerText);
+      var attempts_total = Number(document.getElementById('#attempts-allowed').innerText);
+
+      return {
+        courseType: COURSE_TYPE,
+        passingScore: PASSING_SCORE,
+        score: getScoreFromFraction(),
+        correct,
+        outOf,
+        attempts_used,
+        attempts_total,
+        attempts_remaining: attempts_total - attempts_used,
+      };
+    };
+
+    var show_problem_progress = function() {
+      let {
+        attempts_used,
+        attempts_total,
+        attempts_remaining,
+        correct,
+        courseType,
+        outOf,
+        score,
+        passingScore,
+      } = processScore();
+
+      if (!correct || !outOf) {
+        return;
+      }
+
+      // update exam score span
+      let examScoreMessage = document.querySelectorAll('.exam-score-container');
+
+      examScoreMessage.forEach(function(el) {
+        el.innerText = score;
+      });
+
+      // we have a score, let's do stuff
+      if (score >= passingScore) {
+        // previous_score = getPrevScore(COURSE_ID);
+
+        // if (score > previous_score && attempts_remaining > 0) {
+        //   console.log('[gym] new high score! ', score, '\nprevious score: ', previous_score);
+        // } else {
+        //   console.log('[gym] score is not higher than previous score');
+        // }
+
+        //we passed! show passing div for the type of course they took
+        $(".passed_modal." + courseType).removeClass('hidden');
         $(".try_again_modal").addClass('hidden');
-        $(".failed_modal").removeClass('hidden');
+        $(".failed_modal").addClass('hidden');
+
+        //generate the certificate through the API
+        $.ajax({
+          type:     'POST',
+          // TODO: use accredible sandbox to test? sandbox.api.accredible.com
+          //url:      '/accredible/request_certificate',
+          async:     false,
+          data:     {
+            'course_id': window.$$course_id
+          },
+          success:  function(data) {
+            // console.log('[gym] certificate request successful: ', data);
+          }
+        });
+      } else {
+        //we failed :( see if we have another attempt
+        if (attempts_remaining > 0) {
+          $(".passed_modal").addClass('hidden');
+          $(".try_again_modal." + courseType).removeClass('hidden');
+          $(".failed_modal").addClass('hidden');
+        } else {
+          $(".passed_modal").addClass('hidden');
+          $(".try_again_modal").addClass('hidden');
+          $(".failed_modal").removeClass('hidden');
+        }
       }
     }
-  }
 
-  function check_status(){
-    const {
-      attempts_used,
-      correct,
-    } = processScore();
+    function check_status(){
+      const {
+        attempts_used,
+        correct,
+      } = processScore();
 
-    if (attempts_used > 0 || correct > 0) {
-      clearInterval(progress_status_check);
-      show_problem_progress();
+      if (attempts_used > 0 || correct > 0) {
+        clearInterval(progress_status_check);
+        show_problem_progress();
+      }
     }
-  }
-
-  // This determines if we are on the exam page?
-  // TODO: this is silly. We can check for the existence of #exam-problem to determine if any of the exam thing should run.
-  if ($('.problem-header').text().trim() === "Final Exam") {
 
     let problem_id = document.getElementById('exam-problem').getAttribute('data-id');
 
@@ -447,23 +450,19 @@ function exam() {
         subtree: false
       },
     );
-  } else {
-    return;
+
+    // scroll to show the results message
+    $('#check-button').on('click', function() {
+      // console.log('[gym] check exam button clicked');
+      // TODO: re-process the exam score.
+
+      document.getElementById('course_passed_message').scrollIntoView();
+    });
+
+
+    // show pretty score
+    prettyScore();
   }
-
-  // scroll to show the results message
-  $('#check-button').on('click', function() {
-    // console.log('[gym] check exam button clicked');
-    // TODO: re-process the exam score.
-
-    document.getElementById('course_passed_message').scrollIntoView();
-  });
-}
-
-function prettyScore() {
-  let examGrade = document.getElementById('exam-grade');
-
-  examGrade.innerText = 'Your score: ' + getScoreFromFraction();
 }
 
 // Native JS equivalent of jQuery's document.ready
@@ -475,16 +474,8 @@ document.addEventListener('readystatechange', event => {
   } else if (event.target.readyState === 'complete') {
     console.log('complete state');
 
-    // Only execute these functions on the exam page
-    var examProblem = document.getElementById('exam-problem);
-
-    if (typeof examProblem !== 'undefined' && examProblem !== null) {
-      // show pretty score
-      prettyScore();
-
-      // process exam stuff
-      exam();
-    }
+    // process exam stuff
+    exam();
   }
 });
 
