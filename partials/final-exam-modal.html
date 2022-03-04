@@ -291,6 +291,9 @@ function exam() {
   let examProblem = document.getElementById('exam-problem');
 
   if (typeof examProblem !== 'undefined' && examProblem !== null) {
+    console.log('[gym]: exam page');
+
+
     let progress_status_check; // this is the interval we'll set to track status on this problem
 
     let pretty_score_check;
@@ -462,6 +465,8 @@ function exam() {
 
     // show pretty score
     prettyScore();
+  } else {
+    console.log('[gym]: not exam page');
   }
 }
 
