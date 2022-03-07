@@ -391,7 +391,7 @@ class Gymnasium {
       }
       
       // Get highest score available?
-      var getHighestScore = function(courseId) {
+      var getHighestScore = function(courseNum) {
         let _score;
         let dataProblemScore;
         // Score derived from the fraction displayed on the problem progress div
@@ -412,21 +412,21 @@ class Gymnasium {
       }
       
       // Not sure if localStorage is the best way to go about this, since that value won't persist across different devices
-      var getPrevScore = function(courseId) {
+      var getPrevScore = function(courseNum) {
         let prevScore;
         let grades = {};
       
         if (gym.storageAvailable('localStorage')) {
           if (localStorage.getItem('grades')) {
             grades = JSON.parse(localStorage.getItem('grades'));
-            prevScore = grades[courseId] ? grades[courseId] : getHighestScore();
+            prevScore = grades[courseNum] ? grades[courseNum] : getHighestScore();
       
           } else {
             prevScore = getHighestScore();
           }
       
           // update grades object & store
-          grades[courseId] = prevScore;
+          grades[courseNum] = prevScore;
           localStorage.setItem('grades', JSON.stringify(grades));
       
         } else {
@@ -450,15 +450,14 @@ class Gymnasium {
   
       let previousScore;
   
-      let courseId = parseInt(document.getElementById('__course_number__').innerText, 10);
+      let courseNum = parseInt(document.getElementById('__course_number__').innerText, 10);
 
       const courseTypes = {
         full: 'FULL_COURSE',
         short: 'GYM_SHORT',
       };
 
-      // courseId = parseInt($('#__course_number__').text(), 10);
-      const courseType = courseId >= 100 ? courseTypes.full : courseTypes.short;
+      const courseType = courseNum >= 100 ? courseTypes.full : courseTypes.short;
 
       // full courses have a passing grade of 85
       let passingScore = 85;
@@ -515,7 +514,7 @@ class Gymnasium {
   
         // we have a score, let's do stuff
         if (score >= passingScore) {
-          // previousScore = getPrevScore(courseId);
+          // previousScore = getPrevScore(courseNum);
   
           // if (score > previousScore && attemptsRemaining > 0) {
           //   console.log('[gym] new high score! ', score, '\nprevious score: ', previousScore);
@@ -529,6 +528,7 @@ class Gymnasium {
           $(".failed_modal").addClass('hidden');
   
           //generate the certificate through the API
+          // TODO: change this to native JS
           $.ajax({
             type:     'POST',
             // TODO: use accredible sandbox to test? sandbox.api.accredible.com
@@ -569,7 +569,7 @@ class Gymnasium {
   
       let problemId = document.getElementById('exam-problem').getAttribute('data-id');
 
-      // previousScore = getPrevScore(courseId);
+      // previousScore = getPrevScore(courseNum);
   
       // console.log('[gym] exam page | previous score: ', previousScore);
   
@@ -589,7 +589,7 @@ class Gymnasium {
           clearInterval(prettyScoreCheck);
         }
   
-        prettyScoreCheck = setInterval(prettyScore, 200);
+        prettyScoreCheck = setInterval(prettyScore, 2000);
       });
   
       observer.observe(
