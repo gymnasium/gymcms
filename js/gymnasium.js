@@ -443,57 +443,57 @@ class Gymnasium {
       console.log('[gym]: exam page');
   
   
-      let progress_status_check; // this is the interval we'll set to track status on this problem
+      let progressStatusCheck; // this is the interval we'll set to track status on this problem
   
-      let pretty_score_check;
+      let prettyScoreCheck;
   
-      let previous_score;
+      let previousScore;
   
-      let COURSE_ID;
+      let courseId;
   
       // this helper function gets a ton of information about the score for this particular problem
       // based on information embedded on this page
       var processScore = () => {
-        const COURSE_TYPES = {
-          FULL_COURSE: 'FULL_COURSE',
-          GYM_SHORT: 'GYM_SHORT',
+        const courseTypes = {
+          full: 'FULL_COURSE',
+          short: 'GYM_SHORT',
         };
   
-        COURSE_ID = parseInt($('#__course_number__').text(), 10);
-        const COURSE_TYPE = COURSE_ID >= 100 ? COURSE_TYPES.FULL_COURSE : COURSE_TYPES.GYM_SHORT;
-        let PASSING_SCORE = 85;
+        courseId = parseInt($('#__course_number__').text(), 10);
+        const courseType = courseId >= 100 ? courseTypes.full : courseTypes.short;
+        let passingScore = 85;
   
-        if (COURSE_TYPE === COURSE_TYPES.FULL_COURSE) {
+        if (courseType === courseTypes.full) {
           // full courses have a passing grade of 85
-          PASSING_SCORE = 85;
+          passingScore = 85;
         } else {
           // gym shorts have a passing grade of 80
-          PASSING_SCORE = 80;
+          passingScore = 80;
         }
   
         var correct = Number(gym.getFraction()[1]);
         var outOf = Number(gym.getFraction()[2]);
   
-        var attempts_used = Number(document.getElementById('#attempts-used').innerText);
-        var attempts_total = Number(document.getElementById('#attempts-allowed').innerText);
+        var attemptsUsed = Number(document.getElementById('#attempts-used').innerText);
+        var attemptsTotal = Number(document.getElementById('#attempts-allowed').innerText);
   
         return {
-          courseType: COURSE_TYPE,
-          passingScore: PASSING_SCORE,
+          courseType: courseType,
+          passingScore: passingScore,
           score: gym.getScoreFromFraction(),
           correct,
           outOf,
-          attempts_used,
-          attempts_total,
-          attempts_remaining: attempts_total - attempts_used,
+          attemptsUsed,
+          attemptsTotal,
+          attemptsRemaining: attemptsTotal - attemptsUsed,
         };
       };
   
-      var show_problem_progress = function() {
+      var showProblemProgress = function() {
         let {
-          attempts_used,
-          attempts_total,
-          attempts_remaining,
+          attemptsUsed,
+          attemptsTotal,
+          attemptsRemaining,
           correct,
           courseType,
           outOf,
@@ -514,10 +514,10 @@ class Gymnasium {
   
         // we have a score, let's do stuff
         if (score >= passingScore) {
-          // previous_score = getPrevScore(COURSE_ID);
+          // previousScore = getPrevScore(courseId);
   
-          // if (score > previous_score && attempts_remaining > 0) {
-          //   console.log('[gym] new high score! ', score, '\nprevious score: ', previous_score);
+          // if (score > previousScore && attemptsRemaining > 0) {
+          //   console.log('[gym] new high score! ', score, '\nprevious score: ', previousScore);
           // } else {
           //   console.log('[gym] score is not higher than previous score');
           // }
@@ -542,7 +542,7 @@ class Gymnasium {
           });
         } else {
           //we failed :( see if we have another attempt
-          if (attempts_remaining > 0) {
+          if (attemptsRemaining > 0) {
             $(".passed_modal").addClass('hidden');
             $(".try_again_modal." + courseType).removeClass('hidden');
             $(".failed_modal").addClass('hidden');
@@ -554,47 +554,47 @@ class Gymnasium {
         }
       }
   
-      function check_status(){
+      function checkStatus(){
         const {
-          attempts_used,
+          attemptsUsed,
           correct,
         } = processScore();
   
-        if (attempts_used > 0 || correct > 0) {
-          clearInterval(progress_status_check);
-          show_problem_progress();
+        if (attemptsUsed > 0 || correct > 0) {
+          clearInterval(progressStatusCheck);
+          showProblemProgress();
         }
       }
   
-      let problem_id = document.getElementById('exam-problem').getAttribute('data-id');
+      let problemId = document.getElementById('exam-problem').getAttribute('data-id');
   
-      COURSE_ID = parseInt(document.getElementById('__course_number__').innerText, 10);
+      courseId = parseInt(document.getElementById('__course_number__').innerText, 10);
   
-      // previous_score = getPrevScore(COURSE_ID);
+      // previousScore = getPrevScore(courseId);
   
-      // console.log('[gym] exam page | previous score: ', previous_score);
+      // console.log('[gym] exam page | previous score: ', previousScore);
   
       let observer = new MutationObserver(mutationRecords => {
         // log
         // console.log('[gym] mutation records: ', mutationRecords);
   
         // reset interval if we detect a grade change
-        if (typeof progress_status_check !== 'undefined'){
-          clearInterval(progress_status_check);
+        if (typeof progressStatusCheck !== 'undefined'){
+          clearInterval(progressStatusCheck);
         }
         // set interval on initial page load
-        progress_status_check = setInterval(check_status, 200);
+        progressStatusCheck = setInterval(checkStatus, 200);
   
         // Pretty score stuff
-        if (typeof pretty_score_check !== 'undefined')  {
-          clearInterval(pretty_score_check);
+        if (typeof prettyScoreCheck !== 'undefined')  {
+          clearInterval(prettyScoreCheck);
         }
   
-        pretty_score_check = setInterval(prettyScore, 200);
+        prettyScoreCheck = setInterval(prettyScore, 200);
       });
   
       observer.observe(
-        document.getElementById(problem_id + '-problem-progress'),
+        document.getElementById(problemId + '-problem-progress'),
         {
           characterData: false,
           attributes: false,
@@ -638,10 +638,24 @@ gym.ieCheck();
 // Adds dynamic system status banner
 gym.systemStatus();
 
+// Native JS equivalent of jQuery's document.ready
 document.onreadystatechange = function() {
   if (document.readyState === 'complete') {
+    console.log('complete state');
+
     gym.setBgFromImage();
     gym.accountDeletion();
     gym.exam();
   }
 };
+
+// Alternative to above: Native JS equivalent of jQuery's document.ready
+// document.addEventListener('readystatechange', event => {
+//   if (event.target.readyState === 'interactive') {
+//     console.log('interactive state');
+
+//   } else if (event.target.readyState === 'complete') {
+//     console.log('complete state');
+
+//   }
+// });
