@@ -475,8 +475,8 @@ class Gymnasium {
         var correct = Number(getFraction()[1]);
         var outOf = Number(getFraction()[2]);
   
-        var attemptsUsed = Number(document.getElementById('#attempts-used').innerText);
-        var attemptsTotal = Number(document.getElementById('#attempts-allowed').innerText);
+        var attemptsUsed = Number(document.getElementById('attempts-used').innerText);
+        var attemptsTotal = Number(document.getElementById('attempts-allowed').innerText);
   
         return {
           courseType: courseType,
