@@ -369,71 +369,6 @@ class Gymnasium {
   
   }
   
-  // 
-  getFraction() {
-    let [fraction] = document.querySelector('.problem-progress').innerText.split(' ');
-    let [numerator, denominator] = fraction.split('/');
-  
-    return [fraction, parseInt(numerator), parseInt(denominator)];
-  }
-  
-  //
-  getScoreFromFraction() {
-    return Number(gym.getFraction()[1] / gym.getFraction()[2] * 100);
-  }
-  
-  // Get highest score available?
-  getHighestScore(courseId) {
-    let _score;
-    let dataProblemScore;
-    // Score derived from the fraction displayed on the problem progress div
-    let scoreFromFraction = gym.getScoreFromFraction();
-    //let score3;
-  
-    // Score stored in a data attribute 
-    // TODO: if a score greater than 0 is stored in a data attribute when the page loads, then we can unhide one of the modals
-    let probElem = document.querySelector('[data-problem-score]');
-    dataProblemScore = Number(probElem.getAttribute('data-problem-score'));
-  
-    // Check the highest score
-    _score = Math.max(dataProblemScore, scoreFromFraction);
-  
-    return _score;
-  }
-  
-  // Not sure if localStorage is the best way to go about this, since that value won't persist across different devices
-  getPrevScore(courseId) {
-    let prevScore;
-    let grades = {};
-  
-    if (gym.storageAvailable('localStorage')) {
-      if (localStorage.getItem('grades')) {
-        grades = JSON.parse(localStorage.getItem('grades'));
-        prevScore = grades[courseId] ? grades[courseId] : gym.getHighestScore();
-  
-      } else {
-        prevScore = gym.getHighestScore();
-      }
-  
-      // update grades object & store
-      grades[courseId] = prevScore;
-      localStorage.setItem('grades', JSON.stringify(grades));
-  
-    } else {
-      console.warn('[gym] no local storage available');
-      // TODO: add alternate options
-    }
-  
-    return prevScore;
-  }
-  
-  // This is where we customize how the score is displayed to the end-user
-  prettyScore() {
-    let examGrade = document.getElementById('exam-grade');
-  
-    examGrade.innerText = 'Your score: ' + gym.getScoreFromFraction();
-  }
-  
   // Main function to handle exam page stuff
   exam() {
     // TODO: add a check to only execute this on the exam page
@@ -441,38 +376,104 @@ class Gymnasium {
   
     if (typeof examProblem !== 'undefined' && examProblem !== null) {
       console.log('[gym]: exam page');
-  
-  
+
+      // Use the problem-progress element to get a fraction
+      var getFraction = function() {
+        let [fraction] = document.querySelector('.problem-progress').innerText.split(' ');
+        let [numerator, denominator] = fraction.split('/');
+      
+        return [fraction, parseInt(numerator), parseInt(denominator)];
+      }
+      
+      // get score from fraction numerator/denominator
+      var getScoreFromFraction = function() {
+        return Number(getFraction()[1] / getFraction()[2] * 100);
+      }
+      
+      // Get highest score available?
+      var getHighestScore = function(courseId) {
+        let _score;
+        let dataProblemScore;
+        // Score derived from the fraction displayed on the problem progress div
+        let scoreFromFraction = getScoreFromFraction();
+        //let score3;
+      
+        // Score stored in a data attribute 
+        // TODO: if a score greater than 0 is stored in a data attribute when the page loads, then we can unhide one of the modals
+
+        // Find the problems wrapper element (.problems-wrapper)
+        let probElem = document.querySelector('[data-problem-score]');
+        dataProblemScore = Number(probElem.getAttribute('data-problem-score'));
+      
+        // Check the highest score
+        _score = Math.max(dataProblemScore, scoreFromFraction);
+      
+        return _score;
+      }
+      
+      // Not sure if localStorage is the best way to go about this, since that value won't persist across different devices
+      var getPrevScore = function(courseId) {
+        let prevScore;
+        let grades = {};
+      
+        if (gym.storageAvailable('localStorage')) {
+          if (localStorage.getItem('grades')) {
+            grades = JSON.parse(localStorage.getItem('grades'));
+            prevScore = grades[courseId] ? grades[courseId] : getHighestScore();
+      
+          } else {
+            prevScore = getHighestScore();
+          }
+      
+          // update grades object & store
+          grades[courseId] = prevScore;
+          localStorage.setItem('grades', JSON.stringify(grades));
+      
+        } else {
+          console.warn('[gym] no local storage available');
+          // TODO: add alternate options
+        }
+      
+        return prevScore;
+      }
+      
+      // This is where we customize how the score is displayed to the end-user
+      var prettyScore = function() {
+        let examGrade = document.getElementById('exam-grade');
+      
+        examGrade.innerText = 'Your score: ' + getScoreFromFraction();
+      }
+
       let progressStatusCheck; // this is the interval we'll set to track status on this problem
   
-      let prettyScoreCheck;
+      let prettyScoreCheck; // interval for pretty score check
   
       let previousScore;
   
-      let courseId;
+      let courseId = parseInt(document.getElementById('__course_number__').innerText, 10);
+
+      const courseTypes = {
+        full: 'FULL_COURSE',
+        short: 'GYM_SHORT',
+      };
+
+      // courseId = parseInt($('#__course_number__').text(), 10);
+      const courseType = courseId >= 100 ? courseTypes.full : courseTypes.short;
+
+      // full courses have a passing grade of 85
+      let passingScore = 85;
+
+      if (courseType === courseTypes.short) {
+        // gym shorts have a passing grade of 80
+        passingScore = 80;
+      }
   
       // this helper function gets a ton of information about the score for this particular problem
       // based on information embedded on this page
       var processScore = () => {
-        const courseTypes = {
-          full: 'FULL_COURSE',
-          short: 'GYM_SHORT',
-        };
   
-        courseId = parseInt($('#__course_number__').text(), 10);
-        const courseType = courseId >= 100 ? courseTypes.full : courseTypes.short;
-        let passingScore = 85;
-  
-        if (courseType === courseTypes.full) {
-          // full courses have a passing grade of 85
-          passingScore = 85;
-        } else {
-          // gym shorts have a passing grade of 80
-          passingScore = 80;
-        }
-  
-        var correct = Number(gym.getFraction()[1]);
-        var outOf = Number(gym.getFraction()[2]);
+        var correct = Number(getFraction()[1]);
+        var outOf = Number(getFraction()[2]);
   
         var attemptsUsed = Number(document.getElementById('#attempts-used').innerText);
         var attemptsTotal = Number(document.getElementById('#attempts-allowed').innerText);
@@ -480,7 +481,7 @@ class Gymnasium {
         return {
           courseType: courseType,
           passingScore: passingScore,
-          score: gym.getScoreFromFraction(),
+          score: getScoreFromFraction(),
           correct,
           outOf,
           attemptsUsed,
@@ -567,9 +568,7 @@ class Gymnasium {
       }
   
       let problemId = document.getElementById('exam-problem').getAttribute('data-id');
-  
-      courseId = parseInt(document.getElementById('__course_number__').innerText, 10);
-  
+
       // previousScore = getPrevScore(courseId);
   
       // console.log('[gym] exam page | previous score: ', previousScore);
@@ -579,14 +578,14 @@ class Gymnasium {
         // console.log('[gym] mutation records: ', mutationRecords);
   
         // reset interval if we detect a grade change
-        if (typeof progressStatusCheck !== 'undefined'){
+        if (typeof progressStatusCheck !== 'undefined') {
           clearInterval(progressStatusCheck);
         }
         // set interval on initial page load
         progressStatusCheck = setInterval(checkStatus, 200);
   
         // Pretty score stuff
-        if (typeof prettyScoreCheck !== 'undefined')  {
+        if (typeof prettyScoreCheck !== 'undefined') {
           clearInterval(prettyScoreCheck);
         }
   
@@ -613,7 +612,7 @@ class Gymnasium {
   
   
       // show pretty score
-      gym.prettyScore();
+      prettyScore();
     } else {
       console.log('[gym]: not exam page');
     }
