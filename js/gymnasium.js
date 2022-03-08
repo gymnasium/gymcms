@@ -343,32 +343,7 @@ class Gymnasium {
       cb();
     }
   }
-  
-  // show specific exam messages (passed, try_again, failed)
-  modalVisibility(status, courseType) {
-    let modalsHidden = false;
-  
-    gym.hideModals(()=> {
-      modalsHidden = true;
-    });
-  
-    if (modalsHidden) {
-      let elems;
-      if (courseType) {
-        elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
-      } else {
-        elems = document.querySelectorAll('.' + status + '_modal');
-      }
-  
-      elems.forEach(function(elem) {
-        console.log('showing modal: ', elem);
-        elem.classList.remove('hidden');
-        elem.setAttribute('aria-hidden', false);
-      });
-    }
-  
-  }
-  
+
   // Main function to handle exam page stuff
   exam() {
     // TODO: add a check to only execute this on the exam page
@@ -376,6 +351,30 @@ class Gymnasium {
   
     if (typeof examProblem !== 'undefined' && examProblem !== null) {
       console.log('[gym]: exam page');
+
+      // show specific exam messages (passed, try_again, failed)
+      var showExamMessage = function(status, courseType) {
+        let modalsHidden = false;
+
+        gym.hideModals(()=> {
+          modalsHidden = true;
+        });
+
+        if (modalsHidden) {
+          let elems;
+          if (courseType) {
+            elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
+          } else {
+            elems = document.querySelectorAll('.' + status + '_modal');
+          }
+
+          elems.forEach(function(elem) {
+            console.log('showing modal: ', elem);
+            elem.classList.remove('hidden');
+            elem.setAttribute('aria-hidden', false);
+          });
+        }
+      }
 
       // Use the problem-progress element to get a fraction
       var getFraction = function() {
@@ -523,10 +522,11 @@ class Gymnasium {
           // }
   
           //we passed! show passing div for the type of course they took
-          $(".passed_modal." + courseType).removeClass('hidden');
-          $(".try_again_modal").addClass('hidden');
-          $(".failed_modal").addClass('hidden');
-  
+          showExamMessage('passed', courseType);
+          // $(".passed_modal." + courseType).removeClass('hidden');
+          // $(".try_again_modal").addClass('hidden');
+          // $(".failed_modal").addClass('hidden');
+
           //generate the certificate through the API
           // TODO: change this to native JS
           $.ajax({
@@ -544,13 +544,17 @@ class Gymnasium {
         } else {
           //we failed :( see if we have another attempt
           if (attemptsRemaining > 0) {
-            $(".passed_modal").addClass('hidden');
-            $(".try_again_modal." + courseType).removeClass('hidden');
-            $(".failed_modal").addClass('hidden');
+            showExamMessage('try_again', courseType);
+
+            // $(".passed_modal").addClass('hidden');
+            // $(".try_again_modal." + courseType).removeClass('hidden');
+            // $(".failed_modal").addClass('hidden');
           } else {
-            $(".passed_modal").addClass('hidden');
-            $(".try_again_modal").addClass('hidden');
-            $(".failed_modal").removeClass('hidden');
+            showExamMessage('failed', courseType);
+
+            // $(".passed_modal").addClass('hidden');
+            // $(".try_again_modal").addClass('hidden');
+            // $(".failed_modal").removeClass('hidden');
           }
         }
       }
