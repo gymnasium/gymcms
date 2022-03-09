@@ -58,7 +58,7 @@ div#content.content-wrapper,
 
 p {
   font-family: $gym-text-font-stack;
-  font-size: 1.2em/1.6em;
+  font-size: 1.2em;
 }
 
 .break-word {
@@ -1738,7 +1738,7 @@ https://github.com/gymnasium/tracker/issues/127
 
 .login-register,
 .login-register .form-type {
-  min-width: none;
+  min-width: auto;
 }
 
 #password-reset {
