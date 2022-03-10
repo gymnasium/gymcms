@@ -388,26 +388,16 @@ class Gymnasium {
       var getScoreFromFraction = function() {
         return Number(getFraction()[1] / getFraction()[2] * 100);
       }
+
+      // get score stored in the data attribute on the .problems-wrapper element
+      var getScoreFromDataAttr = function() {
+        let probElem = document.querySelector('[data-problem-score]');
+        return Number(probElem.getAttribute('data-problem-score'));
+      }
       
       // Get highest score available?
       var getHighestScore = function(courseNum) {
-        let _score;
-        let dataProblemScore;
-        // Score derived from the fraction displayed on the problem progress div
-        let scoreFromFraction = getScoreFromFraction();
-        //let score3;
-      
-        // Score stored in a data attribute 
-        // TODO: if a score greater than 0 is stored in a data attribute when the page loads, then we can unhide one of the modals
-
-        // Find the problems wrapper element (.problems-wrapper)
-        let probElem = document.querySelector('[data-problem-score]');
-        dataProblemScore = Number(probElem.getAttribute('data-problem-score'));
-      
-        // Check the highest score
-        _score = Math.max(dataProblemScore, scoreFromFraction);
-      
-        return _score;
+        return Math.max(getScoreFromDataAttr(), getScoreFromFraction());
       }
       
       // Not sure if localStorage is the best way to go about this, since that value won't persist across different devices
