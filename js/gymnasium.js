@@ -349,7 +349,7 @@ class Gymnasium {
     // TODO: add a check to only execute this on the exam page
     let examProblem = document.getElementById('exam-problem');
   
-    if (typeof examProblem !== 'undefined' && examProblem !== null) {
+    if (!!examProblem) {
       console.log('[gym]: exam page');
 
       // show specific exam messages (passed, try_again, failed)
