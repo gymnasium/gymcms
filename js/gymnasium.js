@@ -378,7 +378,7 @@ class Gymnasium {
 
       // Use the problem-progress element to get a fraction
       var getFraction = function() {
-        let [fraction] = document.querySelector('.problem-progress').innerText.split(' ');
+        let [fraction] = document.querySelector('.problem-progress').innerText.trim().split(' ');
         let [numerator, denominator] = fraction.split('/');
       
         return [fraction, parseInt(numerator), parseInt(denominator)];
