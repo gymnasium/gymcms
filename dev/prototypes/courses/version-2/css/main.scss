@@ -47,6 +47,9 @@ html {
 
 main {
   position: relative;
+  display: grid;
+  grid-auto-rows: minmax(min-content, max-content);
+  gap: 1.2rem;
   margin-top: 0.8rem;
   margin-bottom: 2rem;
 }
@@ -56,19 +59,16 @@ main a:focus {
   margin-bottom: -1px;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 48em) {
 
 main {
-  display: grid;
   grid-template-columns: 18rem auto;
-  grid-auto-rows: auto;
-  gap: 1.2rem;
 }
 
 }
 
 @supports (position: sticky) {
-@media (min-width: 64em) and (min-height: 48em) {
+@media (min-width: 48em) and (min-height: 48em) {
 
 main > header > div {
   position: sticky;
@@ -101,7 +101,8 @@ a {
 
 nav {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  grid-auto-rows: minmax(min-content, max-content);
   gap: 0 1.2rem;
   border-top: 1px dashed #ccc;
   margin-top: 1.6rem;
@@ -126,34 +127,6 @@ nav div:first-child li:first-child {
 nav div + div ul {
   margin-left: 1.35rem;
 }
-
-// nav > div details,
-// nav > div:first-child ul ~ ul {
-//   border-top: 1px dashed #ccc;
-//   padding-top: 0.8rem;
-//   margin-top: 1rem;
-// }
-//
-// nav details summary b {
-//   font-size: 1.2em;
-//   text-decoration: underline;
-//   margin-left: 0.125rem;
-// }
-//
-// nav details ul {
-//   columns: 2 auto;
-//   column-gap: 1.6rem;
-//   margin-top: 1rem;
-//   margin-right: -0.4rem;
-// }
-//
-// nav details li {
-//   line-height: 1.3;
-// }
-//
-// nav details li > * {
-//   display: inline;
-// }
 
 nav > div:last-child ul {
   list-style: none;
@@ -183,7 +156,7 @@ ul[role="list"] {
 
 .courses ul[role="list"] {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
   grid-auto-rows: minmax(min-content, max-content);
   gap: 1.2rem;
   margin: 0;
@@ -786,17 +759,6 @@ header ~ input {
   opacity: 0.5;
 }
 
-@media (max-width: 64em) {
-
-ul[role="list"]::after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 10em;
-}
-
-}
-
 #design:target .courses ul[role="list"] > .design,
 #html:target .courses ul[role="list"] > .html,
 #css:target .courses ul[role="list"] > .css,
@@ -833,9 +795,6 @@ ul[role="list"]::after {
 #accessibility:target .courses ul[role="list"] li.sans-course,
 #career-skills:target .courses ul[role="list"] li.sans-course {
   display: grid;
-}
-
-.courses ul[role="list"] li.sans-course {
   min-height: 8rem;
 }
 
@@ -843,8 +802,18 @@ ul[role="list"]::after {
 :target .courses ul[role="list"] li.view-all {
   display: grid;
   position: absolute;
-  top: 4.8125rem;
+  top: 4.615rem;
   z-index: 0;
+}
+
+@media (max-width: 48em) {
+
+.courses:after {
+  content: "";
+  display: block;
+  min-height: 12rem;
+}
+
 }
 
 nav [href="#all"],
@@ -946,114 +915,5 @@ nav [href="#all"],
 #all:target .courses > li:first-child:before {
   content: "All Categories";
 }
-
-// #design:target .topics li:first-child:not(li.design:first-child)::before {
-//   content: "web design";
-//   white-space: nowrap;
-//   margin-right: 0.625rem;
-// }
-//
-// #development:target .topics li:first-child:not(li.development:first-child)::before {
-//   content: "web development";
-//   white-space: nowrap;
-//   margin-right: 0.625rem;
-// }
-//
-// #ux:target .topics li:first-child:not(li.ux:first-child)::before {
-//   content: "ux";
-//   margin-right: 0.625rem;
-// }
-//
-// #prototyping:target .topics li:first-child:not(li.prototyping:first-child)::before {
-//   content: "prototyping";
-//   margin-right: 0.625rem;
-// }
-//
-// #accessibility:target .topics li:first-child:not(li.accessibility:first-child)::before {
-//   content: "accessibility";
-//   margin-right: 0.625rem;
-// }
-//
-// #career-skills:target .topics li:first-child:not(li.career-skills:first-child)::before {
-//   content: "career skills";
-//   white-space: nowrap;
-//   margin-right: 0.625rem;
-// }
-//
-// #html:target .topics li:first-child:not(li.html:first-child)::before {
-//   content: "html";
-//   margin-right: 0.625rem;
-// }
-//
-// #css:target .topics li:first-child:not(li.css:first-child)::before {
-//   content: "css";
-//   margin-right: 0.625rem;
-// }
-//
-// #javascript:target .topics li:first-child:not(li.javascript:first-child)::before {
-//   content: "javascript";
-//   margin-right: 0.625rem;
-// }
-//
-// #php:target .topics li:first-child:not(li.php:first-child)::before {
-//   content: "php";
-//   margin-right: 0.625rem;
-// }
-//
-// #github:target .topics li:first-child:not(li.github:first-child)::before {
-//   content: "github";
-//   margin-right: 0.625rem;
-// }
-//
-// #design-systems:target .topics li:first-child:not(li.design-systems:first-child)::before {
-//   content: "design systems";
-//   white-space: nowrap;
-//   margin-right: 0.625rem;
-// }
-//
-// #figma:target .topics li:first-child:not(li.figma:first-child)::before {
-//   content: "figma";
-//   margin-right: 0.625rem;
-// }
-//
-// #sketch:target .topics li:first-child:not(li.sketch:first-child)::before {
-//   content: "sketch";
-//   margin-right: 0.625rem;
-// }
-//
-// #adobe-xd:target .topics li:first-child:not(li.adobe-xd:first-child)::before {
-//   content: "adobe-xd";
-//   white-space: nowrap;
-//   margin-right: 0.625rem;
-// }
-//
-// #invision-studio:target .topics li:first-child:not(li.invision-studio:first-child)::before {
-//   content: "invision studio";
-//   white-space: nowrap;
-//   margin-right: 0.625rem;
-// }
-//
-// #data-visualization:target .topics li:first-child:not(li.data-visualization:first-child)::before {
-//   content: "data visualization";
-//   white-space: nowrap;
-//   margin-right: 0.625rem;
-// }
-//
-// #virtual-reality:target .topics li:first-child:not(li.virtual-reality:first-child)::before {
-//   content: "virtual reality";
-//   white-space: nowrap;
-//   margin-right: 0.625rem;
-// }
-//
-// #productivity:target .topics li:first-child:not(li.productivity:first-child)::before {
-//   content: "productivity";
-//   margin-right: 0.625rem;
-// }
-//
-// #time-management:target .topics li:first-child:not(li.time-management:first-child)::before {
-//   content: "time management";
-//   white-space: nowrap;
-//   margin-right: 0.625rem;
-// }
 
 }
