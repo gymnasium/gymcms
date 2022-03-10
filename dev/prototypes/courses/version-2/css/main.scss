@@ -67,18 +67,18 @@ main {
 
 }
 
-// @supports (position: sticky) {
-// @media (min-width: 64em) and (min-height: 40em) {
-//
-// main > header > div {
-//   position: sticky;
-//   top: 1.6rem;
-//   width: 100%;
-//   height: min-content;
-// }
-//
-// }
-// }
+@supports (position: sticky) {
+@media (min-width: 64em) and (min-height: 48em) {
+
+main > header > div {
+  position: sticky;
+  top: 1.6rem;
+  width: 100%;
+  height: min-content;
+}
+
+}
+}
 
 main > header h1 {
   margin-top: 1rem;
@@ -215,9 +215,6 @@ ul[role="list"] {
 
 .courses > li > header {
   margin-bottom: 1.2rem;
-}
-.courses > li > header h2 {
-  display: inline;
 }
 
 // Sort
@@ -536,10 +533,6 @@ ul[role="list"] {
 
 .courses.oldest .tutorial .list > li:nth-child(51) {
   order: 1;
-}
-
-.sort-by {
-  margin-top: 1rem;
 }
 
 .sort-by ul {
