@@ -238,13 +238,13 @@ class Gymnasium {
       data: jsonData,
     })
     .done(function (event) {
-      //console.log("Success!\n", event);
+      //console.log("[gym]: Success!\n", event);
     })
     .fail(function (event, textStatus, errorThrown) {
-      //console.log("Failure:\n", textStatus, "\n", errorThrown);
+      //console.log("[gym]: Failure:\n", textStatus, "\n", errorThrown);
     })
     .always(function (e) {
-      //console.log("always:\n", e);
+      //console.log("[gym]: always:\n", e);
       if (callback) {
         callback();
       }
@@ -266,12 +266,12 @@ class Gymnasium {
 
     if (typeof images !== 'undefined' && images !== null) {
       images.forEach((image, index) => {
-        // console.log(`[gym] image (${index})  found, processing`);
+        // console.log(`[gym] image (${index}) found, processing`);
         var bgTarget = document.querySelectorAll('[data-bg="target"')[index];
   
         var data = gym.getPixel(image.src);
 
-        // console.log(`image data: ${data}`)
+        // console.log(`[gym]: image data: ${data}`)
   
         var r = data[0];
         var g = data[1];
@@ -333,7 +333,7 @@ class Gymnasium {
   // TODO: this could be rewritten to be element agnostic
   hideModals(cb) {
     document.querySelectorAll('.message').forEach(function(elem) {
-      console.log('hiding modal: ', elem);
+      console.log('[gym]: hiding modal: ', elem.id);
       elem.classList.add('hidden');
       elem.setAttribute('aria-hidden', true);
     });
@@ -369,7 +369,7 @@ class Gymnasium {
           }
 
           elems.forEach(function(elem) {
-            console.log('showing modal: ', elem);
+            console.log('[gym]: showing modal: ', elem.id);
             elem.classList.remove('hidden');
             elem.setAttribute('aria-hidden', false);
           });
@@ -419,7 +419,7 @@ class Gymnasium {
           localStorage.setItem('grades', JSON.stringify(grades));
       
         } else {
-          console.warn('[gym] no local storage available');
+          console.warn('[gym]: no local storage available');
           // TODO: add alternate options
         }
       
@@ -458,7 +458,8 @@ class Gymnasium {
   
       // this helper function gets a ton of information about the score for this particular problem
       // based on information embedded on this page
-      var processScore = () => {
+      function processScore() {
+        console.log('[gym]: processScore function');
   
         var correct = Number(getFraction()[1]);
         var outOf = Number(getFraction()[2]);
@@ -478,7 +479,8 @@ class Gymnasium {
         };
       };
   
-      var showProblemProgress = function() {
+      function showProblemProgress(state) {
+        console.log('[gym]: showProblemProgress function');
         let {
           attemptsUsed,
           attemptsTotal,
@@ -506,50 +508,44 @@ class Gymnasium {
           // previousScore = getPrevScore(courseNum);
   
           // if (score > previousScore && attemptsRemaining > 0) {
-          //   console.log('[gym] new high score! ', score, '\nprevious score: ', previousScore);
+          //   console.log('[gym]: new high score! ', score, '\nprevious score: ', previousScore);
           // } else {
-          //   console.log('[gym] score is not higher than previous score');
+          //   console.log('[gym]: score is not higher than previous score');
           // }
   
           //we passed! show passing div for the type of course they took
           showExamMessage('passed', courseType);
-          // $(".passed_modal." + courseType).removeClass('hidden');
-          // $(".try_again_modal").addClass('hidden');
-          // $(".failed_modal").addClass('hidden');
 
           //generate the certificate through the API
           // TODO: change this to native JS
-          $.ajax({
-            type:     'POST',
-            // TODO: use accredible sandbox to test? sandbox.api.accredible.com
-            //url:      '/accredible/request_certificate',
-            async:     false,
-            data:     {
-              'course_id': window.$$course_id
-            },
-            success:  function(data) {
-              // console.log('[gym] certificate request successful: ', data);
-            }
-          });
+          if (state === 'submit') {
+            console.log('[gym]: this is where the exam ajax submission occcurs');
+            // $.ajax({
+            //   type:     'POST',
+            //   // TODO: use accredible sandbox to test? sandbox.api.accredible.com
+            //   //url:      '/accredible/request_certificate',
+            //   async:     false,
+            //   data:     {
+            //     'course_id': window.$$course_id
+            //   },
+            //   success:  function(data) {
+            //     // console.log('[gym]: certificate request successful: ', data);
+            //   }
+            // });
+          }
+          
         } else {
           //we failed :( see if we have another attempt
           if (attemptsRemaining > 0) {
             showExamMessage('try_again', courseType);
-
-            // $(".passed_modal").addClass('hidden');
-            // $(".try_again_modal." + courseType).removeClass('hidden');
-            // $(".failed_modal").addClass('hidden');
           } else {
             showExamMessage('failed', courseType);
-
-            // $(".passed_modal").addClass('hidden');
-            // $(".try_again_modal").addClass('hidden');
-            // $(".failed_modal").removeClass('hidden');
           }
         }
       }
   
-      function checkStatus(){
+      function checkStatus(state) {
+        console.log('[gym]: checkStatus function');
         const {
           attemptsUsed,
           correct,
@@ -557,7 +553,7 @@ class Gymnasium {
   
         if (attemptsUsed > 0 || correct > 0) {
           clearInterval(progressStatusCheck);
-          showProblemProgress();
+          showProblemProgress(state);
         }
       }
   
@@ -565,11 +561,11 @@ class Gymnasium {
 
       // previousScore = getPrevScore(courseNum);
   
-      // console.log('[gym] exam page | previous score: ', previousScore);
+      // console.log('[gym]: exam page | previous score: ', previousScore);
   
       let observer = new MutationObserver(mutationRecords => {
         // log
-        // console.log('[gym] mutation records: ', mutationRecords);
+        // console.log('[gym]: mutation records: ', mutationRecords);
   
         // reset interval if we detect a grade change
         if (typeof progressStatusCheck !== 'undefined') {
@@ -595,18 +591,21 @@ class Gymnasium {
           subtree: false
         },
       );
-  
-      // scroll to show the results message
-      $('#check-button').on('click', function() {
-        // console.log('[gym] check exam button clicked');
+
+      let checkButton = document.getElementById('check-button');
+
+      checkButton.addEventListener('click', function() {
+        // console.log('[gym]: check exam button clicked');
         // TODO: re-process the exam score.
+
+        checkStatus('submit');
   
+        // scroll to show the results message
         document.getElementById('course_passed_message').scrollIntoView();
-      });
-  
-  
-      // show pretty score
+      }, false);
+
       prettyScore();
+      checkStatus('load');
     } else {
       console.log('[gym]: not exam page');
     }
@@ -632,23 +631,16 @@ gym.ieCheck();
 gym.systemStatus();
 
 // Native JS equivalent of jQuery's document.ready
-document.onreadystatechange = function() {
-  if (document.readyState === 'complete') {
-    console.log('complete state');
+document.addEventListener('readystatechange', event => {
+  if (event.target.readyState === 'interactive') {
+    console.log('[gym]: document ready state: interactive');
+
+  } else if (event.target.readyState === 'complete') {
+    console.log('[gym]: document ready state: complete');
 
     gym.setBgFromImage();
     gym.accountDeletion();
     gym.exam();
+
   }
-};
-
-// Alternative to above: Native JS equivalent of jQuery's document.ready
-// document.addEventListener('readystatechange', event => {
-//   if (event.target.readyState === 'interactive') {
-//     console.log('interactive state');
-
-//   } else if (event.target.readyState === 'complete') {
-//     console.log('complete state');
-
-//   }
-// });
+});
