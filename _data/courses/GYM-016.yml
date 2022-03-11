@@ -6,13 +6,13 @@ course_type: short
 live: true
 url: /courses/course-v1:GYM+016+0/about
 poster_art: /img/course-artwork/png/gym-016.png
-topic: "Web Design & Development"
+topic: "Design & Development"
 subtopics:
   - label: "Accessibility"
 short_description: "Learn accessible and responsive design best practices to help make a more user-friendly web for everyone."
 instructor: emarcotte
 skills:
-  - label: "Web accessibility"
+  - label: "Accessibility"
   - label: "Responsive design"
   - label: "Intermediate HTML/CSS"
   - label: "And more…"
