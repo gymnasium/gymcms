@@ -2364,12 +2364,6 @@ TODO: migrate discussion CSS out of theme
   content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
 }
 
-// Hide "Go to Class" button/link
-
-.course-metabar a[href*="GYM/100"] {
-  display: none;
-}
-
 // Dashboard
 
 #dashboard-main #course-header-100 h1 + *:before {
@@ -2378,7 +2372,7 @@ TODO: migrate discussion CSS out of theme
 
 #dashboard-main .archived {
   font-size: 1.45em;
-  color: #fff;
+  color: $gym-white;
 }
 
 // Enrollment disabled
