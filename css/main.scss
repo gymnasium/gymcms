@@ -2379,12 +2379,6 @@ TODO: migrate discussion CSS out of theme
 #dashboard-main .archived {
   font-size: 1.45em;
   color: #fff;
-  overflow: hidden;
-}
-
-#dashboard-main .archived:before {
-  content: "";
-  margin-right: -6ex;
 }
 
 // Enrollment disabled
