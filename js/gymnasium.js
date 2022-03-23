@@ -44,10 +44,12 @@ class Gymnasium {
   }
 
   // countdown timer
-  countDown(selector, time, url) {
+  countDown(selector) {
     var elem = document.querySelector(selector);
   
     if (typeof elem !== 'undefined' && elem !== null) {
+      var time = elem.innerHTML;
+      var url = elem.getAttribute('data-redirect-url');
       var counter = parseInt(time);
 
       var redirectTimer = setInterval(function() {
@@ -300,7 +302,7 @@ class Gymnasium {
 var gym = new Gymnasium();
 
 // Countdown timer on info page
-gym.countDown('[data-countdown]', 10, '/login?next=' + encodeURIComponent(window.location.href));
+gym.countDown('[data-countdown]');
 
 // Do wicked stuff to course tabs
 gym.courseTabs();
