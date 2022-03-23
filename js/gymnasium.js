@@ -44,10 +44,12 @@ class Gymnasium {
   }
 
   // countdown timer
-  countDown(selector, time, url) {
+  countDown(selector) {
     var elem = document.querySelector(selector);
-  
+
     if (typeof elem !== 'undefined' && elem !== null) {
+      var time = elem.innerHTML;
+      var url = elem.getAttribute('[data-redirect-url]');
       var counter = parseInt(time);
 
       var redirectTimer = setInterval(function() {
