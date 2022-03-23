@@ -49,7 +49,7 @@ class Gymnasium {
 
     if (typeof elem !== 'undefined' && elem !== null) {
       var time = elem.innerHTML;
-      var url = elem.getAttribute('[data-redirect-url]');
+      var url = elem.getAttribute('data-redirect-url');
       var counter = parseInt(time);
 
       var redirectTimer = setInterval(function() {
