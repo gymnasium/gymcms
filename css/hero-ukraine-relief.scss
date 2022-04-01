@@ -1,0 +1,149 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+// TODO: add grid layout support with current fallback layout
+
+.hero-promo {
+
+& {
+  font-size: 16px; // !override / reset/rescale Bootstrap (3) handiwork
+  background-color: $gym-dark-gray;
+  background-image: url("{{ site.url }}/home/img/hero-ukraine-relief/andriyko-podilnyk-TaWaGbjp60Q-unsplash-1280w.jpg?{{ site.time | date:'%s' }}"), linear-gradient($gym-gray, $gym-black);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  padding: 2em 2.5%;
+}
+
+// structural spacing
+
+.container {
+  position: relative;
+  padding-bottom: 1.5em; // section notch/tab
+}
+
+#ukraine-flag {
+  max-width: 34.5em;
+  border-top: 6em solid #06c;
+  border-bottom: 6em solid #fc0;
+  box-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.6);
+  opacity: 0.88;
+}
+
+.content {
+  max-width: 36em;
+  margin-top: 2em;
+}
+
+@include breakpoint(medium, min) {
+
+  & {
+    background-image: url("{{ site.url }}/home/img/hero-ukraine-relief/andriyko-podilnyk-TaWaGbjp60Q-unsplash-1920w.jpg?{{ site.time | date:'%s' }}"), linear-gradient(to bottom right, $gym-gray, $gym-black);
+    padding: 3.3% 2.5%;
+  }
+
+  .artwork {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 0;
+    width: 47%;
+    margin: auto 0;
+    z-index: 0;
+  }
+
+  #ukraine-flag {
+    border-top: 11.75em solid #06c;
+    border-bottom: 11.75em solid #fc0;
+  }
+
+  .content {
+    position: relative;
+    left: 51.5%;
+    width: 48%;
+    max-width: none;
+    margin-top: 0;
+    z-index: 1;
+  }
+
+}
+
+// content / copy / cta
+
+.content header h1 {
+  max-width: 32ex;
+  font-size: 2.5em;
+  line-height: 1.15;
+  letter-spacing: 0.1rem;
+  color: #fc0;
+  text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.6);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.content header h2 {
+  position: relative;
+  top: -5px;
+  color: #fff;
+  text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.6);
+  margin-top: 0;
+}
+
+.content header p {
+  font-size: 1.35em;
+  line-height: 1.35;
+  color: $gym-white;
+  text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.6);
+  margin-top: 1.5rem;
+}
+
+// cta
+
+.content .cta {
+  margin-top: 2.875rem;
+}
+
+a.gym-button-secondary {
+  font-size: 105%; // !override / reset/rescale font-size adjustment
+  width: auto !important;
+  vertical-align: bottom;
+  background-color: #06c;
+  padding: 1.2em 1.6em !important;
+  border: 2px solid $gym-white !important;
+}
+
+a.gym-button-secondary:hover {
+  background-color: transparent !important;
+}
+
+a.gym-button-secondary:active,
+a.gym-button-secondary:focus {
+  background-color: $gym-dark-gray !important;
+}
+
+// misc details
+
+[hidden] {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+@include breakpoint(36em, min) {
+
+  .no-wrap {
+    white-space: nowrap;
+  }
+
+}
+
+}

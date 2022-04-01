@@ -302,7 +302,7 @@ class Gymnasium {
 var gym = new Gymnasium();
 
 // Countdown timer on info page
-gym.countDown('[data-countdown]', 10, '/login?next=' + encodeURIComponent(window.location.href));
+gym.countDown('[data-countdown]');
 
 // Do wicked stuff to course tabs
 gym.courseTabs();
