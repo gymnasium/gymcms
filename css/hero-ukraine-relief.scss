@@ -42,7 +42,7 @@
 
   & {
     background-image: url("{{ site.url }}/home/img/hero-ukraine-relief/andriyko-podilnyk-TaWaGbjp60Q-unsplash-1920w.jpg?{{ site.time | date:'%s' }}"), linear-gradient(to bottom right, $gym-gray, $gym-black);
-    padding: 3.3% 2.5%;
+    padding: 3% 2.5%;
   }
 
   .artwork {
@@ -56,8 +56,8 @@
   }
 
   #ukraine-flag {
-    border-top: 11.75em solid #06c;
-    border-bottom: 11.75em solid #fc0;
+    border-top: 12.625em solid #06c;
+    border-bottom: 12.625em solid #fc0;
   }
 
   .content {
