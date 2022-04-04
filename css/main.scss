@@ -2441,3 +2441,62 @@ TODO: migrate discussion CSS out of theme
   }
 
 }
+
+// system-status-helper.html styles
+
+aside.system-status {
+
+  & {
+    font-size: 16px;
+    padding: 1em;
+  }
+
+  p {
+    font: 1em/1.35 $gym-text-font-stack;
+    color: $gym-black;
+    margin-bottom: 0;
+  }
+
+  a:not([class]) {
+    font: inherit;
+    color: currentColor;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+    margin-bottom: -2px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: currentColor;
+      text-decoration: none;
+      border-bottom: 2px solid currentColor !important;
+    }
+  }
+
+// Ukraine Relief related theme
+
+ & {
+    background-color: $gym-light-page-background;
+    border-bottom: 1px solid $gym-black;
+  }
+
+ p:before {
+    content: "";
+    display: inline-block;
+    width: 5ex;
+    vertical-align: -0.5ex;
+    background-color: #fc0;
+    padding-bottom: 1.15ex;
+    border: 1px solid #06c;
+    border-top-width: 1.15ex;
+    margin-right: 1.25ex;
+  }
+
+}
+
+// Exclude sitewide banner from home page
+
+// .gymnasium-home aside.system-status {
+//   display: none;
+// }
