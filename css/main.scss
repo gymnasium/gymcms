@@ -2312,7 +2312,7 @@ TODO: migrate discussion CSS out of theme
 #course-title-header [src*="gym-100"][hidden] + *:before,
 #dashboard-main #course-header-100 h1 + *:before {
   position: relative;
-  content: "{{ site.data.courses.GYM-100.retired_message[1] | remove: '<br>' }}";
+  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
 }
 
 // About, Info/Courseware pages
@@ -2351,7 +2351,7 @@ TODO: migrate discussion CSS out of theme
 // Catalog
 
 .retired-message[data-course-id="100"] .course-description p:before {
-  content: "{{ site.data.courses.GYM-100.retired_message[1] | replace: '<br>', '\a' }}";
+  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
 }
 
 // About
@@ -2361,13 +2361,18 @@ TODO: migrate discussion CSS out of theme
   top: 0;
   left: 0;
   width: 100%;
-  content: "{{ site.data.courses.GYM-100.retired_message[1] | remove: '<br>' }}";
+  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
 }
 
 // Dashboard
 
 #dashboard-main #course-header-100 h1 + *:before {
   margin: 1em 1em 0;
+}
+
+#dashboard-main .archived {
+  font-size: 1.45em;
+  color: $gym-white;
 }
 
 // Enrollment disabled
@@ -2435,4 +2440,63 @@ TODO: migrate discussion CSS out of theme
     }
   }
 
+}
+
+// system-status-helper.html styles
+
+aside.system-status {
+
+  & {
+    font-size: 16px;
+    padding: 1em;
+  }
+
+  p {
+    font: 1em/1.35 $gym-text-font-stack;
+    color: $gym-black;
+    margin-bottom: 0;
+  }
+
+  a:not([class]) {
+    font: inherit;
+    color: currentColor;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+    margin-bottom: -2px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: currentColor;
+      text-decoration: none;
+      border-bottom: 2px solid currentColor !important;
+    }
+  }
+
+// Ukraine Relief related theme
+
+ & {
+    background-color: $gym-light-page-background;
+    border-bottom: 1px solid $gym-black;
+  }
+
+ p:before {
+    content: "";
+    display: inline-block;
+    width: 4.6ex;
+    vertical-align: -0.5ex;
+    background-color: #fc0;
+    padding-bottom: 1.15ex;
+    border: 1px solid #06c;
+    border-top-width: 1.15ex;
+    margin-right: 1.15ex;
+  }
+
+}
+
+// Exclude sitewide banner from home page
+
+.gymnasium-home aside.system-status {
+  display: none;
 }
