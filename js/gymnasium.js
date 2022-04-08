@@ -487,7 +487,7 @@ class Gymnasium {
         if (score >= passingScore) {
 
   
-          if (score > previousScore && attemptsRemaining > 0) {
+          if (score > previousScore) {
             console.log('[gym]: new high score: ', score, '\nprevious score: ', previousScore);
 
             // TODO: update previousScore with new score
