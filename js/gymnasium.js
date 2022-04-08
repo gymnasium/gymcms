@@ -517,10 +517,13 @@ class Gymnasium {
           }
           
         } else {
+          console.log('[gym]: exam failed!');
           //we failed :( see if we have another attempt
           if (attemptsRemaining > 0) {
+            console.log('[gym]: remaining attempts: ', attemptsRemaining);
             showExamMessage('try_again', courseType);
           } else {
+            console.log('[gym]: no remaining attempts'); 
             showExamMessage('failed', courseType);
           }
         }
