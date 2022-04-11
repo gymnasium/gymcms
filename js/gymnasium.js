@@ -550,9 +550,7 @@ class Gymnasium {
   
       let problemId = document.getElementById('exam-problem').getAttribute('data-id');
   
-      let observer = new MutationObserver(mutationRecords);
-
-      function mutationRecords(mutations) {
+      let observer = new MutationObserver(mutations => {
         console.log('[gym]: mutations: ', mutations);
 
         // reset interval if we detect a grade change
@@ -561,12 +559,12 @@ class Gymnasium {
         }
         // set interval on initial page load
         progressStatusCheck = setInterval(checkStatus, 200);
-  
+
         // Pretty score stuff
         if (typeof prettyScoreCheck !== 'undefined') {
           clearInterval(prettyScoreCheck);
         }
-  
+
         prettyScoreCheck = setInterval(prettyScore, 2000);
 
         for (let mutation of mutations) {
@@ -575,12 +573,17 @@ class Gymnasium {
           if (mutation.type === 'childList') {
             console.log('[gym]: Mutation Detected: A child node has been added or removed.');
           }
+
+          if (mutation.type === 'attributes') {
+            console.log('[gym]: Mutation Detected: An attribute has changed.');
+          }
         }
-      }
+
+      });
   
       observer.observe(document.getElementById(problemId + '-problem-progress'), {
           characterData: false,
-          attributes: false,
+          attributes: true,
           childList: true,
           subtree: false
         });
