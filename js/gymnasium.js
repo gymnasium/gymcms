@@ -502,7 +502,7 @@ class Gymnasium {
 
           //generate the certificate through the API
           // TODO: change this to native JS
-          if (state === 'submit') {
+          if (state !== 'load') {
             console.log('[gym]: this is where the exam ajax submission occcurs');
             // $.ajax({
             //   type:     'POST',
@@ -516,6 +516,8 @@ class Gymnasium {
             //     // console.log('[gym]: certificate request successful: ', data);
             //   }
             // });
+          } else {
+            console.log('[gym]: this is the load state');
           }
           
         } else {
@@ -530,7 +532,7 @@ class Gymnasium {
           }
         }
 
-        document.getElementById('exam-grade').scrollIntoView();
+        document.getElementById('course_passed_message').scrollIntoView();
       }
   
       function checkStatus(state) {
@@ -554,24 +556,31 @@ class Gymnasium {
   
       // console.log('[gym]: exam page | previous score: ', previousScore);
   
-      let observer = new MutationObserver(mutationRecords => {
-        // log
-        // console.log('[gym]: mutation records: ', mutationRecords);
-  
-        // reset interval if we detect a grade change
-        if (!!progressStatusCheck) {
-          clearInterval(progressStatusCheck);
+      let observer = new MutationObserver(mutationRecords);
+
+      function mutationRecords(mutations) {
+        for (let mutation of mutations) {
+          console.log('[gym]: mutation: ', mutation);
+
+          if (mutation.type === 'childList') {
+            console.log('[gym]: Mutation Detected: A child node has been added or removed.');
+
+            // reset interval if we detect a grade change
+            if (!!progressStatusCheck) {
+              clearInterval(progressStatusCheck);
+            }
+            // set interval on initial page load
+            progressStatusCheck = setInterval(checkStatus, 200);
+      
+            // Pretty score stuff
+            if (!!prettyScoreCheck) {
+              clearInterval(prettyScoreCheck);
+            }
+      
+            prettyScoreCheck = setInterval(prettyScore, 2000);
+          }
         }
-        // set interval on initial page load
-        progressStatusCheck = setInterval(checkStatus, 200);
-  
-        // Pretty score stuff
-        if (!!prettyScoreCheck) {
-          clearInterval(prettyScoreCheck);
-        }
-  
-        prettyScoreCheck = setInterval(prettyScore, 2000);
-      });
+      }
   
       observer.observe(
         document.getElementById(problemId + '-problem-progress'),
@@ -583,17 +592,17 @@ class Gymnasium {
         },
       );
 
-      let checkButton = document.getElementById('check-button');
+      // let checkButton = document.getElementById('check-button');
 
-      checkButton.addEventListener('click', function() {
-        console.log('[gym]: check exam button clicked');
-        // TODO: re-process the exam score.
+      // checkButton.addEventListener('click', function() {
+      //   console.log('[gym]: check exam button clicked');
+      //   // TODO: re-process the exam score.
 
-        // checkStatus('submit');
+      //   // checkStatus('submit');
   
-        // scroll to show the results message
+      //   // scroll to show the results message
         
-      }, false);
+      // }, false);
 
       prettyScore();
       checkStatus('load');
