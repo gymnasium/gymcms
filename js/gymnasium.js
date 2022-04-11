@@ -529,6 +529,8 @@ class Gymnasium {
             showExamMessage('failed', courseType);
           }
         }
+
+        document.getElementById('exam-grade').scrollIntoView();
       }
   
       function checkStatus(state) {
@@ -557,14 +559,14 @@ class Gymnasium {
         // console.log('[gym]: mutation records: ', mutationRecords);
   
         // reset interval if we detect a grade change
-        if (typeof progressStatusCheck !== 'undefined') {
+        if (!!progressStatusCheck) {
           clearInterval(progressStatusCheck);
         }
         // set interval on initial page load
         progressStatusCheck = setInterval(checkStatus, 200);
   
         // Pretty score stuff
-        if (typeof prettyScoreCheck !== 'undefined') {
+        if (!!prettyScoreCheck) {
           clearInterval(prettyScoreCheck);
         }
   
@@ -584,13 +586,13 @@ class Gymnasium {
       let checkButton = document.getElementById('check-button');
 
       checkButton.addEventListener('click', function() {
-        // console.log('[gym]: check exam button clicked');
+        console.log('[gym]: check exam button clicked');
         // TODO: re-process the exam score.
 
-        checkStatus('submit');
+        // checkStatus('submit');
   
         // scroll to show the results message
-        document.getElementById('course_passed_message').scrollIntoView();
+        
       }, false);
 
       prettyScore();

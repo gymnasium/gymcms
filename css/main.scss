@@ -743,7 +743,7 @@ body {
 
 .gym-link:focus,
 .gym-link:active {
-  border-bottom-color: #444;
+  border-bottom-color: $gym-dark-gray;
 }
 
 .modal {
@@ -761,7 +761,7 @@ body {
   width: 37em;
   background: $gym-white;
   padding: 1.2em;
-  border: 1.2em solid #444;
+  border: 1.2em solid $gym-dark-gray;
   border-radius: 0.125em;
   margin: auto;
 }
@@ -771,7 +771,7 @@ body {
   text-align: center;
   padding-top: 1em;
   padding-bottom: 1em;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid $gym-light-page-background;
   margin-bottom: 1.2em;
 }
 
@@ -797,7 +797,7 @@ body {
 
 .dialog p {
   font: 0.9em/1.4 $gym-text-font-stack;
-  color: #444;
+  color: $gym-dark-gray;
   letter-spacing: 0.01em;
 }
 
@@ -855,7 +855,7 @@ body {
   padding-right: 1.2em;
   padding-bottom: 1.2em;
   padding-left: 1.2em;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid $gym-light-page-background;
   margin-bottom: 1.2em;
 }
 
@@ -1323,7 +1323,7 @@ main label a:not([class]):active {
 
   .instructions {
     padding-bottom: 1.8em;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $gym-gray-2;
     margin-bottom: 1.8em;
 
     p {
@@ -2499,4 +2499,100 @@ aside.system-status {
 
 .gymnasium-home aside.system-status {
   display: none;
+}
+
+// Exam/Quiz specific CSS
+.problems-wrapper {
+  .message {
+    color: $gym-dark-gray-2;
+    text-align: center;
+    padding: 1.8em;
+    border: 1.2em solid $gym-dark-gray;
+    border-radius: 2px;
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
+
+    h2 {
+      font: 900 1.8em/1.1 $gym-font-stack;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      text-align: center;
+      margin-bottom: .8em;
+    }
+    
+    p {
+      font-family: $gym-font-stack;
+      font-size: 1.2em;
+      line-height: 1.5;
+      text-align: left;
+      margin-top: .6em;
+    }
+    
+    h2 + p {
+      font-size: 1.4em;
+    }
+    
+    hr {
+      height: 0;
+      border: 0;
+      border-top: 1px solid $gym-gray-2;
+      margin-top: 1.4em;
+    }
+    
+    .survey {
+      display: inline-block;
+      background: $gym-light-page-background;
+      padding: 1.2em;
+      border: 1px solid $gym-gray;
+      margin-top: 1.4em;
+
+      p {
+        margin-top: 0;
+      }
+    }
+    
+    .gym-button {
+      margin-top: 1.2em;
+    }
+  }
+  
+
+  
+  a.gym-button-primary {
+    display: inline-block;
+    font: bold 1.2em/1 $gym-font-stack;
+    color: #fff;
+    letter-spacing: .025em;
+    vertical-align: normal;
+    background: #f8971d;
+    padding: 1em 2em;
+    border: 0;
+    border-radius: 2px;
+    margin-top: .5em;
+    margin-right: .84em;
+    margin-bottom: .5em;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: auto !important;
+  
+    &:hover {
+      background: #a6a6a6;
+    }
+  }
+
+  a.gym-button.gym-button-secondary {
+    color: $gym-dark-gray-2;
+    background: none;
+    border: 2px solid $gym-dark-gray-2;
+    width: auto !important;
+  
+    &:hover,
+    &:focus {
+      color: #fff !important;
+      background: #a6a6a6 !important;
+      border: 2px solid $gym-dark-gray-2 !important;
+    }
+  }
 }
