@@ -364,26 +364,20 @@ class Gymnasium {
 
       // show specific exam messages (passed, try_again, failed)
       var showExamMessage = function(status, courseType) {
-        let modalsHidden = false;
 
-        gym.hideModals(()=> {
-          modalsHidden = true;
+        let elems;
+        if (courseType) {
+          elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
+        } else {
+          elems = document.querySelectorAll('.' + status + '_modal');
+        }
+
+        elems.forEach(function(elem) {
+          console.log('[gym]: showing modal: ', elem.classList);
+          elem.classList.remove('hidden');
+          elem.setAttribute('aria-hidden', false);
         });
 
-        if (modalsHidden) {
-          let elems;
-          if (courseType) {
-            elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
-          } else {
-            elems = document.querySelectorAll('.' + status + '_modal');
-          }
-
-          elems.forEach(function(elem) {
-            console.log('[gym]: showing modal: ', elem.classList);
-            elem.classList.remove('hidden');
-            elem.setAttribute('aria-hidden', false);
-          });
-        }
       }
 
       // Use the problem-progress element to get a fraction
@@ -416,7 +410,6 @@ class Gymnasium {
       
         examGrade.innerText = 'Your score: ' + getScoreFromFraction();
       }
-
 
       let progressStatusCheck; // this is the interval we'll set to track status on this problem
   
@@ -494,7 +487,6 @@ class Gymnasium {
         // we have a score, let's do stuff
         if (score >= passingScore) {
 
-  
           if (score > previousScore) {
             console.log('[gym]: new high score: ', score, '\nprevious score: ', previousScore);
 
@@ -557,10 +549,6 @@ class Gymnasium {
       }
   
       let problemId = document.getElementById('exam-problem').getAttribute('data-id');
-
-      // previousScore = getPrevScore(courseNum);
-  
-      // console.log('[gym]: exam page | previous score: ', previousScore);
   
       let observer = new MutationObserver(mutationRecords);
 
@@ -570,22 +558,23 @@ class Gymnasium {
 
           if (mutation.type === 'childList') {
             console.log('[gym]: Mutation Detected: A child node has been added or removed.');
-
-            // reset interval if we detect a grade change
-            if (!!progressStatusCheck) {
-              clearInterval(progressStatusCheck);
-            }
-            // set interval on initial page load
-            progressStatusCheck = setInterval(checkStatus, 200);
-      
-            // Pretty score stuff
-            if (!!prettyScoreCheck) {
-              clearInterval(prettyScoreCheck);
-            }
-      
-            prettyScoreCheck = setInterval(prettyScore, 2000);
           }
         }
+
+        // reset interval if we detect a grade change
+        if (!!progressStatusCheck) {
+          clearInterval(progressStatusCheck);
+        }
+        // set interval on initial page load
+        progressStatusCheck = setInterval(checkStatus, 200);
+  
+        // Pretty score stuff
+        if (!!prettyScoreCheck) {
+          clearInterval(prettyScoreCheck);
+        }
+  
+        prettyScoreCheck = setInterval(prettyScore, 2000);
+
       }
   
       observer.observe(
