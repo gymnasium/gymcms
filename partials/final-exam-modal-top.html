@@ -6,9 +6,9 @@ permalink: /partials/final-exam-modal-top/
 styles are in final-exam-modal.html in gymcms
 {%- endcomment -%}
 
-<main role="main">
-  <div id="exam-grade" class="exam-grade"></div><!-- .exam-grade -->
-  <div class="message hidden passed_modal final-exam-status FULL_COURSE" aria-hidden="true">
+<div id="exam-grade" class="exam-grade"></div><!-- .exam-grade -->
+<div class="exam-status-wrapper">
+  <div class="message exam-status hidden passed_modal FULL_COURSE" aria-hidden="true">
     <h2>You did it! 🎉</h2>
     <p>Congratulations on passing the final exam.</p>
     <p>Now you can show off your achievement by sharing your certificate on social media. You can always access your certificate from the <a href="/dashboard">Dashboard</a>.</p>
@@ -18,7 +18,7 @@ styles are in final-exam-modal.html in gymcms
     </div>
   </div>
 
-  <div class="message hidden passed_modal final-exam-status GYM_SHORT" aria-hidden="true">
+  <div class="message exam-status hidden passed_modal GYM_SHORT" aria-hidden="true">
     <h2>You did it! 🎉</h2>
     <p>Congratulations on passing the final exam!</p>
     <p>Now you can show off your achievement by sharing your badge on social media. You can always access your badge from the <a href="/dashboard">Dashboard</a>.</p>
@@ -28,17 +28,17 @@ styles are in final-exam-modal.html in gymcms
     </div>
   </div>
 
-  <div class="message hidden try_again_modal final-exam-status FULL_COURSE" aria-hidden="true">
+  <div class="message exam-status hidden try_again_modal FULL_COURSE" aria-hidden="true">
     <h2>You’re close!</h2>
     <p>You've scored <span class="exam-score-container"></span> on the exam. (To pass, you need to score greater than 85%.) The good news is that you still have one more chance to pass. This would be a great time to review the course material. Good luck!</p>
   </div>
 
-  <div class="message hidden try_again_modal final-exam-status GYM_SHORT" aria-hidden="true">
+  <div class="message exam-status hidden try_again_modal GYM_SHORT" aria-hidden="true">
     <h2>You’re Close!</h2>
     <p>You've scored <span class="exam-score-container"></span> on the exam. (To pass, you need to score greater than 80%.) The good news is that you still have one more chance to pass. This would be a great time to review the course material. Good luck!</p>
   </div>
 
-  <div class="message hidden failed_modal final-exam-status" aria-hidden="true">
+  <div class="message exam-status hidden failed_modal" aria-hidden="true">
     <h2>Darn.</h2>
     <p>The bad news is that you didn’t pass the exam. But the good news is that we have plenty of other free courses.</p>
     <div class="survey">
@@ -48,4 +48,4 @@ styles are in final-exam-modal.html in gymcms
       </a>
     </div>
   </div>
-</main>
+</div>

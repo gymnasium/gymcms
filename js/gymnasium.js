@@ -25,6 +25,11 @@ function hasClass(elem,cls) {
   return elem.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
 }
 
+// Test for visibility (doesn't work for fixed position elems)
+function isHidden(el) {
+  return (el.offsetParent === null)
+}
+
 class Gymnasium {
   constructor() {}
 
@@ -334,10 +339,13 @@ class Gymnasium {
   // hide all exam messages
   // TODO: this could be rewritten to be element agnostic
   hideModals(cb) {
-    document.querySelectorAll('.message').forEach(function(elem) {
-      console.log('[gym]: hiding modal: ', elem.id);
-      elem.classList.add('hidden');
-      elem.setAttribute('aria-hidden', true);
+    document.querySelectorAll('.exam-status').forEach(function(elem) {
+      // only hide elems that aren't already hidden
+      if (!isHidden(elem)) {
+        console.log('[gym]: hiding modal: ', elem.classList);
+        elem.classList.add('hidden');
+        elem.setAttribute('aria-hidden', true);
+      }
     });
   
     // callback
@@ -371,7 +379,7 @@ class Gymnasium {
           }
 
           elems.forEach(function(elem) {
-            console.log('[gym]: showing modal: ', elem.id);
+            console.log('[gym]: showing modal: ', elem.classList);
             elem.classList.remove('hidden');
             elem.setAttribute('aria-hidden', false);
           });
@@ -532,11 +540,11 @@ class Gymnasium {
           }
         }
 
-        document.getElementById('course_passed_message').scrollIntoView();
+        document.getElementById('exam-status-message').scrollIntoView();
       }
   
       function checkStatus(state) {
-        console.log('[gym]: checkStatus function');
+        console.log('[gym]: checkStatus state: ', !!state);
         const {
           attemptsUsed,
           correct,
