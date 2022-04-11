@@ -447,7 +447,6 @@ class Gymnasium {
       // this helper function gets a ton of information about the score for this particular problem
       // based on information embedded on this page
       function processScore() {
-        console.log('[gym]: processScore function');
   
         var correct = Number(getFraction()[1]);
         var outOf = Number(getFraction()[2]);
@@ -468,7 +467,6 @@ class Gymnasium {
       };
   
       function showProblemProgress(state) {
-        console.log('[gym]: showProblemProgress function');
         let {
           attemptsUsed,
           attemptsTotal,
@@ -480,7 +478,7 @@ class Gymnasium {
           passingScore,
         } = processScore();
 
-        console.log('[gym]: processScore:', processScore());
+        console.log('[gym]: showProblemProgress processScore:', processScore());
   
         if (!correct || !outOf) {
           return;
@@ -550,7 +548,7 @@ class Gymnasium {
           correct,
         } = processScore();
 
-        console.log('[gym]: processScore:', processScore());
+        console.log('[gym]: checkStatus processScore:', processScore());
   
         if (attemptsUsed > 0 || correct > 0) {
           clearInterval(progressStatusCheck);
