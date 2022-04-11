@@ -544,7 +544,7 @@ class Gymnasium {
       }
   
       function checkStatus(state) {
-        console.log('[gym]: checkStatus state: ', !!state);
+        console.log('[gym]: checkStatus state: ', state);
         const {
           attemptsUsed,
           correct,
