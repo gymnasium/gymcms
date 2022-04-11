@@ -611,7 +611,7 @@ class Gymnasium {
       // }, false);
 
       prettyScore();
-      checkStatus('load');
+      // checkStatus('load');
     } else {
       console.log('[gym]: not exam page');
     }
