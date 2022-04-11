@@ -553,6 +553,22 @@ class Gymnasium {
       let observer = new MutationObserver(mutationRecords);
 
       function mutationRecords(mutations) {
+        console.log('[gym]: mutations: ', mutations);
+
+        // reset interval if we detect a grade change
+        if (typeof progressStatusCheck !== 'undefined') {
+          clearInterval(progressStatusCheck);
+        }
+        // set interval on initial page load
+        progressStatusCheck = setInterval(checkStatus, 200);
+  
+        // Pretty score stuff
+        if (typeof prettyScoreCheck !== 'undefined') {
+          clearInterval(prettyScoreCheck);
+        }
+  
+        prettyScoreCheck = setInterval(prettyScore, 2000);
+
         for (let mutation of mutations) {
           console.log('[gym]: mutation: ', mutation);
 
@@ -560,32 +576,14 @@ class Gymnasium {
             console.log('[gym]: Mutation Detected: A child node has been added or removed.');
           }
         }
-
-        // reset interval if we detect a grade change
-        if (!!progressStatusCheck) {
-          clearInterval(progressStatusCheck);
-        }
-        // set interval on initial page load
-        progressStatusCheck = setInterval(checkStatus, 200);
-  
-        // Pretty score stuff
-        if (!!prettyScoreCheck) {
-          clearInterval(prettyScoreCheck);
-        }
-  
-        prettyScoreCheck = setInterval(prettyScore, 2000);
-
       }
   
-      observer.observe(
-        document.getElementById(problemId + '-problem-progress'),
-        {
+      observer.observe(document.getElementById(problemId + '-problem-progress'), {
           characterData: false,
           attributes: false,
           childList: true,
           subtree: false
-        },
-      );
+        });
 
       // let checkButton = document.getElementById('check-button');
 
