@@ -592,7 +592,7 @@ class Gymnasium {
           subtree: false
         });
 
-      // let checkButton = document.getElementById('check-button');
+      let checkButton = document.getElementById('check-button');
 
       checkButton.addEventListener('click', function submitButtonCheck() {
         console.log('[gym]: check exam button clicked');
