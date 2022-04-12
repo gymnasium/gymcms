@@ -531,7 +531,7 @@ class Gymnasium {
             showExamMessage('try_again', courseType);
           } else {
             console.log('[gym]: no remaining attempts'); 
-            showExamMessage('failed', courseType);
+            showExamMessage('failed');
           }
         }
 
