@@ -377,7 +377,7 @@ class Gymnasium {
           }
   
           elems.forEach(function(elem) {
-            console.log('[gym]: showing modal: ', elem.classList.value);
+            console.log('[gym]: showing modal: ', elem);
             elem.classList.remove('hidden');
             elem.setAttribute('aria-hidden', false);
           });
@@ -547,55 +547,73 @@ class Gymnasium {
 
         console.log('[gym]: checkStatus processScore:', processScore());
   
-        // if (attemptsUsed > 0 || correct > 0) {
-          
-        // }
-        clearInterval(progressStatusCheck);
-        showProblemProgress(state);
+        if (attemptsUsed > 0 || correct > 0) {
+          clearInterval(progressStatusCheck);
+          showProblemProgress(state);
+        }
       }
+
+      const problemId = document.getElementById('exam-problem').getAttribute('data-id');
+
+      // Select the node that will be observed for mutations
+      const targetNode = document.getElementById(problemId + '-problem-progress');
+
+      // Options for the observer (which mutations to observe)
+      const config = { attributes: true, childList: true, subtree: true, characterData: true };
+
+      // Callback function to execute when mutations are observed
+      const callback = function(mutationsList, observer) {
+        // Use traditional 'for loops' for IE 11
+        for(const mutation of mutationsList) {
+          if (mutation.type === 'childList') {
+            console.log('A child node has been added or removed.');
+          } else if (mutation.type === 'attributes') {
+            console.log('The ' + mutation.attributeName + ' attribute was modified.');
+          } else if (mutation.type === 'characterData') {
+            console.log('Character data ', mutation);
+          }
+        }
+      };
+
+      // Create an observer instance linked to the callback function
+      const observer = new MutationObserver(callback);
+
+      // Start observing the target node for configured mutations
+      observer.observe(targetNode, config);
+
+      // Later, you can stop observing
+      // observer.disconnect();
   
-      let problemId = document.getElementById('exam-problem').getAttribute('data-id');
+
   
       // From what I can see, this does absolutely nothing
-      let observer = new MutationObserver(mutations => {
-        console.log('[gym]: mutations: ', mutations);
+      // let observer = new MutationObserver(mutations => {
+      //   console.log('[gym]: mutations: ', mutations);
 
-        // reset interval if we detect a grade change
-        if (typeof progressStatusCheck !== 'undefined') {
-          clearInterval(progressStatusCheck);
-        }
-        // set interval for mutation observer
-        progressStatusCheck = setInterval(checkStatus, 100);
+      //   // reset interval if we detect a grade change
+      //   if (typeof progressStatusCheck !== 'undefined') {
+      //     clearInterval(progressStatusCheck);
+      //   }
+      //   // set interval for mutation observer
+      //   progressStatusCheck = setInterval(checkStatus, 100);
 
-        // Pretty score stuff
-        if (typeof prettyScoreCheck !== 'undefined') {
-          clearInterval(prettyScoreCheck);
-        }
+      //   // Pretty score stuff
+      //   if (typeof prettyScoreCheck !== 'undefined') {
+      //     clearInterval(prettyScoreCheck);
+      //   }
 
-        prettyScoreCheck = setInterval(prettyScore, 2000);
+      //   prettyScoreCheck = setInterval(prettyScore, 2000);
 
-        for (let mutation of mutations) {
-          console.log('[gym]: mutation: ', mutation);
-
-          if (mutation.type === 'childList') {
-            console.log('[gym]: Mutation detected: A child node has been added or removed.');
-          }
-
-          if (mutation.type === 'attributes') {
-            console.log('[gym]: Mutation detected: An attribute has changed.');
-          }
-        }
-
-      });
+      // });
   
-      observer.observe(document.querySelector('.problem-progress'), {
-          characterData: true,
-          attributes: false,
-          childList: true,
-          subtree: false
-        });
+      // observer.observe(document.querySelector('.problem-progress'), {
+      //     characterData: true,
+      //     attributes: false,
+      //     childList: true,
+      //     subtree: false
+      //   });
 
-      let checkButton = document.getElementById('check-button');
+      const checkButton = document.getElementById('check-button');
 
       checkButton.addEventListener('click', function submitButtonCheck() {
         console.log('[gym]: check exam button clicked');
