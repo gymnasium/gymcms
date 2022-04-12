@@ -342,7 +342,7 @@ class Gymnasium {
     document.querySelectorAll('.exam-status').forEach(function(elem) {
       // only hide elems that aren't already hidden
       if (!isHidden(elem)) {
-        console.log('[gym]: hiding visible modal: ', elem.classList);
+        console.log('[gym]: hiding visible modal: ', elem.classList.value);
         elem.classList.add('hidden');
         elem.setAttribute('aria-hidden', true);
       }
@@ -377,7 +377,7 @@ class Gymnasium {
           }
   
           elems.forEach(function(elem) {
-            console.log('[gym]: showing modal: ', elem.classList);
+            console.log('[gym]: showing modal: ', elem.classList.value);
             elem.classList.remove('hidden');
             elem.setAttribute('aria-hidden', false);
           });
@@ -547,14 +547,16 @@ class Gymnasium {
 
         console.log('[gym]: checkStatus processScore:', processScore());
   
-        if (attemptsUsed > 0 || correct > 0) {
-          clearInterval(progressStatusCheck);
-          showProblemProgress(state);
-        }
+        // if (attemptsUsed > 0 || correct > 0) {
+          
+        // }
+        clearInterval(progressStatusCheck);
+        showProblemProgress(state);
       }
   
       let problemId = document.getElementById('exam-problem').getAttribute('data-id');
   
+      // From what I can see, this does absolutely nothing
       let observer = new MutationObserver(mutations => {
         console.log('[gym]: mutations: ', mutations);
 
@@ -563,7 +565,7 @@ class Gymnasium {
           clearInterval(progressStatusCheck);
         }
         // set interval for mutation observer
-        progressStatusCheck = setInterval(checkStatus, 200);
+        progressStatusCheck = setInterval(checkStatus, 100);
 
         // Pretty score stuff
         if (typeof prettyScoreCheck !== 'undefined') {
@@ -576,11 +578,11 @@ class Gymnasium {
           console.log('[gym]: mutation: ', mutation);
 
           if (mutation.type === 'childList') {
-            console.log('[gym]: Mutation Detected: A child node has been added or removed.');
+            console.log('[gym]: Mutation detected: A child node has been added or removed.');
           }
 
           if (mutation.type === 'attributes') {
-            console.log('[gym]: Mutation Detected: An attribute has changed.');
+            console.log('[gym]: Mutation detected: An attribute has changed.');
           }
         }
 
