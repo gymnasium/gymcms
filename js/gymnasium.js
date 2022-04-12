@@ -357,7 +357,9 @@ class Gymnasium {
   // Main function to handle exam page stuff
   exam() {
     // TODO: add a check to only execute this on the exam page
-    let examProblem = document.getElementById('exam-problem');
+    const examProblem = document.getElementById('exam-problem');
+
+    const examHeader = document.querySelector('.problem-header');
   
     if (!!examProblem) {
       console.log('[gym]: exam page');
@@ -553,18 +555,44 @@ class Gymnasium {
         }
       }
 
-      const problemId = document.getElementById('exam-problem').getAttribute('data-id');
+      const problemId = examProblem.getAttribute('data-id');
 
       // Select the node that will be observed for mutations
-      const targetNode = document.getElementById(problemId + '-problem-progress');
+      const problemProgress = document.getElementById(problemId + '-problem-progress');
+
+      // Add event listener to the problem progress element
+      console.log('[gym]: problemProgress: ', problemProgress);
+      
+      problemProgress.addEventListener('DOMCharacterDataModified', function (event) {
+        console.log('[gym]: event listener added: ', event);
+
+        // try using event listener instead of mutation observer
+
+        // reset interval if we detect a grade change
+        if (typeof progressStatusCheck !== 'undefined') {
+          clearInterval(progressStatusCheck);
+        }
+        // set interval for mutation observer
+        progressStatusCheck = setInterval(checkStatus, 100);
+
+        // Pretty score stuff
+        if (typeof prettyScoreCheck !== 'undefined') {
+          clearInterval(prettyScoreCheck);
+        }
+
+        prettyScoreCheck = setInterval(prettyScore, 2000);
+
+      }, false);
 
       // Options for the observer (which mutations to observe)
       const config = { attributes: true, childList: true, subtree: true, characterData: true };
 
       // Callback function to execute when mutations are observed
       const callback = function(mutationsList, observer) {
+        console.log('mutation observer initiated');
+
         // Use traditional 'for loops' for IE 11
-        for(const mutation of mutationsList) {
+        for (const mutation of mutationsList) {
           if (mutation.type === 'childList') {
             console.log('A child node has been added or removed.');
           } else if (mutation.type === 'attributes') {
@@ -573,13 +601,13 @@ class Gymnasium {
             console.log('Character data ', mutation);
           }
         }
-      };
+      }
 
       // Create an observer instance linked to the callback function
       const observer = new MutationObserver(callback);
 
       // Start observing the target node for configured mutations
-      observer.observe(targetNode, config);
+      // observer.observe(targetNode, config);
 
       // Later, you can stop observing
       // observer.disconnect();
@@ -590,19 +618,7 @@ class Gymnasium {
       // let observer = new MutationObserver(mutations => {
       //   console.log('[gym]: mutations: ', mutations);
 
-      //   // reset interval if we detect a grade change
-      //   if (typeof progressStatusCheck !== 'undefined') {
-      //     clearInterval(progressStatusCheck);
-      //   }
-      //   // set interval for mutation observer
-      //   progressStatusCheck = setInterval(checkStatus, 100);
 
-      //   // Pretty score stuff
-      //   if (typeof prettyScoreCheck !== 'undefined') {
-      //     clearInterval(prettyScoreCheck);
-      //   }
-
-      //   prettyScoreCheck = setInterval(prettyScore, 2000);
 
       // });
   
