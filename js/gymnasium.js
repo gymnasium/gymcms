@@ -363,9 +363,9 @@ class Gymnasium {
       console.log('[gym]: exam page');
 
       // show specific exam messages (passed, try_again, failed)
-      var showExamMessage = function(status, courseType) {
-
+      function showExamMessage(status, courseType) {
         let elems;
+
         if (courseType) {
           elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
         } else {
@@ -549,6 +549,8 @@ class Gymnasium {
       }
   
       let problemId = document.getElementById('exam-problem').getAttribute('data-id');
+
+      console.log('[gym]: problemId: ', problemId);
   
       let observer = new MutationObserver(mutations => {
         console.log('[gym]: mutations: ', mutations);
@@ -582,8 +584,8 @@ class Gymnasium {
       });
   
       observer.observe(document.getElementById(problemId + '-problem-progress'), {
-          characterData: false,
-          attributes: true,
+          characterData: true,
+          attributes: false,
           childList: true,
           subtree: false
         });
