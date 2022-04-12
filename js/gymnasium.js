@@ -478,7 +478,7 @@ class Gymnasium {
         }
 
         // hide any visible modals
-        hideModals();
+        gym.hideModals();
   
         // update exam score span
         let examScoreMessage = document.querySelectorAll('.exam-score-container');
@@ -487,8 +487,6 @@ class Gymnasium {
           el.innerText = score;
         });
 
-
-  
         // we have a score, let's do stuff
         if (score >= passingScore) {
 
