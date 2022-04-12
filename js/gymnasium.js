@@ -477,9 +477,9 @@ class Gymnasium {
 
         console.log('[gym]: showProblemProgress processScore:', processScore());
   
-        // if (!correct || !outOf) {
-        //   return;
-        // }
+        if (!correct || !outOf) {
+          return;
+        }
   
         // update exam score span
         let examScoreMessage = document.querySelectorAll('.exam-score-container');
@@ -491,20 +491,21 @@ class Gymnasium {
         // we have a score, let's do stuff
         if (score >= passingScore) {
 
-          if (score > previousScore) {
-            console.log('[gym]: new high score: ', score, '\nprevious score: ', previousScore);
-
-            // TODO: update previousScore with new score
-          } else {
-            console.log('[gym]: score is not higher than previous score');
-          }
-  
           //we passed! show passing div for the type of course they took
           showExamMessage('passed', courseType);
 
           //generate the certificate through the API
           // TODO: change this to native JS
           if (state !== 'load') {
+
+            if (score > previousScore) {
+              console.log('[gym]: new high score: ', score, '\nprevious score: ', previousScore);
+  
+              // TODO: update previousScore with new score
+            } else {
+              console.log('[gym]: score is not higher than previous score');
+            }
+
             console.log('[gym]: this is where the exam ajax submission occcurs');
             // $.ajax({
             //   type:     'POST',
@@ -523,7 +524,7 @@ class Gymnasium {
           }
           
         } else {
-          console.log('[gym]: exam failed!');
+
           //we failed :( see if we have another attempt
           if (attemptsRemaining > 0) {
             console.log('[gym]: remaining attempts: ', attemptsRemaining);
