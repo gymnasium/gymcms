@@ -366,18 +366,22 @@ class Gymnasium {
       function showExamMessage(status, courseType) {
         let elems;
 
-        if (courseType) {
-          elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
-        } else {
-          elems = document.querySelectorAll('.' + status + '_modal');
+        // hide any visible modals
+        gym.hideModals(showMessage);
+
+        function showMessage() {
+          if (courseType) {
+            elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
+          } else {
+            elems = document.querySelectorAll('.' + status + '_modal');
+          }
+  
+          elems.forEach(function(elem) {
+            console.log('[gym]: showing modal: ', elem.classList);
+            elem.classList.remove('hidden');
+            elem.setAttribute('aria-hidden', false);
+          });
         }
-
-        elems.forEach(function(elem) {
-          console.log('[gym]: showing modal: ', elem.classList);
-          elem.classList.remove('hidden');
-          elem.setAttribute('aria-hidden', false);
-        });
-
       }
 
       // Use the problem-progress element to get a fraction
@@ -473,12 +477,9 @@ class Gymnasium {
 
         console.log('[gym]: showProblemProgress processScore:', processScore());
   
-        if (!correct || !outOf) {
-          return;
-        }
-
-        // hide any visible modals
-        gym.hideModals();
+        // if (!correct || !outOf) {
+        //   return;
+        // }
   
         // update exam score span
         let examScoreMessage = document.querySelectorAll('.exam-score-container');
@@ -593,15 +594,15 @@ class Gymnasium {
 
       // let checkButton = document.getElementById('check-button');
 
-      // checkButton.addEventListener('click', function() {
-      //   console.log('[gym]: check exam button clicked');
-      //   // TODO: re-process the exam score.
+      checkButton.addEventListener('click', function submitButtonCheck() {
+        console.log('[gym]: check exam button clicked');
+        // TODO: re-process the exam score.
 
-      //   // checkStatus('submit');
+        progressStatusCheck = setInterval(checkStatus('submit'), 200);
   
-      //   // scroll to show the results message
+        // scroll to show the results message
         
-      // }, false);
+      }, false);
 
       prettyScore();
 
