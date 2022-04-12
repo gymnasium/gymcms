@@ -342,7 +342,7 @@ class Gymnasium {
     document.querySelectorAll('.exam-status').forEach(function(elem) {
       // only hide elems that aren't already hidden
       if (!isHidden(elem)) {
-        console.log('[gym]: hiding modal: ', elem.classList);
+        console.log('[gym]: hiding visible modal: ', elem.classList);
         elem.classList.add('hidden');
         elem.setAttribute('aria-hidden', true);
       }
@@ -476,6 +476,9 @@ class Gymnasium {
         if (!correct || !outOf) {
           return;
         }
+
+        // hide any visible modals
+        hideModals();
   
         // update exam score span
         let examScoreMessage = document.querySelectorAll('.exam-score-container');
@@ -483,6 +486,8 @@ class Gymnasium {
         examScoreMessage.forEach(function(el) {
           el.innerText = score;
         });
+
+
   
         // we have a score, let's do stuff
         if (score >= passingScore) {
@@ -549,8 +554,6 @@ class Gymnasium {
       }
   
       let problemId = document.getElementById('exam-problem').getAttribute('data-id');
-
-      console.log('[gym]: problemId: ', problemId);
   
       let observer = new MutationObserver(mutations => {
         console.log('[gym]: mutations: ', mutations);
@@ -559,7 +562,7 @@ class Gymnasium {
         if (typeof progressStatusCheck !== 'undefined') {
           clearInterval(progressStatusCheck);
         }
-        // set interval on initial page load
+        // set interval for mutation observer
         progressStatusCheck = setInterval(checkStatus, 200);
 
         // Pretty score stuff
@@ -583,7 +586,7 @@ class Gymnasium {
 
       });
   
-      observer.observe(document.getElementById(problemId + '-problem-progress'), {
+      observer.observe(document.querySelector('.problem-progress'), {
           characterData: true,
           attributes: false,
           childList: true,
@@ -603,7 +606,9 @@ class Gymnasium {
       // }, false);
 
       prettyScore();
-      // checkStatus('load');
+
+      progressStatusCheck = setInterval(checkStatus('load'), 200);
+
     } else {
       console.log('[gym]: not exam page');
     }
