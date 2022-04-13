@@ -368,9 +368,6 @@ class Gymnasium {
       function showExamMessage(status, courseType) {
         let elems;
 
-        // hide any visible modals
-        gym.hideModals(showMessage);
-
         function showMessage() {
           if (courseType) {
             elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
@@ -384,6 +381,8 @@ class Gymnasium {
             elem.setAttribute('aria-hidden', false);
           });
         }
+
+        showMessage();
       }
 
       // Use the problem-progress element to get a fraction
@@ -562,11 +561,9 @@ class Gymnasium {
 
       // Add event listener to the problem progress element
       console.log('[gym]: problemProgress: ', problemProgress);
-      
-      problemProgress.addEventListener('DOMCharacterDataModified', function (event) {
-        console.log('[gym]: event listener added: ', event);
 
-        // try using event listener instead of mutation observer
+      function intervallicCheckers(event) {
+        console.log('[gym]: event: ', event);
 
         // reset interval if we detect a grade change
         if (typeof progressStatusCheck !== 'undefined') {
@@ -581,18 +578,22 @@ class Gymnasium {
         }
 
         prettyScoreCheck = setInterval(prettyScore, 2000);
+      }
+      
+      problemProgress.addEventListener('DOMCharacterDataModified', intervallicCheckers(), false);
 
-      }, false);
+      problemProgress.addEventListener('DOMSubtreeModified', intervallicCheckers(), false);
 
       // Options for the observer (which mutations to observe)
-      const config = { attributes: true, childList: true, subtree: true, characterData: true };
+      const scoreObserverConfig = { attributes: true, childList: true, subtree: true, characterData: true };
 
       // Callback function to execute when mutations are observed
-      const callback = function(mutationsList, observer) {
+      const observerCB = function(mutations) {
         console.log('mutation observer initiated');
 
         // Use traditional 'for loops' for IE 11
-        for (const mutation of mutationsList) {
+        for (const mutation of mutations) {
+          console.log(mutation.type);
           if (mutation.type === 'childList') {
             console.log('A child node has been added or removed.');
           } else if (mutation.type === 'attributes') {
@@ -603,11 +604,11 @@ class Gymnasium {
         }
       }
 
-      // Create an observer instance linked to the callback function
-      const observer = new MutationObserver(callback);
+      // Create an observer instance linked to the observerCB function
+      const scoreObserver = new MutationObserver(observerCB);
 
-      // Start observing the target node for configured mutations
-      // observer.observe(targetNode, config);
+      // Start observing the target node for scoreObserverConfigured mutations
+      scoreObserver.observe(problemProgress, scoreObserverConfig);
 
       // Later, you can stop observing
       // observer.disconnect();
@@ -633,12 +634,13 @@ class Gymnasium {
 
       checkButton.addEventListener('click', function submitButtonCheck() {
         console.log('[gym]: check exam button clicked');
-        // TODO: re-process the exam score.
 
+        // hide visible modals on button click
+        gym.hideModals();
+
+        // re-process the exam score.
         progressStatusCheck = setInterval(checkStatus('submit'), 200);
-  
-        // scroll to show the results message
-        
+
       }, false);
 
       prettyScore();
