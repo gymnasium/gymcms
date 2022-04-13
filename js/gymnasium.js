@@ -339,18 +339,27 @@ class Gymnasium {
   // hide all exam messages
   // TODO: this could be rewritten to be element agnostic
   hideModals(cb) {
-    document.querySelectorAll('.exam-status').forEach(function(elem) {
+    let msgs = document.querySelectorAll('.exam-status');
+    let total = msgs.length;
+    let count = 0;
+
+    msgs.forEach(function(elem) {
+      console.log(index);
+      count++;
       // only hide elems that aren't already hidden
       if (!isHidden(elem)) {
-        console.log('[gym]: hiding visible modal: ', elem.classList.value);
         elem.classList.add('hidden');
         elem.setAttribute('aria-hidden', true);
+        console.log('[gym]: hiding visible modal: ', elem.classList.value);
       }
     });
-  
-    // callback
-    if (cb) {
-      cb();
+
+    // Only callback once we've iterated over every possible elem
+    if (total === count) {
+      // callback
+      if (cb) {
+        cb();
+      }
     }
   }
 
@@ -361,6 +370,7 @@ class Gymnasium {
 
     const examHeader = document.querySelector('.problem-header');
   
+    // TODO: ensure we check for examHeader too, since we only want this stuff to happen on an exam page (as opposed to a quiz page)
     if (!!examProblem) {
       console.log('[gym]: exam page');
 
@@ -368,21 +378,17 @@ class Gymnasium {
       function showExamMessage(status, courseType) {
         let elems;
 
-        function showMessage() {
-          if (courseType) {
-            elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
-          } else {
-            elems = document.querySelectorAll('.' + status + '_modal');
-          }
-  
-          elems.forEach(function(elem) {
-            console.log('[gym]: showing modal: ', elem);
-            elem.classList.remove('hidden');
-            elem.setAttribute('aria-hidden', false);
-          });
+        if (courseType) {
+          elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
+        } else {
+          elems = document.querySelectorAll('.' + status + '_modal');
         }
 
-        showMessage();
+        elems.forEach(function(elem) {
+          elem.classList.remove('hidden');
+          elem.setAttribute('aria-hidden', false);
+          console.log('[gym]: showing modal: ', elem);
+        });
       }
 
       // Use the problem-progress element to get a fraction
@@ -559,11 +565,11 @@ class Gymnasium {
       // Select the node that will be observed for mutations
       const problemProgress = document.getElementById(problemId + '-problem-progress');
 
-      // Add event listener to the problem progress element
-      console.log('[gym]: problemProgress: ', problemProgress);
+      // console.log('[gym]: problemProgress: ', problemProgress);
 
+      // Add event listener to the problem progress element
       function intervallicCheckers(e) {
-        console.log('[gym]: event added: ', e);
+        console.log('[gym]: event listener added: ', e);
 
         // reset interval if we detect a grade change
         if (typeof progressStatusCheck !== 'undefined') {
@@ -585,7 +591,13 @@ class Gymnasium {
       problemProgress.addEventListener('DOMSubtreeModified', intervallicCheckers('DOMSubtreeModified'), false);
 
       // Options for the observer (which mutations to observe)
-      const scoreObserverConfig = { attributes: true, childList: true, subtree: true, characterData: true };
+      const scoreObserverConfig = {
+        attributes: false,
+        childList: false,
+        subtree: false,
+        characterData: true,
+        characterDataOldValue: true
+      };
 
       // Callback function to execute when mutations are observed
       const observerCB = function(mutations) {
