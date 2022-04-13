@@ -344,7 +344,6 @@ class Gymnasium {
     let count = 0;
 
     msgs.forEach(function(elem) {
-      console.log(index);
       count++;
       // only hide elems that aren't already hidden
       if (!isHidden(elem)) {
