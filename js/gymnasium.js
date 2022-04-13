@@ -562,8 +562,8 @@ class Gymnasium {
       // Add event listener to the problem progress element
       console.log('[gym]: problemProgress: ', problemProgress);
 
-      function intervallicCheckers(event) {
-        console.log('[gym]: event: ', event);
+      function intervallicCheckers(e) {
+        console.log('[gym]: event added: ', e);
 
         // reset interval if we detect a grade change
         if (typeof progressStatusCheck !== 'undefined') {
@@ -580,9 +580,9 @@ class Gymnasium {
         prettyScoreCheck = setInterval(prettyScore, 2000);
       }
       
-      problemProgress.addEventListener('DOMCharacterDataModified', intervallicCheckers(), false);
+      problemProgress.addEventListener('DOMCharacterDataModified', intervallicCheckers('DOMCharacterDataModified'), false);
 
-      problemProgress.addEventListener('DOMSubtreeModified', intervallicCheckers(), false);
+      problemProgress.addEventListener('DOMSubtreeModified', intervallicCheckers('DOMSubtreeModified'), false);
 
       // Options for the observer (which mutations to observe)
       const scoreObserverConfig = { attributes: true, childList: true, subtree: true, characterData: true };
