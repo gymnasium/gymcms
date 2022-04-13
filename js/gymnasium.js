@@ -339,18 +339,18 @@ class Gymnasium {
   // hide all exam messages
   // TODO: this could be rewritten to be element agnostic
   hideModals(cb) {
-    let msgs = document.querySelectorAll('.exam-status');
+    let msgs = document.querySelectorAll('.exam-status.visible');
     let total = msgs.length;
     let count = 0;
+    console.log('total messages to hide: ', total);
 
     msgs.forEach(function(elem) {
       count++;
-      // only hide elems that aren't already hidden
-      if (!isHidden(elem)) {
-        elem.classList.add('hidden');
-        elem.setAttribute('aria-hidden', true);
-        console.log('[gym]: hiding visible modal: ', elem.classList.value);
-      }
+      elem.classList.add('hidden');
+      elem.classList.remove('visible');
+      elem.setAttribute('aria-hidden', true);
+      console.log('[gym]: hiding visible modal: ', elem);
+      console.log('counter: ', count);
     });
 
     // Only callback once we've iterated over every possible elem
@@ -378,13 +378,14 @@ class Gymnasium {
         let elems;
 
         if (courseType) {
-          elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
+          elems = document.querySelectorAll('.exam-status.' + status + '_modal.' + courseType);
         } else {
-          elems = document.querySelectorAll('.' + status + '_modal');
+          elems = document.querySelectorAll('.exam-status.' + status + '_modal');
         }
 
         elems.forEach(function(elem) {
           elem.classList.remove('hidden');
+          elem.classList.add('visible');
           elem.setAttribute('aria-hidden', false);
           console.log('[gym]: showing modal: ', elem);
         });
