@@ -482,7 +482,7 @@ class Gymnasium {
           passingScore,
         } = processScore();
 
-        console.log('[gym]: showProblemProgress processScore:', processScore());
+        // console.log('[gym]: showProblemProgress processScore:', processScore());
   
         if (!correct || !outOf) {
           return;
@@ -552,7 +552,7 @@ class Gymnasium {
           correct,
         } = processScore();
 
-        console.log('[gym]: checkStatus processScore:', processScore());
+        // console.log('[gym]: checkStatus processScore:', processScore());
   
         if (attemptsUsed > 0 || correct > 0) {
           clearInterval(progressStatusCheck);
