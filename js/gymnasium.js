@@ -636,7 +636,9 @@ class Gymnasium {
         console.log('[gym]: check exam button clicked');
 
         // hide visible modals on button click, then re-process the exam score.
-        gym.hideModals(progressStatusCheck = setInterval(checkStatus('submit'), 200));
+        gym.hideModals(function waitForHiddenModals(){
+          progressStatusCheck = setInterval(checkStatus('submit'), 200);
+        });
 
       }, false);
 
