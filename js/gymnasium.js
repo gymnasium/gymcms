@@ -635,11 +635,8 @@ class Gymnasium {
       checkButton.addEventListener('click', function submitButtonCheck() {
         console.log('[gym]: check exam button clicked');
 
-        // hide visible modals on button click
-        gym.hideModals();
-
-        // re-process the exam score.
-        progressStatusCheck = setInterval(checkStatus('submit'), 200);
+        // hide visible modals on button click, then re-process the exam score.
+        gym.hideModals(progressStatusCheck = setInterval(checkStatus('submit'), 200));
 
       }, false);
 
