@@ -270,6 +270,8 @@ function exam() {
 
   let previous_score;
 
+  let state = 'load';
+
   const courseNum = parseInt(document.getElementById('__course_number__').innerText, 10);
 
   // this helper function gets a ton of information about the score for this particular problem
@@ -336,6 +338,8 @@ function exam() {
 
     // update exam score span
     $('.exam-score-container').text(score);
+
+    console.log('[gym]: state: ', state);
 
     // we have a score, let's do stuff
     if (score >= passingScore) {
@@ -406,7 +410,7 @@ function exam() {
 
     let observer = new MutationObserver(mutations => {
       mutations.forEach(function listMutations(mutation) {
-        console.log('[gym] mutation type: ', mutation.type);
+        console.log('[gym] mutation type: ', mutation);
       });
 
       // reset interval if we detect a grade change
@@ -435,10 +439,13 @@ function exam() {
   $('#check-button').click(function() {
     // console.log('[gym] check exam button clicked');
 
+    state = 'submit';
+
     document.getElementById('course_passed_message').scrollIntoView();
   });
 }
 
+// Initialize exam function (do not wrap this in a document ready or anything similar, otherwise the mutation observer will not work properly)
 exam();
 
 </script>
