@@ -439,26 +439,9 @@ class Gymnasium {
           showProblemProgress(state);
         }
       }
-  
-      function observatory(state) {
-        observer = new MutationObserver((mutations, state) => {
-          mutations.forEach(function listMutations(mutation) {
-            console.log('[gym] mutation type: ', mutation);
-          });
-  
-          // reset interval if we detect a grade change
-          if (typeof progressStatusCheck !== 'undefined'){
-            clearInterval(progressStatusCheck);
-          }
-          // set interval on initial page load
-          progressStatusCheck = setInterval(checkStatus(state), 200);
-        });
-  
-        observer.observe(document.getElementById(problemId + '-problem-progress'), {childList: true});
-      }
-  
+
       // scroll to show the results message
-      document.getElementById('check-button').addEventListener('click', function() {
+      document.getElementById('check-button').addEventListener('click', function submitButton() {
         console.log('[gym] check exam button clicked');
   
         observatory('submit');
@@ -472,6 +455,23 @@ class Gymnasium {
       return;
     }
   }
+}
+
+function observatory(state) {
+  observer = new MutationObserver((mutations, state) => {
+    mutations.forEach(function listMutations(mutation) {
+      console.log('[gym] mutation type: ', mutation);
+    });
+
+    // reset interval if we detect a grade change
+    if (typeof progressStatusCheck !== 'undefined'){
+      clearInterval(progressStatusCheck);
+    }
+    // set interval on initial page load
+    progressStatusCheck = setInterval(checkStatus(state), 200);
+  });
+
+  observer.observe(document.getElementById(problemId + '-problem-progress'), {childList: true});
 }
 
 
@@ -488,7 +488,7 @@ gym.courseTabs();
 gym.dropdownCaret();
 
 // Initialize exam function (do not wrap this in a document ready or anything similar, otherwise the mutation observer will not work properly)
-gym.exam();
+
 
 // check ie browser version
 gym.ieCheck();
@@ -498,6 +498,7 @@ gym.systemStatus();
 
 document.onreadystatechange = function() {
   if (document.readyState === 'complete') {
+    gym.exam();
     gym.setBgFromImage();
     gym.accountDeletion();
   }
