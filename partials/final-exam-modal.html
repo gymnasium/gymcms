@@ -451,8 +451,11 @@ function exam() {
 // });
 
 document.onreadystatechange = function() {
-  if (document.readyState === 'complete') {
+  if (document.readyState === 'interactive') {
     exam();
+  }
+  if (document.readyState === 'complete') {
+
   }
 };
 
