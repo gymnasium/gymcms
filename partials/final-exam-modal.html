@@ -407,7 +407,9 @@ function exam() {
   if (!!problemHeader && problemHeader.innerText.toLowerCase() === 'final exam') {
     console.log('[gym]: exam page');
 
-    state = 'load';
+    if (typeof state === 'undefined' || state === null) {
+      state = 'load';
+    }
 
     let problemId = document.getElementById('exam-problem').getAttribute('data-id');
 
