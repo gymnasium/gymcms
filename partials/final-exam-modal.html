@@ -276,7 +276,7 @@ function exam() {
 
   // this helper function gets a ton of information about the score for this particular problem
   // based on information embedded on this page
-  var processScore = () => {
+  function processScore() {
     const COURSE_TYPES = {
       FULL_COURSE: 'FULL_COURSE',
       GYM_SHORT: 'GYM_SHORT',
@@ -320,7 +320,7 @@ function exam() {
     };
   };
 
-  function showProblemProgress(state) {
+  function showProblemProgress() {
     let {
       attempts_used,
       attempts_total,
@@ -388,7 +388,7 @@ function exam() {
     }
   }
 
-  function checkStatus(state){
+  function checkStatus(){
     const {
       attempts_used,
       correct,
@@ -396,7 +396,7 @@ function exam() {
 
     if (attempts_used > 0 || correct > 0) {
       clearInterval(progressStatusCheck);
-      showProblemProgress(state);
+      showProblemProgress();
     }
   }
 
