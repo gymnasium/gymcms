@@ -394,7 +394,7 @@ function exam() {
   // This determines if we are on the exam page? Yes. Final Exam vs Quiz pages.
   const problemHeader = document.querySelector('.problem-header');
 
-  if (!!problemHeader && problemHeader.innerText === 'Final Exam') {
+  if (!!problemHeader && problemHeader.innerText.toLowerCase() === 'final exam') {
     console.log('[gym]: exam page');
   } else {
     console.log('[gym]: not exam page');
