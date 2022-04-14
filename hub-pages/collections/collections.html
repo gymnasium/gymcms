@@ -16,11 +16,11 @@ permalink: /collections/
     <div class="cols">
       <ul>
       {%- assign collections_sorted = site.data.collections | sort -%}
-      {%- for collection_hash in collections_sorted -%}
+      {%- for collection_hash in collections_sorted reversed -%}
         {%- assign hub_page = collection_hash[1] -%}
         {%- unless hub_page.exclude -%}
         <li class="collection">
-          <div class="collection--card {{ hub_page.topic | slugify }}">
+          <div class="collection--card {{ hub_page.topic | slugify }}" id="{{ hub_page.collection_ID | slugify }}">
             <div class="collection--main">
               <header>
                 <h2 class="title">{{ hub_page.title }}</h2>
