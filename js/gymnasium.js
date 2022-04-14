@@ -300,8 +300,9 @@ class Gymnasium {
   exam() {
     // This determines if we are on the exam page? Yes. Final Exam vs Quiz pages.
     const problemHeader = document.querySelector('.problem-header');
+    const examProblem = document.getElementById('exam-problem');
   
-    if (!!problemHeader && problemHeader.innerText.toLowerCase() === 'final exam') {
+    if (!!examProblem && problemHeader.innerText.toLowerCase() === 'final exam') {
       console.log('[gym]: exam page');
   
       let observer;
@@ -470,17 +471,6 @@ class Gymnasium {
       console.log('[gym]: not exam page');
       return;
     }
-  }
-}
-
-//check for Navigation Timing API support
-if (window.performance) {
-  console.info('window.performance works fine on this browser');
-
-  if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
-    console.info( 'This page is reloaded' );
-  } else {
-    console.info( 'This page is not reloaded');
   }
 }
 
