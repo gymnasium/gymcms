@@ -152,119 +152,6 @@ This unique anchor is for a post successful exam scroll event. Please do not rem
 Adding exam script here for proper inlining
 {%- endcomment -%}
 <script>
-function storageAvailable(type) {
-  var storage;
-  try {
-    storage = window[type];
-    var x = '__storage_test__';
-    storage.setItem(x, x);
-    storage.removeItem(x);
-    return true;
-  } catch(e) {
-    return e instanceof DOMException && (
-      // everything except Firefox
-      e.code === 22 ||
-      // Firefox
-      e.code === 1014 ||
-      // test name field too, because code might not be present
-      // everything except Firefox
-      e.name === 'QuotaExceededError' ||
-      // Firefox
-      e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-      // acknowledge QuotaExceededError only if there's something already stored
-      (storage && storage.length !== 0);
-  }
-}
-
-function getStorage(obj) {
-  if (storageAvailable('localStorage')) {
-
-  } else {
-    console.warn('[gym] no local storage available, fall back to cookie');
-  }
-}
-
-// hide all exam messages
-function hideModals(cb) {
-  document.querySelectorAll('.message').forEach(function(elem) {
-    console.log('hiding modal: ', elem);
-    elem.classList.add('hidden');
-    elem.setAttribute('aria-hidden', true);
-  });
-
-  // callback
-  if (cb) {
-    cb();
-  }
-}
-
-// show specific exam messages (passed, try_again, failed)
-function modalVisibility(status, courseType) {
-  let modalsHidden = false;
-
-  hideModals(()=> {
-    modalsHidden = true;
-  });
-
-  if (modalsHidden) {
-    let elems;
-    if (courseType) {
-      elems = document.querySelectorAll('.' + status + '_modal.' + courseType);
-    } else {
-      elems = document.querySelectorAll('.' + status + '_modal');
-    }
-
-    elems.forEach(function(elem) {
-      console.log('showing modal: ', elem);
-      elem.classList.remove('hidden');
-      elem.setAttribute('aria-hidden', false);
-    });
-  }
-
-}
-
-function compareScore() {
-  let previous;
-  let probElem = document.querySelector('[data-problem-score]');
-  let score1 = Number(probElem.getAttribute('data-problem-score'));
-  let [fraction] = document.querySelector('.problem-progress').innerText.split(' ');
-  let [numerator, denominator] = fraction.split('/');
-  let score2 = Number(numerator / denominator * 100);
-
-  if (score2 > score1) {
-    previous = score2;
-  } else {
-    previous = score1;
-  }
-
-  return previous;
-}
-
-function getPrevScore(courseId) {
-  let prevScore;
-  let grades = {};
-
-  if (storageAvailable('localStorage')) {
-    if (localStorage.getItem('grades')) {
-      grades = JSON.parse(localStorage.getItem('grades'));
-      prevScore = grades[courseId] ? grades[courseId] : compareScore();
-
-    } else {
-      prevScore = compareScore();
-    }
-
-    // update grades object & store
-    grades[courseId] = prevScore;
-    localStorage.setItem('grades', JSON.stringify(grades));
-
-  } else {
-    console.warn('[gym] no local storage available');
-    // TODO: add alternate options
-  }
-
-  return prevScore;
-}
-
 function exam() {
   // This determines if we are on the exam page? Yes. Final Exam vs Quiz pages.
   const problemHeader = document.querySelector('.problem-header');
@@ -275,8 +162,6 @@ function exam() {
     let observer;
 
     let progressStatusCheck; // this is the interval we'll set to track status on this problem
-
-    let previous_score;
 
     let problemId = document.getElementById('exam-problem').getAttribute('data-id');
 
@@ -352,13 +237,6 @@ function exam() {
 
       // we have a score, let's do stuff
       if (score >= passingScore) {
-        // previous_score = getPrevScore(courseNum);
-
-        // if (score > previous_score && attempts_remaining > 0) {
-        //   console.log('[gym] new high score! ', score, '\nprevious score: ', previous_score);
-        // } else {
-        //   console.log('[gym] score is not higher than previous score');
-        // }
 
         //we passed! show passing div for the type of course they took
         $(".passed_modal." + courseType).removeClass('hidden');
@@ -454,13 +332,12 @@ exam();
 
 //check for Navigation Timing API support
 if (window.performance) {
-  console.info("window.performance works fine on this browser");
+  console.info('window.performance works fine on this browser');
 
-  console.info(performance.navigation.type);
   if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
-    console.info( "This page is reloaded" );
+    console.info( 'This page is reloaded' );
   } else {
-    console.info( "This page is not reloaded");
+    console.info( 'This page is not reloaded');
   }
 }
 </script>
