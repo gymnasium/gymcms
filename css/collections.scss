@@ -79,16 +79,17 @@
   // topics
 
   .accessibility,
-  .web-design-development {
+  .design,
+  .development {
     border-top-color: $gym-magenta;
   }
 
-  .javascript {
-    border-top-color: $gym-purple;
-  }
+//   .development {
+//     border-top-color: $gym-purple;
+//   }
 
   .prototyping,
-  .user-experience {
+  .ux {
     border-top-color: $gym-teal;
   }
 
