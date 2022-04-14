@@ -353,16 +353,18 @@ function exam() {
       $(".try_again_modal").addClass('hidden');
       $(".failed_modal").addClass('hidden');
 
+      console.log('[gym]: ajax submission occurs here');
+
       //generate the certificate through the API
-      $.ajax({
-        type:     'POST',
-        url:      '/accredible/request_certificate',
-        async:     false,
-        data:     {'course_id': window.$$course_id},
-        success:  function(data) {
-          // console.log('[gym] certificate request successful: ', data);
-        }
-      });
+      // $.ajax({
+      //   type:     'POST',
+      //   url:      '/accredible/request_certificate',
+      //   async:     false,
+      //   data:     {'course_id': window.$$course_id},
+      //   success:  function(data) {
+      //     // console.log('[gym] certificate request successful: ', data);
+      //   }
+      // });
     } else {
       //we failed :( see if we have another attempt
       if (attempts_remaining > 0) {
@@ -389,7 +391,7 @@ function exam() {
     }
   }
 
-  // This determines if we are on the exam page?
+  // This determines if we are on the exam page? Yes. Final Exam vs Quiz pages.
   if ($('.problem-header').text().trim() === "Final Exam") {
 
     let problem_id = document.getElementById('exam-problem').getAttribute('data-id');
@@ -402,7 +404,7 @@ function exam() {
 
     let observer = new MutationObserver(mutationRecords => {
       // log
-      // console.log('[gym] mutation records: ', mutationRecords);
+      console.log('[gym] mutation records: ', mutationRecords);
 
       // reset interval if we detect a grade change
       if (typeof progress_status_check !== 'undefined'){
