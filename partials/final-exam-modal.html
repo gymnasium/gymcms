@@ -417,7 +417,7 @@ function exam() {
     }
 
     function observatory(state) {
-      observer = new MutationObserver(mutations => {
+      observer = new MutationObserver(mutations, state => {
         mutations.forEach(function listMutations(mutation) {
           console.log('[gym] mutation type: ', mutation);
         });
@@ -452,4 +452,15 @@ function exam() {
 // Initialize exam function (do not wrap this in a document ready or anything similar, otherwise the mutation observer will not work properly)
 exam();
 
+//check for Navigation Timing API support
+if (window.performance) {
+  console.info("window.performance works fine on this browser");
+
+  console.info(performance.navigation.type);
+  if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+    console.info( "This page is reloaded" );
+  } else {
+    console.info( "This page is not reloaded");
+  }
+}
 </script>
