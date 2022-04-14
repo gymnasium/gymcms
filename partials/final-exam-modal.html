@@ -319,7 +319,7 @@ function exam() {
     };
   };
 
-  var showProblemProgress = function() {
+  function showProblemProgress(state) {
     let {
       attempts_used,
       attempts_total,
@@ -379,7 +379,7 @@ function exam() {
     }
   }
 
-  function check_status(){
+  function checkStatus(state){
     const {
       attempts_used,
       correct,
@@ -387,7 +387,7 @@ function exam() {
 
     if (attempts_used > 0 || correct > 0) {
       clearInterval(progressStatusCheck);
-      showProblemProgress();
+      showProblemProgress(state);
     }
   }
 
@@ -396,11 +396,6 @@ function exam() {
 
   if (!!problemHeader && problemHeader.innerText.toLowerCase() === 'final exam') {
     console.log('[gym]: exam page');
-  } else {
-    console.log('[gym]: not exam page');
-  }
-
-  if ($('.problem-header').text().trim() === "Final Exam") {
 
     let problemId = document.getElementById('exam-problem').getAttribute('data-id');
 
@@ -419,7 +414,7 @@ function exam() {
         clearInterval(progressStatusCheck);
       }
       // set interval on initial page load
-      progressStatusCheck = setInterval(check_status, 200);
+      progressStatusCheck = setInterval(checkStatus, 200);
     });
 
     observer.observe(
@@ -432,6 +427,7 @@ function exam() {
       },
     );
   } else {
+    console.log('[gym]: not exam page');
     return;
   }
 
