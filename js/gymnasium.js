@@ -444,12 +444,12 @@ class Gymnasium {
       document.getElementById('check-button').addEventListener('click', function submitButton() {
         console.log('[gym] check exam button clicked');
   
-        observatory('submit');
+        observatory('submit', problemId);
   
         document.getElementById('course_passed_message').scrollIntoView();
       }, false);
   
-      observatory('load');
+      observatory('load', problemId);
     } else {
       console.log('[gym]: not exam page');
       return;
@@ -457,7 +457,7 @@ class Gymnasium {
   }
 }
 
-function observatory(state) {
+function observatory(state, id) {
   observer = new MutationObserver((mutations, state) => {
     mutations.forEach(function listMutations(mutation) {
       console.log('[gym] mutation type: ', mutation);
@@ -471,7 +471,7 @@ function observatory(state) {
     progressStatusCheck = setInterval(checkStatus(state), 200);
   });
 
-  observer.observe(document.getElementById(problemId + '-problem-progress'), {childList: true});
+  observer.observe(document.getElementById(id + '-problem-progress'), {childList: true});
 }
 
 
