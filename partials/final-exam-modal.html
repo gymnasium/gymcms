@@ -417,7 +417,7 @@ function exam() {
     }
 
     function observatory(state) {
-      observer = new MutationObserver(mutations, state => {
+      observer = new MutationObserver((mutations, state) => {
         mutations.forEach(function listMutations(mutation) {
           console.log('[gym] mutation type: ', mutation);
         });
