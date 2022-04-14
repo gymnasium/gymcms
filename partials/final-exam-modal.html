@@ -266,7 +266,7 @@ function getPrevScore(courseId) {
 }
 
 function exam() {
-  let progress_status_check; // this is the interval we'll set to track status on this problem
+  let progressStatusCheck; // this is the interval we'll set to track status on this problem
 
   let previous_score;
 
@@ -319,7 +319,7 @@ function exam() {
     };
   };
 
-  var show_problem_progress = function() {
+  var showProblemProgress = function() {
     let {
       attempts_used,
       attempts_total,
@@ -386,15 +386,23 @@ function exam() {
     } = processScore();
 
     if (attempts_used > 0 || correct > 0) {
-      clearInterval(progress_status_check);
-      show_problem_progress();
+      clearInterval(progressStatusCheck);
+      showProblemProgress();
     }
   }
 
   // This determines if we are on the exam page? Yes. Final Exam vs Quiz pages.
+  const problemHeader = document.querySelector('.problem-header');
+
+  if (!!problemHeader && problemHeader.innerText === 'Final Exam') {
+    console.log('[gym]: exam page');
+  } else {
+    console.log('[gym]: not exam page');
+  }
+
   if ($('.problem-header').text().trim() === "Final Exam") {
 
-    let problem_id = document.getElementById('exam-problem').getAttribute('data-id');
+    let problemId = document.getElementById('exam-problem').getAttribute('data-id');
 
     COURSE_ID = parseInt(document.getElementById('__course_number__').innerText, 10);
 
@@ -407,15 +415,15 @@ function exam() {
       console.log('[gym] mutation records: ', mutationRecords);
 
       // reset interval if we detect a grade change
-      if (typeof progress_status_check !== 'undefined'){
-        clearInterval(progress_status_check);
+      if (typeof progressStatusCheck !== 'undefined'){
+        clearInterval(progressStatusCheck);
       }
       // set interval on initial page load
-      progress_status_check = setInterval(check_status, 200);
+      progressStatusCheck = setInterval(check_status, 200);
     });
 
     observer.observe(
-      document.getElementById(problem_id + '-problem-progress'),
+      document.getElementById(problemId + '-problem-progress'),
       {
         characterData: false,
         attributes: false,
