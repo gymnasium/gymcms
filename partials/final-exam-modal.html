@@ -299,8 +299,10 @@ function exam() {
       if (state === 'load') {
         console.log('load state, disconnecting observer');
         gradeObserver.disconnect();
+        sessionStorage.removeItem(storedStateName);
       } else if (state === 'submit') {
         console.log('submit state, observer remains active');
+        sessionStorage.removeItem(storedStateName);
       }
     }
 
@@ -324,12 +326,13 @@ function exam() {
       if (!storedState) {
         console.log('nothing stored. storing: ', state);
         store(storedStateName, state);
-      } else if (storedState !== state) {
-        console.log('state mismatch! storedState: ', storedState, '\nstate: ', state);
-      } else if (storedState === state) {
-        console.log('states match! storedState: ', storedState, '\nstate: ', state);
+      // } else if (storedState !== state) {
+      //   console.log('state mismatch! storedState: ', storedState, '\nstate: ', state);
+      // } else if (storedState === state) {
+      //   console.log('states match! storedState: ', storedState, '\nstate: ', state);
       } else {
-        console.log('something else happened');
+        state = storedState;
+        console.log('state is now: ', state);
       }
 
       gradeObserver = new MutationObserver((mutations) => {
