@@ -3,63 +3,32 @@ layout: raw
 permalink: /partials/final-exam-js/
 ---
 <script>
-// MIT Licensed
-// Author: jwilson8767
-
-/**
- * Waits for an element satisfying selector to exist, then resolves promise with the element.
- * Useful for resolving race conditions.
- *
- * @param selector
- * @returns {Promise}
- */
-function elementReady(selector) {
-  return new Promise((resolve, reject) => {
-    let el = document.querySelector(selector);
-    if (el) {
-      resolve(el); 
-      return
-    }
-    new MutationObserver((mutationRecords, observer) => {
-      // Query for elements matching the specified selector
-      Array.from(document.querySelectorAll(selector)).forEach((element) => {
-        resolve(element);
-        //Once we have resolved we don't need the observer anymore.
-        observer.disconnect();
-      });
-    })
-      .observe(document.documentElement, {
-        childList: true,
-        subtree: true
-      });
-  });
-}
-
 // Define variables for exam related stuff
 const examProblem = document.getElementById('exam-problem');
 const problemHeader = document.querySelector('.problem-header');
+const courseNum = parseInt(document.getElementById('__course_number__').innerText, 10);
+
+const COURSE_TYPES = {
+  FULL_COURSE: 'FULL_COURSE',
+  GYM_SHORT: 'GYM_SHORT',
+};
+
+const COURSE_TYPE = courseNum >= 100 ? COURSE_TYPES.FULL_COURSE : COURSE_TYPES.GYM_SHORT;
+
 let gradeObserver;
 let progressStatusCheck; // this is the interval we'll set to track status on this problem
 
 function exam() {
 
-  if (elementReady(problemHeader)) {
+  if (typeof problemHeader !== 'undefined' && problemHeader !== null) {
     console.log('[gym]: quiz or exam page');
     // This determines if we are on the exam page? Yes. Final Exam vs Quiz pages.
-    
+
     if (problemHeader.innerText.toLowerCase() === 'final exam') {
       console.log('[gym]: final exam page');
 
       let problemId = examProblem.getAttribute('data-id') + '-problem-progress';
 
-      const courseNum = parseInt(document.getElementById('__course_number__').innerText, 10);
-
-      const COURSE_TYPES = {
-        FULL_COURSE: 'FULL_COURSE',
-        GYM_SHORT: 'GYM_SHORT',
-      };
-
-      const COURSE_TYPE = courseNum >= 100 ? COURSE_TYPES.FULL_COURSE : COURSE_TYPES.GYM_SHORT;
       let PASSING_SCORE = 85;
 
       if (COURSE_TYPE === COURSE_TYPES.FULL_COURSE) {
