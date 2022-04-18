@@ -318,10 +318,12 @@ function exam() {
       // session storage stuff
       const name = 'gym-' + courseNum + '-state';
       let storedState = retrieve(name);
-      if (typeof storedState !== 'undefined' && storedState !== null) {
-        store(name, 'load');
+      if (typeof storedState === 'undefined' || storedState === null) {
+        store(name, state);
+      } else if (storedState !== state) {
+        console.log('state mismatch: ', storedState, state);
       } else {
-        console.log(storedState, state);
+        console.log('something else happened');
       }
 
       gradeObserver = new MutationObserver((mutations) => {
