@@ -149,6 +149,24 @@ This unique anchor is for a post successful exam scroll event. Please do not rem
 </main>
 
 <script>
+// Store our data in session storage
+function store(name,data) {
+  if (window.sessionStorage) {
+    sessionStorage.setItem(name, data);
+  } else {
+    console.warn('[job module] No browser support for sessionStorage!');
+  }
+}
+
+function retrieve(name) {
+  if (window.sessionStorage && sessionStorage.getItem(name)) {
+    data = sessionStorage.getItem(name);
+    return data;
+  } else {
+    console.warn('[job module] No browser support for sessionStorage!');
+  }
+}
+
 function exam() {
   // Define variables for exam related stuff
   let examMenu = document.getElementById('final-exam-child');
@@ -297,6 +315,15 @@ function exam() {
     }
 
     function observatory(state) {
+      // session storage stuff
+      const name = 'gym-' + courseNum + '-state';
+      let storedState = retrieve(name);
+      if (typeof storedState !== 'undefined' && storedState !== null) {
+        store(name, 'load');
+      } else {
+        console.log(storedState, state);
+      }
+
       gradeObserver = new MutationObserver((mutations) => {
         mutations.forEach(function listMutations(mutation) {
           console.log('[gym] mutation type: ', mutation);
