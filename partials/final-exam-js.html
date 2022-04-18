@@ -5,7 +5,12 @@ permalink: /partials/final-exam-js/
 <script>
 // Define variables for exam related stuff
 const examProblem = document.getElementById('exam-problem');
-const problemHeader = document.querySelector('.problem-header');
+let examMenu = document.getElementById('final-exam-child');
+let examActive;
+if (typeof examMenu !== 'undefined' && examMenu !== null) {
+  examActive = examMenu.querySelector('.menu-item.active');
+}
+
 const courseNum = parseInt(document.getElementById('__course_number__').innerText, 10);
 
 const COURSE_TYPES = {
@@ -20,7 +25,7 @@ let progressStatusCheck; // this is the interval we'll set to track status on th
 
 function exam() {
 
-  if (typeof problemHeader !== 'undefined' && problemHeader !== null) {
+  if (typeof examActive !== 'undefined' && examActive !== null) {
     console.log('[gym]: quiz or exam page');
     // This determines if we are on the exam page? Yes. Final Exam vs Quiz pages.
 
