@@ -153,6 +153,7 @@ function exam() {
   // Define variables for exam related stuff
   let examMenu = document.getElementById('final-exam-child');
   let examActive;
+
   if (typeof examMenu !== 'undefined' && examMenu !== null) {
     examActive = examMenu.querySelector('.menu-item.active');
   }
@@ -183,8 +184,6 @@ function exam() {
     console.log('[gym]: final exam page');
 
     const examProblem = document.getElementById('exam-problem');
-
-    let document.querySelector('.problem-progress') = examProblem.getAttribute('data-id') + '-problem-progress';
 
     // this helper function gets a ton of information about the score for this particular problem
     // based on information embedded on this page
@@ -326,8 +325,6 @@ function exam() {
 
     observatory('load');
   }
-
-  
 }
 
 // Initialize exam function (do not wrap this in a document ready or anything similar, otherwise the mutation observer will not work properly)
