@@ -154,7 +154,7 @@ function store(name,data) {
   if (window.sessionStorage) {
     sessionStorage.setItem(name, data);
   } else {
-    console.warn('[job module] No browser support for sessionStorage!');
+    console.warn('[gym exam] No browser support for sessionStorage!');
   }
 }
 
@@ -163,7 +163,7 @@ function retrieve(name) {
     data = sessionStorage.getItem(name);
     return data;
   } else {
-    console.warn('[job module] No browser support for sessionStorage!');
+    return false;
   }
 }
 
@@ -177,6 +177,8 @@ function exam() {
   }
 
   const courseNum = parseInt(document.getElementById('__course_number__').innerText, 10);
+
+  const storedStateName = 'gym-' + courseNum + '-state';
 
   const COURSE_TYPES = {
     FULL_COURSE: 'FULL_COURSE',
@@ -316,12 +318,16 @@ function exam() {
 
     function observatory(state) {
       // session storage stuff
-      const name = 'gym-' + courseNum + '-state';
-      let storedState = retrieve(name);
-      if (typeof storedState === 'undefined' || storedState === null) {
-        store(name, state);
+      
+      let storedState = retrieve(storedStateName);
+
+      if (!storedState) {
+        console.log('nothing stored. storing: ', state);
+        store(storedStateName, state);
       } else if (storedState !== state) {
-        console.log('state mismatch: ', storedState, state);
+        console.log('state mismatch! storedState: ', storedState, '\nstate: ', state);
+      } else if (storedState === state) {
+        console.log('states match! storedState: ', storedState, '\nstate: ', state);
       } else {
         console.log('something else happened');
       }
@@ -344,6 +350,7 @@ function exam() {
 
     document.getElementById('check-button').addEventListener('click', function submitButtonClick() {
       console.log('[gym] check exam button clicked');
+      store(storedStateName, 'submit');
 
       observatory('submit');
 
