@@ -300,6 +300,23 @@ function exam() {
       }
     }
 
+    function observatory(state, id) {
+      gradeObserver = new MutationObserver((mutations, state) => {
+        mutations.forEach(function listMutations(mutation) {
+          console.log('[gym] mutation type: ', mutation);
+        });
+
+        // reset interval if we detect a grade change
+        if (typeof progressStatusCheck !== 'undefined'){
+          clearInterval(progressStatusCheck);
+        }
+        // set interval on initial page load
+        progressStatusCheck = setInterval(checkStatus(state), 200);
+      });
+
+      gradeObserver.observe(document.getElementById(id), {childList: true});
+    }
+
     let submitButton = document.getElementById('check-button');
 
     if (typeof submitButton !== 'undefined' && submitButton !== null) {
@@ -315,23 +332,6 @@ function exam() {
       }, false);
     }
   }
-}
-
-function observatory(state, id) {
-  gradeObserver = new MutationObserver((mutations, state) => {
-    mutations.forEach(function listMutations(mutation) {
-      console.log('[gym] mutation type: ', mutation);
-    });
-
-    // reset interval if we detect a grade change
-    if (typeof progressStatusCheck !== 'undefined'){
-      clearInterval(progressStatusCheck);
-    }
-    // set interval on initial page load
-    progressStatusCheck = setInterval(checkStatus(state), 200);
-  });
-
-  gradeObserver.observe(document.getElementById(id), {childList: true});
 }
 
 
