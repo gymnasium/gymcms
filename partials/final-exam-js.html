@@ -36,7 +36,7 @@ function exam() {
 
   if (typeof examActive !== 'undefined' && examActive !== null) {
     console.log('[gym]: final exam page');
-    
+
     const examProblem = document.getElementById('exam-problem');
 
     let problemId;
@@ -158,17 +158,20 @@ function exam() {
       }
     }
 
+    let submitButton = document.getElementById('check-button');
 
+    if (typeof submitButton !== 'undefined' && submitButton !== null) {
+      
+      submitButton.addEventListener('click', function submitButtonClick() {
+        console.log('[gym] check exam button clicked');
 
-    // scroll to show the results message
-    document.getElementById('check-button').addEventListener('click', function() {
-      console.log('[gym] check exam button clicked');
+        observatory('submit', problemId);
 
-      observatory('submit', problemId);
+        // scroll to show the results message
+        document.getElementById('course_passed_message').scrollIntoView();
 
-      document.getElementById('course_passed_message').scrollIntoView();
-    }, false);
-
+      }, false);
+    }
   }
 }
 
