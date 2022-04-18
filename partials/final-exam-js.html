@@ -29,7 +29,7 @@ function exam() {
     console.log('[gym]: quiz or exam page');
     // This determines if we are on the exam page? Yes. Final Exam vs Quiz pages.
 
-    if (problemHeader.innerText.toLowerCase() === 'final exam') {
+    // if (problemHeader.innerText.toLowerCase() === 'final exam') {
       console.log('[gym]: final exam page');
 
       let problemId = examProblem.getAttribute('data-id') + '-problem-progress';
@@ -167,7 +167,7 @@ function exam() {
       }, false);
 
       observatory('load', problemId);
-    }
+    // }
   }
 }
 
