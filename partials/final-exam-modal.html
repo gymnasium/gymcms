@@ -299,7 +299,6 @@ function exam() {
       if (state === 'load') {
         console.log('load state, disconnecting observer');
         gradeObserver.disconnect();
-        sessionStorage.removeItem(storedStateName);
       } else if (state === 'submit') {
         console.log('submit state, observer remains active');
         sessionStorage.removeItem(storedStateName);
