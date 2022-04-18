@@ -4,7 +4,6 @@ permalink: /partials/final-exam-js/
 ---
 <script>
 // Define variables for exam related stuff
-const examProblem = document.getElementById('exam-problem');
 let examMenu = document.getElementById('final-exam-child');
 let examActive;
 if (typeof examMenu !== 'undefined' && examMenu !== null) {
@@ -31,6 +30,7 @@ function exam() {
 
     // if (problemHeader.innerText.toLowerCase() === 'final exam') {
       console.log('[gym]: final exam page');
+      const examProblem = document.getElementById('exam-problem');
 
       let problemId = examProblem.getAttribute('data-id') + '-problem-progress';
 
