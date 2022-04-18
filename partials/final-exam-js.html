@@ -19,155 +19,156 @@ const COURSE_TYPES = {
 
 const COURSE_TYPE = courseNum >= 100 ? COURSE_TYPES.FULL_COURSE : COURSE_TYPES.GYM_SHORT;
 
+let PASSING_SCORE = 85;
+
+if (COURSE_TYPE === COURSE_TYPES.FULL_COURSE) {
+  // full courses have a passing grade of 85
+  PASSING_SCORE = 85;
+} else {
+  // gym shorts have a passing grade of 80
+  PASSING_SCORE = 80;
+}
+
 let gradeObserver;
 let progressStatusCheck; // this is the interval we'll set to track status on this problem
 
 function exam() {
 
   if (typeof examActive !== 'undefined' && examActive !== null) {
-    console.log('[gym]: quiz or exam page');
-    // This determines if we are on the exam page? Yes. Final Exam vs Quiz pages.
+    console.log('[gym]: final exam page');
+    
+    const examProblem = document.getElementById('exam-problem');
 
-    // if (problemHeader.innerText.toLowerCase() === 'final exam') {
-      console.log('[gym]: final exam page');
-      const examProblem = document.getElementById('exam-problem');
+    let problemId;
 
+    if (typeof problemId !== 'undefined' && problemId !== null) {
       let problemId = examProblem.getAttribute('data-id') + '-problem-progress';
 
-      let PASSING_SCORE = 85;
+      observatory('load', problemId);
+    }
 
-      if (COURSE_TYPE === COURSE_TYPES.FULL_COURSE) {
-        // full courses have a passing grade of 85
-        PASSING_SCORE = 85;
-      } else {
-        // gym shorts have a passing grade of 80
-        PASSING_SCORE = 80;
+    // this helper function gets a ton of information about the score for this particular problem
+    // based on information embedded on this page
+    function processScore() {
+
+      // look into the div with a class of .problem-progress for our score
+      // it contains a string that looks like:
+      //    80/100 Points (Graded)
+      // so we use .split(' ') to separate the fraction from the rest
+      var [fraction] = $('.problem-progress').text().split(' ');
+
+      // next we split the fraction in half by "/" to get the numerator and denominator
+      var [numerator, denominator] = fraction.split('/');
+
+      var correct = Number(numerator);
+      var outOf = Number(denominator);
+
+      var attempts_used = Number($('#attempts-used').text());
+      var attempts_total = Number($('#attempts-allowed').text());
+
+      return {
+        courseType: COURSE_TYPE,
+        passingScore: PASSING_SCORE,
+        score: Number(numerator / denominator * 100),
+        correct,
+        outOf,
+        attempts_used,
+        attempts_total,
+        attempts_remaining: attempts_total - attempts_used,
+      };
+    };
+
+    function showProblemProgress(state) {
+      let {
+        attempts_used,
+        attempts_total,
+        attempts_remaining,
+        correct,
+        courseType,
+        outOf,
+        score,
+        passingScore,
+      } = processScore();
+
+      if (!correct || !outOf) {
+        return;
       }
 
-      // this helper function gets a ton of information about the score for this particular problem
-      // based on information embedded on this page
-      function processScore() {
+      // update exam score span
+      $('.exam-score-container').text(score);
 
-        // look into the div with a class of .problem-progress for our score
-        // it contains a string that looks like:
-        //    80/100 Points (Graded)
-        // so we use .split(' ') to separate the fraction from the rest
-        var [fraction] = $('.problem-progress').text().split(' ');
+      console.log('[gym]: state: ', state);
 
-        // next we split the fraction in half by "/" to get the numerator and denominator
-        var [numerator, denominator] = fraction.split('/');
+      // we have a score, let's do stuff
+      if (score >= passingScore) {
 
-        var correct = Number(numerator);
-        var outOf = Number(denominator);
-
-        var attempts_used = Number($('#attempts-used').text());
-        var attempts_total = Number($('#attempts-allowed').text());
-
-        return {
-          courseType: COURSE_TYPE,
-          passingScore: PASSING_SCORE,
-          score: Number(numerator / denominator * 100),
-          correct,
-          outOf,
-          attempts_used,
-          attempts_total,
-          attempts_remaining: attempts_total - attempts_used,
-        };
-      };
-
-      function showProblemProgress(state) {
-        let {
-          attempts_used,
-          attempts_total,
-          attempts_remaining,
-          correct,
-          courseType,
-          outOf,
-          score,
-          passingScore,
-        } = processScore();
-
-        if (!correct || !outOf) {
-          return;
-        }
-
-        // update exam score span
-        $('.exam-score-container').text(score);
-
-        console.log('[gym]: state: ', state);
-
-        // we have a score, let's do stuff
-        if (score >= passingScore) {
-
-          //we passed! show passing div for the type of course they took
-          $(".passed_modal." + courseType).removeClass('hidden');
-          $(".try_again_modal").addClass('hidden');
-          $(".failed_modal").addClass('hidden');
-
-          if (state === 'load') {
-            console.log('[gym]: load state only.');
-          } else if (state === 'submit') {
-            console.log('[gym]: submit state. ajax submission occurs here.');
-
-            //generate the certificate through the API
-            // $.ajax({
-            //   type:     'POST',
-            //   url:      '/accredible/request_certificate',
-            //   async:     false,
-            //   data:     {'course_id': window.$$course_id},
-            //   success:  function(data) {
-            //     // console.log('[gym] certificate request successful: ', data);
-            //   }
-            // });
-          }
-
-
-        } else {
-          //we failed :( see if we have another attempt
-          if (attempts_remaining > 0) {
-            $(".passed_modal").addClass('hidden');
-            $(".try_again_modal." + courseType).removeClass('hidden');
-            $(".failed_modal").addClass('hidden');
-          } else {
-            $(".passed_modal").addClass('hidden');
-            $(".try_again_modal").addClass('hidden');
-            $(".failed_modal").removeClass('hidden');
-          }
-        }
+        //we passed! show passing div for the type of course they took
+        $(".passed_modal." + courseType).removeClass('hidden');
+        $(".try_again_modal").addClass('hidden');
+        $(".failed_modal").addClass('hidden');
 
         if (state === 'load') {
-          console.log('load state, disconnecting observer');
-          gradeObserver.disconnect();
+          console.log('[gym]: load state only.');
         } else if (state === 'submit') {
-          console.log('submit state, observer remains active');
+          console.log('[gym]: submit state. ajax submission occurs here.');
+
+          //generate the certificate through the API
+          // $.ajax({
+          //   type:     'POST',
+          //   url:      '/accredible/request_certificate',
+          //   async:     false,
+          //   data:     {'course_id': window.$$course_id},
+          //   success:  function(data) {
+          //     // console.log('[gym] certificate request successful: ', data);
+          //   }
+          // });
+        }
+
+
+      } else {
+        //we failed :( see if we have another attempt
+        if (attempts_remaining > 0) {
+          $(".passed_modal").addClass('hidden');
+          $(".try_again_modal." + courseType).removeClass('hidden');
+          $(".failed_modal").addClass('hidden');
+        } else {
+          $(".passed_modal").addClass('hidden');
+          $(".try_again_modal").addClass('hidden');
+          $(".failed_modal").removeClass('hidden');
         }
       }
 
-      function checkStatus(state){
-        const {
-          attempts_used,
-          correct,
-        } = processScore();
-
-        if (attempts_used > 0 || correct > 0) {
-          clearInterval(progressStatusCheck);
-          showProblemProgress(state);
-        }
+      if (state === 'load') {
+        console.log('load state, disconnecting observer');
+        gradeObserver.disconnect();
+      } else if (state === 'submit') {
+        console.log('submit state, observer remains active');
       }
+    }
+
+    function checkStatus(state){
+      const {
+        attempts_used,
+        correct,
+      } = processScore();
+
+      if (attempts_used > 0 || correct > 0) {
+        clearInterval(progressStatusCheck);
+        showProblemProgress(state);
+      }
+    }
 
 
 
-      // scroll to show the results message
-      document.getElementById('check-button').addEventListener('click', function() {
-        console.log('[gym] check exam button clicked');
+    // scroll to show the results message
+    document.getElementById('check-button').addEventListener('click', function() {
+      console.log('[gym] check exam button clicked');
 
-        observatory('submit', problemId);
+      observatory('submit', problemId);
 
-        document.getElementById('course_passed_message').scrollIntoView();
-      }, false);
+      document.getElementById('course_passed_message').scrollIntoView();
+    }, false);
 
-      observatory('load', problemId);
-    // }
   }
 }
 
