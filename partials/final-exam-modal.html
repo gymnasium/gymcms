@@ -147,3 +147,194 @@ This unique anchor is for a post successful exam scroll event. Please do not rem
     </div>
   </div>
 </main>
+
+<script>
+// Define variables for exam related stuff
+let examMenu = document.getElementById('final-exam-child');
+let examActive;
+if (typeof examMenu !== 'undefined' && examMenu !== null) {
+  examActive = examMenu.querySelector('.menu-item.active');
+}
+
+const courseNum = parseInt(document.getElementById('__course_number__').innerText, 10);
+
+const COURSE_TYPES = {
+  FULL_COURSE: 'FULL_COURSE',
+  GYM_SHORT: 'GYM_SHORT',
+};
+
+const COURSE_TYPE = courseNum >= 100 ? COURSE_TYPES.FULL_COURSE : COURSE_TYPES.GYM_SHORT;
+
+let PASSING_SCORE = 85;
+
+if (COURSE_TYPE === COURSE_TYPES.FULL_COURSE) {
+  // full courses have a passing grade of 85
+  PASSING_SCORE = 85;
+} else {
+  // gym shorts have a passing grade of 80
+  PASSING_SCORE = 80;
+}
+
+let gradeObserver;
+let progressStatusCheck; // this is the interval we'll set to track status on this problem
+
+function exam() {
+
+  if (typeof examActive !== 'undefined' && examActive !== null) {
+    console.log('[gym]: final exam page');
+
+    const examProblem = document.getElementById('exam-problem');
+
+    let problemId = examProblem.getAttribute('data-id') + '-problem-progress';
+
+    observatory('load', problemId);
+
+    // this helper function gets a ton of information about the score for this particular problem
+    // based on information embedded on this page
+    function processScore() {
+
+      // look into the div with a class of .problem-progress for our score
+      // it contains a string that looks like:
+      //    80/100 Points (Graded)
+      // so we use .split(' ') to separate the fraction from the rest
+      var [fraction] = $('.problem-progress').text().split(' ');
+
+      // next we split the fraction in half by "/" to get the numerator and denominator
+      var [numerator, denominator] = fraction.split('/');
+
+      var correct = Number(numerator);
+      var outOf = Number(denominator);
+
+      var attempts_used = Number($('#attempts-used').text());
+      var attempts_total = Number($('#attempts-allowed').text());
+
+      return {
+        courseType: COURSE_TYPE,
+        passingScore: PASSING_SCORE,
+        score: Number(numerator / denominator * 100),
+        correct,
+        outOf,
+        attempts_used,
+        attempts_total,
+        attempts_remaining: attempts_total - attempts_used,
+      };
+    };
+
+    function showProblemProgress(state) {
+      let {
+        attempts_used,
+        attempts_total,
+        attempts_remaining,
+        correct,
+        courseType,
+        outOf,
+        score,
+        passingScore,
+      } = processScore();
+
+      if (!correct || !outOf) {
+        return;
+      }
+
+      // update exam score span
+      $('.exam-score-container').text(score);
+
+      console.log('[gym]: state: ', state);
+
+      // we have a score, let's do stuff
+      if (score >= passingScore) {
+
+        //we passed! show passing div for the type of course they took
+        $(".passed_modal." + courseType).removeClass('hidden');
+        $(".try_again_modal").addClass('hidden');
+        $(".failed_modal").addClass('hidden');
+
+        if (state === 'load') {
+          console.log('[gym]: load state only.');
+        } else if (state === 'submit') {
+          console.log('[gym]: submit state. ajax submission occurs here.');
+
+          //generate the certificate through the API
+          // $.ajax({
+          //   type:     'POST',
+          //   url:      '/accredible/request_certificate',
+          //   async:     false,
+          //   data:     {'course_id': window.$$course_id},
+          //   success:  function(data) {
+          //     // console.log('[gym] certificate request successful: ', data);
+          //   }
+          // });
+        }
+
+
+      } else {
+        //we failed :( see if we have another attempt
+        if (attempts_remaining > 0) {
+          $(".passed_modal").addClass('hidden');
+          $(".try_again_modal." + courseType).removeClass('hidden');
+          $(".failed_modal").addClass('hidden');
+        } else {
+          $(".passed_modal").addClass('hidden');
+          $(".try_again_modal").addClass('hidden');
+          $(".failed_modal").removeClass('hidden');
+        }
+      }
+
+      if (state === 'load') {
+        console.log('load state, disconnecting observer');
+        gradeObserver.disconnect();
+      } else if (state === 'submit') {
+        console.log('submit state, observer remains active');
+      }
+    }
+
+    function checkStatus(state){
+      const {
+        attempts_used,
+        correct,
+      } = processScore();
+
+      if (attempts_used > 0 || correct > 0) {
+        clearInterval(progressStatusCheck);
+        showProblemProgress(state);
+      }
+    }
+
+    let submitButton = document.getElementById('check-button');
+
+    if (typeof submitButton !== 'undefined' && submitButton !== null) {
+      
+      submitButton.addEventListener('click', function submitButtonClick() {
+        console.log('[gym] check exam button clicked');
+
+        observatory('submit', problemId);
+
+        // scroll to show the results message
+        document.getElementById('course_passed_message').scrollIntoView();
+
+      }, false);
+    }
+  }
+}
+
+function observatory(state, id) {
+  gradeObserver = new MutationObserver((mutations, state) => {
+    mutations.forEach(function listMutations(mutation) {
+      console.log('[gym] mutation type: ', mutation);
+    });
+
+    // reset interval if we detect a grade change
+    if (typeof progressStatusCheck !== 'undefined'){
+      clearInterval(progressStatusCheck);
+    }
+    // set interval on initial page load
+    progressStatusCheck = setInterval(checkStatus(state), 200);
+  });
+
+  gradeObserver.observe(document.getElementById(id), {childList: true});
+}
+
+
+// Initialize exam function (do not wrap this in a document ready or anything similar, otherwise the mutation observer will not work properly)
+exam();
+</script>

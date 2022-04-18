@@ -2,6 +2,7 @@
 layout: raw
 permalink: /partials/final-exam-js/
 ---
+{%-comment-%}
 <script>
 // Define variables for exam related stuff
 let examMenu = document.getElementById('final-exam-child');
@@ -196,3 +197,4 @@ function observatory(state, id) {
 // Initialize exam function (do not wrap this in a document ready or anything similar, otherwise the mutation observer will not work properly)
 exam();
 </script>
+{%-endcomment-%}
