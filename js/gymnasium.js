@@ -414,7 +414,6 @@ class Gymnasium {
       var getHighestScore = function(courseNum) {
         return Math.max(getScoreFromDataAttr(), getScoreFromFraction());
       }
-
       // This is where we customize how the score is displayed to the end-user
       function prettyScore() {
         let examGrade = document.getElementById('exam-grade');
@@ -514,6 +513,24 @@ class Gymnasium {
             }
 
             console.log('[gym]: this is where the exam ajax submission occcurs');
+
+            // var xhr = new XMLHttpRequest();
+            // var data = 'course_id=' + window.$$course_id;
+
+            // xhr.open('POST', '/accredible/request_certificate');
+
+            // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            // xhr.onload = function() {
+            //   if (xhr.status === 200 && xhr.responseText !== newName) {
+            //     console.warn('Something went wrong.  Name is now ' + xhr.responseText);
+            //   } else if (xhr.status !== 200) {
+            //     console.warn('Request failed.  Returned status of ' + xhr.status);
+            //   }
+            // };
+            // xhr.send(encodeURI(data));
+
+            // TODO: change this to native JS
             // $.ajax({
             //   type:     'POST',
             //   // TODO: use accredible sandbox to test? sandbox.api.accredible.com
