@@ -149,7 +149,7 @@ This unique anchor is for a post successful exam scroll event. Please do not rem
 </main>
 
 <script>
-// Store our data in session storage
+// TODO: add localStorage and cookie fallbacks
 function store(name,data) {
   if (window.sessionStorage) {
     sessionStorage.setItem(name, data);
@@ -158,13 +158,22 @@ function store(name,data) {
   }
 }
 
+// TODO: add localStorage and cookie fallbacks
 function retrieve(name) {
   if (window.sessionStorage && sessionStorage.getItem(name)) {
-    data = sessionStorage.getItem(name);
+    let data = sessionStorage.getItem(name);
     return data;
   } else {
     return false;
   }
+}
+
+// TODO expand this
+function processCourseData(d) {
+  let data = JSON.parse(d);
+  var items = data.items;
+
+  return items;
 }
 
 function exam() {
@@ -178,6 +187,7 @@ function exam() {
 
   const courseNum = parseInt(document.getElementById('__course_number__').innerText, 10);
 
+  // TODO: change this to support stored courses data
   const storedStateName = 'gym-' + courseNum + '-state';
 
   const COURSE_TYPES = {
@@ -319,11 +329,17 @@ function exam() {
 
     function observatory(state) {
       // session storage stuff
+      // TODO: retrieve courses stored data
+      // let data = retrieve('courses');
       
       let storedState = retrieve(storedStateName);
 
       if (!storedState) {
         console.log('nothing stored. storing: ', state);
+
+        // TODO: store all course data without overwriting anything
+        // store('courses', JSON.stringify());
+
         store(storedStateName, state);
       // } else if (storedState !== state) {
       //   console.log('state mismatch! storedState: ', storedState, '\nstate: ', state);
