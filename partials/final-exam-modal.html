@@ -181,7 +181,7 @@ if (typeof examHeader !== 'undefined' && examHeader !== null) {
 const courseNum = parseInt(document.getElementById('__course_number__').innerText, 10);
 
 // TODO: change this to support stored courses data
-const storedStateName = 'gym-' + courseNum + '-state';
+const courseId = 'gym-' + courseNum;
 
 const COURSE_TYPES = {
   FULL_COURSE: 'FULL_COURSE',
@@ -326,11 +326,11 @@ if (examActive) {
   let courses = retrieve('courses');
 
   // For testing
-  const dummyData = [{"id":100},{"id":101},{"id":102},{"id":103},{"id":104},{"id":105},{"id":106},{"id":107},{"id":108},{"id":109}];
+  // const dummyData = [{"id":100},{"id":101},{"id":102},{"id":103},{"id":104},{"id":105},{"id":106},{"id":107},{"id":108},{"id":109}];
 
-  if (!courses) {
-    courses = JSON.stringify(dummyData);
-  }
+  // if (!courses) {
+  //   courses = JSON.stringify(dummyData);
+  // }
 
   function getState(obj, id) {
     data = JSON.parse(obj);
@@ -350,8 +350,11 @@ if (examActive) {
     }
   }
 
-  function updateState(obj, objName, id, newState, storedState) {
-    data = JSON.parse(obj);
+  function updateState(obj, objName, id, newState) {
+    let data = JSON.parse(obj);
+    let hasCourse = false;
+
+    console.log(data, data.includes(courseNum));
 
     // iterate through all available data
     for (var i = 0; i < data.length; i++) {
@@ -359,6 +362,7 @@ if (examActive) {
 
       // if we have a match
       if (datum.id === id) {
+        hasCourse = true;
         if (datum.state) {
           // state = storedState = datum.state;
           console.log(`datum.state exists: ${datum.state}`);
@@ -379,11 +383,23 @@ if (examActive) {
       }
     }
 
+    // if there's no matching course number, then add it
+    if (!hasCourse) {
+      let obj = {
+        "id": courseNum,
+        "state": 'load'
+      };
+
+      data.push(obj);
+    }
+
     // store the revised data
     store(objName, JSON.stringify(data));
   }
 
   function observatory(state) {
+    console.log('observatory initiated with state: ', state);
+
     // create courses object if none exists
     if (!courses) {
       courses = [];
