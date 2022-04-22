@@ -168,20 +168,14 @@ function retrieve(name) {
   }
 }
 
-// TODO expand this
-function processCourseData(d) {
-  let data = JSON.parse(d);
-  var items = data.items;
-
-  return items;
-}
-
 // Define variables for exam related stuff
-let examMenu = document.getElementById('final-exam-child');
-let examActive;
+let examHeader = document.querySelector('.problem-header');
+let examActive = false;
 
-if (typeof examMenu !== 'undefined' && examMenu !== null) {
-  examActive = examMenu.querySelector('.menu-item.active');
+if (typeof examHeader !== 'undefined' && examHeader !== null) {
+  if (examHeader.innerText.toLowerCase() === 'final exam') {
+    examActive = true;
+  }
 }
 
 const courseNum = parseInt(document.getElementById('__course_number__').innerText, 10);
@@ -209,7 +203,7 @@ if (COURSE_TYPE === COURSE_TYPES.FULL_COURSE) {
 let gradeObserver;
 let progressStatusCheck; // this is the interval we'll set to track status on this problem
 
-if (typeof examActive !== 'undefined' && examActive !== null) {
+if (examActive) {
   console.log('[gym]: final exam page');
 
   const examProblem = document.getElementById('exam-problem');
