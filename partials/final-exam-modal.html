@@ -178,7 +178,13 @@ if (typeof examHeader !== 'undefined' && examHeader !== null) {
   }
 }
 
-const courseNum = parseInt(document.getElementById('__course_number__').innerText, 10);
+function leftFillNum(num, targetLength) {
+  return num.toString().padStart(targetLength, 0);
+}
+
+const courseNumber = parseInt(document.getElementById('__course_number__').innerText, 10);
+
+const courseNum = leftFillNum(courseNumber, 3);
 
 // TODO: change this to support stored courses data
 const courseId = 'gym-' + courseNum;
