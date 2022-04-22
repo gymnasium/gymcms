@@ -309,10 +309,11 @@ if (typeof examActive !== 'undefined' && examActive !== null) {
       console.log('load state, disconnecting observer');
       gradeObserver.disconnect();
     } else if (state === 'submit') {
-      console.log('submit state, observer remains active');
+      console.log('submit state, observer remains active, setting state to null');
 
       // TODO: remove state
-      sessionStorage.removeItem(storedStateName);
+      updateState(courses, 'courses', courseNum, null);
+
     }
   }
 
@@ -350,7 +351,10 @@ if (typeof examActive !== 'undefined' && examActive !== null) {
           // state = storedState = datum.state;
           console.log(`datum.state exists: ${datum.state}`);
           // if the stored state doesn't match the newState, update it
-          if (datum.state !== newState) {
+          if (newState === null) {
+            console.warn(`newState is null. must remove`);
+            datum.state = null;
+          } else if (datum.state !== newState) {
             console.warn(`${datum.state} doesn't match ${newState}! Updating.`);
             datum.state = newState;
           }
@@ -453,7 +457,7 @@ if (typeof examActive !== 'undefined' && examActive !== null) {
     // store(storedStateName, 'submit');
     updateState(courses, 'courses', courseNum, 'submit');
 
-    // observatory('submit');
+    observatory('submit');
 
     // scroll to show the results message
     // document.getElementById('course_passed_message').scrollIntoView();
