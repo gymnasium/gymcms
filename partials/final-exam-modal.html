@@ -390,10 +390,8 @@ if (typeof examActive !== 'undefined' && examActive !== null) {
   }
 
   function observatory(state) {
-    
-
     // create courses object if none exists
-    if (!!courses) {
+    if (!courses) {
       courses = [];
 
       let obj = {
