@@ -338,7 +338,25 @@ if (typeof examActive !== 'undefined' && examActive !== null) {
     courses = JSON.stringify(dummyData);
   }
 
-  function updateState(obj, objName, id, newState) {
+  function getState(obj, id) {
+    data = JSON.parse(obj);
+    // iterate through all available data
+    for (var i = 0; i < data.length; i++) {
+      var datum = data[i];
+
+      // if we have a match
+      if (datum.id === id) {
+        if (datum.state) {
+          return datum.state;
+        } else {
+          console.warn(`no datum.state`);
+          return false;
+        }
+      }
+    }
+  }
+
+  function updateState(obj, objName, id, newState, storedState) {
     data = JSON.parse(obj);
 
     // iterate through all available data
@@ -372,13 +390,10 @@ if (typeof examActive !== 'undefined' && examActive !== null) {
   }
 
   function observatory(state) {
-    let storedState;
-
-    let course;
-    let data;
+    
 
     // create courses object if none exists
-    if (!courses) {
+    if (!!courses) {
       courses = [];
 
       let obj = {
@@ -392,6 +407,11 @@ if (typeof examActive !== 'undefined' && examActive !== null) {
 
     } else {
       // if we have courses, check to see if there's a stored state value
+      let storedState = getState(courses, courseNum);
+
+      if (storedState !== false) {
+        state = storedState;
+      }
 
       updateState(courses, 'courses', courseNum, state);
 
