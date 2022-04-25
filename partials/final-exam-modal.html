@@ -210,7 +210,7 @@ let gradeObserver;
 let progressStatusCheck; // this is the interval we'll set to track status on this problem
 
 if (examActive) {
-  console.log('[gym]: final exam page');
+  // console.log('[gym]: final exam page');
 
   const examProblem = document.getElementById('exam-problem');
   let courses = retrieve('courses');
@@ -285,7 +285,6 @@ if (examActive) {
       $(".failed_modal").addClass('hidden');
 
       if (state === 'load') {
-        console.log('[gym]: load state only.');
 
         if (!certState) {
           console.log('no certState exists, setting to `update`')
@@ -295,7 +294,7 @@ if (examActive) {
 
         
       } else if (state === 'submit') {
-        console.log('[gym]: submit state. ajax submission occurs here.');
+        console.log('[gym]: submit state. AJAX submission to come...');
 
         // TODO: differentiate between an initial request and update request
 
@@ -340,8 +339,9 @@ if (examActive) {
       gradeObserver.disconnect();
     } else if (state === 'submit') {
       // Consider disconnecting observer here too?
-      console.log('submit state, observer remains active, setting state to null');
-
+      gradeObserver.disconnect();
+      console.log('submit state, disconnecting observer, setting state to null');
+      
       // Set state to null
       updateState(courses, 'courses', courseNum, null);
     }
@@ -458,7 +458,7 @@ if (examActive) {
     let data = JSON.parse(obj);
     let hasId = false;
 
-    console.log(data, data.includes(courseNum));
+    // console.log(data, data.includes(courseNum));
 
     // iterate through all available data
     for (var i = 0; i < data.length; i++) {
@@ -569,9 +569,9 @@ if (examActive) {
     // }
 
     gradeObserver = new MutationObserver((mutations) => {
-      mutations.forEach(function listMutations(mutation) {
-        console.log('[gym] mutation type: ', mutation);
-      });
+      // mutations.forEach(function listMutations(mutation) {
+      //   console.log('[gym] mutation type: ', mutation);
+      // });
 
       // reset interval if we detect a grade change
       if (typeof progressStatusCheck !== 'undefined'){
