@@ -213,6 +213,14 @@ if (examActive) {
   console.log('[gym]: final exam page');
 
   const examProblem = document.getElementById('exam-problem');
+  let courses = retrieve('courses');
+
+  // For testing
+  // const dummyData = [{"id":100},{"id":101},{"id":102},{"id":103},{"id":104},{"id":105},{"id":106},{"id":107},{"id":108},{"id":109}];
+
+  // if (!courses) {
+  //   courses = JSON.stringify(dummyData);
+  // }
 
   // this helper function gets a ton of information about the score for this particular problem
   // based on information embedded on this page
@@ -268,6 +276,8 @@ if (examActive) {
 
     // we have a score, let's do stuff
     if (score >= passingScore) {
+      let certState = getCertState(courses, courseNum);
+      console.log(`certState: ${certState}`);
 
       //we passed! show passing div for the type of course they took
       $(".passed_modal." + courseType).removeClass('hidden');
@@ -276,8 +286,29 @@ if (examActive) {
 
       if (state === 'load') {
         console.log('[gym]: load state only.');
+
+        if (!certState) {
+          console.log('no certState exists, setting to `update`')
+          updateCertState(courses, 'courses', courseNum, 'update');
+          // TODO: under this page load condition, we have to assume the student has previously submitted a passing grade. In other words, if they have exam attempts left, we need set the certState to `update`
+        }
+
+        
       } else if (state === 'submit') {
         console.log('[gym]: submit state. ajax submission occurs here.');
+
+        // TODO: differentiate between an initial request and update request
+
+        if (certState === false || certState === 'request') {
+          // AJAX submission for `request`
+          console.log('[gym]: AJAX submission: request');
+
+          // if the previous certState is request or false, set it to `update`
+          updateCertState(courses, 'courses', courseNum, 'update');
+        } else if (certState === 'update') {
+          // AJAX submission for `update`
+          console.log('[gym]: AJAX submission: update');
+        }
 
         //generate the certificate through the API
         // $.ajax({
@@ -290,7 +321,6 @@ if (examActive) {
         //   }
         // });
       }
-
 
     } else {
       //we failed :( see if we have another attempt
@@ -309,11 +339,11 @@ if (examActive) {
       console.log('load state, disconnecting observer');
       gradeObserver.disconnect();
     } else if (state === 'submit') {
+      // Consider disconnecting observer here too?
       console.log('submit state, observer remains active, setting state to null');
 
-      // TODO: remove state
+      // Set state to null
       updateState(courses, 'courses', courseNum, null);
-
     }
   }
 
@@ -329,23 +359,86 @@ if (examActive) {
     }
   }
 
-  let courses = retrieve('courses');
 
-  // For testing
-  // const dummyData = [{"id":100},{"id":101},{"id":102},{"id":103},{"id":104},{"id":105},{"id":106},{"id":107},{"id":108},{"id":109}];
 
-  // if (!courses) {
-  //   courses = JSON.stringify(dummyData);
-  // }
-
-  function getState(obj, id) {
+  function getCertState(obj, id) {
     data = JSON.parse(obj);
+    let hasId = false;
+
     // iterate through all available data
     for (var i = 0; i < data.length; i++) {
       var datum = data[i];
 
       // if we have a match
       if (datum.id === id) {
+        hasId = true;
+        if (datum.cert) {
+          return datum.cert;
+        } else {
+          console.warn(`no datum.cert`);
+          return false;
+        }
+      }
+    }
+
+    if (!hasId) {
+      console.warn(`no id exists`);
+    }
+  }
+
+  function updateCertState(obj, objName, id, newState) {
+    let data = JSON.parse(obj);
+    let hasId = false;
+
+    // iterate through all available data
+    for (var i = 0; i < data.length; i++) {
+      var datum = data[i];
+
+      // if we have a match
+      if (datum.id === id) {
+        hasId = true;
+        if (datum.cert) {
+          console.log(`datum.cert exists: ${datum.cert}`);
+          // if the stored cert doesn't match the newState, update it
+          if (datum.cert !== newState) {
+            console.warn(`${datum.cert} doesn't match ${newState}! Updating.`);
+            datum.cert = newState;
+          }
+        } else {
+          console.warn(`no datum.cert, creating a new cert`);
+          datum.cert = newState;
+        }
+        
+        console.log(`datum ${datum.id} cert: ${datum.cert}`);
+      }
+    }
+
+    // if there's no matching course number, then add it
+    if (!hasId) {
+      let obj = {
+        "id": courseNum,
+        "cert": newState
+      };
+
+      data.push(obj);
+    }
+
+    // store the revised data
+    store(objName, JSON.stringify(data));
+  }
+
+
+  // Get the current state of the exam. Is it a page load or a refresh after a submit?
+  function getState(obj, id) {
+    data = JSON.parse(obj);
+    let hasId = false;
+    // iterate through all available data
+    for (var i = 0; i < data.length; i++) {
+      var datum = data[i];
+
+      // if we have a match
+      if (datum.id === id) {
+        hasId = true;
         if (datum.state) {
           return datum.state;
         } else {
@@ -354,11 +447,16 @@ if (examActive) {
         }
       }
     }
+
+    if (!hasId) {
+      console.warn(`no id exists`);
+    }
   }
 
+  // push state data to storage
   function updateState(obj, objName, id, newState) {
     let data = JSON.parse(obj);
-    let hasCourse = false;
+    let hasId = false;
 
     console.log(data, data.includes(courseNum));
 
@@ -368,7 +466,7 @@ if (examActive) {
 
       // if we have a match
       if (datum.id === id) {
-        hasCourse = true;
+        hasId = true;
         if (datum.state) {
           // state = storedState = datum.state;
           console.log(`datum.state exists: ${datum.state}`);
@@ -390,10 +488,10 @@ if (examActive) {
     }
 
     // if there's no matching course number, then add it
-    if (!hasCourse) {
+    if (!hasId) {
       let obj = {
         "id": courseNum,
-        "state": 'load'
+        "state": "load"
       };
 
       data.push(obj);
