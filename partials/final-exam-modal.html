@@ -254,6 +254,11 @@ if (examActive) {
   };
 
   function showProblemProgress(state) {
+    if (!state) {
+      // no state defined === load
+      state = 'load';
+    }
+
     let {
       attempts_used,
       attempts_total,
@@ -284,11 +289,12 @@ if (examActive) {
       $(".try_again_modal").addClass('hidden');
       $(".failed_modal").addClass('hidden');
 
+
       if (state === 'load') {
 
         if (!certState) {
           console.log('no certState exists, setting to `update`')
-          updateCertState(courses, 'courses', courseNum, 'update');
+          updateCertState(courses, courseNum, 'update');
           // TODO: under this page load condition, we have to assume the student has previously submitted a passing grade. In other words, if they have exam attempts left, we need set the certState to `update`
         }
 
@@ -303,7 +309,7 @@ if (examActive) {
           console.log('[gym]: AJAX submission: request');
 
           // if the previous certState is request or false, set it to `update`
-          updateCertState(courses, 'courses', courseNum, 'update');
+          updateCertState(courses, courseNum, 'update');
         } else if (certState === 'update') {
           // AJAX submission for `update`
           console.log('[gym]: AJAX submission: update');
@@ -343,7 +349,7 @@ if (examActive) {
       console.log('submit state, disconnecting observer, setting state to null');
       
       // Set state to null
-      updateState(courses, 'courses', courseNum, null);
+      updateState(courses, courseNum, null);
     }
   }
 
@@ -358,8 +364,6 @@ if (examActive) {
       showProblemProgress(state);
     }
   }
-
-
 
   function getCertState(obj, id) {
     data = JSON.parse(obj);
@@ -386,7 +390,7 @@ if (examActive) {
     }
   }
 
-  function updateCertState(obj, objName, id, newState) {
+  function updateCertState(obj, id, newState) {
     let data = JSON.parse(obj);
     let hasId = false;
 
@@ -424,7 +428,7 @@ if (examActive) {
     }
 
     // store the revised data
-    store(objName, JSON.stringify(data));
+    store('courses', JSON.stringify(data));
   }
 
 
@@ -450,11 +454,12 @@ if (examActive) {
 
     if (!hasId) {
       console.warn(`no id exists`);
+      return false;
     }
   }
 
   // push state data to storage
-  function updateState(obj, objName, id, newState) {
+  function updateState(obj, id, newState) {
     let data = JSON.parse(obj);
     let hasId = false;
 
@@ -498,11 +503,11 @@ if (examActive) {
     }
 
     // store the revised data
-    store(objName, JSON.stringify(data));
+    store('courses', JSON.stringify(data));
   }
 
   function observatory(state) {
-    console.log('observatory initiated with state: ', state);
+    let loadState = state;
 
     // create courses object if none exists
     if (!courses) {
@@ -510,63 +515,28 @@ if (examActive) {
 
       let obj = {
         "id": courseNum,
-        "state": state
+        "state": "load"
       };
 
       courses.push(obj);
 
       store('courses', JSON.stringify(courses));
-
-    } else {
-      // if we have courses, check to see if there's a stored state value
-      let storedState = getState(courses, courseNum);
-
-      if (storedState !== false) {
-        state = storedState;
-      }
-
-      updateState(courses, 'courses', courseNum, state);
-
-      // items = JSON.parse(courses);
-
-      // // iterate through all available items
-      // for (var i = 0; i < items.length; i++) {
-      //   var item = items[i];
-
-      //   // if we have a match
-      //   if (item.id === courseNum) {
-      //     if (item.state) {
-      //       state = storedState = item.state;
-      //       console.log(`item has stored state: ${item.state}`);
-      //     } else {
-      //       console.warn(`item.state is null`);
-      //       item.state = state;
-      //     }
-          
-      //     console.log(`item ${item.id} state: ${item.state}`);
-      //   }
-      // }
-
-      // // store the revised data
-      // store('courses', JSON.stringify(items));
-      
     }
 
-    // if (!storedState) {
-    //   console.log('nothing stored. storing: ', state);
+    let storedState = getState(courses, courseNum);
 
-    //   // TODO: store all course data without overwriting anything
-    //   // store('courses', JSON.stringify());
+    if (loadState) {
+      if (storedState === 'submit') {
+        loadState = storedState;
+      } else {
+        loadState = 'load';
+      }
+    } else {
+      // no state passed means it's a load
+      loadState = 'load';
+    }
 
-    //   // store(storedStateName, state);
-    // // } else if (storedState !== state) {
-    // //   console.log('state mismatch! storedState: ', storedState, '\nstate: ', state);
-    // // } else if (storedState === state) {
-    // //   console.log('states match! storedState: ', storedState, '\nstate: ', state);
-    // } else {
-    //   // state = storedState;
-    //   // console.log('state is now: ', state);
-    // }
+    updateState(courses, courseNum, loadState);
 
     gradeObserver = new MutationObserver((mutations) => {
       // mutations.forEach(function listMutations(mutation) {
@@ -578,7 +548,7 @@ if (examActive) {
         clearInterval(progressStatusCheck);
       }
       // set interval on initial page load
-      progressStatusCheck = setInterval(checkStatus(state), 200);
+      progressStatusCheck = setInterval(checkStatus(loadState), 200);
     });
 
     gradeObserver.observe(document.querySelector('.problem-progress'), {childList: true});
@@ -587,7 +557,7 @@ if (examActive) {
   document.getElementById('check-button').addEventListener('click', function submitButtonClick() {
     console.log('[gym] check exam button clicked');
     // store(storedStateName, 'submit');
-    updateState(courses, 'courses', courseNum, 'submit');
+    updateState(courses, courseNum, 'submit');
 
     observatory('submit');
 
@@ -596,6 +566,6 @@ if (examActive) {
 
   }, false);
 
-  observatory('load');
+  observatory();
 }
 </script>
