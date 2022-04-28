@@ -60,12 +60,16 @@ sidebar-generic.html
 
 // main content / adjustment for vertical rule
 
-.white-panel .col-md-9 {
-  padding-top: 1.2em;
-  padding-right: 1.2em;
-  padding-bottom: 2em;
-  margin-top: -1.2em;
-  margin-bottom: -2em;
+.white-panel {
+  overflow: hidden;
+
+.col-md-9 {
+    padding-top: 1.2em;
+    padding-right: 1.2em;
+    padding-bottom: 12em;
+    margin-top: -1.2em;
+    margin-bottom: -12em;
+  }
 }
 
 @include breakpoint(medium, min) {
