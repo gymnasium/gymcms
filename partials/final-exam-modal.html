@@ -215,6 +215,21 @@ if (examActive) {
   const examProblem = document.getElementById('exam-problem');
   let courses = retrieve('courses');
 
+  // create courses object if none exists
+  if (!courses) {
+    console.warn('no courses object exists, creating');
+    courses = [];
+
+    let obj = {
+      "id": courseNum,
+      "state": "load"
+    };
+
+    courses.push(obj);
+
+    store('courses', JSON.stringify(courses));
+  }
+
   // For testing
   // const dummyData = [{"id":100},{"id":101},{"id":102},{"id":103},{"id":104},{"id":105},{"id":106},{"id":107},{"id":108},{"id":109}];
 
@@ -507,36 +522,14 @@ if (examActive) {
   }
 
   function observatory(state) {
-    let loadState = state;
-
-    // create courses object if none exists
-    if (!courses) {
-      courses = [];
-
-      let obj = {
-        "id": courseNum,
-        "state": "load"
-      };
-
-      courses.push(obj);
-
-      store('courses', JSON.stringify(courses));
-    }
 
     let storedState = getState(courses, courseNum);
 
-    if (loadState) {
-      if (storedState === 'submit') {
-        loadState = storedState;
-      } else {
-        loadState = 'load';
-      }
+    if (!storedState) {
+      updateState(courses, courseNum, state);
     } else {
-      // no state passed means it's a load
-      loadState = 'load';
+      state = storedState;
     }
-
-    updateState(courses, courseNum, loadState);
 
     gradeObserver = new MutationObserver((mutations) => {
       // mutations.forEach(function listMutations(mutation) {
@@ -548,7 +541,7 @@ if (examActive) {
         clearInterval(progressStatusCheck);
       }
       // set interval on initial page load
-      progressStatusCheck = setInterval(checkStatus(loadState), 200);
+      progressStatusCheck = setInterval(checkStatus(state), 200);
     });
 
     gradeObserver.observe(document.querySelector('.problem-progress'), {childList: true});
