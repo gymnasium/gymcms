@@ -317,17 +317,19 @@ if (examActive) {
       } else if (state === 'submit') {
         console.log('[gym]: submit state. AJAX submission to come...');
 
-        // TODO: differentiate between an initial request and update request
+        let endpoint;
 
+        // Differentiate between an initial request and update request
         if (certState === false || certState === 'request') {
           // AJAX submission for `request`
           console.log('[gym]: AJAX submission: request');
-
+          endpoint = 'request';
           // if the previous certState is request or false, set it to `update`
           updateCertState(courses, courseNum, 'update');
         } else if (certState === 'update') {
           // AJAX submission for `update`
           console.log('[gym]: AJAX submission: update');
+          endpoint = 'update';
         }
 
         //generate the certificate through the API
@@ -521,6 +523,7 @@ if (examActive) {
     store('courses', JSON.stringify(data));
   }
 
+  // fires each time the page fragment is loaded & reloaded
   function observatory(state) {
 
     let storedState = getState(courses, courseNum);
@@ -547,6 +550,7 @@ if (examActive) {
     gradeObserver.observe(document.querySelector('.problem-progress'), {childList: true});
   }
 
+  // when the submit button is clicked...
   document.getElementById('check-button').addEventListener('click', function submitButtonClick() {
     console.log('[gym] check exam button clicked');
     // store(storedStateName, 'submit');
@@ -559,6 +563,7 @@ if (examActive) {
 
   }, false);
 
+  // initialize observatory on load
   observatory('load');
 }
 </script>
