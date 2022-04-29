@@ -185,10 +185,6 @@
 
 // --- card layout ---
 
-.card-main {
-  padding: 1.2em;
-}
-
 .card-main header,
 .card-cta-button {
   background-color: $gym-white;
@@ -270,6 +266,14 @@ footer.card-cta {
     border-top: 1px solid #dedede;
     margin: 0 -1.2em 1.2em;
   }
+
+    .no-subhead {
+      padding-bottom: 0;
+
+      .full-width {
+        margin-bottom: 0;
+      }
+    }
 }
 
 // --- #jobs ---
