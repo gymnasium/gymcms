@@ -5,20 +5,96 @@
 
 // main content / layout
 .main-content-static {
+
+  a:not([class]) {
+    font: inherit;
+    color: currentColor;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+    margin-bottom: -2px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: currentColor;
+      text-decoration: none;
+      border-bottom: 2px solid currentColor !important;
+    }
+  }
+
+  h1 {
+    margin-top: 15px;
+  }
+
   h2 {
     font-size: 1.2em;
   }
-  
-  p {
-    margin-right: 3.5%;
+
+  h3 {
+    font-size: 1.1em;
   }
-  
+
+  h3:not(#support-now h3) {
+    margin-top: 3rem;
+  }
+
+  p:not(p[class]),
+  #support-now {
+    max-width: 80rem;
+  }
+
   p.hero-text {
     font: normal 1.6em/1.4 $gym-font-stack;
     word-spacing: 0.032em;
-    margin: 0.67em 0;
+    margin: 0.67em 3.5% 0.67em 0;
   }
-  
+
+  li {
+    margin-top: 0.6rem;
+  }
+
+  img {
+    color: inherit;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  #support-now {
+    margin-top: 3.5rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px dashed $gym-gray;
+    margin-bottom: 4rem;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-size: 1.4em;
+      margin-top: 2rem;
+    }
+  }
+
+  #causes-we-care-about {
+
+    & > div {
+      max-width: 60rem;
+      columns: 24rem 2;
+      gap: 4rem;
+      column-fill: balance;
+    }
+
+    section {
+      display: inline-block;
+      width: 100%;
+      break-inside: avoid;
+    }
+
+  }
+
   // main content / video
   .w-75 {
     max-width: 36em;
