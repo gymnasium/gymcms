@@ -210,7 +210,7 @@ let gradeObserver;
 let progressStatusCheck; // this is the interval we'll set to track status on this problem
 
 if (examActive) {
-  // console.log('[gym]: final exam page');
+  // console.log('[gym] final exam page');
 
   const examProblem = document.getElementById('exam-problem');
   let courses = retrieve('courses');
@@ -292,56 +292,73 @@ if (examActive) {
     // update exam score span
     $('.exam-score-container').text(score);
 
-    console.log('[gym]: state: ', state);
+    console.log('[gym] state: ', state);
 
     // we have a score, let's do stuff
     if (score >= passingScore) {
       let certState = getCertState(courses, courseNum);
-      console.log(`certState: ${certState}`);
+      
+      // console.log(`certState: ${certState}`);
 
       //we passed! show passing div for the type of course they took
+      // TODO: convert to native JS
       $(".passed_modal." + courseType).removeClass('hidden');
       $(".try_again_modal").addClass('hidden');
       $(".failed_modal").addClass('hidden');
 
-
       if (state === 'load') {
-
         if (!certState) {
           console.log('no certState exists, setting to `update`')
           updateCertState(courses, courseNum, 'update');
           // TODO: under this page load condition, we have to assume the student has previously submitted a passing grade. In other words, if they have exam attempts left, we need set the certState to `update`
         }
-
-        
       } else if (state === 'submit') {
-        console.log('[gym]: submit state. AJAX submission to come...');
 
-        let endpoint;
-
-        // Differentiate between an initial request and update request
-        if (certState === false || certState === 'request') {
-          // AJAX submission for `request`
-          console.log('[gym]: AJAX submission: request');
-          endpoint = 'request';
-          // if the previous certState is request or false, set it to `update`
-          updateCertState(courses, courseNum, 'update');
-        } else if (certState === 'update') {
-          // AJAX submission for `update`
-          console.log('[gym]: AJAX submission: update');
-          endpoint = 'update';
+        // if certState isn't set, set it to `request`
+        if (certState === false) {
+          certState = 'request';
         }
 
-        //generate the certificate through the API
-        // $.ajax({
-        //   type:     'POST',
-        //   url:      '/accredible/request_certificate',
-        //   async:     false,
-        //   data:     {'course_id': window.$$course_id},
-        //   success:  function(data) {
-        //     // console.log('[gym] certificate request successful: ', data);
-        //   }
-        // });
+        // 1st pass is a request, subsequent passes are always an update
+        if (certState === 'request') {
+          updateCertState(courses, courseNum, 'update');
+        }
+
+        // define endpoint based on certState
+        const endpoint = '/accredible/'+ certState + '_certificate';
+
+        console.log('[gym] submitting to: ', endpoint);
+
+        // generate the certificate through the API
+        // TODO: convert to native JS
+        $.ajax({
+          type:     'POST',
+          url:      endpoint,
+          async:    false,
+          data:     {'course_id': window.$$course_id},
+          success:  function(data) {
+            console.log('[gym] certificate request successful: ', data);
+          },
+          error: function (jqXHR, exception) {
+            let msg;
+            if (jqXHR.status === 0) {
+              msg = 'No network connection!';
+            } else if (jqXHR.status == 404) {
+              msg = '404 error!';
+            } else if (jqXHR.status == 500) {
+              msg = '500 error!';
+            } else if (exception === 'parsererror') {
+              msg = 'Requested JSON parse failed.';
+            } else if (exception === 'timeout') {
+              msg = 'Timeout error!';
+            } else if (exception === 'abort') {
+              msg = 'AJAX request aborted!';
+            } else {
+              msg = 'Uncaught error: ', jqXHR.responseText;
+            }
+            console.warn(msg);
+          }
+        });
       }
 
     } else {
@@ -365,7 +382,7 @@ if (examActive) {
       gradeObserver.disconnect();
       console.log('submit state, disconnecting observer, setting state to null');
       
-      // Set state to null
+      // Once we're done with the submit, set state to null
       updateState(courses, courseNum, null);
     }
   }
