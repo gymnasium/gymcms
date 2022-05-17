@@ -3,7 +3,7 @@ course_ID: GYM-005
 title: "Introducing Sketch for UX and UI"
 date: 2019-10-28T00:00:00-04:00
 course_type: short
-live: true
+live: false
 url: /courses/GYM/005/0/about
 poster_art: /img/course-artwork/png/gym-005.png
 topic: "Prototyping"
