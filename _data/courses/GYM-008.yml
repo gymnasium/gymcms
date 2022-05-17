@@ -3,7 +3,7 @@ course_ID: GYM-008
 title: "Advanced Rapid Prototyping with Axure"
 date: 2019-10-28T00:00:00-04:00
 course_type: short
-live: true
+live: false
 url: /courses/GYM/008/0/about
 poster_art: /img/course-artwork/png/gym-008.png
 topic: "Prototyping"
