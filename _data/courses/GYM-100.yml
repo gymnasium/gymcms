@@ -10,7 +10,8 @@ retired_message:
 url: /courses/GYM/100/0/about
 poster_art: /img/course-artwork/png/gym-100.png
 topic: "Design & Development"
-short_description: "This course has been retired. Learn HTML and CSS and become the Web Designer that Developers love. Professional design experience is a prerequisite, but no prior web or coding experience is necessary."
+short_description: "This course has been retired."
+short_description_orig: "Learn HTML and CSS and become the Web Designer that Developers love. Professional design experience is a prerequisite, but no prior web or coding experience is necessary."
 instructor: jwebb
 skills:
   - label: "HTML basics"
