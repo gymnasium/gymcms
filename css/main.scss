@@ -2300,9 +2300,21 @@ TODO: migrate discussion CSS out of theme
 
 // Dashboard
 
-#dashboard-main .archived {
-  font-size: 1.45em;
-  color: $gym-white;
+#dashboard-main {
+
+  .archived {
+    font-size: 1.45em;
+    color: $gym-white;
+  }
+
+  .course-retired {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.3225em;
+    color: $gym-white;
+    margin: 1.2rem 0 0 0;
+  }
+
 }
 
 // Enrollment disabled
