@@ -2282,12 +2282,13 @@ TODO: migrate discussion CSS out of theme
 // Retired course announcement(s)
 
 .message-banner {
-  color: $gym-black;
-  background-color: $gym-white;
-  border-bottom: 1px solid $gym-gray;
 
   .announcement {
-    padding: 2rem;
+    color: $gym-black;
+    background-color: $gym-white;
+    border-bottom: 1px solid $gym-gray;
+    padding: 2rem 0;
+  }
 
     p {
       font-size: 1.3225em;
