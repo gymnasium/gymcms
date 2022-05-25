@@ -2279,96 +2279,28 @@ TODO: migrate discussion CSS out of theme
   }
 }
 
-// Retired (interim) message
+// Retired course announcement(s)
 
-// Catalog, About, Info/Courseware, Dashboard pages
+.message-banner {
 
-.retired-message .course-description p:before,
-.hero-banner #course-image[src*="gym-100"] + *:before,
-#course-title-header [src*="gym-100"][hidden] + *:before,
-#dashboard-main #course-header-100 h1 + *:before {
-  display: block;
-  font-weight: bold;
-  line-height: inherit;
-  white-space: pre-wrap;
-  color: $gym-black;
-  background-color: #fef7db;
-  padding: 1.675rem 2rem 2rem;
-  border: 1px solid $gym-black;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
+  .announcement {
+    color: $gym-black;
+    background-color: $gym-white;
+    border: 1px solid $gym-black;
+    border-top: 0 none;
+    padding: 2rem;
 
-// About, Info/Courseware, Dashboard pages
-
-.hero-banner #course-image[src*="gym-100"] + *:before,
-#course-title-header [src*="gym-100"][hidden] + *:before,
-#dashboard-main #course-header-100 h1 + *:before {
-  font-size: 1.3225em;
-}
-
-// Info/Courseware, Dashboard pages
-
-#course-title-header [src*="gym-100"][hidden] + *:before,
-#dashboard-main #course-header-100 h1 + *:before {
-  position: relative;
-  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
-}
-
-// About, Info/Courseware pages
-
-.hero-banner #course-image[src*="gym-100"] + *:before,
-#course-title-header [src*="gym-100"][hidden] + *:before {
-  padding: 2rem;
-  border-top: 0;
-  margin: 0;
-}
-
-.hero-banner #course-image[src*="gym-100"]:not([hidden]) {
-  position: relative;
-  top: 9em;
-  margin-bottom: 9em;
-}
-
-@media (min-width: 30em) {
-
-  .hero-banner #course-image[src*="gym-100"]:not([hidden]) {
-    top: 7em;
-    margin-bottom: 7em;
+    p {
+      font-size: 1.3225em;
+      font-weight: bold;
+      line-height: inherit;
+      margin-bottom: 0;
+    }
   }
 
-}
-
-@media (min-width: 48em) {
-
-  .hero-banner #course-image[src*="gym-100"]:not([hidden]) {
-    top: 5em;
-    margin-bottom: 5em;
-  }
-
-}
-
-// Catalog
-
-.retired-message[data-course-id="100"] .course-description p:before {
-  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
-}
-
-// About
-
-.hero-banner #course-image[src*="gym-100"] + *:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  content: "{{ site.data.courses.GYM-100.retired_message[2] }}";
 }
 
 // Dashboard
-
-#dashboard-main #course-header-100 h1 + *:before {
-  margin: 1em 1em 0;
-}
 
 #dashboard-main .archived {
   font-size: 1.45em;
