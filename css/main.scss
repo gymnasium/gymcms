@@ -2282,6 +2282,7 @@ TODO: migrate discussion CSS out of theme
 // Retired course announcement(s)
 
 .message-banner {
+  padding: 0;
 
   .announcement {
     color: $gym-black;
@@ -2295,6 +2296,7 @@ TODO: migrate discussion CSS out of theme
       line-height: inherit;
       margin-bottom: 0;
     }
+
   }
 
 }
