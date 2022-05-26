@@ -2322,17 +2322,16 @@ TODO: migrate discussion CSS out of theme
   font-weight: bold;
   font-size: 1.3225em;
   color: $gym-black;
-  background-color: #fef7db;
+  background-color: $gym-white;
   padding: 1em;
   border: 1px solid $gym-black;
-  margin: 1em 0 0;
 }
 
 @include breakpoint(medium, min) {
 
   .course-metabar .register.disabled {
     position: relative;
-    left: 6%;
+    left: 5%;
     margin: -0.25rem -3em 0;
   }
 
@@ -2341,7 +2340,7 @@ TODO: migrate discussion CSS out of theme
 @include breakpoint(large, min) {
 
   .course-metabar .register.disabled {
-    left: 16%;
+    left: 1em;
   }
 
 }
