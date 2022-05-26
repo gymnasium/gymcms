@@ -10,12 +10,12 @@ topic: "Content Creation"
 short_description: "Learn the design and visual principles needed to create effective information graphics and data visualizations."
 instructor: groberts
 skills:
- - label: "Visual design principles"
- - label: "Interactive design principles"
- - label: "Mapping and charting tools"
- - label: "And more…"
+  - label: "Visual design principles"
+  - label: "Interactive design principles"
+  - label: "Mapping and charting tools"
+  - label: "And more…"
 audience:
- - label: "Designers"
- - label: "Creatives"
- - label: "Data scientists"
+  - label: "Designers"
+  - label: "Creatives"
+  - label: "Data scientists"
 ---
