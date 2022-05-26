@@ -4,6 +4,8 @@ title: "Introducing Sketch for UX and UI"
 date: 2019-10-28T00:00:00-04:00
 course_type: short
 live: false
+retired_message:
+  1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a badge for this course — but you can still access the lessons."
 url: /courses/GYM/005/0/about
 poster_art: /img/course-artwork/png/gym-005.png
 topic: "Prototyping"
