@@ -5,7 +5,7 @@ date: 2022-05-27T00:00:00-04:00
 course_type: full
 live: false
 retired_message:
-  1: "<strong>This course has been retired.</strong>"
+  1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a certificate for this course — but you can still view the lessons."
 url: /courses/GYM/101/0/about
 poster_art: /img/course-artwork/png/gym-101.png
 topic: "Design & Development"
