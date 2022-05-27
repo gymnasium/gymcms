@@ -16,7 +16,7 @@ skills:
   - label: "Installing a Node.js server"
   - label: "Dynamic rendering with the Express view engine"
   - label: "Working with JSON data"
-  - label: "And more"
+  - label: "And more…"
 audience:
   - label: "Front-End Developers"
   - label: "Back-End Developers"
