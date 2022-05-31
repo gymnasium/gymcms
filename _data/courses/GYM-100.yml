@@ -5,12 +5,13 @@ date: 2019-10-28T00:00:00-04:00
 course_type: full
 live: false
 retired_message:
-  1: "This course is retiring on March 25, 2022.<br> All coursework needs to be completed by that date."
-  2: "This course has been retired."
+  1: "<strong>This course is retiring on March 25, 2022.</strong> All coursework needs to be completed by that date."
+  2: "<strong>This course has been retired.</strong>"
 url: /courses/GYM/100/0/about
 poster_art: /img/course-artwork/png/gym-100.png
 topic: "Design & Development"
-short_description: "This course has been retired. Learn HTML and CSS and become the Web Designer that Developers love. Professional design experience is a prerequisite, but no prior web or coding experience is necessary."
+short_description: "This course has been retired."
+short_description_orig: "Learn HTML and CSS and become the Web Designer that Developers love. Professional design experience is a prerequisite, but no prior web or coding experience is necessary."
 instructor: jwebb
 skills:
   - label: "HTML basics"
