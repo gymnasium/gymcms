@@ -2297,6 +2297,13 @@ TODO: migrate discussion CSS out of theme
 
     @include gym-text-links;
 
+    @include breakpoint(large, min) {
+      .text-wrap:before {
+        content: "\a";
+        white-space: pre;
+      }
+    }
+
   }
 
 }
