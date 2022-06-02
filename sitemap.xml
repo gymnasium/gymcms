@@ -116,7 +116,7 @@ permalink: sitemap.xml
 </url>
 
 <url>
-  <loc>https://thegymnasium.com/privacy</loc>
+  <loc>https://thegymnasium.com/privacy-policy</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.3</priority>
