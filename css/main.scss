@@ -2288,13 +2288,23 @@ TODO: migrate discussion CSS out of theme
     background-color: $gym-white;
     border-bottom: 1px solid $gym-gray;
     padding: 2rem 0;
-  }
 
     p {
       font-size: 1.3225em;
       line-height: inherit;
       margin-bottom: 0;
     }
+
+    @include gym-text-links;
+
+    @include breakpoint(large, min) {
+      .text-wrap:before {
+        content: "\a";
+        white-space: pre;
+      }
+    }
+
+  }
 
 }
 
@@ -2355,22 +2365,7 @@ TODO: migrate discussion CSS out of theme
     margin-top: 5px;
   }
 
-  a:not([class]) {
-    font: inherit;
-    color: currentColor;
-    text-decoration: none;
-    padding-bottom: 2px;
-    border-bottom: 1px solid currentColor;
-    margin-bottom: -2px;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: currentColor;
-      text-decoration: none;
-      border-bottom: 2px solid currentColor !important;
-    }
-  }
+  @include gym-text-links;
 
   & .msg-content {
     @include breakpoint(large, min) {
@@ -2396,22 +2391,7 @@ aside.system-status {
     margin-bottom: 0;
   }
 
-  a:not([class]) {
-    font: inherit;
-    color: currentColor;
-    text-decoration: none;
-    padding-bottom: 2px;
-    border-bottom: 1px solid currentColor;
-    margin-bottom: -2px;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: currentColor;
-      text-decoration: none;
-      border-bottom: 2px solid currentColor !important;
-    }
-  }
+  @include gym-text-links;
 
 // Ukraine Relief related theme
 
