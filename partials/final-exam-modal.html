@@ -336,7 +336,8 @@ if (examActive) {
 
             // 1st successful pass is a request, subsequent passes are always an update
             if (certState === 'request') {
-              updateCertState(courses, courseNum, 'update');
+              console.log('[gym] this is where we change the request type to `update` (currently disabled)');
+              // updateCertState(courses, courseNum, 'update');
             }
           },
           error: function (jqXHR, exception) {
