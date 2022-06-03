@@ -308,8 +308,8 @@ if (examActive) {
 
       if (state === 'load') {
         if (!certState) {
-          console.log('no certState exists, setting to `update`')
-          updateCertState(courses, courseNum, 'update');
+          // console.log('no certState exists, setting to `update`')
+          // updateCertState(courses, courseNum, 'update');
           // TODO: under this page load condition, we have to assume the student has previously submitted a passing grade. In other words, if they have exam attempts left, we need set the certState to `update`
         }
       } else if (state === 'submit') {
