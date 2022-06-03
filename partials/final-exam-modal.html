@@ -334,6 +334,10 @@ if (examActive) {
           success:  function(data) {
             console.log('[gym] certificate request successful: ', data);
 
+            if (data.add_status === 'downloadable') {
+              console.log('[gym] certificate exists: ', data.add_status);
+            }
+
             // 1st successful pass is a request, subsequent passes are always an update
             if (certState === 'request') {
               console.log('[gym] this is where we change the request type to `update` (currently disabled)');
