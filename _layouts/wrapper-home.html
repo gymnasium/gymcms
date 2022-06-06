@@ -6,7 +6,7 @@
   {%- include partials/test-top.html -%}
 {%- endif -%}
 
-<div class="home">
+<div id="main" class="home">
 
   {%- if hero.live_coding == true -%}
     <!-- Display live coding on both hero includes -->
@@ -56,7 +56,7 @@
   </section>
   
   {%- include home/as-seen-in.html -%}
-</div><!-- .home -->
+</div><!-- #main.home -->
 
 {%- if jekyll.environment == "local" -%}
   {%- include partials/test-bottom.html -%}
