@@ -1,0 +1,3147 @@
+<link rel="preload" href="{{ site.url }}/dev/prototypes/courses/version-3/css/main.css?{{ site.time | date:'%s' }}" as="style">
+<link rel="stylesheet" href="{{ site.url }}/dev/prototypes/courses/version-3/css/main.css?{{ site.time | date:'%s' }}">
+<script defer src="{{ site.url }}/dev/prototypes/courses/version-3/js/main.js?{{ site.time | date:'%s' }}"></script>
+
+<div id="comp">
+
+<header>
+  <h1>Courses</h1>
+  <p>Learn from industry experts at your own pace — for free.</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About Our Courses</a></li>
+    <li><a href="#recommended">Recommended Courses</a></li>
+    <li><a href="#courses">View All Courses</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+  <header>
+    <h2>About Our Courses</h2>
+    <p>Free, self-paced video lesson-based courses and tutorials.</p>
+  </header>
+  <details>
+    <summary>
+      <b>Learn More</b>
+    </summary>
+    <ul class="cols">
+      <li>
+        <h3>Free Online Courses</h3>
+        <dl>
+          <dt>Our Courses</dt>
+          <dd>Full and short courses require registration: <a href=""><b>Register</b></a> or <a href=""><b>Sign In</b></a></dd>
+          <dd>Tutorials do not require registration: <a href=""><b>View Tutorials</b></a></dd>
+          <dt>Our Instructors</dt>
+          <dd>Industry experts</dd>
+        </dl>
+      </li>
+      <li>
+        <h3>Practical Skills</h3>
+        <dl>
+          <dt>Categories</dt>
+          <dd>Design</dd>
+          <dd>Development</dd>
+          <dd>UX</dd>
+          <dd>Prototyping</dd>
+          <dd>Accessibility</dd>
+          <dd>Career Skills</dd>
+        </dl>
+      </li>
+      <li>
+        <h3>Formats</h3>
+        <dl>
+          <dt>Full Courses</dt>
+          <dd>Learn new skills in a few days.</dd>
+          <dd>Earn a certificate, shareable on LinkedIn.</dd>
+          <dd>Full Courses include a series of video lessons, optional quizzes and assignments, and a final exam and certificate if you pass.</dd>
+          <dd>Course forum, share work and get feedback from students and teaching assistants.</dd>
+          <dt>Short Courses</dt>
+          <dd>Learn new skills in a few hours.</dd>
+          <dd>Earn a badge, shareable on LinkedIn.</dd>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+          <dt>Tutorials</dt>
+          <dd>Learn new skills in 5 minutes.</dd>
+        </dl>
+      </li>
+    </ul>
+  </details>
+</section>
+
+<section id="recommended">
+  <header>
+    <h2>Recommended Courses</h2>
+    <p>Get started with the fundamentals or what’s popular and new.</p>
+  </header>
+  <label for="select-category"><b>Categories</b></label>
+  <select name="categories" id="select-category">
+    <option value="design" selected>Design</option>
+    <option value="development">Development</option>
+    <option value="ux">UX</option>
+    <option value="prototyping">Prototyping</option>
+    <option value="accessibility">Accessibility</option>
+    <option value="career-skills">Career Skills</option>
+  </select>
+  <ul class="cols">
+    <li>
+      <article>
+        <b class="all-caps">Where to Start</b>
+        <h2><a href="">Information Design & Visualization Fundamentals</a></h2>
+        <p>Learn the design and visual principles needed to create effective information graphics and data visualizations.</p>
+        <a class="button" href=""><b>Learn More</b></a>
+      </article>
+    </li>
+    <li>
+      <article>
+        <b class="all-caps">New</b>
+        <h2><a href="">Improving Accessibility With Color Contrast</a></h2>
+        <p>Discover how to identify whether the colors on your website have sufficient contrast between text color and its background.</p>
+        <a class="button" href=""><b>Learn More</b></a>
+      </article>
+    </li>
+    <li>
+      <article>
+        <b class="all-caps">Popular</b>
+        <h2><a href="">Design Systems for Designers</a></h2>
+        <p>Learn how to incorporate pattern libraries and design systems into your workflow. </p>
+        <a class="button" href=""><b>Learn More</b></a>
+      </article>
+    </li>
+  </ul>
+  </details>
+</section>
+
+<div class="topic" id="design">
+<div class="topic" id="development">
+<div class="topic" id="ux">
+<div class="topic" id="prototyping">
+<div class="topic" id="accessibility">
+<div class="topic" id="career-skills">
+<div class="topic" id="all">
+<div class="format" id="full">
+<div class="format" id="short">
+<div class="format" id="tutorial">
+
+<main id="courses">
+
+<header>
+  <div>
+    <h2 class="">View All Courses</h2>
+    <p>Choose from free full and short courses to 5-minute tutorials.</p>
+    <nav>
+      <div>
+        <h2>Category</h2>
+        <ul>
+          <li>
+            <a href="#all">All Categories</a>
+          </li>
+          <li>
+            <a href="#design">Design</a>
+          </li>
+          <li>
+            <a href="#development">Development</a>
+          </li>
+          <li>
+            <a href="#ux">UX</a>
+          </li>
+          <li>
+            <a href="#prototyping">Prototyping</a>
+          </li>
+          <li>
+            <a href="#accessibility">Accessibility</a>
+          </li>
+          <li>
+            <a href="#career-skills">Career Skills</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2>Format</h2>
+        <ul role="list">
+          <li>
+            <label for="toggle-full-ui" class="label-toggle"><b>Full Course</b></label>
+            <input type="checkbox" value="selected" class="input-toggle" id="toggle-full-ui" checked>
+            <p>Learn new skills in a few days.</p>
+          </li>
+          <li>
+            <label for="toggle-short-ui" class="label-toggle"><b>Short Course</b></label>
+            <input type="checkbox" value="selected" class="input-toggle" id="toggle-short-ui" checked>
+            <p>Learn new skills in a few hours.</p>
+          </li>
+          <li>
+            <label for="toggle-tutorial-ui" class="label-toggle"><b>Tutorial</b></label>
+            <input type="checkbox" value="selected" class="input-toggle" id="toggle-tutorial-ui" checked>
+            <p>Learn new skills in 5 minutes.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="sort-by">
+        <h2><label for="select-layout" class="select-label">Sort by</label></h2>
+        <select name="sorts" id="select-sort" autocomplete="off">
+          <option value="newest" selected>Newest to Oldest</option>
+          <option value="oldest" >Oldest to Newest</option>
+          <option value="beginner">Easy to Difficult</option>
+          <option value="intermediate">Difficult to Easy</option>
+        </select>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<label for="toggle-full" class="label-toggle"><b>Full Course</b></label>
+<input type="checkbox" value="selected" class="input-toggle" id="toggle-full" checked>
+
+<label for="toggle-short" class="label-toggle"><b>Short Course</b></label>
+<input type="checkbox" value="selected" class="input-toggle" id="toggle-short" checked>
+
+<label for="toggle-tutorial" class="label-toggle"><b>Tutorial</b></label>
+<input type="checkbox" value="selected" class="input-toggle" id="toggle-tutorial" checked>
+
+<ul class="courses" id="catalog" role="list">
+  <li>
+    <ul role="list">
+      <li class="message view-all">
+        <header>
+          <h2>
+            Hmm… Let’s Find You A Course
+          </h2>
+          <a class="button courses-refresh" href="#all"><b>View All Categories</b></a>
+        </header>
+      </li>
+    </ul>
+  </li>
+  <li class="full">
+    <header>
+      <h2>Full Courses</h2>
+    </header>
+    <ul class="list" role="list">
+<!-- FULL COURSES -->
+<!-- GYM-109 -->
+  <li class="full development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/course-v1:GYM+109+0/about">Responsive Web Design Fundamentals</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        This is a hands-on, code-intensive course on how to build high-performance, responsive websites that look great across multiple screen sizes and devices.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+109+0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+109+0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Strategic thinking about responsive process</dd>
+          <dd>Page layout structure with HTML & CSS</dd>
+          <dd>Responsive typography and image techniques</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Front-End Developers</dd>
+          <dd>Designers with coding chops</dd>
+          <dd>JavaScript Developers</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>4 Hours</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 16 Hours</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Certificate</b></dt>
+          <dd>Full Courses include a series of video lessons, optional quizzes and assignments, and a final exam and certificate if you pass.</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+109+0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      full
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <p class="rank">
+      3
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="development">Development</li>
+      <li class="html">HTML</li>
+      <li class="css">CSS</li>
+      <li class="javascript">JavaScript</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-108 -->
+  <li class="full development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/course-v1:GYM+108+0/about">JavaScript and jQuery Survival Guide</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        This course will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+108+0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+108+0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Developer Tools</dd>
+          <dd>Events and Event Handlers</dd>
+          <dd>Manipulating HTML & CSS With jQuery</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Front-End Developers</dd>
+          <dd>JavaScript Developers</dd>
+          <dd>Full Stack Developers</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Certificate</b></dt>
+          <dd>Full Courses include a series of video lessons, optional quizzes and assignments, and a final exam and certificate if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>3 Hours</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 12 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+108+0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      full
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <p class="rank">
+      7
+    </p>
+    <ul class="topics">
+      <li class="development">Development</li>
+      <li class="javascript">JavaScript</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-107 -->
+  <li class="full development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/GYM/107/0/about">Modern Web Design</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        This course will prepare you to be a front-end developer by walking you through the process of building a simple, responsive website using HTML, CSS, and JavaScript.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/107/0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/107/0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>HTML Markup</dd>
+          <dd>Using CSS as a design tool</dd>
+          <dd>Adding interactivity with JavaScript</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Aspiring Front-End Developers</dd>
+          <dd>Designers</dd>
+          <dd>Creatives</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Certificate</b></dt>
+          <dd>Full Courses include a series of video lessons, optional quizzes and assignments, and a final exam and certificate if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>5 Hours</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 22 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/GYM/107/0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      full
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <p class="rank">
+      2
+    </p>
+    <ul class="topics">
+      <li class="development">Development</li>
+      <li class="design">Design</li>
+      <li class="html">HTML</li>
+      <li class="css">CSS</li>
+      <li class="javascript">JavaScript</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-106 -->
+  <li class="full design beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/GYM/106/0/about">Information Design & Visualization Fundamentals</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn the design and visual principles needed to create effective information graphics and data visualizations.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/106/0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/106/0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Visual design principles</dd>
+          <dd>Interactive design principles</dd>
+          <dd>Mapping and charting tools</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Designers</dd>
+          <dd>Creatives</dd>
+          <dd>Data scientists</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Certificate</b></dt>
+          <dd>Full Courses include a series of video lessons, optional quizzes and assignments, and a final exam and certificate if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>2.5 Hours</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 17 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/GYM/106/0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      full
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <p class="rank">
+      5
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="data-visualization">Data Visualization</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-104 -->
+  <li class="full development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/GYM/104/0/about">JavaScript Foundations</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn the fundamentals of programming with JavaScript and get started on the road to its mastery.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/104/0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/104/0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>JavaScript</dd>
+          <dd>Programming basics</dd>
+          <dd>The interaction between JavaScript and HTML</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Designers with coding chops</dd>
+          <dd>Front-End Developers</dd>
+          <dd>jQuery Developers</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Certificate</b></dt>
+          <dd>Full Courses include a series of video lessons, optional quizzes and assignments, and a final exam and certificate if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>5 Hours</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 21 Hour</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/GYM/104/0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      full
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <p class="rank">
+      4
+    </p>
+    <ul class="topics">
+      <li class="development">Development</li>
+      <li class="javascript">JavaScript</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-103 -->
+  <li class="full ux beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/GYM/103/0/about">UX Fundamentals</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to apply user-centered design principles to improve your website and mobile app design. A must-take course for anyone working in design and development.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/103/0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/103/0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>User research</dd>
+          <dd>Wireframing and prototyping</dd>
+          <dd>User testing</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Web Designers</dd>
+          <dd>Creatives</dd>
+          <dd>UX Designers</dd>
+          <dd>Anyone who works on UX projects</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Certificate</b></dt>
+          <dd>Full Courses include a series of video lessons, optional quizzes and assignments, and a final exam and certificate if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>3 Hours</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 12 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/GYM/103/0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      full
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <p class="rank">
+      1
+    </p>
+    <ul class="topics">
+      <li class="ux">UX</li>
+      <li class="prototyping">Prototyping</a></li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-102 -->
+  <li class="full development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/GYM/102/0/about">jQuery Building Blocks</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        This full course will teach you 5 easy techniques for adding interactivity to your web pages. By the end of the course, you’ll be able to add features and style to your web pages, from simple animations to complex dynamic content.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/102/0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/102/0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Navigation, animation, and server interaction</dd>
+          <dd>JavaScript</dd>
+          <dd>HTML/CSS</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Designers with coding chops</dd>
+          <dd>Front-End Developers</dd>
+          <dd>JavaScript Developers</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Certificate</b></dt>
+          <dd>Full Courses include a series of video lessons, optional quizzes and assignments, and a final exam and certificate if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>3.5 Hours</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 17 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/GYM/102/0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      full
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <p class="rank">
+      6
+    </p>
+    <ul class="topics">
+      <li class="development">Development</li>
+      <li class="javascript">JavaScript</li>
+    </ul>
+  </aside>
+  </li>
+  <li class="message sans-course">
+    <header>
+      <h2>
+        No Full Course, Try a Short Course or Tutorial Instead
+      </h2>
+      <!-- <a class="button courses-refresh" href="#all"><b>View All Categories</b></a> -->
+    </header>
+  </li>
+    </ul>
+  </li>
+  <li class="short">
+    <header>
+      <h2>Short Courses</h2>
+    </header>
+    <ul class="list" role="list">
+<!-- GYM SHORTS -->
+<!-- GYM-020 -->
+  <li class="short design development-? beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/course-v1:GYM+020+0/about">Design Systems for Product Managers</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how pattern libraries and design systems can change and improve the work your teams do on a daily basis.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+020+0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+020+0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Improving team collaboration</dd>
+          <dd>Design thinking</dd>
+          <dd>Developing strategies for better digital products</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Product managers and/or product owners</dd>
+          <dd>Anyone managing a design systems initiative</dd>
+          <dd>Anyone interested in design systems work</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>1 Hour</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 1.5 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+020+0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="design-systems">Design Systems</li>
+      <li class="ux">UX</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-019 -->
+  <li class="short development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/course-v1:GYM+019+0/about">Design Systems for Developers</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to use your development skills to help build and support an effective and thriving design system.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+019+0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+019+0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Organizing and naming best practices</dd>
+          <dd>Working with design tokens</dd>
+          <dd>Pattern library versioning</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Front-end developers</dd>
+          <dd>Teams beginning the design systems process</dd>
+          <dd>Designers with coding skills</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>1 Hour</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 1.5 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+019+0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="development">Development</li>
+      <li class="design-systems">Design Systems</li>
+      <li class="design">Design</li>
+      <li class="ux">UX</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-018 -->
+  <li class="short design beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/course-v1:GYM+018+0/about">Design Systems for Designers</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to incorporate pattern libraries and design systems into your workflow.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+018+0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+018+0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Working with pattern libraries</dd>
+          <dd>User experience design</dd>
+          <dd>Design tokens</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Web and UX designers</dd>
+          <dd>Creative directors</dd>
+          <dd>Teams that are new to the design systems process</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>1 Hour</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 1.5 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+018+0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="design-systems">Design Systems</li>
+      <li class="ux">UX</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-017 -->
+  <li class="short design development-? ux-? beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/course-v1:GYM+017+0/about">Design Systems for Everyone</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to effectively integrate pattern libraries and design systems into your organization’s workflow.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+017+0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+017+0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Design Thinking</dd>
+          <dd>User Experience Design</dd>
+          <dd>Working with pattern libraries</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Anyone interested in design systems</dd>
+          <dd>Designers, developers, and product managers</dd>
+          <dd>Teams that are new to the design systems process</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>0.75 Hour</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 1 Hour</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+017+0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="design-systems">Design Systems</li>
+      <li class="ux">UX</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-016 -->
+  <li class="short development accessibility intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/course-v1:GYM+016+0/about">Designing Accessible and Responsive Websites</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn accessible and responsive design best practices to help make a more user-friendly web for everyone.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+016+0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+016+0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Accessibility</dd>
+          <dd>Responsive design</dd>
+          <dd>Intermediate HTML/CSS</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Anyone interested in building more accessible websites</dd>
+          <dd>Web designers with coding chops</dd>
+          <dd>Front-end developers</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>1 Hour</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 2 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+016+0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-015 -->
+  <li class="short ux prototyping design-? beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/course-v1:GYM+015+0/about">Prototyping for Digital Products and Websites</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to use prototypes as a communication and collaboration device for building digital products and websites.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+015+0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+015+0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>How to choose the right method of prototyping</dd>
+          <dd>How to articulate the benefits of prototyping</dd>
+          <dd>How to evaluate prototyping services and software</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Anyone interested in building website, mobile, or web app prototypes</dd>
+          <dd>Aspiring UX and/or UI designers</dd>
+          <dd>Web designers and developers</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>1 Hour</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 1.5 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+015+0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="ux">UX</li>
+      <li class="prototyping">Prototyping</a></li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-014 -->
+  <li class="short development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/course-v1:GYM+014+0/about">Working with Atomic Design and Pattern Lab</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to use Atomic Design methodology within Pattern Lab in order to create reusable user interface components.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+014+0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+014+0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Website prototyping</dd>
+          <dd>Designing with dynamic data</dd>
+          <dd>Structuring a design system</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Anyone interested in building design systems</dd>
+          <dd>Anyone interested in building website or web app prototypes</dd>
+          <dd>UX designers with coding chops</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>2 Hours</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 4 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+014+0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="development">Development</li>
+      <li class="design-systems">Design Systems</li>
+      <li class="design">Design</li>
+      <li class="ux">UX</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-013 -->
+  <li class="short design intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/course-v1:GYM+013+0/about">3D Modeling for Virtual Reality Creation</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to create 3D generated imagery in Maya for use in Virtual Reality production.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+013+0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+013+0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Basic 3D Modeling, Animation and Rigging</dd>
+          <dd>Basic 3D Lighting, Rendering and Cameras</dd>
+          <dd>Pre-rendered Cinematic VR creation and publishing</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Anyone interested in 3D modeling</dd>
+          <dd>Anyone interested in virtual reality workflow</dd>
+          <dd>3D artists interested in virtual reality production</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>1.5 Hours</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 4 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+013+0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="virtual-reality">Virtual Reality</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-012 -->
+  <li class="short development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/course-v1:GYM+012+0/about">Introduction to Node.js</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        In this course, you will learn how to build a simple web app using Node.js.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+012+0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+012+0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Installing Node.js</dd>
+          <dd>Using npm to install various packages for your project</dd>
+          <dd>Working with a templating engine</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Front-end developers</dd>
+          <dd>JavaScript programmers</dd>
+          <dd>Designers with coding chops</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>1 Hour</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 2 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+012+0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="development">Development</li>
+      <li class="javascript">JavaScript</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-011 -->
+  <li class="short development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/course-v1:GYM+011+0/about">Build Better Websites With Chrome Developer Tools</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        In this course, you will get a familiarity with all aspects of the built-in developer tools within the Chrome browser. Understanding how to use these tools will speed up your development time and help you create bug-free, high-performing pages and web applications.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+011+0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+011+0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>HTML & CSS Modification</dd>
+          <dd>Console Debugging</dd>
+          <dd>Page Inspection</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Front-end developers</dd>
+          <dd>Designers with coding chops</dd>
+          <dd>JavaScript programmers</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>1.25 Hours</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 3 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/course-v1:GYM+011+0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="development">Development</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-009 -->
+  <li class="short development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/GYM/009/0/about">Creating A Drupal 8 Theme</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        This course will teach you how to create themes for Drupal 8. Specifically, you will learn how to install a local development environment for Drupal 8, and use the new TWIG templating engine to customize the structure and style of your theme.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/009/0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/009/0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Intermediate HTML/CSS</dd>
+          <dd>Drupal theming</dd>
+          <dd>TWIG syntax</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Developers</dd>
+          <dd>Designers with coding chops</dd>
+          <dd>Drupal 8 beginners</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>1 Hour</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 2.5 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/GYM/009/0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="development">Development</li>
+      <li class="php">PHP</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-007 -->
+  <li class="short development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/GYM/007/0/about">Structuring and Organizing HTML5 Forms</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/007/0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/007/0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Web Forms</dd>
+          <dd>HTML</dd>
+          <dd>CSS</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Developers</dd>
+          <dd>Designers</dd>
+          <dd>Digital Creatives</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>1 Hour</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 2 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/GYM/007/0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="development">Development</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-006 -->
+  <li class="short development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/GYM/006/0/about">Introduction to Git and GitHub</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn the basics of version control and get a high-level overview of both Git and GitHub. Perfect for someone with little to no first-hand experience with either.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/006/0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/006/0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Version control</dd>
+          <dd>Project workflow</dd>
+          <dd>Collaborative coding</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Developers</dd>
+          <dd>Designers</dd>
+          <dd>Digital Creatives</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>1 Hour</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 2 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/GYM/006/0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="development">Development</li>
+      <li class="github">GitHub</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-004 -->
+  <li class="short development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/GYM/004/0/about">Creating A WordPress Theme</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to convert your HTML/CSS design into a WordPress website. Discover how to set up a local development environment, and add WordPress tags to your design.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/004/0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/004/0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Intermediate HTML/CSS</dd>
+          <dd>WordPress themes</dd>
+          <dd>WordPress tags</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Developers</dd>
+          <dd>Designers with coding chops</dd>
+          <dd>WordPress beginners</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>1 Hour</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 3 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/GYM/004/0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="development">Development</li>
+      <li class="php">PHP</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-001 -->
+  <li class="short career-skills beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/GYM/001/0/about">Defeating Busy</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to estimate, plan, track, and manage your time in order to complete projects. Being busy isn’t a bad thing, but not being in control of your own time is.
+      </p>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/001/0/about"><b>Learn More</b></a>
+      <a class="button" href="{{ site.gymurl }}/courses/GYM/001/0/info"><b>Enroll Now</b></a>
+      <div>
+        <dl>
+          <dt><b>Skills Covered</b></dt>
+          <dd>Project estimation</dd>
+          <dd>Time tracking</dd>
+          <dd>Team/client communication skills</dd>
+        </dl>
+        <dl>
+          <dt><b>This Course Is For</b></dt>
+          <dd>Designers</dd>
+          <dd>Developers</dd>
+          <dd>Anyone with a deadline</dd>
+        </dl>
+      </div>
+      <div class="note">
+        <dl>
+          <dt><b>Earn a Badge</b></dt>
+          <dd>Short Courses include a series of video lessons, a final exam, and a badge if you pass.</dd>
+        </dl>
+      </div>
+      <div>
+        <dl>
+          <dt><b>Video Lessons</b></dt>
+          <dd>1 Hour</dd>
+        </dl>
+        <dl>
+          <dt><b>Course Completion</b></dt>
+          <dd>Up to 1.5 Hours</dd>
+        </dl>
+      </div>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/GYM/001/0/about"><b>Learn More</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      short
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="career-skills">Career Skills</li>
+      <li class="productivity">Productivity</li>
+      <li class="time-management">Time Management</li>
+    </ul>
+  </aside>
+  </li>
+    </ul>
+  </li>
+  <li class="tutorial">
+    <header>
+      <h2>Tutorials</h2>
+    </header>
+    <ul class="list" role="list">
+<!-- TAKE 5 -->
+<!-- GYM-5051 -->
+  <li class="tutorial prototyping intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/advanced-auto-layout-in-figma">Advanced Auto Layout in Figma</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Creating complex, responsive interfaces in Figma can be done very quickly using Auto Layout. However, it does require a solid understanding of alignment, distribution, resizing and nesting. Learn these advanced techniques in this tutorial by Jeremy Osborn, Director of Learning for Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/advanced-auto-layout-in-figma"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="figma">Figma</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5050 -->
+  <li class="tutorial prototyping intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/working-with-auto-layout-in-figma">Working with Auto Layout in Figma</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Auto Layout in Figma allows you to create frames, components or even entire layouts, that reflow as the contents change, making designing interfaces easier than ever. Learn how to get up and running with the fundamentals of Auto Layout in this tutorial by Jeremy Osborn, Director of Learning for Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/working-with-auto-layout-in-figma"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="figma">Figma</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5049 -->
+  <li class="tutorial prototyping intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/creating-variants-in-figma">Creating Variants in Figma</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Variants make working with components in Figma easier and more intuitive to use. Learn how to get up and running with the fundamentals of variants in this tutorial by Jeremy Osborn, Director of Learning for Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/creating-variants-in-figma"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="figma">Figma</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5048 -->
+  <li class="tutorial accessibility beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/using-motion-and-web-animation-responsibly">Using Motion and Web Animation Responsibly</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        You don’t have to forgo animation entirely to accommodate users with disabilities. Learn how to ensure that animated elements won’t compromise the accessibility of your website in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/using-motion-and-web-animation-responsibly"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5047 -->
+  <li class="tutorial accessibility beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/creating-accessible-web-animations">Creating Accessible Web Animations</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        A few of the most common animation techniques used on the web can make users affected by motion dizzy or even sick. Learn how to avoid these techniques in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/creating-accessible-web-animations"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5046 -->
+  <li class="tutorial accessibility beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/creating-accessible-video-and-audio-content">Creating Accessible Video and Audio Content</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        With more video and audio being published online than ever before, it’s critical to make this content as accessible as possible. Learn strategies for improving multimedia accessibility on your websites in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/creating-accessible-video-and-audio-content"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5045 -->
+  <li class="tutorial development accessibility ux intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/improving-form-usability-and-accessibility">Improving Form Usability and Accessibility</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Forms are a frequent source of accessibility problems on websites. Learn some tips and tricks on how to make your web forms easier to use and understand in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/improving-form-usability-and-accessibility"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="development">Development</li>
+      <li class="ux">UX</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5044 -->
+  <li class="tutorial development accessibility beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/designing-accessible-forms-for-everyone">Designing Accessible Forms for Everyone</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to make sure everyone can complete the forms on your website and learn how to properly use the label element in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/designing-accessible-forms-for-everyone"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5043 -->
+  <li class="tutorial design development accessibility beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/improving-accessibility-with-color-contrast">Improving Accessibility With Color Contrast</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Discover how to identify whether the colors on your website have sufficient contrast between text color and its background in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/improving-accessibility-with-color-contrast"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5042 -->
+  <li class="tutorial design development accessibility beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/understanding-the-role-of-color-in-accessibility">Understanding the Role of Color in Accessibility</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Take the guesswork out of designing for color blindness and learn how to improve the accessibility of your websites in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/understanding-the-role-of-color-in-accessibility"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5041 -->
+  <li class="tutorial development accessibility beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/writing-effective-and-accessible-alt-text">Writing Effective and Accessible Alt Text</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to write alt text for more complex image use, such as charts, graphs, and image links in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/writing-effective-and-accessible-alt-text"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5040 -->
+  <li class="tutorial development accessibility beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/improving-image-accessibility-with-alt-text">Improving Image Accessibility With Alt Text</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn best practices for using alt text to improve the accessibility of the images on your website in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/improving-image-accessibility-with-alt-text"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5039 -->
+  <li class="tutorial development accessibility beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/designing-accessible-data-tables">Designing Accessible Data Tables</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to make the data tables in your HTML documents more accessible for everyone in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/designing-accessible-data-tables"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5038 -->
+  <li class="tutorial development accessibility beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/making-headings-and-lists-more-accessible">Making Headings and Lists More Accessible</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to make the headings and lists in your HTML documents more accessible for everyone in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/making-headings-and-lists-more-accessible"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5037 -->
+  <li class="tutorial development accessibility beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/understanding-document-structure-accessibility">Understanding Document Structure Accessibility</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to leverage the inherent accessibility of HTML documents in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/understanding-document-structure-accessibility"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5036 -->
+  <li class="tutorial development accessibility intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/creating-beautiful-and-accessible-drop-caps">Creating Beautiful and Accessible Drop Caps</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to create visually compelling and accessible drop caps on the web in this tutorial by Ethan Marcotte — the fellow who started that whole “responsive design” thing.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/creating-beautiful-and-accessible-drop-caps"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5035 -->
+  <li class="tutorial development accessibility intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/responsively-designing-with-viewport-units">Responsively Designing With Viewport Units</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to responsively spice up your designs with viewport units in this tutorial by Ethan Marcotte — the fellow who started that whole “responsive design” thing.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/responsively-designing-with-viewport-units"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5034 -->
+  <li class="tutorial development accessibility intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/flexible-and-accessible-typesetting">Flexible and Accessible Typesetting</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to set flexible and accessible type sizes for a more user-friendly web in this tutorial by Ethan Marcotte — the fellow who started that whole “responsive design” thing.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/flexible-and-accessible-typesetting"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5033 -->
+  <li class="tutorial development accessibility intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/designing-beautiful-focus-states">Designing Beautiful Focus States</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to design beautiful and accessible link focus states in this tutorial by Ethan Marcotte — the fellow who started that whole “responsive design” thing.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/designing-beautiful-focus-states"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="accessibility">Accessibility</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5032 -->
+  <li class="tutorial accessibility beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/introduction-to-screen-readers-using-voiceover">Introduction to Screen Readers Using VoiceOver</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to get started with VoiceOver, Apple’s built-in screen reader, to read and navigate web pages in this tutorial by Ethan Marcotte — the fellow who started that whole “responsive design” thing.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/introduction-to-screen-readers-using-voiceover"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="accessibility">Accessibility</li>
+      <li class="html">HTML</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5031 -->
+  <li class="tutorial development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/creating-an-interactive-chart-for-the-web">Creating an Interactive Chart for the Web</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to make an interactive column chart using Google Charts in this tutorial by Jeremy Osborn, Academic Director at Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/creating-an-interactive-chart-for-the-web"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="development">Development</li>
+      <li class="html">HTML</li>
+      <li class="css">CSS</li>
+      <li class="javascript">JavaScript</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5030 -->
+  <li class="tutorial prototyping intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/working-with-overlays-in-figma">Working with Overlays in Figma</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to effectively use overlays in Figma in this tutorial by Jeremy Osborn, Academic Director at Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/working-with-overlays-in-figma"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="figma">Figma</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5029 -->
+  <li class="tutorial prototyping intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/animating-microinteractions-with-figma">Animating Microinteractions with Figma</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Build and animate a prototype for a simple microinteraction in Figma in this tutorial by Jeremy Osborn, Academic Director at Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/animating-microinteractions-with-figma"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="figma">Figma</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5028 -->
+  <li class="tutorial development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/adding-a-dark-mode-theme-to-your-website">Adding a Dark Mode Theme to Your Website</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to create a theme for your dark mode users in this tutorial by Jeremy Osborn, Academic Director at Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/adding-a-dark-mode-theme-to-your-website"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5027 -->
+  <li class="tutorial career-skills beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/managing-your-time-like-a-pro">Managing Your Time Like a Pro</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn 3 ways to manage your work day more efficiently in this tutorial by Jeremy Osborn, Academic Director at Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/managing-your-time-like-a-pro"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="career-skills">Career Skills</li>
+      <li class="productivity">Productivity</li>
+      <li class="time-management">Time Management</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5026 -->
+  <li class="tutorial development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/publishing-your-first-github-pages-website">Publishing Your First GitHub Pages Website</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to get up and running with your first GitHub Pages Website in this tutorial by Mike Bifulco, Director of Technology at Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/publishing-your-first-github-pages-website"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="development">Development</li>
+      <li class="github">GitHub</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5025 -->
+  <li class="tutorial development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/getting-started-with-css-variables">Getting Started With CSS Variables</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how CSS Variables can help you speed up and simplify your development workflow in this tutorial by Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/getting-started-with-css-variables"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5024 -->
+  <li class="tutorial development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/writing-css-media-queries-for-responsive-design">Writing CSS Media Queries For Responsive Design</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to add CSS Media Queries in order to get started with responsive web design in this tutorial by Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/writing-css-media-queries-for-responsive-design"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5023 -->
+  <li class="tutorial design development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/creating-a-harmonious-color-scheme-with-hsl">Creating A Harmonious Color Scheme with HSL</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to create a pleasing analogous color scheme using the HSL color system with this tutorial by Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/creating-a-harmonious-color-scheme-with-hsl"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5022 -->
+  <li class="tutorial design beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/creating-a-pixel-perfect-icon-in-sketch">Creating a Pixel Perfect Icon in Sketch</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to create a pixel perfect icon in Sketch whose edges remain sharp in any scenario with this tutorial by Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/creating-a-pixel-perfect-icon-in-sketch"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="sketch">Sketch</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5021 -->
+  <li class="tutorial development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/using-css-generated-content-for-links">Using CSS Generated Content for Links</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to add generated content to the links on a web page using CSS in this tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/using-css-generated-content-for-links"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5020 -->
+  <li class="tutorial career-skills beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/knowing-your-audience">Knowing Your Audience</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to increase opportunities by understanding the types of audiences you can expect to encounter in this tutorial with Lee Andrese, Principal of Akatheme.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/knowing-your-audience"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="career-skills">Career Skills</li>
+      <li class="ux">UX</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5019 -->
+  <li class="tutorial career-skills beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/self-promotion-through-your-online-presence">Self-Promotion Through Your Online Presence</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to promote yourself via your website and social media in this tutorial with Anne Ditmeyer, creative coach.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/self-promotion-through-your-online-presence"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="career-skills">Career Skills</li>
+      <li class="design">Design</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5018 -->
+  <li class="tutorial career-skills beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/crafting-your-story">Crafting Your Story</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to create compelling stories for projects you’ve made in this tutorial with Lee Andrese, Principal of Akatheme.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/crafting-your-story"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="career-skills">Career Skills</li>
+      <li class="design">Design</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5017 -->
+  <li class="tutorial career-skills beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/how-to-tell-the-story-of-a-mid-career-pivot">How to Tell the Story of a Mid-Career Pivot</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to have confidence in the stories you tell after making a career change in this tutorial with Anne Ditmeyer, creative coach.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/how-to-tell-the-story-of-a-mid-career-pivot"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="career-skills">Career Skills</li>
+      <li class="ux">UX</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5016 -->
+  <li class="tutorial career-skills beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/storytelling-for-designers">Storytelling for Designers</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to tell your story in a compelling way in order to advance your career in this tutorial with Lee Andrese, Principal of Akatheme.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/storytelling-for-designers"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="career-skills">Career Skills</li>
+      <li class="ux">UX</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5015 -->
+  <li class="tutorial prototyping intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/creating-advanced-animations-in-figma">Creating Advanced Animations in Figma</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to use the Smart Animate feature to create advanced animations in Figma in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/creating-advanced-animations-in-figma"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="figma">Figma</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5014 -->
+  <li class="tutorial prototyping beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/using-auto-animate-in-adobe-xd">Using Auto-Animate in Adobe XD</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to use Auto-Animate in Adobe XD in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/using-auto-animate-in-adobe-xd"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="adobe-xd">Adobe XD</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5013 -->
+  <li class="tutorial prototyping beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/working-with-the-timeline-in-invision-studio">Working with the Timeline in InVision Studio</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to create animated micro-interactions using InVision Studio’s timeline feature in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/working-with-the-timeline-in-invision-studio"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="invision-studio">InVision Studio</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5012 -->
+  <li class="tutorial development prototyping intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/prototyping-in-the-browser-with-css-grid-layout">Prototyping in the Browser with CSS Grid Layout</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn the benefits of prototyping web page layouts using CSS Grid Layout in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/prototyping-in-the-browser-with-css-grid-layout"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5011 -->
+  <li class="tutorial prototyping intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/using-smart-layout-in-sketch">Using Smart Layout in Sketch</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to use Smart Layout in Sketch in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/using-smart-layout-in-sketch"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="prototyping">Prototyping</a></li>
+      <li class="sketch">Sketch</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5010 -->
+  <li class="tutorial ux intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/using-the-kj-method">Using the KJ Method</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to silently collaborate with a team in order to get group consensus in this tutorial with Jeremy Osborn, Academic Director of Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/using-the-kj-method"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="ux">UX</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5009 -->
+  <li class="tutorial ux beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/leading-your-first-usability-test">Leading Your First Usability Test</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to lead a usability test in order to see how people interact with a product in this tutorial with Heather O’Neill, CEO of Pixels for Humans.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/leading-your-first-usability-test"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="ux">UX</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5008 -->
+  <li class="tutorial ux beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/writing-effective-survey-questions">Writing Effective Survey Questions</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to write survey questions to gather high-level information about your market in this tutorial with Heather O’Neill, CEO of Pixels for Humans.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/writing-effective-survey-questions"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="ux">UX</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5007 -->
+  <li class="tutorial ux beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/conducting-customer-interviews">Conducting Customer Interviews</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to conduct a successful customer interview in this tutorial with Heather O’Neill, CEO of Pixels for Humans.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/conducting-customer-interviews"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="ux">UX</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5006 -->
+  <li class="tutorial ux beginner">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/leading-a-card-sorting-session">Leading a Card Sorting Session</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to run a card sorting session in order to better understand your users’ mental models in this tutorial with Heather O’Neill, CEO of Pixels for Humans.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/leading-a-card-sorting-session"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Beginner
+    </p>
+    <ul class="topics">
+      <li class="ux">UX</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5005 -->
+  <li class="tutorial development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/creating-a-duotone-with-css">Creating a Duotone with CSS</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to turn a grayscale image into a duotone using CSS blend modes in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/creating-a-duotone-with-css"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5004 -->
+  <li class="tutorial development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/working-with-css-feature-queries">Working with CSS Feature Queries</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to use new CSS features for modern browsers without worrying about browser incompatibilities in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/working-with-css-feature-queries"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5003 -->
+  <li class="tutorial development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/adding-a-css-gradient-overlay-to-an-image">Adding a CSS Gradient Overlay to an Image</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to add a gradient overlay to an image more efficiently using only CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/adding-a-css-gradient-overlay-to-an-image"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5002 -->
+  <li class="tutorial development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/creating-a-css-knockout-text-effect">Creating a CSS Knockout Text Effect</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to make an image appear inside the outline of plain text using CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/creating-a-css-knockout-text-effect"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+<!-- GYM-5001 -->
+  <li class="tutorial development intermediate">
+  <header>
+    <h2>
+      <a href="{{ site.gymurl }}/courses/take5/making-a-css-parallax-effect">Making a CSS Parallax Effect</a>
+    </h2>
+    <details class="info">
+    <summary><b>Overview</b></summary>
+    <div class="info-details">
+      <p>
+        Learn how to create a scrolling background effect using CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium.
+      </p>
+    </div>
+    </details>
+    <a class="button" href="{{ site.gymurl }}/courses/take5/making-a-css-parallax-effect"><b>Watch Now</b></a>
+  </header>
+  <aside>
+    <p class="format">
+      tutorial
+    </p>
+    <p class="level">
+      Intermediate
+    </p>
+    <ul class="topics">
+      <li class="design">Design</li>
+      <li class="css">CSS</li>
+    </ul>
+  </aside>
+  </li>
+    </ul>
+  </li>
+</ul>
+
+</main>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
