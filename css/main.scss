@@ -2414,12 +2414,6 @@ aside.system-status {
 
 }
 
-// Exclude sitewide banner from home page
-
-.gymnasium-home aside.system-status {
-  display: none;
-}
-
 // https://github.com/gymnasium/tracker/issues/242
 // Override default white-space: nowrap;
 
