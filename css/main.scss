@@ -2416,7 +2416,7 @@ aside.system-status {
 
 // Exclude sitewide banner from home page
 
-.gymnasium-home aside.system-status {
+.gymnasium-home #system-status {
   display: none;
 }
 
