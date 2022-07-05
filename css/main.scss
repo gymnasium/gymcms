@@ -2416,7 +2416,7 @@ aside.system-status {
 
 // Exclude sitewide banner from home page
 
-.gymnasium-home aside.system-status {
+.gymnasium-home #system-status {
   display: none;
 }
 
@@ -2451,6 +2451,87 @@ aside.system-status {
     line-height: inherit;
     white-space: pre;
     padding: 0 2.75rem;
+  }
+
+}
+
+// Courseware Raw HTML styling
+
+.raw-html .content {
+  padding: 0;
+
+  article,
+  section {
+    padding-top: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  h1 {
+    font: 900 2em/1.2 $gym-font-stack;
+    color: $gym-dark-gray-2;
+    text-transform: uppercase;
+    letter-spacing: .03rem;
+    margin-bottom: .6em !important;
+  }
+
+  h2 {
+    font: 900 1.6em/1.2 $gym-font-stack;
+    color: $gym-dark-gray-2;
+    text-transform: uppercase;
+    letter-spacing: .03rem;
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+  }
+
+  h3 {
+    font: 900 1.2em/1.2 $gym-font-stack;
+    color: $gym-dark-gray-2;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  > h2,
+  nav > h2,
+  section[id] ul > li {
+    margin-top: 2.4rem;
+  }
+
+  ol,
+  ul,
+  li {
+    margin-bottom: 0 !important;
+  }
+
+  ol + p,
+  ul + p {
+    margin-top: 2.4rem;
+  }
+
+  ol > li {
+    margin-top: 1.6rem;
+  }
+
+  li li {
+    margin-top: 1rem;
+  }
+
+  li,
+  p {
+    font: normal 1.15em/1.5 $gym-text-font-stack;
+    margin-top: 1rem;
+  }
+
+  p {
+    color: $gym-dark-gray-2;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  li li,
+  li p {
+    font-size: 1em;
   }
 
 }
