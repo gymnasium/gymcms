@@ -8,7 +8,7 @@
 // Render font face rules
 @include font-open-sans; // TODO: seems to be an unnecessary font
 @include font-brandon;
-@include font-font-awesome; // TODO: are we using this?
+@include font-awesome; // TODO: are we using this?
 
 // TODO: clean these up to the best of our ability
 @import "migrated-vendor";
