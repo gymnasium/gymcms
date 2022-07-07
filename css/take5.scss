@@ -265,9 +265,8 @@ main h3 {
     padding-top: 1.6em;
   }
 
-  @include breakpoint(62em,min) {
+  @include breakpoint(medium, min) {
     &--hero-content .col-md-4 + .col-md-8 {
-      float: right;
       padding-top: 0;
     }
 
@@ -548,7 +547,7 @@ details.take5--transcript {
   }
 }
 
-@include breakpoint(48em, max) {
+@include breakpoint(medium, max) {
 
   .take5--hero-content .take5--resources,
   #tutorial-topics {
@@ -556,15 +555,11 @@ details.take5--transcript {
   }
 
   #tutorial-topics summary b::before {
-    content: "Browse" "\00a0";
+    content: "Select a" "\00a0";
   }
 }
 
 @include breakpoint(medium, min) {
-
-  .take5--main .col-md-4 {
-    float: right;
-  }
 
   #tutorial-resources {
      margin-top: 0;
