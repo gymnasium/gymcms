@@ -641,8 +641,12 @@ details.take5--transcript {
       }
 
       header {
-        padding: 1em;
+        padding: 1em 0.5em;
         margin-top: 0;
+
+        p {
+          font-size: 0.9625em;
+        }
       }
     }
 
