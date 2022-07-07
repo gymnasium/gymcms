@@ -30,7 +30,7 @@ permalink: /courses/take5/
       {%- endif -%}
   {%- endfor -%}
 
-  {%- assign unique_topics = topics | uniq | reverse | join: ', '|split: ', ' -%}
+  {%- assign unique_topics = 'Design, Development, UX, Accessibility, Career Skills' | join: ', '| split: ', ' -%}
   {%- assign pubdates_sorted = pubdates | sort -%}
 
   {%- for pubdate in pubdates_sorted -%}
