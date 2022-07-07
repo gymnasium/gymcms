@@ -5,7 +5,7 @@ date: 2019-10-31T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5004/
 poster_art: /img/take5/posters/gym-5004.jpg
-topic: "Design & Development"
+topic: "Development"
 live: true
 instructor: "Jeremy Osborn"
 video_ID: VaHkQQ5xgac
@@ -29,4 +29,5 @@ related_content:
   url: "https://caniuse.com/css-featurequeries"
 - label: "Fit for Purpose: Making Sense of the New CSS by Eric Meyer"
   url: "https://www.youtube.com/watch?v=0sDYhKi1qzc"
+skill_level: "Intermediate"
 ---

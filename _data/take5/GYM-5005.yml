@@ -5,7 +5,7 @@ date: 2019-11-01T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5005/
 poster_art: /img/take5/posters/gym-5005.jpg
-topic: "Design & Development"
+topic: "Development"
 live: true
 instructor: "Jeremy Osborn"
 video_ID: _12cCrECCdY
@@ -27,4 +27,5 @@ related_content:
   url: "https://lukyvj.github.io/colofilter.css/"
 - label: "Jazz Icons: Thelonious Monk"
   url: "https://www.youtube.com/watch?v=LR-7Mo8IZsI"
+skill_level: "Intermediate"
 ---

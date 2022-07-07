@@ -5,7 +5,7 @@ date: 2019-11-20T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5008/
 poster_art: /img/take5/posters/gym-5008.jpg
-topic: "User Experience"
+topic: "UX"
 live: true
 instructor: "Heather O'Neill"
 video_ID: eE0rJNHvAzs
@@ -17,4 +17,5 @@ related_content:
   url: "https://www.uxbooth.com/articles/the-essential-guide-to-writing-effective-survey-questions/"
 - label: "Just Enough Research by Erika Hall"
   url: "https://abookapart.com/products/just-enough-research"
+skill_level: "Beginner"
 ---

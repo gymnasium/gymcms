@@ -7,7 +7,9 @@ url: /courses/take5/GYM-5036/
 poster_art: /img/take5/posters/gym-5036.jpg
 live: true
 instructor: "Ethan Marcotte"
-topic: "Accessibility"
+topic: "Development"
+subtopics:
+  - label: "Accessibility"
 video_ID: nt7p3CuxUzA
 video_duration: "4:55"
 featured: false
@@ -25,4 +27,5 @@ related_content:
   url: "https://product.voxmedia.com/2019/6/17/18524029/the-ballad-of-drop-caps-and-design-systems"
 - label: "Inclusively Hidden by Scott O’Hara"
   url: "https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html"
+skill_level: "Intermediate"
 ---

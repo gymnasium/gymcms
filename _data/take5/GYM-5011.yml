@@ -7,7 +7,9 @@ url: /courses/take5/GYM-5011/
 poster_art: /img/take5/posters/gym-5011.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Prototyping"
+topic: "UX"
+subtopics:
+  - label: "Prototyping"
 video_ID: VzdFLmK2t38
 video_duration: "4:59"
 featured: false
@@ -21,4 +23,5 @@ related_content:
   url: "https://www.sketch.com/docs/symbols/smart-layout/"
 - label: "Working with Hidden Symbols"
   url: "https://www.youtube.com/watch?v=M0FHj0YBSh4"
+skill_level: "Intermediate"
 ---

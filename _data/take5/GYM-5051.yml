@@ -7,7 +7,9 @@ url: /courses/take5/GYM-5051/
 poster_art: /img/take5/posters/gym-5051.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Prototyping"
+topic: "UX"
+subtopics:
+  - label: "Prototyping"
 video_ID: UYsT7xAhQZM
 video_duration: "4:55"
 featured: true
@@ -27,4 +29,5 @@ related_content:
   url: "https://youtu.be/bh98SF7OjUk"
 - label: "Gymnasium: Working With Auto Layout in Figma"
   url: "https://thegymnasium.com/courses/take5/working-with-auto-layout-in-figma"
+skill_level: "Intermediate"
 ---

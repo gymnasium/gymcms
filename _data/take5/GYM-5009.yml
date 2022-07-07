@@ -5,7 +5,7 @@ date: 2019-11-21T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5009/
 poster_art: /img/take5/posters/gym-5009.jpg
-topic: "User Experience"
+topic: "UX"
 live: true
 instructor: "Heather O'Neill"
 video_ID: I1uO3rwcG8U
@@ -17,5 +17,6 @@ related_content:
   url: "https://www.uxbooth.com/articles/the-art-of-guerrilla-usability-testing/"
 - label: "Rocket Surgery Made Easy by Steve Krug"
   url: "https://www.sensible.com/rsme.html"
+skill_level: "Beginner"
 ---
 

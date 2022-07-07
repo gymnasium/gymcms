@@ -7,7 +7,9 @@ url: /courses/take5/GYM-5013/
 poster_art: /img/take5/posters/gym-5013.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Prototyping"
+topic: "UX"
+subtopics:
+  - label: "Prototyping"
 video_ID: QxN2wVlBTTw
 video_duration: "4:51"
 featured: false
@@ -23,4 +25,5 @@ related_content:
   url: "https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing"
 - label: "Transitional Interfaces by Pasquale D’Silva"
   url: "https://medium.com/@pasql/transitional-interfaces-926eb80d64e3"
+skill_level: "Beginner"
 ---

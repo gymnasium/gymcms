@@ -7,7 +7,10 @@ url: /courses/take5/GYM-5045/
 poster_art: /img/take5/posters/gym-5045.jpg
 live: true
 instructor: "Clarissa Peterson"
-topic: "Accessibility"
+topic: "Development"
+subtopics:
+  - label: "Accessibility"
+  - label: "UX"
 video_ID: m3M7QbDE3Lg
 video_duration: "4:33"
 featured: false
@@ -23,4 +26,5 @@ related_content:
   url: "https://www.w3.org/WAI/tutorials/forms/notifications/"
 - label: "Usable and Accessible Form Validation and Error Recovery"
   url: "https://webaim.org/techniques/formvalidation/"
+skill_level: "Beginner"
 ---

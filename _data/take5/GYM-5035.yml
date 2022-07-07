@@ -7,7 +7,9 @@ url: /courses/take5/GYM-5035/
 poster_art: /img/take5/posters/gym-5035.jpg
 live: true
 instructor: "Ethan Marcotte"
-topic: "Design & Development"
+topic: "Development"
+subtopics:
+  - label: "Accessibility"
 video_ID: m1_iOLbtEFM
 video_duration: "4:59"
 featured: false
@@ -29,4 +31,5 @@ related_content:
   url: "https://developer.mozilla.org/en-US/docs/Web/CSS/object-position"
 - label: "MDN: The calc CSS function"
   url: "https://developer.mozilla.org/en-US/docs/Web/CSS/calc"
+skill_level: "Intermediate"
 ---
