@@ -7,7 +7,9 @@ url: /courses/take5/GYM-5023/
 poster_art: /img/take5/posters/gym-5023.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Design & Development"
+topic: "Design"
+subtopics:
+  - label: "Development"
 video_ID: 1430bmqJ9xw
 video_duration: "4:57"
 featured: false
@@ -27,4 +29,5 @@ related_content:
   url: "https://css-tricks.com/nerds-guide-color-web/"
 - label: "HSL() / HSLa() is great for programmatic color control by Chris Coyier"
   url: "https://css-tricks.com/hsl-hsla-is-great-for-programmatic-color-control/"
+skill_level: "Intermediate"
 ---

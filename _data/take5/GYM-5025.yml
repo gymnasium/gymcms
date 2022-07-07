@@ -7,7 +7,7 @@ url: /courses/take5/GYM-5025/
 poster_art: /img/take5/posters/gym-5025.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Design & Development"
+topic: "Development"
 video_ID: ZLR0rLm_zEM
 video_duration: "4:57"
 featured: false
@@ -29,4 +29,5 @@ related_content:
   url: "https://jhildenbiddle.github.io/css-vars-ponyfill/#/"
 - label: "Naming CSS Stuff is Really Hard by Ethan Muller"
   url: "https://seesparkbox.com/foundry/naming_css_stuff_is_really_hard"
+skill_level: "Intermediate"
 ---

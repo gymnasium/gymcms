@@ -7,7 +7,7 @@ url: /courses/take5/GYM-5028/
 poster_art: /img/take5/posters/gym-5028.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Design & Development"
+topic: "Development"
 video_ID: VYhPXZvAD9k
 video_duration: "4:57"
 featured: false
@@ -27,4 +27,5 @@ related_content:
   url: "https://www.cnet.com/how-to/windows-10-is-better-in-dark-mode-heres-how-to-apply-the-dark-theme/"
 - label: "Toggling dark/light theme based on your user’s preferred scheme by Apal Shah"
   url: "https://gosink.in/javascript-css-toggle-dark-light-theme-based-on-your-users-preferred-scheme/"
+skill_level: "Intermediate"
 ---

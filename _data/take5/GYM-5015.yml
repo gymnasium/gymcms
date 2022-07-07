@@ -7,7 +7,9 @@ url: /courses/take5/GYM-5015/
 poster_art: /img/take5/posters/gym-5015.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Prototyping"
+topic: "UX"
+subtopics:
+  - label: "Prototyping"
 video_ID: fhAqswjylgg
 video_duration: "4:57"
 featured: false
@@ -23,4 +25,5 @@ related_content:
   url: "https://www.youtube.com/watch?v=6Id4INKEwb8"
 - label: "iOS Animations with Figma’s Smart Animations by Lucas Chae"
   url: "https://uxdesign.cc/ios-animations-with-figmas-smart-animate-954c13a30cad"
+skill_level: "Intermediate"
 ---

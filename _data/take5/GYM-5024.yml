@@ -7,7 +7,7 @@ url: /courses/take5/GYM-5024/
 poster_art: /img/take5/posters/gym-5024.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Design & Development"
+topic: "Development"
 video_ID: Xb3pBj4PKxg
 video_duration: "4:59"
 featured: false
@@ -31,4 +31,5 @@ related_content:
   url: "https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/"
 - label: "Choosing between min-width and max-width media queries by The Haystack"
   url: "https://www.the-haystack.com/2015/12/23/choosing-between-min-and-max-width/"
+skill_level: "Intermediate"
 ---

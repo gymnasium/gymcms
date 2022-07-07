@@ -7,7 +7,9 @@ url: /courses/take5/GYM-5033/
 poster_art: /img/take5/posters/gym-5033.jpg
 live: true
 instructor: "Ethan Marcotte"
-topic: "Design & Development"
+topic: "Development"
+subtopics:
+  - label: "Accessibility"
 video_ID: mmXdKhB7Ueg
 video_duration: "4:50"
 featured: false
@@ -31,4 +33,5 @@ related_content:
   url: "https://developer.mozilla.org/en-US/docs/Web/CSS/transition"
 - label: "MDN: The transform CSS property"
   url: "https://developer.mozilla.org/en-US/docs/Web/CSS/transform"
+skill_level: "Intermediate"
 ---

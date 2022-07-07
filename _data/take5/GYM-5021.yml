@@ -7,7 +7,7 @@ url: /courses/take5/GYM-5021/
 poster_art: /img/take5/posters/gym-5021.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Design & Development"
+topic: "Development"
 video_ID: qfDPi1nnHSk
 video_duration: "4:48"
 featured: false
@@ -25,4 +25,5 @@ related_content:
   url: "https://www.smashingmagazine.com/2018/02/generated-content-grid-layout/"
 - label: "The W3C documentation on how to insert content in a document."
   url: "https://www.w3.org/TR/css-content-3/"
+skill_level: "Intermediate"
 ---

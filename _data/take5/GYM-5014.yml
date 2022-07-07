@@ -7,7 +7,9 @@ url: /courses/take5/GYM-5014/
 poster_art: /img/take5/posters/gym-5014.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Prototyping"
+topic: "UX"
+subtopics:
+  - label: "Prototyping"
 video_ID: TJqqgchPraE
 video_duration: "4:57"
 featured: false
@@ -25,4 +27,5 @@ related_content:
   url: "https://www.youtube.com/watch?v=RNXpEQqbWRM"
 - label: "The Basics of Easing by Paul Lewis"
   url: "https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing"
+skill_level: "Beginner"
 ---

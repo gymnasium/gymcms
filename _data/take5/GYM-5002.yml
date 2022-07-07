@@ -5,7 +5,7 @@ date: 2019-10-29T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5002/
 poster_art: /img/take5/posters/gym-5002.jpg
-topic: "Design & Development"
+topic: "Development"
 live: true
 instructor: "Jeremy Osborn"
 video_ID: Q66-TDbHiIs
@@ -29,4 +29,5 @@ related_content:
   url: "https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/"
 - label: "Can I Use: CSS3 Background-image options"
   url: "https://caniuse.com/background-img-opts"
+skill_level: "Intermediate"
 ---
