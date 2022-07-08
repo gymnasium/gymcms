@@ -159,12 +159,21 @@
 
         .chapter-menu {
           padding-left: 30px;
+          padding: 0 14px;
+          overflow: hidden;
 
           .menu-item {
+            margin: 4px 0;
+            background: inherit;
+            font-weight: 600;
+
             &.active {
               a {
                 color: #f89820;
               }
+            }
+            &:last-of-type {
+              padding-bottom: 10px;
             }
 
             .accordion-nav {
