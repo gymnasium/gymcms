@@ -233,3 +233,27 @@
     }
   }
 }
+
+// Course Wrapper
+.course-wrapper main {
+  padding: 20px;
+}
+
+.wrap-instructor-info .instructor-info-action {
+  float: right;
+  margin-left: 10px;
+  text-align: right;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  color: $gym-dark-gray-2;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 17.76px;
+  text-decoration: none;
+
+  &:hover {
+    color: #fff;
+    background-color: $gym-dark-gray-2;
+  }
+}
