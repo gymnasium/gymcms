@@ -104,7 +104,7 @@
 
     &:hover {
       color: currentColor;
-      border: none;
+      border: none !important;
       background: none;
       text-decoration: none;
 
@@ -240,7 +240,7 @@
       &.active {
         font-weight: bold;
       }
-      
+
       h3 {
         line-height: 1.3;
       }
