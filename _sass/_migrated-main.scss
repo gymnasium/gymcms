@@ -39734,10 +39734,6 @@ body.view-in-course header.global.slim {
   height: auto;
   background-color: #222;
 }
-body.courseware .wrapper-preview-menu,
-body.view-in-course .wrapper-preview-menu {
-  margin: 0px auto 0;
-}
 body.courseware .content-wrapper#content,
 body.view-in-course .content-wrapper#content {
   background-color: #ebebeb;
@@ -43811,29 +43807,23 @@ section.outside-app #get-work .tagline h1 {
   font-size: 16pt;
   font-weight: bold;
 }
-.wrapper-course-material .course-material ol.course-tabs,
-.account-settings-container .wrapper-header ul.account-nav {
-  font-weight: normal;
-  padding: 0;
-  margin-left: 0;
-}
 .account-settings-container .wrapper-header {
   border-bottom: none;
   height: auto;
 }
-.account-settings-container .wrapper-header ul.account-nav {
+ul.account-nav {
+  font-weight: normal;
+  padding: 0;
   margin: 0;
   float: none;
   padding: 0.5em 1em;
 }
-.account-settings-container .wrapper-header ul.account-nav li.account-nav-item {
+ul.account-nav li.account-nav-item {
   float: none;
   display: inline-block;
   padding: 10px 13px 12px 0;
 }
-.account-settings-container
-  .wrapper-header
-  ul.account-nav
+ul.account-nav
   li.account-nav-item
   button.account-nav-link {
   padding: 0;
