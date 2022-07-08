@@ -43742,63 +43742,6 @@ ul.account-nav
   border-color: transparent !important;
   border-width: 1px !important;
 }
-.wrapper-course-material .course-material ol.course-tabs {
-  padding: 0.5em 0;
-}
-.wrapper-course-material .course-material ol.course-tabs li a,
-.wrapper-course-material .course-material ol.course-tabs li a:focus {
-  padding-left: 0px;
-  border-bottom: none;
-  color: currentColor !important;
-}
-.wrapper-course-material .course-material ol.course-tabs li a b,
-.wrapper-course-material .course-material ol.course-tabs li a:focus b {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-bottom: 1px dashed transparent;
-  vertical-align: -0.15em;
-  font-size: 1.2em;
-}
-.wrapper-course-material .course-material ol.course-tabs li a:hover,
-.wrapper-course-material .course-material ol.course-tabs li a:focus:hover {
-  color: currentColor !important;
-  border: none;
-  background: none;
-  text-decoration: none;
-}
-.wrapper-course-material .course-material ol.course-tabs li a:hover b,
-.wrapper-course-material .course-material ol.course-tabs li a:focus:hover b {
-  color: currentColor !important;
-  border-bottom: 1px solid currentColor !important;
-  text-decoration: none;
-}
-.wrapper-course-material .course-material ol.course-tabs li a.active,
-.wrapper-course-material .course-material ol.course-tabs li a.active:hover,
-.wrapper-course-material .course-material ol.course-tabs li a.active:focus,
-.wrapper-course-material
-  .course-material
-  ol.course-tabs
-  li
-  a.active:focus:hover {
-  box-shadow: none;
-  text-shadow: none;
-  background: none;
-  color: #f89820;
-  border: none;
-  text-decoration: none;
-}
-.wrapper-course-material .course-material ol.course-tabs li a.active b,
-.wrapper-course-material .course-material ol.course-tabs li a.active:hover b,
-.wrapper-course-material .course-material ol.course-tabs li a.active:focus b,
-.wrapper-course-material
-  .course-material
-  ol.course-tabs
-  li
-  a.active:focus:hover
-  b {
-  color: currentColor !important;
-  border-bottom: 2px solid currentColor !important;
-}
 body .system-status-container {
   background-color: #f89820;
   color: black;
