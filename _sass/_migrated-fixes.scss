@@ -182,10 +182,8 @@
               background: inherit;
               border: none;
               position: relative;
-              left: 16px;
               display: block;
               padding: 5px 10px;
-              border-radius: 0;
 
               h1,
               h2,
@@ -238,6 +236,11 @@
       background: none;
       box-shadow: none;
       padding: 0;
+      text-decoration: none;
+      &.active {
+        font-weight: bold;
+      }
+      
       h3 {
         line-height: 1.3;
       }
