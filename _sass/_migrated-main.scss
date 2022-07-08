@@ -39606,9 +39606,6 @@ body.view-in-course .view-profile .wrapper-profile-sections,
 .view-profile body.view-in-course .wrapper-profile-sections,
 body.view-in-course .view-profile .badge-set-display,
 .view-profile body.view-in-course .badge-set-display,
-body.view-in-course .home .container.grey,
-.home body.view-in-course .container.grey,
-body.view-in-course div.container,
 body.view-in-course
   .view-profile
   .profile-self
@@ -39622,13 +39619,12 @@ body.view-in-course
 body.view-in-course .view-profile div.wrapper-profile-sections,
 .view-profile body.view-in-course div.wrapper-profile-sections,
 body.view-in-course .view-profile div.badge-set-display,
-.view-profile body.view-in-course div.badge-set-display,
-body.view-in-course .home div.container.grey,
-.home body.view-in-course div.container.grey {
+.view-profile body.view-in-course div.badge-set-display {
   max-width: 1180px;
   min-width: 760px;
   padding-left: 15px;
   padding-right: 15px;
+  width: auto;
 }
 body.courseware .path,
 body.view-in-course .path {
