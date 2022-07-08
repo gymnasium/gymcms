@@ -1,3 +1,83 @@
+// Courseware garbage
 .seq_contents.tex2jax_ignore.asciimath2jax_ignore {
   display: none;
+}
+
+// Staff status bar
+.wrapper-preview-menu {
+  margin: 0 auto;
+  padding: 0;
+  background-color: #0075b4;
+  display: block;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.preview-menu {
+  padding: 15px 2%;
+  width: auto;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.preview-actions {
+  padding-left: 0;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.action-preview {
+  display: inline-block;
+
+  form {
+    margin: 0;
+  }
+
+  label {
+    cursor: pointer;
+    color: #313131;
+    font: italic 300 1rem/1.6rem "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: 0 1px rgb(255 255 255 / 40%);
+    -webkit-font-smoothing: antialiased;
+    margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    color: #fff;
+    max-width: 100%;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  select {
+    margin-right: 20px;
+    vertical-align: baseline;
+  }
+}
+
+.action-preview-username-container {
+  display: none;
+}
+
+
+// Courseware Tab Navigation
+.wrapper-course-material {
+  margin: 0 15px;
+  padding: 0;
+  border-bottom: none;
+}
+
+.course-material {
+  padding: 0;
+  width: auto;
+  max-width: inherit;
+  margin: 0 auto;
+}
+
+.course-tabs {
+  padding: 0;
 }
