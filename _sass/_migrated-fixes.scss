@@ -82,4 +82,47 @@
     display: inline-block;
     list-style: none;
   }
+
+  a {
+    padding: 10px 15px 13px 15px;
+    border-bottom: none;
+    color: currentColor;
+    display: block;
+    line-height: 20.72px;
+
+    &.active:focus:hover {
+      box-shadow: none;
+      text-shadow: none;
+      background: none;
+      border: none;
+      text-decoration: none;
+
+      b {
+        color: currentColor;
+        border-bottom: 2px solid currentColor;
+      }
+    }
+
+    &:hover {
+      color: currentColor;
+      border: none;
+      background: none;
+      text-decoration: none;
+
+      b {
+        color: currentColor;
+        border-bottom: 1px solid currentColor;
+        text-decoration: none;
+      }
+    }
+
+    b {
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px dashed transparent;
+      vertical-align: -0.15em;
+      font-size: 1.2em;
+    }
+  }
 }
+
