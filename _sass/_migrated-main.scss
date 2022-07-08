@@ -4241,35 +4241,7 @@ ul + p,
 ol + p {
   margin-top: 20px;
 }
-p a:not(.btn),
-p a:visited:not(.btn) {
-  color: #0075b4;
-  font: inherit;
-  font-weight: inherit;
-  text-decoration: none;
-  transition: all 0.1s linear 0s;
-}
-p a:not(.btn):hover,
-p a:not(.btn):focus,
-p a:visited:not(.btn):hover,
-p a:visited:not(.btn):focus {
-  color: #065683;
-  text-decoration: underline;
-}
-a:not(.btn),
-a:visited:not(.btn) {
-  color: #0075b4;
-  font: inherit;
-  text-decoration: none;
-  transition: all 0.1s linear 0s;
-}
-a:not(.btn):hover,
-a:not(.btn):focus,
-a:visited:not(.btn):hover,
-a:visited:not(.btn):focus {
-  color: #065683;
-  text-decoration: underline;
-}
+
 a:not(.btn):disabled,
 a:not(.btn).is-disabled,
 a:not(.btn).disabled,
