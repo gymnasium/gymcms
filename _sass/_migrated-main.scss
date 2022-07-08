@@ -8,7 +8,7 @@
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -221,7 +221,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   color: #222;
 }
 body {
@@ -1483,7 +1483,7 @@ footer#footer-edx-v3 .mobile-app-links dd,
   box-sizing: border-box;
   text-align: left;
   line-height: 1.5;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: 1rem;
   font-weight: 400;
 }
@@ -1549,7 +1549,7 @@ footer#footer-edx-v3 .mobile-app-links dd,
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -1762,7 +1762,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   color: #222;
 }
 body {
@@ -3024,7 +3024,7 @@ footer#footer-edx-v3 .mobile-app-links dd,
   box-sizing: border-box;
   text-align: left;
   line-height: 1.5;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: 1rem;
   font-weight: 400;
 }
@@ -4167,7 +4167,7 @@ footer#footer-edx-v3 .mobile-app-links li,
 }
 html,
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: 1rem;
   font-style: normal;
   line-height: 1em;
@@ -4190,13 +4190,12 @@ h4,
 h5,
 h6 {
   color: #313131;
-  font: normal 1.2em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 1.2em/1.2em $gym-text-font-stack;
   margin: 0;
 }
 h1 {
   color: #313131;
-  font: normal 2em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: normal 2em/1.4em $gym-text-font-stack;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -4204,7 +4203,7 @@ h2,
 .home > header .title > .heading-group p,
 section.outside-app h1 {
   color: #646464;
-  font: normal 1.2em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 1.2em/1.2em $gym-text-font-stack;
   margin-bottom: 15px;
   -webkit-font-smoothing: antialiased;
 }
@@ -4371,7 +4370,7 @@ span.edx {
 .static-container ol li,
 .static-container ul li {
   color: #313131;
-  font: normal 1em/1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 1em/1.4em $gym-text-font-stack;
   margin: 0;
 }
 .static-container h1 {
@@ -8759,7 +8758,7 @@ mark {
   color: #126f9a;
 }
 .btn {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   text-decoration: none;
 }
 .btn-large {
@@ -8826,64 +8825,6 @@ mark {
   min-height: 44px;
   width: 100%;
   cursor: pointer;
-}
-@font-face {
-  font-family: "CreativeCommons";
-  src: url("/static/fonts/CreativeCommons/cc.1e88b5e25694.eot");
-  src: url("/static/fonts/CreativeCommons/cc.1e88b5e25694.eot#iefix")
-      format("embedded-opentype"),
-    url("/static/fonts/CreativeCommons/cc.4056dea56c31.woff") format("woff"),
-    url("/static/fonts/CreativeCommons/cc.ae5bfe84d5e1.ttf") format("truetype"),
-    url("/static/fonts/CreativeCommons/cc.5d1b3e457ec3.svg#CreativeCommons")
-      format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="icon-cc"]::before,
-[class*=" icon-cc"]::before {
-  font-family: "CreativeCommons";
-}
-.icon-cc::before {
-  content: "\e800";
-}
-.icon-cc-by::before {
-  content: "\e801";
-}
-.icon-cc-nc::before {
-  content: "\e802";
-}
-.icon-cc-nc-eu::before {
-  content: "\e803";
-}
-.icon-cc-nc-jp::before {
-  content: "\e804";
-}
-.icon-cc-sa::before {
-  content: "\e805";
-}
-.icon-cc-nd::before {
-  content: "\e806";
-}
-.icon-cc-pd::before {
-  content: "\e807";
-}
-.icon-cc-zero::before {
-  content: "\e808";
-}
-.icon-cc-share::before {
-  content: "\e809";
-}
-.icon-cc-remix::before {
-  content: "\e80a";
-}
-.xseries-icon {
-  background: url("/static/images/programs/xseries-icon.517989d98885.svg")
-    no-repeat;
-}
-.micromasters-icon {
-  margin-top: 1px;
-  background: url("/static/images/programs/micromasters-icon.eeed247d5c89.svg")
-    no-repeat;
 }
 .nav-utilities {
   position: fixed;
@@ -9510,7 +9451,7 @@ section.outside-app .verification-process h1,
 .verification-process h4,
 .verification-process h5,
 .verification-process h6 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 body.error h1 {
   font-size: 60px;
@@ -10107,7 +10048,7 @@ section.outside-app .shopping-cart .bordered-bar h1 span .blue-link,
 .enrollment-results,
 .search-results .search-results-item .search-results-ellipsis,
 .msg__copy p {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .verification-process
   .report-receipt-provider
@@ -11085,13 +11026,13 @@ form {
 }
 label {
   color: #313131;
-  font: italic 300 1rem/1.6rem "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: italic 300 1rem/1.6rem $gym-text-font-stack;
   margin-bottom: 5px;
   text-shadow: 0 1px rgba(255, 255, 255, 0.4);
   -webkit-font-smoothing: antialiased;
 }
 label.register-emails {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-style: normal;
   font-size: 12px;
   line-height: 1.5em;
@@ -11114,7 +11055,7 @@ input[type="tel"] {
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.6),
     inset 0 0 3px 0 rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  font: italic 300 1rem/1.6rem "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: italic 300 1rem/1.6rem $gym-text-font-stack;
   height: 35px;
   padding: 5px 12px;
   vertical-align: top;
@@ -11172,8 +11113,7 @@ button,
   text-align: center;
   text-decoration: none;
   text-shadow: 0 -1px 1px #000042;
-  font: normal 1.2rem/1.6rem "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: normal 1.2rem/1.6rem $gym-text-font-stack;
   letter-spacing: 1px;
   padding: 4px 20px;
   vertical-align: top;
@@ -11260,12 +11200,12 @@ button.disabled,
 .wrapper-footer footer#footer-openedx p,
 .wrapper-footer footer#footer-openedx ol,
 .wrapper-footer footer#footer-openedx ul {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .wrapper-footer footer#footer-openedx p a,
 .wrapper-footer footer#footer-openedx ol a,
 .wrapper-footer footer#footer-openedx ul a {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .wrapper-footer footer#footer-openedx a {
   transition: link-color 0.15s ease-in-out 0s, border 0.15s ease-in-out 0s;
@@ -11625,7 +11565,7 @@ footer#footer-edx-v3 .footer-content-wrapper:after {
 footer#footer-edx-v3 p {
   font-size: 14px;
   line-height: 20.72px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 footer#footer-edx-v3 .copyright {
   margin-top: 30px;
@@ -12296,7 +12236,7 @@ footer#footer-edx-v3
 }
 .header-global li.secondary > a {
   color: #0075b4;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   display: inline-block;
   margin: 0 30px 0 0;
   text-decoration: none;
@@ -12325,7 +12265,7 @@ footer#footer-edx-v3
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.6);
   color: #313131;
   display: inline-block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   line-height: 1em;
   margin: 1px 5px;
   padding: 10px 12px;
@@ -12632,7 +12572,7 @@ footer#footer-edx-v3
 }
 .header-global-new li.secondary > a {
   color: #0075b4;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   display: inline-block;
   margin: 0 30px 0 0;
   text-decoration: none;
@@ -12660,7 +12600,7 @@ footer#footer-edx-v3
   box-sizing: border-box;
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.6);
   color: #313131;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   display: inline-block;
   line-height: 1em;
   margin: 1px 5px;
@@ -13363,7 +13303,7 @@ section.outside-app
   h1 {
   color: #313131;
   display: table-cell;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: 0.8em;
   font-weight: 700;
   height: 48px;
@@ -13470,8 +13410,7 @@ section.outside-app
   box-sizing: border-box;
   color: #313131;
   display: inline-block;
-  font: bold 1.6em/1.2em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: bold 1.6em/1.2em $gym-text-font-stack;
   height: 100%;
   opacity: 0.6;
   padding-top: 10px;
@@ -13518,7 +13457,7 @@ section.outside-app
 .highlighted-courses .courses .course .info .desc section,
 .find-courses .courses .course .info .desc section {
   color: #313131;
-  font: normal 1em/1.6em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 1em/1.6em $gym-text-font-stack;
   margin: 0;
   height: 100%;
   overflow: hidden;
@@ -14428,8 +14367,7 @@ section.outside-app
   top: 0;
   z-index: 100;
   color: #313131;
-  font: normal 1.2rem/1.2rem "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: normal 1.2rem/1.2rem $gym-text-font-stack;
   text-align: center;
   text-shadow: 0 1px rgba(255, 255, 255, 0.8);
   transition: all 0.15s ease-out 0s;
@@ -14701,8 +14639,7 @@ section.unsubscribe.outside-app .message,
 }
 #feedback_form input,
 #feedback_form textarea {
-  font: normal 1em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: normal 1em/1.4em $gym-text-font-stack;
 }
 #feedback_form textarea[name="details"] {
   height: 150px;
@@ -14937,8 +14874,7 @@ section.unsubscribe.outside-app .message,
   color: rgba(255, 255, 255, 0.8);
   content: "\25B6";
   display: block;
-  font: normal 2em/1em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: normal 2em/1em $gym-text-font-stack;
   left: 50%;
   margin-left: -11px;
   margin-top: -16px;
@@ -15100,8 +15036,7 @@ section.outside-app .home .highlighted-courses > h1 {
 }
 .home .university-partners .partners a .name > span {
   color: #313131;
-  font: 700 italic 1.4em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 700 italic 1.4em/1.4em $gym-text-font-stack;
   text-shadow: 0 1px rgba(255, 255, 255, 0.6);
   transition: all 0.15s ease-in-out 0s;
 }
@@ -15219,7 +15154,7 @@ section.outside-app .home .more-info header h1 {
   float: right;
   position: relative;
   top: 1px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: 14px;
   text-shadow: 0 1px rgba(255, 255, 255, 0.6);
 }
@@ -15255,7 +15190,7 @@ section.outside-app .home .more-info header h1 {
   .action-mediakit.entitlement-action
   .org-name {
   color: #0075b4;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   text-transform: none;
 }
 .home .more-info .news {
@@ -15320,8 +15255,7 @@ section.outside-app .home .more-info header h1 {
 }
 .home .more-info .news .blog-posts > article .post-name a {
   color: #313131;
-  font: 700 1em/1.2em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 700 1em/1.2em $gym-text-font-stack;
 }
 .home .more-info .news .blog-posts > article .post-name a:hover,
 .home .more-info .news .blog-posts > article .post-name a:focus {
@@ -15335,13 +15269,13 @@ section.outside-app .home .more-info header h1 {
 }
 .home .more-info .news .press-links h3 {
   display: inline;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-weight: 700;
   line-height: 1.6em;
 }
 .home .more-info .news .press-links a {
   line-height: 1.6em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-style: italic;
   margin-left: 10px;
 }
@@ -17314,7 +17248,7 @@ section.outside-app .home .more-info header h1 {
   clear: both;
 }
 .wrapper-messages-primary .message a {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .wrapper-messages-primary .message strong {
   font-weight: 700;
@@ -17544,8 +17478,7 @@ section.outside-app .home .more-info header h1 {
   box-sizing: border-box;
   float: left;
   border-radius: 3px;
-  font: normal 0.8rem/1.2rem "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: normal 0.8rem/1.2rem $gym-text-font-stack;
   letter-spacing: 1px;
   padding: 6px 12px;
   text-align: center;
@@ -17633,18 +17566,17 @@ section.outside-app .home .more-info header h1 {
   .entitlement-action
   .btn {
   float: left;
-  font: normal 0.8rem/1.2rem "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: normal 0.8rem/1.2rem $gym-text-font-stack;
   letter-spacing: 1px;
   padding: 6px 12px;
   text-align: center;
 }
 .wrapper-messages-primary .message.message-status .exam-registration-number {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: 18px;
 }
 .wrapper-messages-primary .message.message-status .exam-registration-number a {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .wrapper-messages-primary .message.message-status.exam-register .message-copy {
   margin-top: 5px;
@@ -17918,7 +17850,7 @@ section.outside-app .home .more-info header h1 {
   clear: both;
 }
 .wrapper-messages-primary .message .prerequisites .tip {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: 1em;
   color: #646464;
   margin-top: 10px;
@@ -17950,7 +17882,7 @@ section.outside-app .home .more-info header h1 {
   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   color: #fff;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   display: inline-block;
   letter-spacing: 1px;
   margin-top: 5px;
@@ -18107,8 +18039,7 @@ p.course-block {
   box-sizing: border-box;
   float: left;
   display: block;
-  font: normal 15px/1.6rem "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: normal 15px/1.6rem $gym-text-font-stack;
   letter-spacing: 0;
   padding: 6px 32px 7px;
   text-align: center;
@@ -18134,8 +18065,7 @@ p.course-block {
   text-decoration: none;
   text-shadow: 0 1px 0 #f9f8f8;
   background-clip: padding-box;
-  font: normal 15px/1.6rem "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: normal 15px/1.6rem $gym-text-font-stack;
   padding: 6px 32px 7px;
 }
 .enter-course-blocked.archived:hover:not(:disabled) {
@@ -18171,7 +18101,7 @@ a.fade-cover {
   padding-bottom: 0;
 }
 .dashboard-banner .wrapper-msg .msg {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   padding-bottom: 20px;
   border-bottom: thin solid #767676;
 }
@@ -18181,7 +18111,7 @@ a.fade-cover {
   clear: both;
 }
 .dashboard-banner .wrapper-msg .msg.title {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   text-transform: none;
   letter-spacing: 0;
 }
@@ -19039,7 +18969,7 @@ section.outside-app
   .view-passwordreset
   .entitlement-unenrollment-modal-error-text {
   display: block;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   line-height: 1.41575em;
 }
 .view-register .introduction header h1,
@@ -19271,7 +19201,7 @@ section.outside-app
   margin: 0 0 20px 0;
   font-weight: 300;
   color: #313131;
-  font-family: "Open Sans", sans-serif;
+  font-family: $gym-text-font-stack;
   line-height: 1.55733em;
 }
 .view-register .login p,
@@ -20004,7 +19934,7 @@ section.outside-app #forgot-password-modal #password-reset h1,
   color: #0075b4;
   font-weight: 400;
   text-decoration: none !important;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .login a:hover,
 .login a:active,
@@ -20215,7 +20145,7 @@ section.outside-app #forgot-password-modal #password-reset h1,
   border-radius: 0;
   display: block;
   height: auto;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-style: normal;
   font-weight: 500;
   color: #313131;
@@ -21751,7 +21681,7 @@ section.outside-app #forgot-password-modal #password-reset header h1 {
   .university-search.entitlement-unenrollment-modal-inner-wrapper
   h1 {
   color: #313131;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-style: italic;
   font-weight: 700;
   letter-spacing: 0;
@@ -22840,8 +22770,7 @@ section.outside-app
   h1
   a {
   color: #313131;
-  font: italic 700 1em/1em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: italic 700 1em/1em $gym-text-font-stack;
   letter-spacing: 0;
   text-shadow: 0 1px rgba(255, 255, 255, 0.6);
   text-transform: none;
@@ -22997,8 +22926,7 @@ section.outside-app
   box-sizing: border-box;
   border-radius: 3px;
   display: block;
-  font: normal 1.2rem/1.6rem "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: normal 1.2rem/1.6rem $gym-text-font-stack;
   letter-spacing: 1px;
   padding: 10px 0;
   text-align: center;
@@ -23216,8 +23144,7 @@ section.outside-app
   border-radius: 3px;
   display: block;
   float: left;
-  font: normal 1.2rem/1.6rem "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: normal 1.2rem/1.6rem $gym-text-font-stack;
   letter-spacing: 1px;
   padding: 10px 0;
   text-align: center;
@@ -23372,8 +23299,7 @@ section.outside-app
   color: rgba(255, 255, 255, 0.8);
   content: "\25B6";
   display: block;
-  font: normal 2em/1em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: normal 2em/1em $gym-text-font-stack;
   left: 50%;
   margin-left: -11px;
   margin-top: -16px;
@@ -23562,7 +23488,7 @@ section.outside-app
   color: #fff;
 }
 .course-info .details {
-  font: normal 1em/1.6em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 1em/1.6em $gym-text-font-stack;
 }
 @media (min-width: 768px) {
   .course-info .details {
@@ -23646,7 +23572,7 @@ section.outside-app .course-info .details h1 {
   .teacher
   h3 {
   color: #313131;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-weight: 700;
   margin-bottom: 15px;
   text-transform: none;
@@ -23726,7 +23652,7 @@ section.outside-app .course-info .details h1 {
   .syllabus
   ul
   li {
-  font: normal 1em/1.6em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 1em/1.6em $gym-text-font-stack;
 }
 .course-info .details .inner-wrapper .prerequisites ul ul,
 .course-info
@@ -23820,7 +23746,7 @@ section.outside-app .course-info .details h1 {
   .faq
   .response
   h3 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -23882,7 +23808,7 @@ section.outside-app .course-info .details h1 {
 .course-info .course-sidebar header a.university-name {
   border-right: 1px solid #c8c8c8;
   color: #313131;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-style: italic;
   font-weight: 700;
   display: inline-block;
@@ -23926,7 +23852,7 @@ section.outside-app .course-info .details h1 {
   box-sizing: border-box;
   color: #fff;
   float: right;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: 0.9em;
   font-style: italic;
   left: 50%;
@@ -23963,7 +23889,7 @@ section.outside-app .course-info .details h1 {
   margin-right: 0;
 }
 .course-info .course-sidebar header h1 {
-  font: 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1em $gym-text-font-stack;
   letter-spacing: 0;
   color: #999;
   margin-bottom: 0;
@@ -23990,7 +23916,7 @@ section.outside-app .course-info .details h1 {
 .course-info .course-sidebar .important-dates li .important-dates-item-title {
   color: #646464;
   float: left;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .course-info .course-sidebar .important-dates li .icon {
   float: left;
@@ -24014,7 +23940,7 @@ section.outside-app .course-info .details h1 {
   margin: 20px 0 10px;
   font-size: 0.8em;
   color: #646464;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .container.jobs,
 section.jobs.outside-app,
@@ -24686,7 +24612,7 @@ section.jobs.outside-app .jobs-wrapper .jobs-listing .job h3,
   .job
   h3,
 .view-profile .jobs.badge-set-display .jobs-wrapper .jobs-listing .job h3 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -24708,7 +24634,7 @@ section.jobs.outside-app .jobs-wrapper .jobs-listing .job h4,
   h4,
 .view-profile .jobs.badge-set-display .jobs-wrapper .jobs-listing .job h4 {
   font-size: 1em;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-weight: 700;
   margin-top: 25px;
   margin-bottom: 10px;
@@ -24749,7 +24675,7 @@ section.jobs.outside-app .jobs-wrapper .jobs-listing .job li,
   .job
   li,
 .view-profile .jobs.badge-set-display .jobs-wrapper .jobs-listing .job li {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: 1em;
   line-height: 1.6em;
   color: #3c3c3c;
@@ -24796,14 +24722,14 @@ section.jobs.outside-app .jobs-wrapper .jobs-listing .job li,
 .mediakit a.action-download {
   position: relative;
   color: #0075b4;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   text-decoration: none;
   transition: all 0.1s linear 0s;
 }
 .mediakit a.action-download .note {
   position: relative;
   color: #0075b4;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: 13px;
   text-decoration: none;
   transition: all 0.1s linear 0s;
@@ -24840,7 +24766,7 @@ section.outside-app .mediakit .introduction header h1 {
 .mediakit .introduction header section.outside-app h1 .org-name,
 section.outside-app .mediakit .introduction header h1 .org-name {
   color: #b2b5b9;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   text-transform: none;
 }
 .mediakit .introduction article {
@@ -24860,7 +24786,7 @@ section.outside-app .mediakit .introduction header h1 .org-name {
 }
 .mediakit .introduction aside h3 {
   padding: 10px 15px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-weight: bold;
   font-size: 16px;
   letter-spacing: 0;
@@ -24912,7 +24838,7 @@ section.outside-app .mediakit .library header h1 {
   padding: 0;
   color: #333;
   font-size: 16px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-weight: bold;
   letter-spacing: 0;
 }
@@ -25023,7 +24949,7 @@ section.about.outside-app > nav a,
 .home .about.container.grey > nav a {
   border-bottom: 3px solid transparent;
   color: #646464;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-style: italic;
   display: inline-block;
   letter-spacing: 1px;
@@ -25929,7 +25855,7 @@ section.about.outside-app .faq .responses .response h3,
   h3,
 .view-profile .about.wrapper-profile-sections .faq .responses .response h3,
 .view-profile .about.badge-set-display .faq .responses .response h3 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -26076,7 +26002,7 @@ section.about.outside-app .press .press-story .press-info header h3,
   .press-info
   header
   h3 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-weight: 700;
   margin-bottom: 5px;
 }
@@ -26323,7 +26249,7 @@ section.about.outside-app .contact .contacts ul li,
 .pressrelease .home .container.grey li,
 .home .pressrelease .container.grey li {
   color: #313131;
-  font: normal 1em/1.6em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 1em/1.6em $gym-text-font-stack;
   margin: 0;
 }
 .pressrelease .container li a,
@@ -26348,7 +26274,7 @@ section.about.outside-app .contact .contacts ul li,
 .view-profile .pressrelease .badge-set-display li a,
 .pressrelease .home .container.grey li a,
 .home .pressrelease .container.grey li a {
-  font: 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1em $gym-text-font-stack;
 }
 .pressrelease .container li + li,
 .pressrelease section.outside-app li + li,
@@ -26498,7 +26424,7 @@ section.about.outside-app .contact .contacts ul li,
 .view-profile .pressrelease .badge-set-display figure figcaption,
 .pressrelease .home .container.grey figure figcaption,
 .home .pressrelease .container.grey figure figcaption {
-  font: normal 0.8em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 0.8em/1em $gym-text-font-stack;
   padding: 5px;
 }
 .pressrelease .container figure figcaption a,
@@ -26525,7 +26451,7 @@ section.about.outside-app .contact .contacts ul li,
 .view-profile .pressrelease .badge-set-display figure figcaption a,
 .pressrelease .home .container.grey figure figcaption a,
 .home .pressrelease .container.grey figure figcaption a {
-  font: normal 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 1em $gym-text-font-stack;
 }
 .pressrelease .container p + h2,
 .pressrelease section.outside-app p + h2,
@@ -27137,7 +27063,7 @@ section.outside-app ul,
 section.outside-app form {
   max-width: 600px;
   margin: 0 auto;
-  font: normal 1em/1.6em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: normal 1em/1.6em $gym-text-font-stack;
 }
 section.outside-app li {
   margin-top: 12px;
@@ -27218,7 +27144,7 @@ section.outside-app
 .static-container.help section.questions .responses .response h3 {
   background: url("/static/images/bullet-closed.bc57a77c0245.png") no-repeat
     left 0.25em;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-weight: 700;
   margin-bottom: 10px;
   padding-left: 20px;
@@ -27228,7 +27154,7 @@ section.outside-app
   display: none;
   color: #3c3c3c;
   padding-left: 16px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .static-container.help section.questions .responses .response .answer li {
   line-height: 1.6em;
@@ -27455,7 +27381,7 @@ section.outside-app .view-survey form h1 {
   .account-settings-section-message
   .alert-message {
   color: #292b2c;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   position: relative;
   padding: 10px 10px 10px 35px;
   border: 1px solid transparent;
@@ -28478,13 +28404,13 @@ section.outside-app .view-survey form h1 {
 section.outside-app .login-register-content h1 {
   margin-top: 20px;
   letter-spacing: normal;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   color: #065683;
 }
 .login-register-content h3 {
   margin: 0;
   letter-spacing: normal;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   color: #111;
 }
 .login-register-content a {
@@ -28540,7 +28466,7 @@ section.outside-app .login-register-content h1 {
   box-sizing: border-box;
   font-size: 35px;
   padding: 0 10px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-weight: 600;
   text-align: left;
   margin-bottom: 0;
@@ -28551,7 +28477,7 @@ section.outside-app .login-register-content h1 {
   box-sizing: border-box;
   font-size: 24px;
   padding: 0 10px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-weight: 400;
 }
 .login-register .section-title,
@@ -28727,7 +28653,7 @@ section.outside-app
 .login-register .form-label,
 .financial-assistance-wrapper .financial-assistance-form .form-label {
   font-size: 16px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-weight: 600;
 }
 .login-register .form-label,
@@ -28737,7 +28663,7 @@ section.outside-app
 .login-register .action-label,
 .financial-assistance-wrapper .financial-assistance-form .action-label {
   font-size: 13px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .login-register .form-field,
 .financial-assistance-wrapper .financial-assistance-form .form-field {
@@ -28785,7 +28711,7 @@ section.outside-app
   height: auto;
   line-height: 1.5em;
   border-radius: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-style: normal;
   font-weight: 500;
 }
@@ -28931,7 +28857,7 @@ section.outside-app
   font-weight: 400;
   text-decoration: none;
   text-shadow: none;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .login-register .form-field .field-link:hover,
 .financial-assistance-wrapper
@@ -29345,7 +29271,7 @@ section.outside-app
   .financial-assistance-form
   .status
   .message-title {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   margin: 0 0 5px 0;
   font-weight: 600;
 }
@@ -29357,7 +29283,7 @@ section.outside-app
   .status
   .message-copy
   p {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   margin: 0 !important;
   padding: 0;
 }
@@ -29533,7 +29459,7 @@ section.outside-app
 }
 .tos-modal .modal-content .header h1#modal-header-text {
   float: left;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: 1.125rem;
   font-weight: bold;
   margin-bottom: 0;
@@ -29601,7 +29527,7 @@ body.open-modal {
   transform-origin: 50% 50%;
 }
 .verification-process {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .verification-process * {
   box-sizing: border-box;
@@ -29625,7 +29551,7 @@ section.outside-app .verification-process h1,
 .verification-process input,
 .verification-process select,
 .verification-process textarea {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   color: #6f7074;
 }
 .verification-process .copy p,
@@ -29657,7 +29583,7 @@ section.outside-app .verification-process h1,
   padding: 10px;
 }
 .verification-process label {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-style: normal;
   color: #050505;
 }
@@ -33550,7 +33476,7 @@ section.outside-app .empty-cart h1 {
 }
 .courses-container .courses .course .course-info {
   height: 200px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .courses-container .courses .course .course-info h2,
 .courses-container
@@ -33573,7 +33499,7 @@ section.outside-app .empty-cart h1 {
   p,
 .courses-container .courses .course .course-info section.outside-app h1,
 section.outside-app .courses-container .courses .course .course-info h1 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .courses-container .courses .course .course-info .course-organization,
 .courses-container .courses .course .course-info .course-code,
@@ -33967,7 +33893,7 @@ section.outside-app .contact-us-wrapper h1 {
 }
 .contact-us-wrapper input[type="text"] {
   font-size: 14px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-style: normal;
   font-weight: 400;
 }
@@ -34010,7 +33936,7 @@ section.outside-app .contact-us-wrapper h1 {
   background: #fff;
   padding-right: 10px;
   padding-left: 10px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .wrapper-authorize h1 {
   margin-bottom: 0;
@@ -34411,13 +34337,13 @@ section.outside-app #api-access-wrapper h1 {
 .text-me-fragment section.outside-app h1,
 section.outside-app .text-me-fragment h1 {
   letter-spacing: normal;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   color: #065683;
 }
 .text-me-fragment h3 {
   margin: 0;
   letter-spacing: normal;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   color: #111;
 }
 .text-me-fragment form {
@@ -34445,7 +34371,7 @@ section.outside-app .text-me-fragment h1 {
   height: auto;
   line-height: 1.5em;
   border-radius: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-style: normal;
   font-weight: 400;
   display: block;
@@ -34918,7 +34844,7 @@ section.outside-app .text-me-fragment h1 {
   .profile-section-one-fields
   .u-field
   .u-field-value-readonly {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   color: #000;
 }
 .view-profile
@@ -34996,7 +34922,7 @@ section.outside-app .text-me-fragment h1 {
 .view-profile .wrapper-profile-section-container-two {
   float: left;
   padding-left: 20px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   flex-grow: 1;
 }
 @media (max-width: 768px) {
@@ -35041,8 +34967,7 @@ section.outside-app .text-me-fragment h1 {
   margin-bottom: 5px;
   color: #2f2f2f;
   width: 100%;
-  font: 600 1.4em/1.4em "Open Sans", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 600 1.4em/1.4em $gym-text-font-stack;
 }
 .view-profile .wrapper-profile-section-container-two .u-field-value {
   width: 100%;
@@ -35459,7 +35384,7 @@ section.outside-app .text-me-fragment h1 {
   display: block;
 }
 .dashboard-search-bar label {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   color: #313131;
   font-size: 13px;
   font-style: normal;
@@ -35467,7 +35392,7 @@ section.outside-app .text-me-fragment h1 {
 .dashboard-search-bar .search-field {
   background: #fff;
   box-shadow: 0 1px 0 0 #fff, inset 0 0 3px 0 rgba(0, 0, 0, 0.05);
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-style: normal;
 }
 .dashboard-search-results {
@@ -38363,8 +38288,7 @@ button.close-modal:focus,
   color: #f2f8fb !important;
   cursor: pointer;
   background: #008100 none repeat scroll 0% 0% / auto padding-box border-box !important;
-  font: normal normal 600 normal 15px / normal "Open Sans", "Helvetica Neue",
-    Helvetica, Arial, sans-serif;
+  font: normal normal 600 normal 15px / normal $gym-text-font-stack;
   padding: 7px;
   transition: color 0.25s ease-in-out 0s, background 0.25s ease-in-out 0s,
     box-shadow 0.25s ease-in-out 0s;
@@ -38986,8 +38910,7 @@ div.xmodule_display.xmodule_CapaModule
   div.problem
   div
   span.ui-icon-close:before {
-  font: 900 2.4em/1 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 2.4em/1 $gym-font-stack;
   content: "×";
   color: #f33;
 }
@@ -38996,8 +38919,7 @@ div.xmodule_display.xmodule_CapaModule
   div.problem
   div
   span.ui-icon-check:before {
-  font: 900 1.4em/1 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 1.4em/1 $gym-font-stack;
   content: "✔";
   color: #3c3;
   display: block;
@@ -39183,8 +39105,7 @@ div.xmodule_display.xmodule_CapaModule
   .choicetextgroup
   section.choicetextgroup_incorrect:before {
   position: absolute;
-  font: 900 2.4em/1 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 2.4em/1 $gym-font-stack;
   content: "×";
   color: #f33;
   margin-top: 2px;
@@ -39215,8 +39136,7 @@ div.xmodule_display.xmodule_CapaModule
   .choicetextgroup
   section.choicetextgroup_correct:before {
   position: absolute;
-  font: 900 1.4em/1 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 1.4em/1 $gym-font-stack;
   content: "✔";
   color: #3c3;
   margin-top: 7px;
@@ -39302,7 +39222,7 @@ div.xmodule_display.xmodule_CapaModule
 }
 div.xmodule_display.xmodule_CapaModule div.problem label {
   display: block;
-  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1em/1.5 $gym-text-font-stack;
   color: #444;
   margin-top: 0;
   margin-left: 1.6em;
@@ -39334,8 +39254,7 @@ div.xmodule_display.xmodule_CapaModule
   .solution-span
   > span
   p:first-child {
-  font: 900 1em/1.3 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 1em/1.3 $gym-font-stack;
   color: #222;
   letter-spacing: 0.02em;
   word-spacing: 0.02em;
@@ -39344,14 +39263,13 @@ div.xmodule_display.xmodule_CapaModule
   margin-bottom: 1em;
 }
 div.xmodule_display.xmodule_CapaModule div.problem .solution-span > span p {
-  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1em/1.5 $gym-text-font-stack;
   color: #444;
   margin-top: 0.84em;
   margin-left: 0;
 }
 div.xmodule_display.xmodule_CapaModule div.problem-progress {
-  font: 1em/1.5 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 1em/1.5 $gym-font-stack;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   word-spacing: 0.02em;
@@ -39359,8 +39277,7 @@ div.xmodule_display.xmodule_CapaModule div.problem-progress {
 }
 div.xmodule_display.xmodule_CapaModule div.problem > div > strong {
   display: block;
-  font: bold 1.2em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: bold 1.2em/1.4 $gym-font-stack;
   color: #222;
   letter-spacing: 0.02em;
   word-spacing: 0.04em;
@@ -39394,8 +39311,7 @@ div.xmodule_display.xmodule_CapaModule div.problem div span.ui-icon-close {
 .course-content .bookmark-button {
   border: 0;
   background: #f89820;
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
   font-weight: bold;
   font-size: 1em;
   color: #fff;
@@ -39442,7 +39358,7 @@ div.xmodule_display.xmodule_CapaModule div.problem div span.ui-icon-close {
   padding: 0;
 }
 .find-courses p {
-  font: 1.2em/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1.2em/1.4 $gym-text-font-stack;
   color: #444;
 }
 .find-courses .course-menu ul {
@@ -39456,8 +39372,7 @@ div.xmodule_display.xmodule_CapaModule div.problem div span.ui-icon-close {
 }
 .find-courses .course-menu a {
   display: inline-block;
-  font: bold 1.2em/1.2 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: bold 1.2em/1.2 $gym-font-stack;
   color: #222;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -39502,8 +39417,7 @@ div.xmodule_display.xmodule_CapaModule div.problem div span.ui-icon-close {
   width: 100% !important;
 }
 .find-courses .course-overview h1 {
-  font: 900 2em/1.2 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 2em/1.2 $gym-font-stack;
   color: #222;
   letter-spacing: 0.04em;
   word-spacing: 0.05em;
@@ -39512,8 +39426,7 @@ div.xmodule_display.xmodule_CapaModule div.problem div span.ui-icon-close {
   margin-top: -1.1em;
 }
 .find-courses .course-overview p.hero {
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
   font-size: 1.6em;
   line-height: 1.4;
   padding-bottom: 1em;
@@ -39534,13 +39447,12 @@ div.xmodule_display.xmodule_CapaModule div.problem div span.ui-icon-close {
   padding: 1.2em;
 }
 .find-courses .course-item figcaption .gym-button b {
-  font: bold 1.4em/1 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: bold 1.4em/1 $gym-font-stack;
   letter-spacing: 0.025em;
   vertical-align: text-top;
 }
 .find-courses .course-item p {
-  font: 1em/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1em/1.4 $gym-text-font-stack;
   color: #262626;
   margin-top: 0.5em;
 }
@@ -39553,8 +39465,7 @@ div.xmodule_display.xmodule_CapaModule div.problem div span.ui-icon-close {
   margin-top: 1em;
 }
 .find-courses .course-item dt {
-  font: 900 1em/1.2 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 1em/1.2 $gym-font-stack;
   color: #222;
   letter-spacing: 0.06em;
   word-spacing: 0.05em;
@@ -39568,7 +39479,7 @@ div.xmodule_display.xmodule_CapaModule div.problem div span.ui-icon-close {
   margin-top: 0.3em;
 }
 .find-courses .course-item dd span {
-  font: 1em/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1em/1.4 $gym-text-font-stack;
   color: #222;
 }
 .find-courses .course-item article {
@@ -39592,8 +39503,7 @@ section.outside-app .find-courses .sidebar h1,
 .home > header .title > .heading-group .find-courses .course-overview p,
 .find-courses .course-overview section.outside-app h1,
 section.outside-app .find-courses .course-overview h1 {
-  font: 900 1em/1.3 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 1em/1.3 $gym-font-stack;
   color: #222;
   letter-spacing: 0.02em;
   word-spacing: 0.02em;
@@ -39605,8 +39515,7 @@ section.outside-app .find-courses .course-overview h1 {
   overflow: hidden;
 }
 .find-courses .sidebar h1 {
-  font: bold 1.4em/1.1 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: bold 1.4em/1.1 $gym-font-stack;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
@@ -39623,7 +39532,7 @@ section.outside-app .find-courses .course-overview h1 {
 .find-courses .sidebar dd,
 .find-courses .course-overview p,
 .find-courses .course-overview li {
-  font: 1.15em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1.15em/1.5 $gym-text-font-stack;
   color: #444;
 }
 .find-courses .join-gymnasium {
@@ -40684,8 +40593,7 @@ section.outside-app div.course-wrapper .course-index .accordion,
   .course-index
   .accordion,
 .view-profile .badge-set-display div.course-wrapper .course-index .accordion {
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
   background-color: #444;
 }
 .container
@@ -40765,8 +40673,7 @@ section.outside-app
   .accordion
   .course-navigation
   .group-heading {
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
 }
 .container
   div.course-wrapper
@@ -40897,8 +40804,7 @@ section.outside-app
   .chapter-menu
   .menu-item
   .accordion-nav {
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
 }
 .container
   div.course-wrapper
@@ -41508,8 +41414,7 @@ section.outside-app
   .menu-item
   .accordion-nav
   h6 {
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
 }
 .container
   div.course-wrapper
@@ -42140,7 +42045,7 @@ section.outside-app div.info-wrapper,
   border-radius: 2px;
   margin-bottom: 0px;
   border: 1px solid #ccc;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .container div.info-wrapper p,
 section.outside-app div.info-wrapper p,
@@ -42153,7 +42058,7 @@ section.outside-app div.info-wrapper p,
 .view-profile .wrapper-profile-sections div.info-wrapper p,
 .view-profile .badge-set-display div.info-wrapper p,
 .home .container.grey div.info-wrapper p {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .container div.info-wrapper section.updates,
 section.outside-app div.info-wrapper section.updates,
@@ -42275,8 +42180,7 @@ section.outside-app div.info-wrapper section.updates header.hero p,
   section.updates
   header.hero
   p {
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
   font-size: 1.6em;
   line-height: 1.5;
   letter-spacing: 0.01em;
@@ -42495,8 +42399,7 @@ section.outside-app div.info-wrapper section.updates article section h1,
   article
   section.outside-app
   h1 {
-  font: 900 1em/1.3 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 1em/1.3 $gym-font-stack;
   color: #222;
   letter-spacing: 0.06em;
   word-spacing: 0.04em;
@@ -42528,8 +42431,7 @@ section.outside-app div.info-wrapper section.updates article section h3,
   article
   section
   h3 {
-  font: bold 1.2em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: bold 1.2em/1.4 $gym-font-stack;
   color: #222;
   letter-spacing: 0.02em;
   word-spacing: 0.04em;
@@ -42596,8 +42498,7 @@ section.outside-app div.info-wrapper section.handouts h1,
 .view-profile .wrapper-profile-sections div.info-wrapper section.handouts h1,
 .view-profile .badge-set-display div.info-wrapper section.handouts h1 {
   padding: 10px 0 0px 0;
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
   font-weight: 600;
 }
 .container div.info-wrapper section.handouts dt,
@@ -42611,8 +42512,7 @@ section.outside-app div.info-wrapper section.handouts dt,
   dt,
 .view-profile .wrapper-profile-sections div.info-wrapper section.handouts dt,
 .view-profile .badge-set-display div.info-wrapper section.handouts dt {
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
   font-weight: 600;
 }
 .course-title {
@@ -42622,8 +42522,7 @@ section.outside-app div.info-wrapper section.handouts dt,
   margin-top: 0px;
 }
 .course-title h1 {
-  font: 900 1.8em/1.2 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 1.8em/1.2 $gym-font-stack;
   color: #fff;
   letter-spacing: 0.05em;
   word-spacing: 0.05em;
@@ -42647,8 +42546,7 @@ section.outside-app .course h1,
 .course h4,
 .course h5,
 .course h6 {
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
   font-weight: 900;
 }
 .course .course-info {
@@ -42683,8 +42581,7 @@ section.outside-app .course h1,
 }
 .course .hero-banner h1 {
   color: white;
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
   text-align: center;
 }
 .course .hero-banner img {
@@ -42695,8 +42592,7 @@ section.outside-app .course h1,
   padding: 2.2em;
 }
 .course .course-metabar strong {
-  font: 1.4em/1.2 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 1.4em/1.2 $gym-font-stack;
   color: #ccc;
 }
 .course .level strong {
@@ -42714,8 +42610,7 @@ section.outside-app .course h1,
 .home > header .title > .heading-group .final-exam-status p,
 .final-exam-status section.outside-app h1,
 section.outside-app .final-exam-status h1 {
-  font: 900 1.8em/1.1 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 1.8em/1.1 $gym-font-stack;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   text-align: center;
@@ -42731,8 +42626,7 @@ section.outside-app .final-exam-status h1 + p {
 }
 .final-exam-status p {
   margin-top: 1em;
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
   font-size: 1.2em;
   line-height: 1.5;
 }
@@ -42742,8 +42636,7 @@ section.outside-app .final-exam-status h1 + p {
   margin-top: 1.4em;
 }
 .course-about-overview .hero p {
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
   font-size: 1.6em;
   line-height: 1.5;
   letter-spacing: 0.01em;
@@ -42760,15 +42653,14 @@ section.outside-app .final-exam-status h1 + p {
 .course-about a,
 .course-about a:link,
 .course-about a:visited {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .course-about h2,
 .course-about .home > header .title > .heading-group p,
 .home > header .title > .heading-group .course-about p,
 .course-about section.outside-app h1,
 section.outside-app .course-about h1 {
-  font: 900 1.2em/1.3 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 1.2em/1.3 $gym-font-stack;
   color: #222;
   letter-spacing: 0.06em;
   word-spacing: 0.04em;
@@ -42777,8 +42669,7 @@ section.outside-app .course-about h1 {
   margin-top: 1em;
 }
 .course-about h3 {
-  font: bold 1.2em/1.4 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: bold 1.2em/1.4 $gym-font-stack;
   color: #222;
   letter-spacing: 0.02em;
   word-spacing: 0.04em;
@@ -42822,7 +42713,7 @@ section.outside-app .discussion-body .blank-slate .label,
   color: black;
 }
 span.field-help {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 html body.discussion .course-tabs .right .new-post-btn {
   margin-top: 0.2em;
@@ -42884,8 +42775,7 @@ section.dashboard.outside-app,
 }
 #dashboard-main.course-content .my-courses h1,
 #dashboard-main.course-content .profile-sidebar h1 {
-  font: 900 1.8em/1.2 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 1.8em/1.2 $gym-font-stack;
   color: #222;
   letter-spacing: 0.02em;
   word-spacing: 0.02em;
@@ -42900,8 +42790,7 @@ section.dashboard.outside-app,
   letter-spacing: 0.04em;
 }
 #dashboard-main.course-content .my-courses h1 {
-  font: 900 1.8em/1.2 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 1.8em/1.2 $gym-font-stack;
   color: #222;
   letter-spacing: 0.02em;
   word-spacing: 0.02em;
@@ -42938,8 +42827,7 @@ section.dashboard.outside-app,
   p,
 #dashboard-main.course-content .profile-sidebar section.outside-app h1,
 section.outside-app #dashboard-main.course-content .profile-sidebar h1 {
-  font: 900 1em/1.3 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 1em/1.3 $gym-font-stack;
   color: #222;
   letter-spacing: 0.06em;
   word-spacing: 0.04em;
@@ -42958,12 +42846,11 @@ section.outside-app #dashboard-main.course-content .profile-sidebar h1 {
 #dashboard-main.course-content .profile-sidebar .user-info .status,
 #dashboard-main.course-content .profile-sidebar .user-info .proivder,
 #dashboard-main.course-content .profile-sidebar .user-info .control {
-  font: 0.96em/1.2 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 0.96em/1.2 $gym-text-font-stack;
 }
 #dashboard-main.course-content .profile-sidebar .user-info .title {
   display: block;
-  font: bold 1.2em/1.2 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: bold 1.2em/1.2 $gym-font-stack;
   color: #222;
   letter-spacing: 0.04em;
   word-spacing: 0.04em;
@@ -43174,8 +43061,7 @@ body * .entitlement-unenrollment-modal textarea {
   top: -1.2em;
   left: 1.4em;
   content: "Beta";
-  font: 900 1em/1.2 "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font: 900 1em/1.2 $gym-font-stack;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -43230,8 +43116,7 @@ section.outside-app .subsection h1,
 .subsection h4,
 .subsection h5,
 .subsection h6 {
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
   letter-spacing: 0.06em;
   word-spacing: 0.04em;
 }
@@ -43293,7 +43178,7 @@ section.outside-app .home > header .header-title h1 {
   font-weight: bold;
 }
 .home > header .header-title .gym-button a:link {
-  font: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: $gym-font-stack;
 }
 .home header {
   border-bottom: #ebebeb;
@@ -43366,8 +43251,7 @@ section.outside-app .home > header .header-title h1 {
   text-transform: uppercase;
   font-size: 42pt;
   font-weight: bold;
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
 }
 .home #join-gymnasium em a:hover,
 .home #join-gymnasium em a:link:hover {
@@ -43603,8 +43487,7 @@ section.outside-app .home .container-fluid h1 {
 .home .quote {
   display: inline-block;
   position: relative;
-  font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  font-family: $gym-font-stack;
   color: #aaa;
   letter-spacing: 0.025em;
   vertical-align: middle;
@@ -43615,7 +43498,7 @@ section.outside-app .home .container-fluid h1 {
   position: absolute;
   top: 0;
   bottom: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: 19em;
   line-height: 0.35;
   color: #ddd;
@@ -43654,7 +43537,7 @@ section.outside-app .home .container-fluid h1 {
   line-height: 0.9;
 }
 .home .quote figcaption {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   font-size: small;
   font-style: italic;
   font-weight: bold;
