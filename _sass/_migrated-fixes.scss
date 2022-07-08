@@ -60,7 +60,7 @@
 
 // Courseware Tab Navigation
 .wrapper-course-material {
-  margin: 0 15px;
+  margin: 0 auto;
   padding: 0;
   border-bottom: none;
 }
@@ -134,9 +134,23 @@
     .course-navigation {
       .group-heading {
         font-family: $gym-font-stack;
+        position: relative;
+        display: block;
+        padding: 15px 20px 15px 40px;
+        text-align: left;
+        font-size: 16px;
+        line-height: 23.68px;
 
-        &.active .icon.fa {
+        &.active .icon {
           color: #f89820;
+        }
+
+        .icon {
+          position: absolute;
+          left: 20px;
+          top: 20px;
+          font-size: 0.875em;
+          color: #c8c8c8;
         }
       }
 
@@ -154,7 +168,13 @@
             }
 
             .accordion-nav {
-              h1, h2, h3, h4, h5, h6, p {
+              h1,
+              h2,
+              h3,
+              h4,
+              h5,
+              h6,
+              p {
                 font-family: $gym-font-stack;
               }
             }
@@ -164,7 +184,7 @@
               background: inherit;
               border: none;
             }
-            
+
             .subtitle {
               display: none;
             }
