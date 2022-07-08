@@ -283,7 +283,7 @@ main h3 {
 
     .tutorial {
       display: grid;
-      grid-auto-rows: auto 1fr auto;
+      grid-auto-rows: auto 1fr auto auto;
       padding: 0 1em 1.2em;
       border: 1px solid $gym-gray-2;
       border-radius: 0 0 3px 3px;
@@ -618,6 +618,28 @@ details.take5--transcript {
 .tutorial .artwork img,
 .take5--recommended .artwork img {
   @extend %tutorial-artwork-img;
+}
+
+// --- course type / skill level ---
+.tutorial {
+  footer {
+      padding-left: 1em;
+      padding-right: 1em;
+      border-top: 1px dashed $gym-gray-2;
+      margin-top: 1em;
+      margin-left: -1em;
+      margin-right: -1em;
+      overflow: hidden;
+
+      p {
+        float: left;
+        font-size: 0.9625em;
+      }
+
+      p:last-child {
+        float: right;
+      }
+    }
 }
 
 // --- catalog view ---

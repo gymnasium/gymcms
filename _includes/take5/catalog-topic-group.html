@@ -32,9 +32,13 @@
         </header>
         <div class="cta cta-left">
           <a class="gym-button" href="{{ item.title | slugify | prepend: base_path }}">
-            <b>Watch Tutorial</b>
+            <b>Watch Video</b>
           </a>
         </div>
+        <footer>
+          <p><b>{{ item.course_type | replace: 'take5', 'Tutorial' }}</b></p>
+          <p>{{ item.skill_level }}</p>
+        </footer>
       </article>
     </li>
 
