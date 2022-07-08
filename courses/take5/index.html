@@ -115,9 +115,13 @@ permalink: /courses/take5/
                 <p class="description">{{ featured_description }}</p>
                 <div class="cta cta-left">
                   <a class="gym-button" href="{{ featured_url }}">
-                    <b>Watch Tutorial</b>
+                    <b>Watch Video</b>
                   </a>
                 </div>
+                <footer>
+                  <p><b>{{ item.course_type | replace: 'take5', 'Tutorial' }}</b></p>
+                  <p>{{ item.skill_level }}</p>
+                </footer>
               </article><!-- .tutorial -->
             </div><!-- .take5--featured -->
           </div><!-- .col-md-8 -->
