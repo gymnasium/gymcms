@@ -282,19 +282,22 @@ main h3 {
     }
 
     .tutorial {
+      display: grid;
+      grid-auto-rows: auto 1fr auto;
       padding: 0 1em 1.2em;
       border: 1px solid $gym-gray-2;
       border-radius: 0 0 3px 3px;
-
-      header {
-        margin-top: 1em;
-      }
 
       .artwork {
         border: 0;
         border-bottom: 1px solid $gym-gray-2;
         margin-left: -1em;
         margin-right: -1em;
+      }
+
+      header {
+        align-self: start;
+        margin-top: 1em;
       }
     }
   }
@@ -490,8 +493,6 @@ main h3 {
   font-size: 1em;
   margin-top: .5rem;
 }
-
-
 
 .subhead-datetime time b {
   display: inline-block;
@@ -717,6 +718,11 @@ details.take5--transcript {
 
 .cta {
   margin-top: 1.2em;
+}
+
+.take5--catalog-section .cta {
+  align-self: end;
+  margin-top: 0.4em;
 }
 
 // back to top
