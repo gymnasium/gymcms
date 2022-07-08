@@ -158,8 +158,9 @@
         background-color: inherit;
 
         .chapter-menu {
-          padding-left: 30px;
-          padding: 0 14px;
+
+          display: none;
+          padding: 0 14px 0 30px;
           overflow: hidden;
 
           .menu-item {
@@ -181,6 +182,7 @@
               background: inherit;
               border: none;
               position: relative;
+              left: 16px;
               display: block;
               padding: 5px 10px;
               border-radius: 0;
@@ -209,8 +211,14 @@
         }
       }
 
-      .button-chapter.active .group-heading {
-        color: #ebebeb;
+      .button-chapter {
+        &:hover {
+          border: none;
+        }
+
+        &.active .group-heading {
+          color: #ebebeb;
+        }
       }
 
       p.subtitle {
