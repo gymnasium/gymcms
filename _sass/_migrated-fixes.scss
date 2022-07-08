@@ -177,6 +177,14 @@
             }
 
             .accordion-nav {
+
+              background: inherit;
+              border: none;
+              position: relative;
+              display: block;
+              padding: 5px 10px;
+              border-radius: 0;
+
               h1,
               h2,
               h3,
@@ -246,6 +254,14 @@
 // Course Wrapper
 .course-wrapper main {
   padding: 20px;
+
+  .hd-1, .hd-2, .hd-3, .hd-4, .hd-5, .hd-6, .hd-7, .hd-8 {
+    margin: 0;
+    font-weight: 400;
+    font-size: inherit;
+    line-height: inherit;
+    color: #474747;
+  }
 }
 
 .wrap-instructor-info .instructor-info-action {
