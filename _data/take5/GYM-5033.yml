@@ -7,6 +7,7 @@ url: /courses/take5/GYM-5033/
 poster_art: /img/take5/posters/gym-5033.jpg
 live: true
 instructor: "Ethan Marcotte"
+instructor_bio: ""
 topic: "Development"
 subtopics:
   - label: "Accessibility"

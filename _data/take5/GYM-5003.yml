@@ -5,10 +5,10 @@ date: 2019-10-30T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5003/
 poster_art: /img/take5/posters/gym-5003.jpg
-topic: "Development"
-permalink: /courses/take5/:name
 live: true
 instructor: "Jeremy Osborn"
+instructor_bio: ""
+topic: "Development"
 video_ID: SaO2hO-4yEY
 video_duration: "4:13"
 featured: false
