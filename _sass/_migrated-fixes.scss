@@ -318,6 +318,42 @@
 // Exam Fixes
 .course-content {
   .problem {
+
+    // exam submit buttons
+    .action {
+      margin-top: 20px;
+      min-height: 20px;
+      width: 100%;
+      display: flex;
+      display: -ms-flexbox;
+      -ms-flex-align: start;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .submit-attempt-container {
+        padding-bottom: 20px;
+        flex-grow: 1;
+      }
+
+      .submission-feedback {
+        margin-right: 10px;
+        margin-top: 10px;
+        display: inline-block;
+        color: #5e5e5e;
+        font-size: 0.9em;
+        -webkit-font-smoothing: antialiased;
+        vertical-align: middle;
+      }
+      .problem-action-button-wrapper {
+        border-right: 1px solid #f2f2f2;
+        display: inline-block;
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+
     ul, ol {
       padding: 0 0 0 40px;
     }
