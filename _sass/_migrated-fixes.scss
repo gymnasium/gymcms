@@ -318,9 +318,15 @@
 // Exam Fixes
 .course-content {
   .problem {
+    ul, ol {
+      padding: 0 0 0 40px;
+    }
+
     ul {
       padding-left: 1em;
       list-style: disc outside none;
+      margin-bottom: 1.41575em;
+      margin-left: 0.75rem;
 
       li {
         margin-bottom: 0.70788em;
@@ -393,13 +399,14 @@
       margin-top: 0.84em;
       margin-left: 0;
     }
-    div.xmodule_display.xmodule_CapaModule div.problem-progress {
+    .problem-progress {
       font: 1em/1.5 $gym-font-stack;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       word-spacing: 0.02em;
       color: #222;
     }
+
     > div > strong {
       display: block;
       font: bold 1.2em/1.4 $gym-font-stack;
@@ -411,6 +418,7 @@
       border-top: 1px solid #ddd;
       margin-top: 1.5em;
     }
+    
     div span.incorrect,
     div span.incomplete,
     div span.ui-icon-close {
