@@ -1681,6 +1681,11 @@ https://github.com/gymnasium/tracker/issues/143
   .problem-progress {
     font: bold 1em $gym-text-font-stack;
     margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    word-spacing: 0.02em;
+    color: #222;
+    display: inline-block;
   }
 
   .problem-progress + * + main .message:not([hidden]),
