@@ -378,7 +378,7 @@
       padding: 5px;
       font-size: 0.85em;
     }
-    
+
     .solution-span > span {
       background: #ebebeb;
       padding: 1.8em;
@@ -386,10 +386,10 @@
       border-radius: 2px;
       margin: 20px 0;
       display: block;
-      position: relative
+      position: relative;
 
       &:empty {
-        display: none
+        display: none;
       }
 
       p {
