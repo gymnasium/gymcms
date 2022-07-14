@@ -195,6 +195,37 @@
   }
 }
 
+.view-discussion-home .home-helpgrid {
+  border-bottom: none;
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 15%);
+}
+
+.view-discussion-home .helpgrid-row {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.view-discussion-home .helpgrid-row .row-title {
+  padding: 30px 20px;
+  background-color: #dedede;
+  font-size: 0.75rem;
+}
+
+.view-discussion-home .helpgrid-row .row-item-full, .view-discussion-home .helpgrid-row .row-item {
+  font-size: 0.75rem;
+  padding: 0 10px;
+  width: 26%;
+  vertical-align: middle;
+}
+
+.view-discussion-home .helpgrid-row .row-item-full .icon, .view-discussion-home .helpgrid-row .row-item .icon {
+  padding: 0 10px;
+  font-size: 24px;
+  vertical-align: middle;
+  display: table-cell;
+}
+
 /* ---
 Discussion Forum Related
 TODO: migrate discussion CSS out of theme
