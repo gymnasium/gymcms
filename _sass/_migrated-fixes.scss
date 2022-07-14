@@ -320,6 +320,7 @@
 
   ul, ol {
     padding: 0 0 0 40px;
+    margin: 1em 0;
   }
 
   ul {
@@ -363,30 +364,27 @@
         -webkit-font-smoothing: antialiased;
         vertical-align: middle;
       }
+
       .problem-action-button-wrapper {
         border-right: 1px solid #f2f2f2;
         display: inline-block;
+
         &:last-child {
           border: none;
         }
       }
     }
 
-    fieldset input[type="radio"],
-    fieldset input[type="checkbox"],
-    .choicegroup input[type="radio"],
-    .choicegroup input[type="checkbox"],
-    .choicetextgroup input[type="radio"],
-    .choicetextgroup input[type="checkbox"] {
+    input[type="radio"],
+    input[type="checkbox"] {
       position: relative;
       left: -1em;
       font-size: 1.8em;
       margin-right: -0.8em;
       top: 1px;
     }
-    fieldset fieldset,
-    .choicegroup fieldset,
-    .choicetextgroup fieldset {
+
+    fieldset {
       padding-left: 0;
       border: none;
       margin-bottom: 1.2em;
@@ -401,9 +399,11 @@
       margin-left: 1.6em;
       width: 100%;
     }
+
     pre {
       padding: 1em;
     }
+
     pre code {
       font-size: 1em;
       font-family: monospace;
@@ -412,6 +412,7 @@
       font-size: 1em;
       font-family: monospace;
     }
+    
     code {
       padding: 5px;
       font-size: 0.85em;

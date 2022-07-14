@@ -25136,8 +25136,7 @@ section.outside-app .login-register-content h1 {
 .login-register-content a {
   text-decoration: underline;
 }
-.login-register,
-.financial-assistance-wrapper .financial-assistance-form {
+.login-register {
   background: #fff;
   min-height: 100%;
   margin: 0 auto;
@@ -25146,26 +25145,16 @@ section.outside-app .login-register-content h1 {
   display: block;
   max-width: 500px;
 }
-.login-register >,
-.financial-assistance-wrapper .financial-assistance-form > {
-  box-sizing: border-box;
-}
-.login-register input:-webkit-autofill,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  input:-webkit-autofill {
+
+.login-register input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 50px white inset;
   -webkit-text-fill-color: #333;
 }
-.login-register input:-webkit-autofill:focus,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  input:-webkit-autofill:focus {
+.login-register input:-webkit-autofill:focus {
   -webkit-box-shadow: white, 0 0 0 50px white inset;
   -webkit-text-fill-color: #333;
 }
-.login-register .header,
-.financial-assistance-wrapper .financial-assistance-form .header {
+.login-register .header {
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
@@ -25175,14 +25164,12 @@ section.outside-app .login-register-content h1 {
   padding-bottom: 35px;
   overflow: hidden;
 }
-.login-register .header:after,
-.financial-assistance-wrapper .financial-assistance-form .header:after {
+.login-register .header:after {
   content: "";
   display: table;
   clear: both;
 }
-.login-register .header .headline,
-.financial-assistance-wrapper .financial-assistance-form .header .headline {
+.login-register .header .headline {
   box-sizing: border-box;
   font-size: 35px;
   padding: 0 10px;
@@ -25192,29 +25179,23 @@ section.outside-app .login-register-content h1 {
   margin-bottom: 0;
   color: #009ee7;
 }
-.login-register .header .tagline,
-.financial-assistance-wrapper .financial-assistance-form .header .tagline {
+.login-register .header .tagline {
   box-sizing: border-box;
   font-size: 24px;
   padding: 0 10px;
   font-family: $gym-text-font-stack;
   font-weight: 400;
 }
-.login-register .section-title,
-.financial-assistance-wrapper .financial-assistance-form .section-title {
+.login-register .section-title {
   position: relative;
   margin: 20px 0 10px;
 }
-.login-register .section-title.lines,
-.financial-assistance-wrapper .financial-assistance-form .section-title.lines {
+.login-register .section-title.lines {
   margin-bottom: 20px;
   margin-top: 20px;
   text-align: center;
 }
-.login-register .section-title.lines::after,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .section-title.lines::after {
+.login-register .section-title.lines::after {
   position: absolute;
   left: 0;
   top: 50%;
@@ -25224,11 +25205,7 @@ section.outside-app .login-register-content h1 {
   content: "";
   z-index: 5;
 }
-.login-register .section-title.lines .text,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .section-title.lines
-  .text {
+.login-register .section-title.lines .text {
   position: relative;
   top: -1px;
   z-index: 6;
@@ -25237,197 +25214,99 @@ section.outside-app .login-register-content h1 {
   font-size: 20px;
 }
 .login-register .section-title h2,
-.financial-assistance-wrapper .financial-assistance-form .section-title h2,
 .login-register .section-title .home > header .title > .heading-group p,
-.home > header .title > .heading-group .login-register .section-title p,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .section-title
-  .home
-  > header
-  .title
-  > .heading-group
-  p,
-.home
-  > header
-  .title
-  > .heading-group
-  .financial-assistance-wrapper
-  .financial-assistance-form
-  .section-title
-  p,
-.login-register .section-title section.outside-app h1,
-section.outside-app .login-register .section-title h1,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .section-title
-  section.outside-app
-  h1,
-section.outside-app
-  .financial-assistance-wrapper
-  .financial-assistance-form
-  .section-title
-  h1 {
+.home > header .title > .heading-group .login-register .section-title p {
   text-align: center;
   text-transform: none;
 }
-.login-register .nav-btn,
-.financial-assistance-wrapper .financial-assistance-form .nav-btn,
-.login-register .button-secondary-login,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .button-secondary-login {
+
+.login-register .nav-btn {
   width: 100%;
   height: 40px;
   text-transform: none;
   text-shadow: none;
   letter-spacing: normal;
 }
-.login-register .form-type,
-.financial-assistance-wrapper .financial-assistance-form .form-type,
-.login-register .toggle-form,
-.financial-assistance-wrapper .financial-assistance-form .toggle-form {
+.login-register .form-type {
   box-sizing: border-box;
   max-width: 600px;
   min-width: 250px;
   margin: 0 auto;
 }
-.login-register .note,
-.financial-assistance-wrapper .financial-assistance-form .note {
+.login-register .note {
   display: block;
   margin: 10px 10px 0 10px;
   color: #97999b;
   text-align: center;
 }
-.login-register .form-wrapper,
-.financial-assistance-wrapper .financial-assistance-form .form-wrapper {
+.login-register .form-wrapper {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.login-register .form-wrapper form,
-.financial-assistance-wrapper .financial-assistance-form .form-wrapper form {
+.login-register .form-wrapper form {
   clear: both;
 }
-.login-register .form-wrapper form:after,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-wrapper
-  form:after {
+.login-register .form-wrapper form:after {
   content: "";
   display: table;
   clear: both;
 }
-.login-register .form-wrapper .login-providers,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-wrapper
-  .login-providers {
+.login-register .form-wrapper .login-providers {
   text-align: center;
 }
 .login-register .login-form:focus,
-.financial-assistance-wrapper .financial-assistance-form .login-form:focus,
 .login-register .password-reset-form:focus,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .password-reset-form:focus,
-.login-register .register-form:focus,
-.financial-assistance-wrapper .financial-assistance-form .register-form:focus {
+.login-register .register-form:focus {
   outline: none;
 }
 .login-register .login-form div[class*="hidden-"],
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-form
-  div[class*="hidden-"],
 .login-register .password-reset-form div[class*="hidden-"],
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .password-reset-form
-  div[class*="hidden-"],
-.login-register .register-form div[class*="hidden-"],
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .register-form
-  div[class*="hidden-"] {
+.login-register .register-form div[class*="hidden-"] {
   margin: 0;
   display: none;
 }
 .login-register .login-form .auto-register-message,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-form
-  .auto-register-message,
 .login-register .password-reset-form .auto-register-message,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .password-reset-form
-  .auto-register-message,
-.login-register .register-form .auto-register-message,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .register-form
-  .auto-register-message {
+.login-register .register-form .auto-register-message {
   font-size: 1.1em;
   line-height: 1.3em;
 }
-.login-register .form-label,
-.financial-assistance-wrapper .financial-assistance-form .form-label {
+.login-register .form-label {
   font-size: 16px;
   font-family: $gym-text-font-stack;
   font-weight: 600;
 }
-.login-register .form-label,
-.financial-assistance-wrapper .financial-assistance-form .form-label {
+.login-register .form-label {
   padding: 0 0 0 5px;
 }
-.login-register .action-label,
-.financial-assistance-wrapper .financial-assistance-form .action-label {
+.login-register .action-label {
   font-size: 13px;
   font-family: $gym-text-font-stack;
 }
-.login-register .form-field,
-.financial-assistance-wrapper .financial-assistance-form .form-field {
+.login-register .form-field {
   clear: both;
   position: relative;
   width: 100%;
   margin: 10px 0 0 0;
 }
-.login-register .form-field:after,
-.financial-assistance-wrapper .financial-assistance-form .form-field:after {
+.login-register .form-field:after {
   content: "";
   display: table;
   clear: both;
 }
-.login-register .form-field.select-year_of_birth,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field.select-year_of_birth {
+.login-register .form-field.select-year_of_birth {
   margin-left: 15px;
 }
 .login-register .form-field.select-gender,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field.select-gender,
-.login-register .form-field.select-year_of_birth,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field.select-year_of_birth {
+.login-register .form-field.select-year_of_birth {
   display: inline-block;
   width: calc(50% - 10px);
 }
 .login-register .form-field label,
-.financial-assistance-wrapper .financial-assistance-form .form-field label,
 .login-register .form-field input,
-.financial-assistance-wrapper .financial-assistance-form .form-field input,
 .login-register .form-field select,
-.financial-assistance-wrapper .financial-assistance-form .form-field select,
 .login-register .form-field textarea,
-.financial-assistance-wrapper .financial-assistance-form .form-field textarea,
-.login-register .form-field .plaintext-field,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  .plaintext-field {
+.login-register .form-field .plaintext-field {
   height: auto;
   line-height: 1.5em;
   border-radius: 0;
@@ -25436,60 +25315,20 @@ section.outside-app
   font-weight: 500;
 }
 .login-register .form-field label.focus-in,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  label.focus-in,
 .login-register .form-field input.focus-in,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  input.focus-in,
 .login-register .form-field select.focus-in,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  select.focus-in,
 .login-register .form-field textarea.focus-in,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  textarea.focus-in,
-.login-register .form-field .plaintext-field.focus-in,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  .plaintext-field.focus-in {
+.login-register .form-field .plaintext-field.focus-in {
   position: relative;
   padding-top: 0;
   padding-left: 0;
   opacity: 1;
 }
 .login-register .form-field label.focus-out,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  label.focus-out,
 .login-register .form-field input.focus-out,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  input.focus-out,
 .login-register .form-field select.focus-out,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  select.focus-out,
 .login-register .form-field textarea.focus-out,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  textarea.focus-out,
-.login-register .form-field .plaintext-field.focus-out,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  .plaintext-field.focus-out {
+.login-register .form-field .plaintext-field.focus-out {
   position: absolute;
   padding-top: 5px;
   padding-left: 9px;
@@ -25497,73 +25336,35 @@ section.outside-app
   z-index: 1;
 }
 .login-register .form-field label a,
-.financial-assistance-wrapper .financial-assistance-form .form-field label a,
 .login-register .form-field input a,
-.financial-assistance-wrapper .financial-assistance-form .form-field input a,
 .login-register .form-field select a,
-.financial-assistance-wrapper .financial-assistance-form .form-field select a,
 .login-register .form-field textarea a,
-.financial-assistance-wrapper .financial-assistance-form .form-field textarea a,
-.login-register .form-field .plaintext-field a,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  .plaintext-field
-  a {
+.login-register .form-field .plaintext-field a {
   z-index: 1;
 }
-.login-register .form-field #login-remember,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  #login-remember {
+.login-register .form-field #login-remember {
   line-height: 0;
   height: auto;
 }
-.login-register .form-field label,
-.financial-assistance-wrapper .financial-assistance-form .form-field label {
+.login-register .form-field label {
   display: block;
   margin: 0;
   color: #000;
 }
-.login-register .form-field label.inline,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  label.inline {
+.login-register .form-field label.inline {
   display: inline;
 }
 .login-register .form-field label[for="register-data_sharing_consent"],
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  label[for="register-data_sharing_consent"],
 .login-register .form-field label[for="register-honor_code"],
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  label[for="register-honor_code"],
-.login-register .form-field label[for="register-terms_of_service"],
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  label[for="register-terms_of_service"] {
+.login-register .form-field label[for="register-terms_of_service"] {
   display: inline-block;
   margin: 5px 5px 0 0;
   vertical-align: top;
 }
-.login-register .form-field label[for="login-remember"],
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  label[for="login-remember"] {
+.login-register .form-field label[for="login-remember"] {
   display: inline-block;
 }
-.login-register .form-field .field-link,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  .field-link {
+.login-register .form-field .field-link {
   display: block;
   margin-bottom: 10px;
   margin-top: 5px;
@@ -25580,23 +25381,12 @@ section.outside-app
   font-family: $gym-text-font-stack;
 }
 .login-register .form-field .field-link:hover,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  .field-link:hover,
-.login-register .form-field .field-link:focus,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  .field-link:focus {
+.login-register .form-field .field-link:focus {
   text-decoration: underline;
 }
 .login-register .form-field input,
-.financial-assistance-wrapper .financial-assistance-form .form-field input,
 .login-register .form-field select,
-.financial-assistance-wrapper .financial-assistance-form .form-field select,
-.login-register .form-field textarea,
-.financial-assistance-wrapper .financial-assistance-form .form-field textarea {
+.login-register .form-field textarea {
   display: block;
   height: 32px;
   width: 100%;
@@ -25604,141 +25394,51 @@ section.outside-app
   padding: 0 10px;
 }
 .login-register .form-field input.long,
-.financial-assistance-wrapper .financial-assistance-form .form-field input.long,
 .login-register .form-field select.long,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  select.long,
-.login-register .form-field textarea.long,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  textarea.long {
+.login-register .form-field textarea.long {
   width: 100%;
 }
 .login-register .form-field input.short,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  input.short,
 .login-register .form-field select.short,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  select.short,
-.login-register .form-field textarea.short,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  textarea.short {
+.login-register .form-field textarea.short {
   width: 25%;
 }
 .login-register .form-field input.checkbox,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  input.checkbox,
 .login-register .form-field select.checkbox,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  select.checkbox,
-.login-register .form-field textarea.checkbox,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  textarea.checkbox {
+.login-register .form-field textarea.checkbox {
   display: inline;
   width: auto;
   height: auto;
   margin-right: 5px;
 }
 .login-register .form-field input.checkbox + label,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  input.checkbox
-  + label,
 .login-register .form-field select.checkbox + label,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  select.checkbox
-  + label,
-.login-register .form-field textarea.checkbox + label,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  textarea.checkbox
-  + label {
+.login-register .form-field textarea.checkbox + label {
   display: inline;
 }
 .login-register .form-field input.error,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  input.error,
 .login-register .form-field select.error,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  select.error,
-.login-register .form-field textarea.error,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  textarea.error {
+.login-register .form-field textarea.error {
   border-color: #b20610;
 }
 .login-register .form-field input.success,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  input.success,
 .login-register .form-field select.success,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  select.success,
-.login-register .form-field textarea.success,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  textarea.success {
+.login-register .form-field textarea.success {
   border-color: #008100;
 }
-.login-register .form-field textarea.error,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  textarea.error,
-.login-register .form-field select.error,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  select.error {
+.login-register .form-field textarea.error
+.login-register .form-field select.error {
   outline-color: #b20610;
 }
 .login-register .form-field textarea.success,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  textarea.success,
-.login-register .form-field select.success,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  select.success {
+.login-register .form-field select.success {
   outline-color: #008100;
 }
-.login-register .form-field textarea,
-.financial-assistance-wrapper .financial-assistance-form .form-field textarea {
+.login-register .form-field textarea {
   resize: none;
   height: 100px;
 }
-.login-register .form-field select,
-.financial-assistance-wrapper .financial-assistance-form .form-field select {
+.login-register .form-field select {
   background: transparent;
   opacity: 0.85;
   border: none;
@@ -25746,77 +25446,45 @@ section.outside-app
   cursor: pointer;
 }
 .login-register .form-field select:active,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  select:active,
-.login-register .form-field select:focus,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  select:focus {
+.login-register .form-field select:focus {
   outline: auto;
 }
 .login-register .form-field span.error,
-.financial-assistance-wrapper .financial-assistance-form .form-field span.error,
-.login-register .form-field label.error,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  label.error {
+.login-register .form-field label.error {
   color: #b20610;
 }
 .login-register .form-field span.success,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  span.success,
-.login-register .form-field label.success,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  label.success {
+.login-register .form-field label.success {
   color: #008100;
 }
 .login-register .form-field .tip,
-.financial-assistance-wrapper .financial-assistance-form .form-field .tip,
-.login-register .form-field .label-optional,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  .label-optional {
+.login-register .form-field .label-optional {
   color: #414141;
 }
-.login-register .form-field .tip,
-.financial-assistance-wrapper .financial-assistance-form .form-field .tip {
+.login-register .form-field .tip {
   display: block;
 }
-.login-register .input-block,
-.financial-assistance-wrapper .financial-assistance-form .input-block {
+.login-register .input-block {
   width: 100%;
 }
-.login-register .input-inline,
-.financial-assistance-wrapper .financial-assistance-form .input-inline {
+.login-register .input-inline {
   display: inline;
 }
-.login-register .desc,
-.financial-assistance-wrapper .financial-assistance-form .desc {
+.login-register .desc {
   transition: color 0.15s ease-in-out 0s;
   display: block;
   margin-top: 5px;
   color: #646464;
   font-size: 0.8125em;
 }
-.login-register .action-primary,
-.financial-assistance-wrapper .financial-assistance-form .action-primary {
+.login-register .action-primary {
   padding: 1ex 1em;
   text-transform: none;
   font-weight: 600;
   letter-spacing: normal;
   margin-top: 20px;
 }
-.login-register .login-provider,
-.financial-assistance-wrapper .financial-assistance-form .login-provider {
+.login-register .login-provider {
   padding: 0 0 0 40px;
   text-align: left;
   position: relative;
@@ -25828,8 +25496,7 @@ section.outside-app
   text-shadow: none;
   text-transform: none;
 }
-.login-register .login-provider .icon,
-.financial-assistance-wrapper .financial-assistance-form .login-provider .icon {
+.login-register .login-provider .icon {
   left: 0;
   position: absolute;
   top: -1px;
@@ -25840,260 +25507,139 @@ section.outside-app
   text-align: center;
   color: #fff;
 }
-.login-register .login-provider span,
-.financial-assistance-wrapper .financial-assistance-form .login-provider span {
+.login-register .login-provider span {
   color: inherit;
 }
 .login-register .login-provider:hover,
-.financial-assistance-wrapper .financial-assistance-form .login-provider:hover,
-.login-register .login-provider:focus,
-.financial-assistance-wrapper .financial-assistance-form .login-provider:focus {
+.login-register .login-provider:focus {
   background-image: none;
 }
 .login-register .login-provider:hover .icon,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider:hover
-  .icon,
-.login-register .login-provider:focus .icon,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider:focus
-  .icon {
+.login-register .login-provider:focus .icon {
   top: 0;
   bottom: 0;
   line-height: 33px;
 }
-.login-register .login-provider.button-oa2-google-oauth2,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-google-oauth2 {
+.login-register .login-provider.button-oa2-google-oauth2 {
   color: #d73924;
 }
-.login-register .login-provider.button-oa2-google-oauth2 .icon,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-google-oauth2
-  .icon {
+.login-register .login-provider.button-oa2-google-oauth2 .icon {
   background: #d73924;
 }
 .login-register .login-provider.button-oa2-google-oauth2:hover,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-google-oauth2:hover,
-.login-register .login-provider.button-oa2-google-oauth2:focus,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-google-oauth2:focus {
+.login-register .login-provider.button-oa2-google-oauth2:focus {
   background-color: #d73924;
   border: 1px solid #a5382b;
   color: #fff;
 }
-.login-register .login-provider.button-oa2-facebook,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-facebook {
+.login-register .login-provider.button-oa2-facebook {
   color: #3b5998;
 }
-.login-register .login-provider.button-oa2-facebook .icon,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-facebook
-  .icon {
+.login-register .login-provider.button-oa2-facebook .icon {
   background: #3b5998;
 }
 .login-register .login-provider.button-oa2-facebook:hover,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-facebook:hover,
-.login-register .login-provider.button-oa2-facebook:focus,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-facebook:focus {
+.login-register .login-provider.button-oa2-facebook:focus {
   background-color: #3b5998;
   border: 1px solid #263a62;
   color: #fff;
 }
-.login-register .login-provider.button-oa2-linkedin-oauth2,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-linkedin-oauth2 {
+.login-register .login-provider.button-oa2-linkedin-oauth2 {
   color: #0077b5;
 }
-.login-register .login-provider.button-oa2-linkedin-oauth2 .icon,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-linkedin-oauth2
-  .icon {
+.login-register .login-provider.button-oa2-linkedin-oauth2 .icon {
   background: #0077b5;
 }
 .login-register .login-provider.button-oa2-linkedin-oauth2:hover,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-linkedin-oauth2:hover,
-.login-register .login-provider.button-oa2-linkedin-oauth2:focus,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-linkedin-oauth2:focus {
+.login-register .login-provider.button-oa2-linkedin-oauth2:focus {
   background-color: #0077b5;
   border: 1px solid #06527d;
   color: #fff;
 }
-.login-register .login-provider.button-oa2-azuread-oauth2,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-azuread-oauth2 {
+.login-register .login-provider.button-oa2-azuread-oauth2 {
   color: #000;
 }
-.login-register .login-provider.button-oa2-azuread-oauth2 .icon,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-azuread-oauth2
-  .icon {
+.login-register .login-provider.button-oa2-azuread-oauth2 .icon {
   background: #000;
 }
-.login-register .login-provider.button-oa2-azuread-oauth2:hover,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-azuread-oauth2:hover,
-.login-register .login-provider.button-oa2-azuread-oauth2:focus,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .login-provider.button-oa2-azuread-oauth2:focus {
+.login-register .login-provider.button-oa2-azuread-oauth2:hover
+.login-register .login-provider.button-oa2-azuread-oauth2:focus {
   background-color: #000;
   border: 1px solid #000;
   color: #fff;
 }
-.login-register .button-secondary-login,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .button-secondary-login {
+.login-register .button-secondary-login {
   border-color: #c8c8c8;
   padding: 0;
   height: 35px;
 }
-.login-register .button-secondary-login:hover,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .button-secondary-login:hover {
+.login-register .button-secondary-login:hover {
   border-color: #126f9a;
 }
-.login-register .status,
-.financial-assistance-wrapper .financial-assistance-form .status {
+.login-register .status {
   box-sizing: border-box;
   margin: 0 0 25px 0;
   border-bottom: 3px solid #cbad1c;
   padding: 25px;
   background: #e8cd4c;
 }
-.login-register .status .message-title,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .status
-  .message-title {
+.login-register .status .message-title {
   font-family: $gym-text-font-stack;
   margin: 0 0 5px 0;
   font-weight: 600;
 }
 .login-register .status .message-copy,
-.financial-assistance-wrapper .financial-assistance-form .status .message-copy,
-.login-register .status .message-copy p,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .status
-  .message-copy
-  p {
+.login-register .status .message-copy p {
   font-family: $gym-text-font-stack;
   margin: 0 !important;
   padding: 0;
 }
 .login-register .status .message-copy li,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .status
-  .message-copy
-  li,
-.login-register .status .message-copy p li,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .status
-  .message-copy
-  p
-  li {
+.login-register .status .message-copy p li {
   margin: 0 0 5px 20px;
 }
-.login-register .status.account-activation .message-copy,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .status.account-activation
-  .message-copy {
+.login-register .status.account-activation .message-copy {
   padding: 0 1em !important;
 }
-.login-register .status.account-activation.info,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .status.account-activation.info {
+.login-register .status.account-activation.info {
   background-color: #f2f8fb;
   border: #cce3f0 1px solid;
   color: #f89820;
 }
-.login-register .status.account-activation.success,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .status.account-activation.success {
+.login-register .status.account-activation.success {
   background-color: #ecfaec;
   border: #b9edb9 1px solid;
   color: #008100;
 }
-.login-register .status.account-activation.error,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .status.account-activation.error {
+.login-register .status.account-activation.error {
   background-color: #feeced;
   border: #ebccd1 1px solid;
   color: #b20610 1px solid;
 }
 .login-register .submission-error,
-.financial-assistance-wrapper .financial-assistance-form .submission-error,
-.login-register .system-error,
-.financial-assistance-wrapper .financial-assistance-form .system-error {
+.login-register .system-error {
   box-shadow: inset 0 -1px 2px 0 #f3dadb;
   border-bottom: 3px solid #a0050e;
   background: #fbf3f3;
 }
 .login-register .submission-error .message-title,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .submission-error
-  .message-title,
-.login-register .system-error .message-title,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .system-error
-  .message-title {
+.login-register .system-error .message-title {
   color: #a0050e !important;
 }
-.login-register .submission-success,
-.financial-assistance-wrapper .financial-assistance-form .submission-success {
+.login-register .submission-success {
   box-shadow: inset 0 -1px 2px 0 #d9ecd9;
   border-bottom: 3px solid #007400;
   background: #f2f9f2;
 }
-.login-register .submission-success .message-title,
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .submission-success
-  .message-title {
+.login-register .submission-success .message-title {
   color: #007400 !important;
 }
 @media screen and (max-width: 330px) {
-  .login-register .form-type,
-  .financial-assistance-wrapper .financial-assistance-form .form-type {
+  .login-register .form-type {
     width: 98%;
     margin: 0 1%;
   }
-  .login-register .login-provider,
-  .financial-assistance-wrapper .financial-assistance-form .login-provider {
+  .login-register .login-provider {
     width: 100%;
     margin: 10px 0;
   }
@@ -26125,28 +25671,6 @@ section.outside-app
 }
 .supplemental-link {
   margin: 1rem 0;
-}
-.enterprise-content {
-  display: inline-block;
-  text-align: left;
-  vertical-align: top;
-  max-width: 500px;
-}
-.enterprise-content .centered-div {
-  margin: 0 auto;
-  margin-right: 0;
-  float: right;
-}
-.enterprise-content img {
-  height: 100px;
-}
-.enterprise-content p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #474747;
-}
-.enterprise-content p:first-of-type {
-  margin-top: 20px;
 }
 .tos-modal {
   background-color: rgba(0, 0, 0, 0.25);
@@ -26245,2259 +25769,6 @@ body.open-modal {
 .is-expandable.is-expanded .expandable-icon {
   transform: rotate(0);
   transform-origin: 50% 50%;
-}
-.verification-process {
-  font-family: $gym-text-font-stack;
-}
-.verification-process * {
-  box-sizing: border-box;
-}
-.verification-process h1,
-.verification-process h2,
-.verification-process .home > header .title > .heading-group p,
-.home > header .title > .heading-group .verification-process p,
-.verification-process section.outside-app h1,
-section.outside-app .verification-process h1,
-.verification-process h3,
-.verification-process h4,
-.verification-process h5,
-.verification-process h6 {
-  color: #050505;
-}
-.verification-process p,
-.verification-process ol,
-.verification-process ul,
-.verification-process dl,
-.verification-process input,
-.verification-process select,
-.verification-process textarea {
-  font-family: $gym-text-font-stack;
-  color: #6f7074;
-}
-.verification-process .copy p,
-.verification-process .copy ul,
-.verification-process .copy li,
-.verification-process .copy dl,
-.verification-process .copy blockquote,
-.verification-process .copy input,
-.verification-process .copy select {
-  margin-bottom: 15px;
-}
-.verification-process .copy p:last-child,
-.verification-process .copy ul:last-child,
-.verification-process .copy li:last-child,
-.verification-process .copy dl:last-child,
-.verification-process .copy blockquote:last-child,
-.verification-process .copy input:last-child,
-.verification-process .copy select:last-child {
-  margin-bottom: 0;
-}
-.verification-process input,
-.verification-process textarea {
-  font-style: normal;
-  font-weight: 400;
-  margin-right: 4px;
-  padding: 5px 10px;
-}
-.verification-process textarea {
-  padding: 10px;
-}
-.verification-process label {
-  font-family: $gym-text-font-stack;
-  font-style: normal;
-  color: #050505;
-}
-.verification-process .header-global-new .nav-global a {
-  padding-bottom: 21px;
-}
-.verification-process .header-global {
-  height: 76px;
-}
-.verification-process button,
-.verification-process input[type="submit"],
-.verification-process input[type="button"],
-.verification-process button[type="submit"] {
-  font-size: 16px;
-  text-transform: none;
-  text-shadow: none;
-  letter-spacing: 0;
-}
-.verification-process .checkbox label {
-  display: inline-block;
-}
-.verification-process input[type="checkbox"] {
-  width: auto;
-}
-.verification-process .content-wrapper {
-  background: #fff;
-  padding-bottom: 0;
-}
-.verification-process .container,
-.verification-process section.outside-app,
-.verification-process
-  .view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .verification-process
-  .u-field-account_privacy,
-.verification-process .view-profile .wrapper-profile-sections,
-.view-profile .verification-process .wrapper-profile-sections,
-.verification-process .view-profile .badge-set-display,
-.view-profile .verification-process .badge-set-display,
-.verification-process .home .container.grey,
-.home .verification-process .container.grey {
-  background-color: #fff;
-  padding: 30px 30px 40px 30px;
-}
-.verification-process .action-primary {
-  border: 0 !important;
-  color: #fff !important;
-}
-.verification-process .action-primary-blue {
-  border: 0 !important;
-  color: #fff !important;
-}
-.verification-process .action-confirm {
-  border: 0 !important;
-  color: #fff !important;
-}
-.verification-process .wrapper-report .report {
-  width: 100%;
-  border-color: rgba(138, 140, 143, 0.75);
-  border-collapse: collapse;
-}
-.verification-process .wrapper-report .report tr {
-  text-align: left;
-}
-.verification-process .wrapper-report .report td {
-  vertical-align: middle;
-  padding: 15px 20px;
-  color: #646668;
-}
-.verification-process .wrapper-report .report th {
-  padding: 10px 20px;
-}
-.verification-process .wrapper-report .report thead tr {
-  border-bottom: 1px solid #b1b2b4;
-}
-.verification-process .wrapper-report .report thead th[scope="col"] {
-  vertical-align: middle;
-  color: #646668;
-  background: #f5f5f5;
-}
-.verification-process .wrapper-report .report tbody tr {
-  border-bottom: 1px solid #b1b2b4;
-}
-.verification-process .wrapper-report .report tfoot {
-  background: rgba(0, 117, 180, 0.125);
-}
-.verification-process .report-receipt-provider {
-  padding: 15px 20px;
-}
-.verification-process .report-receipt-provider .provider-wrapper {
-  width: 70%;
-  float: left;
-}
-.verification-process
-  .report-receipt-provider
-  .provider-wrapper
-  .provider-info {
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-.verification-process .report-receipt-provider .provider-buttons-logos {
-  float: right;
-  text-align: center;
-}
-.verification-process
-  .report-receipt-provider
-  .provider-buttons-logos
-  .provider-logo
-  img {
-  max-width: 160px;
-  margin-bottom: 10px;
-}
-.verification-process
-  .report-receipt-provider
-  .provider-buttons-logos
-  .complete-order {
-  text-align: center;
-}
-.verification-process
-  .report-receipt-provider
-  .provider-buttons-logos
-  .complete-order
-  button {
-  white-space: nowrap;
-}
-.verification-process .help-item .title {
-  margin-bottom: 5px;
-}
-.verification-process .help-item strong {
-  color: #707276;
-}
-.verification-process .wrapper-msg {
-  margin-bottom: 30px;
-  border-bottom: 5px solid #0075b4;
-  padding: 20px 30px;
-  background: #f2f8fb;
-}
-.verification-process .wrapper-msg .msg {
-  max-width: 1180px;
-  min-width: 760px;
-  width: 100%;
-  margin: 0 auto;
-}
-.verification-process .wrapper-msg .msg:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process .wrapper-msg .msg-content,
-.verification-process .wrapper-msg .msg-icon {
-  display: block;
-  float: left;
-}
-.verification-process .wrapper-msg .msg-content {
-  width: 91.4702%;
-}
-.verification-process .wrapper-msg .msg-icon {
-  width: 6.17215%;
-  margin-right: 2.35765%;
-  text-align: center;
-  color: #0075b4;
-}
-.verification-process .wrapper-msg-error {
-  border-bottom-color: #b20610;
-  background: #fbf3f3;
-}
-.verification-process .wrapper-msg-error .msg-icon {
-  color: #b20610;
-}
-.verification-process .wrapper-msg-error .msg-content .title {
-  color: #b20610;
-}
-.verification-process .wrapper-msg-activate {
-  border-bottom-color: #c2387d;
-  background: #fcf5f9;
-}
-.verification-process .wrapper-msg-activate .msg-icon {
-  color: #c2387d;
-}
-.verification-process .wrapper-msg-activate .msg-content .title {
-  color: #c2387d;
-}
-.verification-process .msg-inline.msg-error .copy,
-.verification-process .msg-inline.msg-error .copy p {
-  color: #b20610;
-}
-.verification-process .page-header {
-  width: 100%;
-  margin-bottom: 0;
-  border-bottom: none;
-}
-.verification-process .page-header .title {
-  width: 100%;
-  margin: 0;
-}
-.verification-process .page-header .title:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process .page-header .title .sts-course,
-.verification-process .page-header .title .sts-track {
-  display: inline-block;
-  vertical-align: middle;
-}
-.verification-process .page-header .title .sts-track {
-  width: 23.23176%;
-  text-align: right;
-}
-.verification-process .page-header .title .sts-track .sts-track-value {
-  display: inline-block;
-  background: #66b366;
-  color: #fff;
-  font-weight: 600;
-}
-.verification-process .page-header .title .sts-track .sts-track-value .context {
-  opacity: 0.8;
-  color: #fff;
-  letter-spacing: 0.1rem;
-}
-.verification-process
-  .page-header
-  .title
-  .sts-track.professional-ed
-  .sts-track-value {
-  background-color: #c2387d;
-}
-.verification-process .page-header .title .sts-label,
-.verification-process .page-header .title .sts-course-org,
-.verification-process .page-header .title .sts-course-number,
-.verification-process .page-header .title .sts-course-name {
-  font-size: 14px;
-  line-height: 20.72px;
-  display: inline-block;
-  color: #767676;
-  text-transform: none;
-}
-.verification-process .page-header .title .sts-label {
-  margin: 0;
-  border: none;
-  padding: 0;
-}
-.verification-process .page-header .title .sts-course {
-  width: initial;
-}
-.verification-process .page-header .title .sts-course-org {
-  margin-right: 0;
-}
-.verification-process .page-header .title .wrapper-sts {
-  display: inline-block;
-  width: 74.41059%;
-  margin-bottom: 5px;
-}
-.verification-process .page-header .title .title .sts-track {
-  display: inline-block;
-}
-.verification-process .page-header .title .title .sts-track .sts-track-value {
-  background: #66b366;
-}
-.verification-process
-  .page-header
-  .title
-  .title
-  .sts-track.professional-ed
-  .sts-track-value {
-  background-color: #c2387d;
-}
-.verification-process .wrapper-progress {
-  position: relative;
-  margin-bottom: 30px;
-}
-.verification-process .progress-sts {
-  height: 5px;
-  width: 5px;
-  position: absolute;
-  top: 43px;
-  left: 7%;
-  display: block;
-  width: 83%;
-  margin: 0 auto;
-  background: #f5f5f5;
-}
-.verification-process .progress-sts .progress-sts-value {
-  width: 0%;
-  height: 100%;
-  display: block;
-  background: #99cd99;
-}
-.verification-process .progress {
-  width: 100%;
-  margin: 0 auto;
-  border-bottom: 5px solid #f5f5f5;
-}
-.verification-process .progress .progress-steps {
-  position: relative;
-  top: 5px;
-  display: table;
-  width: 100%;
-}
-.verification-process .progress .progress-steps:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process .progress .progress-step {
-  position: relative;
-  display: table-cell;
-  height: 120px;
-  padding: 20px 20px 30px 20px;
-  text-align: center;
-}
-.verification-process .progress .progress-step .wrapper-step-number,
-.verification-process .progress .progress-step .step-number,
-.verification-process .progress .progress-step .step-name {
-  display: block;
-}
-.verification-process .progress .progress-step .wrapper-step-number {
-  height: 40px;
-  width: 40px;
-  margin: 0 auto 10px auto;
-  border-radius: 200px;
-  border: 4px solid #f5f5f5;
-  background: #fff;
-}
-.verification-process
-  .progress
-  .progress-step
-  .wrapper-step-number
-  .step-number {
-  line-height: 0px;
-  margin: 16px auto 0 auto;
-  color: #97999b;
-}
-.verification-process .progress .progress-step .step-name {
-  color: #97999b;
-}
-.verification-process .progress .progress-step.progress-step-icon .step-number {
-  margin-top: 10px;
-}
-.verification-process .progress .progress-step.is-completed {
-  border-bottom: 4px solid #66b366;
-}
-.verification-process
-  .progress
-  .progress-step.is-completed
-  .wrapper-step-number {
-  border-color: #66b366;
-}
-.verification-process .progress .progress-step.is-completed .step-number,
-.verification-process .progress .progress-step.is-completed .step-name {
-  color: #b1b2b4;
-}
-.verification-process .progress .progress-step.is-current {
-  border-bottom: 4px solid #1790c7;
-  opacity: 1;
-}
-.verification-process .progress .progress-step.is-current .wrapper-step-number {
-  border-color: #1790c7;
-}
-.verification-process .progress .progress-step.is-current .step-number,
-.verification-process .progress .progress-step.is-current .step-name {
-  color: #646668;
-}
-.verification-process .carousel .carousel-item {
-  opacity: 0;
-}
-.verification-process .carousel .carousel-active {
-  opacity: 1;
-}
-.verification-process .carousel .view {
-  width: 100%;
-}
-.verification-process .carousel .view > .title {
-  color: #1790c7;
-}
-.verification-process .carousel .view .instruction {
-  margin-bottom: 20px;
-}
-.verification-process .carousel .requirements {
-  margin-bottom: 10px;
-  max-width: 1920px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.verification-process .carousel .requirements:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process .carousel .requirements .title {
-  margin-bottom: 10px;
-}
-.verification-process .carousel .requirements .requirement {
-  margin-bottom: 30px;
-  border: 1px solid #e5e5e5;
-  border-top: 5px solid #f4d78a;
-  padding: 10px;
-  box-shadow: 1px 1px 3px #888;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-}
-.verification-process .carousel .requirements .requirement:last-child {
-  margin-bottom: 0;
-}
-.verification-process .carousel .requirements .requirement:last-child {
-  margin-right: 0;
-}
-.verification-process .carousel .wrapper-task {
-  width: 100%;
-  margin: 20px 0;
-}
-.verification-process .carousel .wrapper-task:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process .carousel .wrapper-task .wrapper-help {
-  float: right;
-  width: 48.82117%;
-  padding: 0 20px;
-}
-.verification-process .carousel .wrapper-task .wrapper-help .help {
-  margin-bottom: 30px;
-}
-.verification-process .carousel .wrapper-task .wrapper-help .help:last-child {
-  margin-bottom: 0;
-}
-.verification-process .carousel .wrapper-task .wrapper-help .help .example {
-  color: #a4a6a8;
-}
-.verification-process .carousel .wrapper-task .wrapper-help .help .list-help {
-  margin-top: 10px;
-  color: #000;
-}
-.verification-process
-  .carousel
-  .wrapper-task
-  .wrapper-help
-  .help
-  .list-help
-  .help-item {
-  margin-bottom: 5px;
-  border-bottom: 1px solid #f5f5f5;
-  padding-bottom: 5px;
-}
-.verification-process
-  .carousel
-  .wrapper-task
-  .wrapper-help
-  .help
-  .list-help
-  .help-item:last-child {
-  margin-bottom: 0;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-.verification-process .carousel .wrapper-task .wrapper-help .help .copy-extra {
-  color: #000;
-}
-.verification-process .carousel .wrapper-task .wrapper-help .help .list-faq {
-  margin-bottom: 20px;
-}
-.verification-process .carousel .wrapper-task .task {
-  float: left;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-}
-.verification-process .carousel .wrapper-task .controls {
-  padding: 15px 20px;
-  background: #f5f5f5;
-  text-align: center;
-}
-.verification-process .carousel .wrapper-task .controls .list-controls {
-  position: relative;
-}
-.verification-process .carousel .wrapper-task .controls .control .action,
-.verification-process
-  .carousel
-  .wrapper-task
-  .controls
-  .control
-  .entitlement-actions-wrapper
-  .entitlement-action,
-.entitlement-actions-wrapper
-  .verification-process
-  .carousel
-  .wrapper-task
-  .controls
-  .control
-  .entitlement-action {
-  padding: 10px 15px;
-}
-.verification-process .carousel .wrapper-task .controls .control .action .icon,
-.verification-process
-  .carousel
-  .wrapper-task
-  .controls
-  .control
-  .entitlement-actions-wrapper
-  .entitlement-action
-  .icon,
-.entitlement-actions-wrapper
-  .verification-process
-  .carousel
-  .wrapper-task
-  .controls
-  .control
-  .entitlement-action
-  .icon {
-  padding: 5px 10px;
-  display: block;
-}
-.verification-process .carousel .wrapper-task .controls .control.is-hidden {
-  visibility: hidden;
-}
-.verification-process .carousel .wrapper-task .controls .control.is-shown {
-  visibility: visible;
-}
-.verification-process
-  .carousel
-  .wrapper-task
-  .controls
-  .control.approved
-  .action,
-.verification-process
-  .carousel
-  .wrapper-task
-  .controls
-  .control.approved
-  .entitlement-actions-wrapper
-  .entitlement-action,
-.entitlement-actions-wrapper
-  .verification-process
-  .carousel
-  .wrapper-task
-  .controls
-  .control.approved
-  .entitlement-action {
-  padding: 10px 15px;
-}
-.verification-process .carousel .wrapper-task .controls .control-redo {
-  position: absolute;
-  left: 10px;
-}
-.verification-process .carousel .wrapper-task .controls .control-do,
-.verification-process .carousel .wrapper-task .controls .control-retake {
-  left: 45%;
-}
-.verification-process .carousel .wrapper-task .controls .control-approve {
-  position: absolute;
-  right: 10px;
-}
-.verification-process .carousel .wrapper-task .msg {
-  margin-top: 40px;
-}
-.verification-process .carousel .wrapper-task .msg:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process .carousel .wrapper-task .msg .copy {
-  float: left;
-  width: 65.88078%;
-  margin-right: 2.35765%;
-}
-.verification-process .carousel .wrapper-task .msg .list-actions {
-  position: relative;
-  top: -10px;
-  float: left;
-  width: 31.76157%;
-  text-align: right;
-}
-.verification-process
-  .carousel
-  .wrapper-task
-  .msg
-  .list-actions
-  .action-retakephotos
-  a {
-  font-size: 14px;
-  padding: 10px 15px;
-}
-.verification-process .carousel .wrapper-task .msg-followup {
-  border-top: 2px solid rgba(138, 140, 143, 0.125);
-  padding-top: 20px;
-}
-.verification-process .carousel #wrapper-review {
-  color: #000;
-}
-.verification-process .carousel #wrapper-review .page-title {
-  border-bottom: 2px solid #646668;
-  padding-bottom: 15px;
-  margin-bottom: 20px;
-  text-transform: inherit;
-}
-.verification-process .carousel #wrapper-review .review .certificate {
-  font-size: 18px;
-  background-repeat: no-repeat;
-  padding-left: 50px;
-  overflow: hidden;
-  min-height: 32px;
-}
-.verification-process .carousel #wrapper-review .review .certificate p {
-  line-height: 32.56px;
-  margin-top: 0;
-  color: #000;
-}
-.verification-process .carousel #wrapper-review .review .certificate .purchase {
-  float: right;
-  margin-left: 15px;
-  text-align: right;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review
-  .certificate
-  .purchase
-  .product-info {
-  font-size: 22px;
-  color: #0075b4;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review
-  .certificate.verified_icon {
-  background-image: url("/static/images/icon-sm-verified.d8923fc267da.png");
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review
-  .certificate.no-id-professional_icon,
-.verification-process
-  .carousel
-  #wrapper-review
-  .review
-  .certificate.professional_icon {
-  background-image: url("/static/images/icon-sm-professional.f80f246d188f.png");
-}
-.verification-process .carousel #wrapper-review .review .payment-buttons {
-  overflow: auto;
-  padding-bottom: 5px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review
-  .payment-buttons
-  .payment-button {
-  padding: 8px 20px;
-  min-width: 200px;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review
-  .payment-buttons
-  .action-primary-blue.is-selected {
-  background: #0075b4 !important;
-}
-.verification-process .carousel #wrapper-review .review .border-gray {
-  border-bottom: 2px solid #767676;
-  margin: 22.4px 0;
-}
-.verification-process .carousel #wrapper-review .container,
-.verification-process .carousel #wrapper-review section.outside-app,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .verification-process
-  .carousel
-  #wrapper-review
-  .u-field-account_privacy,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .wrapper-profile-sections,
-.view-profile
-  .verification-process
-  .carousel
-  #wrapper-review
-  .wrapper-profile-sections,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .badge-set-display,
-.view-profile
-  .verification-process
-  .carousel
-  #wrapper-review
-  .badge-set-display {
-  padding: 15px 0;
-}
-.verification-process .carousel #wrapper-review .container p,
-.verification-process .carousel #wrapper-review section.outside-app p,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  p,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .verification-process
-  .carousel
-  #wrapper-review
-  .u-field-account_privacy
-  p,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .wrapper-profile-sections
-  p,
-.view-profile
-  .verification-process
-  .carousel
-  #wrapper-review
-  .wrapper-profile-sections
-  p,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .badge-set-display
-  p,
-.view-profile
-  .verification-process
-  .carousel
-  #wrapper-review
-  .badge-set-display
-  p {
-  line-height: 32.56px;
-  color: #000;
-}
-.verification-process .carousel #wrapper-review .container .photo-requirement,
-.verification-process
-  .carousel
-  #wrapper-review
-  section.outside-app
-  .photo-requirement,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  .photo-requirement,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .verification-process
-  .carousel
-  #wrapper-review
-  .u-field-account_privacy
-  .photo-requirement,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .wrapper-profile-sections
-  .photo-requirement,
-.view-profile
-  .verification-process
-  .carousel
-  #wrapper-review
-  .wrapper-profile-sections
-  .photo-requirement,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .badge-set-display
-  .photo-requirement,
-.view-profile
-  .verification-process
-  .carousel
-  #wrapper-review
-  .badge-set-display
-  .photo-requirement {
-  font-size: 12px;
-  position: relative;
-  padding-left: 40px;
-  margin-top: 15px;
-  background-repeat: no-repeat;
-  background-position: left top;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .container
-  .photo-requirement
-  .fa,
-.verification-process
-  .carousel
-  #wrapper-review
-  section.outside-app
-  .photo-requirement
-  .fa,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  .photo-requirement
-  .fa,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .verification-process
-  .carousel
-  #wrapper-review
-  .u-field-account_privacy
-  .photo-requirement
-  .fa,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .wrapper-profile-sections
-  .photo-requirement
-  .fa,
-.view-profile
-  .verification-process
-  .carousel
-  #wrapper-review
-  .wrapper-profile-sections
-  .photo-requirement
-  .fa,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .badge-set-display
-  .photo-requirement
-  .fa,
-.view-profile
-  .verification-process
-  .carousel
-  #wrapper-review
-  .badge-set-display
-  .photo-requirement
-  .fa {
-  position: absolute;
-  left: 0;
-  color: #ced2db;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .container
-  .photo-requirement
-  h6,
-.verification-process
-  .carousel
-  #wrapper-review
-  section.outside-app
-  .photo-requirement
-  h6,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  .photo-requirement
-  h6,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .verification-process
-  .carousel
-  #wrapper-review
-  .u-field-account_privacy
-  .photo-requirement
-  h6,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .wrapper-profile-sections
-  .photo-requirement
-  h6,
-.view-profile
-  .verification-process
-  .carousel
-  #wrapper-review
-  .wrapper-profile-sections
-  .photo-requirement
-  h6,
-.verification-process
-  .carousel
-  #wrapper-review
-  .view-profile
-  .badge-set-display
-  .photo-requirement
-  h6,
-.view-profile
-  .verification-process
-  .carousel
-  #wrapper-review
-  .badge-set-display
-  .photo-requirement
-  h6 {
-  font-weight: bold;
-  color: #3d4043;
-}
-.verification-process .carousel #wrapper-review .review-task {
-  margin-bottom: 30px;
-  padding: 15px 20px;
-  border-radius: 2px;
-  background: #f5f5f5;
-}
-.verification-process .carousel #wrapper-review .review-task:last-child {
-  margin-bottom: 0;
-}
-.verification-process .carousel #wrapper-review .review-task .copy strong {
-  color: #050505;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos {
-  width: 100%;
-  margin: 20px 0;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos
-  .wrapper-photo {
-  float: left;
-  width: 48.82117%;
-  margin-right: 2.35765%;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos
-  .wrapper-photo:last-child {
-  margin-right: 0;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos
-  .wrapper-photo
-  .placeholder-photo {
-  padding: 15px 20px;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos
-  .wrapper-photo
-  .placeholder-photo
-  img {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos
-  .help-tips {
-  margin-left: 20px;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos
-  .help-tips
-  .list-tips {
-  color: #000;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos
-  .help-tips
-  .list-tips
-  .tip {
-  margin-bottom: 5px;
-  border-bottom: 1px solid rgba(138, 140, 143, 0.125);
-  padding-bottom: 5px;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos
-  .help-tips
-  .list-tips
-  .tip:last-child {
-  margin-bottom: 0;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-.verification-process .carousel #wrapper-review .review-task-name:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process .carousel #wrapper-review .review-task-name .copy {
-  float: left;
-  width: 65.88078%;
-  margin-right: 2.35765%;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-name
-  .list-actions {
-  position: relative;
-  top: -20px;
-  float: left;
-  width: 31.76157%;
-  text-align: right;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-name
-  .list-actions
-  .action-editname
-  a {
-  font-size: 14px;
-  padding: 10px 15px;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-contribution
-  .list-fields {
-  margin: 20px 0;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-contribution
-  .list-fields:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-contribution
-  .list-fields
-  .field {
-  float: left;
-  margin-right: 10px;
-  padding: 10px 15px;
-  background: rgba(138, 140, 143, 0.125);
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-contribution
-  .list-fields
-  .field:last-child {
-  margin-right: 0;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-contribution
-  .list-fields
-  .field-group-other
-  .contribution-option {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5px;
-  padding: 3px 0;
-}
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-contribution
-  .list-fields
-  .field-group-other
-  .contribution-option:last-child {
-  margin-right: 0;
-}
-.verification-process .cam .placeholder-cam {
-  position: relative;
-  width: 95%;
-  height: 375px;
-  margin: 10px auto;
-  background: #f2f8fb;
-}
-.verification-process .cam .placeholder-cam .placeholder-art {
-  opacity: 0.7;
-  z-index: 100;
-}
-.verification-process .cam .placeholder-cam .placeholder-art .copy {
-  position: absolute;
-  top: 40%;
-  margin: 0 40px;
-  text-align: center;
-}
-.verification-process .cam .placeholder-cam video,
-.verification-process .cam .placeholder-cam canvas {
-  position: relative;
-  display: block;
-  height: 100%;
-  width: 100%;
-  z-index: 500;
-}
-.verification-process .cam .controls {
-  height: 80px;
-}
-.verification-process .cam .preview {
-  width: 100%;
-  height: 100%;
-}
-.verification-process .deco-divider {
-  position: relative;
-  display: block;
-  margin: 20px 0 40px;
-  border-top: 4px solid #f5f5f5;
-}
-.verification-process .deco-divider .copy {
-  left: calc(50% - 46px);
-  position: absolute;
-  top: -25px;
-  padding: 10px 30px;
-  background: white;
-  text-align: center;
-  color: #474747;
-}
-.verification-process .nav-wizard {
-  width: 100%;
-  border-radius: 2px;
-  background: #f5f5f5;
-  padding: 15px 20px;
-}
-.verification-process .nav-wizard:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process .nav-wizard .help-inline {
-  float: left;
-  width: 48.82117%;
-  margin: 15px 2.35765% 0 0;
-}
-.verification-process .nav-wizard.is-ready {
-  background: #e6f1f8;
-}
-.verification-process .nav-wizard.is-not-ready {
-  background: #f5f5f5;
-}
-.verification-process .contribution-options .contribution-option {
-  border-radius: 4px;
-}
-.verification-process .contribution-options .contribution-option .label,
-.verification-process .contribution-options .contribution-option label,
-.verification-process .contribution-options .contribution-option input {
-  display: inline-block;
-  vertical-align: middle;
-}
-.verification-process .contribution-options .contribution-option .label,
-.verification-process .contribution-options .contribution-option label {
-  margin-bottom: 0;
-  padding: 6px 0;
-}
-.verification-process .contribution-options .contribution-option input {
-  margin-right: 5px;
-}
-.verification-process
-  .contribution-options
-  .contribution-option
-  .deco-denomination,
-.verification-process .contribution-options .contribution-option .label-value,
-.verification-process
-  .contribution-options
-  .contribution-option
-  .denomination-name {
-  display: inline-block;
-  vertical-align: middle;
-}
-.verification-process
-  .contribution-options
-  .contribution-option
-  .denomination-name {
-  font-size: 14px;
-  color: #97999b;
-}
-.verification-process
-  .contribution-options
-  .contribution-option
-  #contribution-other-amt {
-  width: 90px;
-  padding: 5px 10px;
-}
-.verification-process .list-faq .faq-question {
-  border-bottom: 1px solid #f5f5f5;
-  padding-bottom: 5px;
-}
-.verification-process .list-faq .faq-answer {
-  margin-bottom: 25px;
-}
-.verification-process .content-main {
-  width: 100%;
-}
-.verification-process .content-main > .title {
-  color: #1790c7;
-}
-.verification-process .content-main .instruction {
-  margin-bottom: 20px;
-}
-.verification-process .wrapper-content-supplementary {
-  margin: 30px 0;
-  border-top: 5px solid #f5f5f5;
-}
-.verification-process .content-supplementary {
-  box-sizing: border-box;
-  max-width: 1920px;
-  margin-left: auto;
-  margin-right: auto;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%;
-}
-.verification-process .content-supplementary:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process .content-supplementary:last-child {
-  margin-right: 0;
-}
-.verification-process .content-supplementary .list-help:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process .content-supplementary .list-help .help-item {
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 25px;
-}
-.verification-process .content-supplementary .list-help .help-item:last-child {
-  margin: 0;
-}
-@media screen and (min-width: 550px) {
-  .verification-process .content-supplementary .list-help .help-item {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%;
-    margin-bottom: 0;
-  }
-  .verification-process
-    .content-supplementary
-    .list-help
-    .help-item:last-child {
-    margin-right: 0;
-  }
-  .verification-process
-    .content-supplementary
-    .list-help
-    .help-item.help-item-technical {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%;
-  }
-  .verification-process
-    .content-supplementary
-    .list-help
-    .help-item.help-item-technical:last-child {
-    margin-right: 0;
-  }
-}
-.verification-process.step-select-track .container,
-.verification-process.step-select-track section.outside-app,
-.verification-process.step-select-track
-  .view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .verification-process.step-select-track
-  .u-field-account_privacy,
-.verification-process.step-select-track .view-profile .wrapper-profile-sections,
-.view-profile .verification-process.step-select-track .wrapper-profile-sections,
-.verification-process.step-select-track .view-profile .badge-set-display,
-.view-profile .verification-process.step-select-track .badge-set-display {
-  min-width: 0;
-  max-width: 1920px;
-}
-.verification-process.step-select-track .form-register-choose {
-  margin: 40px 0;
-}
-.verification-process.step-select-track .form-register-choose:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process.step-select-track .form-register-choose .deco-divider {
-  width: 100%;
-  box-sizing: border-box;
-  float: left;
-}
-.verification-process.step-select-track .register-choice,
-.verification-process.step-select-track .help-register {
-  float: left;
-}
-.verification-process.step-select-track .register-choice {
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0 2.35765% 20px 0;
-  border-top: 5px solid #050505;
-  padding: 20px 30px;
-  background: #f5f5f5;
-}
-.verification-process.step-select-track .register-choice:last-child {
-  margin-bottom: 0;
-}
-.verification-process.step-select-track .register-choice .wrapper-copy,
-.verification-process.step-select-track .register-choice .list-actions {
-  display: inline-block;
-  vertical-align: middle;
-}
-.verification-process.step-select-track .register-choice .list-actions {
-  width: 100%;
-  box-sizing: border-box;
-  text-align: right;
-  float: right;
-  margin: 5px 0;
-  border-top: none;
-  clear: both;
-}
-.verification-process.step-select-track .register-choice .title {
-  margin-bottom: 10px;
-  width: calc(100% - 30px);
-}
-.verification-process.step-select-track .register-choice .wrapper-copy-inline {
-  display: inline-block;
-  width: 100%;
-}
-.verification-process.step-select-track .register-choice .copy-inline {
-  display: inline-block;
-}
-.verification-process.step-select-track .register-choice .action-select {
-  width: 100%;
-  box-sizing: border-box;
-}
-.verification-process.step-select-track .register-choice .action-select input {
-  padding: 10px 15px;
-  width: 100%;
-  white-space: normal;
-}
-.verification-process.step-select-track .register-choice-audit {
-  border-color: #1790c7;
-}
-.verification-process.step-select-track .register-choice-audit .deco-ribbon {
-  position: relative;
-  top: -50px;
-  right: -7px;
-  float: right;
-  display: block;
-  width: 58px;
-  height: 84px;
-}
-.verification-process.step-select-track .register-choice-audit .list-actions {
-  margin: 20px 0;
-}
-.verification-process.step-select-track .register-choice-certificate {
-  border-color: #66b366;
-  position: relative;
-}
-.verification-process.step-select-track
-  .register-choice-certificate
-  .deco-ribbon {
-  position: absolute;
-  top: -10px;
-  right: 20px;
-  display: block;
-  width: 45px;
-  height: 45px;
-  background: transparent url("/static/images/verified-ribbon.2a7eb60ed330.png")
-    no-repeat 0 0;
-}
-.verification-process.step-select-track
-  .register-choice-certificate
-  .action-intro,
-.verification-process.step-select-track
-  .register-choice-certificate
-  .action-select {
-  display: inline-block;
-  vertical-align: middle;
-}
-.verification-process.step-select-track
-  .register-choice-certificate
-  .action-intro {
-  width: 100%;
-  box-sizing: border-box;
-  text-align: left;
-}
-.verification-process.step-select-track
-  .register-choice-certificate
-  .title-expand {
-  font-weight: 500 !important;
-  display: inline-block;
-  margin: 0;
-}
-.verification-process.step-select-track
-  .register-choice-certificate
-  .expandable-area {
-  margin: 20px 0;
-}
-.verification-process.step-select-track .help-register {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-}
-.verification-process.step-select-track .help-register:last-child {
-  margin-right: 0;
-}
-.verification-process.step-select-track .help-register .title {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-.verification-process.step-select-track .progress-sts-value {
-  width: 0%;
-}
-.verification-process.step-select-track .field-certificate-contribution {
-  margin: 20px 0;
-}
-.verification-process.step-select-track .field-certificate-contribution .label {
-  margin-bottom: 10px;
-}
-.verification-process.step-select-track .contribution-options {
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-}
-.verification-process.step-select-track .contribution-options:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process.step-select-track .contribution-options::after {
-  clear: none;
-  display: none;
-}
-.verification-process.step-select-track .contribution-options .field {
-  width: 100%;
-  box-sizing: border-box;
-  float: left;
-  margin: 0 10px 10px 0;
-  padding: 10px 15px;
-  background: rgba(138, 140, 143, 0.125);
-}
-.verification-process.step-select-track .contribution-options .field input {
-  width: auto;
-  padding: 0;
-}
-.verification-process.step-select-track
-  .contribution-options
-  .field:last-child {
-  margin-right: 0;
-}
-.verification-process.step-select-track
-  .contribution-options
-  #contribution-other-amt {
-  width: 90px;
-  padding: 5px 10px;
-}
-.verification-process.step-select-track
-  .contribution-options
-  .field-group-other
-  .contribution-option {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 5px;
-  padding: 1px 0;
-}
-.verification-process.step-select-track
-  .contribution-options
-  .field-group-other
-  .contribution-option:last-child {
-  margin-right: 0;
-}
-@media screen and (min-width: 550px) and (max-width: 768px) {
-  .verification-process.step-select-track .contribution-options .field {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-  }
-  .verification-process.step-select-track
-    .contribution-options
-    .field:last-child {
-    margin-right: 0;
-  }
-  .verification-process.step-select-track
-    .contribution-options
-    .field:nth-of-type(even) {
-    margin-right: 0;
-  }
-  .verification-process.step-select-track .register-choice .list-actions {
-    float: left;
-    width: auto;
-  }
-  .verification-process.step-select-track .register-choice .action-select {
-    width: initial;
-  }
-  .verification-process.step-select-track
-    .register-choice
-    .action-select
-    input {
-    width: initial;
-  }
-}
-@media screen and (min-width: 769px) {
-  .verification-process.step-select-track .contribution-options .field {
-    width: auto;
-  }
-  .verification-process.step-select-track .register-choice .list-actions {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%;
-    width: auto;
-  }
-  .verification-process.step-select-track
-    .register-choice
-    .list-actions:last-child {
-    margin-right: 0;
-  }
-  .verification-process.step-select-track .register-choice .action-select {
-    width: initial;
-  }
-  .verification-process.step-select-track
-    .register-choice
-    .action-select
-    input {
-    width: initial;
-  }
-}
-@media screen and (min-width: 980px) {
-  .verification-process.step-select-track .register-choice .list-actions {
-    float: right;
-    clear: none;
-  }
-}
-.verification-process.step-requirements .help-item-technical {
-  display: none;
-}
-.verification-process.step-requirements
-  .progress
-  .progress-step#progress-step0 {
-  border-bottom: 4px solid #1790c7;
-  opacity: 1;
-}
-.verification-process.step-requirements
-  .progress
-  .progress-step#progress-step0
-  .wrapper-step-number {
-  border-color: #1790c7;
-}
-.verification-process.step-requirements
-  .progress
-  .progress-step#progress-step0
-  .step-number,
-.verification-process.step-requirements
-  .progress
-  .progress-step#progress-step0
-  .step-name {
-  color: #646668;
-}
-.verification-process.step-requirements .progress-sts-value {
-  width: 0%;
-}
-.verification-process.step-requirements .list-reqs {
-  width: 100%;
-  text-align: center;
-}
-.verification-process.step-requirements .list-reqs:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process.step-requirements .list-reqs .req {
-  margin-right: 2.35765%;
-  display: inline-block;
-  vertical-align: top;
-  width: 31.76157%;
-  min-height: 300px;
-  border-color: #99cd99;
-  text-align: center;
-}
-.verification-process.step-requirements .list-reqs .req:last-child {
-  margin-right: 0;
-}
-.verification-process.step-requirements .list-reqs .req .title {
-  padding: 20px;
-  border-bottom: 1px solid #99cd99;
-  background: #e6f2e6;
-}
-.verification-process.step-requirements .list-reqs .req .placeholder-art {
-  position: relative;
-  display: inline-block;
-  margin: 20px 0 10px;
-  padding: 20px;
-  background: #66b366;
-  border-radius: 200px;
-}
-.verification-process.step-requirements
-  .list-reqs
-  .req
-  .placeholder-art
-  *[class^="icon"] {
-  color: #fff;
-}
-.verification-process.step-requirements
-  .list-reqs
-  .req
-  .placeholder-art
-  .fa-stack-1x,
-.verification-process.step-requirements
-  .list-reqs
-  .req
-  .placeholder-art
-  .fa-stack-2x {
-  position: relative;
-}
-.verification-process.step-requirements
-  .list-reqs
-  .req
-  .placeholder-art
-  .fa-stack-1x {
-  position: absolute;
-  left: 24px;
-  top: 34px;
-  background: #66b366;
-  padding: 3px 5px;
-}
-.verification-process.step-requirements
-  .list-reqs
-  .req
-  .placeholder-art
-  .id-photo {
-  width: 23px;
-  padding: 3px 0;
-}
-.verification-process.step-requirements
-  .list-reqs
-  .req
-  .placeholder-art.old-id-card {
-  width: 88px;
-  height: 88px;
-}
-.verification-process.step-requirements
-  .list-reqs
-  .req
-  .placeholder-art.old-id-card
-  .fa-list-alt {
-  left: -7px;
-}
-.verification-process.step-requirements
-  .list-reqs
-  .req
-  .placeholder-art.old-id-card
-  .id-photo {
-  top: 13px;
-  left: -3px;
-  line-height: 1.1em;
-}
-.verification-process.step-requirements .list-reqs .req .copy {
-  padding: 10px 20px;
-}
-.verification-process.step-requirements .list-reqs .req .copy-super,
-.verification-process.step-requirements .list-reqs .req .copy-sub {
-  display: block;
-}
-.verification-process.step-requirements .list-reqs .req .copy-super {
-  margin-bottom: 10px;
-  color: #008100;
-}
-.verification-process.step-requirements .list-reqs .req .actions {
-  padding: 10px 20px;
-}
-.verification-process.step-requirements .list-reqs .req-activate {
-  float: left;
-  text-align: center;
-  border-color: #d7548e;
-}
-.verification-process.step-requirements .list-reqs .req-activate .title {
-  border-bottom-color: #d7548e;
-  background: #fcf5f9;
-  color: #c2387d;
-}
-.verification-process.step-requirements
-  .list-reqs
-  .req-activate
-  .placeholder-art {
-  background: #ca2f73;
-}
-.verification-process.step-requirements .list-reqs .req-activate .copy-super {
-  color: #c2387d;
-}
-.verification-process.step-requirements .list-reqs.account-not-activated .req {
-  width: 23.23176%;
-  min-height: 360px;
-}
-.verification-process.step-photos-cam .progress .progress-step#progress-step0 {
-  border-bottom: 4px solid #66b366;
-}
-.verification-process.step-photos-cam
-  .progress
-  .progress-step#progress-step0
-  .wrapper-step-number {
-  border-color: #66b366;
-}
-.verification-process.step-photos-cam
-  .progress
-  .progress-step#progress-step0
-  .step-number,
-.verification-process.step-photos-cam
-  .progress
-  .progress-step#progress-step0
-  .step-name {
-  color: #b1b2b4;
-}
-.verification-process.step-photos-cam .progress .progress-step#progress-step1 {
-  border-bottom: 4px solid #1790c7;
-  opacity: 1;
-}
-.verification-process.step-photos-cam
-  .progress
-  .progress-step#progress-step1
-  .wrapper-step-number {
-  border-color: #1790c7;
-}
-.verification-process.step-photos-cam
-  .progress
-  .progress-step#progress-step1
-  .step-number,
-.verification-process.step-photos-cam
-  .progress
-  .progress-step#progress-step1
-  .step-name {
-  color: #646668;
-}
-.verification-process.step-photos-cam .progress-sts-value {
-  width: 14%;
-}
-.verification-process.step-photos-id .progress .progress-step#progress-step0,
-.verification-process.step-photos-id .progress .progress-step#progress-step1 {
-  border-bottom: 4px solid #66b366;
-}
-.verification-process.step-photos-id
-  .progress
-  .progress-step#progress-step0
-  .wrapper-step-number,
-.verification-process.step-photos-id
-  .progress
-  .progress-step#progress-step1
-  .wrapper-step-number {
-  border-color: #66b366;
-}
-.verification-process.step-photos-id
-  .progress
-  .progress-step#progress-step0
-  .step-number,
-.verification-process.step-photos-id
-  .progress
-  .progress-step#progress-step0
-  .step-name,
-.verification-process.step-photos-id
-  .progress
-  .progress-step#progress-step1
-  .step-number,
-.verification-process.step-photos-id
-  .progress
-  .progress-step#progress-step1
-  .step-name {
-  color: #b1b2b4;
-}
-.verification-process.step-photos-id .progress .progress-step#progress-step2 {
-  border-bottom: 4px solid #1790c7;
-  opacity: 1;
-}
-.verification-process.step-photos-id
-  .progress
-  .progress-step#progress-step2
-  .wrapper-step-number {
-  border-color: #1790c7;
-}
-.verification-process.step-photos-id
-  .progress
-  .progress-step#progress-step2
-  .step-number,
-.verification-process.step-photos-id
-  .progress
-  .progress-step#progress-step2
-  .step-name {
-  color: #646668;
-}
-.verification-process.step-photos-id .progress-sts-value {
-  width: 36%;
-}
-.verification-process.step-review .help-item-technical {
-  display: none;
-}
-.verification-process.step-review .modal.edit-name .submit input,
-.verification-process.step-review .edit-name.leanModal_box .submit input,
-.verification-process.step-review
-  .edit-name.entitlement-unenrollment-modal
-  .submit
-  input {
-  color: #fff;
-}
-.verification-process.step-review .modal fieldset,
-.verification-process.step-review .leanModal_box fieldset,
-.verification-process.step-review .entitlement-unenrollment-modal fieldset {
-  margin-top: 20px;
-}
-.verification-process.step-review .modal .close-modal,
-.verification-process.step-review .leanModal_box .close-modal,
-.verification-process.step-review .entitlement-unenrollment-modal .close-modal,
-.entitlement-unenrollment-modal
-  .entitlement-unenrollment-modal-inner-wrapper
-  .verification-process.step-review
-  .modal
-  .entitlement-unenrollment-modal-close-btn,
-.entitlement-unenrollment-modal
-  .entitlement-unenrollment-modal-inner-wrapper
-  .verification-process.step-review
-  .leanModal_box
-  .entitlement-unenrollment-modal-close-btn,
-.verification-process.step-review
-  .entitlement-unenrollment-modal
-  .entitlement-unenrollment-modal-inner-wrapper
-  .entitlement-unenrollment-modal-close-btn {
-  font-size: 24px;
-  color: #126f9a;
-}
-.verification-process.step-review .modal .close-modal:hover,
-.verification-process.step-review .leanModal_box .close-modal:hover,
-.verification-process.step-review
-  .entitlement-unenrollment-modal
-  .close-modal:hover,
-.entitlement-unenrollment-modal
-  .entitlement-unenrollment-modal-inner-wrapper
-  .verification-process.step-review
-  .modal
-  .entitlement-unenrollment-modal-close-btn:hover,
-.entitlement-unenrollment-modal
-  .entitlement-unenrollment-modal-inner-wrapper
-  .verification-process.step-review
-  .leanModal_box
-  .entitlement-unenrollment-modal-close-btn:hover,
-.verification-process.step-review
-  .entitlement-unenrollment-modal
-  .entitlement-unenrollment-modal-inner-wrapper
-  .entitlement-unenrollment-modal-close-btn:hover,
-.verification-process.step-review .modal .close-modal:focus,
-.verification-process.step-review .leanModal_box .close-modal:focus,
-.verification-process.step-review
-  .entitlement-unenrollment-modal
-  .close-modal:focus,
-.entitlement-unenrollment-modal
-  .entitlement-unenrollment-modal-inner-wrapper
-  .verification-process.step-review
-  .modal
-  .entitlement-unenrollment-modal-close-btn:focus,
-.entitlement-unenrollment-modal
-  .entitlement-unenrollment-modal-inner-wrapper
-  .verification-process.step-review
-  .leanModal_box
-  .entitlement-unenrollment-modal-close-btn:focus,
-.verification-process.step-review
-  .entitlement-unenrollment-modal
-  .entitlement-unenrollment-modal-inner-wrapper
-  .entitlement-unenrollment-modal-close-btn:focus {
-  color: #1790c7;
-  border: none;
-}
-.verification-process.step-review .nav-wizard .prompt-verify {
-  float: left;
-  margin: 0 2.35765% 0 0;
-  width: 48.82117%;
-}
-.verification-process.step-review .nav-wizard .prompt-verify .title {
-  margin-bottom: 5px;
-}
-.verification-process.step-review .nav-wizard .prompt-verify .list-actions {
-  margin-top: 10px;
-}
-.verification-process.step-review .nav-wizard .wizard-steps {
-  margin-top: 10px;
-}
-.verification-process.step-review .nav-wizard .wizard-steps .wizard-step {
-  margin-right: 2.35765%;
-  display: inline-block;
-  vertical-align: middle;
-}
-.verification-process.step-review
-  .nav-wizard
-  .wizard-steps
-  .wizard-step:last-child {
-  margin-right: 0;
-}
-.verification-process.step-review .progress .progress-step#progress-step0,
-.verification-process.step-review .progress .progress-step#progress-step1,
-.verification-process.step-review .progress .progress-step#progress-step2 {
-  border-bottom: 4px solid #66b366;
-}
-.verification-process.step-review
-  .progress
-  .progress-step#progress-step0
-  .wrapper-step-number,
-.verification-process.step-review
-  .progress
-  .progress-step#progress-step1
-  .wrapper-step-number,
-.verification-process.step-review
-  .progress
-  .progress-step#progress-step2
-  .wrapper-step-number {
-  border-color: #66b366;
-}
-.verification-process.step-review
-  .progress
-  .progress-step#progress-step0
-  .step-number,
-.verification-process.step-review
-  .progress
-  .progress-step#progress-step0
-  .step-name,
-.verification-process.step-review
-  .progress
-  .progress-step#progress-step1
-  .step-number,
-.verification-process.step-review
-  .progress
-  .progress-step#progress-step1
-  .step-name,
-.verification-process.step-review
-  .progress
-  .progress-step#progress-step2
-  .step-number,
-.verification-process.step-review
-  .progress
-  .progress-step#progress-step2
-  .step-name {
-  color: #b1b2b4;
-}
-.verification-process.step-review .progress .progress-step#progress-step3 {
-  border-bottom: 4px solid #1790c7;
-  opacity: 1;
-}
-.verification-process.step-review
-  .progress
-  .progress-step#progress-step3
-  .wrapper-step-number {
-  border-color: #1790c7;
-}
-.verification-process.step-review
-  .progress
-  .progress-step#progress-step3
-  .step-number,
-.verification-process.step-review
-  .progress
-  .progress-step#progress-step3
-  .step-name {
-  color: #646668;
-}
-.verification-process.step-review .progress-sts-value {
-  width: 55%;
-}
-.verification-process.step-confirmation .help-item-technical {
-  display: none;
-}
-.verification-process.step-confirmation .progress .progress-step#progress-step0,
-.verification-process.step-confirmation .progress .progress-step#progress-step1,
-.verification-process.step-confirmation .progress .progress-step#progress-step2,
-.verification-process.step-confirmation .progress .progress-step#progress-step3,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step4 {
-  border-bottom: 4px solid #66b366;
-}
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step0
-  .wrapper-step-number,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step1
-  .wrapper-step-number,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step2
-  .wrapper-step-number,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step3
-  .wrapper-step-number,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step4
-  .wrapper-step-number {
-  border-color: #66b366;
-}
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step0
-  .step-number,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step0
-  .step-name,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step1
-  .step-number,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step1
-  .step-name,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step2
-  .step-number,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step2
-  .step-name,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step3
-  .step-number,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step3
-  .step-name,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step4
-  .step-number,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step4
-  .step-name {
-  color: #b1b2b4;
-}
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step5 {
-  border-bottom: 4px solid #1790c7;
-  opacity: 1;
-}
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step5
-  .wrapper-step-number {
-  border-color: #1790c7;
-}
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step5
-  .step-number,
-.verification-process.step-confirmation
-  .progress
-  .progress-step#progress-step5
-  .step-name {
-  color: #646668;
-}
-.verification-process.step-confirmation .progress-sts-value {
-  width: 100%;
-}
-.verification-process.step-confirmation .list-info .info-item {
-  margin-bottom: 30px;
-  border-bottom: 5px solid #f5f5f5;
-  padding-bottom: 30px;
-}
-.verification-process.step-confirmation .list-info .info-item:last-child {
-  margin-bottom: 0;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-.verification-process.step-confirmation .list-info .info-item > .title {
-  margin-bottom: 20px;
-}
-.verification-process.step-confirmation .list-info .info-item .copy {
-  margin-bottom: 20px;
-}
-.verification-process.step-confirmation .course-info .options .action-course {
-  font-size: 14px;
-  padding: 5px 10px;
-}
-.verification-process.step-confirmation .instruction {
-  display: inline-block;
-  width: 65.88078%;
-  vertical-align: top;
-}
-.verification-process.step-confirmation .actions-next {
-  display: inline-block;
-  width: 31.76157%;
-  vertical-align: top;
-  margin-top: 20px;
-}
-.verification-process.step-confirmation .nav-item {
-  display: block;
-  margin: 0 0 20px 0;
-  text-align: center;
-}
-.verification-process.step-confirmation .nav-item.conditional::after {
-  content: "or";
-  display: block;
-  margin: 20px 0;
-}
-.verification-process .reverify-success-step .title {
-  text-align: left;
-  text-transform: none;
-}
-.verification-process .reverify-success-step .wrapper-actions {
-  margin-top: 20px;
-}
-.reverify-blocked {
-  padding: 30px 30px 40px 30px;
-}
-.reverify-blocked .title {
-  text-align: left;
-  text-transform: none;
-}
-.reverify-blocked .wrapper-actions {
-  margin-top: 20px;
-}
-.msg-reverify .reverify-list {
-  margin: 5px 0;
-}
-.facephoto.view .wrapper-task #facecam {
-  float: left;
-}
-.facephoto.view .wrapper-task .wrapper-help {
-  float: right;
 }
 .register.is-verified .nav-wizard .price-value {
   font-size: 16px;
@@ -28684,476 +25955,6 @@ section.outside-app .verification-process h1,
 .register.is-not-verified.step-confirmation .view .instruction {
   margin-bottom: 20px;
 }
-.verification-process .pay-and-verify .review .title.center-col,
-.verification-process .incourse-reverify .review .title.center-col,
-.verification-process .reverify .review .title.center-col {
-  padding: 0 calc((100% - 750px) / 2) 10px;
-}
-.verification-process .pay-and-verify .review h2,
-.verification-process
-  .pay-and-verify
-  .review
-  .home
-  > header
-  .title
-  > .heading-group
-  p,
-.home
-  > header
-  .title
-  > .heading-group
-  .verification-process
-  .pay-and-verify
-  .review
-  p,
-.verification-process .pay-and-verify .review section.outside-app h1,
-section.outside-app .verification-process .pay-and-verify .review h1,
-.verification-process .incourse-reverify .review h2,
-.verification-process
-  .incourse-reverify
-  .review
-  .home
-  > header
-  .title
-  > .heading-group
-  p,
-.home
-  > header
-  .title
-  > .heading-group
-  .verification-process
-  .incourse-reverify
-  .review
-  p,
-.verification-process .incourse-reverify .review section.outside-app h1,
-section.outside-app .verification-process .incourse-reverify .review h1,
-.verification-process .reverify .review h2,
-.verification-process
-  .reverify
-  .review
-  .home
-  > header
-  .title
-  > .heading-group
-  p,
-.home
-  > header
-  .title
-  > .heading-group
-  .verification-process
-  .reverify
-  .review
-  p,
-.verification-process .reverify .review section.outside-app h1,
-section.outside-app .verification-process .reverify .review h1 {
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: unset;
-  color: #4a4a4a;
-  margin-bottom: 40px;
-}
-.verification-process .pay-and-verify .review h2 .course-title,
-.verification-process
-  .pay-and-verify
-  .review
-  .home
-  > header
-  .title
-  > .heading-group
-  p
-  .course-title,
-.home
-  > header
-  .title
-  > .heading-group
-  .verification-process
-  .pay-and-verify
-  .review
-  p
-  .course-title,
-.verification-process
-  .pay-and-verify
-  .review
-  section.outside-app
-  h1
-  .course-title,
-section.outside-app
-  .verification-process
-  .pay-and-verify
-  .review
-  h1
-  .course-title,
-.verification-process .incourse-reverify .review h2 .course-title,
-.verification-process
-  .incourse-reverify
-  .review
-  .home
-  > header
-  .title
-  > .heading-group
-  p
-  .course-title,
-.home
-  > header
-  .title
-  > .heading-group
-  .verification-process
-  .incourse-reverify
-  .review
-  p
-  .course-title,
-.verification-process
-  .incourse-reverify
-  .review
-  section.outside-app
-  h1
-  .course-title,
-section.outside-app
-  .verification-process
-  .incourse-reverify
-  .review
-  h1
-  .course-title,
-.verification-process .reverify .review h2 .course-title,
-.verification-process
-  .reverify
-  .review
-  .home
-  > header
-  .title
-  > .heading-group
-  p
-  .course-title,
-.home
-  > header
-  .title
-  > .heading-group
-  .verification-process
-  .reverify
-  .review
-  p
-  .course-title,
-.verification-process .reverify .review section.outside-app h1 .course-title,
-section.outside-app .verification-process .reverify .review h1 .course-title {
-  display: block;
-  font-weight: 100;
-  font-size: 24px;
-  margin-top: 5px;
-}
-.verification-process .pay-and-verify .instruction.center-col,
-.verification-process .incourse-reverify .instruction.center-col,
-.verification-process .reverify .instruction.center-col {
-  width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.verification-process .pay-and-verify .instruction .instruction-info,
-.verification-process .incourse-reverify .instruction .instruction-info,
-.verification-process .reverify .instruction .instruction-info {
-  font-size: 24px;
-  font-weight: 100;
-  color: #57595a;
-  margin-bottom: 30px;
-}
-.verification-process
-  .pay-and-verify
-  .instruction
-  .instruction-info
-  .fa-envelope-o,
-.verification-process
-  .incourse-reverify
-  .instruction
-  .instruction-info
-  .fa-envelope-o,
-.verification-process .reverify .instruction .instruction-info .fa-envelope-o {
-  color: #b92167;
-  font-size: 26px;
-  margin-right: 8px;
-}
-.verification-process .pay-and-verify .instruction .activate,
-.verification-process .incourse-reverify .instruction .activate,
-.verification-process .reverify .instruction .activate {
-  font-size: 16px;
-  font-weight: 600;
-  color: #4a4a4a;
-}
-.verification-process .pay-and-verify .instruction .activate-info,
-.verification-process .incourse-reverify .instruction .activate-info,
-.verification-process .reverify .instruction .activate-info {
-  font-size: 16px;
-  font-weight: 100;
-  color: #4a4a4a;
-}
-.verification-process .pay-and-verify .payment-info,
-.verification-process .incourse-reverify .payment-info,
-.verification-process .reverify .payment-info {
-  padding: 5px 0 30px;
-}
-.verification-process .pay-and-verify .payment-info .copy,
-.verification-process .incourse-reverify .payment-info .copy,
-.verification-process .reverify .payment-info .copy {
-  margin: 20px 0;
-}
-.verification-process .pay-and-verify .placeholder-cam .copy,
-.verification-process .incourse-reverify .placeholder-cam .copy,
-.verification-process .reverify .placeholder-cam .copy {
-  font-weight: bold !important;
-}
-.verification-process .pay-and-verify .requirements-container .list-reqs .req,
-.verification-process
-  .incourse-reverify
-  .requirements-container
-  .list-reqs
-  .req,
-.verification-process .reverify .requirements-container .list-reqs .req {
-  width: 300px;
-  height: 250px;
-  min-height: 250px;
-  margin-right: 45px;
-}
-.verification-process
-  .pay-and-verify
-  .requirements-container
-  .list-reqs
-  .req:last-of-type,
-.verification-process
-  .incourse-reverify
-  .requirements-container
-  .list-reqs
-  .req:last-of-type,
-.verification-process
-  .reverify
-  .requirements-container
-  .list-reqs
-  .req:last-of-type {
-  margin-right: 0;
-}
-.verification-process
-  .pay-and-verify
-  .requirements-container
-  .list-reqs.account-not-activated,
-.verification-process
-  .incourse-reverify
-  .requirements-container
-  .list-reqs.account-not-activated,
-.verification-process
-  .reverify
-  .requirements-container
-  .list-reqs.account-not-activated {
-  width: 300px;
-}
-.verification-process
-  .pay-and-verify
-  .requirements-container
-  .list-reqs.account-not-activated
-  .req,
-.verification-process
-  .incourse-reverify
-  .requirements-container
-  .list-reqs.account-not-activated
-  .req,
-.verification-process
-  .reverify
-  .requirements-container
-  .list-reqs.account-not-activated
-  .req {
-  height: 290px;
-  min-height: 290px;
-}
-.verification-process .pay-and-verify .no-content,
-.verification-process .incourse-reverify .no-content,
-.verification-process .reverify .no-content {
-  margin-bottom: 50px;
-}
-.verification-process .pay-and-verify .nav-wizard.center,
-.verification-process .incourse-reverify .nav-wizard.center,
-.verification-process .reverify .nav-wizard.center {
-  text-align: center;
-}
-.verification-process .pay-and-verify .nav-wizard .right,
-.verification-process .incourse-reverify .nav-wizard .right,
-.verification-process .reverify .nav-wizard .right {
-  float: right;
-  padding: 15px 50px;
-}
-.verification-process .pay-and-verify .nav-wizard .nav-link,
-.verification-process .incourse-reverify .nav-wizard .nav-link,
-.verification-process .reverify .nav-wizard .nav-link {
-  line-height: 45px;
-}
-.verification-process .pay-and-verify .nav-wizard .prompt-verify .title,
-.verification-process .incourse-reverify .nav-wizard .prompt-verify .title,
-.verification-process .reverify .nav-wizard .prompt-verify .title {
-  float: left;
-  text-align: left;
-  width: 600px;
-  position: relative;
-  display: inline;
-  line-height: 45px;
-  color: black;
-}
-.verification-process .pay-and-verify .nav-wizard .wizard-steps,
-.verification-process .incourse-reverify .nav-wizard .wizard-steps,
-.verification-process .reverify .nav-wizard .wizard-steps {
-  width: auto;
-}
-.verification-process .pay-and-verify .photo-controls,
-.verification-process .incourse-reverify .photo-controls,
-.verification-process .reverify .photo-controls {
-  position: relative;
-  text-align: center;
-}
-.verification-process .pay-and-verify .photo-controls .control.control-do,
-.verification-process .incourse-reverify .photo-controls .control.control-do,
-.verification-process .reverify .photo-controls .control.control-do {
-  left: 45%;
-  left: calc((50%) - (69px / 2));
-}
-.verification-process .pay-and-verify .photo-controls .control.control-retake,
-.verification-process
-  .incourse-reverify
-  .photo-controls
-  .control.control-retake,
-.verification-process .reverify .photo-controls .control.control-retake {
-  left: 40%;
-  left: calc((50%) - (131px / 2));
-}
-.verification-process .pay-and-verify .photo-controls .control .action-redo,
-.verification-process .incourse-reverify .photo-controls .control .action-redo,
-.verification-process .reverify .photo-controls .control .action-redo {
-  line-height: 28px;
-}
-.verification-process .pay-and-verify .retake-photos,
-.verification-process .incourse-reverify .retake-photos,
-.verification-process .reverify .retake-photos {
-  color: #0075b4;
-  background: none !important;
-  border: 0 !important;
-  padding: 0 !important;
-  box-shadow: none;
-  cursor: pointer;
-}
-.verification-process .pay-and-verify .retake-photos:hover,
-.verification-process .pay-and-verify .retake-photos:focus,
-.verification-process .incourse-reverify .retake-photos:hover,
-.verification-process .incourse-reverify .retake-photos:focus,
-.verification-process .reverify .retake-photos:hover,
-.verification-process .reverify .retake-photos:focus {
-  text-decoration: underline;
-}
-.verification-process .pay-and-verify .tip .is-expandable .title-expand,
-.verification-process .incourse-reverify .tip .is-expandable .title-expand,
-.verification-process .reverify .tip .is-expandable .title-expand {
-  color: #0075b4 !important;
-}
-.verification-process .pay-and-verify .tip .expandable-area,
-.verification-process .incourse-reverify .tip .expandable-area,
-.verification-process .reverify .tip .expandable-area {
-  margin-top: 5px;
-  padding-bottom: 20px;
-}
-.verification-process .pay-and-verify .help-tips,
-.verification-process .incourse-reverify .help-tips,
-.verification-process .reverify .help-tips {
-  margin-left: 0 !important;
-}
-.verification-process .pay-and-verify .help-tips .title,
-.verification-process .incourse-reverify .help-tips .title,
-.verification-process .reverify .help-tips .title {
-  font-size: 16px !important;
-}
-.verification-process .pay-and-verify .help-tips .list-tips .tip,
-.verification-process .incourse-reverify .help-tips .list-tips .tip,
-.verification-process .reverify .help-tips .list-tips .tip {
-  font-size: 16px;
-  line-height: 1.5em;
-}
-.verification-process .pay-and-verify .photo-tip,
-.verification-process .incourse-reverify .photo-tip,
-.verification-process .reverify .photo-tip {
-  color: black;
-  margin-bottom: 20px;
-}
-.verification-process .pay-and-verify .list-help,
-.verification-process .incourse-reverify .list-help,
-.verification-process .reverify .list-help {
-  list-style: disc;
-  padding-left: 20px;
-}
-.verification-process .pay-and-verify .list-faq dd,
-.verification-process .incourse-reverify .list-faq dd,
-.verification-process .reverify .list-faq dd {
-  color: black;
-}
-.verification-process .pay-and-verify .wrapper-task .msg-retake,
-.verification-process .incourse-reverify .wrapper-task .msg-retake,
-.verification-process .reverify .wrapper-task .msg-retake {
-  margin-top: 0;
-}
-.verification-process .pay-and-verify .wrapper-task .wrapper-photos,
-.verification-process .incourse-reverify .wrapper-task .wrapper-photos,
-.verification-process .reverify .wrapper-task .wrapper-photos {
-  margin-bottom: 0 !important;
-}
-.verification-process
-  .pay-and-verify
-  .report-course
-  .course-actions
-  td:last-of-type,
-.verification-process
-  .incourse-reverify
-  .report-course
-  .course-actions
-  td:last-of-type,
-.verification-process .reverify .report-course .course-actions td:last-of-type {
-  width: 300px;
-}
-.verification-process .pay-and-verify .enrollment-status-footer,
-.verification-process .incourse-reverify .enrollment-status-footer,
-.verification-process .reverify .enrollment-status-footer {
-  margin: 50px 0;
-}
-.verification-process .pay-and-verify .enrollment-status-footer h4,
-.verification-process .incourse-reverify .enrollment-status-footer h4,
-.verification-process .reverify .enrollment-status-footer h4 {
-  font-weight: 600;
-}
-.verification-process
-  .pay-and-verify
-  .enrollment-status-footer
-  .verify-pending-msg,
-.verification-process
-  .incourse-reverify
-  .enrollment-status-footer
-  .verify-pending-msg,
-.verification-process .reverify .enrollment-status-footer .verify-pending-msg {
-  margin: 20px 0;
-}
-.verification-process .tooltip {
-  transition: opacity 0.125s ease-out 0s;
-  font-size: 12px;
-  position: absolute;
-  width: 350px;
-  top: 0;
-  left: 0;
-  padding: 10px 20px;
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0.85);
-  line-height: 26px;
-  color: #fff;
-  pointer-events: none;
-  opacity: 0;
-}
-.verification-process .tooltip::after {
-  font-size: 20px;
-  content: "▾";
-  display: block;
-  position: absolute;
-  bottom: -14px;
-  left: 50%;
-  margin-left: -7px;
-  color: rgba(0, 0, 0, 0.85);
-}
 .pull-right {
   float: right;
 }
@@ -29289,41 +26090,6 @@ section.outside-app .verification-process .reverify .review h1 .course-title {
   .blue.pull-right,
   .bordered-bar .pull-right,
   .left.nav-global.authenticated {
-    display: none;
-  }
-  .shopping-cart {
-    padding-right: 40px;
-    font-size: 14px;
-  }
-  .shopping-cart .gray-bg {
-    margin: 0;
-    background: none;
-    padding: 10px 0 20px 0;
-  }
-  .shopping-cart .gray-bg .message-left {
-    width: 100%;
-  }
-  .shopping-cart .bordered-bar h2,
-  .shopping-cart .bordered-bar .home > header .title > .heading-group p,
-  .home > header .title > .heading-group .shopping-cart .bordered-bar p,
-  .shopping-cart .bordered-bar section.outside-app h1,
-  section.outside-app .shopping-cart .bordered-bar h1 {
-    font-size: 14px;
-  }
-  .shopping-cart .bordered-bar span {
-    float: right;
-  }
-  .shopping-cart .user-data .data-input h1 {
-    font-size: 18px;
-  }
-  .shopping-cart table.course-receipt .redemption-url::before {
-    display: inline-block;
-    content: " " attr(data-base-url) " ";
-  }
-  .shopping-cart table.course-receipt th:last-child {
-    display: none;
-  }
-  .shopping-cart table.course-receipt td:last-child {
     display: none;
   }
 }
@@ -29876,210 +26642,6 @@ section.outside-app .contact-us-wrapper h1 {
 .wrapper-authorize .btn-authorization-allow {
   margin-left: 20px;
   line-height: 0.7em;
-}
-.financial-assistance-wrapper p,
-.financial-assistance-wrapper .user-info .title,
-.financial-assistance-wrapper .user-info .data {
-  padding: 10px 0;
-  margin: 0;
-  color: #707276;
-}
-.financial-assistance-wrapper {
-  margin: auto;
-  padding: 20px 10px;
-  max-width: 1180px;
-}
-.financial-assistance-wrapper h1 {
-  text-align: left;
-  margin: 0;
-  padding: 10px 0;
-  border-bottom: 4px solid #f1f1f1;
-  color: #646668;
-}
-.financial-assistance-wrapper h2,
-.financial-assistance-wrapper .home > header .title > .heading-group p,
-.home > header .title > .heading-group .financial-assistance-wrapper p,
-.financial-assistance-wrapper section.outside-app h1,
-section.outside-app .financial-assistance-wrapper h1 {
-  margin-top: 10px;
-  text-transform: none;
-}
-.financial-assistance-wrapper p {
-  font-size: 0.875em;
-}
-.financial-assistance-wrapper .financial-assistance {
-  padding-bottom: 10px;
-  border-bottom: 4px solid #f1f1f1;
-}
-.financial-assistance-wrapper .financial-assistance .apply-form-list {
-  padding: 0;
-  list-style: none;
-}
-.financial-assistance-wrapper
-  .financial-assistance
-  .apply-form-list
-  .apply-form-section {
-  border-bottom: 2px solid #f1f1f1;
-}
-.financial-assistance-wrapper
-  .financial-assistance
-  .apply-form-list
-  .apply-form-section:last-child {
-  border: none;
-}
-.financial-assistance-wrapper .financial-assistance .apply-form-list .about-me {
-  padding: 0;
-  list-style: none;
-}
-.financial-assistance-wrapper
-  .financial-assistance
-  .apply-form-list
-  .about-me
-  .about-me-item {
-  margin-right: 150px;
-  display: inline-block;
-}
-.financial-assistance-wrapper
-  .financial-assistance
-  .apply-form-list
-  .about-me
-  .about-me-item
-  p {
-  padding: 0;
-  display: block;
-}
-.financial-assistance-wrapper .financial-assistance-footer {
-  padding: 20px;
-}
-.financial-assistance-wrapper .financial-assistance-footer .faq-link {
-  padding: 10px;
-}
-.financial-assistance-wrapper .financial-assistance-footer .action-link {
-  float: right;
-  padding: 10px;
-  background-color: #0075b4;
-  color: #fefefe;
-  border-radius: 2px;
-}
-.financial-assistance-wrapper .intro {
-  border-bottom: 4px solid #f1f1f1;
-}
-.financial-assistance-wrapper .intro p {
-  margin: 10px 0;
-}
-.financial-assistance-wrapper .success-message p {
-  margin: 10px 0;
-}
-.financial-assistance-wrapper .btn-dashboard {
-  float: right;
-  color: #fff;
-}
-.financial-assistance-wrapper .btn-dashboard:hover,
-.financial-assistance-wrapper .btn-dashboard:active,
-.financial-assistance-wrapper .btn-dashboard:focus {
-  color: #fff;
-}
-.financial-assistance-wrapper .user-info {
-  border-bottom: 2px solid #f1f1f1;
-  padding: 20px 0;
-  margin-bottom: 20px;
-}
-.financial-assistance-wrapper .user-info:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.financial-assistance-wrapper .user-info .info-column {
-  float: left;
-  width: 100%;
-  margin: 10px 0;
-}
-.financial-assistance-wrapper .user-info .title {
-  padding: 0;
-}
-.financial-assistance-wrapper .user-info .title.error {
-  color: #b20610;
-}
-.financial-assistance-wrapper .user-info .data {
-  padding: 0;
-  color: #000;
-  font-size: 1.125em;
-}
-.financial-assistance-wrapper .financial-assistance-form .action-primary {
-  float: left;
-  width: auto;
-  margin-top: 0;
-}
-.financial-assistance-wrapper .financial-assistance-form .nav-link {
-  margin: 15px 0;
-  display: block;
-}
-.financial-assistance-wrapper .financial-assistance-form form {
-  border: none;
-}
-.financial-assistance-wrapper .financial-assistance-form .form-field select,
-.financial-assistance-wrapper .financial-assistance-form .form-field input {
-  width: 320px;
-}
-.financial-assistance-wrapper .financial-assistance-form .form-field input {
-  border-top: none;
-  border-right: none;
-  border-bottom: 3px solid #919191;
-  border-left: none;
-  box-shadow: none;
-}
-.financial-assistance-wrapper .financial-assistance-form .form-field textarea {
-  height: 125px;
-}
-.financial-assistance-wrapper .financial-assistance-form .form-field .checkbox {
-  height: auto;
-  position: absolute;
-  top: 5px;
-}
-.financial-assistance-wrapper
-  .financial-assistance-form
-  .form-field
-  .checkbox
-  + label {
-  margin-left: 30px;
-  display: inline-block;
-}
-.financial-assistance-wrapper .cta-wrapper {
-  border-top: 4px solid #f1f1f1;
-  padding: 20px 0;
-}
-@media screen and (min-width: 541px) and (max-width: 768px) {
-  .financial-assistance-wrapper .user-info .info-column {
-    width: 50%;
-  }
-  .financial-assistance-wrapper .financial-assistance-form .action-primary {
-    float: right;
-  }
-  .financial-assistance-wrapper .financial-assistance-form .nav-link {
-    display: inline-block;
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 979px) {
-  .financial-assistance-wrapper .user-info .info-column {
-    width: 25%;
-  }
-  .financial-assistance-wrapper .financial-assistance-form .action-primary {
-    float: right;
-  }
-  .financial-assistance-wrapper .financial-assistance-form .nav-link {
-    display: inline-block;
-  }
-}
-@media screen and (min-width: 980px) {
-  .financial-assistance-wrapper .user-info .info-column {
-    width: 25%;
-  }
-  .financial-assistance-wrapper .financial-assistance-form .action-primary {
-    float: right;
-  }
-  .financial-assistance-wrapper .financial-assistance-form .nav-link {
-    display: inline-block;
-  }
 }
 .wrapper-msg.wrapper-auto-cert {
   margin: 0 0 0 0;
@@ -31403,66 +27965,6 @@ section.outside-app .dashboard-search-results .search-info h1 {
 .ui-col-narrow {
   width: 23.23176%;
   float: left;
-}
-.verification-process .wrapper-report .report,
-.verification-process .report-receipt-provider,
-.verification-process .carousel .wrapper-task .task,
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos
-  .wrapper-photo
-  .placeholder-photo,
-.verification-process.step-requirements .list-reqs .req,
-body.uxdesign.alerts .content-primary {
-  border-radius: 2px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  margin-bottom: 20px;
-  border: 1px solid #adadad;
-  background: #fff;
-}
-.verification-process .wrapper-report .report:after,
-.verification-process .report-receipt-provider:after,
-.verification-process .carousel .wrapper-task .task:after,
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos
-  .wrapper-photo
-  .placeholder-photo:after,
-.verification-process.step-requirements .list-reqs .req:after,
-body.uxdesign.alerts .content-primary:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.verification-process .wrapper-report .report:hover,
-.verification-process .report-receipt-provider:hover,
-.verification-process .carousel .wrapper-task .task:hover,
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos
-  .wrapper-photo
-  .placeholder-photo:hover,
-.verification-process.step-requirements .list-reqs .req:hover,
-body.uxdesign.alerts .content-primary:hover,
-.verification-process .wrapper-report .report:active,
-.verification-process .report-receipt-provider:active,
-.verification-process .carousel .wrapper-task .task:active,
-.verification-process
-  .carousel
-  #wrapper-review
-  .review-task-photos
-  .wrapper-photos
-  .wrapper-photo
-  .placeholder-photo:active,
-.verification-process.step-requirements .list-reqs .req:active,
-body.uxdesign.alerts .content-primary:active {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 .is-expandable.is-ready .title-expand {
   cursor: pointer;
@@ -33328,280 +29830,6 @@ body.error .back-button.is-disabled {
 }
 .advance-modules-remove-text {
   margin-top: 10px;
-}
-.global-header {
-  box-sizing: border-box;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #0075b4;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1);
-  background: #fff;
-  line-height: 1.5;
-}
-@media (min-width: 992px) {
-  .global-header {
-    position: inherit;
-  }
-}
-.global-header .header-logo {
-  display: inline;
-}
-.global-header .header-logo a {
-  float: left;
-  margin: 15px 0 0 40px;
-  display: block;
-}
-.global-header .header-logo a .logo {
-  float: left;
-  height: 40px;
-}
-@media (max-width: 991px) {
-  .global-header .header-logo a {
-    margin-left: 50%;
-    height: 40px;
-    width: auto;
-  }
-  .global-header .header-logo a .logo {
-    margin-left: -50%;
-  }
-}
-.global-header .header-logo .course-header {
-  float: left;
-  margin: 16px 0 0 20px;
-  font-size: 0.875rem;
-  color: #313131;
-  line-height: 1em;
-  display: none;
-}
-.global-header .header-logo .course-header .course-name {
-  display: block;
-  font-size: 1rem;
-  margin-top: 7px;
-  font-weight: 600;
-}
-@media (min-width: 992px) {
-  .global-header .header-logo .course-header {
-    display: block;
-  }
-}
-.global-header .edx-cookie-banner-wrapper .edx-cookie-banner {
-  min-width: 0;
-}
-@media (min-width: 992px) {
-  .global-header .nav-links .nav-item {
-    margin: 0 20px;
-  }
-  .global-header .nav-links .nav-item a {
-    text-decoration: none;
-  }
-  .global-header .nav-links .main {
-    float: left;
-    margin: 20px 0 0 20px;
-  }
-  .global-header .nav-links .main .nav-item {
-    float: left;
-  }
-  .global-header .nav-links .main .nav-tab {
-    text-transform: none;
-    padding: 0;
-    cursor: pointer;
-    margin: 0;
-  }
-  .global-header .nav-links .main .nav-tab a {
-    color: #313131;
-    padding: 7px 25px 19px;
-    font-weight: 400;
-    display: inline-block;
-    margin-bottom: -10px;
-    border-bottom: 4px solid transparent;
-    cursor: pointer;
-  }
-  .global-header .nav-links .main .nav-tab a.active,
-  .global-header .nav-links .main .nav-tab a:hover {
-    border-bottom-style: solid;
-    border-bottom-color: #0075b4;
-  }
-  .global-header .nav-links .main .nav-tab a:hover {
-    cursor: pointer;
-    border-bottom-color: #0075b4;
-  }
-  .global-header .nav-links .secondary {
-    float: right;
-    margin: 15px 40px 0 0;
-  }
-  .global-header .nav-links .secondary .nav-item {
-    font-size: 1rem;
-    display: inline-block;
-    padding: 10px 0 0;
-    margin: 0 10px;
-  }
-  .global-header .nav-links .secondary .nav-item.nav-item-dropdown {
-    padding: 0;
-    margin: 0;
-  }
-  .global-header .nav-links .secondary .nav-item a {
-    color: #313131;
-    font-weight: 400;
-  }
-  .global-header .nav-links .secondary .btn {
-    border: 1px solid #0075b4;
-    padding: 5px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  .global-header .nav-links .secondary a.sign-in-btn,
-  .global-header .nav-links .secondary .nav-item a.shopping-cart {
-    background-color: #0075b4;
-    color: #fff;
-    border: 1px solid #fff;
-    font-weight: 400;
-    padding: 5px 20px;
-  }
-  .global-header .nav-links .secondary a.sign-in-btn:hover,
-  .global-header .nav-links .secondary .nav-item a.shopping-cart:hover {
-    background-color: #fff;
-    color: #0075b4;
-    border-color: #0075b4;
-  }
-  .global-header .nav-links .secondary a.register-btn {
-    background: #fff;
-    color: #0075b4;
-    font-weight: 400;
-  }
-  .global-header .nav-links .secondary a.register-btn:hover {
-    background-color: #0075b4;
-    color: #fff;
-  }
-  .global-header .nav-links .secondary .user-image-frame {
-    border: 1px solid #e7e7e7;
-    margin: -10px 5px;
-    border-radius: 5px;
-    width: 40px;
-  }
-  .global-header .nav-links .secondary .toggle-user-dropdown {
-    padding: 10px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .global-header .nav-links .secondary .dropdown-user-menu {
-    border: 1px solid #313131;
-    position: absolute;
-    background-color: #fff;
-    color: #313131;
-    right: 30px;
-    top: 55px;
-    z-index: 10;
-  }
-  .global-header .nav-links .secondary .dropdown-user-menu .dropdown-item {
-    cursor: pointer;
-    overflow: hidden;
-    padding: 0;
-  }
-  .global-header
-    .nav-links
-    .secondary
-    .dropdown-user-menu
-    .dropdown-item:hover {
-    color: #313131;
-    background-color: #e7e7e7;
-  }
-  .global-header
-    .nav-links
-    .secondary
-    .dropdown-user-menu
-    .dropdown-item:not(:last-child) {
-    border-bottom: 1px solid #e7e7e7;
-  }
-  .global-header .nav-links .secondary .dropdown-user-menu .dropdown-item a {
-    font-weight: 400;
-    padding: 10px 15px;
-    display: inline-block;
-    width: 100%;
-  }
-  .global-header
-    .nav-links
-    .secondary
-    .dropdown-user-menu
-    .dropdown-item
-    a:focus {
-    outline: none;
-    color: #313131;
-    background-color: #e7e7e7;
-  }
-  .global-header .hamburger-menu {
-    display: none;
-  }
-}
-@media (max-width: 991px) {
-  .global-header .main-header {
-    height: 40px;
-    position: inherit;
-  }
-  .global-header .hamburger-menu {
-    left: 20px;
-    position: absolute;
-    top: 18px;
-    width: 30px;
-    height: 20px;
-    padding-bottom: 5px;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
-  }
-  .global-header .hamburger-menu .line {
-    display: block;
-    position: absolute;
-    height: 5px;
-    width: 100%;
-    background: #767676;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: 0.25s ease-in-out;
-    transition: 0.25s ease-in-out;
-  }
-  .global-header .hamburger-menu .line:nth-child(1) {
-    top: 0;
-  }
-  .global-header .hamburger-menu .line:nth-child(2),
-  .global-header .hamburger-menu .line:nth-child(3) {
-    top: 10px;
-  }
-  .global-header .hamburger-menu .line:nth-child(4) {
-    top: 20px;
-  }
-  .global-header .hamburger-menu.open .line:nth-child(1) {
-    top: 18px;
-    width: 0%;
-    left: 50%;
-  }
-  .global-header .hamburger-menu.open .line:nth-child(2) {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  .global-header .hamburger-menu.open .line:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-  .global-header .hamburger-menu.open .line:nth-child(4) {
-    top: 18px;
-    width: 0%;
-    left: 50%;
-  }
-}
-.global-header .hidden {
-  display: none !important;
-}
-@media print {
-  .global-header {
-    border-bottom: 1px solid #a0a0a0 !important;
-  }
 }
 .mobile-menu {
   border-top: 1px solid #0075b4;
