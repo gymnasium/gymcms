@@ -7,14 +7,14 @@ url: /courses/take5/GYM-5014/
 poster_art: /img/take5/posters/gym-5014.jpg
 live: true
 instructor: "Jeremy Osborn"
-instructor_bio: ""
+instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "UX"
 subtopics:
   - label: "Prototyping"
 video_ID: TJqqgchPraE
 video_duration: "4:57"
 featured: false
-short_description: "Learn how to use Auto-Animate in Adobe XD in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
+short_description: "Learn how to use Auto-Animate in Adobe XD in this hands-on tutorial."
 project_file_source: GitHub
 project_files:
 - label: "Lesson Files"
