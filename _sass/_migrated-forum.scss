@@ -90,7 +90,19 @@
   }
 }
 
+.discussion-body, .discussion-module {
+  width: 100%;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
 @media (min-width: 768px) {
+  .discussion-body, .discussion-module {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
   .page-header-secondary {
     float: right;
     text-align: right;
@@ -98,8 +110,6 @@
     vertical-align: text-bottom;
   }
 }
-
-
 
 .discussion-column {
   font-weight: 700;
@@ -112,6 +122,20 @@
   border: 1px solid #ccc;
   border-radius: 2px;
   padding: 20px;
+
+  .response-count {
+    margin-right: 10px;
+  }
+  span.label {
+    color: #222;
+  }
+
+  .post-topic-button:hover,
+  .post-topic-button:focus {
+    border: 1px solid #aaa;
+    background-image: -webkit-linear-gradient(top, #fcfcfc, #f6f6f6);
+    background-image: linear-gradient(to bottom, #fcfcfc, #f6f6f6);
+  }
 }
 
 .forum-nav {
