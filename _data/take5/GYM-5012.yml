@@ -15,7 +15,7 @@ subtopics:
 video_ID: IqAizKPCC9U
 video_duration: "4:59"
 featured: false
-short_description: "Learn the benefits of prototyping web page layouts using CSS Grid Layout in this hands-on tutorial with Jeremy Osborn."
+short_description: "Learn the benefits of prototyping web page layouts using CSS Grid Layout in this hands-on tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"
