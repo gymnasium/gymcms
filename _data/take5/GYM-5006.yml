@@ -7,12 +7,12 @@ url: /courses/take5/GYM-5006/
 poster_art: /img/take5/posters/gym-5006.jpg
 live: true
 instructor: "Heather O'Neill"
-instructor_bio: ""
+instructor_bio: "CEO of Pixels for Humans"
 topic: "UX"
 video_ID: FfQ55Q15xUA
 video_duration: "4:47"
 featured: false
-short_description: "Learn how to run a card sorting session in order to better understand your users’ mental models in this tutorial with Heather O’Neill, CEO of Pixels for Humans."
+short_description: "Learn how to run a card sorting session in order to better understand your users’ mental models in this tutorial."
 related_content:
 - label: "The Pros and Cons of Card Sorting in UX Research"
   url: "https://www.interaction-design.org/literature/article/the-pros-and-cons-of-card-sorting-in-ux-research"
