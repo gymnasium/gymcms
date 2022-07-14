@@ -7,12 +7,12 @@ url: /courses/take5/GYM-5001/
 poster_art: /img/take5/posters/gym-5001.jpg
 live: true
 instructor: "Jeremy Osborn"
-instructor_bio: ""
+instructor_bio: "Academic Director of Aquent Gymnasium."
 topic: "Development"
 video_ID: zRNUPU2dujU
 video_duration: "4:59"
 featured: false
-short_description: "Learn how to create a scrolling background effect using CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
+short_description: "Learn how to create a scrolling background effect using CSS in this hands-on tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"
