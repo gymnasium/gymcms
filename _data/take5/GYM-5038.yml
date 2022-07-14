@@ -7,12 +7,12 @@ url: /courses/take5/GYM-5038/
 poster_art: /img/take5/posters/gym-5038.jpg
 live: true
 instructor: "Clarissa Peterson"
-instructor_bio: ""
+instructor_bio: "a Chicago-based designer who specializes in user experience and content strategy"
 topic: "Accessibility"
 video_ID: 9ylBqOnEXos
 video_duration: "4:39"
 featured: false
-short_description: "Learn how to make the headings and lists in your HTML documents more accessible for everyone in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
+short_description: "Learn how to make the headings and lists in your HTML documents more accessible for everyone in this tutorial."
 related_content:
 - label: "Accessibility Tutorials: Headings"
   url: "https://www.w3.org/WAI/tutorials/page-structure/headings/"
