@@ -7,12 +7,12 @@ url: /courses/take5/GYM-5021/
 poster_art: /img/take5/posters/gym-5021.jpg
 live: true
 instructor: "Jeremy Osborn"
-instructor_bio: ""
+instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "Development"
 video_ID: qfDPi1nnHSk
 video_duration: "4:48"
 featured: false
-short_description: "Learn how to add generated content to the links on a web page using CSS in this tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
+short_description: "Learn how to add generated content to the links on a web page using CSS in this tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"
