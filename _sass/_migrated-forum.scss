@@ -182,6 +182,10 @@
       cursor: pointer;
     }
   }
+
+  .forum-nav-browse-menu-following .forum-nav-browse-title {
+    padding-left: 30px;
+  }
 }
 
 .forum-nav-browse-filter {
@@ -372,7 +376,6 @@ TODO: migrate discussion CSS out of theme
     color: inherit;
   }
 }
-
 
 // /*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/lms-main-v2.695c4abc7a5a.css */
 // [tabindex="-1"] {
@@ -1984,4 +1987,669 @@ section.discussion::after {
 }
 #content .discussion-column .home-header span.label {
   display: none;
+}
+
+// Expanded forum post
+
+/*! CSS Used from: https://thegymnasium.com/static/gymnasium/css/discussion/lms-discussion-main.0886e453861f.css */
+
+.discussion .actions-dropdown {
+  z-index: 10;
+}
+.discussion-article .posted-details .username {
+  font-weight: 600;
+}
+.discussion .post-label,
+.discussion-article .posted-details,
+.discussion-post .post-context {
+  font-weight: 300;
+}
+.discussion-response .response-body,
+.discussion-post .post-body,
+.discussion .action-button .action-label,
+.discussion .actions-dropdown .action-list-item,
+.discussion-article .posted-details,
+.discussion-comment .response-body,
+.discussion-post .post-context,
+.discussion .post-actions-list,
+.discussion .response-actions-list,
+.discussion .comment-actions-list {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.discussion-response .response-body,
+.discussion-post .post-body {
+  line-height: 20.72px;
+  font-size: 0.875rem;
+}
+.discussion .action-button .action-label,
+.discussion .actions-dropdown .action-list-item,
+.discussion-article .posted-details,
+.discussion-comment .response-body,
+.discussion-post .post-context,
+.discussion .post-actions-list,
+.discussion .response-actions-list,
+.discussion .comment-actions-list {
+  line-height: 17.76px;
+  font-size: 0.75rem;
+}
+.discussion .post-actions-list,
+.discussion .response-actions-list,
+.discussion .comment-actions-list,
+.discussion .actions-dropdown,
+.discussion .responses,
+.discussion .comments {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+.discussion .post-actions-list li,
+.discussion .response-actions-list li,
+.discussion .comment-actions-list li,
+.discussion .actions-dropdown li,
+.discussion .responses li,
+.discussion .comments li {
+  margin: 0;
+  padding: 0;
+}
+.discussion-body .bottom-post-status {
+  padding: 30px;
+  font-size: 1.3125rem;
+  font-weight: 700;
+  color: #414141;
+  text-align: center;
+}
+.discussion-body .discussion-article {
+  position: relative;
+}
+.discussion-body .discussion-article a,
+.discussion-body .discussion-article p {
+  word-wrap: break-word;
+}
+.discussion-body .discussion-reply-new {
+  -webkit-transition: opacity 0.2s linear 0s;
+  -moz-transition: opacity 0.2s linear 0s;
+  transition: opacity 0.2s linear 0s;
+}
+.discussion-body .discussion-reply-new::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.discussion-body .reply-post-control {
+  margin-top: 20px;
+}
+.discussion .post-actions-list,
+.discussion .response-actions-list,
+.discussion .comment-actions-list {
+  text-align: right;
+}
+.discussion .post-actions-list .actions-item,
+.discussion .response-actions-list .actions-item,
+.discussion .comment-actions-list .actions-item {
+  box-sizing: border-box;
+  display: block;
+  margin: 5px 0;
+}
+.discussion .post-actions-list .actions-item.is-hidden,
+.discussion .response-actions-list .actions-item.is-hidden,
+.discussion .comment-actions-list .actions-item.is-hidden {
+  display: none;
+}
+.discussion .post-actions-list .more-wrapper,
+.discussion .response-actions-list .more-wrapper,
+.discussion .comment-actions-list .more-wrapper {
+  position: relative;
+}
+.discussion .actions-dropdown {
+  right: 0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  pointer-events: none;
+  min-width: 145px;
+}
+.discussion .actions-dropdown .actions-dropdown-list {
+  box-sizing: border-box;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  border-radius: 3px;
+  margin: 5px 0 0 0;
+  border: 1px solid #d9d9d9;
+  padding: 10px 15px;
+  background: #fff;
+}
+.discussion .actions-dropdown .actions-dropdown-list::after,
+.discussion .actions-dropdown .actions-dropdown-list::before {
+  right: 6px;
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.discussion .actions-dropdown .actions-dropdown-list::after {
+  margin-right: 1px;
+  border-color: transparent;
+  border-bottom-color: #fff;
+  border-width: 6px;
+}
+.discussion .actions-dropdown .actions-dropdown-list::before {
+  border-color: transparent;
+  border-bottom-color: #d9d9d9;
+  border-width: 7px;
+}
+.discussion .actions-dropdown .actions-item {
+  display: block;
+  margin: 0;
+}
+.discussion .actions-dropdown .actions-item.is-hidden {
+  display: none;
+}
+.discussion .action-button {
+  -webkit-transition: border 0.5s linear 0s;
+  -moz-transition: border 0.5s linear 0s;
+  transition: border 0.5s linear 0s;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #313131;
+}
+.discussion .action-button .action-icon {
+  display: inline-block;
+  font-size: 0.75rem;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  text-align: center;
+  color: #313131;
+}
+.discussion .action-button .action-icon .icon {
+  margin-right: 0;
+  vertical-align: middle;
+}
+.discussion .action-button .action-label {
+  display: none;
+  vertical-align: middle;
+  padding: 2px 8px;
+}
+.discussion .action-button:hover .action-label,
+.discussion .action-button:focus .action-label {
+  display: inline-block;
+}
+.discussion .action-button:hover .action-icon,
+.discussion .action-button:focus .action-icon {
+  -webkit-border-top-left-radius: 0;
+  -moz-border-topleft-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-topright-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-bottomright-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-bottomleft-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.discussion .action-button.action-follow .action-label {
+  color: #0075b4;
+}
+.discussion .action-button.action-follow:hover .action-icon,
+.discussion .action-button.action-follow:focus .action-icon {
+  background-color: #0075b4;
+  border: 1px solid #0075b4;
+  color: #fff;
+}
+.discussion .action-button.action-follow:hover,
+.discussion .action-button.action-follow:focus {
+  border-color: #0075b4;
+}
+.discussion .action-button.action-vote .action-label {
+  opacity: 1;
+}
+.discussion .action-button.action-vote:hover .action-icon,
+.discussion .action-button.action-vote:focus .action-icon {
+  background-color: #008100;
+  border: 1px solid #008100;
+  color: #fff;
+}
+.discussion .action-button.action-vote:hover,
+.discussion .action-button.action-vote:focus {
+  border-color: #008100;
+}
+.discussion .action-button.action-vote:hover .action-label,
+.discussion .action-button.action-vote:focus .action-label {
+  color: #008100;
+}
+.discussion .action-button.action-endorse:hover .action-icon,
+.discussion .action-button.action-endorse:focus .action-icon {
+  background-color: #0075b4;
+  border: 1px solid #0075b4;
+  color: #fff;
+}
+.discussion .action-button.action-endorse:hover,
+.discussion .action-button.action-endorse:focus {
+  border-color: #0075b4;
+  background-color: #fff;
+}
+.discussion .action-button.action-endorse:hover .action-label,
+.discussion .action-button.action-endorse:focus .action-label {
+  color: #0075b4;
+}
+.discussion .action-button.action-more {
+  position: relative;
+}
+.discussion .action-button.action-more:hover,
+.discussion .action-button.action-more:focus {
+  border-color: #313131;
+  background-color: #fff;
+}
+.discussion .action-button.action-more:hover .action-icon,
+.discussion .action-button.action-more:focus .action-icon {
+  border: 1px solid #313131;
+  background-color: #313131;
+  color: #fff;
+}
+.discussion .action-button.action-more:hover .action-label,
+.discussion .action-button.action-more:focus .action-label {
+  opacity: 1;
+  color: #161616;
+}
+.discussion .actions-dropdown .action-list-item {
+  text-align: right;
+  display: block;
+  width: 100%;
+  padding: 2px 0;
+  white-space: nowrap;
+  color: #313131;
+}
+.discussion .actions-dropdown .action-list-item:hover,
+.discussion .actions-dropdown .action-list-item:focus {
+  color: #065683;
+}
+.discussion .actions-dropdown .action-list-item .action-icon {
+  margin-left: 5px;
+  display: inline-block;
+  width: 10px;
+  color: inherit;
+}
+.discussion .actions-dropdown .action-list-item .action-label {
+  display: inline-block;
+  color: inherit;
+}
+.discussion .actions-dropdown .action-list-item.is-checked.action-pin {
+  color: #c2387d;
+}
+.discussion .actions-dropdown .action-list-item.is-checked:hover,
+.discussion .actions-dropdown .action-list-item.is-checked:focus {
+  color: #065683;
+}
+.discussion .action-button .action-label,
+.discussion .action-list-item .action-label {
+  float: left;
+}
+.discussion .action-button .action-label .label-checked,
+.discussion .action-list-item .action-label .label-checked {
+  display: none;
+}
+.discussion .action-list-item.is-checked .label-unchecked {
+  display: none;
+}
+.discussion .action-list-item.is-checked .label-checked {
+  display: inline;
+}
+.wmd-preview-container {
+  -webkit-border-top-left-radius: 0;
+  -moz-border-topleft-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -moz-border-topright-radius: 0;
+  border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-bottomright-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-bottomleft-radius: 3px;
+  border-bottom-left-radius: 3px;
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  background: #f5f5f5;
+  border-color: #d9d9d9;
+}
+.discussion-board .wmd-preview-container {
+  margin-top: -5px;
+}
+.wmd-preview-label {
+  padding-left: 5px;
+  padding-top: 3px;
+  width: 100%;
+  color: #414141;
+  font-size: 0.75rem;
+}
+.wmd-preview {
+  padding: 10px 20px;
+  width: auto;
+  background-color: #f5f5f5;
+}
+.wmd-button {
+  background: none;
+}
+.wmd-button-row {
+  -webkit-transition: all 0.2s ease-out 0s;
+  -moz-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 5px 5px 5px;
+  padding: 0;
+  height: 30px;
+}
+.wmd-spacer {
+  margin-left: 14px;
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: Silver;
+  list-style: none;
+}
+.wmd-button {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+  list-style: none;
+  cursor: pointer;
+  padding: 0;
+}
+.wmd-button:hover {
+  background: none;
+  box-shadow: none;
+}
+.wmd-button > span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("https://thegymnasium.com/static/gymnasium/images/wmd-buttons-transparent.e9d9fe51633b.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.wmd-spacer1 {
+  left: 50px;
+}
+.wmd-spacer2 {
+  left: 175px;
+}
+.wmd-spacer3 {
+  left: 300px;
+}
+.wmd-input {
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-topleft-radius: 3px;
+  border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-topright-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-bottomright-radius: 0;
+  border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-bottomleft-radius: 0;
+  border-bottom-left-radius: 0;
+  box-sizing: border-box;
+  margin-top: 0;
+  border: 1px solid #d9d9d9;
+  padding: 10px;
+  width: 100%;
+  height: 125px;
+  background: #fff;
+  font-size: 0.875rem;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  box-sizing: border-box;
+  width: 100%;
+  background: #fff;
+}
+.wmd-button-row {
+  position: relative;
+  height: 25px;
+}
+.discussion .post-label {
+  margin: 5px 10px 0 0;
+  font-size: 0.75rem;
+  display: inline;
+  white-space: nowrap;
+}
+.discussion .post-label .icon {
+  margin-right: 4px;
+}
+.discussion .post-label.is-hidden {
+  display: none;
+}
+.discussion .post-label.post-label-pinned {
+  color: #982c62;
+}
+.discussion .post-label.post-label-reported {
+  color: #982c62;
+}
+.discussion .post-label.post-label-closed {
+  color: #161616;
+}
+.discussion .user-label-staff {
+  color: #414141;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+.discussion-post {
+  padding: 0 10px;
+}
+.discussion-post .post-header-actions {
+  float: right;
+}
+.discussion-article .posted-details {
+  margin: 4px 0;
+  color: #414141;
+}
+.discussion-article .posted-details .username {
+  display: inline;
+}
+.discussion-article .posted-details .timeago {
+  color: inherit;
+}
+.thread-responses-wrapper,
+.post-extended-content {
+  padding: 0 10px;
+}
+.discussion-response {
+  min-height: 100px;
+}
+.discussion-response .response-header-content {
+  display: inline-block;
+  vertical-align: top;
+  width: 91.52542%;
+}
+.discussion-response .response-header-actions {
+  float: right;
+  right: 20px;
+  position: absolute;
+  top: 10px;
+}
+.discussion-comment .response-body {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 83.05085%;
+}
+.discussion-comment .comment-actions-list {
+  float: right;
+  right: 10px;
+  position: absolute;
+  top: 10px;
+}
+.thread-wrapper .response-btn-count-wrapper {
+  margin: 20px 0;
+}
+.discussion-post::after,
+.discussion-response::after,
+.discussion-comment::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.discussion-response .response-body {
+  padding: 10px 30px 0 0;
+  margin-bottom: 0.2em;
+  font-size: 0.875rem;
+}
+.discussion-post::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.discussion-post .post-header-content {
+  max-width: calc(100% - 100px);
+}
+.discussion-post .post-header-content .post-title {
+  font-size: 1.3125rem;
+  margin-bottom: 5px;
+}
+.discussion-post .post-body {
+  padding: 10px 0;
+  max-width: calc(100% - 100px);
+}
+.discussion-post .post-context {
+  color: #414141;
+}
+.discussion-post .post-context:empty {
+  display: none;
+}
+.discussion .responses:empty {
+  display: none;
+}
+.discussion .responses .forum-response {
+  animation: fadeIn 0.3s;
+  position: relative;
+  margin: 20px 0;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+}
+.discussion .responses .discussion-response {
+  box-sizing: border-box;
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-topleft-radius: 3px;
+  border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-topright-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-bottomright-radius: 0;
+  border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-bottomleft-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 20px;
+  background-color: #fff;
+}
+.discussion-response .response-header-content .username {
+  font-size: 0.875rem;
+}
+.discussion-response .response-body ol {
+  padding-left: 40px;
+  padding-right: 0;
+}
+.discussion .add-response {
+  display: inline;
+  padding: 10px;
+}
+.forum-response .action-show-comments {
+  font-size: 0.875rem;
+  box-sizing: border-box;
+  display: block;
+  padding: 10px 20px;
+  width: 100%;
+  background: #f5f5f5;
+  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.25) inset;
+}
+.discussion .comments {
+  -webkit-border-top-left-radius: 0;
+  -moz-border-topleft-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -moz-border-topright-radius: 0;
+  border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-bottomright-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-bottomleft-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background: #f5f5f5;
+  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.25) inset;
+}
+.discussion .comments > li {
+  border-top: 1px solid #d9d9d9;
+  padding: 10px 20px;
+  position: relative;
+}
+.discussion .comments .comment-form {
+  padding: 10px 0;
+}
+.discussion .comments .comment-form::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.discussion .comments .comment-form .discussion-submit-comment {
+  float: left;
+  margin-top: 8px;
+}
+.discussion .comments .comment-form .wmd-input {
+  -webkit-transition: all 0.2s linear 0s;
+  -moz-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+  height: 40px;
+}
+.discussion .comments .comment-form .discussion-errors {
+  margin: 0;
+}
+.response-count {
+  float: right;
+  margin-right: 10px;
+  color: #414141;
+  font-size: 0.875rem;
+}
+.response-pagination {
+  visibility: visible;
+  margin: 10px 0;
+}
+.response-pagination:empty {
+  visibility: hidden;
+}
+.response-pagination .response-display-count {
+  display: block;
+  padding: 10px 0;
+  color: #414141;
+  font-size: 0.875rem;
+}
+.discussion .action-label span,
+.discussion .action-icon span {
+  color: inherit;
+}
+.discussion-article .response-header {
+  line-height: 1 !important;
+  font-size: 0.875rem !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+#content .discussion-column div.response-count {
+  margin-right: 10px;
 }
