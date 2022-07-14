@@ -7,14 +7,14 @@ url: /courses/take5/GYM-5051/
 poster_art: /img/take5/posters/gym-5051.jpg
 live: true
 instructor: "Jeremy Osborn"
-instructor_bio: ""
+instructor_bio: "Director of Learning for Aquent Gymnasium"
 topic: "UX"
 subtopics:
   - label: "Prototyping"
 video_ID: UYsT7xAhQZM
 video_duration: "4:55"
 featured: true
-short_description: "Creating complex, responsive interfaces in Figma can be done very quickly using Auto Layout. However, it does require a solid understanding of alignment, distribution, resizing and nesting. Learn these advanced techniques in this tutorial by Jeremy Osborn, Director of Learning for Aquent Gymnasium."
+short_description: "Learn advanced Auto Layout techniques such as alignment, distribution, resizing, and nesting to create complex interfaces in Figma."
 project_file_source: Figma Community
 project_files:
 - label: "Starting Project"
