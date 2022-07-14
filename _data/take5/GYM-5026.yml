@@ -7,12 +7,12 @@ url: /courses/take5/GYM-5026/
 poster_art: /img/take5/posters/gym-5026.jpg
 live: true
 instructor: "Mike Bifulco"
-instructor_bio: ""
+instructor_bio: "Developer Advocate at Stripe"
 topic: "Development"
 video_ID: ukPI1zlxKqg
 video_duration: "4:58"
 featured: false
-short_description: "Learn how to get up and running with your first GitHub Pages Website in this tutorial by Mike Bifulco, Director of Technology at Aquent Gymnasium."
+short_description: "Learn how to get up and running with your first GitHub Pages Website in this tutorial."
 related_content:
 - label: "GitHub.com"
   url: "https://github.com"
