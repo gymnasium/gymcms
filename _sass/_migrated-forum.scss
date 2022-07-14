@@ -1,3 +1,102 @@
 @import "functions";
 @import "mixins";
 @import "variables";
+
+[tabindex="-1"] {
+  outline: none;
+}
+
+.gym-discussion-board-container {
+  max-width: 1920px;
+  min-width: 0px !important;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1170px;
+  background: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.discussion-board {
+  padding: 0px;
+  display: block;
+  border: 1px solid #e7e7e7;
+  background-color: #fff;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: block;
+  margin: 40px 0 20px;
+  padding: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.page-header-main {
+  display: inline-block;
+}
+
+.breadcrumbs {
+  margin: 5px 0 0 0;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+
+  .nav-item {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    box-sizing: border-box;
+    margin-left: 5px;
+    display: inline-block;
+  }
+
+  .all-topics {
+    margin: 0;
+    font: inherit;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button;
+    line-height: inherit;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-shadow: none;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: color 0.125s ease-in-out 0s,border-color 0.125s ease-in-out 0s,background 0.125s ease-in-out 0s,box-shadow 0.125s ease-in-out 0s;
+    display: inline-block;
+    padding: 1px;
+    background: transparent;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    color: inherit;
+    font-size: 14px;
+    font-family: "brandon-grotesque","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+    border: 1px solid transparent;
+
+    .fa {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .page-header-secondary {
+    float: right;
+    text-align: right;
+    display: flex;
+    vertical-align: text-bottom;
+  }
+}
+
+

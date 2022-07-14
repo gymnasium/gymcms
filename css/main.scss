@@ -7,7 +7,7 @@
 
 // Render font face rules
 @include font-brandon;
-@include font-awesome; // TODO: are we using this? Yes! We use it on the course nav accordion right caret icon.
+@include font-awesome; // TODO: are we using this? Yes! We use it on the course nav accordion right caret icon. Also, in the forum.
 
 // TODO: clean these up to the best of our ability
 @import "migrated-vendor";
