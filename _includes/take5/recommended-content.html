@@ -3,7 +3,25 @@ TODO: rather than hard-coding values here, a more flexible method would be to cr
 {%- endcomment -%}
 {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
 
-{%- if course.topic == "Accessibility" -%}
+{%- if course.topic == "Design" -%}
+
+  {%- assign course1 = site.data.courses.GYM-106 -%}
+  {%- assign course2 = site.data.courses.GYM-018 -%}
+  {%- assign course3 = site.data.courses.GYM-013 -%}
+
+{%- elsif course.topic == "Development" -%}
+
+  {%- assign course1 = site.data.courses.GYM-109 -%}
+  {%- assign course2 = site.data.courses.GYM-107 -%}
+  {%- assign course3 = site.data.courses.GYM-011 -%}
+
+{%- elsif course.topic == "UX" -%}
+
+  {%- assign course1 = site.data.courses.GYM-103 -%}
+  {%- assign course2 = site.data.courses.GYM-015 -%}
+  {%- assign course3 = site.data.courses.GYM-014 -%}
+
+{%- elsif course.topic == "Accessibility" -%}
 
   {%- assign course1 = site.data.courses.GYM-016 -%}
   {%- assign course2 = site.data.courses.GYM-007 -%}
@@ -15,28 +33,10 @@ TODO: rather than hard-coding values here, a more flexible method would be to cr
   {%- assign course2 = site.data.courses.GYM-106 -%}
   {%- assign course3 = site.data.courses.GYM-015 -%}
 
-{%- elsif course.topic == "Prototyping" -%}
-
-  {%- assign course1 = site.data.courses.GYM-015 -%}
-  {%- assign course2 = site.data.courses.GYM-014 -%}
-  {%- assign course3 = site.data.courses.GYM-103 -%}
-
-{%- elsif course.topic == "User Experience" -%}
-
-  {%- assign course1 = site.data.courses.GYM-103 -%}
-  {%- assign course2 = site.data.courses.GYM-015 -%}
-  {%- assign course3 = site.data.courses.GYM-014 -%}
-
-{%- elsif course.topic == "Design & Development" -%}
-
-  {%- assign course1 = site.data.courses.GYM-109 -%}
-  {%- assign course2 = site.data.courses.GYM-107 -%}
-  {%- assign course3 = site.data.courses.GYM-011 -%}
-
 {%- else -%}
-{%- assign course1 = "" -%}
-{%- assign course2 = "" -%}
-{%- assign course3 = "" -%}
+  {%- assign course1 = "" -%}
+  {%- assign course2 = "" -%}
+  {%- assign course3 = "" -%}
 {%- endif -%}
 
 {%- assign recommendations = ""  | split: ", " -%}
@@ -49,26 +49,31 @@ TODO: rather than hard-coding values here, a more flexible method would be to cr
 
   {%- assign item = take5_hash[1] -%}
 
-  {%- if item.topic == this_topic -%}
-
-        {%- if item.live == true -%}
-            {%- if item.course_ID != this_tutorial -%}
-              {%- assign recommendations = recommendations | push: item.course_ID -%}
-            {%- endif -%}
-        {%- endif -%}
+{%- if item.topic == this_topic -%}
+  {%- if item.live == true -%}
+      {%- if item.course_ID != this_tutorial -%}
+        {%- assign recommendations = recommendations | push: item.course_ID -%}
       {%- endif -%}
-  {%- endfor -%}
+  {%- endif -%}
+{%- endif -%}
 
- {%- assign random_recommendations = recommendations | sample: 3 -%}
+{%- endfor -%}
 
- {%- assign rec1 = random_recommendations[0] -%}
- {%- assign rec2 = random_recommendations[1] -%}
- {%- assign rec3 = random_recommendations[2] -%}
+{%- assign random_recommendations = recommendations | sample: 3 -%}
+
+{%- assign rec1 = random_recommendations[0] -%}
+{%- assign rec2 = random_recommendations[1] -%}
+{%- assign rec3 = random_recommendations[2] -%}
 
 {%- assign tutorial1 = site.data.take5.[rec1] -%}
 {%- assign tutorial2 = site.data.take5.[rec2] -%}
 {%- assign tutorial3 = site.data.take5.[rec3] -%}
 
+{%- if tutorial1.topic == "Design" -%}
+  {%- assign tutorial1 = site.data.take5.[rec1] -%}
+  {%- assign tutorial2 = site.data.take5.GYM-5011 -%}
+  {%- assign tutorial3 = site.data.take5.GYM-5042 -%}
+{%- endif -%}
 
 {%- if tutorial1 != "" -%}
 
@@ -118,7 +123,7 @@ TODO: rather than hard-coding values here, a more flexible method would be to cr
               <div class="artwork" data-duration="{{ tutorial3.video_duration }}">
                 <a href="{{ tutorial3.title | slugify | prepend: base_path  }}" title="Watch Video">
                   <img alt="{{ tutorial3.title }}" src="{{ site.url }}{{ tutorial3.poster_art }}">
-                </a>s
+                </a>
               </div>
               <header>
                 <h4 class="subhead-topic">{{ tutorial3.topic }}</h4>
