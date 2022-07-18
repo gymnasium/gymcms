@@ -56,6 +56,7 @@ permalink: /courses/take5/
               {%- assign featured_description = site.data.take5[item].short_description -%}
               {%- assign featured_url = site.data.take5[item].title | slugify | prepend: base_path -%}
               {%- assign featured_instructor = site.data.take5[item].instructor -%}
+              {%- assign featured_instructor_bio = site.data.take5[item].instructor_bio -%}
               {%- assign featured_topic = site.data.take5[item].topic -%}
               {%- assign featured_poster_art = site.data.take5[item].poster_art -%}
               {%- assign featured_video_duration = site.data.take5[item].video_duration -%}
@@ -109,7 +110,8 @@ permalink: /courses/take5/
                   <h1 class="title all-caps">
                     <a href="{{ featured_url }}">{{ featured_title }}</a>
                   </h1>
-                  <p class="instructor">with {{ featured_instructor }}
+                  <p class="instructor">
+                    <b>with {{ featured_instructor }}, {{ featured_instructor_bio }}</b>
                   </p>
                 </header>
                 <p class="description">{{ featured_description }}</p>
