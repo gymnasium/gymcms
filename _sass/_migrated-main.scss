@@ -21357,13 +21357,8 @@ section.outside-app div.info-wrapper p,
 
 // Syllabus/Course Info
 section.updates {
-  font-size: 12pt;
   border-right: 1px dashed #ccc;
-  background-color: #fff;
   line-height: 1.41575em;
-  padding: 2em 20px 2em;
-  vertical-align: top;
-  width: 100%;
 
   h1 {
     font-size: 36px;
@@ -21425,84 +21420,35 @@ section.updates {
   }
 }
 
-
-.container div.info-wrapper section.handouts,
-section.outside-app div.info-wrapper section.handouts,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.handouts,
-.view-profile .wrapper-profile-sections div.info-wrapper section.handouts,
-.view-profile .badge-set-display div.info-wrapper section.handouts {
+section.handouts {
   font-size: 12pt;
   border-radius: 0;
   padding: 0px 20px;
   border-left: none;
   background-color: #fff;
-}
-.container div.info-wrapper section.handouts a,
-section.outside-app div.info-wrapper section.handouts a,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.handouts
-  a,
-.view-profile .wrapper-profile-sections div.info-wrapper section.handouts a,
-.view-profile .badge-set-display div.info-wrapper section.handouts a {
-  color: #f89820;
-  display: inline;
-}
-.container div.info-wrapper section.handouts a:hover,
-section.outside-app div.info-wrapper section.handouts a:hover,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.handouts
-  a:hover,
-.view-profile
-  .wrapper-profile-sections
-  div.info-wrapper
-  section.handouts
-  a:hover,
-.view-profile .badge-set-display div.info-wrapper section.handouts a:hover {
-  text-decoration: none;
-  border-bottom: 1px solid #f89820;
-}
-.container div.info-wrapper section.handouts h1,
-section.outside-app div.info-wrapper section.handouts h1,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.handouts
-  h1,
-.view-profile .wrapper-profile-sections div.info-wrapper section.handouts h1,
-.view-profile .badge-set-display div.info-wrapper section.handouts h1 {
-  padding: 10px 0 0px 0;
-  font-family: $gym-font-stack;
-  font-weight: 600;
-}
-.container div.info-wrapper section.handouts dt,
-section.outside-app div.info-wrapper section.handouts dt,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.handouts
-  dt,
-.view-profile .wrapper-profile-sections div.info-wrapper section.handouts dt,
-.view-profile .badge-set-display div.info-wrapper section.handouts dt {
-  font-family: $gym-font-stack;
-  font-weight: 600;
-}
+
+  a {
+    color: #f89820;
+    display: inline;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom: 1px solid #f89820;
+    }
+  }
+
+  h1 {
+    padding: 10px 0 0px 0;
+    font-family: $gym-font-stack;
+    font-weight: 600;
+  }
+
+  dt {
+    font-family: $gym-font-stack;
+    font-weight: 600;
+  }
+} 
+
 .course-title {
   background: #777;
 }
@@ -22417,68 +22363,6 @@ section.outside-app .home .container-fluid h1 {
 }
 .home .courses {
   padding-top: 0px;
-}
-.home .courses #view-all-courses {
-  font-size: 1.5em;
-  padding: 0.5em;
-  margin-top: 1em;
-}
-.home .courses .gym-course a:hover {
-  text-decoration: underline;
-}
-.home .courses .course-list {
-  list-style: none;
-}
-.home .courses .course-list-item {
-  margin-bottom: 1.5em;
-}
-.home .courses .course-list-item h2,
-.home > header .courses .course-list-item .title > .heading-group p,
-.home > header .title > .heading-group .courses .course-list-item p,
-.home .courses .course-list-item section.outside-app h1,
-section.outside-app .home .courses .course-list-item h1 {
-  color: #444;
-  text-align: center;
-}
-.home .courses .course-list-item .cover-image img {
-  height: 100%;
-  width: 100%;
-}
-.home .courses .course-list-item .course-preview {
-  background: #444;
-  padding: 1em;
-  margin-top: 0;
-}
-.home .courses .course-list-item .course-preview h2,
-.home
-  > header
-  .courses
-  .course-list-item
-  .course-preview
-  .title
-  > .heading-group
-  p,
-.home
-  > header
-  .title
-  > .heading-group
-  .courses
-  .course-list-item
-  .course-preview
-  p,
-.home .courses .course-list-item .course-preview section.outside-app h1,
-section.outside-app .home .courses .course-list-item .course-preview h1 {
-  height: 4.5em;
-  color: #f89820;
-  text-align: left;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-weight: bolder;
-  font-size: 16pt;
-}
-.home .courses p {
-  color: #f89820;
 }
 .account-settings-container .wrapper-header {
   border-bottom: none;
