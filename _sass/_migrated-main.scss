@@ -31556,384 +31556,76 @@ section.outside-app div.info-wrapper p,
 .home .container.grey div.info-wrapper p {
   font-family: $gym-text-font-stack;
 }
-.container div.info-wrapper section.updates,
-section.outside-app div.info-wrapper section.updates,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates,
-.view-profile .wrapper-profile-sections div.info-wrapper section.updates,
-.view-profile .badge-set-display div.info-wrapper section.updates {
+section.updates {
   font-size: 12pt;
   border-right: 1px dashed #ccc;
   background-color: #fff;
-}
-.container div.info-wrapper section.updates h1,
-section.outside-app div.info-wrapper section.updates h1,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  h1,
-.view-profile .wrapper-profile-sections div.info-wrapper section.updates h1,
-.view-profile .badge-set-display div.info-wrapper section.updates h1 {
-  font-size: 36px;
-  font-weight: 900;
-}
-.container div.info-wrapper section.updates section,
-section.outside-app div.info-wrapper section.updates section,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  section,
-.view-profile
-  .wrapper-profile-sections
-  div.info-wrapper
-  section.updates
-  section,
-.view-profile .badge-set-display div.info-wrapper section.updates section {
-  margin-bottom: 0;
-}
-.container div.info-wrapper section.updates ol,
-section.outside-app div.info-wrapper section.updates ol,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  ol,
-.view-profile .wrapper-profile-sections div.info-wrapper section.updates ol,
-.view-profile .badge-set-display div.info-wrapper section.updates ol,
-.container div.info-wrapper section.updates ul,
-section.outside-app div.info-wrapper section.updates ul,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  ul,
-.view-profile .wrapper-profile-sections div.info-wrapper section.updates ul,
-.view-profile .badge-set-display div.info-wrapper section.updates ul {
-  padding-left: 0;
-}
-.container div.info-wrapper section.updates ul ul,
-section.outside-app div.info-wrapper section.updates ul ul,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  ul
-  ul,
-.view-profile .wrapper-profile-sections div.info-wrapper section.updates ul ul,
-.view-profile .badge-set-display div.info-wrapper section.updates ul ul {
-  list-style: circle;
-  padding-left: 2.1em;
-  margin-left: -0.96em;
-}
-.container div.info-wrapper section.updates li,
-section.outside-app div.info-wrapper section.updates li,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  li,
-.view-profile .wrapper-profile-sections div.info-wrapper section.updates li,
-.view-profile .badge-set-display div.info-wrapper section.updates li {
-  margin-top: 0.8em;
-}
-.container div.info-wrapper section.updates header.hero p,
-section.outside-app div.info-wrapper section.updates header.hero p,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  header.hero
-  p,
-.view-profile
-  .wrapper-profile-sections
-  div.info-wrapper
-  section.updates
-  header.hero
-  p,
-.view-profile
-  .badge-set-display
-  div.info-wrapper
-  section.updates
-  header.hero
-  p {
-  font-family: $gym-font-stack;
-  font-size: 1.6em;
-  line-height: 1.5;
-  letter-spacing: 0.01em;
-  word-spacing: 0.02em;
-}
-.container div.info-wrapper section.updates article,
-section.outside-app div.info-wrapper section.updates article,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  article,
-.view-profile
-  .wrapper-profile-sections
-  div.info-wrapper
-  section.updates
-  article,
-.view-profile .badge-set-display div.info-wrapper section.updates article {
-  border-bottom: none;
-  margin-bottom: 0;
-}
-.container div.info-wrapper section.updates article section,
-section.outside-app div.info-wrapper section.updates article section,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  article
-  section,
-.view-profile
-  .wrapper-profile-sections
-  div.info-wrapper
-  section.updates
-  article
-  section,
-.view-profile
-  .badge-set-display
-  div.info-wrapper
-  section.updates
-  article
-  section {
-  border-top: 1px solid #ddd;
-  margin-top: 1.8em;
-}
-.container div.info-wrapper section.updates article section h2,
-section.outside-app div.info-wrapper section.updates article section h2,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  article
-  section
-  h2,
-.view-profile
-  .wrapper-profile-sections
-  div.info-wrapper
-  section.updates
-  article
-  section
-  h2,
-.view-profile
-  .badge-set-display
-  div.info-wrapper
-  section.updates
-  article
-  section
-  h2,
-.container
-  div.info-wrapper
-  section.updates
-  article
-  section
-  .home
-  > header
-  .title
-  > .heading-group
-  p,
-.home
-  > header
-  .title
-  > .heading-group
-  .container
-  div.info-wrapper
-  section.updates
-  article
-  section
-  p,
-section.outside-app
-  div.info-wrapper
-  section.updates
-  article
-  section
-  .home
-  > header
-  .title
-  > .heading-group
-  p,
-.home
-  > header
-  .title
-  > .heading-group
-  section.outside-app
-  div.info-wrapper
-  section.updates
-  article
-  section
-  p,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  article
-  section
-  .home
-  > header
-  .title
-  > .heading-group
-  p,
-.home
-  > header
-  .title
-  > .heading-group
-  .view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  article
-  section
-  p,
-.view-profile
-  .wrapper-profile-sections
-  div.info-wrapper
-  section.updates
-  article
-  section
-  .home
-  > header
-  .title
-  > .heading-group
-  p,
-.home
-  > header
-  .title
-  > .heading-group
-  .view-profile
-  .wrapper-profile-sections
-  div.info-wrapper
-  section.updates
-  article
-  section
-  p,
-.view-profile
-  .badge-set-display
-  div.info-wrapper
-  section.updates
-  article
-  section
-  .home
-  > header
-  .title
-  > .heading-group
-  p,
-.home
-  > header
-  .title
-  > .heading-group
-  .view-profile
-  .badge-set-display
-  div.info-wrapper
-  section.updates
-  article
-  section
-  p,
-.home
-  > header
-  .container.grey
-  div.info-wrapper
-  section.updates
-  article
-  section
-  .title
-  > .heading-group
-  p,
-.container div.info-wrapper section.updates article section.outside-app h1,
-section.outside-app div.info-wrapper section.updates article section h1,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  article
-  section.outside-app
-  h1,
-.view-profile
-  .wrapper-profile-sections
-  div.info-wrapper
-  section.updates
-  article
-  section.outside-app
-  h1,
-.view-profile
-  .badge-set-display
-  div.info-wrapper
-  section.updates
-  article
-  section.outside-app
+  line-height: 1.41575em;
+  padding: 2em 20px 2em;
+  vertical-align: top;
+  width: 100%;
+
   h1 {
-  font: 900 1em/1.3 $gym-font-stack;
-  color: #222;
-  letter-spacing: 0.06em;
-  word-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 1em;
+    font-size: 36px;
+    font-weight: 900;
+  }
+
+  section {
+    margin-bottom: 0;
+  }
+
+  ol, ul {
+    padding-left: 0;
+  }
+
+  ul ul {
+    list-style: circle;
+    padding-left: 2.1em;
+    margin-left: -0.96em;
+  }
+
+  li {
+    margin-top: 0.8em;
+  }
+
+  header.hero p {
+    font-family: $gym-font-stack;
+    font-size: 1.6em;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    word-spacing: 0.02em;
+  }
+
+  article {
+    border-bottom: none;
+    margin-bottom: 0;
+
+    section {
+      border-top: 1px solid #ddd;
+      margin-top: 1.8em;
+
+      h2, p {
+        font: 900 1em/1.3 $gym-font-stack;
+        color: #222;
+        letter-spacing: 0.06em;
+        word-spacing: 0.04em;
+        text-transform: uppercase;
+        margin-bottom: 1em;
+      }
+
+      h3 {
+        font: bold 1.2em/1.4 $gym-font-stack;
+        color: #222;
+        letter-spacing: 0.02em;
+        word-spacing: 0.04em;
+        margin-top: 1em;
+        text-transform: capitalize;
+      }
+    }
+  }
 }
-.container div.info-wrapper section.updates article section h3,
-section.outside-app div.info-wrapper section.updates article section h3,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  section.updates
-  article
-  section
-  h3,
-.view-profile
-  .wrapper-profile-sections
-  div.info-wrapper
-  section.updates
-  article
-  section
-  h3,
-.view-profile
-  .badge-set-display
-  div.info-wrapper
-  section.updates
-  article
-  section
-  h3 {
-  font: bold 1.2em/1.4 $gym-font-stack;
-  color: #222;
-  letter-spacing: 0.02em;
-  word-spacing: 0.04em;
-  margin-top: 1em;
-  text-transform: capitalize;
-}
+
+
 .container div.info-wrapper section.handouts,
 section.outside-app div.info-wrapper section.handouts,
 .view-profile
