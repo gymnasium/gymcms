@@ -31556,6 +31556,8 @@ section.outside-app div.info-wrapper p,
 .home .container.grey div.info-wrapper p {
   font-family: $gym-text-font-stack;
 }
+
+// Syllabus/Course Info
 section.updates {
   font-size: 12pt;
   border-right: 1px dashed #ccc;
@@ -32580,24 +32582,7 @@ section.outside-app .home #as-seen-in h1 {
   margin-top: -1em;
   text-align: center;
 }
-.home section.grey.outside-app,
-.home
-  .view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .grey.u-field-account_privacy,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .home
-  .grey.u-field-account_privacy,
-.home .view-profile .grey.wrapper-profile-sections,
-.view-profile .home .grey.wrapper-profile-sections,
-.home .view-profile .grey.badge-set-display,
-.view-profile .home .grey.badge-set-display,
-.home .grey.container {
-  background-color: #444;
-}
+
 .home .container-fluid {
   padding-bottom: 4em;
 }
@@ -32666,77 +32651,7 @@ section.outside-app .home .container-fluid h1 {
   color: #ebebeb;
   background-color: transparent;
 }
-.home .container-fluid:nth-of-type(even) hr {
-  background-color: #ebebeb;
-}
-.home .testimonial {
-  text-align: center;
-}
-.home .quote {
-  display: inline-block;
-  position: relative;
-  font-family: $gym-font-stack;
-  color: #aaa;
-  letter-spacing: 0.025em;
-  vertical-align: middle;
-  margin: 1em 0;
-}
-.home .quote::before,
-.home .quote::after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  font-family: $gym-text-font-stack;
-  font-size: 19em;
-  line-height: 0.35;
-  color: #ddd;
-  color: rgba(221, 221, 221, 0.5);
-  height: 0;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.home .quote::before {
-  left: 0;
-  content: "“";
-}
-.home .quote::after {
-  right: 0;
-  content: "”";
-}
-.home .quote blockquote {
-  position: relative;
-  font-size: 1.5em;
-  padding-right: 2.5em;
-  padding-left: 2.5em;
-  margin: 0;
-  z-index: 1;
-  border-left: none;
-}
-.home .quote p {
-  font-style: italic;
-  font-weight: bold;
-  line-height: 1.2;
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
-}
-.home .quote strong {
-  font-size: 150%;
-  font-weight: 900;
-  line-height: 0.9;
-}
-.home .quote figcaption {
-  font-family: $gym-text-font-stack;
-  font-size: small;
-  font-style: italic;
-  font-weight: bold;
-  text-align: right;
-  margin-top: 1em;
-  margin-right: 25%;
-}
-.home .quote figcaption::before {
-  content: "— ";
-  font-weight: normal;
-}
+
 .home .highlighted-courses {
   padding-top: 3em;
 }
