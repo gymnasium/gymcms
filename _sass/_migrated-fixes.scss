@@ -412,7 +412,7 @@
       font-size: 1em;
       font-family: monospace;
     }
-    
+
     code {
       padding: 5px;
       font-size: 0.85em;
@@ -582,5 +582,19 @@
       margin-left: -1em;
       margin-top: 0.4em;
     }
+  }
+}
+
+#as-seen-in {
+  h1, h2, p {
+    padding-bottom: 30px;
+  }
+
+  ul {
+    box-sizing: border-box;
+  }
+
+  li {
+    width: 18%;
   }
 }
