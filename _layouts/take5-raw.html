@@ -35,7 +35,7 @@
                       <h1 class="title all-caps">{{ course.title }}</h1>
 
                       {% if course.instructor !=null %}
-                      <p class="instructor">with {{ course.instructor }}</p>
+                      <p class="instructor"><b>with {{ course.instructor }}, {{ course.instructor_bio }}</b></p>
                       {% endif %}
                     </header>
                     <p class="description">{{ course.short_description }}</p>
