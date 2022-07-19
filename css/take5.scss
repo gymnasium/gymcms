@@ -83,7 +83,7 @@
 
 // paragraphs
 
-[role="main"] p {
+[role="main"] p:not([class]) {
   font: normal 1.15em/1.5 $gym-text-font-stack;
   margin-top: 1em;
   margin-bottom: 0;
@@ -402,7 +402,6 @@ main h3 {
 
     .tutorial .subhead-topic {
       margin-top: 1.6rem;
-      margin-bottom: .8rem;
     }
 
     &-content {
@@ -464,29 +463,32 @@ main h3 {
   font-weight: bold;
 }
 
-.subhead-topic,
-.subhead-datetime {
-  font: bold .85em/1.15 $gym-font-stack;
-  color: $gym-black;
-  letter-spacing: .05rem;
-  word-spacing: .05rem;
-  text-transform: uppercase;
-  text-align: left;
-}
-
-.tutorial {
+[role="main"] {
   .subhead-topic,
   .subhead-datetime {
-    margin-bottom: .6rem;
+    font: bold .85em/1.15 $gym-font-stack;
+    color: $gym-black;
+    letter-spacing: .05rem;
+    word-spacing: .05rem;
   }
 
   .subhead-topic {
     font-weight: 900;
+    font-size: 0.9625em;
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+  }
+
+  .tutorial .subhead-topic {
+    margin-bottom: 1rem;
   }
 }
 
 .subhead-datetime {
   display: inline-block;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: .6rem
 }
 
 #tutorial-resources p {
@@ -667,7 +669,7 @@ details.take5--transcript {
         padding: 1em 0.5em;
         margin-top: 0;
 
-        p {
+        p:not([class]) {
           font-size: 0.9625em;
         }
       }
