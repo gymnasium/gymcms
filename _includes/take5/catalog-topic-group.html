@@ -25,6 +25,7 @@
           </a>
         </div>
         <header>
+          <p class="subhead-topic all-caps">{{ item.topic }}</p>
           <h3 class="all-caps">
             <a href="{{ item.title | slugify | prepend: base_path }}">{{ item.title }}</a>
           </h3>
