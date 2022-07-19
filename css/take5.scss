@@ -83,10 +83,15 @@
 
 // paragraphs
 
-[role="main"] p:not([class]) {
-  font: normal 1.15em/1.5 $gym-text-font-stack;
-  margin-top: 1em;
-  margin-bottom: 0;
+[role="main"] {
+  p {
+    font: normal 1.15em/1.5 $gym-text-font-stack;
+    margin-bottom: 0;
+  }
+
+  p:not([class]) {
+    margin-top: 1em;
+  }
 }
 
 // typographical details
