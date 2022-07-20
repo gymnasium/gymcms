@@ -640,18 +640,18 @@
 }
 
 .courses-container {
-  header {
-    p.hero {
-      font-family: $gym-font-stack;
-      font-size: font-calc(22, rem, 10px);
-      line-height: 1.4;
-      padding-bottom: 1em;
-      border-bottom: 1px solid #ddd;
-    }
-  
+  .intro {
     h1 {
       font-size: font-calc(28, rem, 10px);
     }
+  }
+
+  p.hero {
+    font-family: $gym-font-stack;
+    font-size: font-calc(22, rem, 10px);
+    line-height: 1.4;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ddd;
   }
 }
 
@@ -659,10 +659,8 @@
   list-style: none;
   padding: 0;
 
-  header {
-    h1 {
-      font-size: font-calc(32, rem, 10px);
-    }
+  h1 {
+    font-size: font-calc(32, rem, 10px);
   }
 
   h2 {
@@ -718,9 +716,6 @@
     }
   }
 }
-
-
-
 
 // Account Settings
 .wrapper-account-settings {
