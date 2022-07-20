@@ -7,11 +7,14 @@ url: /courses/take5/GYM-5049/
 poster_art: /img/take5/posters/gym-5049.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Prototyping"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "UX"
+subtopics:
+  - label: "Prototyping"
 video_ID: ohEtP5MuWFk
 video_duration: "4:59"
 featured: false
-short_description: "Variants make working with components in Figma easier and more intuitive to use. Learn how to get up and running with the fundamentals of variants in this tutorial by Jeremy Osborn, Director of Learning for Aquent Gymnasium."
+short_description: "Variants make working with components in Figma easier and more intuitive to use. Learn how to get up and running with the fundamentals of variants in this tutorial."
 project_file_source: Figma Community
 project_files:
 - label: "Starting Project"
@@ -25,6 +28,7 @@ related_content:
   url: "https://help.figma.com/hc/en-us/articles/360056440594"
 - label: "Tips & tricks about Variants in Figma"
   url: "https://uxdesign.cc/tips-tricks-about-variants-in-figma-c5d209662e64"
+skill_level: "Intermediate"
 ---
 
 

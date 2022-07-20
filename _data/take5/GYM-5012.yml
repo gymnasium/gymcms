@@ -7,11 +7,15 @@ url: /courses/take5/GYM-5012/
 poster_art: /img/take5/posters/gym-5012.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Prototyping"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "Development"
+subtopics:
+subtopics:
+  - label: "Prototyping"
 video_ID: IqAizKPCC9U
 video_duration: "4:59"
 featured: false
-short_description: "Learn the benefits of prototyping web page layouts using CSS Grid Layout in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
+short_description: "Learn the benefits of prototyping web page layouts using CSS Grid Layout in this hands-on tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"
@@ -27,4 +31,5 @@ related_content:
   url: "https://medium.com/gymnasium/css-grid-layout-a-cornucopia-of-options-90a5ee10ad9f"
 - label: "Get Ready for CSS Grid Layout by Rachel Andrew"
   url: "https://abookapart.com/products/get-ready-for-css-grid-layout"
+skill_level: "Intermediate"
 ---
