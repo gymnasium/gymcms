@@ -639,42 +639,25 @@
   }
 }
 
-.catalog-content {
+.listing-courses {
+  list-style: none;
+  padding: 0;
 
-  p {
-    font-size: 1.2em;
-    line-height: 1.4;
-    font-family: $gym-text-font-stack;
-    color: #444;
-  }
-
-  h1 {
-    font-size: font-calc(28);
-    line-height: 1.2;
+  h2 {
+    font-size: 1em;
+    line-height: 1.3;
     font-family: $gym-font-stack;
     font-weight: 900;
     color: #222;
-    letter-spacing: 0.04em;
-    word-spacing: 0.05em;
+    letter-spacing: 0.02em;
+    word-spacing: 0.02em;
     text-transform: uppercase;
-    padding-top: 1em;
-    margin-top: -1.1em;
-    text-align: left;
+  }
+  p, li {
+    font: 1.15em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
   }
 
-  p.hero {
-    font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-      sans-serif;
-    font-size: font-calc(22.4);
-    line-height: 1.4;
-    padding-bottom: 1em;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .listing-courses {
-    list-style: none;
-    padding: 0;
-  }
   .course-item figure img {
     width: 100%;
   }
@@ -723,21 +706,40 @@
     padding-bottom: 3em;
     overflow: hidden;
   }
-  .course-overview h2 {
-    font-size: 1em;
-    line-height: 1.3;
+}
+
+.catalog-content {
+
+  p.hero {
+    font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+    font-size: font-calc(32);
+    line-height: 1.4;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ddd;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.4;
+    font-family: $gym-text-font-stack;
+    color: #444;
+  }
+
+  h1 {
+    font-size: font-calc(32);
+    line-height: 1.2;
     font-family: $gym-font-stack;
     font-weight: 900;
     color: #222;
-    letter-spacing: 0.02em;
-    word-spacing: 0.02em;
+    letter-spacing: 0.04em;
+    word-spacing: 0.05em;
     text-transform: uppercase;
+    padding-top: 1em;
+    margin-top: -1.1em;
+    text-align: left;
   }
-  .course-overview p,
-  .course-overview li {
-    font: 1.15em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #444;
-  }
+
 }
 
 
