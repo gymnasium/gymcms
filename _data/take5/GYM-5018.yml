@@ -7,11 +7,12 @@ url: /courses/take5/GYM-5018/
 poster_art: /img/take5/posters/gym-5018.jpg
 live: true
 instructor: "Lee Andrese"
+instructor_bio: "Vice President of Learning and Development at Onward Search"
 topic: "Career Skills"
 video_ID: iLI4I2XnjpU
 video_duration: "5:00"
 featured: false
-short_description: "Learn how to create compelling stories for projects you’ve made in this tutorial with Lee Andrese, Principal of Akatheme."
+short_description: "Learn how to create compelling stories for projects you’ve made in this tutorial."
 related_content:
 - label: "Finding, Crafting and Telling a Great Story - Nicole Kahn"
   url: "https://gsbmedia.stanford.edu/media/GuestA+Nicole+Kahn/0_jagtf4n5"
@@ -19,4 +20,5 @@ related_content:
   url: "https://futureofstorytelling.org/video/john-maeda-from-storytelling-to-storylistening"
 - label: "Build your design portfolio around one awesome story by Jake Knappl"
   url: "https://medium.com/@jakek/build-your-design-portfolio-around-one-and-only-one-awesome-story-d3995f74cf47"
+skill_level: "Beginner"
 ---

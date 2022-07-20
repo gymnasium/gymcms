@@ -7,11 +7,12 @@ url: /courses/take5/GYM-5041/
 poster_art: /img/take5/posters/gym-5041.jpg
 live: true
 instructor: "Clarissa Peterson"
+instructor_bio: "Strategy Director at Forum One"
 topic: "Accessibility"
 video_ID: iyzPK-Mz_CY
 video_duration: "4:13"
 featured: false
-short_description: "Learn how to write alt text for more complex image use, such as charts, graphs, and image links in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
+short_description: "Learn how to write alt text for more complex image use, such as charts, graphs, and image links in this tutorial."
 related_content:
 - label: "Complex Images Tutorial"
   url: "https://www.w3.org/WAI/tutorials/images/complex/"
@@ -19,4 +20,5 @@ related_content:
   url: "https://accessibility.psu.edu/images/charts/"
 - label: "Writing Alt Text for Data Visualization by Amy Cesal"
   url: "https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81"
+skill_level: "Beginner"
 ---
