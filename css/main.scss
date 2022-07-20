@@ -63,7 +63,7 @@ div#content.content-wrapper,
 
 p {
   font-family: $gym-text-font-stack;
-  font-size: 1.2em/1.6em;
+  font-size: 1.2em;
 }
 
 .break-word {
@@ -1075,7 +1075,7 @@ main.course .hero-banner img {
 }
 
 .login-register {
-  max-width: none;
+  max-width: auto;
 }
 
 #login,
