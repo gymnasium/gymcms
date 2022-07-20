@@ -61,13 +61,13 @@ sidebar-generic.html
 // main content / adjustment for vertical rule
 
 .white-panel {
-  .col-md-9 {
-    padding-top: 1.2em;
-    padding-right: 1.2em;
-    padding-bottom: 12em;
-    margin-top: -1.2em;
-    margin-bottom: -12em;
-  }
+  // .col-md-9 {
+  //   padding-top: 1.2em;
+  //   padding-right: 1.2em;
+  //   padding-bottom: 12em;
+  //   margin-top: -1.2em;
+  //   margin-bottom: -12em;
+  // }
 }
 
 @include breakpoint(medium, min) {
@@ -80,9 +80,9 @@ sidebar-generic.html
   // sidebar / layout adjustment
 
   .sidebar-static {
-    padding-top: 1.2em;
-    margin-top: -1.2em;
-    margin-right: -2.2em;
+    // padding-top: 1.2em;
+    // margin-top: -1.2em;
+    // margin-right: -2.2em;
   }
 }
 
