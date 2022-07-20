@@ -33,7 +33,7 @@ permalink: /courses/
       <div class="row">
         <div class="col-md-9 course-overview">
           <section class="courses-container">
-            <header>
+            <header class="intro">
               <h1 id="full">Full Courses</h1>
               <p class="hero">
                 Full Courses are taught by industry experts and focus on current skills and technologies. Each includes 3 to 6 hours of video instruction, optional quizzes and assignments, a final exam, and certificate (if and) when you pass.
@@ -45,20 +45,25 @@ permalink: /courses/
               {%- include_relative full/course-list-recent.html -%}
             </ul>
   
-            <h1 id="gymshorts">Gym Shorts</h1>
-            <p class="hero">
-              Gym Shorts are short courses that all last under an hour. Like our Full Courses, they are taught by industry experts and focus on current skills and technologies. Each includes approximately one hour of video instruction, a final exam, and a badge (if and) when you pass.
-            </p>
+            <header class="intro">
+              <h1 id="gymshorts">Gym Shorts</h1>
+              <p class="hero">
+                Gym Shorts are short courses that all last under an hour. Like our Full Courses, they are taught by industry experts and focus on current skills and technologies. Each includes approximately one hour of video instruction, a final exam, and a badge (if and) when you pass.
+              </p>
+            </header>
+
             <ul class="listing-courses" id="gym-shorts-list">
               {%- assign base_path = "/courses/gym-shorts/" | prepend: site.gymurl -%}
               {%- include_relative gym-shorts/course-list-recent.html -%}
             </ul>
-  
+
             {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
-  
-            <h1 id="take5">Take 5</h1>
-            {%- include take5/course-catalog-description.html -%}
-  
+
+            <header class="intro">
+              <h1 id="take5">Take 5</h1>
+              {%- include take5/course-catalog-description.html -%}
+            </header>
+
             <ul class="listing-courses" id="take5-list">
             {%- include_relative take5/course-list-recent.html -%}
             </ul>
