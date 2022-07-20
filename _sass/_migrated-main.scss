@@ -44,16 +44,6 @@ body {
   font-size: 1em;
   line-height: 1.4;
 }
-a:not(.btn) {
-  color: #0075b4;
-}
-a:visited:not(.btn) {
-  color: #003655;
-}
-a:hover:not(.btn),
-a:focus:not(.btn) {
-  color: #0079bc;
-}
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -379,12 +369,12 @@ body.uxdesign.alerts .content-primary:after {
 .is-expandable.is-ready .title-expand {
   cursor: pointer;
 }
-a:not(.btn):disabled,
-a.is-disabled:not(.btn),
-a.disabled:not(.btn),
-a:visited:not(.btn):disabled,
-a.is-disabled:visited:not(.btn),
-a.disabled:visited:not(.btn),
+a:disabled,
+a.is-disabled,
+a.disabled,
+a:visited:disabled,
+a.is-disabled:visited,
+a.disabled:visited,
 .is-disabled {
   pointer-events: none;
   outline: none;
@@ -1694,16 +1684,6 @@ body {
   font-size: 1em;
   line-height: 1.4;
 }
-a:not(.btn) {
-  color: #0075b4;
-}
-a:visited:not(.btn) {
-  color: #003655;
-}
-a:hover:not(.btn),
-a:focus:not(.btn) {
-  color: #0079bc;
-}
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -2029,12 +2009,12 @@ body.uxdesign.alerts .content-primary:after {
 .is-expandable.is-ready .title-expand {
   cursor: pointer;
 }
-a:not(.btn):disabled,
-a.is-disabled:not(.btn),
-a.disabled:not(.btn),
-a:visited:not(.btn):disabled,
-a.is-disabled:visited:not(.btn),
-a.disabled:visited:not(.btn),
+a:disabled,
+a.is-disabled,
+a.disabled,
+a:visited:disabled,
+a.is-disabled:visited,
+a.disabled:visited,
 .is-disabled {
   pointer-events: none;
   outline: none;
@@ -3918,12 +3898,12 @@ ol + p {
   margin-top: 20px;
 }
 
-a:not(.btn):disabled,
-a:not(.btn).is-disabled,
-a:not(.btn).disabled,
-a:visited:not(.btn):disabled,
-a:visited:not(.btn).is-disabled,
-a:visited:not(.btn).disabled {
+a:disabled,
+a.is-disabled,
+a.disabled,
+a:visited:disabled,
+a:visited.is-disabled,
+a:visited.disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -14352,12 +14332,12 @@ section.outside-app .dashboard-search-results .search-info h1 {
 .is-expandable.is-ready .title-expand {
   cursor: pointer;
 }
-a:not(.btn):disabled,
-a.is-disabled:not(.btn),
-a.disabled:not(.btn),
-a:visited:not(.btn):disabled,
-a.is-disabled:visited:not(.btn),
-a.disabled:visited:not(.btn),
+a:disabled,
+a.is-disabled,
+a.disabled,
+a:visited:disabled,
+a.is-disabled:visited,
+a.disabled:visited,
 .is-disabled {
   pointer-events: none;
   outline: none;

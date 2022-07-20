@@ -70,49 +70,44 @@ p {
   word-break: break-all;
 }
 
-body,
-body.login,
-body.register,
-.register {
-  a:link,
-  a:visited,
-  a:link:visited,
-  a:active,
-  a:link:active,
-  p a,
-  p a:link,
-  p a:visited,
-  a.gymlink,
-  a.gymlink:link,
-  a.gymlink:visited {
-    color: $gym-orange;
-    font-family: $gym-text-font-stack;
-    border-bottom: none;
-  }
+a:link,
+a:visited,
+a:link:visited,
+a:active,
+a:link:active,
+p a,
+p a:link,
+p a:visited,
+a.gymlink,
+a.gymlink:link,
+a.gymlink:visited {
+  color: $gym-orange;
+  font-family: $gym-text-font-stack;
+  border-bottom: none;
+}
 
-  a:hover,
-  a:visited:hover,
-  a:link:hover,
-  a:link:visited:hover,
-  a:active:hover,
-  a:link:active:hover,
-  .hboard .my-courses .course .info > hgroup h3 a:hover,
-  .dashboard .my-courses .course .info > hgroup h3 span:hover,
-  .dashboard .my-courses .course .info > hgroup h3 span:focus,
-  p a:link:hover,
-  p a:hover,
-  a.gymlink:hover,
-  a.gymlink:link:hover,
-  a.gymlink:visited:hover {
-    border-bottom: 1px solid $gym-orange;
-    color: $gym-orange;
-    text-decoration: none;
-  }
+a:hover,
+a:visited:hover,
+a:link:hover,
+a:link:visited:hover,
+a:active:hover,
+a:link:active:hover,
+.hboard .my-courses .course .info > hgroup h3 a:hover,
+.dashboard .my-courses .course .info > hgroup h3 span:hover,
+.dashboard .my-courses .course .info > hgroup h3 span:focus,
+p a:link:hover,
+p a:hover,
+a.gymlink:hover,
+a.gymlink:link:hover,
+a.gymlink:visited:hover {
+  border-bottom: 1px solid $gym-orange;
+  color: $gym-orange;
+  text-decoration: none;
+}
 
-  a:focus,
-  .dashboard .my-courses .course .info > hgroup h3 a:focus {
-    border-bottom: 0 none;
-  }
+a:focus,
+.dashboard .my-courses .course .info > hgroup h3 a:focus {
+  border-bottom: 0 none;
 }
 
 .container {
