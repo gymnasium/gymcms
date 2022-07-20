@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'functions';
+
 // Courseware garbage
 .seq_contents.tex2jax_ignore.asciimath2jax_ignore {
   display: none;
@@ -646,7 +649,7 @@
   }
 
   h1 {
-    font-size: 2em;
+    font-size: font-calc(28);
     line-height: 1.2;
     font-family: $gym-font-stack;
     font-weight: 900;
@@ -662,7 +665,7 @@
   p.hero {
     font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
       sans-serif;
-    font-size: 1.6em;
+    font-size: font-calc(22.4);
     line-height: 1.4;
     padding-bottom: 1em;
     border-bottom: 1px solid #ddd;
@@ -679,14 +682,6 @@
   .course-item figcaption {
     background: #444;
     padding: 1.2em;
-  }
-  .course-item figcaption .gym-button b {
-    font-size: 1.4em;
-    line-height: 1;
-    font-family: $gym-font-stack;
-    font-weight: bold;
-    letter-spacing: 0.025em;
-    vertical-align: text-top;
   }
   .course-item p {
     font-size: 1em;
