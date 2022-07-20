@@ -317,8 +317,8 @@
 
 // Exam/Quiz/Homework Fixes
 .course-content {
-
-  ul, ol {
+  ul,
+  ol {
     padding: 0 0 0 40px;
     margin: 1em 0;
   }
@@ -337,7 +337,6 @@
 
   // Exam/Quiz
   .problem {
-
     // exam submit buttons
     .action {
       margin-top: 20px;
@@ -586,7 +585,9 @@
 }
 
 #as-seen-in {
-  h1, h2, p {
+  h1,
+  h2,
+  p {
     padding-bottom: 30px;
   }
 
@@ -598,3 +599,38 @@
     width: 18%;
   }
 }
+
+// Courses Index
+.find-courses {
+  
+}
+
+.course-menu {
+  ul {
+    list-style: none;
+    margin: 1.2em 15px;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+    margin-right: 1.2em;
+  }
+
+  a {
+    display: inline-block;
+    font: bold 1.2em/1.2 $gym-font-stack;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    word-spacing: 0.04em;
+    border-bottom: 1px dashed transparent;
+    margin-top: 0.125em;
+
+    &:active,
+    &:hover {
+      color: #f89820;
+    }
+  }
+}
+
