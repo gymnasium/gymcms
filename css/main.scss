@@ -15,14 +15,11 @@
 
 /* --- BEGIN: Migrated from gymnasium.scss in the open edx theme --- */
 /* negate a silly style rule inherited from the platform */
-html {
-  .container > div,
-  .home .container.grey.div {
-    border-radius: 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
-  }
+div {
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 button,
