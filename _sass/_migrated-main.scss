@@ -17249,23 +17249,6 @@ body.view-in-course .content-wrapper#content {
 .content-wrapper .wrapper-course-material .course-material {
   max-width: inherit;
 }
-#course-title-header {
-  background-color: #999;
-}
-#course-title-header div.row {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-}
-#course-title-header h1 {
-  font-size: 20pt;
-  margin: 15px 0 15px 0;
-}
-#course-title-header h1 span {
-  color: white;
-  font-weight: 900;
-}
 nav.progress.wrapper-course-material {
   height: inherit;
 }
@@ -17546,22 +17529,31 @@ section.handouts {
     font-family: $gym-font-stack;
     font-weight: 600;
   }
-} 
+}
 
 .course-title {
   background: #777;
 }
+
+.course-title div.row {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+
 #content .course-title header {
   margin-top: 0px;
 }
 .course-title h1 {
-  font: 900 1.8em/1.2 $gym-font-stack;
+  font-size: 1.8em;
+  line-height: 1.2;
   color: #fff;
   letter-spacing: 0.05em;
   word-spacing: 0.05em;
   text-transform: uppercase;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 15px 0;
   text-align: left;
 }
 .course {
@@ -18361,12 +18353,6 @@ body * .entitlement-unenrollment-modal textarea {
   font-size: 24px;
   text-transform: none;
   font-weight: bold;
-}
-.home .container-fluid:nth-of-type(odd).white-panel {
-  background-color: #fff;
-}
-.home .container-fluid:nth-of-type(odd).white-panel .header-tab h1:before {
-  border-bottom: 1.4em solid white;
 }
 .home .container-fluid:nth-of-type(odd) {
   background-color: #ebebeb;
