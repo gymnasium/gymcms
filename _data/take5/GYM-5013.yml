@@ -7,11 +7,14 @@ url: /courses/take5/GYM-5013/
 poster_art: /img/take5/posters/gym-5013.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Prototyping"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "UX"
+subtopics:
+  - label: "Prototyping"
 video_ID: QxN2wVlBTTw
 video_duration: "4:51"
 featured: false
-short_description: "Learn how to create animated micro-interactions using InVision Studio’s timeline feature in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
+short_description: "Learn how to create animated micro-interactions using InVision Studio’s timeline feature in this hands-on tutorial."
 project_file_source: GitHub
 project_files:
 - label: "Lesson Files"
@@ -23,4 +26,5 @@ related_content:
   url: "https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing"
 - label: "Transitional Interfaces by Pasquale D’Silva"
   url: "https://medium.com/@pasql/transitional-interfaces-926eb80d64e3"
+skill_level: "Beginner"
 ---
