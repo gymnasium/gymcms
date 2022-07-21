@@ -403,6 +403,8 @@ sidebar-generic.html
 
   #dropdown-menu {
     display: none;
+    list-style-type: none;
+    padding-inline-start: 0;
 
     li {
       display: inline;
