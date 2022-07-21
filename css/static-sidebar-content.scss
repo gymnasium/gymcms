@@ -62,8 +62,20 @@ sidebar-generic.html
 @include breakpoint(medium, min) {
   // main content / vertical rule
 
-  .white-panel .col-md-9 {
-    border-right: 1px dashed $gym-gray;
+  .white-panel {
+    .col-md-9 {
+      position: relative;
+
+      // Horizontal dashed line
+      &:after {
+        border-right: 1px dashed $gym-gray;
+        content: '';
+        position: absolute;
+        height: calc(100% + 2.2em);
+        top: -1.5rem;
+        right: 0;
+      }
+    }
   }
 
   // sidebar / layout adjustment
