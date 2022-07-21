@@ -155,6 +155,10 @@ body.view-in-course {
   }
 }
 
+/* ---
+white panel (used in multiple places)
+--- */
+
 .white-panel {
   background-color: $gym-white;
   border: 1px solid $gym-gray;
@@ -190,6 +194,91 @@ body.view-in-course {
     line-height: 1.4;
     margin-top: 1em;
     word-spacing: 0.04em;
+  }
+
+
+  // adjustment for vertical rule (if a sidebar is present)
+  @include breakpoint(medium, min) {
+
+    .col-md-9 {
+      position: relative;
+
+      // Horizontal dashed line
+      &:after {
+        border-right: 1px dashed $gym-gray;
+        content: '';
+        position: absolute;
+        height: calc(100% + 2.2em);
+        top: -1.5rem;
+        right: 0;
+      }
+    }
+  }
+}
+
+/* ---
+upcoming courses / featured content
+upcoming-courses.html
+--- */
+
+.catalog-content {
+  .sidebar {
+    h1 {
+      font-size: 1.44em;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    section {
+      font-size: 16px;
+    }
+
+    h2 {
+      font: 900 1em/1.3 $gym-font-stack;
+      color: $gym-black;
+      letter-spacing: 0.02em;
+      word-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    p,
+    .gym-button b {
+      font-size: 1.05em;
+    }
+  }
+}
+
+/* ---
+featured coures
+sidebar-generic.html
+--- */
+
+// sidebar / static
+.sidebar-static {
+  padding: 0 1.2em 2.6em;
+  margin: 1.2em -0.8em -2em;
+
+  // sidebar / layout adjustment
+  @include breakpoint(medium, min) {
+    padding: 0;
+    margin-top: 0;
+    margin-right:0;
+    margin-left: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  p,
+  .gym-button b {
+    font-size: 1em;
+  }
+
+  figure {
+    margin-top: 1.2em;
   }
 }
 
