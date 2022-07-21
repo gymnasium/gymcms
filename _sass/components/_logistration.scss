@@ -73,6 +73,8 @@ form {
     line-height: 1.15;
     margin-top: 20px;
     margin-bottom: 16px;
+    letter-spacing: 0.04em;
+    word-spacing: 0.05em;
   }
 
   .form-type {
@@ -119,6 +121,6 @@ form {
   margin-top: 1.2em;
 
   h2 {
-    font-size: font-calc(36, rem, 10px);
+    font-size: font-calc(30.8, rem, 10px);
   }
 }
