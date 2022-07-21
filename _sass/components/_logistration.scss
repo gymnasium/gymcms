@@ -6,7 +6,7 @@ form {
     display: block;
     height: auto;
     width: 100%;
-    margin: 0 0 0.6em;
+    margin: 0;
     padding: 1em;
     border: 1px solid #ccc;
     border-bottom: 2px solid #f8971d;
@@ -25,11 +25,28 @@ form {
     margin-bottom: 0.6em;
   }
 
+  input[type=checkbox], input[type=radio] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+  }
+
+  .form-field {
+    clear: both;
+    position: relative;
+    width: 100%;
+    margin: 0.6em 0 1.4em 0;
+  }
 }
 
 .login-register {
   background-color: transparent;
   max-width: none;
+
+  h2 {
+    font-size: font-calc(36, rem, 10px);
+  }
 
   .form-type {
     max-width: 600px;
@@ -51,6 +68,10 @@ form {
     text-align: center;
     font-size: 12px;
     line-height: 17.76px;
+  }
+
+  .checkbox-terms_of_service {
+    margin: 1em 0;
   }
 }
 
