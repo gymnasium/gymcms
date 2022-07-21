@@ -355,30 +355,7 @@ a.disabled:visited,
     top: -5px;
   }
 }
-.btn-default,
-.btn-primary,
-.btn-brand,
-.btn-upgrade {
-  display: inline-block;
-  background-color: transparent;
-  background-image: none;
-  border-style: solid;
-  border-radius: 0.1875rem;
-  border-width: 1px;
-  box-shadow: none;
-  padding: 0.625rem 1.25rem;
-  font-size: 16px;
-  font-weight: normal;
-  text-shadow: none;
-  text-transform: capitalize;
-}
-.block.btn-default,
-.block.btn-primary,
-.block.btn-brand,
-.block.btn-upgrade {
-  display: block;
-  width: 100%;
-}
+
 .btn-default .icon,
 .btn-primary .icon,
 .btn-brand .icon,
@@ -559,10 +536,6 @@ a.disabled:visited,
   background: #fff;
   color: #000;
 }
-footer#footer-edx-v3 .about-links,
-footer#footer-edx-v3 .legal-links,
-footer#footer-edx-v3 .social-media-links,
-footer#footer-edx-v3 .mobile-app-links,
 .modal-settings-language .list-input,
 .modal-settings-language .list-actions,
 .status-verification .list-actions,
@@ -756,178 +729,10 @@ footer#footer-edx-v3 .mobile-app-links,
     top: -5px;
   }
 }
-.btn-default,
-.btn-primary,
-.btn-brand,
-.btn-upgrade {
-  display: inline-block;
-  background-color: transparent;
-  background-image: none;
-  border-style: solid;
-  border-radius: 0.1875rem;
-  border-width: 1px;
-  box-shadow: none;
-  padding: 0.625rem 1.25rem;
-  font-size: 16px;
-  font-weight: normal;
-  text-shadow: none;
-  text-transform: capitalize;
-}
-.block.btn-default,
-.block.btn-primary,
-.block.btn-brand,
-.block.btn-upgrade {
-  display: block;
-  width: 100%;
-}
+
 .header-global .course-header {
   display: none;
 }
-.close-modal,
-button.close-modal {
-  border: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  text-shadow: none !important;
-  letter-spacing: 0 !important;
-  text-transform: none !important;
-}
-.wrapper-account-settings .wrapper-header .account-nav button,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .field
-  .u-field-link,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .u-field-order
-  .u-field-order-link
-  .u-field-link,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .u-field-order-lines
-  .u-field-order-link
-  .u-field-link,
-.account-settings-sections
-  .section
-  .account-deletion-details
-  .btn-outline-primary,
-.courseware-bookmarks-button .bookmarks-list-button {
-  background: none;
-  border-radius: 5px;
-  box-shadow: none;
-  text-shadow: none;
-}
-.wrapper-account-settings .wrapper-header .account-nav button:hover,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .field
-  .u-field-link:hover,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .u-field-order
-  .u-field-order-link
-  .u-field-link:hover,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .u-field-order-lines
-  .u-field-order-link
-  .u-field-link:hover,
-.account-settings-sections
-  .section
-  .account-deletion-details
-  .btn-outline-primary:hover,
-.account-settings-sections
-  .section
-  .account-deletion-details
-  .delete-confirmation-wrapper
-  .paragon__modal-footer
-  .paragon__btn-outline-primary:hover,
-.courseware-bookmarks-button .bookmarks-list-button:hover {
-  background-image: none;
-  box-shadow: none;
-}
-.wrapper-account-settings .wrapper-header .account-nav button:focus,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .field
-  .u-field-link:focus,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .u-field-order
-  .u-field-order-link
-  .u-field-link:focus,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .u-field-order-lines
-  .u-field-order-link
-  .u-field-link:focus,
-.account-settings-sections
-  .section
-  .account-deletion-details
-  .btn-outline-primary:focus,
-.account-settings-sections
-  .section
-  .account-deletion-details
-  .delete-confirmation-wrapper
-  .paragon__modal-footer
-  .paragon__btn-outline-primary:focus,
-.courseware-bookmarks-button .bookmarks-list-button:focus,
-.wrapper-account-settings .wrapper-header .account-nav button:active,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .field
-  .u-field-link:active,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .u-field-order
-  .u-field-order-link
-  .u-field-link:active,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .u-field-order-lines
-  .u-field-order-link
-  .u-field-link:active,
-.account-settings-sections
-  .section
-  .account-deletion-details
-  .btn-outline-primary:active,
-.account-settings-sections
-  .section
-  .account-deletion-details
-  .delete-confirmation-wrapper
-  .paragon__modal-footer
-  .paragon__btn-outline-primary:active,
-.courseware-bookmarks-button .bookmarks-list-button:active {
-  box-shadow: none;
-}
-footer#footer-edx-v3 .about-links,
-footer#footer-edx-v3 .legal-links,
-footer#footer-edx-v3 .social-media-links,
-footer#footer-edx-v3 .mobile-app-links,
 .modal-settings-language .list-input,
 .modal-settings-language .list-actions,
 .status-verification .list-actions,
@@ -995,11 +800,6 @@ footer#footer-edx-v3 .mobile-app-links,
   .view-register .wrapper-footer footer,
   .view-login .wrapper-footer footer,
   .view-passwordreset .wrapper-footer footer,
-  footer#footer-edx-v3 .site-nav,
-  footer#footer-edx-v3 .legal-notices,
-  footer#footer-edx-v3 .footer-logo,
-  footer#footer-edx-v3 .external-links,
-  footer#footer-edx-v3,
   .header-global .user,
   .help-tab,
   .course-info .container .wrap-instructor-info .instructor-info-action,
