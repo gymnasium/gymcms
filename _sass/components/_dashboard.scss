@@ -32,13 +32,6 @@
 
 }
 
-/* --- Update dashboard course text color --- */
-
-.my-courses .course-item h1,
-.my-courses .course-item header p {
-  color: $gym-white;
-}
-
 .profile-sidebar {
   ul {
     margin: 0;
@@ -64,110 +57,99 @@
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
   }
-  .user-info {
-    ul {
-      list-style: none;
+
+  .data,
+  .status,
+  .control {
+    font: 0.96em/1.2 $gym-text-font-stack;
+  }
+
+  .title {
+    display: block;
+    font: bold 1.2em/1.2 $gym-font-stack;
+    color: #222;
+    letter-spacing: 0.04em;
+    word-spacing: 0.04em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  .controls--account.password-reset {
+    margin-top: 2em;
+  }
+  .status {
+    width: 6.77966%;
+    display: inline-block;
+    color: #222;
+  }
+  .provider {
+    width: 66.57627%;
+    display: inline-block;
+  }
+  .control {
+    width: 15.25424%;
+    display: inline-block;
+    text-align: right;
+  }
+  .copy {
+    border: 0;
+    clip: rect(1px 1px 1px 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+
+
+
+
+
+
+
+.my-courses {
+  .course-item {
+    margin-top: 1.2em;
+    color: $gym-white;
+  
+    header {
+      margin: 0;
+      padding: 2em;
+      overflow: hidden;
+  
+      p {
+        color: #ebebeb;
+      }
+    }
+  }
+
+  .course-options {
+    background: #444;
+    padding: 1em 1.5em;
+    overflow: hidden;
+    list-style: none;
+  
+    li {
+      display: inline;
+      font-size: 0.96em;
+      margin-right: 1.8em;
+    }
+  
+    .dashboard-listing-links {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      margin: 0;
+      margin-top: 0.8em;
+  
+      a.btn:hover {
+        border-color: transparent;
+        text-decoration: underline;
+      }
     }
   }
 }
 
 
-.profile-sidebar .user-info .data,
-.profile-sidebar .user-info .status,
-.profile-sidebar .user-info .proivder,
-.profile-sidebar .user-info .control {
-  font: 0.96em/1.2 $gym-text-font-stack;
-}
-.profile-sidebar .user-info .title {
-  display: block;
-  font: bold 1.2em/1.2 $gym-font-stack;
-  color: #222;
-  letter-spacing: 0.04em;
-  word-spacing: 0.04em;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-}
-.profile-sidebar .user-info .controls--account.password-reset {
-  margin-top: 2em;
-}
-.profile-sidebar .user-info .status {
-  width: 6.77966%;
-  display: inline-block;
-  color: #222;
-}
-.profile-sidebar .user-info .provider {
-  width: 66.57627%;
-  display: inline-block;
-}
-.profile-sidebar .user-info .control {
-  width: 15.25424%;
-  display: inline-block;
-  text-align: right;
-}
-.profile-sidebar .user-info .copy {
-  border: 0;
-  clip: rect(1px 1px 1px 1px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-.view-dashboard .course-item header {
-  background-color: #777;
-}
-.view-dashboard .course-item header h1 {
-  color: #ebebeb;
-  margin-top: 0.5em;
-}
-
-.my-courses .grade-value {
-  color: #ebebeb;
-  font-weight: bold;
-}
-.my-courses .courses-listing,
-.my-courses .listing-courses {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.my-courses .course-item {
-  margin-top: 1.2em;
-}
-.my-courses .course-item header {
-  margin: 0;
-  padding: 2em;
-  overflow: hidden;
-}
-.my-courses .course-item header p {
-  color: #ebebeb;
-}
-.my-courses .course-item .course-options {
-  background: #444;
-  padding: 1em 1.5em;
-  overflow: hidden;
-  list-style: none;
-}
-.my-courses .course-item .course-options li {
-  display: inline;
-  font-size: 0.96em;
-  margin-right: 1.8em;
-}
-.my-courses .course-item .course-options .dashboard-listing-links {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  margin: 0;
-  margin-top: 0.8em;
-}
-.my-courses
-  .course-item
-  .course-options
-  .dashboard-listing-links
-  li
-  a.btn:hover {
-  border-color: transparent;
-  text-decoration: underline;
-}
