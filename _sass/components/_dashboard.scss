@@ -4,6 +4,9 @@
 // Dashboard
 
 .dashboard-main {
+  .white-panel {
+    font-size: 1em;
+  }
 
   .archived {
     font-size: 1.45em;
@@ -103,12 +106,6 @@
   }
 }
 
-
-
-
-
-
-
 .my-courses {
   .course-item {
     margin-top: 1.2em;
@@ -118,6 +115,8 @@
       margin: 0;
       padding: 2em;
       overflow: hidden;
+      background-color: rgb(103, 103, 103);
+      transition: background-color 250ms ease;
   
       p {
         color: #ebebeb;
@@ -125,8 +124,15 @@
     }
   }
 
-  .course-options {
+  .course {
     background: #444;
+
+    h1 {
+      font-size: font-calc(28, rem, 10px);
+    }
+  }
+
+  .course-options {
     padding: 1em 1.5em;
     overflow: hidden;
     list-style: none;
