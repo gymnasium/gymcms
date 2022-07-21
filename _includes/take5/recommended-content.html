@@ -1,6 +1,7 @@
 {%- comment -%}
 TODO: rather than hard-coding values here, a more flexible method would be to create a variable in a course's data file, which permits the course to be rendered in the recommended content include
 {%- endcomment -%}
+
 {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
 
 {%- if course.topic == "Design" -%}
@@ -47,13 +48,13 @@ TODO: rather than hard-coding values here, a more flexible method would be to cr
 
 {%- for take5_hash in sorted_catalog reversed -%}
 
-  {%- assign item = take5_hash[1] -%}
+{%- assign item = take5_hash[1] -%}
 
 {%- if item.topic == this_topic -%}
   {%- if item.live == true -%}
-      {%- if item.course_ID != this_tutorial -%}
-        {%- assign recommendations = recommendations | push: item.course_ID -%}
-      {%- endif -%}
+    {%- if item.course_ID != this_tutorial -%}
+      {%- assign recommendations = recommendations | push: item.course_ID -%}
+    {%- endif -%}
   {%- endif -%}
 {%- endif -%}
 
@@ -222,6 +223,7 @@ Placeholder logic for limited design-related recommended content
 </div>
 
 {%- endif -%}
+
 {%- else -%}
 <!-- There is no recommended courses module here -->
 {%- endif -%}
