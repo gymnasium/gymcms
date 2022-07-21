@@ -199,8 +199,7 @@ white panel (used in multiple places)
 
   // adjustment for vertical rule (if a sidebar is present)
   @include breakpoint(medium, min) {
-
-    .col-md-9 {
+    > .row .col-md-9 {
       position: relative;
 
       // Horizontal dashed line
@@ -538,7 +537,7 @@ body header.global.slim {
 }
 
 header.global {
-  margin: 0px;
+  margin: 0;
   box-shadow: none;
   border: none;
   width: inherit;
@@ -617,7 +616,7 @@ div.wrapper-footer {
         }
       }
       li:last-child {
-        border-right: 0px;
+        border-right: 0;
       }
     }
     .built-on {
@@ -633,17 +632,17 @@ div.wrapper-footer {
 
     a:hover {
       text-decoration: none;
-      border: 0px;
+      border: 0;
     }
   }
 }
 
 section {
-  padding: 0px;
+  padding: 0;
 }
 
 .black-background {
-  top: 0px;
+  top: 0;
   background-color: black;
   z-index: 0;
 }
@@ -688,17 +687,8 @@ body {
 .gym-button,
 a.gym-button,
 a.gym-button:link,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .field
-  .u-field-link,
-.xmodule_display.xmodule_CapaModule div.problem .action .save,
-.xmodule_display.xmodule_CapaModule div.problem .action .save:not(:disabled),
-.login .form-actions button[type="submit"],
-.register .form-actions button[type="submit"].gym-button,
-.courseware-bookmarks-button .bookmarks-list-button {
+div.problem .save,
+div.problem .save:not(:disabled) {
   box-shadow: none;
   text-shadow: none;
   background-image: none;
