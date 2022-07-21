@@ -28,6 +28,7 @@ form {
     font-family: $gym-font-stack;
     font-weight: bold;
     margin-bottom: 0.6em;
+    max-width: 100%;
 
     &.error {
       display: inline-block;

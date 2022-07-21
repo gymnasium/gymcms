@@ -19,12 +19,6 @@
   padding-bottom: 0;
 }
 
-.sr,
-.sr-only {
-  background: #fff;
-  color: #000;
-}
-
 .breadcrumbs {
   font-size: 0.875rem;
   line-height: line-height(small);
@@ -76,11 +70,7 @@
 .btn-default .icon:only-child,
 .btn-primary .icon:only-child,
 .btn-brand .icon:only-child,
-.btn-upgrade .icon:only-child,
-.sr-only + .btn-default .icon,
-.sr-only + .btn-primary .icon,
-.sr-only + .btn-brand .icon,
-.sr-only + .btn-upgrade .icon {
+.btn-upgrade .icon:only-child {
   margin-right: 0;
 }
 
@@ -100,11 +90,6 @@
   margin-bottom: 0;
   border-bottom: none;
   padding-bottom: 0;
-}
-.sr,
-.sr-only {
-  background: #fff;
-  color: #000;
 }
 
 .breadcrumbs {

@@ -13,6 +13,32 @@
 @import "migrated-vendor";
 @import "migrated-main";
 
+// Screen reader support {
+.sr,
+.sr-only {
+  background: #fff;
+  color: #000;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+
+  &-focusable:active,
+  &-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+
 /* --- BEGIN: Migrated from gymnasium.scss in the open edx theme --- */
 /* negate a silly style rule inherited from the platform */
 div {
