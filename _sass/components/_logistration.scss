@@ -68,8 +68,11 @@ form {
   background-color: transparent;
   max-width: none;
 
-  h2 {
+  h1, h2 {
     font-size: font-calc(36, rem, 10px);
+    line-height: 1.15;
+    margin-top: 20px;
+    margin-bottom: 16px;
   }
 
   .form-type {
