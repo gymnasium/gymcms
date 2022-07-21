@@ -7466,41 +7466,6 @@ section.outside-app .dashboard-search-results .search-info h1 {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.wrapper-account-settings .wrapper-header .account-nav button,
-.prompt.warning button,
-.is-in-course .wrapper-prompt .nav-actions .action-secondary {
-  background: transparent;
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-.login
-  .form-actions.form-third-party-auth
-  button[type="submit"]
-  .icon
-  .icon-image,
-.register
-  .form-actions.form-third-party-auth
-  button[type="submit"]
-  .icon
-  .icon-image,
-.passwordreset
-  .form-actions.form-third-party-auth
-  button[type="submit"]
-  .icon
-  .icon-image,
-#forgot-password-modal
-  #password-reset
-  .form-actions.form-third-party-auth
-  button[type="submit"]
-  .icon
-  .icon-image {
-  width: auto;
-  height: auto;
-  max-height: 1.4em;
-  max-width: 1.4em;
-  margin-top: -2px;
-}
 .faded-hr-divider,
 .horizontal-divider {
   background-image: -webkit-linear-gradient(
@@ -9201,31 +9166,18 @@ body.error .back-button.is-disabled {
     transform: rotate(360deg);
   }
 }
-.ui-loading .spin,
-.ui-loading-base .spin,
-.wrapper-account-settings .ui-loading-indicator .spin,
-.wrapper-account-settings .ui-loading-error .spin,
-.view-profile .ui-loading-indicator .spin {
+.ui-loading .spin {
   animation: rotateCW 1s linear infinite;
 }
 .ui-loading-base,
-.wrapper-account-settings .ui-loading-indicator,
-.wrapper-account-settings .ui-loading-error,
-.view-profile .ui-loading-indicator,
 .ui-loading {
   animation: fadeIn 0.25s linear 1;
 }
 .ui-loading-base .spin,
-.wrapper-account-settings .ui-loading-indicator .spin,
-.wrapper-account-settings .ui-loading-error .spin,
-.view-profile .ui-loading-indicator .spin,
 .ui-loading .spin {
   display: inline-block;
 }
 .ui-loading-base .copy,
-.wrapper-account-settings .ui-loading-indicator .copy,
-.wrapper-account-settings .ui-loading-error .copy,
-.view-profile .ui-loading-indicator .copy,
 .ui-loading .copy {
   padding-left: 5px;
 }
@@ -9243,22 +9195,6 @@ body.error .back-button.is-disabled {
 }
 .divider-lv2 {
   border-top: 1px solid #e4e4e4;
-}
-.payment-buttons .purchase {
-  float: left;
-  padding: 10px 0;
-}
-.payment-buttons .purchase .product-info,
-.payment-buttons .purchase .product-name,
-.payment-buttons .purchase .price {
-  color: #126f9a;
-}
-.payment-buttons .payment-button {
-  float: right;
-  margin-left: 10px;
-}
-.payment-buttons .payment-button.is-selected {
-  background: #60bc61 !important;
 }
 .view-teams .wrapper-msg {
   max-width: 1180px;
@@ -9759,30 +9695,6 @@ section.course-info.outside-app,
   display: inline-block;
   margin-top: 0.9em;
 }
-.wrapper-account-settings {
-  background: transparent;
-}
-.wrapper-account-settings h2.header-title,
-.wrapper-account-settings .home > header .title > .heading-group p.header-title,
-.home > header .title > .heading-group .wrapper-account-settings p.header-title,
-.wrapper-account-settings section.outside-app h1.header-title,
-section.outside-app .wrapper-account-settings h1.header-title {
-  display: none;
-}
-.wrapper-account-settings .account-settings-container {
-  padding: 0;
-}
-.wrapper-account-settings .account-settings-sections {
-  background: white;
-  margin: 0;
-  padding: 2em 2.5em;
-  border: 1px solid #cccccc;
-}
-.wrapper-account-settings .account-settings-sections .section:first-of-type {
-  margin: 0;
-  padding: 0;
-}
-
 .courseware-bookmarks-button {
   width: inherit;
   margin: 1em 0;
