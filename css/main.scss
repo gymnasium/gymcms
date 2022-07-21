@@ -1534,14 +1534,6 @@ body {
   }
 }
 
-
-/* --- Update dashboard course text color --- */
-
-#dashboard-main.course-content .my-courses .course-item h1,
-.my-courses .course-item header p {
-  color: $gym-white;
-}
-
 /* --- Course Resources (Syllabus & Chapter Raw HTML blocks) --- */
 
 .edx-block-resources {
@@ -1646,20 +1638,6 @@ https://github.com/gymnasium/tracker/issues/81
     display: block;
     width: 100%;
     padding-bottom: 2em;
-    border-top: 1px dashed $gym-gray;
-  }
-
-}
-
-/* dashboard / update single-column layout style */
-
-@include breakpoint(medium, max) {
-
-  #dashboard-main #my-courses {
-    border-right: 0;
-  }
-
-  #dashboard-main .profile-sidebar {
     border-top: 1px dashed $gym-gray;
   }
 
@@ -2228,23 +2206,6 @@ Footer CSS (migrated from footer.scss)
       }
     }
 
-  }
-
-}
-
-// Dashboard
-
-#dashboard-main {
-
-  .archived {
-    font-size: 1.45em;
-    color: $gym-white;
-  }
-
-  .course-retired {
-    font-size: 1.3225em;
-    color: $gym-white;
-    margin: 1.2rem 0 0 0;
   }
 
 }

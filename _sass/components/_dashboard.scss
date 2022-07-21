@@ -1,6 +1,44 @@
 @import "variables";
 @import "functions";
 
+// Dashboard
+
+.dashboard-main {
+
+  .archived {
+    font-size: 1.45em;
+    color: $gym-white;
+  }
+
+  .course-retired {
+    font-size: 1.3225em;
+    color: $gym-white;
+    margin: 1.2rem 0 0 0;
+  }
+
+}
+
+/* dashboard / update single-column layout style */
+
+@include breakpoint(medium, max) {
+
+  .dashboard-main .my-courses {
+    border-right: 0;
+  }
+
+  .dashboard-main .profile-sidebar {
+    border-top: 1px dashed $gym-gray;
+  }
+
+}
+
+/* --- Update dashboard course text color --- */
+
+.my-courses .course-item h1,
+.my-courses .course-item header p {
+  color: $gym-white;
+}
+
 .profile-sidebar {
   ul {
     margin: 0;
@@ -76,21 +114,6 @@
   position: absolute;
   width: 1px;
 }
-
-
-// .dashboard-search-bar {
-//   border: 0px;
-//   border-radius: 0;
-//   color: #ebebeb;
-//   padding: 10px;
-// }
-// .dashboard-search-bar .search-field {
-//   box-shadow: none;
-//   border-radius: 0;
-// }
-// .dashboard-search-bar label {
-//   color: #ebebeb;
-// }
 
 .view-dashboard .course-item header {
   background-color: #777;
