@@ -199,7 +199,7 @@ white panel (used in multiple places)
 
   // adjustment for vertical rule (if a sidebar is present)
   @include breakpoint(medium, min) {
-    > .row .col-md-9 {
+    > .row > .col-md-9 {
       position: relative;
 
       // Horizontal dashed line
