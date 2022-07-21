@@ -1,32 +1,6 @@
 @import "variables";
 @import "functions";
 
-.dashboard-main {
-}
-
-.my-courses h1,
-.profile-sidebar h1 {
-  font: 900 1.8em/1.2 $gym-font-stack;
-  color: #222;
-  letter-spacing: 0.02em;
-  word-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-.my-courses .hero h1 {
-  font-size: 2.4em;
-  letter-spacing: 0.04em;
-}
-.my-courses h1 {
-  font: 900 1.8em/1.2 $gym-font-stack;
-  color: #222;
-  letter-spacing: 0.02em;
-  word-spacing: 0.02em;
-  text-transform: uppercase;
-}
-.my-courses .course-item h1 {
-  color: #ebebeb;
-}
 .profile-sidebar ul {
   margin: 0;
   padding: 0;
@@ -98,19 +72,20 @@
 }
 
 
-.dashboard-search-bar {
-  border: 0px;
-  border-radius: 0;
-  color: #ebebeb;
-  padding: 10px;
-}
-.dashboard-search-bar .search-field {
-  box-shadow: none;
-  border-radius: 0;
-}
-.dashboard-search-bar label {
-  color: #ebebeb;
-}
+// .dashboard-search-bar {
+//   border: 0px;
+//   border-radius: 0;
+//   color: #ebebeb;
+//   padding: 10px;
+// }
+// .dashboard-search-bar .search-field {
+//   box-shadow: none;
+//   border-radius: 0;
+// }
+// .dashboard-search-bar label {
+//   color: #ebebeb;
+// }
+
 .view-dashboard .course-item header {
   background-color: #777;
 }
@@ -118,6 +93,7 @@
   color: #ebebeb;
   margin-top: 0.5em;
 }
+
 .my-courses .grade-value {
   color: #ebebeb;
   font-weight: bold;
