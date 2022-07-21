@@ -100,6 +100,10 @@ form {
   .checkbox-terms_of_service {
     margin: 1em 0;
   }
+
+  .checkbox-remember {
+    margin: 1.2em 0 0.6em;
+  }
 }
 
 .form-wrapper  {
@@ -113,4 +117,8 @@ form {
 .logistration-bottom {
   padding: 0 1.8em 2em;
   margin-top: 1.2em;
+
+  h2 {
+    font-size: font-calc(36, rem, 10px);
+  }
 }
