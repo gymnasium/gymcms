@@ -4,7 +4,7 @@
 form {
   input, select, textarea {
     display: block;
-    height: 32px;
+    height: auto;
     width: 100%;
     margin: 0 0 0.6em;
     padding: 1em;
@@ -13,14 +13,17 @@ form {
     font-size: 1em;
   }
 
-  input {
-    height: auto;
-  }
-
   select {
     cursor: pointer;
   }
 
+  label {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-family: $gym-font-stack;
+    font-weight: bold;
+    margin-bottom: 0.6em;
+  }
 
 }
 
@@ -53,4 +56,9 @@ form {
 
 .form-wrapper  {
   padding: 20px 0;
+}
+
+.logistration-bottom {
+  padding: 0 1.8em 2em;
+  margin-top: 1.2em;
 }
