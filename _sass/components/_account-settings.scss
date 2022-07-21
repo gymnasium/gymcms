@@ -26,48 +26,51 @@
     max-width: 1180px;
     height: 139px;
     border-bottom: 4px solid #f5f5f5;
+
+    .header-title {
+      margin-bottom: 10px;
+      padding-top: 40px;
+    }
+    .header-subtitle {
+      color: #adadad;
+    }
+    .account-nav {
+      float: left;
+      margin: 10px 0;
+      padding: 0;
+      list-style: none;
+    }
+    .account-nav .account-nav-link {
+      float: left;
+      font-size: 0.875em;
+      color: #767676;
+      padding: 5px 25px 20px;
+      display: inline-block;
+      box-shadow: none;
+      border-bottom: 4px solid transparent;
+      border-radius: 0;
+      background: transparent none;
+    }
+    .account-nav button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+      display: block;
+      padding: 5px;
+    }
+    .account-nav button:hover,
+    .account-nav button:focus {
+      text-decoration: none;
+      border-bottom-color: #44a2de;
+    }
+    .account-nav button.active {
+      border-bottom-color: #313131;
+    }
   }
-  .wrapper-header .header-title {
-    margin-bottom: 10px;
-    padding-top: 40px;
-  }
-  .wrapper-header .header-subtitle {
-    color: #adadad;
-  }
-  .wrapper-header .account-nav {
-    float: left;
-    margin: 10px 0;
-    padding: 0;
-    list-style: none;
-  }
-  .wrapper-header .account-nav .account-nav-link {
-    float: left;
-    font-size: 0.875em;
-    color: #767676;
-    padding: 5px 25px 20px;
-    display: inline-block;
-    box-shadow: none;
-    border-bottom: 4px solid transparent;
-    border-radius: 0;
-    background: transparent none;
-  }
-  .wrapper-header .account-nav button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    display: block;
-    padding: 5px;
-  }
-  .wrapper-header .account-nav button:hover,
-  .wrapper-header .account-nav button:focus {
-    text-decoration: none;
-    border-bottom-color: #44a2de;
-  }
-  .wrapper-header .account-nav button.active {
-    border-bottom-color: #313131;
-  }
+  
+  
   @media (max-width: 991px) {
     .wrapper-header {
       border-bottom-color: transparent;
