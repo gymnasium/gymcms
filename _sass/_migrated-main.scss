@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'functions';
+@import "variables";
+@import "functions";
 
 // Resets?
 article,
@@ -317,15 +317,18 @@ td {
   }
   p,
   h2,
-  .home > header .title > .heading-group p, h3 {
+  .home > header .title > .heading-group p,
+  h3 {
     orphans: 3;
     widows: 3;
   }
   h2,
-  .home > header .title > .heading-group p, h3 {
+  .home > header .title > .heading-group p,
+  h3 {
     page-break-after: avoid;
   }
 }
+
 .verification-process .wrapper-report .report,
 .verification-process .report-receipt-provider,
 .verification-process .carousel .wrapper-task .task,
@@ -397,47 +400,6 @@ a.disabled:visited,
   .entitlement-unenrollment-modal-inner-wrapper
   header,
 .home > header .title .course-search .search-input,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-image
-  .sts-enrollment
-  .sts-enrollment-value,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown,
 .wrapper-messages-primary .message,
 .verification-process .progress-sts,
 .verification-process.step-requirements
@@ -452,7 +414,6 @@ a.disabled:visited,
 .pagination .pagination-form,
 .help-tab,
 .home > header .title .course-search .search-button,
-.dashboard .main-container .my-courses .course,
 .verification-process .progress .progress-step,
 .verification-process.step-requirements
   .list-reqs
@@ -465,13 +426,7 @@ a.disabled:visited,
   z-index: 100;
 }
 .nav-utilities,
-.highlighted-courses .courses .course .status,
-.dashboard
-  .main-container
-  .my-courses
-  .course.verified
-  .sts-enrollment
-  .deco-graphic {
+.highlighted-courses .courses .course .status {
   z-index: 1000;
 }
 .wrapper-prompt,
@@ -491,21 +446,6 @@ a.disabled:visited,
 .pagination .nav-label,
 .pagination .pagination-form .page-number-label,
 .pagination .pagination-form .submit-pagination-form,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-image
-  .sts-enrollment
-  .label,
-.dashboard
-  .main-container
-  .my-courses
-  .course.professional
-  .sts-enrollment
-  .label,
-.dashboard .main-container .my-courses .course.verified .sts-enrollment .label,
 .verification-process
   .carousel
   #wrapper-review
@@ -555,107 +495,6 @@ footer#footer-edx-v3 .social-media-links,
 footer#footer-edx-v3 .mobile-app-links,
 .modal-settings-language .list-input,
 .modal-settings-language .list-actions,
-.dashboard .main-container .my-courses .listing-courses,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .actions-dropdown-list,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  .actions-dropdown-list,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  .actions-dropdown-list,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .actions-dropdown-list,
-.entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .entitlement-actions-dropdown-list,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list,
 .status-verification .list-actions,
 .view-survey .message.submission-error .message-copy,
 .view-survey .list-input,
@@ -688,96 +527,6 @@ footer#footer-edx-v3 .social-media-links li,
 footer#footer-edx-v3 .mobile-app-links li,
 .modal-settings-language .list-input li,
 .modal-settings-language .list-actions li,
-.dashboard .main-container .my-courses .listing-courses li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  li,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .actions-dropdown-list
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  .actions-dropdown-list
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .actions-dropdown-list
-  li,
-.entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .entitlement-actions-dropdown-list
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list
-  li,
 .status-verification .list-actions li,
 .view-survey .message.submission-error .message-copy li,
 .view-survey .list-input li,
@@ -805,96 +554,6 @@ footer#footer-edx-v3 .social-media-links dt,
 footer#footer-edx-v3 .mobile-app-links dt,
 .modal-settings-language .list-input dt,
 .modal-settings-language .list-actions dt,
-.dashboard .main-container .my-courses .listing-courses dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  dt,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .actions-dropdown-list
-  dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  .actions-dropdown-list
-  dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .actions-dropdown-list
-  dt,
-.entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .entitlement-actions-dropdown-list
-  dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list
-  dt,
 .status-verification .list-actions dt,
 .view-survey .message.submission-error .message-copy dt,
 .view-survey .list-input dt,
@@ -922,96 +581,6 @@ footer#footer-edx-v3 .social-media-links dd,
 footer#footer-edx-v3 .mobile-app-links dd,
 .modal-settings-language .list-input dd,
 .modal-settings-language .list-actions dd,
-.dashboard .main-container .my-courses .listing-courses dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  dd,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .actions-dropdown-list
-  dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  .actions-dropdown-list
-  dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .actions-dropdown-list
-  dd,
-.entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .entitlement-actions-dropdown-list
-  dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list
-  dd,
 .status-verification .list-actions dd,
 .view-survey .message.submission-error .message-copy dd,
 .view-survey .list-input dd,
@@ -1452,7 +1021,6 @@ footer#footer-edx-v3 .mobile-app-links dd,
   padding: 0.5rem 0.75rem;
   color: #313131;
 }
-
 
 .popover {
   position: absolute;
@@ -1957,12 +1525,14 @@ td {
   }
   p,
   h2,
-  .home > header .title > .heading-group p, h3 {
+  .home > header .title > .heading-group p,
+  h3 {
     orphans: 3;
     widows: 3;
   }
   h2,
-  .home > header .title > .heading-group p, h3 {
+  .home > header .title > .heading-group p,
+  h3 {
     page-break-after: avoid;
   }
 }
@@ -2037,47 +1607,6 @@ a.disabled:visited,
   .entitlement-unenrollment-modal-inner-wrapper
   header,
 .home > header .title .course-search .search-input,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-image
-  .sts-enrollment
-  .sts-enrollment-value,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown,
 .wrapper-messages-primary .message,
 .verification-process .progress-sts,
 .verification-process.step-requirements
@@ -2092,7 +1621,6 @@ a.disabled:visited,
 .pagination .pagination-form,
 .help-tab,
 .home > header .title .course-search .search-button,
-.dashboard .main-container .my-courses .course,
 .verification-process .progress .progress-step,
 .verification-process.step-requirements
   .list-reqs
@@ -2105,13 +1633,7 @@ a.disabled:visited,
   z-index: 100;
 }
 .nav-utilities,
-.highlighted-courses .courses .course .status,
-.dashboard
-  .main-container
-  .my-courses
-  .course.verified
-  .sts-enrollment
-  .deco-graphic {
+.highlighted-courses .courses .course .status {
   z-index: 1000;
 }
 .wrapper-prompt,
@@ -2131,21 +1653,6 @@ a.disabled:visited,
 .pagination .nav-label,
 .pagination .pagination-form .page-number-label,
 .pagination .pagination-form .submit-pagination-form,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-image
-  .sts-enrollment
-  .label,
-.dashboard
-  .main-container
-  .my-courses
-  .course.professional
-  .sts-enrollment
-  .label,
-.dashboard .main-container .my-courses .course.verified .sts-enrollment .label,
 .verification-process
   .carousel
   #wrapper-review
@@ -2195,107 +1702,6 @@ footer#footer-edx-v3 .social-media-links,
 footer#footer-edx-v3 .mobile-app-links,
 .modal-settings-language .list-input,
 .modal-settings-language .list-actions,
-.dashboard .main-container .my-courses .listing-courses,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .actions-dropdown-list,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  .actions-dropdown-list,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  .actions-dropdown-list,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .actions-dropdown-list,
-.entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .entitlement-actions-dropdown-list,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list,
 .status-verification .list-actions,
 .view-survey .message.submission-error .message-copy,
 .view-survey .list-input,
@@ -2328,96 +1734,6 @@ footer#footer-edx-v3 .social-media-links li,
 footer#footer-edx-v3 .mobile-app-links li,
 .modal-settings-language .list-input li,
 .modal-settings-language .list-actions li,
-.dashboard .main-container .my-courses .listing-courses li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  li,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .actions-dropdown-list
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  .actions-dropdown-list
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .actions-dropdown-list
-  li,
-.entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .entitlement-actions-dropdown-list
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list
-  li,
 .status-verification .list-actions li,
 .view-survey .message.submission-error .message-copy li,
 .view-survey .list-input li,
@@ -2445,96 +1761,6 @@ footer#footer-edx-v3 .social-media-links dt,
 footer#footer-edx-v3 .mobile-app-links dt,
 .modal-settings-language .list-input dt,
 .modal-settings-language .list-actions dt,
-.dashboard .main-container .my-courses .listing-courses dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  dt,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .actions-dropdown-list
-  dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  .actions-dropdown-list
-  dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .actions-dropdown-list
-  dt,
-.entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .entitlement-actions-dropdown-list
-  dt,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list
-  dt,
 .status-verification .list-actions dt,
 .view-survey .message.submission-error .message-copy dt,
 .view-survey .list-input dt,
@@ -2562,96 +1788,6 @@ footer#footer-edx-v3 .social-media-links dd,
 footer#footer-edx-v3 .mobile-app-links dd,
 .modal-settings-language .list-input dd,
 .modal-settings-language .list-actions dd,
-.dashboard .main-container .my-courses .listing-courses dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  dd,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .actions-dropdown-list
-  dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  .actions-dropdown-list
-  dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .actions-dropdown-list
-  dd,
-.entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .entitlement-actions-dropdown-list
-  dd,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list
-  dd,
 .status-verification .list-actions dd,
 .view-survey .message.submission-error .message-copy dd,
 .view-survey .list-input dd,
@@ -3056,107 +2192,6 @@ footer#footer-edx-v3 .social-media-links,
 footer#footer-edx-v3 .mobile-app-links,
 .modal-settings-language .list-input,
 .modal-settings-language .list-actions,
-.dashboard .main-container .my-courses .listing-courses,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .actions-dropdown-list,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  .actions-dropdown-list,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  .actions-dropdown-list,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .actions-dropdown-list,
-.entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .entitlement-actions-dropdown-list,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list,
 .status-verification .list-actions,
 .view-survey .message.submission-error .message-copy,
 .view-survey .list-input,
@@ -3189,96 +2224,6 @@ footer#footer-edx-v3 .social-media-links li,
 footer#footer-edx-v3 .mobile-app-links li,
 .modal-settings-language .list-input li,
 .modal-settings-language .list-actions li,
-.dashboard .main-container .my-courses .listing-courses li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  li,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .actions-dropdown-list
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  .actions-dropdown-list
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .actions-dropdown-list
-  li,
-.entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .entitlement-actions-dropdown-list
-  li,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list
-  li,
 .status-verification .list-actions li,
 .view-survey .message.submission-error .message-copy li,
 .view-survey .list-input li,
@@ -4444,22 +3389,6 @@ body.error .back-button,
 }
 .pagination .page-divider,
 .listing-tools .listing-sort-select,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-title
-  a,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-title
-  span,
 .login-register .button-secondary-login,
 .financial-assistance-wrapper
   .financial-assistance-form
@@ -4487,22 +3416,6 @@ body.error h1 {
   font-weight: 300;
 }
 body.error h1,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-title
-  a,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-title
-  span,
 .pagination .page-divider,
 .verification-process .carousel .view > .title,
 .verification-process .content-main > .title,
@@ -4533,7 +3446,6 @@ body.error h1,
   .profile-section-one-fields
   > .u-field:first-child,
 .home > header .title .course-search .search-input,
-.dashboard .main-container .my-courses .wrapper-header-courses .header-courses,
 .dashboard-banner .wrapper-msg .msg.title,
 .view-survey .header-survey .course-name,
 .view-survey .message.submission-error .message-title,
@@ -4599,102 +3511,6 @@ body.error h1,
   .wrapper-photos
   .help-tips
   .title,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-info
-  [class*="info-"],
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-info
-  .info-date-block-container
-  .info-date-block,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-info
-  .info-date-block-container
-  .change-session,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .actions-item,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  .actions-item,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  .actions-item,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .actions-item,
-.entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .entitlement-actions-item,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list
-  .entitlement-actions-item,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list
-  .entitlement-actions-item,
 .view-survey .bit .title,
 .verification-process .wrapper-report .report thead th[scope="col"],
 .verification-process
@@ -4711,14 +3527,6 @@ body.error h1,
 .view-survey .header-survey .course-org,
 .view-survey .header-survey .course-number,
 .certificate-card .card-text,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-image
-  .sts-enrollment
-  .sts-enrollment-value,
 .verification-process .page-header .title .sts-track .sts-track-value,
 .view-survey .header-survey .course-info,
 .verification-process h1,
@@ -4735,45 +3543,10 @@ body.error h1 {
   font-size: 60px;
   line-height: 88.8px;
 }
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-title
-  a,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-title
-  span {
-  font-size: 36px;
-  line-height: 53.28px;
-}
 .pagination .page-divider,
 .verification-process .carousel .view > .title,
 .verification-process .content-main > .title,
 .register.is-not-verified.step-confirmation .view .title,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-title
-  a,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-title
-  span,
 .view-survey .header-survey .title,
 .wrapper-account-settings .wrapper-header .header-title,
 .login-register-content h2,
@@ -4803,7 +3576,6 @@ body.error h1 {
   line-height: 35.52px;
 }
 .home > header .title .course-search .search-input,
-.dashboard .main-container .my-courses .wrapper-header-courses .header-courses,
 .dashboard-banner .wrapper-msg .msg.title,
 .view-survey .header-survey .course-name,
 .view-survey .message.submission-error .message-title,
@@ -4875,102 +3647,6 @@ body.error h1 {
   .wrapper-photos
   .help-tips
   .title,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-info
-  [class*="info-"],
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-info
-  .info-date-block-container
-  .info-date-block,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-details
-  .course-info
-  .info-date-block-container
-  .change-session,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .actions-item,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown
-  .actions-item,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  .actions-item,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .actions-item,
-.entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown
-  .entitlement-actions-item,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list
-  .entitlement-actions-item,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown
-  .entitlement-actions-dropdown-list
-  .entitlement-actions-item,
 .view-survey .bit .title,
 .verification-process .wrapper-report .report thead th[scope="col"],
 .verification-process
@@ -4993,14 +3669,6 @@ body.error h1 {
   font-size: 12px;
   line-height: 17.76px;
 }
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-image
-  .sts-enrollment
-  .sts-enrollment-value,
 .verification-process .page-header .title .sts-track .sts-track-value {
   font-size: 11px;
   line-height: 16.28px;
@@ -5010,12 +3678,10 @@ body.error h1 {
   .provider-buttons-logos
   .complete-order
   button,
-.dashboard .main-container .my-courses .course .details .enter-course,
 .wrapper-messages-primary .message.message-upsell .action-view-consent,
 .wrapper-messages-primary .message.message-status .verification-cta .btn,
 .wrapper-messages-primary .message.message-status .credit-action .credit-btn,
 .btn-secondary,
-.dashboard .main-container .my-courses .course .details .enter-course.archived,
 .wrapper-messages-primary .message.message-upsell .action-view-consent.archived,
 .account-settings-sections
   .section
@@ -5312,12 +3978,10 @@ body.error .description,
   .provider-buttons-logos
   .complete-order
   button,
-.dashboard .main-container .my-courses .course .details .enter-course,
 .wrapper-messages-primary .message.message-upsell .action-view-consent,
 .wrapper-messages-primary .message.message-status .verification-cta .btn,
 .wrapper-messages-primary .message.message-status .credit-action .credit-btn,
 .btn-secondary,
-.dashboard .main-container .my-courses .course .details .enter-course.archived,
 .wrapper-messages-primary .message.message-upsell .action-view-consent.archived,
 .account-settings-sections
   .section
@@ -5919,12 +4583,10 @@ body.error .back-button {
   .provider-buttons-logos
   .complete-order
   button,
-.dashboard .main-container .my-courses .course .details .enter-course,
 .wrapper-messages-primary .message.message-upsell .action-view-consent,
 .wrapper-messages-primary .message.message-status .verification-cta .btn,
 .wrapper-messages-primary .message.message-status .credit-action .credit-btn,
 .btn-secondary,
-.dashboard .main-container .my-courses .course .details .enter-course.archived,
 .wrapper-messages-primary .message.message-upsell .action-view-consent.archived,
 .account-settings-sections
   .section
@@ -5973,14 +4635,6 @@ body.error .back-button {
   .register-choice-certificate
   .action-intro,
 .verification-process.step-select-track .help-register .copy,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-image
-  .sts-enrollment
-  .sts-enrollment-value,
 .verification-process .page-header .title .sts-track .sts-track-value,
 .verification-process .wrapper-report .report td,
 .verification-process.step-review .nav-wizard .prompt-verify .copy,
@@ -6136,14 +4790,6 @@ body.error .back-button {
 .msg__copy {
   color: #6f7074;
 }
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-image
-  .sts-enrollment
-  .sts-enrollment-value,
 .verification-process .page-header .title .sts-track .sts-track-value {
   border-radius: 4px;
   padding: 10px 20px;
@@ -10839,8 +9485,12 @@ section.outside-app .view-survey form h1 {
 .login-register .form-field textarea.success {
   border-color: #008100;
 }
-.login-register .form-field textarea.error
-.login-register .form-field select.error {
+.login-register
+  .form-field
+  textarea.error
+  .login-register
+  .form-field
+  select.error {
   outline-color: #b20610;
 }
 .login-register .form-field textarea.success,
@@ -10975,8 +9625,10 @@ section.outside-app .view-survey form h1 {
 .login-register .login-provider.button-oa2-azuread-oauth2 .icon {
   background: #000;
 }
-.login-register .login-provider.button-oa2-azuread-oauth2:hover
-.login-register .login-provider.button-oa2-azuread-oauth2:focus {
+.login-register
+  .login-provider.button-oa2-azuread-oauth2:hover
+  .login-register
+  .login-provider.button-oa2-azuread-oauth2:focus {
   background-color: #000;
   border: 1px solid #000;
   color: #fff;
@@ -12095,7 +10747,6 @@ section.outside-app .text-me-fragment h1 {
   }
 }
 
-
 .certificate-card {
   display: flex;
   flex-direction: row;
@@ -13167,47 +11818,6 @@ a.disabled:visited,
   .entitlement-unenrollment-modal-inner-wrapper
   header,
 .home > header .title .course-search .search-input,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .wrapper-course-image
-  .sts-enrollment
-  .sts-enrollment-value,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .actions-dropdown,
-.entitlement-actions-wrapper
-  .dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .wrapper-action-more
-  .entitlement-actions-dropdown,
-.dashboard
-  .main-container
-  .my-courses
-  .course
-  .details
-  .course-actions
-  .entitlement-actions-wrapper
-  .entitlement-actions-dropdown,
 .wrapper-messages-primary .message,
 .verification-process .progress-sts,
 .verification-process.step-requirements
@@ -13222,7 +11832,6 @@ a.disabled:visited,
 .pagination .pagination-form,
 .help-tab,
 .home > header .title .course-search .search-button,
-.dashboard .main-container .my-courses .course,
 .verification-process .progress .progress-step,
 .verification-process.step-requirements
   .list-reqs
@@ -13235,13 +11844,7 @@ a.disabled:visited,
   z-index: 100;
 }
 .nav-utilities,
-.highlighted-courses .courses .course .status,
-.dashboard
-  .main-container
-  .my-courses
-  .course.verified
-  .sts-enrollment
-  .deco-graphic {
+.highlighted-courses .courses .course .status {
   z-index: 1000;
 }
 .wrapper-prompt,
@@ -15625,474 +14228,6 @@ button.close-modal:focus,
   max-width: 420px;
   margin: 0 0 10px 0;
 }
-#upsell-modal,
-#portfolio-experiment-upsell-modal {
-  display: none;
-}
-#upsell-modal .slick-list,
-#upsell-modal .slick-slider,
-#upsell-modal .slick-track,
-#portfolio-experiment-upsell-modal .slick-list,
-#portfolio-experiment-upsell-modal .slick-slider,
-#portfolio-experiment-upsell-modal .slick-track {
-  position: relative;
-  display: block;
-}
-#upsell-modal .slick-loading .slick-slide,
-#upsell-modal .slick-loading .slick-track,
-#portfolio-experiment-upsell-modal .slick-loading .slick-slide,
-#portfolio-experiment-upsell-modal .slick-loading .slick-track {
-  visibility: hidden;
-}
-#upsell-modal .slick-slider,
-#portfolio-experiment-upsell-modal .slick-slider {
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-#upsell-modal .slick-list,
-#portfolio-experiment-upsell-modal .slick-list {
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-#upsell-modal .slick-list:focus,
-#portfolio-experiment-upsell-modal .slick-list:focus {
-  outline: 0;
-}
-#upsell-modal .slick-list.dragging,
-#portfolio-experiment-upsell-modal .slick-list.dragging {
-  cursor: pointer;
-  cursor: hand;
-}
-#upsell-modal .slick-slider .slick-list,
-#upsell-modal .slick-slider .slick-track,
-#portfolio-experiment-upsell-modal .slick-slider .slick-list,
-#portfolio-experiment-upsell-modal .slick-slider .slick-track {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-#upsell-modal .slick-track,
-#portfolio-experiment-upsell-modal .slick-track {
-  top: 0;
-  left: 0;
-}
-#upsell-modal .slick-track::after,
-#upsell-modal .slick-track::before,
-#portfolio-experiment-upsell-modal .slick-track::after,
-#portfolio-experiment-upsell-modal .slick-track::before {
-  display: table;
-  content: "";
-}
-#upsell-modal .slick-track::after,
-#portfolio-experiment-upsell-modal .slick-track::after {
-  clear: both;
-}
-#upsell-modal .slick-slide,
-#portfolio-experiment-upsell-modal .slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
-}
-#upsell-modal [dir="rtl"] .slick-slide,
-#portfolio-experiment-upsell-modal [dir="rtl"] .slick-slide {
-  float: right;
-}
-#upsell-modal .slick-slide img,
-#portfolio-experiment-upsell-modal .slick-slide img {
-  display: block;
-}
-#upsell-modal .slick-slide.slick-loading img,
-#portfolio-experiment-upsell-modal .slick-slide.slick-loading img {
-  display: none;
-}
-#upsell-modal .slick-slide.dragging img,
-#portfolio-experiment-upsell-modal .slick-slide.dragging img {
-  pointer-events: none;
-}
-#upsell-modal .slick-initialized .slick-slide,
-#portfolio-experiment-upsell-modal .slick-initialized .slick-slide {
-  display: block;
-}
-#upsell-modal .slick-vertical .slick-slide,
-#portfolio-experiment-upsell-modal .slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-#upsell-modal .slick-arrow.slick-hidden,
-#portfolio-experiment-upsell-modal .slick-arrow.slick-hidden {
-  display: none;
-}
-#upsell-modal .slick-dots,
-#upsell-modal .slick-next,
-#upsell-modal .slick-prev,
-#portfolio-experiment-upsell-modal .slick-dots,
-#portfolio-experiment-upsell-modal .slick-next,
-#portfolio-experiment-upsell-modal .slick-prev {
-  position: absolute;
-  display: block;
-  padding: 0;
-}
-#upsell-modal .slick-dots li button::before,
-#upsell-modal .slick-next::before,
-#upsell-modal .slick-prev::before,
-#portfolio-experiment-upsell-modal .slick-dots li button::before,
-#portfolio-experiment-upsell-modal .slick-next::before,
-#portfolio-experiment-upsell-modal .slick-prev::before {
-  font-family: slick;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-#upsell-modal .slick-next,
-#upsell-modal .slick-prev,
-#portfolio-experiment-upsell-modal .slick-next,
-#portfolio-experiment-upsell-modal .slick-prev {
-  font-size: 0;
-  line-height: 0;
-  top: 50%;
-  width: 20px;
-  height: 20px;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  cursor: pointer;
-  color: transparent;
-  border: none;
-  outline: 0;
-  background: 0 0;
-}
-#upsell-modal .slick-next:focus,
-#upsell-modal .slick-next:hover,
-#portfolio-experiment-upsell-modal .slick-next:focus,
-#portfolio-experiment-upsell-modal .slick-next:hover {
-  color: transparent;
-  outline: 0;
-  background: 0 0;
-}
-#upsell-modal .slick-prev:focus,
-#upsell-modal .slick-prev:hover,
-#portfolio-experiment-upsell-modal .slick-prev:focus,
-#portfolio-experiment-upsell-modal .slick-prev:hover {
-  color: transparent;
-  outline: 0;
-  background: 0 0;
-}
-#upsell-modal .slick-next:focus::before,
-#upsell-modal .slick-next:hover::before,
-#portfolio-experiment-upsell-modal .slick-next:focus::before,
-#portfolio-experiment-upsell-modal .slick-next:hover::before {
-  opacity: 1;
-}
-#upsell-modal .slick-prev:focus::before,
-#upsell-modal .slick-prev:hover::before,
-#portfolio-experiment-upsell-modal .slick-prev:focus::before,
-#portfolio-experiment-upsell-modal .slick-prev:hover::before {
-  opacity: 1;
-}
-#upsell-modal .slick-next.slick-disabled::before,
-#upsell-modal .slick-prev.slick-disabled::before,
-#portfolio-experiment-upsell-modal .slick-next.slick-disabled::before,
-#portfolio-experiment-upsell-modal .slick-prev.slick-disabled::before {
-  opacity: 0.25;
-}
-#upsell-modal .slick-next::before,
-#portfolio-experiment-upsell-modal .slick-next::before {
-  font-size: 20px;
-  line-height: 1;
-  opacity: 0.75;
-  color: #fff;
-}
-#upsell-modal .slick-prev,
-#portfolio-experiment-upsell-modal .slick-prev {
-  left: -25px;
-}
-#upsell-modal .slick-prev::before,
-#portfolio-experiment-upsell-modal .slick-prev::before {
-  font-size: 20px;
-  line-height: 1;
-  opacity: 0.75;
-  color: #fff;
-}
-#upsell-modal [dir="rtl"] .slick-prev,
-#portfolio-experiment-upsell-modal [dir="rtl"] .slick-prev {
-  right: -25px;
-  left: auto;
-}
-#upsell-modal .slick-prev::before,
-#portfolio-experiment-upsell-modal .slick-prev::before {
-  content: "• ";
-}
-#upsell-modal .slick-next::before,
-#upsell-modal [dir="rtl"] .slick-prev::before,
-#portfolio-experiment-upsell-modal .slick-next::before,
-#portfolio-experiment-upsell-modal [dir="rtl"] .slick-prev::before {
-  content: "•’";
-}
-#upsell-modal .slick-next,
-#portfolio-experiment-upsell-modal .slick-next {
-  right: -25px;
-}
-#upsell-modal [dir="rtl"] .slick-next,
-#portfolio-experiment-upsell-modal [dir="rtl"] .slick-next {
-  right: auto;
-  left: -25px;
-}
-#upsell-modal [dir="rtl"] .slick-next::before,
-#portfolio-experiment-upsell-modal [dir="rtl"] .slick-next::before {
-  content: "•";
-}
-#upsell-modal .slick-dotted.slick-slider,
-#portfolio-experiment-upsell-modal .slick-dotted.slick-slider {
-  margin-bottom: 30px;
-}
-#upsell-modal .slick-dots,
-#portfolio-experiment-upsell-modal .slick-dots {
-  bottom: -25px;
-  width: 100%;
-  margin: 0;
-  list-style: none;
-  text-align: center;
-}
-#upsell-modal .slick-dots li,
-#portfolio-experiment-upsell-modal .slick-dots li {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-  padding: 0;
-  cursor: pointer;
-}
-#upsell-modal .slick-dots li button,
-#portfolio-experiment-upsell-modal .slick-dots li button {
-  font-size: 0;
-  line-height: 0;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-  cursor: pointer;
-  color: transparent;
-  border: 0;
-  outline: 0;
-  background: 0 0;
-}
-#upsell-modal .slick-dots li button:focus,
-#upsell-modal .slick-dots li button:hover,
-#portfolio-experiment-upsell-modal .slick-dots li button:focus,
-#portfolio-experiment-upsell-modal .slick-dots li button:hover {
-  outline: 0;
-}
-#upsell-modal .slick-dots li button:focus::before,
-#upsell-modal .slick-dots li button:hover::before,
-#portfolio-experiment-upsell-modal .slick-dots li button:focus::before,
-#portfolio-experiment-upsell-modal .slick-dots li button:hover::before {
-  opacity: 1;
-}
-#upsell-modal .slick-dots li button::before,
-#portfolio-experiment-upsell-modal .slick-dots li button::before {
-  font-size: 6px;
-  line-height: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  content: "•";
-  text-align: center;
-  opacity: 0.25;
-  color: #000;
-}
-#upsell-modal .slick-dots li.slick-active button::before,
-#portfolio-experiment-upsell-modal .slick-dots li.slick-active button::before {
-  opacity: 0.75;
-  color: #000;
-}
-#upsell-modal .paragon__btn.paragon__btn-secondary,
-#portfolio-experiment-upsell-modal .paragon__btn.paragon__btn-secondary {
-  display: none;
-}
-#upsell-modal .paragon__btn.paragon__btn-success,
-#portfolio-experiment-upsell-modal .paragon__btn.paragon__btn-success {
-  font-size: initial;
-  float: left;
-  background: green;
-}
-#upsell-modal .paragon__btn.paragon__btn-light,
-#portfolio-experiment-upsell-modal .paragon__btn.paragon__btn-light {
-  line-height: 0.25;
-  font-weight: 600;
-  background: white;
-}
-#upsell-modal .paragon__modal-title,
-#portfolio-experiment-upsell-modal .paragon__modal-title {
-  font-weight: 600;
-  color: black;
-}
-#upsell-modal .paragon__modal-title::before,
-#portfolio-experiment-upsell-modal .paragon__modal-title::before {
-  content: "NEW";
-  font-size: small;
-  background-color: #ccdde6;
-  color: #00507e;
-  margin-right: 8px;
-  box-shadow: 0 0 0 4px #ccdde6;
-  font-weight: 500;
-  border-radius: 3px;
-}
-#upsell-modal .paragon__modal-footer,
-#portfolio-experiment-upsell-modal .paragon__modal-footer {
-  display: inline-block;
-}
-#upsell-modal .carousel-arrow,
-#portfolio-experiment-upsell-modal .carousel-arrow {
-  background: white;
-}
-#upsell-modal .carousel-arrow.prev,
-#portfolio-experiment-upsell-modal .carousel-arrow.prev {
-  position: absolute;
-  bottom: 0;
-  right: 80%;
-  box-shadow: initial;
-  font-size: small;
-  color: black;
-  background-color: white;
-}
-#upsell-modal .carousel-arrow.next,
-#portfolio-experiment-upsell-modal .carousel-arrow.next {
-  position: absolute;
-  bottom: 0;
-  left: 80%;
-  box-shadow: initial;
-  font-size: small;
-  color: black;
-  background-color: white;
-}
-#upsell-modal .carousel-wrapper,
-#portfolio-experiment-upsell-modal .carousel-wrapper {
-  display: flex;
-}
-#upsell-modal .carousel-wrapper .slick-dots,
-#portfolio-experiment-upsell-modal .carousel-wrapper .slick-dots {
-  margin-bottom: 6%;
-  margin-left: 33%;
-  width: 33%;
-  display: block;
-}
-#upsell-modal .carousel-wrapper .slick-dots li,
-#portfolio-experiment-upsell-modal .carousel-wrapper .slick-dots li {
-  margin: 0;
-}
-#upsell-modal .carousel-wrapper .slick-dots li > button::before,
-#portfolio-experiment-upsell-modal
-  .carousel-wrapper
-  .slick-dots
-  li
-  > button::before {
-  font-size: 32px;
-}
-#upsell-modal .carousel-wrapper .slick-list,
-#portfolio-experiment-upsell-modal .carousel-wrapper .slick-list {
-  margin-bottom: 10%;
-}
-#upsell-modal .slick-slide.carousel-item,
-#portfolio-experiment-upsell-modal .slick-slide.carousel-item {
-  padding: 0 10px;
-  min-width: 400px;
-}
-#upsell-modal .upsell-certificate,
-#portfolio-experiment-upsell-modal .upsell-certificate {
-  height: 43px;
-  position: absolute;
-  margin: 0;
-  bottom: -58px;
-  left: 220px;
-}
-#upsell-modal .upsell-modal-checkmark-group,
-#portfolio-experiment-upsell-modal .upsell-modal-checkmark-group {
-  list-style: none;
-  padding-left: 30px;
-  margin-bottom: 15px;
-}
-#upsell-modal .upsell-modal-checkmark-group li,
-#portfolio-experiment-upsell-modal .upsell-modal-checkmark-group li {
-  margin-bottom: 15px;
-}
-#upsell-modal .upsell-modal-checkmark,
-#portfolio-experiment-upsell-modal .upsell-modal-checkmark {
-  left: 10px;
-  position: absolute;
-  color: black;
-  line-height: 24px;
-}
-#upsell-modal .js-carousel-nav,
-#portfolio-experiment-upsell-modal .js-carousel-nav {
-  border: 1px solid #b9bcbc;
-}
-#upsell-modal .icon.fa,
-#portfolio-experiment-upsell-modal .icon.fa {
-  font-size: 10px;
-  margin: 5px;
-}
-#upsell-modal .upsell-certificate,
-#portfolio-experiment-upsell-modal .upsell-certificate {
-  margin-top: 30px;
-  margin-left: 20px;
-}
-#upsell-modal .paragon__btn.paragon__btn-success,
-#portfolio-experiment-upsell-modal .paragon__btn.paragon__btn-success {
-  font-weight: 600;
-  padding: 9px 20px;
-}
-#upsell-modal .slick-slide.carousel-item,
-#portfolio-experiment-upsell-modal .slick-slide.carousel-item {
-  color: grey;
-}
-#upsell-modal .slide-header,
-#portfolio-experiment-upsell-modal .slide-header {
-  padding-bottom: 10px;
-  color: black;
-}
-#upsell-modal .my-stats-introduction,
-#portfolio-experiment-upsell-modal .my-stats-introduction {
-  padding-bottom: 10px;
-}
-#upsell-modal .my-stats-slide-header,
-#portfolio-experiment-upsell-modal .my-stats-slide-header {
-  padding-bottom: 10px;
-}
-#upsell-modal .checkmark-group-header,
-#portfolio-experiment-upsell-modal .checkmark-group-header {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-#upsell-modal .feature-screenshot,
-#portfolio-experiment-upsell-modal .feature-screenshot {
-  width: 250px;
-  margin-top: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 15px;
-}
-@media only screen and (max-width: 600px) {
-  #upsell-modal .slick-slide.carousel-item,
-  #portfolio-experiment-upsell-modal .slick-slide.carousel-item {
-    min-width: 0;
-  }
-}
-
 .course-info header.course-profile {
   height: 430px;
   padding-top: 50px;
@@ -16506,7 +14641,8 @@ section.updates {
     margin-bottom: 0;
   }
 
-  ol, ul {
+  ol,
+  ul {
     padding-left: 0;
   }
 
@@ -16596,7 +14732,6 @@ section.handouts {
   box-shadow: none;
   border-radius: 0;
 }
-
 
 #content .course-title header {
   margin-top: 0px;
@@ -16828,143 +14963,7 @@ section.container.dashboard,
 .message.message-status ul a {
   padding: 0;
 }
-#dashboard-main {
-  background: white;
-}
-#dashboard-main.course-content {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  margin: 0 auto;
-}
-#dashboard-main.course-content .my-courses,
-#dashboard-main.course-content .profile-sidebar {
-  padding: 2em;
-}
-#dashboard-main.course-content .my-courses h1,
-#dashboard-main.course-content .profile-sidebar h1 {
-  font: 900 1.8em/1.2 $gym-font-stack;
-  color: #222;
-  letter-spacing: 0.02em;
-  word-spacing: 0.02em;
-  text-transform: uppercase;
-}
-#dashboard-main.course-content .my-courses {
-  border-bottom: 0;
-  border-right: 1px dashed #ccc;
-}
-#dashboard-main.course-content .my-courses .hero h1 {
-  font-size: 2.4em;
-  letter-spacing: 0.04em;
-}
-#dashboard-main.course-content .my-courses h1 {
-  font: 900 1.8em/1.2 $gym-font-stack;
-  color: #222;
-  letter-spacing: 0.02em;
-  word-spacing: 0.02em;
-  text-transform: uppercase;
-}
-#dashboard-main.course-content .my-courses .course-item h1 {
-  color: #ebebeb;
-}
-#dashboard-main.course-content .profile-sidebar ul {
-  margin: 0;
-  padding: 0;
-}
-#dashboard-main.course-content .profile-sidebar header {
-  margin-top: 0;
-}
-#dashboard-main.course-content .profile-sidebar h1 {
-  font-weight: bold;
-  text-transform: capitalize;
-}
-#dashboard-main.course-content .profile-sidebar h2,
-#dashboard-main.course-content
-  .profile-sidebar
-  .home
-  > header
-  .title
-  > .heading-group
-  p,
-.home
-  > header
-  .title
-  > .heading-group
-  #dashboard-main.course-content
-  .profile-sidebar
-  p {
-  font: 900 1em/1.3 $gym-font-stack;
-  color: #222;
-  letter-spacing: 0.06em;
-  word-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 1em;
-}
-#dashboard-main.course-content .profile-sidebar .profile {
-  padding: 1.2em 0;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-#dashboard-main.course-content .profile-sidebar .user-info ul {
-  list-style: none;
-}
-#dashboard-main.course-content .profile-sidebar .user-info .data,
-#dashboard-main.course-content .profile-sidebar .user-info .status,
-#dashboard-main.course-content .profile-sidebar .user-info .proivder,
-#dashboard-main.course-content .profile-sidebar .user-info .control {
-  font: 0.96em/1.2 $gym-text-font-stack;
-}
-#dashboard-main.course-content .profile-sidebar .user-info .title {
-  display: block;
-  font: bold 1.2em/1.2 $gym-font-stack;
-  color: #222;
-  letter-spacing: 0.04em;
-  word-spacing: 0.04em;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-}
-#dashboard-main.course-content
-  .profile-sidebar
-  .user-info
-  .controls--account.password-reset {
-  margin-top: 2em;
-}
-#dashboard-main.course-content .profile-sidebar .user-info .status {
-  width: 6.77966%;
-  display: inline-block;
-  color: #222;
-}
-#dashboard-main.course-content .profile-sidebar .user-info .provider {
-  width: 66.57627%;
-  display: inline-block;
-}
-#dashboard-main.course-content .profile-sidebar .user-info .control {
-  width: 15.25424%;
-  display: inline-block;
-  text-align: right;
-}
-#dashboard-main.course-content .profile-sidebar .user-info .copy {
-  border: 0;
-  clip: rect(1px 1px 1px 1px);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-#dashboard-main.course-content h1,
-#dashboard-main.course-content h2,
-#dashboard-main.course-content .home > header .title > .heading-group p,
-.home > header .title > .heading-group #dashboard-main.course-content p,
-#dashboard-main.course-content h3,
-#dashboard-main.course-content h4,
-#dashboard-main.course-content h5,
-#dashboard-main.course-content h6 {
-  text-align: left;
-  margin: 0;
-  padding: 0;
-}
+
 body * .modal,
 body * .leanModal_box,
 body * .entitlement-unenrollment-modal {
@@ -17041,74 +15040,6 @@ body * .entitlement-unenrollment-modal textarea {
   .entitlement-unenrollment-modal-inner-wrapper
   .entitlement-unenrollment-modal-close-btn {
   z-index: 20;
-}
-.dashboard-search-bar {
-  border: 0px;
-  border-radius: 0;
-  color: #ebebeb;
-  padding: 10px;
-}
-.dashboard-search-bar .search-field {
-  box-shadow: none;
-  border-radius: 0;
-}
-.dashboard-search-bar label {
-  color: #ebebeb;
-}
-.view-dashboard .course-item header {
-  background-color: #777;
-}
-.view-dashboard .course-item header h1 {
-  color: #ebebeb;
-  margin-top: 0.5em;
-}
-.my-courses .grade-value {
-  color: #ebebeb;
-  font-weight: bold;
-}
-.my-courses .courses-listing,
-.my-courses .listing-courses {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.my-courses .course-item {
-  margin-top: 1.2em;
-}
-.my-courses .course-item header {
-  margin: 0;
-  padding: 2em;
-  overflow: hidden;
-}
-.my-courses .course-item header p {
-  color: #ebebeb;
-}
-.my-courses .course-item .course-options {
-  background: #444;
-  padding: 1em 1.5em;
-  overflow: hidden;
-  list-style: none;
-}
-.my-courses .course-item .course-options li {
-  display: inline;
-  font-size: 0.96em;
-  margin-right: 1.8em;
-}
-.my-courses .course-item .course-options .dashboard-listing-links {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  margin: 0;
-  margin-top: 0.8em;
-}
-.my-courses
-  .course-item
-  .course-options
-  .dashboard-listing-links
-  li
-  a.btn:hover {
-  border-color: transparent;
-  text-decoration: underline;
 }
 .beta article {
   position: relative;
@@ -17486,9 +15417,7 @@ ul.account-nav li.account-nav-item {
   display: inline-block;
   padding: 10px 13px 12px 0;
 }
-ul.account-nav
-  li.account-nav-item
-  button.account-nav-link {
+ul.account-nav li.account-nav-item button.account-nav-link {
   padding: 0;
   margin: 0;
   color: #555;
