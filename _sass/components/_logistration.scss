@@ -5,6 +5,12 @@
   background-color: transparent;
   max-width: none;
 
+  .form-type {
+    max-width: 600px;
+    min-width: 250px;
+    margin: 0 auto;
+  }
+
   form {
     margin: 0 auto;
     padding: 0 1.8em 2.2em;
@@ -23,6 +29,6 @@
   }
 }
 
-.form-wrapper {
+.form-wrapper  {
   padding: 20px 0;
 }
