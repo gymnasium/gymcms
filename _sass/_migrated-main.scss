@@ -9488,191 +9488,48 @@ body.view-in-course .content-wrapper#content {
 nav.progress.wrapper-course-material {
   height: inherit;
 }
-.container div.course-wrapper,
-section.outside-app div.course-wrapper,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.course-wrapper,
-.view-profile .wrapper-profile-sections div.course-wrapper,
-.view-profile .badge-set-display div.course-wrapper,
-.home .container.grey div.course-wrapper {
-  border: none;
-  border-radius: 0;
-}
-.container div.course-wrapper .no-right-pad,
-section.outside-app div.course-wrapper .no-right-pad,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.course-wrapper
-  .no-right-pad,
-.view-profile .wrapper-profile-sections div.course-wrapper .no-right-pad,
-.view-profile .badge-set-display div.course-wrapper .no-right-pad {
+
+.no-right-pad {
   padding-right: 0;
 }
-.container div.course-wrapper .no-left-pad,
-section.outside-app div.course-wrapper .no-left-pad,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.course-wrapper
-  .no-left-pad,
-.view-profile .wrapper-profile-sections div.course-wrapper .no-left-pad,
-.view-profile .badge-set-display div.course-wrapper .no-left-pad {
+.no-left-pad {
   padding-left: 0;
 }
-.container div.course-wrapper .courseware-search-bar,
-section.outside-app div.course-wrapper .courseware-search-bar,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.course-wrapper
-  .courseware-search-bar,
-.view-profile
-  .wrapper-profile-sections
-  div.course-wrapper
-  .courseware-search-bar,
-.view-profile .badge-set-display div.course-wrapper .courseware-search-bar {
+.courseware-search-bar {
   box-shadow: none;
 }
-.container div.course-wrapper .courseware-results-wrapper,
-section.outside-app div.course-wrapper .courseware-results-wrapper,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.course-wrapper
-  .courseware-results-wrapper,
-.view-profile
-  .wrapper-profile-sections
-  div.course-wrapper
-  .courseware-results-wrapper,
-.view-profile
-  .badge-set-display
-  div.course-wrapper
-  .courseware-results-wrapper {
+.courseware-results-wrapper {
   width: inherit;
   max-width: 75%;
   margin: 0;
   padding: 0;
   border: none;
 }
-.container div.course-wrapper .course-index,
-section.outside-app div.course-wrapper .course-index,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.course-wrapper
-  .course-index,
-.view-profile .wrapper-profile-sections div.course-wrapper .course-index,
-.view-profile .badge-set-display div.course-wrapper .course-index {
+.course-index {
   color: #ebebeb;
   border-right: none;
   background-color: #444;
   border-radius: 0;
   display: block;
 }
-.container div.course-wrapper .course-index .course-search-input,
-section.outside-app div.course-wrapper .course-index .course-search-input,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.course-wrapper
-  .course-index
-  .course-search-input,
-.view-profile
-  .wrapper-profile-sections
-  div.course-wrapper
-  .course-index
-  .course-search-input,
-.view-profile
-  .badge-set-display
-  div.course-wrapper
-  .course-index
-  .course-search-input,
-.container div.course-wrapper .course-index .search-field-wrapper,
-section.outside-app div.course-wrapper .course-index .search-field-wrapper,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.course-wrapper
-  .course-index
-  .search-field-wrapper,
-.view-profile
-  .wrapper-profile-sections
-  div.course-wrapper
-  .course-index
-  .search-field-wrapper,
-.view-profile
-  .badge-set-display
-  div.course-wrapper
-  .course-index
-  .search-field-wrapper {
+.course-search-input,
+.search-field-wrapper {
   border-radius: 0;
 }
-.container div.course-wrapper .course-index .search-bar .search-field,
-section.outside-app div.course-wrapper .course-index .search-bar .search-field,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.course-wrapper
-  .course-index
-  .search-bar
-  .search-field,
-.view-profile
-  .wrapper-profile-sections
-  div.course-wrapper
-  .course-index
-  .search-bar
-  .search-field,
-.view-profile
-  .badge-set-display
-  div.course-wrapper
-  .course-index
-  .search-bar
-  .search-field {
+.search-field {
   background: #ebebeb;
 }
-.container div.info-wrapper,
-section.outside-app div.info-wrapper,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper,
-.view-profile .wrapper-profile-sections div.info-wrapper,
-.view-profile .badge-set-display div.info-wrapper,
-.home .container.grey div.info-wrapper {
+
+div.info-wrapper {
   border: none;
   border-radius: 2px;
   margin-bottom: 0px;
   border: 1px solid #ccc;
   font-family: $gym-text-font-stack;
 }
-.container div.info-wrapper p,
-section.outside-app div.info-wrapper p,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy
-  div.info-wrapper
-  p,
-.view-profile .wrapper-profile-sections div.info-wrapper p,
-.view-profile .badge-set-display div.info-wrapper p,
-.home .container.grey div.info-wrapper p {
+div.info-wrapper p {
   font-family: $gym-text-font-stack;
 }
-
-
 
 .course-title {
   background: #777;
