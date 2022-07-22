@@ -1,3 +1,71 @@
+@import "components/bootstrap/forms";
+
+
+// Gymnasium overrides for any of the above
+form {
+  input, select, textarea {
+    display: block;
+    height: auto;
+    width: 100%;
+    margin: 0 0 0.6em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #f8971d;
+    font-size: 1em;
+
+    &.error {
+      border: 1px solid #d43f3a;
+      outline: 1px solid #d43f3a;
+    }
+  }
+
+  select {
+    cursor: pointer;
+  }
+
+  label {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-family: $gym-font-stack;
+    font-weight: bold;
+    margin-bottom: 0.6em;
+    max-width: 100%;
+
+    &.error {
+      display: inline-block;
+      color: #fff;
+      padding: 0.5em;
+      background: #d43f3a;
+      border-radius: 2px;
+    }
+  
+    &.focus-out {
+      position: static;
+      opacity: 1;
+      z-index: auto;
+    }
+  }
+
+  input[type=checkbox], input[type=radio] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+  }
+
+  .form-field {
+    clear: both;
+    position: relative;
+    width: 100%;
+    margin: 0.6em 0 1.4em 0;
+  }
+
+  input+.tip-input {
+    margin-top: 0.6em;
+  }
+}
+
+
 // Disabled button styles
 input[type="submit"]:disabled, input[type="submit"].is-disabled, input[type="submit"].disabled, input[type="button"]:disabled, input[type="button"].is-disabled, input[type="button"].disabled, button:disabled, button.is-disabled, button.disabled, .button:disabled, .button.is-disabled, .button.disabled {
   pointer-events: none;

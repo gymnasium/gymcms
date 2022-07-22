@@ -28,7 +28,7 @@ input[type="search"] {
 }
 input[type="checkbox"],
 input[type="radio"] {
-  margin: 1px\9 0 0;
+  margin: 1px 0 0;
   line-height: normal;
 }
 input[type="file"] {
@@ -163,7 +163,7 @@ input[type="search"] {
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
   position: absolute;
-  margin-top: 4px\9;
+  margin-top: 4px;
   margin-left: -20px;
 }
 .checkbox + .checkbox,
@@ -205,6 +205,8 @@ fieldset[disabled] .checkbox label,
 fieldset[disabled] .radio label {
   cursor: not-allowed;
 }
+
+
 .form-control-static {
   min-height: 34px;
   padding-top: 7px;
