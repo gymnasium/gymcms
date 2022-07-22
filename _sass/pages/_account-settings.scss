@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'functions';
+
+// Account Settings
+.account-settings-container {
+  background-color: $gym-white;
+
+  .wrapper-header { display: none; }
+}
+
+
+.account-settings-sections {
+
+  .u-field {
+    border-bottom: 2px solid #f5f5f5;
+    padding: 15px 0;
+  }
+
+  .u-field-message {
+    position: relative;
+    padding: 15px 0 0 80px;
+    width: 60%;
+  }
+
+
+  .field {
+    width: 30%;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+  }
+}

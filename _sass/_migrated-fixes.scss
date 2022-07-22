@@ -2,9 +2,9 @@
 @import 'functions';
 
 // 'Component-ized' partials
-@import "components/home";
-@import "components/logistration";
-@import "components/courses";
-@import "components/courseware";
-@import "components/dashboard";
-@import "components/account-settings";
+@import "pages/home";
+@import "pages/logistration";
+@import "pages/courses";
+@import "pages/courseware";
+@import "pages/dashboard";
+@import "pages/account-settings";
