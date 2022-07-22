@@ -7,11 +7,14 @@ url: /courses/take5/GYM-5015/
 poster_art: /img/take5/posters/gym-5015.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Prototyping"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "UX"
+subtopics:
+  - label: "Prototyping"
 video_ID: fhAqswjylgg
 video_duration: "4:57"
 featured: false
-short_description: "Learn how to use the Smart Animate feature to create advanced animations in Figma in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
+short_description: "Learn how to use the Smart Animate feature to create advanced animations in Figma in this hands-on tutorial."
 project_file_source: GitHub
 project_files:
 - label: "Lesson Files"
@@ -23,4 +26,5 @@ related_content:
   url: "https://www.youtube.com/watch?v=6Id4INKEwb8"
 - label: "iOS Animations with Figma’s Smart Animations by Lucas Chae"
   url: "https://uxdesign.cc/ios-animations-with-figmas-smart-animate-954c13a30cad"
+skill_level: "Intermediate"
 ---

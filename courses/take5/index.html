@@ -1,9 +1,10 @@
 ---
-layout: raw
+layout: wrapper-full-default
 permalink: /courses/take5/
 ---
 {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
 
+<preload rel="stylesheet" as="style" href="{{ site.url }}/css/take5.css">
 <link rel="stylesheet" href="{{ site.url }}/css/take5.css">
 
 {%- include take5/detail-opener-js.html -%}
@@ -12,7 +13,7 @@ permalink: /courses/take5/
   <header class="take5--about" id="about">
     <div class="container">
       <h1>Take 5</h1>
-      <p><strong>Learn a new skill in 5 minutes.</strong> Video tutorials on design, development, accessibility, prototyping, UX, and career skills.</p>
+      <p><strong>Learn new skills in 5 minutes.</strong> Free video tutorials on design, development, UX, accessibility, and career skills.</p>
     </div>
   </header>
 
@@ -30,7 +31,7 @@ permalink: /courses/take5/
       {%- endif -%}
   {%- endfor -%}
 
-  {%- assign unique_topics = topics | uniq | reverse | join: ', '|split: ', ' -%}
+  {%- assign unique_topics = 'Design, Development, UX, Accessibility, Career Skills' | join: ', '| split: ', ' -%}
   {%- assign pubdates_sorted = pubdates | sort -%}
 
   {%- for pubdate in pubdates_sorted -%}
@@ -56,6 +57,7 @@ permalink: /courses/take5/
               {%- assign featured_description = site.data.take5[item].short_description -%}
               {%- assign featured_url = site.data.take5[item].title | slugify | prepend: base_path -%}
               {%- assign featured_instructor = site.data.take5[item].instructor -%}
+              {%- assign featured_instructor_bio = site.data.take5[item].instructor_bio -%}
               {%- assign featured_topic = site.data.take5[item].topic -%}
               {%- assign featured_poster_art = site.data.take5[item].poster_art -%}
               {%- assign featured_video_duration = site.data.take5[item].video_duration -%}
@@ -78,7 +80,7 @@ permalink: /courses/take5/
             <nav class="take5--tutorial-topics" aria-labelledby="tutorial-topics">
               <details open class="take5--topics-menu" id="tutorial-topics">
                 <summary aria-expanded="true/false" tabindex="0" role="button">
-                  <b role="heading">Topics</b>
+                  <b role="heading">Category</b>
                 </summary>
                 <div class="take5--topics-menu-list">
                   <!-- Found {{ unique_topics | size }} topic(s) with live content -->
@@ -98,18 +100,19 @@ permalink: /courses/take5/
               <header>
                 <h2>Recent</h2>
               </header>
-              <div class="tutorial">
+              <article class="tutorial">
                 <div class="artwork" data-duration="{{ featured_video_duration }}">
                   <a href="{{ featured_url }}" title="Watch Video">
-                    <img alt="{{ featured_description }}" src="{{ site.url }}{{ featured_poster_art }}">
+                    <img alt="{{ featured_description }}" src="{{ site.url }}{{ featured_poster_art }}" width="1280" height="720" decoding="async">
                   </a>
                 </div>
                 <header>
-                  <h2 class="all-caps subhead-topic">{{ featured_topic }}</h2>
+                  <p class="all-caps subhead-topic" role="doc-subtitle">{{ featured_topic }}</p>
                   <h1 class="title all-caps">
                     <a href="{{ featured_url }}">{{ featured_title }}</a>
                   </h1>
-                  <p class="instructor">with {{ featured_instructor }}
+                  <p class="instructor">
+                    <b>with {{ featured_instructor }}, {{ featured_instructor_bio }}</b>
                   </p>
                 </header>
                 <p class="description">{{ featured_description }}</p>
@@ -118,7 +121,11 @@ permalink: /courses/take5/
                     <b>Watch Video</b>
                   </a>
                 </div>
-              </div><!-- .tutorial -->
+                <footer>
+                  <p><b>{{ item.course_type | replace: 'take5', 'Tutorial' }}</b></p>
+                  <p>{{ item.skill_level }}</p>
+                </footer>
+              </article><!-- .tutorial -->
             </div><!-- .take5--featured -->
           </div><!-- .col-md-8 -->
         </div><!-- .row -->

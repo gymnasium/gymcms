@@ -7,11 +7,12 @@ url: /courses/take5/GYM-5043/
 poster_art: /img/take5/posters/gym-5043.jpg
 live: true
 instructor: "Clarissa Peterson"
+instructor_bio: "Strategy Director at Forum One"
 topic: "Accessibility"
 video_ID: 7Q1bVzu0KxE
 video_duration: "3:36"
 featured: false
-short_description: "Discover how to identify whether the colors on your website have sufficient contrast between text color and its background in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
+short_description: "Discover how to identify whether the colors on your website have sufficient contrast between text color and its background in this tutorial."
 related_content:
 - label: "WebAIM: Contrast Checker"
   url: "https://webaim.org/resources/contrastchecker/"
@@ -23,4 +24,5 @@ related_content:
   url: "https://css-tricks.com/understanding-web-accessibility-color-contrast-guidelines-and-ratios/"
 - label: "Color Contrast And Why You Should Rethink It"
   url: "https://www.smashingmagazine.com/2014/10/color-contrast-tips-and-tools-for-accessibility/"
+skill_level: "Beginner"
 ---

@@ -102,7 +102,7 @@
   .hero-promo {
     .container {
       padding-top: 2.75em;
-      padding-bottom: 4.125em;
+      padding-bottom: 4.25em;
     }
     .content {
       display: grid;
@@ -116,12 +116,13 @@
     .image {
       height: 21.75em;
       margin: 0 0 0 -15px;
-    }
-    .image img {
+
+      img {
       max-width: none;
       height: 152%;
       margin-top: -32%;
       margin-left: -50%;
+      }
     }
     .image + .text {
       margin-top: 0;

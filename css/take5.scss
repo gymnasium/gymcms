@@ -83,10 +83,15 @@
 
 // paragraphs
 
-[role="main"] p {
-  font: normal 1.15em/1.5 $gym-text-font-stack;
-  margin-top: 1em;
-  margin-bottom: 0;
+[role="main"] {
+  p {
+    font: normal 1.15em/1.5 $gym-text-font-stack;
+    margin-bottom: 0;
+  }
+
+  p:not([class]) {
+    margin-top: 1em;
+  }
 }
 
 // typographical details
@@ -265,9 +270,8 @@ main h3 {
     padding-top: 1.6em;
   }
 
-  @include breakpoint(62em,min) {
+  @include breakpoint(medium, min) {
     &--hero-content .col-md-4 + .col-md-8 {
-      float: right;
       padding-top: 0;
     }
 
@@ -283,19 +287,22 @@ main h3 {
     }
 
     .tutorial {
+      display: grid;
+      grid-auto-rows: auto 1fr auto auto;
       padding: 0 1em 1.2em;
       border: 1px solid $gym-gray-2;
       border-radius: 0 0 3px 3px;
-
-      header {
-        margin-top: 1em;
-      }
 
       .artwork {
         border: 0;
         border-bottom: 1px solid $gym-gray-2;
         margin-left: -1em;
         margin-right: -1em;
+      }
+
+      header {
+        align-self: start;
+        margin-top: 1em;
       }
     }
   }
@@ -400,7 +407,6 @@ main h3 {
 
     .tutorial .subhead-topic {
       margin-top: 1.6rem;
-      margin-bottom: .8rem;
     }
 
     &-content {
@@ -462,37 +468,38 @@ main h3 {
   font-weight: bold;
 }
 
-.subhead-topic,
-.subhead-datetime {
-  font: bold .85em/1.15 $gym-font-stack;
-  color: $gym-black;
-  letter-spacing: .05rem;
-  word-spacing: .05rem;
-  text-transform: uppercase;
-  text-align: left;
-}
-
-.tutorial {
+[role="main"] {
   .subhead-topic,
   .subhead-datetime {
-    margin-bottom: .6rem;
+    font: bold .85em/1.15 $gym-font-stack;
+    color: $gym-black;
+    letter-spacing: .05rem;
+    word-spacing: .05rem;
   }
 
   .subhead-topic {
     font-weight: 900;
+    font-size: 0.9625em;
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+  }
+
+  .tutorial .subhead-topic {
+    margin-bottom: 1rem;
   }
 }
 
 .subhead-datetime {
   display: inline-block;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: .6rem
 }
 
 #tutorial-resources p {
   font-size: 1em;
   margin-top: .5rem;
 }
-
-
 
 .subhead-datetime time b {
   display: inline-block;
@@ -548,7 +555,7 @@ details.take5--transcript {
   }
 }
 
-@include breakpoint(48em, max) {
+@include breakpoint(medium, max) {
 
   .take5--hero-content .take5--resources,
   #tutorial-topics {
@@ -556,15 +563,11 @@ details.take5--transcript {
   }
 
   #tutorial-topics summary b::before {
-    content: "Browse" "\00a0";
+    content: "Select a" "\00a0";
   }
 }
 
 @include breakpoint(medium, min) {
-
-  .take5--main .col-md-4 {
-    float: right;
-  }
 
   #tutorial-resources {
      margin-top: 0;
@@ -624,6 +627,28 @@ details.take5--transcript {
   @extend %tutorial-artwork-img;
 }
 
+// --- course type / skill level ---
+.tutorial {
+  footer {
+      padding-left: 1em;
+      padding-right: 1em;
+      border-top: 1px dashed $gym-gray-2;
+      margin-top: 1em;
+      margin-left: -1em;
+      margin-right: -1em;
+      overflow: hidden;
+
+      p {
+        float: left;
+        font-size: 0.9625em;
+      }
+
+      p:last-child {
+        float: right;
+      }
+    }
+}
+
 // --- catalog view ---
 .take5 {
   &--catalog-section {
@@ -646,8 +671,12 @@ details.take5--transcript {
       }
 
       header {
-        padding: 1em;
+        padding: 1em 0.5em;
         margin-top: 0;
+
+        p:not([class]) {
+          font-size: 0.9625em;
+        }
       }
     }
 
@@ -718,6 +747,11 @@ details.take5--transcript {
 
 .cta {
   margin-top: 1.2em;
+}
+
+.take5--catalog-section .cta {
+  align-self: end;
+  margin-top: 0.4em;
 }
 
 // back to top
