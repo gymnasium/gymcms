@@ -36,6 +36,7 @@
 
   select {
     padding: 1rem;
+    margin: 0;
   }
 }
 
@@ -161,24 +162,6 @@
               padding-bottom: 10px;
             }
 
-            .accordion-nav {
-              background: inherit;
-              border: none;
-              position: relative;
-              display: block;
-              padding: 5px 10px;
-
-              h1,
-              h2,
-              h3,
-              h4,
-              h5,
-              h6,
-              p {
-                font-family: $gym-font-stack;
-              }
-            }
-
             a {
               color: #ebebeb;
               background: inherit;
@@ -242,6 +225,24 @@
         }
       }
     }
+  }
+}
+
+.accordion-nav {
+  background: inherit;
+  border: none;
+  position: relative;
+  display: block;
+  padding: 5px 10px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-family: $gym-font-stack;
   }
 }
 
