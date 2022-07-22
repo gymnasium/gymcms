@@ -6669,7 +6669,8 @@ button.close {
     rgba(0, 0, 0, 0.5) 0,
     rgba(0, 0, 0, 0.0001) 100%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= '#80000000', endColorstr='#00000000', GradientType=1)) background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= '#80000000', endColorstr='#00000000', GradientType=1);
+  background-repeat: repeat-x;
 }
 .carousel-control.right {
   right: 0;
@@ -6696,7 +6697,8 @@ button.close {
     rgba(0, 0, 0, 0.0001) 0,
     rgba(0, 0, 0, 0.5) 100%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= '#00000000', endColorstr='#80000000', GradientType=1)) background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= '#00000000', endColorstr='#80000000', GradientType=1);
+  background-repeat: repeat-x;
 }
 .carousel-control:focus,
 .carousel-control:hover {
@@ -6757,7 +6759,7 @@ button.close {
   margin: 1px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #000\9;
+  background-color: #000;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #fff;
   border-radius: 10px;
