@@ -10,13 +10,6 @@
 
 .account-settings-sections {
 
-  .field {
-    width: 30%;
-    vertical-align: top;
-    display: inline-block;
-    position: relative;
-  }
-
   .u-field-title {
     display: block;
     width: auto;
@@ -27,7 +20,6 @@
     white-space: nowrap;
     padding-top: 10px;
     padding-bottom: 0;
-    vertical-align: top;
   }
 
   .u-field-value-display {
@@ -39,19 +31,32 @@
     padding: 15px 0;
   }
 
+  .field {
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+  }
+
   .u-field-message {
     position: relative;
-    padding: 15px 0 0 80px;
+    padding: 15px 0 0 0;
     width: 100%;
     display: inline-block;
     vertical-align: top;
     color: #919191;
-
-    @include breakpoint(medium, min) {
-      width: 60%;
-    }
   }
 
+  @include breakpoint(medium, min) {
+    .u-field-message {
+      width: 60%;
+      padding-left: font-calc(80, rem, 10px);
+    }
+
+    .field {
+      width: 30%;
+    }
+  }
   // Since we only support English, there's no point in showing the language dropdown (with only one option)
   .u-field-pref-lang {
     display: none;
