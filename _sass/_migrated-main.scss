@@ -9413,42 +9413,7 @@ body.view-in-course .wrapper-course-material div.course-material {
 body.view-in-course div.wrapper-footer {
   margin-top: 0;
 }
-body.view-in-course .container,
-body.view-in-course section.outside-app,
-body.view-in-course
-  .view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .u-field-account_privacy,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  body.view-in-course
-  .u-field-account_privacy,
-body.view-in-course .view-profile .wrapper-profile-sections,
-.view-profile body.view-in-course .wrapper-profile-sections,
-body.view-in-course .view-profile .badge-set-display,
-.view-profile body.view-in-course .badge-set-display,
-body.view-in-course
-  .view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  div.u-field-account_privacy,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  body.view-in-course
-  div.u-field-account_privacy,
-body.view-in-course .view-profile div.wrapper-profile-sections,
-.view-profile body.view-in-course div.wrapper-profile-sections,
-body.view-in-course .view-profile div.badge-set-display,
-.view-profile body.view-in-course div.badge-set-display {
-  max-width: 1180px;
-  min-width: 760px;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: auto;
-}
+
 body.courseware .path,
 body.view-in-course .path {
   display: none;
@@ -9939,50 +9904,54 @@ body .system-status-container {
   background-color: #f89820;
   color: black;
 }
-body .system-status-container > .container > .row > .col-md-12,
-body
-  .view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  .system-status-container
-  > .u-field-account_privacy
-  > .row
-  > .col-md-12,
-.view-profile
-  .profile-self
-  .wrapper-profile-field-account-privacy
-  body
-  .system-status-container
-  > .u-field-account_privacy
-  > .row
-  > .col-md-12,
-body
-  .view-profile
-  .system-status-container
-  > .wrapper-profile-sections
-  > .row
-  > .col-md-12,
-.view-profile
-  body
-  .system-status-container
-  > .wrapper-profile-sections
-  > .row
-  > .col-md-12,
-body
-  .view-profile
-  .system-status-container
-  > .badge-set-display
-  > .row
-  > .col-md-12,
-.view-profile
-  body
-  .system-status-container
-  > .badge-set-display
-  > .row
-  > .col-md-12,
-body .home .system-status-container > .container.grey > .row > .col-md-12 {
-  min-height: 0px;
-}
+
+
+// body .system-status-container > .container > .row > .col-md-12,
+// body
+//   .view-profile
+//   .profile-self
+//   .wrapper-profile-field-account-privacy
+//   .system-status-container
+//   > .u-field-account_privacy
+//   > .row
+//   > .col-md-12,
+// .view-profile
+//   .profile-self
+//   .wrapper-profile-field-account-privacy
+//   body
+//   .system-status-container
+//   > .u-field-account_privacy
+//   > .row
+//   > .col-md-12,
+// body
+//   .view-profile
+//   .system-status-container
+//   > .wrapper-profile-sections
+//   > .row
+//   > .col-md-12,
+// .view-profile
+//   body
+//   .system-status-container
+//   > .wrapper-profile-sections
+//   > .row
+//   > .col-md-12,
+// body
+//   .view-profile
+//   .system-status-container
+//   > .badge-set-display
+//   > .row
+//   > .col-md-12,
+// .view-profile
+//   body
+//   .system-status-container
+//   > .badge-set-display
+//   > .row
+//   > .col-md-12,
+// body .home .system-status-container > .container.grey > .row > .col-md-12 {
+//   min-height: 0px;
+// }
+
+
 body .system-status-container .system-status {
   margin-top: 1em;
   margin-bottom: 1em;
