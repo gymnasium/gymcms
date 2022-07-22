@@ -11,6 +11,30 @@
 
 .account-settings-sections {
 
+  .field {
+    width: 30%;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+  }
+
+  .u-field-title {
+    display: block;
+    width: auto;
+    margin-bottom: 0.625rem;
+    font-size: 1rem;
+    line-height: 1;
+    color: #333;
+    white-space: nowrap;
+    padding-top: 10px;
+    padding-bottom: 0;
+    vertical-align: top;
+  }
+
+  .u-field-value-display {
+    display: none;
+  }
+
   .u-field {
     border-bottom: 2px solid #f5f5f5;
     padding: 15px 0;
@@ -20,13 +44,16 @@
     position: relative;
     padding: 15px 0 0 80px;
     width: 60%;
-  }
-
-
-  .field {
-    width: 30%;
-    vertical-align: top;
     display: inline-block;
-    position: relative;
+    vertical-align: top;
+    color: #919191;
   }
+
+  // Since we only support English, there's no point in showing the language dropdown (with only one option)
+  .u-field-pref-lang {
+    display: none;
+  }
+
+
+
 }
