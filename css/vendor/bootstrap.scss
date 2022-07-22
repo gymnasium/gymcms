@@ -1255,7 +1255,7 @@ caption {
 
 // @import "components/bootstrap/forms";
 
-@import "components/bootstrap/buttons";
+// @import "components/bootstrap/buttons";
 
 
 .fade {
@@ -3021,31 +3021,7 @@ button.list-group-item-danger.active:hover {
   padding: 9px;
   border-radius: 3px;
 }
-.close {
-  float: right;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
-  filter: alpha(opacity=20);
-  opacity: 0.2;
-}
-.close:focus,
-.close:hover {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-  filter: alpha(opacity=50);
-  opacity: 0.5;
-}
-button.close {
-  -webkit-appearance: none;
-  padding: 0;
-  cursor: pointer;
-  background: 0 0;
-  border: 0;
-}
+
 .modal-open {
   overflow: hidden;
 }
