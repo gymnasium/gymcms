@@ -1,0 +1,6 @@
+// Disabled button styles
+input[type="submit"]:disabled, input[type="submit"].is-disabled, input[type="submit"].disabled, input[type="button"]:disabled, input[type="button"].is-disabled, input[type="button"].disabled, button:disabled, button.is-disabled, button.disabled, .button:disabled, .button.is-disabled, .button.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}

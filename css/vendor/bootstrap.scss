@@ -7,7 +7,7 @@
 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 */
 
-@import './css/vendor/components/print';
+@import 'components/bootstrap/print';
 
 
 button,
@@ -1243,7 +1243,7 @@ pre code {
   }
 }
 
-@import './css/vendor/components/tables';
+@import 'components/bootstrap/tables';
 
 
 caption {
@@ -1253,9 +1253,9 @@ caption {
   text-align: left;
 }
 
-@import './css/vendor/components/forms';
+@import 'components/bootstrap/forms';
 
-@import './css/vendor/components/buttons';
+@import 'components/bootstrap/buttons';
 
 
 .fade {
@@ -1771,7 +1771,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 
-@import './css/vendor/components/navigation';
+@import 'components/bootstrap/navigation';
 
 .breadcrumb {
   padding: 8px 15px;
@@ -3312,11 +3312,11 @@ button.close {
   }
 }
 
-@import './css/vendor/components/tooltips';
+@import 'components/bootstrap/tooltips';
 
-@import './css/vendor/components/popover';
+@import 'components/bootstrap/popover';
 
-@import './css/vendor/components/button-groups';
+@import 'components/bootstrap/button-groups';
 
 .btn-group-vertical > .btn-group:after,
 .btn-group-vertical > .btn-group:before,
