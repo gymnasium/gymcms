@@ -8,29 +8,16 @@
 
 // Staff status bar
 .wrapper-preview-menu {
-  margin: 0 auto;
-  padding: 0;
   background-color: #0075b4;
-  display: block;
-
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 }
 
 .preview-menu {
-  padding: 15px 2%;
-  width: auto;
-  margin: 0 auto;
-  max-width: 1920px;
+  padding: 15px 0;
 }
 
 .preview-actions {
-  padding-left: 0;
-  display: inline-block;
-  margin-bottom: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .action-preview {
@@ -38,22 +25,17 @@
 
   form {
     margin: 0;
+    display: inline-flex;
   }
 
   label {
     margin-right: 10px;
-    display: inline-block;
     margin-bottom: 0;
-    vertical-align: middle;
     color: #fff;
-    max-width: 100%;
-    font-weight: 700;
-    font-style: normal;
   }
 
   select {
-    margin-right: 20px;
-    vertical-align: baseline;
+    padding: 1rem;
   }
 }
 
