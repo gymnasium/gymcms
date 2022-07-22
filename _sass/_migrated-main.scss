@@ -606,20 +606,12 @@
 }
 html,
 body {
-  font-family: $gym-text-font-stack;
+  // font-family: $gym-text-font-stack;
   font-size: 1rem;
   font-style: normal;
   line-height: 1em;
 }
-html {
-  background: #fff;
-}
-body {
-  background: #fff;
-}
-[tabindex="-1"] {
-  outline: none;
-}
+
 h1,
 h2,
 .home > header .title > .heading-group p,
