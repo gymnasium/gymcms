@@ -75,6 +75,8 @@ body {
 
 @import "components/forms";
 
+@import "components/layout";
+
 
 /* --- BEGIN: Migrated from gymnasium.scss in the open edx theme --- */
 /* negate a silly style rule inherited from the platform */
@@ -90,14 +92,6 @@ html button,
 html body button {
   box-shadow: none;
   text-shadow: none;
-}
-
-.content-wrapper .container,
-.container {
-  // border: none;
-  background: transparent;
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 div#content,
@@ -171,10 +165,6 @@ a.gymlink:visited:hover {
 a:focus,
 .dashboard .my-courses .course .info > hgroup h3 a:focus {
   border-bottom: 0 none;
-}
-
-.container {
-  min-width: 0px !important;
 }
 
 body,
