@@ -5,6 +5,7 @@
 .account-settings-container {
   background-color: $gym-white;
 
+  // Hide account settings tab nav (we don't use the linkedin account connection feature anymore
   .wrapper-header { display: none; }
 }
 
@@ -14,7 +15,7 @@
     display: block;
     width: auto;
     margin-bottom: 0.625rem;
-    font-size: 1rem;
+    font-size: font-calc(16, rem, 10px);
     line-height: 1;
     color: #333;
     white-space: nowrap;
@@ -61,7 +62,4 @@
   .u-field-pref-lang {
     display: none;
   }
-
-
-
 }
