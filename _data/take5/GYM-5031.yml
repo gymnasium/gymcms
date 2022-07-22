@@ -7,11 +7,12 @@ url: /courses/take5/GYM-5031/
 poster_art: /img/take5/posters/gym-5031.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Design & Development"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "Development"
 video_ID: 0X4uxoKMwew
 video_duration: "4:59"
 featured: false
-short_description: "Learn how to make an interactive column chart using Google Charts in this tutorial by Jeremy Osborn, Academic Director at Aquent Gymnasium."
+short_description: "Learn how to make an interactive column chart using Google Charts in this tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Completed Project"
@@ -27,4 +28,5 @@ related_content:
   url: "https://developers.google.com/chart/interactive/docs/datatables_dataviews"
 - label: "Uxtools.co 2019 Design Tools Survey Results"
   url: "https://uxtools.co/survey-2019/"
+skill_level: "Intermediate"
 ---
