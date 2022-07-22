@@ -491,6 +491,8 @@ div.problem .save:not(:disabled) {
 }
 
 body {
+  button[type="submit"],
+  button[type="submit"]:hover,
   #secondary-nav a.gym-button:hover,
   .gym-button:hover,
   .gym-button:active,
@@ -517,8 +519,6 @@ body {
     div.problem
     .action
     .save:hover:not(:disabled),
-  .login .form-actions button[type="submit"],
-  .register .form-actions button[type="submit"].gym-button:hover,
   .courseware-bookmarks-button .bookmarks-list-button:hover {
     background-color: $gym-button-background-hover;
     color: $gym-white;
