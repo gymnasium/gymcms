@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'functions';
+
 .btn {
   display: inline-block;
   padding: 6px 12px;
@@ -113,26 +116,26 @@ fieldset[disabled] .btn-default:hover {
 }
 .btn-primary {
   color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: $gym-orange;
+  border-color: $gym-orange;
 }
 .btn-primary.focus,
 .btn-primary:focus {
   color: #fff;
-  background-color: #286090;
-  border-color: #122b40;
+  background-color: $gym-orange;
+  border-color: $gym-orange;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: $gym-orange;
+  border-color: $gym-orange;
 }
 .btn-primary.active,
 .btn-primary:active,
 .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: $gym-orange;
+  border-color: $gym-orange;
 }
 .btn-primary.active.focus,
 .btn-primary.active:focus,
@@ -144,8 +147,8 @@ fieldset[disabled] .btn-default:hover {
 .open > .dropdown-toggle.btn-primary:focus,
 .open > .dropdown-toggle.btn-primary:hover {
   color: #fff;
-  background-color: #204d74;
-  border-color: #122b40;
+  background-color: $gym-orange;
+  border-color: $gym-orange;
 }
 .btn-primary.active,
 .btn-primary:active,
@@ -161,11 +164,11 @@ fieldset[disabled] .btn-default:hover {
 fieldset[disabled] .btn-primary.focus,
 fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary:hover {
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  background-color: $gym-button-background-hover;
+  border-color: $gym-button-background-hover;
 }
 .btn-primary .badge {
-  color: #337ab7;
+  color: $gym-orange;
   background-color: #fff;
 }
 .btn-success {
@@ -398,7 +401,7 @@ fieldset[disabled] .btn-danger:hover {
 }
 .btn-link {
   font-weight: 400;
-  color: #337ab7;
+  color: $gym-orange;
   border-radius: 0;
 }
 .btn-link,
@@ -418,7 +421,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:focus,
 .btn-link:hover {
-  color: #23527c;
+  color: $gym-button-background-hover;
   text-decoration: underline;
   background-color: transparent;
 }
