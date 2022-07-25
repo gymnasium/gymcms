@@ -169,6 +169,10 @@
   .chapter-content-container {
     background-color: inherit;
 
+    &.is-open {
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
     .chapter-menu {
       display: none;
       padding: 0 14px 0 30px;
