@@ -1,5 +1,60 @@
 @import "components/bootstrap/buttons";
 
+// Defaults...
+a,
+a:visited {
+  color: $gym-orange;
+  font-family: $gym-text-font-stack;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $gym-orange;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+// Only use the border bottom text style in the main-container, aka #content
+.main-container {
+  /* update (text) link style */
+
+  a {
+    line-height: inherit;
+    color: currentColor;
+    text-decoration: none;
+    padding-bottom: 0.125rem;
+    border-bottom: 1px solid currentColor;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    border-bottom-width: 2px !important;
+    margin-bottom: -0.125rem;
+  }
+}
+
+a:focus {
+  border-bottom: 0;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.gym-link {
+  color: #f89820;
+}
+
+.gym-link:hover {
+  border-bottom: 1px solid #f89820;
+}
+
+.gym-link:focus,
+.gym-link:active {
+  border-bottom-color: #444;
+}
+
 .gym-button,
 a.gym-button,
 button.u-field-link,

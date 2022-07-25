@@ -129,55 +129,6 @@ span {
   word-break: break-all;
 }
 
-// Begin migrated from bootstrap
-
-// a {
-//   color: #337ab7;
-//   text-decoration: none;
-// }
-// a:focus,
-// a:hover {
-//   color: #23527c;
-//   text-decoration: underline;
-// }
-a:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
-// End migrated from bootstrap
-
-a,
-a:visited {
-  color: $gym-orange;
-  font-family: $gym-text-font-stack;
-  border-bottom: none;
-}
-
-a:hover,
-a:visited:hover,
-// a:link:hover,
-// a:link:visited:hover,
-// a:active:hover,
-// a:link:active:hover,
-.hboard .my-courses .course .info > hgroup h3 a:hover,
-.dashboard .my-courses .course .info > hgroup h3 span:hover,
-.dashboard .my-courses .course .info > hgroup h3 span:focus
-// p a:link:hover,
-// p a:hover,
-// a.gymlink:hover,
-// a.gymlink:link:hover,
-// a.gymlink:visited:hover
-{
-  border-bottom: 1px solid $gym-orange;
-  color: $gym-orange;
-  text-decoration: none;
-}
-
-a:focus,
-.dashboard .my-courses .course .info > hgroup h3 a:focus {
-  border-bottom: 0;
-}
 
 
 
@@ -430,20 +381,8 @@ section {
   }
 }
 
-@import "components/buttons";
+@import "components/links_buttons";
 
-.gym-link {
-  color: #f89820;
-}
-
-.gym-link:hover {
-  border-bottom: 1px solid #f89820;
-}
-
-.gym-link:focus,
-.gym-link:active {
-  border-bottom-color: #444;
-}
 
 .modal {
   position: fixed;
@@ -811,29 +750,17 @@ https://github.com/gymnasium/tracker/issues/85
 
 /* update (text) link style */
 
-main p > a:not([class]),
-main li:not([class]) > a:not([class]),
-main label a:not([class]),
-.login-form a.forgot-password {
+a {
   line-height: inherit;
-  color: currentColor !important;
+  color: currentColor;
   text-decoration: none;
   padding-bottom: 0.125rem;
-  border-bottom: 1px solid currentColor !important;
+  border-bottom: 1px solid currentColor;
 }
 
-main p > a:not([class]):hover,
-main p > a:not([class]):focus,
-main p > a:not([class]):active,
-main li:not([class]) > a:not([class]):hover,
-main li:not([class]) > a:not([class]):focus,
-main li:not([class]) > a:not([class]):active,
-main label a:not([class]):hover,
-main label a:not([class]):focus,
-main label a:not([class]):active,
-.login-form a.forgot-password:hover,
-.login-form a.forgot-password:focus,
-.login-form a.forgot-password:active {
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
   border-bottom-width: 2px !important;
   margin-bottom: -0.125rem;
