@@ -87,17 +87,14 @@ div {
   box-shadow: none;
 }
 
-button,
-html button,
-html body button {
-  box-shadow: none;
-  text-shadow: none;
-}
+// button,
+// html button,
+// html body button {
+//   box-shadow: none;
+//   text-shadow: none;
+// }
 
-div#content,
-div.content-wrapper,
-div#content.content-wrapper,
-#main.content-wrapper {
+.content-wrapper {
   max-width: none;
   margin: auto;
   padding: 0;
@@ -132,17 +129,8 @@ span {
   word-break: break-all;
 }
 
-a:link,
-a:visited,
-a:link:visited,
-a:active,
-a:link:active,
-p a,
-p a:link,
-p a:visited,
-a.gymlink,
-a.gymlink:link,
-a.gymlink:visited {
+a,
+a:visited {
   color: $gym-orange;
   font-family: $gym-text-font-stack;
   border-bottom: none;
