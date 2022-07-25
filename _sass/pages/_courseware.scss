@@ -58,7 +58,8 @@
   margin: 0 auto;
 }
 
-.course-tabs {
+// Course tabs (reusable class)
+.tabs {
   padding: 0;
   font-weight: normal;
   margin: 0;
@@ -74,6 +75,7 @@
     color: currentColor;
     display: block;
     line-height: 20.72px;
+    font-family: $gym-font-stack;
 
     &.active:focus:hover {
       box-shadow: none;
@@ -88,6 +90,8 @@
       }
     }
 
+    &.active,
+    &:focus,
     &:hover {
       color: currentColor;
       border: none !important;
