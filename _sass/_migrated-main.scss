@@ -9349,9 +9349,7 @@ body.view-in-course .search-results {
   padding-bottom: 2em;
   margin: 0;
 }
-body.view-in-course .wrapper-course-material div.course-material {
-  padding: 0;
-}
+
 body.view-in-course div.wrapper-footer {
   margin-top: 0;
 }
@@ -9388,9 +9386,6 @@ body.view-in-course .content-wrapper#content {
 }
 #content #course-content.course-content {
   width: 100%;
-}
-.content-wrapper .wrapper-course-material .course-material {
-  max-width: inherit;
 }
 nav.progress.wrapper-course-material {
   height: inherit;
