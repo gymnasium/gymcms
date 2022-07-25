@@ -93,11 +93,13 @@
 
     &.active,
     &:focus,
+    &:focus,
     &:hover {
       color: currentColor;
       background: none;
       text-decoration: none;
       border: 0;
+      font-family: inherit;
 
       b {
         color: currentColor;
