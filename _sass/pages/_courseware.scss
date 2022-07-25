@@ -71,7 +71,7 @@
 
   a {
     padding: 10px 15px 0 0;
-    border-bottom: none;
+    border: 0;
     color: currentColor;
     display: block;
     line-height: 20.72px;
@@ -94,13 +94,12 @@
     &:focus,
     &:hover {
       color: currentColor;
-      border: none !important;
       background: none;
       text-decoration: none;
 
       b {
         color: currentColor;
-        border-bottom: 1px solid currentColor;
+        border-bottom: 2px solid currentColor;
         text-decoration: none;
       }
     }
