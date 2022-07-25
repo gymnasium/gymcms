@@ -2,10 +2,6 @@
 @import "mixins";
 @import "variables";
 
-[tabindex="-1"] {
-  outline: none;
-}
-
 .gym-discussion-board-container {
   max-width: 1920px;
   min-width: 0px !important;
