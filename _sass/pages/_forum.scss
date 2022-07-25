@@ -1823,3 +1823,64 @@ section.discussion::after {
 #content .discussion-column div.response-count {
   margin-right: 10px;
 }
+
+
+// Page Banner is only referenced in the theme _discussion_inline.html file (and it's unclear it it's even used, as it only theoretically shows up if a user isn't logged in. Keep in mind, the current Gymnasium functionality is to automatically redirect/show the login form if a user isn't logged in, so this CSS may be useless at this point). - RE
+.page-banner {
+  max-width: 1920px;
+  margin: 0 auto;
+
+  .user-messages {
+    padding-top: 20px;
+  }
+  .user-messages a:hover {
+    color: #0075b4;
+    text-decoration: underline !important;
+  }
+  .alert {
+    display: flex;
+    padding: 20px;
+    border: 1px solid;
+  }
+  .alert:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .alert .icon-alert {
+    margin-right: 20px;
+  }
+  .alert .message-actions {
+    margin-left: 20px;
+  }
+  .alert.alert-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bcdff1;
+    box-shadow: none;
+    line-height: initial;
+  }
+  .alert.alert-info a,
+  .alert.alert-info a:visited,
+  .alert.alert-info .btn-link {
+    color: #245269;
+    font-weight: bold;
+    border-color: transparent;
+  }
+  .alert.alert-success {
+    color: #000;
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
+    box-shadow: none;
+  }
+  .alert.alert-warning {
+    color: #000;
+    background-color: #fcf8e3;
+    border-color: #faf2cc;
+    box-shadow: none;
+  }
+  .alert.alert-danger {
+    color: #000;
+    background-color: #f2dede;
+    border-color: #ebcccc;
+    box-shadow: none;
+  }
+}

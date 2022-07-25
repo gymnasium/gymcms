@@ -584,10 +584,7 @@ p {
   color: inherit;
   margin: 0;
 }
-span {
-  color: inherit;
-  font: inherit;
-}
+
 .CodeMirror span {
   font: inherit;
 }
@@ -768,63 +765,8 @@ mark {
   left: 20px;
   right: 20px;
 }
-.page-banner {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-.page-banner .user-messages {
-  padding-top: 20px;
-}
-.page-banner .user-messages a:hover {
-  color: #0075b4;
-  text-decoration: underline !important;
-}
-.page-banner .alert {
-  display: flex;
-  padding: 20px;
-  border: 1px solid;
-}
-.page-banner .alert:not(:last-child) {
-  margin-bottom: 10px;
-}
-.page-banner .alert .icon-alert {
-  margin-right: 20px;
-}
-.page-banner .alert .message-actions {
-  margin-left: 20px;
-}
-.page-banner .alert.alert-info {
-  color: #31708f;
-  background-color: #d9edf7;
-  border-color: #bcdff1;
-  box-shadow: none;
-  line-height: initial;
-}
-.page-banner .alert.alert-info a,
-.page-banner .alert.alert-info a:visited,
-.page-banner .alert.alert-info .btn-link {
-  color: #245269;
-  font-weight: bold;
-  border-color: transparent;
-}
-.page-banner .alert.alert-success {
-  color: #000;
-  background-color: #dff0d8;
-  border-color: #d0e9c6;
-  box-shadow: none;
-}
-.page-banner .alert.alert-warning {
-  color: #000;
-  background-color: #fcf8e3;
-  border-color: #faf2cc;
-  box-shadow: none;
-}
-.page-banner .alert.alert-danger {
-  color: #000;
-  background-color: #f2dede;
-  border-color: #ebcccc;
-  box-shadow: none;
-}
+
+
 
 .btn {
   font-family: $gym-text-font-stack;
