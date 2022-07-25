@@ -129,6 +129,24 @@ span {
   word-break: break-all;
 }
 
+// Begin migrated from bootstrap
+
+// a {
+//   color: #337ab7;
+//   text-decoration: none;
+// }
+// a:focus,
+// a:hover {
+//   color: #23527c;
+//   text-decoration: underline;
+// }
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// End migrated from bootstrap
+
 a,
 a:visited {
   color: $gym-orange;
@@ -138,18 +156,19 @@ a:visited {
 
 a:hover,
 a:visited:hover,
-a:link:hover,
-a:link:visited:hover,
-a:active:hover,
-a:link:active:hover,
+// a:link:hover,
+// a:link:visited:hover,
+// a:active:hover,
+// a:link:active:hover,
 .hboard .my-courses .course .info > hgroup h3 a:hover,
 .dashboard .my-courses .course .info > hgroup h3 span:hover,
-.dashboard .my-courses .course .info > hgroup h3 span:focus,
-p a:link:hover,
-p a:hover,
-a.gymlink:hover,
-a.gymlink:link:hover,
-a.gymlink:visited:hover {
+.dashboard .my-courses .course .info > hgroup h3 span:focus
+// p a:link:hover,
+// p a:hover,
+// a.gymlink:hover,
+// a.gymlink:link:hover,
+// a.gymlink:visited:hover
+{
   border-bottom: 1px solid $gym-orange;
   color: $gym-orange;
   text-decoration: none;
@@ -157,8 +176,10 @@ a.gymlink:visited:hover {
 
 a:focus,
 .dashboard .my-courses .course .info > hgroup h3 a:focus {
-  border-bottom: 0 none;
+  border-bottom: 0;
 }
+
+
 
 body,
 body.view-in-course {
