@@ -123,6 +123,11 @@ p {
   font-size: 1.2em;
 }
 
+span {
+  color: inherit;
+  font: inherit;
+}
+
 .break-word {
   word-break: break-all;
 }
