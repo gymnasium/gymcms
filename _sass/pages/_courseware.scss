@@ -70,25 +70,26 @@
   }
 
   a {
-    padding: 10px 15px 0 0;
+    padding: 10px 0 0;
+    margin-right: 15px;
     border: 0;
     color: currentColor;
     display: block;
     line-height: 20.72px;
     font-family: $gym-font-stack;
 
-    &.active:focus:hover {
-      box-shadow: none;
-      text-shadow: none;
-      background: none;
-      border: none;
-      text-decoration: none;
+    // &.active:focus:hover {
+    //   box-shadow: none;
+    //   text-shadow: none;
+    //   background: none;
+    //   border: none;
+    //   text-decoration: none;
 
-      b {
-        color: currentColor;
-        border-bottom: 2px solid currentColor;
-      }
-    }
+    //   b {
+    //     color: currentColor;
+    //     border-bottom: 2px solid currentColor;
+    //   }
+    // }
 
     &.active,
     &:focus,
@@ -96,6 +97,7 @@
       color: currentColor;
       background: none;
       text-decoration: none;
+      border: 0;
 
       b {
         color: currentColor;
