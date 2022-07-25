@@ -112,83 +112,120 @@
 }
 
 // Course Accordion Nav
+.course-navigation {
+  .group-heading {
+    font-family: $gym-font-stack;
+    position: relative;
+    display: block;
+    padding: 15px 20px 15px 40px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 23.68px;
+
+    &.active .icon {
+      color: #f89820;
+    }
+
+    .icon {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      font-size: 0.875em;
+      color: #c8c8c8;
+    }
+  }
+
+  .chapter {
+    color: #ebebeb;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    text-decoration: none;
+    
+    &.is-open {
+      font-weight: bold;
+    }
+
+    h3 {
+      line-height: 1.3;
+    }
+    a {
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      word-spacing: 0.04em;
+      color: #ebebeb;
+      background: none;
+      box-shadow: none;
+      text-shadow: none;
+      border: none;
+      margin-bottom: 0.3em;
+
+      p {
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .chapter-content-container {
+    background-color: inherit;
+
+    .chapter-menu {
+      display: none;
+      padding: 0 14px 0 30px;
+      overflow: hidden;
+
+      .menu-item {
+        margin: 4px 0;
+        background: inherit;
+        font-weight: 600;
+
+        &.active {
+          a {
+            color: #f89820;
+          }
+        }
+        &:last-of-type {
+          padding-bottom: 10px;
+        }
+
+        p {
+          font-size: font-calc(14, rem, 10px);
+        }
+
+        a {
+          color: #ebebeb;
+          background: inherit;
+          border: none;
+        }
+
+        .subtitle {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .button-chapter {
+    &:hover {
+      border: none;
+    }
+
+    &.active .group-heading {
+      color: #ebebeb;
+    }
+  }
+
+  p.subtitle {
+    display: none;
+  }
+}
+// Course accordion nav... continued - not sure if we need the specificity
 .course-index {
   .accordion {
     font-family: $gym-font-stack;
     background-color: #444;
 
-    .course-navigation {
-      .group-heading {
-        font-family: $gym-font-stack;
-        position: relative;
-        display: block;
-        padding: 15px 20px 15px 40px;
-        text-align: left;
-        font-size: 16px;
-        line-height: 23.68px;
-
-        &.active .icon {
-          color: #f89820;
-        }
-
-        .icon {
-          position: absolute;
-          left: 20px;
-          top: 20px;
-          font-size: 0.875em;
-          color: #c8c8c8;
-        }
-      }
-
-      .chapter-content-container {
-        background-color: inherit;
-
-        .chapter-menu {
-          display: none;
-          padding: 0 14px 0 30px;
-          overflow: hidden;
-
-          .menu-item {
-            margin: 4px 0;
-            background: inherit;
-            font-weight: 600;
-
-            &.active {
-              a {
-                color: #f89820;
-              }
-            }
-            &:last-of-type {
-              padding-bottom: 10px;
-            }
-
-            a {
-              color: #ebebeb;
-              background: inherit;
-              border: none;
-            }
-
-            .subtitle {
-              display: none;
-            }
-          }
-        }
-      }
-
-      .button-chapter {
-        &:hover {
-          border: none;
-        }
-
-        &.active .group-heading {
-          color: #ebebeb;
-        }
-      }
-
-      p.subtitle {
-        display: none;
-      }
-    }
+    
 
     ul.ui-accordion-content a p {
       color: #ebebeb;
@@ -196,34 +233,6 @@
     ul.ui-accordion-content li.active a p {
       color: #f89820;
       font-weight: bold;
-    }
-    .chapter {
-      color: #ebebeb;
-      background: none;
-      box-shadow: none;
-      padding: 0;
-      text-decoration: none;
-      &.active {
-        font-weight: bold;
-      }
-
-      h3 {
-        line-height: 1.3;
-      }
-      a {
-        font-weight: 900;
-        letter-spacing: 0.04em;
-        word-spacing: 0.04em;
-        color: #ebebeb;
-        background: none;
-        box-shadow: none;
-        text-shadow: none;
-        border: none;
-        margin-bottom: 0.3em;
-        p {
-          font-size: 1.2em;
-        }
-      }
     }
   }
 }
