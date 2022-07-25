@@ -9,6 +9,7 @@
   font-weight: 400;
   line-height: 1.42857143;
   text-align: center;
+  text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
   -ms-touch-action: manipulation;
@@ -403,6 +404,8 @@ fieldset[disabled] .btn-danger:hover {
   font-weight: 400;
   color: $gym-orange;
   border-radius: 0;
+  text-decoration: none;
+  border-bottom: none;
 }
 .btn-link,
 .btn-link.active,
@@ -422,7 +425,7 @@ fieldset[disabled] .btn-link {
 .btn-link:focus,
 .btn-link:hover {
   color: $gym-button-background-hover;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 }
 .btn-link[disabled]:focus,
