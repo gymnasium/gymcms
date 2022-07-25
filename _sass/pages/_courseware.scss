@@ -688,3 +688,15 @@ section.handouts {
     font-weight: 600;
   }
 }
+
+// Instructor dash
+.instructor-dashboard-content-2 {
+
+  section {
+    display: none;
+
+    &.active-section {
+      display: block;
+    }
+  }
+}
