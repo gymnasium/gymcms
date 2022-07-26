@@ -3,36 +3,21 @@
 @import "variables";
 
 .gym-discussion-board-container {
-  max-width: 1920px;
-  min-width: 0px !important;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 1170px;
-  background: transparent;
-  padding-top: 0;
-  padding-bottom: 0;
+  margin-top: 2rem;
 }
 
 .discussion-board {
-  padding: 0px;
-  display: block;
   border: 1px solid #e7e7e7;
   background-color: #fff;
-  max-width: 1920px;
-  margin: 0 auto;
-}
 
-.page-header {
-  display: block;
-  margin: 40px 0 20px;
-  padding: 20px;
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-top: 2rem;
-  margin-bottom: 0;
-  border-bottom: none;
+  .page-header {
+    display: block;
+    margin: 40px 0 20px;
+    padding: 2rem 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
 }
 
 .page-header-main {
@@ -226,10 +211,6 @@
     margin-bottom: 0;
     width: 100%;
   }
-
-  .forum-nav-browse-filter-input {
-    font-size: 12px;
-  }
 }
 
 .view-discussion-home .home-helpgrid {
@@ -283,42 +264,8 @@ TODO: migrate discussion CSS out of theme
     font-size: 30px;
   }
 
-  header.page-header,
-  header.page-header.has-secondary {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 2rem;
-    margin-bottom: 0;
-    border-bottom: none;
-  }
-
   .forum-search .search-input {
     width: 184px;
-  }
-
-  .forum-search .search-button,
-  .discussion-submit-post {
-    border: 1px solid;
-    border-left: none;
-    border: 1px solid $gym-orange;
-    background-color: $gym-orange;
-    color: white;
-    font-family: $gym-font-stack;
-    font-weight: bold;
-    font-size: 1.2em;
-    line-height: 1;
-    text-align: center;
-
-    &:hover {
-      border: 1px solid $gym-button-background-hover;
-      background-color: $gym-button-background-hover;
-    }
-
-    &:active,
-    &:focus {
-      border: 1px solid $gym-button-background-active;
-      background-color: $gym-button-background-active;
-    }
   }
 
   // Add post button wrapper
@@ -366,30 +313,30 @@ TODO: migrate discussion CSS out of theme
     color: $gym-orange;
   }
 
-  .btn-link.action-button.action-follow,
-  .btn-link.action-button.action-follow icon,
-  .discussion-post,
-  .discussion-post .post-body,
-  .discussion-post .post-context,
-  .field-help,
-  .field-label,
-  .field-label-text,
-  .field-input-label,
-  .forum-nav-thread-title,
-  .forum-nav-thread-votes-count,
-  .forum-nav-thread-comments-count,
-  .thread-preview-body,
-  li.post-label,
-  li.post-label icon,
-  .icon,
-  input,
-  .response-count,
-  .response-body,
-  textarea,
-  .wmd-preview-container,
-  .wmd-preview-label {
-    font-size: 14px;
-  }
+  // .btn-link.action-button.action-follow,
+  // .btn-link.action-button.action-follow icon,
+  // .discussion-post,
+  // .discussion-post .post-body,
+  // .discussion-post .post-context,
+  // .field-help,
+  // .field-label,
+  // .field-label-text,
+  // .field-input-label,
+  // .forum-nav-thread-title,
+  // .forum-nav-thread-votes-count,
+  // .forum-nav-thread-comments-count,
+  // .thread-preview-body,
+  // li.post-label,
+  // li.post-label icon,
+  // .icon,
+  // input,
+  // .response-count,
+  // .response-body,
+  // textarea,
+  // .wmd-preview-container,
+  // .wmd-preview-label {
+  //   font-size: 14px;
+  // }
 }
 
 // Prevents jitter effect pre-hover
@@ -406,26 +353,31 @@ TODO: migrate discussion CSS out of theme
   }
 }
 
-.content-wrapper .page-content-container {
-  border: 1px solid #e7e7e7;
-  background-color: #fff;
-  max-width: 1920px;
-  margin: 0 auto;
+.forum-search .search-button,
+.discussion-submit-post {
+  border: 1px solid;
+  border-left: none;
+  border: 1px solid $gym-orange;
+  background-color: $gym-orange;
+  color: white;
+  font-family: $gym-font-stack;
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 1;
+  text-align: center;
+
+  &:hover {
+    border: 1px solid $gym-button-background-hover;
+    background-color: $gym-button-background-hover;
+  }
+
+  &:active,
+  &:focus {
+    border: 1px solid $gym-button-background-active;
+    background-color: $gym-button-background-active;
+  }
 }
-.content-wrapper .page-content-container::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-.content-wrapper .page-header {
-  border-bottom: 1px solid #e7e7e7;
-  padding: 20px;
-}
-.content-wrapper .page-header::after {
-  clear: both;
-  content: "";
-  display: table;
-}
+
 .content-wrapper .page-header.has-secondary .page-header-main {
   display: inline-block;
 }
@@ -664,9 +616,7 @@ section.discussion::after {
   margin-top: -6px;
   top: 50%;
 }
-.forum-nav-browse-filter-input {
-  width: 100%;
-}
+
 .forum-nav-browse-menu-following .icon {
   float: left;
   left: 10px;
@@ -1124,10 +1074,10 @@ section.discussion::after {
 .forum-nav-browse-filter-input {
   padding-left: 5px;
   padding-right: 22px;
-  box-shadow: none !important;
-  border-radius: 3px !important;
-  height: auto !important;
-  font-size: 0.75rem !important;
+  box-shadow: none;
+  height: 10px;
+  font-size: 1.4rem !important;
+  border: 1px solid #ccc;
 }
 .forum-nav-filter-main,
 .forum-nav-sort {
