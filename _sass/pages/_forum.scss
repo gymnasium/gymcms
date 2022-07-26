@@ -17,16 +17,6 @@
 .page-header.has-secondary .page-header-main {
   display: inline-block;
 }
-@include breakpoint(medium, min) {
-  .page-header.has-secondary .page-header-secondary {
-    float: right;
-    text-align: right;
-    display: flex;
-    vertical-align: text-bottom;
-  }
-}
-
-
 
 .gym-discussion-board-container {
   margin-top: 2rem;
@@ -130,18 +120,20 @@
   // box-shadow: none;
 }
 
-@include breakpoint(medium, min) {
-  .discussion-body,
-  .discussion-module {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-
+@include breakpoint(small, min) {
   .page-header-secondary {
     float: right;
     text-align: right;
     display: flex;
     vertical-align: text-bottom;
+  }
+}
+
+@include breakpoint(medium, min) {
+  .discussion-body,
+  .discussion-module {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 
