@@ -45,14 +45,13 @@
     border-bottom: none;
   }
 
-  button {
-    border: 1px solid;
+  button:not(.btn-link) {
     border: 1px solid #f8971d;
     height: 34px;
     background-color: $gym-orange;
     color: white;
     font-family: $gym-font-stack;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 1.2em;
     line-height: 1;
     text-align: center;
@@ -327,22 +326,7 @@ ul.forum-nav-browse-menu li {
 
 
 
-// Add post button wrapper
-.forum-actions {
-  margin-left: 10px;
 
-  // // Add post button
-  // button {
-  //   background-color: $gym-orange;
-  //   border: 1px solid $gym-orange;
-
-  //   &:active,
-  //   &:hover {
-  //     background-color: $gym-light-gray;
-  //     border: 1px solid $gym-light-gray;
-  //   }
-  // }
-}
 
 .discussion-post .post-body,
 .discussion-post .post-context,
@@ -1041,23 +1025,45 @@ section.discussion::after {
 .forum-new-post-form .post-topic.field-input {
   width: 100%;
 }
+
+
 .forum-search {
   display: flex;
   margin-top: 20px;
 
-  @include breakpoint(medium, min) {
-    margin-left: 20px;
-    margin-top: 0;
-  }
-
   .search-button {
     width: 9.375rem;
-    border-left: 0;
   }
 
   .search-input {
-    width: 184px;
+    width: 100%;
     border-right: 0;
+  }
+}
+
+.forum-actions {
+
+  button {
+    width: 100%;
+  }
+}
+
+@include breakpoint(small, min) {
+  .forum-search {
+    margin-top: 0;
+
+    .search-input {
+      width: 184px;
+    }
+  }
+
+  // Add post button wrapper
+  .forum-actions {
+    margin-left: 10px;
+
+    button {
+      width: auto;
+    }
   }
 }
 
