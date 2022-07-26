@@ -2,8 +2,17 @@
 @import 'functions';
 
 // Account Settings
+
+
+.wrapper-account-settings {
+  // Reset font size TODO: combine with reset for instructor courseware tab
+  &.white-panel {
+    font-size: 1em;
+  }
+}
+
+
 .account-settings-container {
-  background-color: $gym-white;
 
   // Hide account settings tab nav (we don't use the linkedin account connection feature anymore
   .wrapper-header { display: none; }
