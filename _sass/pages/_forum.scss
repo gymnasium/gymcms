@@ -8,7 +8,7 @@
     padding: 20px;
 
     @include breakpoint(medium, min) {
-      display: flex;
+      // display: flex;
     }
   }
 }
@@ -138,15 +138,26 @@
 }
 
 .discussion-column {
+  width: 100%;
+  
+}
+@include breakpoint(medium, min) {
+  .discussion-column {
+
+  }
+}
+
+.discussion-column {
   font-weight: 700;
   // margin-left: 20px;
   
-  margin-bottom: 0;
+  margin-bottom: 20px;
   width: 100%;
   background: white;
   border: 1px solid #ccc;
   // border-radius: 2px;
   padding: 20px;
+  
 
   @include breakpoint(medium, min) {
     flex-grow: 1;
@@ -429,20 +440,8 @@ section.discussion::after {
     width: 25%;
   }
 }
-.discussion-column {
-  width: 100%;
-  margin-bottom: 20px;
-}
-@include breakpoint(medium, min) {
-  .discussion-column {
-    flex-grow: 1;
-    margin-left: 20px;
-    min-height: 500px;
-    margin-bottom: 0;
-    width: 75%;
-  }
-}
-.discussion-column .new-post-article {
+
+.new-post-article {
   margin-top: -20px;
 }
 .forum-new-post-form .wmd-input {
