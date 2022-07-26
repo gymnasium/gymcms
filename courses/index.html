@@ -2,6 +2,10 @@
 layout: raw
 permalink: /courses/
 ---
+{%- if jekyll.environment == "local" -%}
+  {%- include partials/test-top.html -%}
+{%- endif -%}
+
 <!-- TODO: maybe create a new CSS file for the entire course catalog page? -->
 <link rel="stylesheet" href="{{ site.url }}/css/take5-course-catalog.css?{{ site.time | date:'%s' }}">
 <section class="find-courses" id="gym-catalog">
@@ -12,20 +16,18 @@ permalink: /courses/
     </div>
   </header>
 
-  <div class="container course-menu">
-    <div class="row">
-      <ul>
-        <li>
-          <a href="#full">Full Courses</a>
-        </li>
-        <li>
-          <a href="#gymshorts">Gym Shorts</a>
-        </li>
-        <li>
-          <a href="#take5">Take 5</a>
-        </li>
-      </ul>
-    </div>
+  <div class="container">
+    <ul class="tabs">
+      <li>
+        <a href="#full">Full Courses</a>
+      </li>
+      <li>
+        <a href="#gymshorts">Gym Shorts</a>
+      </li>
+      <li>
+        <a href="#take5">Take 5</a>
+      </li>
+    </ul>
   </div>
 
   <main id="main" class="container" aria-label="Content" tabindex="-1">
@@ -78,3 +80,7 @@ permalink: /courses/
 
   </main>
 </section>
+
+{%- if jekyll.environment == "local" -%}
+  {%- include partials/test-bottom.html -%}
+{%- endif -%}

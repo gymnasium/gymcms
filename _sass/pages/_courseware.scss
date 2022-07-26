@@ -58,13 +58,50 @@
   margin: 0 auto;
 }
 
+// Courses Index
+// .course-menu {
+//   ul {
+//     list-style: none;
+//     margin: 1.2em 15px 0;
+//     padding: 0;
+//   }
+
+//   li {
+//     display: inline;
+//     margin-right: 1.2em;
+//   }
+
+//   a,a:link,a:visited {
+//     display: inline-block;
+//     font-size: 1.2em;
+//     line-height: 1.2;
+//     font-family: $gym-font-stack;
+//     font-weight: bold;
+//     color: #222;
+//     text-transform: uppercase;
+//     letter-spacing: 0.04em;
+//     word-spacing: 0.04em;
+//     border-bottom: 1px solid #222;;
+//     margin-top: 0.125em;
+
+//     &:active,
+//     &:hover {
+//       color: #222;
+//       text-decoration: none;
+//       border-bottom-width: 2px;
+//       margin-bottom: -0.125rem;
+//     }
+//   }
+// }
+
+
 // Course tabs (reusable class)
 .tabs {
   padding: 0;
   font-weight: normal;
-  margin: 0;
+  margin: 0 0 -12px; // offset to ensure being vertical centered above white panel
   
-
+  li,
   .tab {
     display: inline-block;
     list-style: none;
@@ -80,6 +117,7 @@
     line-height: 20.72px;
     font-family: $gym-font-stack;
     font-size: 1.2em;
+    font-weight: bold;
 
     // &.active:focus:hover {
     //   box-shadow: none;
@@ -226,12 +264,37 @@
     &.active .group-heading {
       color: #ebebeb;
     }
+
+    &:only-of-type {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: text;
+    }
+    
+    &:only-of-type:focus {
+      outline: none;
+    }
+    
+    &:only-of-type .icon {
+      display: none;
+    }
+    
+    &:only-of-type .group-heading {
+      line-height: 1.25 !important;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-right: 14px;
+    }
   }
 
   p.subtitle {
     display: none;
   }
 }
+
+
 // Course accordion nav... continued - not sure if we need the specificity
 .course-index {
   .accordion {
