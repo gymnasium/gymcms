@@ -107,12 +107,12 @@
     list-style: none;
   }
 
-  button,
   a {
     padding: 10px 0 0;
     margin-right: 15px;
     text-transform: uppercase;
     color: currentColor;
+    cursor: pointer;
     display: block;
     line-height: 20.72px;
     font-family: $gym-font-stack;
@@ -764,6 +764,11 @@ section.handouts {
 // Instructor dash
 .instructor-dashboard-content-2 {
 
+  // Reset font size TODO: combine with reset for account settings
+  &.white-panel {
+    font-size: 1em;
+  }
+
   section {
     display: none;
 
@@ -771,4 +776,8 @@ section.handouts {
       display: block;
     }
   }
+}
+
+.instructor-nav {
+  margin-bottom: 1rem;
 }
