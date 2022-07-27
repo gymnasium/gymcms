@@ -43,8 +43,7 @@
   button {
 
     // TODO: let's figure out a way to streamline this
-    &:not(.wmd-button),
-    &:not(.btn-link) {
+    &:not(.wmd-button):not(.btn-link) {
       border: 1px solid #f8971d;
       height: 34px;
       background-color: $gym-orange;
