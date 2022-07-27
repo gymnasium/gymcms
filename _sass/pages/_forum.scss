@@ -453,125 +453,7 @@ section.discussion::after {
   position: relative;
   z-index: 1;
 }
-.wmd-preview-container {
-  -webkit-border-top-left-radius: 0;
-  -moz-border-topleft-radius: 0;
-  border-top-left-radius: 0;
-  -webkit-border-top-right-radius: 0;
-  -moz-border-topright-radius: 0;
-  border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-bottomright-radius: 3px;
-  border-bottom-right-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-bottomleft-radius: 3px;
-  border-bottom-left-radius: 3px;
-  box-sizing: border-box;
-  border: 1px solid #d9d9d9;
-  width: 100%;
-  background: #f5f5f5;
-  border-color: #d9d9d9;
-}
-.discussion-board .wmd-preview-container {
-  margin-top: -5px;
-}
-.wmd-preview-label {
-  padding-left: 5px;
-  padding-top: 3px;
-  width: 100%;
-  color: #414141;
-  font-size: 0.75rem;
-}
-.wmd-preview {
-  padding: 10px 20px;
-  width: auto;
-  background-color: #f5f5f5;
-}
-.wmd-button {
-  background: none;
-}
-.wmd-button-row {
-  -webkit-transition: all 0.2s ease-out 0s;
-  -moz-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
-  position: relative;
-  overflow: hidden;
-  margin: 10px 5px 5px 5px;
-  padding: 0;
-  height: 30px;
-}
-.wmd-spacer {
-  margin-left: 14px;
-  position: absolute;
-  display: inline-block;
-  width: 1px;
-  height: 20px;
-  background-color: Silver;
-  list-style: none;
-}
-.wmd-button {
-  position: absolute;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: none;
-  background: none;
-  list-style: none;
-  cursor: pointer;
-  padding: 0;
-}
-.wmd-button:hover {
-  background: none;
-  // box-shadow: none;
-}
-.wmd-button > span {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url("https://thegymnasium.com/static/gymnasium/images/wmd-buttons-transparent.e9d9fe51633b.png");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-.wmd-spacer1 {
-  left: 50px;
-}
-.wmd-spacer2 {
-  left: 175px;
-}
-.wmd-spacer3 {
-  left: 300px;
-}
-.wmd-input {
-  -webkit-border-top-left-radius: 3px;
-  -moz-border-topleft-radius: 3px;
-  border-top-left-radius: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -moz-border-topright-radius: 3px;
-  border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 0;
-  -moz-border-bottomright-radius: 0;
-  border-bottom-right-radius: 0;
-  -webkit-border-bottom-left-radius: 0;
-  -moz-border-bottomleft-radius: 0;
-  border-bottom-left-radius: 0;
-  box-sizing: border-box;
-  margin-top: 0;
-  border: 1px solid #d9d9d9;
-  padding: 10px;
-  width: 100%;
-  height: 125px;
-  background: #fff;
-  font-size: 0.875rem;
-  font-family: $gym-text-font-stack;
-  line-height: 1.6;
-  box-sizing: border-box;
-  width: 100%;
-  background: #fff;
-}
-.wmd-button-row {
-  position: relative;
-  height: 25px;
-}
+
 .discussion .post-label {
   margin: 5px 10px 0 0;
   font-size: 0.75rem;
@@ -1456,125 +1338,7 @@ section.discussion::after {
 .discussion .action-list-item.is-checked .label-checked {
   display: inline;
 }
-.wmd-preview-container {
-  -webkit-border-top-left-radius: 0;
-  -moz-border-topleft-radius: 0;
-  border-top-left-radius: 0;
-  -webkit-border-top-right-radius: 0;
-  -moz-border-topright-radius: 0;
-  border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 3px;
-  -moz-border-bottomright-radius: 3px;
-  border-bottom-right-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-bottomleft-radius: 3px;
-  border-bottom-left-radius: 3px;
-  box-sizing: border-box;
-  border: 1px solid #d9d9d9;
-  width: 100%;
-  background: #f5f5f5;
-  border-color: #d9d9d9;
-}
-.discussion-board .wmd-preview-container {
-  margin-top: -5px;
-}
-.wmd-preview-label {
-  padding-left: 5px;
-  padding-top: 3px;
-  width: 100%;
-  color: #414141;
-  font-size: 0.75rem;
-}
-.wmd-preview {
-  padding: 10px 20px;
-  width: auto;
-  background-color: #f5f5f5;
-}
-.wmd-button {
-  background: none;
-}
-.wmd-button-row {
-  -webkit-transition: all 0.2s ease-out 0s;
-  -moz-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
-  position: relative;
-  overflow: hidden;
-  margin: 10px 5px 5px 5px;
-  padding: 0;
-  height: 30px;
-}
-.wmd-spacer {
-  margin-left: 14px;
-  position: absolute;
-  display: inline-block;
-  width: 1px;
-  height: 20px;
-  background-color: Silver;
-  list-style: none;
-}
-.wmd-button {
-  position: absolute;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: none;
-  background: none;
-  list-style: none;
-  cursor: pointer;
-  padding: 0;
-}
-.wmd-button:hover {
-  background: none;
-  // box-shadow: none;
-}
-.wmd-button > span {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url("https://thegymnasium.com/static/gymnasium/images/wmd-buttons-transparent.e9d9fe51633b.png");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-.wmd-spacer1 {
-  left: 50px;
-}
-.wmd-spacer2 {
-  left: 175px;
-}
-.wmd-spacer3 {
-  left: 300px;
-}
-.wmd-input {
-  -webkit-border-top-left-radius: 3px;
-  -moz-border-topleft-radius: 3px;
-  border-top-left-radius: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -moz-border-topright-radius: 3px;
-  border-top-right-radius: 3px;
-  -webkit-border-bottom-right-radius: 0;
-  -moz-border-bottomright-radius: 0;
-  border-bottom-right-radius: 0;
-  -webkit-border-bottom-left-radius: 0;
-  -moz-border-bottomleft-radius: 0;
-  border-bottom-left-radius: 0;
-  box-sizing: border-box;
-  margin-top: 0;
-  border: 1px solid #d9d9d9;
-  padding: 10px;
-  width: 100%;
-  height: 125px;
-  background: #fff;
-  font-size: 0.875rem;
-  font-family: $gym-text-font-stack;
-  line-height: 1.6;
-  box-sizing: border-box;
-  width: 100%;
-  background: #fff;
-}
-.wmd-button-row {
-  position: relative;
-  height: 25px;
-}
+
 .discussion .post-label {
   margin: 5px 10px 0 0;
   font-size: 0.75rem;
@@ -1866,6 +1630,236 @@ section.discussion::after {
     // box-shadow: none;
   }
 }
+
+// WMD classes - used in the TinyMCE editor in the forum
+
+// .wmd-preview-container {
+//   -webkit-border-top-left-radius: 0;
+//   -moz-border-topleft-radius: 0;
+//   border-top-left-radius: 0;
+//   -webkit-border-top-right-radius: 0;
+//   -moz-border-topright-radius: 0;
+//   border-top-right-radius: 0;
+//   -webkit-border-bottom-right-radius: 3px;
+//   -moz-border-bottomright-radius: 3px;
+//   border-bottom-right-radius: 3px;
+//   -webkit-border-bottom-left-radius: 3px;
+//   -moz-border-bottomleft-radius: 3px;
+//   border-bottom-left-radius: 3px;
+//   box-sizing: border-box;
+//   border: 1px solid #d9d9d9;
+//   width: 100%;
+//   background: #f5f5f5;
+//   border-color: #d9d9d9;
+// }
+// .discussion-board .wmd-preview-container {
+//   margin-top: -5px;
+// }
+// .wmd-preview-label {
+//   padding-left: 5px;
+//   padding-top: 3px;
+//   width: 100%;
+//   color: #414141;
+//   font-size: 0.75rem;
+// }
+// .wmd-preview {
+//   padding: 10px 20px;
+//   width: auto;
+//   background-color: #f5f5f5;
+// }
+// .wmd-button {
+//   background: none;
+// }
+// .wmd-button-row {
+//   -webkit-transition: all 0.2s ease-out 0s;
+//   -moz-transition: all 0.2s ease-out 0s;
+//   transition: all 0.2s ease-out 0s;
+//   position: relative;
+//   overflow: hidden;
+//   margin: 10px 5px 5px 5px;
+//   padding: 0;
+//   height: 30px;
+// }
+// .wmd-spacer {
+//   margin-left: 14px;
+//   position: absolute;
+//   display: inline-block;
+//   width: 1px;
+//   height: 20px;
+//   background-color: Silver;
+//   list-style: none;
+// }
+// .wmd-button {
+//   position: absolute;
+//   display: inline-block;
+//   width: 20px;
+//   height: 20px;
+//   border: none;
+//   background: none;
+//   list-style: none;
+//   cursor: pointer;
+//   padding: 0;
+// }
+// .wmd-button:hover {
+//   background: none;
+//   // box-shadow: none;
+// }
+// .wmd-button > span {
+//   display: inline-block;
+//   width: 20px;
+//   height: 20px;
+//   background-image: url("https://thegymnasium.com/static/gymnasium/images/wmd-buttons-transparent.png");
+//   background-position: 0 0;
+//   background-repeat: no-repeat;
+// }
+// .wmd-spacer1 {
+//   left: 50px;
+// }
+// .wmd-spacer2 {
+//   left: 175px;
+// }
+// .wmd-spacer3 {
+//   left: 300px;
+// }
+// .wmd-input {
+//   -webkit-border-top-left-radius: 3px;
+//   -moz-border-topleft-radius: 3px;
+//   border-top-left-radius: 3px;
+//   -webkit-border-top-right-radius: 3px;
+//   -moz-border-topright-radius: 3px;
+//   border-top-right-radius: 3px;
+//   -webkit-border-bottom-right-radius: 0;
+//   -moz-border-bottomright-radius: 0;
+//   border-bottom-right-radius: 0;
+//   -webkit-border-bottom-left-radius: 0;
+//   -moz-border-bottomleft-radius: 0;
+//   border-bottom-left-radius: 0;
+//   box-sizing: border-box;
+//   margin-top: 0;
+//   border: 1px solid #d9d9d9;
+//   padding: 10px;
+//   width: 100%;
+//   height: 125px;
+//   background: #fff;
+//   font-size: 0.875rem;
+//   font-family: $gym-text-font-stack;
+//   line-height: 1.6;
+//   box-sizing: border-box;
+//   width: 100%;
+//   background: #fff;
+// }
+// .wmd-button-row {
+//   position: relative;
+//   height: 25px;
+// }
+
+
+.wmd-preview-container {
+  // -webkit-border-top-left-radius: 0;
+  // -moz-border-topleft-radius: 0;
+  // border-top-left-radius: 0;
+  // -webkit-border-top-right-radius: 0;
+  // -moz-border-topright-radius: 0;
+  // border-top-right-radius: 0;
+  // -webkit-border-bottom-right-radius: 3px;
+  // -moz-border-bottomright-radius: 3px;
+  // border-bottom-right-radius: 3px;
+  // -webkit-border-bottom-left-radius: 3px;
+  // -moz-border-bottomleft-radius: 3px;
+  // border-bottom-left-radius: 3px;
+  // box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  background: #f5f5f5;
+  border-color: #d9d9d9;
+}
+.discussion-board .wmd-preview-container {
+  margin-top: -5px;
+}
+.wmd-preview-label {
+  padding-left: 5px;
+  padding-top: 3px;
+  width: 100%;
+  color: #414141;
+  // font-size: 0.75rem;
+}
+.wmd-preview {
+  padding: 10px 20px;
+  width: auto;
+  background-color: #f5f5f5;
+}
+.wmd-button {
+  background: none;
+}
+.wmd-button-row {
+  -webkit-transition: all 0.2s ease-out 0s;
+  -moz-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 5px 5px 5px;
+  padding: 0;
+  height: 30px;
+}
+.wmd-spacer {
+  margin-left: 14px;
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: Silver;
+  list-style: none;
+}
+.wmd-button {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+  list-style: none;
+  cursor: pointer;
+  padding: 0;
+}
+.wmd-button:hover {
+  background: none;
+  // box-shadow: none;
+}
+.wmd-button > span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("https://thegymnasium.com/static/gymnasium/images/wmd-buttons-transparent.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.wmd-spacer1 {
+  left: 50px;
+}
+.wmd-spacer2 {
+  left: 175px;
+}
+.wmd-spacer3 {
+  left: 300px;
+}
+.wmd-input {
+  margin-top: 0;
+  border: 1px solid #d9d9d9;
+  padding: 10px;
+  width: 100%;
+  height: 125px;
+  background: #fff;
+  font-family: $gym-text-font-stack;
+  line-height: 1.6;
+  box-sizing: border-box;
+  width: 100%;
+  background: #fff;
+}
+.wmd-button-row {
+  position: relative;
+  height: 25px;
+}
+
 
 
 
