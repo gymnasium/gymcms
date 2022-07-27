@@ -1146,6 +1146,11 @@ section.discussion::after {
   top: 100%;
   pointer-events: none;
   min-width: 145px;
+
+  &.is-expanded {
+    display: block;
+    pointer-events: auto;
+  }
 }
 .discussion .actions-dropdown .actions-dropdown-list {
   box-sizing: border-box;
