@@ -40,26 +40,31 @@
     border-bottom: none;
   }
 
-  button:not(.btn-link) {
-    border: 1px solid #f8971d;
-    height: 34px;
-    background-color: $gym-orange;
-    color: white;
-    font-family: $gym-font-stack;
-    font-weight: 700;
-    font-size: 1.2em;
-    line-height: 1;
-    text-align: center;
-  
-    &:hover {
-      border: 1px solid $gym-button-background-hover;
-      background-color: $gym-button-background-hover;
-    }
-  
-    &:active,
-    &:focus {
-      border: 1px solid $gym-button-background-active;
-      background-color: $gym-button-background-active;
+  button {
+
+    // TODO: let's figure out a way to streamline this
+    &:not(.wmd-button),
+    &:not(.btn-link) {
+      border: 1px solid #f8971d;
+      height: 34px;
+      background-color: $gym-orange;
+      color: white;
+      font-family: $gym-font-stack;
+      font-weight: 700;
+      font-size: 1.2em;
+      line-height: 1;
+      text-align: center;
+    
+      &:hover {
+        border: 1px solid $gym-button-background-hover;
+        background-color: $gym-button-background-hover;
+      }
+    
+      &:active,
+      &:focus {
+        border: 1px solid $gym-button-background-active;
+        background-color: $gym-button-background-active;
+      }
     }
   }
 }
@@ -1809,27 +1814,22 @@ section.discussion::after {
   list-style: none;
 }
 
-// increase specificity for these buttons
-.wmd-panel {
+.wmd-button {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+  list-style: none;
+  cursor: pointer;
+  padding: 0;
 
-  .wmd-button {
-    position: absolute;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: none;
+  &:hover {
     background: none;
-    list-style: none;
-    cursor: pointer;
-    padding: 0;
-  
-    &:hover {
-      background: none;
-      // box-shadow: none;
-    }
+    // box-shadow: none;
   }
 }
-
 
 .wmd-button > span {
   display: inline-block;
