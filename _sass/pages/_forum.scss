@@ -145,19 +145,9 @@
   }
 }
 
-.discussion-column {
-  width: 100%;
-  
-}
-@include breakpoint(medium, min) {
-  .discussion-column {
-
-  }
-}
 
 .discussion-column {
   font-weight: 700;
-  // margin-left: 20px;
   
   margin-bottom: 20px;
   width: 100%;
@@ -165,12 +155,14 @@
   border: 1px solid #ccc;
   // border-radius: 2px;
   padding: 20px;
+  width: 100%;
   
 
   @include breakpoint(medium, min) {
     flex-grow: 1;
     width: 75%;
     min-height: 500px;
+    margin-left: 20px;
   }
 
   .response-count {
@@ -1935,4 +1927,8 @@ section.discussion::after {
 
 .fa-user:before {
   content: "\f007";
+}
+
+.fa-filter:before {
+  content: "\f0b0";
 }
