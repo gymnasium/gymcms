@@ -8,7 +8,14 @@
 
 // Render font face rules
 @include font-brandon;
-@include font-awesome; // TODO: are we using this? Yes! We use it on the course nav accordion right caret icon. Also, in the forum.
+
+/* Font awesome, used in:
+- main nav
+- course lessons accordion nav
+- forum
+
+*/
+@include font-awesome;
 
 * {
   -webkit-box-sizing: border-box;
