@@ -1862,3 +1862,69 @@ section.discussion::after {
     // box-shadow: none;
   }
 }
+
+
+
+// Forum-specific font awesome icons
+
+.fa-search:before {
+  content: "\f002";
+}
+.fa-star:before {
+  content: "\f005";
+}
+
+.fa-check:before {
+  content: "\f00c";
+}
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+  content: "\f00d";
+}
+
+.fa-lock:before {
+  content: "\f023";
+}
+.fa-flag:before {
+  content: "\f024";
+}
+
+.fa-plus:before {
+  content: "\f067";
+}
+
+.fa-bars:before {
+  content: "\f0c9";
+}
+
+.fa-sort:before {
+  content: "\f0dc";
+}
+.fa-sort-down:before,
+.fa-sort-desc:before {
+  content: "\f0dd";
+}
+.fa-sort-up:before,
+.fa-sort-asc:before {
+  content: "\f0de";
+}
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+.fa-angle-right:before {
+  content: "\f105";
+}
+
+.fa-comments:before {
+  content: "\f086";
+}
+
+.fa-thumb-tack:before {
+  content: "\f08d";
+}
+
+.fa-user:before {
+  content: "\f007";
+}
