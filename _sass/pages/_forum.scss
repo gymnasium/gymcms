@@ -26,6 +26,11 @@
   border: 1px solid #e7e7e7;
   background-color: #fff;
 
+  // resets icon font size
+  .fa {
+    font-size: initial;
+  }
+
   .page-header {
     display: block;
     margin: 40px 0 20px;
@@ -101,8 +106,7 @@
     // box-shadow: none;
     color: inherit;
     font-size: 14px;
-    font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
-      sans-serif;
+    font-family: $gym-font-stack;
     font-weight: bold;
     border: 1px solid transparent;
 
@@ -402,7 +406,7 @@ a.username,
   font-weight: 300;
 }
 .view-discussion-home .label {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   line-height: 17.76px;
   font-size: 0.75rem;
 }
@@ -558,7 +562,7 @@ section.discussion::after {
   height: 125px;
   background: #fff;
   font-size: 0.875rem;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   line-height: 1.6;
   box-sizing: border-box;
   width: 100%;
@@ -1164,12 +1168,12 @@ section.discussion::after {
 .discussion .post-actions-list,
 .discussion .response-actions-list,
 .discussion .comment-actions-list {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
 }
 .discussion-response .response-body,
 .discussion-post .post-body {
   line-height: 20.72px;
-  font-size: 0.875rem;
+  // font-size: 0.875rem;
 }
 .discussion .action-button .action-label,
 .discussion .actions-dropdown .action-list-item,
@@ -1180,7 +1184,7 @@ section.discussion::after {
 .discussion .response-actions-list,
 .discussion .comment-actions-list {
   line-height: 17.76px;
-  font-size: 0.75rem;
+  // font-size: 0.75rem;
 }
 .discussion .post-actions-list,
 .discussion .response-actions-list,
@@ -1561,7 +1565,7 @@ section.discussion::after {
   height: 125px;
   background: #fff;
   font-size: 0.875rem;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $gym-text-font-stack;
   line-height: 1.6;
   box-sizing: border-box;
   width: 100%;
