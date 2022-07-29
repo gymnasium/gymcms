@@ -16,20 +16,20 @@
 
 {%- case hero_topic -%}
 
+    {%- when "Design" -%}
+    {%- assign hero_style = "topic-design" -%}
+
+    {%- when "Development" -%}
+    {%- assign hero_style = "topic-development" -%}
+
+    {%- when "UX" -%}
+    {%- assign hero_style = "topic-ux" -%}
+
     {%- when "Accessibility" -%}
     {%- assign hero_style = "topic-accessibility" -%}
 
     {%- when "Career Skills" -%}
     {%- assign hero_style = "topic-career-skills" -%}
-
-    {%- when "Prototyping" -%}
-    {%- assign hero_style = "topic-prototyping" -%}
-
-    {%- when "User Experience" -%}
-    {%- assign hero_style = "topic-user-experience" -%}
-
-    {%- when "Design & Development" -%}
-    {%- assign hero_style = "topic-design-development" -%}
 
 {%- endcase -%}
 
