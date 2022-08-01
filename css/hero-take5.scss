@@ -3,18 +3,19 @@
 @import 'variables';
 @import 'mixins';
 
-.topic-career-skills {
-  background-color: $gym-green;
+.topic-design,
+.topic-development,
+.topic-accessibility
+ {
+  background-color: $gym-magenta;
 }
 
-.topic-prototyping,
-.topic-user-experience, {
+.topic-ux {
   background-color: $gym-teal;
 }
 
-.topic-accessibility,
-.topic-design-development {
-  background-color: $gym-magenta;
+.topic-career-skills {
+  background-color: $gym-green;
 }
 
 // !override / reset/rescale Bootstrap (3) handiwork — future-friendly
