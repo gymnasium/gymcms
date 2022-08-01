@@ -2535,3 +2535,16 @@ aside.system-status {
   }
 
 }
+
+/* ---
+Add GYM Screenshot support @https://github.com/gymnasium/gym-screenshots
+--- */
+
+// The screenshot service JS will add .gym-snaps to the html element
+.gym-snaps {
+
+  // hide cookie banner, intercom thing
+  .cookiebanner, .intercom-lightweight-app {
+    display: none !important;
+  }
+}
