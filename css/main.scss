@@ -2540,11 +2540,16 @@ aside.system-status {
 Add GYM Screenshot support @https://github.com/gymnasium/gym-screenshots
 --- */
 
-// The screenshot service JS will add .gym-snaps to the html element
+// The gym-snaps screenshot service JS will add .gym-snaps to the html element
 .gym-snaps {
 
   // hide cookie banner, intercom thing
   .cookiebanner, .intercom-lightweight-app {
     display: none !important;
+  }
+
+  // Add gray background to youtube videos, since they will never load in gym-snaps
+  #course-preview iframe {
+    background-color: #bbb !important;
   }
 }
