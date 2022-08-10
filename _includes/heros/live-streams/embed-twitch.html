@@ -1,0 +1,15 @@
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+<div id="twitch"></div>
+<script>
+  var options = {
+    channel: "{{ hero.twitch_channel }}",
+    layout: {{ hero.twitch_layout }},
+    theme: {{ hero.twitch_theme }},
+    width: 320,
+    height: 180,
+    // Only needed if embedded on other websites
+    parent: [{{ domain_parent }}]
+  };
+  var player = new Twitch.Player("twitch", options);
+  player.setVolume(0.5);
+</script>
