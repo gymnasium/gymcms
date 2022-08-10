@@ -1,0 +1,22 @@
+{%- assign hero = site.data.hero -%}
+
+{%- case jekyll.environment -%}
+
+{%- when "development" -%}
+{%- assign domain_parent = "gymnasium.dev" -%}
+
+{%- when "staging" -%}
+{%- assign domain_parent = "courses.gymna.si" -%}
+
+{%- when "production" -%}
+{%- assign domain_parent = "thegymnasium.com" -%}
+
+{%- endcase -%}
+
+{% if hero.source == "twitch" %}
+  {%- include /heros/live-streams/content.html -%}
+{% elsif hero.source == "youtube" %}
+  {%- include /heros/live-streams/content.html -%}
+{% else %}
+  {% include {{ hero.current_promo | prepend: "/heros/" }} %}
+{% endif %}

@@ -3,12 +3,12 @@
 ---
 {%- assign hero = site.data.hero -%}
 
-{%- if hero.live_coding == true -%}
+{%- if hero.live_stream == true -%}
 <!-- Display live coding on both hero includes -->
-{%- include hero-livecoding.html -%}
+{%- include heros/hero-live-stream.html -%}
     {%- elsif page.permalink contains "hero-auth" and hero.auth_promo -%}
         <!-- Display something specific on the authenticated hero include -->
-        {%- include {{hero.auth_promo | prepend: "/heros/"}} -%} 
+        {%- include {{hero.auth_promo | prepend: "/heros/"}} -%}
     {%- else -%}
     <!-- Display the current promo on both hero includes -->
     {%- include {{hero.current_promo | prepend: "/heros/"}} -%}
