@@ -21,4 +21,16 @@ permalink: /tests/hero
 
 <p><a href="/tests/hero-live-stream">live_stream</a>: <code>{{ hero.live_stream }}</code></p>
 
-<p><b>Source:</b> <code>{{ hero.source }}</code></p>
+<p>
+  <b>Source:</b>
+  <code>
+  {{ hero.source }}
+  {%
+    if hero.source != "twitch"
+    and hero.source != "youtube"
+    or hero.source == undefined
+  %}
+    <mark>error</mark>
+  {% endif %}
+  </code>
+</p>
