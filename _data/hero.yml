@@ -1,3 +1,29 @@
 current_promo: articles/meet-the-metaverse.html
 auth_promo: articles/meet-the-metaverse.html
-live_coding: false
+
+# Live Stream
+# Set true/false (lowercase).
+# Note: true overrides current/auth promo heros
+live_stream: true
+
+# Source
+# Set twitch/youtube (lowercase)
+# Note: As a fallback, the current promo displays if a typo/erroneous source value is set
+source: youtube
+
+# Content
+# Update per live stream, if needed.
+title: "Live Stream"
+short_description: "A live transmission of an event over the Internet."
+byline: "The Gymnasium Team"
+
+# twitch
+# Docs: https://dev.twitch.tv/docs/embed
+twitch_channel: "andrewpmiller"
+# Set video-with-chat/vidoe (Default: video-with-chat [when channel set])
+twitch_layout: "video-with-chat"
+# Set light/dark (Default: dark)
+twitch_theme: "dark"
+
+# youtube
+youtube_channel: "live_stream?channel=12345"
