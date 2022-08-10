@@ -8,8 +8,8 @@ live_stream: true
 
 # Source
 # Set twitch/youtube (lowercase)
-# Note: As a fallback, the current promo displays if a typo/erroneous source value is set
-source: youtube
+# Note: As a fallback, the current promo displays if a typo/erroneous/null source value is set
+source: "youtube"
 
 # Content
 # Update per live stream, if needed.
