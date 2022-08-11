@@ -20,8 +20,10 @@ byline: "The Gymnasium Team"
 # twitch
 # Docs: https://dev.twitch.tv/docs/embed
 twitch_channel: "andrewpmiller"
-# Set video-with-chat/vidoe (Default: video-with-chat [when channel set])
-twitch_layout: "video-with-chat"
+# Set video-with-chat/video (Default: video-with-chat [when channel is set])
+twitch_layout: "video"
+twitch_width: "940"
+twitch_height: "480"
 # Set light/dark (Default: dark)
 twitch_theme: "dark"
 
