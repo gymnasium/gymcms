@@ -10,9 +10,9 @@
   </div>
 </header>
 
-{% if hero.source == "twitch" %}
+{% if hero.embed_source == "twitch" %}
   {%- include /heros/live-streams/embed-twitch.html -%}
-{% else hero.source == "youtube" %}
+{% else hero.embed_source == "youtube" %}
   {%- include /heros/live-streams/embed-youtube.html -%}
 {% endif %}
 
