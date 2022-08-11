@@ -13,9 +13,9 @@
 
 {%- endcase -%}
 
-{% if hero.source == "twitch" %}
+{% if hero.embed_source == "twitch" %}
   {%- include /heros/live-streams/content.html -%}
-{% elsif hero.source == "youtube" %}
+{% elsif hero.embed_source == "youtube" %}
   {%- include /heros/live-streams/content.html -%}
 {% else %}
   {% include {{ hero.current_promo | prepend: "/heros/" }} %}

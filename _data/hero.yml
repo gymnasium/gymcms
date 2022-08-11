@@ -9,10 +9,10 @@ live_stream: true
 # Source
 # Set twitch/youtube (lowercase)
 # Note: As a fallback, the current promo displays if a typo/erroneous/null source value is set
-source: "twitch"
+embed_source: "youtube"
 
 # Content
-# Update per live stream, if needed.
+# Update per live stream, if needed
 title: "Live Stream"
 short_description: "A live transmission of an event over the Internet."
 byline: "The Gymnasium Team"
@@ -20,10 +20,18 @@ byline: "The Gymnasium Team"
 # twitch
 # Docs: https://dev.twitch.tv/docs/embed
 twitch_channel: "andrewpmiller"
-# Set video-with-chat/vidoe (Default: video-with-chat [when channel set])
-twitch_layout: "video-with-chat"
+# Set video-with-chat/video (Default: video-with-chat [when channel is set])
+twitch_layout: "video"
 # Set light/dark (Default: dark)
 twitch_theme: "dark"
 
 # youtube
-youtube_channel: "live_stream?channel=UCcSnI3n2Jd-2qgncC6k_S1g"
+youtube_channel: "live_stream?channel="
+youtube_channel_ID: "UCcSnI3n2Jd-2qgncC6k_S1g"
+# Note: Set a video ID to override live stream channel, if needed
+# Example video ID: bQ-NdoBzd1A
+youtube_video_ID: ""
+
+# Aspect Ratio 16:19
+embed_width: "854"
+embed_height: "400"
