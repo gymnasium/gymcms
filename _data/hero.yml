@@ -9,7 +9,7 @@ live_stream: true
 # Source
 # Set twitch/youtube (lowercase)
 # Note: As a fallback, the current promo displays if a typo/erroneous/null source value is set
-source: "twitch"
+embed_source: "twitch"
 
 # Content
 # Update per live stream, if needed.
@@ -22,10 +22,12 @@ byline: "The Gymnasium Team"
 twitch_channel: "andrewpmiller"
 # Set video-with-chat/video (Default: video-with-chat [when channel is set])
 twitch_layout: "video"
-twitch_width: "940"
-twitch_height: "480"
 # Set light/dark (Default: dark)
 twitch_theme: "dark"
 
 # youtube
 youtube_channel: "live_stream?channel=UCcSnI3n2Jd-2qgncC6k_S1g"
+
+# Aspect Ratio 16:19
+embed_width: "854"
+embed_height: "400"
