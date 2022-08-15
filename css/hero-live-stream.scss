@@ -7,54 +7,54 @@
   background: none;
 }
 
-#live-coding {
-  border-bottom: 4em solid $gym-purple;
+#live-stream {
+  border-bottom: 4em solid $gym-dark-gray-2;
 }
 
-#live-coding header {
+#live-stream header {
   color: $gym-white;
-  background: $gym-purple;
+  background: $gym-dark-gray-2;
   padding: 1.6em 0;
 }
 
-#live-coding header h2 {
+#live-stream header h2 {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-#live-coding .byline {
+#live-stream .byline {
   border: 1px dashed transparent;
   margin-top: .8em;
   margin-bottom: 0;
 }
 
-#live-coding .byline dd {
+#live-stream .byline dd {
   margin-top: .8em;
   margin-left: 0;
 }
 
 @include breakpoint(36em, min) {
 
-#live-coding header h2,
-#live-coding .byline,
-#live-coding .byline dt {
+#live-stream header h2,
+#live-stream .byline,
+#live-stream .byline dt {
   display: inline;
 }
 
-#live-coding header {
+#live-stream header {
   padding: 1.6em 0 .4em;
 }
 
-#live-coding header h2 {
+#live-stream header h2 {
   line-height: 1;
   vertical-align: baseline;
 }
 
-#live-coding .byline {
+#live-stream .byline {
   margin-left: 1.2em;
 }
 
-#live-coding .byline dd {
+#live-stream .byline dd {
   width: 52%;
 }
 

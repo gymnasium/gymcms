@@ -71,15 +71,15 @@ class Gymnasium {
     what we want it to look like until we move to Cypress
     TODO: Unhackify this. */
 
-    $('.course-tabs li a b:contains("Course")').each(function(idx, value){
+    $('.course-tabs li a:contains("Course")').each(function(idx, value){
       value.innerHTML = "Lessons";
     });
   
-    $('.course-tabs li a b:contains("Home")').each(function(idx,value){
+    $('.course-tabs li a:contains("Home")').each(function(idx,value){
       value.innerHTML = "Syllabus";
     });
   
-    $('.course-tabs li a b:contains("Discussion")').each(function(idx, value) {
+    $('.course-tabs li a:contains("Discussion")').each(function(idx, value) {
       value.innerHTML = "Forum";
     });
   
