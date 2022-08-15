@@ -1,0 +1,64 @@
+@import 'variables';
+@import 'functions';
+
+.login-register {
+  background-color: transparent;
+  max-width: none;
+
+  h1, h2 {
+    font-size: font-calc(36, rem, 10px);
+    line-height: 1.15;
+    margin-top: 20px;
+    margin-bottom: 16px;
+    letter-spacing: 0.04em;
+    word-spacing: 0.05em;
+  }
+
+  .form-type {
+    max-width: 600px;
+    min-width: 250px;
+    margin: 0 auto;
+  }
+
+  form {
+    margin: 0 auto;
+    padding: 0 1.8em 2.2em;
+    background-color: $gym-white;
+  }
+
+  .note {
+    font-weight: bold;
+    color: #222;
+    display: block;
+    margin: 10px 10px 0 10px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 17.76px;
+  }
+
+  .checkbox-terms_of_service {
+    margin: 1em 0;
+  }
+
+  .checkbox-remember {
+    margin: 1.2em 0 0.6em;
+  }
+}
+
+.form-wrapper  {
+  padding: 20px 0;
+}
+
+button.logistration-button {
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+
+.logistration-bottom {
+  padding: 0 1.8em 2em;
+  margin-top: 1.2em;
+
+  h2 {
+    font-size: font-calc(30.8, rem, 10px);
+  }
+}
