@@ -1,6 +1,84 @@
 @import "variables";
 @import "functions";
 
+// Course About
+.course {
+  background: #ebebeb;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $gym-font-stack;
+    font-weight: 900;
+  }
+
+  .course-info {
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  .course-overview {
+    background: white;
+    padding: 2.5em;
+  }
+
+  .teacher-image {
+    border: 1px solid #999;
+    height: 115px;
+    float: left;
+    margin: 0 15px 0px 0;
+    overflow: hidden;
+    width: 115px;
+
+    img {
+      display: block;
+      min-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  header.hero-title {
+    padding: 1.2em;
+  }
+
+  .hero-banner {
+    background: #777;
+    border-bottom: 0px;
+  
+    h1 {
+      color: white;
+      font-family: $gym-font-stack;
+      text-align: center;
+    }
+  
+    img {
+      max-height: 325px;
+      max-width: 100%;
+    }
+  }
+
+  .course-metabar {
+    background: #444;
+    padding: 2.2em;
+  
+    strong {
+      font: 1.4em/1.2 $gym-font-stack;
+      color: #ccc;
+    }
+  }
+
+  .level strong {
+    font-weight: normal;
+  }
+}
+
 // Courseware garbage
 .seq_contents.tex2jax_ignore.asciimath2jax_ignore {
   display: none;
@@ -155,6 +233,16 @@
     //   vertical-align: -0.15em;
     //   font-size: 1.2em;
     // }
+  }
+}
+
+// Course Layout Wrapper (eliminate spacing between nav & right panel on wide screens)
+.course-wrapper .col-sm-3 {
+  padding-right: 15px;
+}
+@include breakpoint(medium, min) {
+  .course-wrapper .col-sm-3 {
+    padding-right: 0;
   }
 }
 
