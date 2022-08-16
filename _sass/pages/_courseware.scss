@@ -2,6 +2,18 @@
 @import "functions";
 
 // Course About
+.gym-course-about {
+  font-size: 16px;
+
+  .course-about-overview,
+  .course-about-sidebar {
+    section p,
+    section li {
+     font-size: 1em;
+    }
+  }
+}
+
 .course {
   background: #ebebeb;
   padding-top: 0;
@@ -51,13 +63,13 @@
   .hero-banner {
     background: #777;
     border-bottom: 0px;
-  
+
     h1 {
       color: white;
       font-family: $gym-font-stack;
       text-align: center;
     }
-  
+
     img {
       max-height: 325px;
       max-width: 100%;
@@ -67,7 +79,7 @@
   .course-metabar {
     background: #444;
     padding: 2.2em;
-  
+
     strong {
       font: 1.4em/1.2 $gym-font-stack;
       color: #ccc;
@@ -76,6 +88,14 @@
 
   .level strong {
     font-weight: normal;
+  }
+}
+
+// Course Info
+.gym-course-info {
+  .recent-updates section p,
+  .handouts p {
+    font-size: 1em;
   }
 }
 
