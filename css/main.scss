@@ -55,6 +55,28 @@ body {
   outline: none;
 }
 
+// responsive (flexible) media
+// 1. Remove text-level descender gap (flush images)
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; /* 1 */
+}
+
+// responsive images
+// 1. Remove border on images inside links in IE 10 (elsewhere?)
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border-style: none; /* 1 */
+}
+
 // TODO: clean these up to the best of our ability
 @import "migrated-vendor";
 @import "migrated-main";
