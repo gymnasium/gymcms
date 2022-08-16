@@ -240,7 +240,7 @@
 .course-wrapper .col-sm-3 {
   padding-right: 15px;
 }
-@include breakpoint(medium, min) {
+@include breakpoint(small, min) {
   .course-wrapper .col-sm-3 {
     padding-right: 0;
   }
