@@ -486,22 +486,39 @@
       margin-left: 0;
     }
 
-    pre {
-      padding: 1em;
+    // https://github.com/gymnasium/tracker/issues/242
+    // Override default white-space: nowrap;
+
+    pre,
+    code {
+      tab-size: 2;
     }
 
-    pre code {
-      font-size: 1em;
-      font-family: monospace;
-    }
-    pre code span {
-      font-size: 1em;
-      font-family: monospace;
+    pre {
+      font-size: 16px;
+      white-space: normal;
+      padding: 0;
+      margin: 1.2rem 0;
     }
 
     code {
-      padding: 5px;
-      font-size: 0.85em;
+      display: inline-block;
+      font-size: 92.5%;
+      font-family: monospace, monospace;
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+      padding: 0.125rem 0.5rem;
+      margin: 0;
+      border: 1px solid #eaeaea;
+      border-radius: 3px;
+      background-color: #f8f8f8;
+    }
+
+    pre code {
+      display: block;
+      line-height: inherit;
+      white-space: pre;
+      padding: 2.25rem 2.75rem;
     }
 
     .solution-span > span {
