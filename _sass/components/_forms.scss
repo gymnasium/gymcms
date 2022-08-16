@@ -45,6 +45,14 @@ label, .field-label {
   }
 }
 
+// courseware problems/responses
+
+.problem {
+  .field label {
+    text-transform: none;
+  }
+}
+
 input[type=checkbox], input[type=radio] {
   display: inline-block;
   width: auto;
