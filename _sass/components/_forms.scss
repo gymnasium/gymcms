@@ -48,6 +48,10 @@ label, .field-label {
 // courseware problems/responses
 
 .problem {
+  label {
+    margin-left: 0;
+  }
+
   .field label {
     text-transform: none;
   }
