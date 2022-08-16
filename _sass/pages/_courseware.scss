@@ -888,6 +888,12 @@ section.handouts {
   dt {
     font-family: $gym-font-stack;
     font-weight: 600;
+    margin-top: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  dd:not(dt + dd) {
+    margin-bottom: 0.8rem;
   }
 }
 
