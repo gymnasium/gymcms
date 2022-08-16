@@ -236,6 +236,16 @@
   }
 }
 
+// Course Layout Wrapper (eliminate spacing between nav & right panel on wide screens)
+.course-wrapper .col-sm-3 {
+  padding-right: 15px;
+}
+@include breakpoint(medium, min) {
+  .course-wrapper .col-sm-3 {
+    padding-right: 0;
+  }
+}
+
 // Course Accordion Nav
 .course-navigation {
   .group-heading {
