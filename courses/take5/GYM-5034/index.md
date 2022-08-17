@@ -56,7 +56,6 @@ The `rem` unit works by setting type relative to the browser’s default font si
 Now that you converted the `h1`, you can update the rest of your text with the exact same conversion approach. Here are the current pixel-driven font sizes for your headline and your footer. As before, these are the target pixel values. And just as before, you’ll divide them against the base font size, 16 pixels, which is the context. And that’ll give you the proportional results we need.
 
 ```css
-
 h2 {
   font-size: 24px;
 }
@@ -130,7 +129,6 @@ footer p {
 As before, with a little quick math, you can drop those rems into your design.
 
 ```css
-
 .gallery,
 .article-body {
   margin: 4rem 0;
