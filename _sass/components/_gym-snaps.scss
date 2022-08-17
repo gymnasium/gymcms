@@ -10,16 +10,14 @@ Add GYM Screenshot support @https://github.com/gymnasium/gym-screenshots
     display: none !important;
   }
 
-  // Add gray background to youtube videos and other video IFRAMEs, since they will likely never load in gym-snaps (note: Wistia loads, BTW)
-  // Course About
-  #course-preview iframe,
-  // Take 5
-  .embed-responsive iframe,
-  // Webinars
-  .event-video .wistia_embed,
-  .event-video iframe,
-  // About
-  .iframe-video-holder iframe {
-    background-color: #bbb !important;
+  // bg-colorize all iframe wrappers
+  .embed-responsive,
+  .event-video,
+  .iframe-video-holder {
+    background-color: #222;
+
+    iframe {
+      display: none !important;
+    }
   }
 }
