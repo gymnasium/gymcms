@@ -4,14 +4,6 @@
 // Course About
 .gym-course-about .main-container {
   font-size: 16px;
-
-  .course-about-overview,
-  .course-about-sidebar {
-    section p,
-    section li {
-     font-size: 1em;
-    }
-  }
 }
 
 .course {
@@ -88,14 +80,6 @@
 
   .level strong {
     font-weight: normal;
-  }
-}
-
-// Course Info
-.gym-course-info {
-  .recent-updates section p,
-  .handouts p {
-    font-size: 1em;
   }
 }
 
