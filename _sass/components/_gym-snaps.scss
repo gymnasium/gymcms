@@ -1,0 +1,25 @@
+/* ---
+Add GYM Screenshot support @https://github.com/gymnasium/gym-screenshots
+--- */
+
+// The gym-snaps screenshot service JS will add .gym-snaps to the html element
+.gym-snaps {
+
+  // hide cookie banner, intercom thing
+  .cookiebanner, .intercom-lightweight-app {
+    display: none !important;
+  }
+
+  // Add gray background to youtube videos and other video IFRAMEs, since they will likely never load in gym-snaps (note: Wistia loads, BTW)
+  // Course About
+  #course-preview iframe,
+  // Take 5
+  .embed-responsive iframe,
+  // Webinars
+  .event-video .wistia_embed,
+  .event-video iframe,
+  // About
+  .iframe-video-holder iframe {
+    background-color: #bbb !important;
+  }
+}
