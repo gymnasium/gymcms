@@ -1,0 +1,74 @@
+@import 'variables';
+@import 'functions';
+
+// Account Settings
+
+
+.wrapper-account-settings {
+  // Reset font size TODO: combine with reset for instructor courseware tab
+  &.white-panel {
+    font-size: 1em;
+  }
+}
+
+
+.account-settings-container {
+
+  // Hide account settings tab nav (we don't use the linkedin account connection feature anymore
+  .wrapper-header { display: none; }
+}
+
+.account-settings-sections {
+
+  .u-field-title {
+    display: block;
+    width: auto;
+    margin-bottom: 0.625rem;
+    font-size: font-calc(16, rem, 10px);
+    line-height: 1;
+    color: #333;
+    white-space: nowrap;
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+
+  .u-field-value-display {
+    display: none;
+  }
+
+  .u-field {
+    border-bottom: 2px solid #f5f5f5;
+    padding: 15px 0;
+  }
+
+  .field {
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+  }
+
+  .u-field-message {
+    position: relative;
+    padding: 15px 0 0 0;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    color: #919191;
+  }
+
+  @include breakpoint(medium, min) {
+    .u-field-message {
+      width: 60%;
+      padding-left: font-calc(80, rem, 10px);
+    }
+
+    .field {
+      width: 30%;
+    }
+  }
+  // Since we only support English, there's no point in showing the language dropdown (with only one option)
+  .u-field-pref-lang {
+    display: none;
+  }
+}
