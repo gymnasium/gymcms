@@ -205,8 +205,17 @@ white panel (used in multiple places)
   font-size: 1.2em;
   line-height: 1.5;
   margin: 20px auto;
-  padding: 1em 1em 1em 2em;
+  padding: 1em 1.4em;
   overflow: hidden;
+
+  @include breakpoint(medium, max) {
+    > .row > .col-md-3 {
+      border-top: 1px dashed $gym-gray;
+      margin-top: 1.4em;
+      margin-left: -0.4em;
+      margin-right: -0.4em;
+    }
+  }
 
   ul {
     padding-left: 0;
@@ -237,17 +246,27 @@ white panel (used in multiple places)
 
   // adjustment for vertical rule (if a sidebar is present)
   @include breakpoint(medium, min) {
-    > .row > .col-md-9 {
-      position: relative;
+    & {
+      padding: 1em 1em 1em 2em;
 
-      // Horizontal dashed line
-      &:after {
-        border-right: 1px dashed $gym-gray;
-        content: '';
-        position: absolute;
-        height: calc(100% + 2.2em);
-        top: -1.5rem;
-        right: 0;
+      > .row {
+        padding-bottom: 2.2em;
+
+        > .col-md-9 {
+          position: relative;
+          padding-bottom: 99em;
+          margin-bottom: -99em;
+
+          // Horizontal dashed line
+          &:after {
+            border-right: 1px dashed $gym-gray;
+            content: '';
+            position: absolute;
+            height: calc(100% + 2.2em);
+            top: -1.5rem;
+            right: 0;
+          }
+        }
       }
     }
   }
