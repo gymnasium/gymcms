@@ -1,11 +1,16 @@
 <link rel="preload" href="{{ site.url }}/css/heros/articles/meet-the-metaverse.css?{{ site.time | date:'%s' }}">
 <link rel="stylesheet" href="{{ site.url }}/css/heros/articles/meet-the-metaverse.css?{{ site.time | date:'%s' }}">
-<link rel="preload" href="{{ site.url }}/home/img/heros/articles/meet-the-metaverse/meet-the-metaverse-1280w.jpg?{{ site.time | date:'%s' }}" as="image">
+<link rel="preload" href="{{ site.url }}/home/img/heros/articles/meet-the-metaverse/meet-the-metaverse-768w.jpg?{{ site.time | date:'%s' }}" as="image">
+<script async src="{{ site.url }}/js/polyfills/picture/plugins/intrinsic-dimension/pf.intrinsic.min.js?{{ site.time | date:'%s' }}"></script>
+<script async src="{{ site.url }}/js/polyfills/picture/picturefill.min.js?{{ site.time | date:'%s' }}"></script>
 <article class="hero-promo">
   <div class="container">
     <div class="content">
       <div class="image">
-        <img alt="Three people from the Gymnasium team meet in the metaverse at a virtual conference room using Spatial." src="{{ site.url }}/home/img/heros/articles/meet-the-metaverse/meet-the-metaverse-1280w.jpg" decoding="async" fetchpriority="high">
+        <picture>
+          <source srcset="{{ site.url }}/home/img/heros/articles/meet-the-metaverse/meet-the-metaverse-768w.jpg?{{ site.time | date:'%s' }}" media="(min-width: 75em)">
+          <img alt="Three people from the Gymnasium team meet in the metaverse at a virtual conference room using Spatial." src="{{ site.url }}/home/img/heros/articles/meet-the-metaverse/meet-the-metaverse-1280w.jpg?{{ site.time | date:'%s' }}" decoding="async" fetchpriority="high">
+        </picture>
       </div>
       <div class="text">
         <header>
