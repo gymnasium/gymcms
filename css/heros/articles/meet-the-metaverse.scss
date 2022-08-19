@@ -13,12 +13,11 @@
   // structural spacing
   .container {
     background-color: inherit;
-    padding: 1.75em 30px 3.25em;
+    padding: 1.75em 15px 3.25em;
   }
 
   .image {
-    margin: -30px -30px 0;
-    overflow: hidden;
+    margin: -30px -15px 0;
 
     img {
       width: auto;
@@ -114,15 +113,7 @@
       align-self: center;
     }
     .image {
-      height: 21.75em;
-      margin: 0 0 0 -15px;
-
-      img {
-      max-width: none;
-      height: 152%;
-      margin-top: -32%;
-      margin-left: -50%;
-      }
+      margin: 0;
     }
     .image + .text {
       margin-top: 0;
