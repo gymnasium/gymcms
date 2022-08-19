@@ -68,13 +68,11 @@ video {
 }
 
 // responsive images
-// 1. Remove border on images inside links in IE 10 (elsewhere?)
 
 img {
   width: auto;
   max-width: 100%;
   height: auto;
-  border-style: none; /* 1 */
 }
 
 // TODO: clean these up to the best of our ability
