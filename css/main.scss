@@ -55,7 +55,7 @@ body {
   outline: none;
 }
 
-// responsive (flexible) media
+// Responsive (flexible) media
 // 1. Remove text-level descender gap (flush images)
 
 audio,
@@ -67,7 +67,7 @@ video {
   vertical-align: middle; /* 1 */
 }
 
-// responsive images
+// Responsive images
 
 img {
   width: auto;
@@ -135,12 +135,19 @@ span {
   font: inherit;
 }
 
+// Misc text details
+
 .break-word {
   word-break: break-all;
 }
 
+.all-caps {
+  text-transform: uppercase;
+}
 
-
+.no-wrap {
+  white-space: nowrap;
+}
 
 body,
 body.view-in-course {
