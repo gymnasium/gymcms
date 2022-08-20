@@ -1,24 +1,25 @@
-<link rel="preload" href="{{ site.url }}/css/heros/articles/meet-the-metaverse.css?{{ site.time | date:'%s' }}">
-<link rel="stylesheet" href="{{ site.url }}/css/heros/articles/meet-the-metaverse.css?{{ site.time | date:'%s' }}">
-<link rel="preload" href="{{ site.url }}/home/img/heros/articles/meet-the-metaverse/meet-the-metaverse-768w.jpg?{{ site.time | date:'%s' }}" as="image">
-<script async src="{{ site.url }}/js/polyfills/picture/plugins/intrinsic-dimension/pf.intrinsic.min.js?{{ site.time | date:'%s' }}"></script>
-<script async src="{{ site.url }}/js/polyfills/picture/picturefill.min.js?{{ site.time | date:'%s' }}"></script>
+<link rel="stylesheet" href="{{ site.url }}/css/heros/articles/meet-the-metaverse.css?{{ site.time | date:'%s' }}" fetchpriority="high">
+<link rel="preload" href="{{ site.url }}/home/img/heros/articles/meet-the-metaverse/meet-the-metaverse-768w.jpg?{{ site.time | date:'%s' }}" as="image" media="(min-width: 75em)" fetchpriority="high">
+<script nomodule src="{{ site.url }}/js/polyfills/picture/plugins/intrinsic-dimension/pf.intrinsic.min.js?{{ site.time | date:'%s' }}"></script>
+<script nomodule src="{{ site.url }}/js/polyfills/picture/picturefill.min.js?{{ site.time | date:'%s' }}"></script>
 <article class="hero-promo">
   <div class="container">
     <div class="content">
       <div class="image">
         <picture>
-          <source srcset="{{ site.url }}/home/img/heros/articles/meet-the-metaverse/meet-the-metaverse-768w.jpg?{{ site.time | date:'%s' }}" media="(min-width: 75em)">
-          <img alt="Three people from the Gymnasium team meet in the metaverse at a virtual conference room using Spatial." src="{{ site.url }}/home/img/heros/articles/meet-the-metaverse/meet-the-metaverse-1280w.jpg?{{ site.time | date:'%s' }}" decoding="async" fetchpriority="high">
+          <source srcset="{{ site.url }}/home/img/heros/articles/meet-the-metaverse/meet-the-metaverse-768w.jpg?{{ site.time | date:'%s' }}" width="768" height="715" media="(min-width: 75em)">
+          <img alt="Three people from the Gymnasium team meet in the metaverse at a virtual conference room using Spatial." src="{{ site.url }}/home/img/heros/articles/meet-the-metaverse/meet-the-metaverse-1280w.jpg?{{ site.time | date:'%s' }}" width="1280" height="720" decoding="async" fetchpriority="high">
         </picture>
       </div>
       <div class="text">
         <header>
-          <p class="subhead all-caps" role="doc-subtitle">
-            <b>New Article</b>
-          </p>
-          <h1>Meet the Metaverse: A Virtual World of Potential</h1>
-          <p class="description">If you’re not sure what the metaverse is, you’re not alone. It feels like it’s gone from a buzzword to a business overnight. So, what is this virtual world and why does it matter? Read our new article to find out.</p>
+          <hgroup>
+            <p class="subhead all-caps">
+              <b>New Article</b>
+            </p>
+            <h1>Meet the Metaverse: A Virtual World of Potential</h1>
+          </hgroup>
+          <p>If you’re not sure what the metaverse is, you’re not alone. It feels like it’s gone from a buzzword to a business overnight. So, what is this virtual world and why does it matter? Read our new article to find out.</p>
         </header>
         <div class="cta">
           <a class="gym-button gym-button-secondary" href="https://medium.com/gymnasium/meet-the-metaverse-a-virtual-world-of-potential-4bd2391cc837"><b>Meet the Metaverse</b></a>
