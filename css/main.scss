@@ -55,7 +55,7 @@ body {
   outline: none;
 }
 
-// responsive (flexible) media
+// Responsive (flexible) media
 // 1. Remove text-level descender gap (flush images)
 
 audio,
@@ -67,14 +67,12 @@ video {
   vertical-align: middle; /* 1 */
 }
 
-// responsive images
-// 1. Remove border on images inside links in IE 10 (elsewhere?)
+// Responsive images
 
 img {
   width: auto;
   max-width: 100%;
   height: auto;
-  border-style: none; /* 1 */
 }
 
 // TODO: clean these up to the best of our ability
@@ -137,12 +135,19 @@ span {
   font: inherit;
 }
 
+// Misc text details
+
 .break-word {
   word-break: break-all;
 }
 
+.all-caps {
+  text-transform: uppercase;
+}
 
-
+.no-wrap {
+  white-space: nowrap;
+}
 
 body,
 body.view-in-course {

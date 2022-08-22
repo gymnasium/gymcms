@@ -1,36 +1,27 @@
 ---
 ---
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 // !override / reset/rescale Bootstrap (3) handiwork — future-friendly
 
 .hero-promo {
-  position: relative;
   font-size: 16px;
   background-color: #2c2c2c;
 
   // structural spacing
   .container {
-    background-color: inherit;
-    padding: 1.75em 30px 3.25em;
+    padding: 1.75em 15px 3.25em;
   }
 
   .image {
-    margin: -30px -30px 0;
-    overflow: hidden;
+    background: #939eb0;
+    background: linear-gradient(to bottom left, #939eb0, #ae9880);
+    margin: -30px -15px 0;
 
-    img {
-      width: auto;
-      max-width: 100%;
-      height: auto;
-      vertical-align: middle;
+    & + .text {
+      margin-top: 2.6rem;
     }
-
-  }
-
-  .image + .text {
-    margin-top: 2.6rem;
   }
 
   // content text / cta
@@ -39,7 +30,6 @@
     max-width: 50em;
 
     header {
-
       .subhead {
         font-weight: bold;
         font-size: 1.15em;
@@ -59,13 +49,12 @@
         margin-bottom: 0;
       }
 
-      .description {
+      & > p {
         font-size: 1.4em;
         line-height: 1.45;
         color: $gym-gray-2;
         margin-top: 1.6rem;
       }
-
     }
 
     // cta
@@ -93,9 +82,7 @@
         border-color: $gym-light-gray !important;
       }
     }
-
   }
-
 }
 
 @include breakpoint(large, min) {
@@ -104,38 +91,26 @@
       padding-top: 2.75em;
       padding-bottom: 4.25em;
     }
+
     .content {
       display: grid;
       grid-template-columns: 1fr 2fr;
       grid-gap: 2.6em;
-    }
-    .image,
-    .text {
-      align-self: center;
-    }
-    .image {
-      height: 21.75em;
-      margin: 0 0 0 -15px;
 
-      img {
-      max-width: none;
-      height: 152%;
-      margin-top: -32%;
-      margin-left: -50%;
+      & > * {
+        align-self: center;
       }
     }
-    .image + .text {
-      margin-top: 0;
+
+    .image {
+      min-height: 100%;
+      background: #ae9880;
+      background: linear-gradient(to bottom left, #ae9880, #868989);
+      margin: 0;
+
+      & + .text {
+        margin-top: 0;
+      }
     }
   }
-}
-
-// misc details
-
-.all-caps {
-  text-transform: uppercase;
-}
-
-.no-wrap {
-  white-space: nowrap;
 }
