@@ -1,15 +1,25 @@
-<script async src="https://player.twitch.tv/js/embed/v1.js"></script>
-<div id="twitch-video-embed"></div>
-<script>
-  var options = {
-    channel: "{{ hero.twitch_channel }}",
-    layout: "{{ hero.twitch_layout }}",
-    width: "{{ hero.embed_width }}",
-    height:"{{ hero.embed_height }}",
-    theme: "{{ hero.twitch_theme }}",
-    // Only needed if embedded on other websites
-    parent: ["{{ domain_parent }}"]
-  };
-  var player = new Twitch.Player("twitch-video-embed", options);
-  player.setVolume(0.5);
-</script>
+<div id="twitch">
+  <div class="twitch-video">
+    <iframe
+      src="https://player.twitch.tv/?channel={{ hero.twitch_channel}}&parent={{ domain_parent }}&autoplay={{ hero.embed_auto_play }}"
+      width="{{ hero.embed_width }}"
+      height="{{ hero.embed_height }}"
+      frameborder="{{ hero.embed_frameborder }}"
+      scrolling="{{ hero.embed_scrolling }}"
+      allowfullscreen="{{ hero.embed_allowfullscreen }}"
+      fetchpriority="{{ hero.embed_fetchpriority }}"
+      loading="{{ hero.embed_loading }}">
+    </iframe>
+  </div>
+  <div class="twitch-chat">
+    <iframe
+      src="https://www.twitch.tv/embed/{{ hero.twitch_channel}}/chat?parent={{ domain_parent }}"
+      frameborder="{{ hero.embed_frameborder }}"
+      scrolling="{{ hero.embed_scrolling }}"
+      width="{{ hero.embed_width }}"
+      height="{{ hero.embed_height }}"
+      fetchpriority="{{ hero.embed_fetchpriority }}"
+      loading="{{ hero.embed_loading }}">
+    </iframe>
+  </div>
+</div>
