@@ -8,15 +8,17 @@ Jeremy Osborn: When it comes to your online portfolio, first impressions are cri
 
 In this tutorial, you’ll learn three ways to make a great first impression with your portfolio and improve your chances of getting hired. But first, some definitions. I define all of the content that a visitor first sees, usually the home page, as the first-impression section.
 
-Whether desktop or mobile, it’s everything visible from the top of the page to the bottom of the browser window and could be broken down into three elements. First is the *overall visual appeal*. This includes design elements and imagery, including a logo if there is one, color palette, typography, photos and illustrations, and layout.
+Whether desktop or mobile, it’s everything visible from the top of the page to the bottom of the browser window and could be broken down into three elements.
 
-The second element is the *headline* or *tagline*, essentially a short description of who you are, what you do, and what makes you unique. The third element is the *Featured Project* section, which includes a few of your most recent or notable projects. This section should showcase the sort of work you’ve done in the past and why you’re good at it.
+1. First (element) is the **overall visual appeal**. This includes design elements and imagery, including a logo if there is one, color palette, typography, photos and illustrations, and layout.
+2. The second element is the **headline** or **tagline**, essentially a short description of who you are, what you do, and what makes you unique.
+3. The third element is the **Featured Projects** section, which includes a few of your most recent or notable projects. This section should showcase the sort of work you’ve done in the past and why you’re good at it.
 
 **Tip number one:** Treat the UX (user experience) of your portfolio site as if it were for a client.
 
 For some reason, many designers include design elements they would never use on a client site. I’m talking about custom mouse cursors, pop-up windows, confusing site navigation, gratuitous animations, and the list goes on.
 
-I have many theories on this, but ultimately I think it’s because people haven’t answered or even asked themselves these two questions. First, can you answer the question, what sort of work am I trying to get? By definition, portfolios show off the work you’ve done in the past. But think hard. Is this really the type of work you want to be doing in the future? If so, great.
+I have many theories on this, but ultimately I think it’s because people haven’t answered or even asked themselves these two questions. First, can you answer the question, what sort of work am I trying to get? By definition, portfolios show off the work you’ve done in the past. But think hard. Is this *really* the type of work you want to be doing in the future? If so, great.
 
 But if you’re looking for a change or perhaps a career pivot, you should be clear about that so you can answer question number two. Who is the most important audience for my portfolio site? Understanding who your audience is means doing your research. And I’m not convinced enough people do this for their own sites.
 
@@ -32,7 +34,7 @@ But what does being familiar mean, though? In my previous example, the menu here
 
 Here’s the website of Mina Markham. And here, I see the URL of her website <cite>mina.codes</cite>, which is a nifty way of signaling her specialty before you even visit the site, which is a very nice touch.
 
-And **tip number three**, make your tagline a conversation starter.
+And **tip number three:** Make your tagline a conversation starter.
 
 The very first piece of content that people see should be memorable and impactful. Assuming that it’s the tagline, here’s the difference between a good one and a great one.
 
