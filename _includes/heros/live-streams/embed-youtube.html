@@ -1,1 +1,9 @@
-<iframe width="{{ hero.embed_width }}" height="{{ hero.embed_height }}" src="https://www.youtube.com/embed/{% if hero.youtube_video_ID and hero.youtube_video_ID != '' %}{{ hero.youtube_video_ID }}{% else %}{{ hero.youtube_channel }}{{ hero.youtube_channel_ID }}{% endif %}" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/{{ hero.youtube_video_ID }}"
+        width="{{ hero.embed_width }}"
+        height="{{ hero.embed_height }}"
+        frameborder="{{ hero.embed_frameborder }}"
+        scrolling="{{ hero.embed_scrolling }}"
+        allowfullscreen="{{ hero.embed_allowfullscreen }}"
+        fetchpriority="{{ hero.embed_fetchpriority }}"
+        loading="{{ hero.embed_loading }}">
+</iframe>
