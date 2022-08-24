@@ -30,24 +30,26 @@ For example, you might assume your most important audience is designers. But con
 
 On the left is the original cluttered design for a printer company’s website. The redesign increased the amount of white space and decreased the amount of text. This combination ultimately created a better first impression.
 
-But what does being familiar mean, though? In my previous example, the menu here was located in an unfamiliar location and therefore pretty confusing. However, familiar also means meeting your audience’s expectations. Here’s an example of two web developer sites, both of which immediately confirm what they do but in unique and humorous ways. So here’s the home page of Una Kravets, a well-known web developer. And this minimalist design uses coding brackets combined with a colorful unicorn logo, which immediately lets us know she’s a coder with a sense of humor.
+But what does being familiar mean, though? In my previous example, the menu here was located in an unfamiliar location and therefore pretty confusing. However, familiar also means meeting your audience’s expectations. Here’s an example of two web developer sites, both of which immediately confirm what they do but in unique and humorous ways. So here’s the home page of [Una Kravets][3]{: target="_blank" rel="noopener"}, a well-known web developer. And this minimalist design uses coding brackets combined with a colorful unicorn logo, which immediately lets us know she’s a coder with a sense of humor.
 
-Here’s the website of Mina Markham. And here, I see the URL of her website <cite>mina.codes</cite>, which is a nifty way of signaling her specialty before you even visit the site, which is a very nice touch.
+Here’s the website of Mina Markham. And here, I see the URL of her website [mina.codes][2]{: target="_blank" rel="noopener"}, which is a nifty way of signaling her specialty before you even visit the site, which is a very nice touch.
 
 And **tip number three:** Make your tagline a conversation starter.
 
-The very first piece of content that people see should be memorable and impactful. Assuming that it’s the tagline, here’s the difference between a good one and a great one.
+The very first piece of content that people see should be memorable and impactful. Assuming that it’s the tagline, here’s the difference between a good one and a great one:
 
 > Hi, I’m August Day, a Boston-based UI designer.
 
-So this statement is not a conversation starter. Let’s take a look at a more interesting version.
+So this statement is not a conversation starter. Let’s take a look at a more interesting version:
 
 > Hi. I’m August Day, a Boston-based UI designer who makes elegant and accessible interfaces.
 
 *Much better.* Now I’m intrigued by this combination of elegant and accessible. And I’m eager to learn more. Exactly what you want when making a good first impression.
 
-For more information, check out our [**Resources**](#tutorial-resources) section for links to articles and other tutorials. And thanks for watching. Be sure to check out [our other Take 5 videos][2] as well as the entire [course catalog][3] here at Gymnasium.
+For more information, check out our [**Resources**](#tutorial-resources) section for links to articles and other tutorials. And thanks for watching. Be sure to check out [our other Take 5 videos][4] as well as the entire [course catalog][5] here at Gymnasium.
 
 [1]: https://www.amandabaughan.com/pubs/2020CHI_KeepItSimple.pdf
-[2]: https://thegymnasium.com/courses/take5
-[3]: https://thegymnasium.com/courses
+[2]: http://mina.codes
+[3]: https://una.im
+[4]: https://thegymnasium.com/courses/take5
+[5]: https://thegymnasium.com/courses
