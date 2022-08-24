@@ -526,7 +526,7 @@ article.take5--transcript {
     line-height: 1.45;
   }
 
-  li {
+  li:not(blockquote li) {
     font-size: 1.15em;
     padding-left: 0.8em;
     margin-top: inherit;
