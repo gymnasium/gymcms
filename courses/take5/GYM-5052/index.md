@@ -6,7 +6,7 @@ permalink: /courses/take5/gym-5052
 
 Jeremy Osborn: When it comes to your online portfolio, first impressions are critically important. Research suggests that visitors form an opinion about a website in less than one second. So imagine a busy creative director looking at a dozen portfolios, including yours. If your site leaves a bad impression, your work might be dismissed before you’ve even had a chance to prove yourself.
 
-In this tutorial, you’ll learn three ways to make a great first impression with your portfolio and improve your chances of getting hired. But first, some definitions. I define all of the content that a visitor first sees, usually the home page, as the first-impression section.
+In this tutorial, you’ll learn three ways to make a great first impression with your portfolio and improve your chances of getting hired. But first, some definitions. I define all of the content that a visitor first sees, usually the homepage, as the first-impression section.
 
 Whether desktop or mobile, it’s everything visible from the top of the page to the bottom of the browser window and could be broken down into three elements.
 
@@ -30,7 +30,7 @@ For example, you might assume your most important audience is designers. But con
 
 On the left is the original cluttered design for a printer company’s website. The redesign increased the amount of white space and decreased the amount of text. This combination ultimately created a better first impression.
 
-But what does being familiar mean, though? In my previous example, the menu here was located in an unfamiliar location and therefore pretty confusing. However, familiar also means meeting your audience’s expectations. Here’s an example of two web developer sites, both of which immediately confirm what they do but in unique and humorous ways. So here’s the home page of [Una Kravets][3]{: target="_blank" rel="noopener"}, a well-known web developer. And this minimalist design uses coding brackets combined with a colorful unicorn logo, which immediately lets us know she’s a coder with a sense of humor.
+But what does being familiar mean, though? In my previous example, the menu here was located in an unfamiliar location and therefore pretty confusing. However, familiar also means meeting your audience’s expectations. Here’s an example of two web developer sites, both of which immediately confirm what they do but in unique and humorous ways. So here’s the homepage of [Una Kravets][3]{: target="_blank" rel="noopener"}, a well-known web developer. And this minimalist design uses coding brackets combined with a colorful unicorn logo, which immediately lets us know she’s a coder with a sense of humor.
 
 Here’s the website of Mina Markham. And here, I see the URL of her website [mina.codes][2]{: target="_blank" rel="noopener"}, which is a nifty way of signaling her specialty before you even visit the site, which is a very nice touch.
 
