@@ -15,7 +15,7 @@ video_ID: zz_PtAeEtGY
 video_duration: "4:35"
 featured: false
 short_description: "In this tutorial, you’ll learn three ways to make a great first impression with your online portfolio and improve your chances of getting hired."
-project_file_source: Figma Community
+project_file_source:
 project_files:
 related_content:
 - label: "Keep it Simple: How Visual Complexity and Preferences Impact Search Efficiency on Websites"
@@ -24,5 +24,7 @@ related_content:
   url: "https://research.google/pubs/pub38315/"
 - label: "The Design Leader Job Search. It’s All About the Brand (Yours) by Susie Hall"
   url: "https://www.linkedin.com/pulse/design-leader-job-search-its-all-brand-yours-susie-hall/"
+- label: "Gymnasium: Crafting a Concise About Page"
+  url: "https://thegymnasium.com/courses/take5/crafting-a-concise-about-page"
 skill_level: "Beginner"
 ---
