@@ -22,7 +22,10 @@ Here’s a typical example of what a UX (user experience) designer might say in 
 
 So you could say something like this:
 
-> Top three reasons why making user flows is my jam — they help communicate design to clients, they help my team get better insights from usability tests, and they help web developers like me.
+> Top three reasons why making user flows is my jam!
+> 1. They help communicate design to clients.
+> 2. They help my team get better insights from usability tests.
+> 3. They help web developers like me.
 
 So this description tells the user much more about your industry experience and adds a little bit of humor, signaling that you might be a fun person to work with. Now, defining what’s important to you is not always easy. But if you don’t take the time and effort to do it, someone else will.
 
