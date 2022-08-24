@@ -49,7 +49,7 @@ One replacement I’ve noticed is people putting a laundry list of their social 
 
 So what’s the solution? Simply tell people your preferred method of contact, whatever that is. Just make it clear so your visitor can reach you with confidence, which in many ways is the entire point of a portfolio.
 
-For more information, check out our [**Resources**](#tutorial-resources) section. And be sure to check out [our other Take 5 tutorials][1], as well as the entire [course catalog][2], here at Gymnasium.
+For more information, check out our [**Resources**](#tutorial-resources) section. And be sure to check out our other [Take 5 tutorials][1], as well as the entire [course catalog][2], here at Gymnasium.
 
 [1]: https://thegymnasium.com/courses/take5
 [2]: https://thegymnasium.com/courses
