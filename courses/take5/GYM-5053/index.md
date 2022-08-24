@@ -8,7 +8,11 @@ Jeremy Osborn: Your online portfolio is essentially the first step of a job inte
 
 In this tutorial, you’ll learn three tips on how to craft a concise About page to convince people that you’re someone they might want to work with. Now, I looked at numerous examples, and I came to the conclusion that there is no single formula for how to write your About page. Some people include a description of their skills. Some people write in third person. Some include a list of awards. And some include insights into their personal life.
 
-Ultimately, I discovered that the best pages had one thing in common. Namely, a great About page strengthens the impact of a good first impression. So if someone’s taking the time to read your About page, it means you’ve done a good job getting them that far. They’re now curious to learn more about you, and it’s time to draw them in further.
+Ultimately, I discovered that the best pages had one thing in common.
+
+**Big idea:** Namely, a great About page strengthens the impact of a good first impression.
+
+So if someone’s taking the time to read your About page, it means you’ve done a good job getting them that far. They’re now curious to learn more about you, and it’s time to draw them in further.
 
 So how do you do that?
 
@@ -35,9 +39,17 @@ In the real world, you begin a job interview by shaking hands, smiling, and look
 
 Now, humans are hardwired by evolution to seek faces. And without one on your site, you’re missing an opportunity to develop trust. So adding a profile photo can add a sense of reassurance and connect you virtually to your visitors.
 
-Now, if you have the budget, a good photographer can be worth it. But if you want to do it on your own, here’s a professional secret. Whatever number of photos you think you need, take two to three times more than that. It sounds obvious, but too many people just take a couple of photos and call it a day. No. Every photo you have increases your chance of choosing one you’re happy with.
+Now, if you have the budget, a good photographer can be worth it.
 
-Now, another way to foster credibility is through testimonials. Recommendations from past or current coworkers or employers are a great start. But here’s a pro tip. Give a recommendation to get a recommendation. By giving someone a recommendation first, you actually set the tone for the type of recommendation you want back, not to mention increase the odds that you’ll actually receive it.
+But if you want to do it on your own, here’s a **professional secret:** Whatever number of photos you think you need, take two to three times more than that.
+
+It sounds obvious, but too many people just take a couple of photos and call it a day. No. Every photo you have increases your chance of choosing one you’re happy with.
+
+Now, another way to foster credibility is through testimonials. Recommendations from past or current coworkers or employers are a great start.
+
+But here’s a **pro tip:** Give a recommendation to get a recommendation.
+
+By giving someone a recommendation first, you actually set the tone for the type of recommendation you want back, not to mention increase the odds that you’ll actually receive it.
 
 Finally, adding details about your personal life is a matter of finding a good balance. No detail subliminally portrays you as a boring person, no matter how unfair that seems. Too much detail is also a bad idea because chances are the visitor will just quit reading before they get to the end. Somewhere here in the middle is the sweet spot of just enough information. But your job, of course, is to make it authentic and engaging.
 
@@ -47,7 +59,9 @@ So if you’ve done a good job with everything up to this point, people will be 
 
 One replacement I’ve noticed is people putting a laundry list of their social media in their contact section. My problem here is that offering multiple options with no clear direction is just adding confusion at the exact time when it should be simple.
 
-So what’s the solution? Simply tell people your preferred method of contact, whatever that is. Just make it clear so your visitor can reach you with confidence, which in many ways is the entire point of a portfolio.
+So what’s **the solution?** Simply tell people your preferred method of contact, whatever that is.
+
+Just make it clear so your visitor can reach you with confidence, which in many ways is the entire point of a portfolio.
 
 For more information, check out our [**Resources**](#tutorial-resources) section. And be sure to check out our other [Take 5 tutorials][1], as well as the entire [course catalog][2], here at Gymnasium.
 
