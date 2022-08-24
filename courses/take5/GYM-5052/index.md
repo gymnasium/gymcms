@@ -18,9 +18,15 @@ Whether desktop or mobile, it’s everything visible from the top of the page to
 
 For some reason, many designers include design elements they would never use on a client site. I’m talking about custom mouse cursors, pop-up windows, confusing site navigation, gratuitous animations, and the list goes on.
 
-I have many theories on this, but ultimately I think it’s because people haven’t answered or even asked themselves these two questions. First, can you answer the question, what sort of work am I trying to get? By definition, portfolios show off the work you’ve done in the past. But think hard. Is this *really* the type of work you want to be doing in the future? If so, great.
+I have many theories on this, but ultimately I think it’s because people haven’t answered or even asked themselves these two questions.
 
-But if you’re looking for a change or perhaps a career pivot, you should be clear about that so you can answer question number two. Who is the most important audience for my portfolio site? Understanding who your audience is means doing your research. And I’m not convinced enough people do this for their own sites.
+First, can you answer **the question:** What sort of work am I trying to get?
+
+By definition, portfolios show off the work you’ve done in the past. But think hard. Is this *really* the type of work you want to be doing in the future? If so, great.
+
+But if you’re looking for a change or perhaps a career pivot, you should be clear about that so you can answer **question number two**: Who is the most important audience for my portfolio site?
+
+Understanding who your audience is means doing your research. And I’m not convinced enough people do this for their own sites.
 
 For example, you might assume your most important audience is designers. But consider the creative director we saw earlier. She’s looking for good visuals, sure, but she’s actually more interested in your problem-solving skills, judgment, and potential fit with her team.
 
@@ -46,7 +52,7 @@ So this statement is not a conversation starter. Let’s take a look at a more i
 
 *Much better.* Now I’m intrigued by this combination of elegant and accessible. And I’m eager to learn more. Exactly what you want when making a good first impression.
 
-For more information, check out our [**Resources**](#tutorial-resources) section for links to articles and other tutorials. And thanks for watching. Be sure to check out [our other Take 5 videos][4] as well as the entire [course catalog][5] here at Gymnasium.
+For more information, check out our [**Resources**](#tutorial-resources) section for links to articles and other tutorials. And thanks for watching. Be sure to check out our other [Take 5 videos][4] as well as the entire [course catalog][5] here at Gymnasium.
 
 [1]: https://www.amandabaughan.com/pubs/2020CHI_KeepItSimple.pdf
 [2]: http://mina.codes
