@@ -16,7 +16,7 @@ So if someone’s taking the time to read your About page, it means you’ve don
 
 So how do you do that?
 
-**Tip (number) one:** Decide what’s most important to you and explain why.
+**Tip number one:** Decide what’s most important to you and explain why.
 
 So your about page is a golden opportunity for you to control the conversation and emphasize the type of work you want to do in the future.
 
