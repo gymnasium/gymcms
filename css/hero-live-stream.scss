@@ -62,63 +62,42 @@
 
 // --- Twitch (Embed) ---*/
 
-.twitch-embed {
-	position: relative;
-}
-
-.twitch-stream,
-.twitch-chat {
+#twitch {
   position: relative;
-  width: 100%;
 }
 
-.twitch-stream {
-  margin-bottom: -1px;
-}
-
-.twitch-chat {
-  display: none;
-}
-
-.twitch-stream:before,
-.twitch-chat:before {
-  content: "";
-  display: block;
-  padding-top: 56.25%; // 16:9
-}
-
-.twitch-stream iframe,
-.twitch-chat iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+#twitch iframe {
   width: 100%;
   height: 100%;
   border: 0;
-  overflow: hidden;
 }
 
-@include breakpoint(24em, min) {
-
-.twitch-chat {
-  display: block;
-}
-
-}
-
-@include breakpoint(60em, min) {
-
-.twitch-stream {
+.twitch-video {
   position: relative;
-  width: 75%;
+  height: 0;
+  padding-top: 56.25%;
 }
 
-.twitch-chat {
+.twitch-video iframe {
   position: absolute;
   top: 0;
-  bottom: 0;
-  right: 0;
-  width: 25%;
 }
 
+.twitch-chat {
+  height: 24em;
+}
+
+@include breakpoint(medium, min) {
+  .twitch-video {
+    width: 75%;
+    padding-top: 42.1875%;
+  }
+
+  .twitch-chat {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+  }
 }
