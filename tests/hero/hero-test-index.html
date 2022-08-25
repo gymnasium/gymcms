@@ -24,11 +24,11 @@ permalink: /tests/hero
 <p>
   <b>Source:</b>
   <code>
-  {{ hero.source }}
+  {{ hero.embed_source }}
   {%
-    if hero.source != "twitch"
-    and hero.source != "youtube"
-    or hero.source == undefined
+    if hero.embed_source != "twitch"
+    and hero.embed_source != "youtube"
+    or hero.embed_source == undefined
   %}
     <mark>error</mark>
   {% endif %}
