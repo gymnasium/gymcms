@@ -4,10 +4,7 @@ permalink: /courses/take5/
 ---
 {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
 
-<preload rel="stylesheet" as="style" href="{{ site.url }}/css/take5.css">
-<link rel="stylesheet" href="{{ site.url }}/css/take5.css">
-
-{%- include take5/detail-opener-js.html -%}
+<link rel="stylesheet" href="{{ site.url }}/css/take5.css" fetchpriority="high">
 
 <main id="main" role="main">
   <header class="take5--about" id="about">
@@ -103,7 +100,7 @@ permalink: /courses/take5/
               <article class="tutorial">
                 <div class="artwork" data-duration="{{ featured_video_duration }}">
                   <a href="{{ featured_url }}" title="Watch Video">
-                    <img alt="{{ featured_description }}" src="{{ site.url }}{{ featured_poster_art }}" width="1280" height="720" decoding="async">
+                    <img alt="{{ featured_description }}" src="{{ site.url }}{{ featured_poster_art }}?{{ site.time | date:'%s' }}" width="1280" height="720" decoding="async" fetchpriority="high" loading="eager">
                   </a>
                 </div>
                 <header>
@@ -155,3 +152,5 @@ permalink: /courses/take5/
   </div><!-- .take5--main -->
   {%- endif -%}
 </main>
+
+{%- include take5/detail-opener-js.html -%}
