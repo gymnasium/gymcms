@@ -134,7 +134,7 @@ TODO: rewrite/include these in the JS above?
 {%- comment -%}
 Add vendor JS file here instead of theme
 {%- endcomment -%}
-<script defer src="{{site.url}}/js/vendor/bootstrap.min.js?{{ site.time | date:'%s' }}"></script>
+<script async defer src="{{site.url}}/js/vendor/bootstrap.min.js?{{ site.time | date:'%s' }}"></script>
 <script async defer src="{{site.url}}/js/vendor/jquery.validate.min.js?{{ site.time | date:'%s' }}"></script>
 {%- comment -%}
 TODO: prism.js is only really used on the quiz/exam page? Maybe we stick it behind the authentication/login
