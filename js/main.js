@@ -1,0 +1,13 @@
+---
+---
+{%comment%}
+Here, we are combining all of our JS files to reduce requests
+TODO: audit these to figure out which we need to load, and where. For example, the prism.js file is only used on quiz/exam pages. Maybe we create an auth.js file, which loads the resources needed for logged in users? Alternately, we pass that file back to the theme.
+{%endcomment%}
+
+{% include_relative gymnasium.js %}
+{% include_relative vendor/openedx/header.js %}
+{% include_relative vendor/openedx/navigation.js %}
+{% include_relative vendor/bootstrap.min.js %}
+{% include_relative vendor/jquery.validate.min.js %}
+{% include_relative vendor/prism.min.js %}
