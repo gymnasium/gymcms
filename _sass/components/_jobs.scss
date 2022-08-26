@@ -1,12 +1,4 @@
----
----
-@import 'variables';
-@import 'mixins';
-
-.hide {
-  display: none; // TODO: this is a repeat of what is available in the defaults mixin
-}
-
+// Location dropdown
 .location {
   margin: 1rem 0 2.666rem;
 
@@ -20,6 +12,7 @@
 }
 
 // Someday we'll make this part of our global CSS
+// TODO: we could use list-unstyled instead? Maybe part of bootstrap already
 .list-hr ul {
   list-style: none;
   padding-left: 0;
