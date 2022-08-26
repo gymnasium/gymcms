@@ -120,24 +120,10 @@ JS or tracking pixels to be included at the bottom of the theme
   {%- assign geolocator_src = "?gymdev=true" | prepend: geolocator_src -%}
 {%- endif -%}
 
-<script id="gymjs" async defer src="{{site.url}}/js/gymnasium.js?{{ site.time | date:'%s' }}"></script>
-{%- comment -%}
-TODO: rewrite/include these in the JS above?
-{%- endcomment -%}
-<script id="primary-navigation" async defer src="{{site.url}}/js/vendor/openedx/header.js?{{ site.time | date:'%s' }}"></script>
-<script id="accordion-navigation" async defer src="{{site.url}}/js/vendor/openedx/navigation.js?{{ site.time | date:'%s' }}"></script>
+<script id="gymjs" async defer src="{{site.url}}/js/main.js?{{ site.time | date:'%s' }}"></script>
 
 {%- comment -%} Disabling for now...- RE
 <iframe id="geolocator" src="{{ geolocator_src }}" frameborder="0" style="width:1px;height:1px;visibility:hidden;display:none;"></iframe>
 {%- endcomment -%}
 
-{%- comment -%}
-Add vendor JS file here instead of theme
-{%- endcomment -%}
-<script async defer src="{{site.url}}/js/vendor/bootstrap.min.js?{{ site.time | date:'%s' }}"></script>
-<script async defer src="{{site.url}}/js/vendor/jquery.validate.min.js?{{ site.time | date:'%s' }}"></script>
-{%- comment -%}
-TODO: prism.js is only really used on the quiz/exam page? Maybe we stick it behind the authentication/login
-{%- endcomment -%}
-<script async defer src="{{site.url}}/js/vendor/prism.min.js?{{ site.time | date:'%s' }}"></script>
 <script async defer src="{{site.url}}/js/vendor/cookiebanner.js?{{ site.time | date:'%s' }}" id="cookiebanner" data-link="#f89820" data-message="We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. Find out more about how we use cookies in our" data-linkmsg="Privacy Policy." data-moreinfo="/privacy-policy"></script>
