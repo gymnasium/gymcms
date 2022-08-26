@@ -1,0 +1,30 @@
+---
+course_ID: GYM-5053
+title: "Crafting a Concise About Page"
+date: 2022-08-24T00:00:00-04:00
+course_type: take5
+url: /courses/take5/GYM-5053/
+poster_art: /img/take5/posters/gym-5053.jpg
+live: true
+instructor: "Jeremy Osborn"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "Career Skills"
+subtopics:
+  - label: "Portfolio Development"
+video_ID: DgungAdVLPA
+video_duration: "4:52"
+featured: true
+short_description: "In this tutorial, you’ll learn three ways to create a compelling and unique About page for your online portfolio."
+project_file_source:
+project_files:
+related_content:
+- label: "How to Write an 'About Me' Page That Gets You Hired by Nicole Fenton"
+  url: "https://creativecloud.adobe.com/cc/discover/article/how-to-write-an-about-me-page-that-gets-you-hired"
+- label: "Take a New Profile Picture with an Easy Home Photo Shoot"
+  url: "https://www.scienceofpeople.com/home-photo-shoot/"
+- label: "Are people still using contact forms? By Birgitta Rún Sveinbjörnsdóttir"
+  url: "https://uxdesign.cc/your-users-do-not-trust-contact-forms-but-what-do-they-use-instead-a89bee668e48"
+- label: "Gymnasium: Make a Great First Impression with Your Portfolio"
+  url: "https://thegymnasium.com/courses/take5/make-a-great-first-impression-with-your-portfolio"
+skill_level: "Beginner"
+---
