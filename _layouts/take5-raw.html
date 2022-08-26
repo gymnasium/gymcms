@@ -4,9 +4,8 @@
     {%- include partials/test-top.html -%}
 {%- endif -%}
 
-<link rel="stylesheet" href="{{ site.url }}/css/take5.css?{{ site.time | date:'%s' }}">
+<link rel="stylesheet" href="{{ site.url }}/css/take5.css?{{ site.time | date:'%s' }}" fetchpriority="high">
 
-{% include take5/detail-opener-js.html %}
 {% assign course = site.data.take5[page.course_ID] %}
 
 <div class="container">
@@ -181,5 +180,7 @@
 {%- if jekyll.environment == "local" -%}
     {%- include partials/test-bottom.html -%}
 {%- endif -%}
+
+{% include take5/detail-opener-js.html %}
 
 {%- include build-timestamp.html -%}
