@@ -43,7 +43,7 @@ Now, if you have the budget, a good photographer can be worth it.
 
 But if you want to do it on your own, here’s a **professional secret:** Whatever number of photos you think you need, take two to three times more than that.
 
-It sounds obvious, but too many people just take a couple of photos and call it a day. No. Every photo you have increases your chance of choosing one you’re happy with.
+It sounds obvious, but too many people just take a couple of photos and call it a day. *No.* Every photo you have increases your chance of choosing one you’re happy with.
 
 Now, another way to foster credibility is through testimonials. Recommendations from past or current coworkers or employers are a great start.
 

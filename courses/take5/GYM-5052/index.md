@@ -30,7 +30,7 @@ Understanding who your audience is means doing your research. And I’m not conv
 
 For example, you might assume your most important audience is designers. But consider the creative director we saw earlier. She’s looking for good visuals, sure, but she’s actually more interested in your problem-solving skills, judgment, and potential fit with her team.
 
-**Tip (number) two:** Keep your visual design simple and familiar.
+**Tip number two:** Keep your visual design simple and familiar.
 
 [This 2020 study][1]{: target="_blank" rel="noopener"} found evidence that highly complex or cluttered websites are more likely to create a negative impression than websites of medium or low complexity.
 
