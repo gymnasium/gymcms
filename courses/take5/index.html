@@ -4,7 +4,7 @@ permalink: /courses/take5/
 ---
 {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
 
-<link rel="stylesheet" href="{{ site.url }}/css/take5.css" fetchpriority="high">
+<link rel="stylesheet" href="{{ site.url }}/css/take5.css?{{ site.time | date:'%s' }}" fetchpriority="high">
 
 <main id="main" role="main">
   <header class="take5--about" id="about">
