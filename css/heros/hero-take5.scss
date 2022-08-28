@@ -145,21 +145,3 @@
   border: 2px solid $gym-white !important;
   z-index: 1;
 }
-
-// misc details
-
-[hidden] {
-  display: none;
-}
-
-.block {
-  display: block;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.no-wrap {
-  white-space: nowrap;
-}
