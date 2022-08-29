@@ -4,14 +4,6 @@
 @import 'mixins';
 @import 'animations';
 
-.all-caps {
-  text-transform: uppercase;
-}
-
-.no-wrap {
-  white-space: nowrap;
-}
-
 .webinar-12-2018 {
   position: relative;
   background: $gym-green url("{{ site.url }}/home/img/hero-webinar-12-2018/hero-webinar-12-2018-1920w.png") no-repeat center center;
@@ -34,8 +26,6 @@
 }
 
 @include image-fade;
-
-
 
 .webinar-12-2018 .content {
   font-size: 114.2857142857143%;

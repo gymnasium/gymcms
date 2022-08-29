@@ -124,20 +124,6 @@ a.gym-button-secondary:focus {
   background-color: $gym-dark-gray !important;
 }
 
-// misc details
-
-[hidden] {
-  display: none;
-}
-
-.block {
-  display: block;
-}
-
-.inline-block {
-  display: inline-block;
-}
-
 @include breakpoint(36em, min) {
 
   .no-wrap {
