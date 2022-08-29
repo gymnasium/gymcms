@@ -12,7 +12,7 @@
 
   select {
     color: $gym-dark-gray !important; // needed to override a very greedy wildcard selector on the home page
-  
+
     @include breakpoint(40em, min) {
       max-width: 24rem;
     }
@@ -44,5 +44,3 @@
     }
   }
 }
-
-

@@ -136,17 +136,23 @@ span {
 }
 
 // Misc text details
-
-.break-word {
-  word-break: break-all;
-}
+// TODO: Consolidate and cleanup
 
 .all-caps {
   text-transform: uppercase;
 }
 
-.no-wrap {
-  white-space: nowrap;
+.break-word {
+  word-break: break-all;
+}
+
+.block,
+.break {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 body,
@@ -337,7 +343,7 @@ header.global {
 }
 
 .content-wrapper#content {
-  padding-bottom: 1em;
+  // padding-bottom: 1em;
   background-color: $gym-light-page-background;
 }
 
@@ -1079,10 +1085,6 @@ Footer CSS (migrated from footer.scss)
     line-height: 1.25;
     margin-top: 0;
     margin-bottom: 0;
-  }
-
-  .all-caps {
-    text-transform: uppercase;
   }
 
   .gym-brand {

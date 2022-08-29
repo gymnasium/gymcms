@@ -96,10 +96,6 @@
 
 // typographical details
 
-#main .all-caps {
-  text-transform: uppercase;
-}
-
 .tutorial {
   b.all-caps {
     font-size: 80%;
@@ -505,20 +501,32 @@ main h3 {
   display: inline-block;
 }
 
-details.take5--transcript {
-  margin-top: 1.2em;
+article.take5--transcript {
+  margin-top: 1.6em;
 }
 
 #tutorial-transcript {
   ol,
   ul,
   blockquote {
-    margin-top: 1em;
+    font-size: 16px;
+    line-height: 1.45;
+    margin-top: 1.15em;
   }
 
-  li {
+  ol,
+  ul {
+    padding-left: 1.15em;
+  }
+
+  li,
+  blockquote p {
     font-size: 1.15em;
-    line-height: 1.45;
+  }
+
+  li:not(blockquote li) {
+    padding-left: 0.8em;
+    margin-top: inherit;
   }
 
   [class*="language-"] {
@@ -543,11 +551,6 @@ details.take5--transcript {
   .example {
     background-color: transparent;
     padding: 1.2em;
-  }
-
-  blockquote p {
-    font-size: inherit;
-    line-height: inherit;
   }
 
   blockquote p:first-child {
