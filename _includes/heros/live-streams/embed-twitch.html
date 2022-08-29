@@ -1,5 +1,5 @@
-<div id="twitch">
-  <div class="twitch-video">
+<div id="embed">
+  <div class="video">
     <iframe
       src="https://player.twitch.tv/?channel={{ hero.twitch_channel}}&parent={{ domain_parent }}&autoplay={{ hero.embed_auto_play }}"
       width="{{ hero.embed_width }}"
@@ -11,7 +11,7 @@
       loading="{{ hero.embed_loading }}">
     </iframe>
   </div>
-  <div class="twitch-chat">
+  <div class="chat">
     <iframe
       src="https://www.twitch.tv/embed/{{ hero.twitch_channel}}/chat?parent={{ domain_parent }}"
       frameborder="{{ hero.embed_frameborder }}"
