@@ -4,8 +4,10 @@
 
 <header>
   <div class="container">
-    <h2>{{ hero.title }}</h2>
-    <p role="doc-subtitle">with {{ hero.byline }}</p>
+    <hgroup>
+      <h2>{{ hero.title }}</h2>
+      <p><b>with {{ hero.byline }}</b></p>
+    </hgroup>
     <p>{{ hero.short_description }}</p>
   </div>
 </header>
