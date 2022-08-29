@@ -7,13 +7,13 @@ permalink: /tests/hero
 
 <h2>Public Hero</h2>
 
-<p><a href="/tests/hero-public">current_promo</a>: <code>{{ hero.current_promo }}</code></p>
+<p><a href="/tests/hero-public">current_promo</a>: <code>{{ hero.current_promo | prepend: "/heros/" }}</code></p>
 
 
 
 <h2>Authenticated Hero</h2>
 
-<p><a href="/tests/hero-auth">auth_promo</a>: <code>{{ hero.auth_promo | prepend: "/heros/"}}</code></p>
+<p><a href="/tests/hero-auth">auth_promo</a>: <code>{{ hero.auth_promo | prepend: "/heros/" }}</code></p>
 
 
 
