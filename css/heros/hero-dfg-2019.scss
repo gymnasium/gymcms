@@ -3,14 +3,6 @@
 @import 'variables';
 @import 'mixins';
 
-.block {
-  display: block;
-}
-
-.no-wrap {
-  white-space: nowrap;
-}
-
 #hero-dfg-2019 {
   background-color: #dcd2b9;
   background-image: url("{{ site.url }}/home/img/hero-dfg-2019/designing-for-good-2019-hero-1000w.jpg"), linear-gradient(#e5e2d3, #c9b09c);
