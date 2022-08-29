@@ -9,7 +9,7 @@ live_stream: true
 # Source
 # Set twitch/youtube (lowercase)
 # Note: As a fallback, the current promo displays if a typo/erroneous/null source value is set
-embed_source: "twitch"
+embed_source: "youtube"
 
 # Content
 # Update per live stream, if needed
@@ -21,7 +21,7 @@ byline: "The Gymnasium Team"
 twitch_channel: "andrewpmiller"
 
 # youtube
-youtube_video_ID: "zRNUPU2dujU"
+youtube_video_ID: "9kg-MBpGgpg"
 
 # Aspect Ratio 16:19
 embed_width: "854"
