@@ -6,14 +6,6 @@
 
 @include sway;
 
-.all-caps {
-  text-transform: uppercase;
-}
-
-.no-wrap {
-  white-space: nowrap;
-}
-
 .blue-beanie-day {
   background-color: #00aeef;
   background-image: linear-gradient(to top, #00aeef 0%, #007fae 99%, #007fae 100%);
