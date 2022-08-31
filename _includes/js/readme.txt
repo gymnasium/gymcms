@@ -31,34 +31,27 @@ proctoring_js = (
     ]
 )
 
-# Before a student accesses courseware, we do not
-# need many of the JS dependencies.  This includes
-# only the dependencies used everywhere in the LMS
-# (including the dashboard/account/profile pages)
-# Currently, this partially duplicates the "main vendor"
-# JavaScript file, so only one of the two should be included
-# on a page at any time.
-# In the future, we will likely refactor this to use
-# RequireJS and an optimizer.
+# base_vendor_js remapping to _includes folder
+
 base_vendor_js = [
-    # 'common/js/vendor/jquery.js',
-    # 'common/js/vendor/jquery-migrate.js',
-    # 'js/vendor/jquery.cookie.js',
-    # 'js/vendor/url.min.js',
-    # 'common/js/vendor/underscore.js',
-    # 'common/js/vendor/underscore.string.js',
-    # 'common/js/vendor/picturefill.js',
+    'js/vendor/jquery.js',
+    'js/vendor/jquery-migrate.js',
+    'js/vendor/jquery.cookie.js',
+    'js/vendor/url.min.js',
+    'js/vendor/underscore.js',
+    'js/vendor/underscore.string.js',
+    'js/vendor/picturefill.js',
 
     # Make some edX UI Toolkit utilities available in the global "edx" namespace
-    # 'edx-ui-toolkit/js/utils/global-loader.js',
-    # 'edx-ui-toolkit/js/utils/string-utils.js',
-    # 'edx-ui-toolkit/js/utils/html-utils.js',
+    'js/vendor/edx-ui-toolkit/global-loader.js',
+    'js/vendor/edx-ui-toolkit/string-utils.js',
+    'js/vendor/edx-ui-toolkit/html-utils.js',
 
     # Finally load RequireJS and dependent vendor libraries
-    # 'common/js/vendor/require.js',
-    'js/RequireJS-namespace-undefine.js',
+    'js/vendor/require.js',
+    'js/vendor/RequireJS-namespace-undefine.js',
     'js/vendor/URI.min.js',
-    # 'common/js/vendor/backbone.js'
+    'js/vendor/backbone.js'
 ]
 
 main_vendor_js = base_vendor_js + [
