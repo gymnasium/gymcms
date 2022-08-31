@@ -43,22 +43,22 @@ proctoring_js = (
 base_vendor_js = [
     # 'common/js/vendor/jquery.js',
     # 'common/js/vendor/jquery-migrate.js',
-    'js/vendor/jquery.cookie.js',
-    'js/vendor/url.min.js',
+    # 'js/vendor/jquery.cookie.js',
+    # 'js/vendor/url.min.js',
     # 'common/js/vendor/underscore.js',
     # 'common/js/vendor/underscore.string.js',
     # 'common/js/vendor/picturefill.js',
 
     # Make some edX UI Toolkit utilities available in the global "edx" namespace
-    'edx-ui-toolkit/js/utils/global-loader.js',
-    'edx-ui-toolkit/js/utils/string-utils.js',
-    'edx-ui-toolkit/js/utils/html-utils.js',
+    # 'edx-ui-toolkit/js/utils/global-loader.js',
+    # 'edx-ui-toolkit/js/utils/string-utils.js',
+    # 'edx-ui-toolkit/js/utils/html-utils.js',
 
     # Finally load RequireJS and dependent vendor libraries
     # 'common/js/vendor/require.js',
     'js/RequireJS-namespace-undefine.js',
     'js/vendor/URI.min.js',
-    'common/js/vendor/backbone.js'
+    # 'common/js/vendor/backbone.js'
 ]
 
 main_vendor_js = base_vendor_js + [
