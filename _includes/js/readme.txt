@@ -32,33 +32,33 @@ proctoring_js = (
 )
 
 # base_vendor_js remapping to _includes folder
-
 base_vendor_js = [
-    'js/vendor/jquery.js',
-    'js/vendor/jquery-migrate.js',
-    'js/vendor/jquery.cookie.js',
-    'js/vendor/url.min.js',
-    'js/vendor/underscore.js',
-    'js/vendor/underscore.string.js',
-    'js/vendor/picturefill.js',
+  'js/vendor/jquery.js',
+  'js/vendor/jquery-migrate.js',
+  'js/vendor/jquery.cookie.js',
+  'js/vendor/url.min.js',
+  'js/vendor/underscore.js',
+  'js/vendor/underscore.string.js',
+  'js/vendor/picturefill.js',
 
-    # Make some edX UI Toolkit utilities available in the global "edx" namespace
-    'js/vendor/edx-ui-toolkit/global-loader.js',
-    'js/vendor/edx-ui-toolkit/string-utils.js',
-    'js/vendor/edx-ui-toolkit/html-utils.js',
+  # Make some edX UI Toolkit utilities available in the global "edx" namespace
+  'js/vendor/edx-ui-toolkit/global-loader.js',
+  'js/vendor/edx-ui-toolkit/string-utils.js',
+  'js/vendor/edx-ui-toolkit/html-utils.js',
 
-    # Finally load RequireJS and dependent vendor libraries
-    'js/vendor/require.js',
-    'js/vendor/RequireJS-namespace-undefine.js',
-    'js/vendor/URI.min.js',
-    'js/vendor/backbone.js'
+  # Finally load RequireJS and dependent vendor libraries
+  'js/vendor/require.js',
+  'js/vendor/RequireJS-namespace-undefine.js',
+  'js/vendor/URI.min.js',
+  'js/vendor/backbone.js'
 ]
 
+# main_vendor_js remapping to _includes folder
 main_vendor_js = base_vendor_js + [
-    'js/vendor/json2.js',
-    'js/vendor/jquery-ui.min.js',
-    'js/vendor/jquery.qtip.min.js',
-    'js/vendor/jquery.ba-bbq.min.js',
+  'js/vendor/json2.js',
+  'js/vendor/jquery-ui.min.js',
+  'js/vendor/jquery.qtip.min.js',
+  'js/vendor/jquery.ba-bbq.min.js',
 ]
 
 # Common files used by both RequireJS code and non-RequireJS code
