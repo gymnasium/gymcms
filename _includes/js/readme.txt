@@ -61,18 +61,18 @@ main_vendor_js = base_vendor_js + [
   'js/vendor/jquery.ba-bbq.min.js',
 ]
 
-# Common files used by both RequireJS code and non-RequireJS code
+# Common files remapping to _includes folder (used by both RequireJS code and non-RequireJS code)
 base_application_js = [
-    'js/src/utility.js',
-    'js/src/logger.js',
-    'js/user_dropdown_v1.js',  # Custom dropdown keyboard handling for legacy pages
-    'js/dialog_tab_controls.js',
-    'js/src/string_utils.js',
-    'js/form.ext.js',
-    'js/src/ie_shim.js',
-    'js/src/accessibility_tools.js',
-    'js/toggle_login_modal.js',
-    'js/src/lang_edx.js',
+  'js/vendor/openedx/utility.js',
+  'js/vendor/openedx/logger.js',
+  'js/vendor/openedx/user_dropdown_v1.js',  # Custom dropdown keyboard handling for legacy pages
+  'js/vendor/openedx/dialog_tab_controls.js',
+  'js/vendor/openedx/string_utils.js',
+  'js/vendor/openedx/form.ext.js',
+  'js/vendor/openedx/ie_shim.js',
+  'js/vendor/openedx/accessibility_tools.js',
+  'js/vendor/openedx/toggle_login_modal.js',
+  'js/vendor/openedx/lang_edx.js',
 ]
 
 dashboard_js = (
