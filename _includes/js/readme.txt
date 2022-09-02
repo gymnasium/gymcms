@@ -65,7 +65,7 @@ main_vendor_js = base_vendor_js + [
 base_application_js = [
   'js/vendor/openedx/utility.js',
   'js/vendor/openedx/logger.js',
-  'js/vendor/openedx/user_dropdown_v1.js',  # Custom dropdown keyboard handling for legacy pages
+  'js/vendor/openedx/user_dropdown_v1.js',  # Custom dropdown keyboard handling for legacy pages (very likely not in use on gymnasium)
   'js/vendor/openedx/dialog_tab_controls.js',
   'js/vendor/openedx/string_utils.js',
   'js/vendor/openedx/form.ext.js',
