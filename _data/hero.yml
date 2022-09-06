@@ -14,24 +14,23 @@ embed_source: "youtube"
 # Content
 # Update per live stream, if needed
 title: "Live Stream"
-short_description: "A live transmission of an event over the Internet."
+short_description: "Working within Spatial."
 byline: "The Gymnasium Team"
 
 # twitch
-# Docs: https://dev.twitch.tv/docs/embed
 twitch_channel: "andrewpmiller"
-# Set video-with-chat/video (Default: video-with-chat [when channel is set])
-twitch_layout: "video"
-# Set light/dark (Default: dark)
-twitch_theme: "dark"
 
 # youtube
-youtube_channel: "live_stream?channel="
-youtube_channel_ID: "UCcSnI3n2Jd-2qgncC6k_S1g"
-# Note: Set a video ID to override live stream channel, if needed
-# Example video ID: bQ-NdoBzd1A
-youtube_video_ID: ""
+youtube_video_ID: "9kg-MBpGgpg"
 
 # Aspect Ratio 16:19
 embed_width: "854"
 embed_height: "400"
+
+# Options
+embed_allowfullscreen: true
+embed_auto_play: false
+embed_fetchpriority: "high"
+embed_loading: "eager"
+embed_frameborder: "0"
+embed_scrolling: "0"
