@@ -43,11 +43,11 @@ a:focus {
 }
 
 .gym-link {
-  color: #f89820;
+  color: $gym-orange;
 }
 
 .gym-link:hover {
-  border-bottom: 1px solid #f89820;
+  border-bottom: 1px solid $gym-orange;
 }
 
 .gym-link:focus,

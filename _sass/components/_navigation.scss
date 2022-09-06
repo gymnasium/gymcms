@@ -54,7 +54,7 @@
     }
 
     .logged-in-username {
-      color: #f89820;
+      color: $gym-orange;
     }
   }
 
@@ -111,7 +111,7 @@
     padding: 0 0.2em;
     vertical-align: middle;
     border-top: 0.25em dashed transparent;
-    border-left: 0.25em solid #f89820;
+    border-left: 0.25em solid $gym-orange;
     border-bottom: 0.25em dashed transparent;
     margin-left: -0.8em;
   }
