@@ -1,11 +1,11 @@
 
 
 courseware_js = [
-    'js/ajax-error.js',
-    'js/courseware.js',
-    'js/histogram.js',
-    'js/navigation.js',
-    'js/modules/tab.js',
+'js/vendor/openedx/ajax-error.js',
+'js/vendor/openedx/courseware.js',
+'js/vendor/openedx/histogram.js',
+'js/vendor/openedx/navigation.js', # file no longer required (see @https://raw.githubusercontent.com/appsembler/edx-platform/appsembler/hawthorn/master/lms/static/js/navigation.js)
+'js/vendor/openedx/modules/tab.js',
 ]
 
 proctoring_js = (
