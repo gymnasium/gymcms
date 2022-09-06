@@ -9,10 +9,11 @@ $gym-gray-2: adjust-color($gym-gray, $lightness: 6.66%); // example: outputs #dd
 $gym-dark-gray: #444;
 $gym-dark-gray-2: #333;
 $gym-light-gray: #a6a6a6;
+$gym-mid-gray: #737373; // grayscale $gym-blue
 $gym-light-page-background: #ebebeb;
 
-$gym-button-background-hover: $gym-light-gray;
-$gym-button-background-active: #939393;
+$gym-button-background-hover: $gym-mid-gray;
+$gym-button-background-active: $gym-dark-gray-2;
 $gym-button-background-focus: $gym-button-background-active;
 
 // Fancy colors
