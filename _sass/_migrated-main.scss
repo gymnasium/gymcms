@@ -2450,7 +2450,7 @@ a.fade-cover {
   font-weight: 600;
 }
 .account-activation.info {
-  color: #f89820;
+  color: $gym-orange;
   background-color: #f2f8fb;
   border: #cce3f0 1px solid;
   padding: 5px;
@@ -9278,7 +9278,7 @@ section.course-info.outside-app,
 }
 .course-content .bookmark-button {
   border: 0;
-  background: #f89820;
+  background: $gym-orange;
   font-family: $gym-font-stack;
   font-weight: bold;
   font-size: 1em;
@@ -9293,7 +9293,7 @@ section.course-info.outside-app,
   font-family: FontAwesome;
 }
 .course-content .bookmark-button.bookmarked {
-  background: #f89820;
+  background: $gym-orange;
 }
 .course-content .bookmark-button.bookmarked:before {
   color: white;
@@ -9306,10 +9306,10 @@ section.course-info.outside-app,
 }
 .course-content .bookmark-button:hover:before,
 .course-content .bookmark-button.bookmarked:hover:before {
-  color: #f89820;
+  color: $gym-orange;
 }
 .course-content .bookmark-button.is-active:before {
-  color: #f89820;
+  color: $gym-orange;
 }
 
 .sequence-nav,
@@ -9753,8 +9753,8 @@ ul.account-nav li.account-nav-item button.account-nav-link {
   ul.account-nav
   li.account-nav-item
   button.account-nav-link.active:hover {
-  color: #f89820;
-  border-color: #f89820 !important;
+  color: $gym-orange;
+  border-color: $gym-orange !important;
   border-width: 1px !important;
 }
 .account-settings-container
@@ -9762,12 +9762,12 @@ ul.account-nav li.account-nav-item button.account-nav-link {
   ul.account-nav
   li.account-nav-item
   button.account-nav-link.active {
-  color: #f89820;
+  color: $gym-orange;
   border-color: transparent !important;
   border-width: 1px !important;
 }
 body .system-status-container {
-  background-color: #f89820;
+  background-color: $gym-orange;
   color: black;
 }
 
