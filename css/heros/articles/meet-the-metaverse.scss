@@ -69,7 +69,7 @@
       width: auto !important;
       background-color: transparent !important;
       padding: 1.2em 1.4em !important;
-      border: 2px solid $gym-orange !important;
+      border: 2px solid $gym-blue !important;
 
       & b {
         color: inherit;
@@ -79,7 +79,7 @@
       &:hover,
       &:focus,
       &:active {
-        border-color: $gym-light-gray !important;
+        border-color: $gym-mid-gray !important;
       }
     }
   }
