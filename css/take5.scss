@@ -5,27 +5,6 @@
 
 @include defaults;
 
-// gym button
-
-[role="main"] .gym-button {
-  width: auto !important; // !override / shrink-wrap
-  padding: 1.2em 2.2em !important; // !override
-  border-radius: 3px;
-}
-
-// gym text
-
-[role="main"] a.gym-link-secondary {
-  color: inherit;
-  border-bottom: 2px solid $gym-orange;
-}
-
-[role="main"] a.gym-link-secondary:hover,
-[role="main"] a.gym-link-secondary:focus {
-  color: inherit;
-  border-bottom: 2px solid $gym-dark-gray !important; // !
-}
-
 // --- #main ---
 
 // !override / reset/rescale Bootstrap (3) handiwork — future-friendly
@@ -41,26 +20,6 @@
 #main .title a,
 #main [class="all-caps"] a {
   line-height: 1.35;
-}
-
-#main .title a,
-#main a:not([class]) {
-  color: $gym-black;
-  text-decoration: none;
-  padding-bottom: 0.125rem;
-  border-bottom: 1px solid $gym-black;
-  margin-bottom: -0.125rem;
-}
-
-#main .title a:hover,
-#main .title a:focus,
-#main .title a:active,
-#main a:not([class]):hover,
-#main a:not([class]):focus,
-#main a:not([class]):active {
-  color: $gym-black;
-  text-decoration: none;
-  border-bottom: 2px solid $gym-black !important;
 }
 
 #main .title a:after,
@@ -594,14 +553,6 @@ article.take5--transcript {
     visibility: visible;
   }
 
-  #tutorial-resources summary:hover b,
-  #tutorial-resources summary:focus b,
-  #tutorial-resources summary:active b,
-  #tutorial-topics summary:hover b,
-  #tutorial-topics summary:focus b,
-  #tutorial-topics summary:active b {
-    border-bottom: 0 none;
-  }
 }
 
 
