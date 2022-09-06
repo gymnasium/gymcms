@@ -19,20 +19,20 @@
       margin-top: 0;
     }
   }
-  
+
   li {
     margin-top: .625em;
     margin-left: 1.2em;
   }
-  
+
   p {
     margin-bottom: 0;
   }
-  
+
   section {
     padding-top: 1.2em;
   }
-  
+
   address {
     padding-top: 1.2em;
 
@@ -41,29 +41,5 @@
       margin-bottom: 0;
      }
   }
-    
-  // back to top
-  
-  .to-top-link {
-    margin-top: 1.2em;
 
-    a  {
-      color: currentColor;
-      border-bottom: 1px solid currentColor;
-
-      &:hover,
-      &:focus {
-        color: currentColor !important;
-        border-bottom: 2px solid currentColor !important;
-      }
-    }
-
-    b::before {
-      display: inline-block;
-      content: "↑";
-      font-family: monospace, monospace;
-      vertical-align: top;
-      margin-right: .25em;
-    }
-  }
 }
