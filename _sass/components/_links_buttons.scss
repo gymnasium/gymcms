@@ -31,8 +31,8 @@ a:hover {
   a:focus,
   a:active {
     text-decoration: none;
-    border-bottom-width: 2px !important;
-    margin-bottom: -0.125rem;
+    border-bottom-width: 2px;
+    margin-bottom: -2px;
   }
 }
 
@@ -158,9 +158,11 @@ div.problem .action .save:not(:disabled) {
   width: auto;
 }
 
-.gym-button:focus,
+.gym-button:focus {
+  background: $gym-button-background-focus;
+}
+
 .gym-button:active {
-  text-decoration: none !important;
   background: $gym-button-background-active;
 }
 
@@ -169,7 +171,6 @@ div.problem .action .save:not(:disabled) {
   color: $gym-white;
   font-family: $gym-font-stack;
 }
-
 
 .gym-button b {
   font: bold 1.2em/1 $gym-font-stack;

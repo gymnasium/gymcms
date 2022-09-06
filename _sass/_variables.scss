@@ -13,8 +13,9 @@ $gym-mid-gray: #737373; // grayscale $gym-blue
 $gym-light-page-background: #ebebeb;
 
 $gym-button-background-hover: $gym-mid-gray;
-$gym-button-background-active: $gym-dark-gray-2;
-$gym-button-background-focus: $gym-button-background-active;
+$gym-button-background-focus: $gym-light-gray;
+$gym-button-background-active: $gym-button-background-focus;
+
 
 // Fancy colors
 $gym-green: #2c9959;
