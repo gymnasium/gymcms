@@ -757,24 +757,6 @@ article.take5--transcript {
   margin-top: 0.4em;
 }
 
-// back to top
-
-.to-top-link {
-  margin-top: 1.2em;
-
-  b {
-    color: $gym-dark-gray;
-
-    &::before {
-      display: inline-block;
-      content: "↑";
-      font-family: monospace, monospace;
-      vertical-align: baseline;
-      margin-right: .25em;
-    }
-  }
-}
-
 // --- grid layout ---
 
 @include grid-support;

@@ -52,24 +52,6 @@
   margin-top: 1.2em;
 }
 
-// back to top
-
-.to-top-link {
-  margin-top: 1.2em;
-
-  b {
-    color: $gym-dark-gray;
-
-    &::before {
-      display: inline-block;
-      content: "↑";
-      font-family: monospace, monospace;
-      vertical-align: top;
-      margin-right: .25em;
-    }
-  }
-}
-
 // gym button
 
 #main .gym-button {

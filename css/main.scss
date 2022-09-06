@@ -1393,6 +1393,23 @@ aside.system-status {
 
 }
 
+// back to top link
+.to-top-link {
+  margin-top: 1.2em;
+
+  b {
+    color: $gym-dark-gray;
+
+    &::before {
+      display: inline-block;
+      content: "↑";
+      font-family: monospace, monospace;
+      vertical-align: top;
+      margin-right: .25em;
+    }
+  }
+}
+
 // Import migrated fixes
 @import "migrated-fixes";
 
