@@ -62,26 +62,6 @@
       margin-top: 3rem;
     }
 
-    // secondary button
-    a.gym-button-secondary {
-      font-size: 105%;
-      color: $gym-white !important;
-      width: auto !important;
-      background-color: transparent !important;
-      padding: 1.2em 1.4em !important;
-      border: 2px solid $gym-blue !important;
-
-      & b {
-        color: inherit;
-        vertical-align: text-top;
-      }
-
-      &:hover,
-      &:focus,
-      &:active {
-        border-color: $gym-mid-gray !important;
-      }
-    }
   }
 }
 

@@ -146,25 +146,3 @@
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
-
-// secondary button
-
-.hero-promo a.gym-button-secondary {
-  font-size: 105%;
-  color: $gym-white !important;
-  width: auto !important;
-  background-color: transparent !important;
-  padding: 1.2em 1.4em !important;
-  border: 2px solid $gym-blue !important;
-}
-
-.hero-promo a.gym-button-secondary b {
-  color: inherit;
-  vertical-align: text-top;
-}
-
-.hero-promo a.gym-button-secondary:hover,
-.hero-promo a.gym-button-secondary:focus,
-.hero-promo a.gym-button-secondary:active {
-  border-color: $gym-light-gray !important;
-}

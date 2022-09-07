@@ -175,12 +175,41 @@ div.problem .action .save:not(:disabled) {
 .gym-button b {
   font: bold 1.2em/1 $gym-font-stack;
   letter-spacing: 0.025em;
-  vertical-align: bottom;
+  vertical-align: text-top;
 }
 
 .gym-button.natural {
   width: auto;
 }
+
+
+// TODO: Resolve specificity
+
+// secondary button
+#main {
+
+  a.gym-button-secondary {
+    width: auto;
+    color: $gym-white;
+    background-color: transparent;
+    border: 2px solid $gym-blue;
+
+    & b {
+      color: inherit;
+    }
+
+    &:hover {
+      border-color: $gym-button-background-hover;
+    }
+
+    &:focus,
+    &:active {
+      border-color: $gym-button-background-focus;
+    }
+  }
+
+}
+
 
 input[type="submit"]:active:not(:disabled),
 input[type="submit"]:focus:not(:disabled),

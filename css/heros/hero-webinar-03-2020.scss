@@ -144,18 +144,13 @@
 }
 
 .webinar-03-2020 a.gym-button-secondary {
-  width: auto;
-  color: $gym-white !important;
-  border: 2px solid $gym-white !important;
-  padding: 1.2em 1.6em !important;
-  vertical-align: bottom;
+  border: 2px solid $gym-white;
 }
 
 a.gym-button-secondary:hover,
 a.gym-button-secondary:focus,
 a.gym-button-secondary:active {
-  color: $gym-white !important;
-  border: 2px solid $gym-white !important;
+  border: 2px solid $gym-white;
 }
 
 .outer::after {

@@ -256,28 +256,6 @@
 
 @include grid-support;
 
-// secondary button
-#main .gym-button-secondary {
-  color: $gym-white;
-  background-color: transparent;
-  border: 2px solid $gym-blue;
-}
-
-#main .gym-button-secondary b {
-  color: inherit;
-  vertical-align: text-top;
-}
-
-#main .gym-button-secondary:hover {
-  border-color: $gym-mid-gray;
-}
-
-#main .gym-button-secondary:focus,
-#main .gym-button-secondary:active {
-  border-color: $gym-dark-gray;
-
-}
-
 // main / article
 
 main {

@@ -113,23 +113,5 @@
 }
 
 .hero-promo a.gym-button-secondary {
-  width: auto !important;
   background-color: #1877C8;
-  padding-left: 2.2em;
-  padding-right: 2.2em;
-  vertical-align: bottom;
-}
-
-.hero-promo a.gym-button-secondary b {
-  color: $gym-white !important;
-}
-
-.hero-promo a.gym-button-secondary:hover,
-.hero-promo a.gym-button-secondary:focus {
-  background-color: $gym-white !important;
-}
-
-.hero-promo a.gym-button-secondary:hover b,
-.hero-promo a.gym-button-secondary:focus b {
-  color: $gym-black !important;
 }
