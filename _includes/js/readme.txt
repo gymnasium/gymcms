@@ -75,11 +75,16 @@ base_application_js = [
   'js/vendor/openedx/lang_edx.js',
 ]
 
-# `rooted` Glob
+# Dashboard JS
 dashboard_js = (
-  'js/vendor/openedx/dashboard/*.js'
+  'js/vendor/openedx/dashboard/credit.js'
+  'js/vendor/openedx/dashboard/donation.js'
+  'js/vendor/openedx/dashboard/dropdown.js'
+  'js/vendor/openedx/dashboard/legacy.js'
+  'js/vendor/openedx/dashboard/track_events.js'
 )
 
+# Discussion JS
 discussion_js = (
   'js/vendor/openedx/discussion/mathjax/mathjax_include.js'
   'js/vendor/openedx/discussion/mathjax/customwmd.js'
@@ -108,14 +113,14 @@ discussion_js = (
 )
 
 discussion_vendor_js = [
-    'js/Markdown.Converter.js',
-    'js/Markdown.Sanitizer.js',
-    'js/Markdown.Editor.js',
-    'js/vendor/jquery.timeago.js',
-    'js/src/jquery.timeago.locale.js',
-    'js/vendor/jquery.truncate.js',
-    'js/jquery.ajaxfileupload.js',
-    'js/split.js'
+  'js/vendor/Markdown.Converter.js',
+  'js/vendor/Markdown.Sanitizer.js',
+  'js/vendor/Markdown.Editor.js',
+  'js/vendor/jquery.timeago.js',
+  'js/vendor/jquery.timeago.locale.js',
+  'js/vendor/jquery.truncate.js',
+  'js/vendor/jquery.ajaxfileupload.js',
+  'js/vendor/split.js'
 ]
 
 notes_js = ['js/notes.js']
