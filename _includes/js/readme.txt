@@ -1,11 +1,11 @@
 
 
 courseware_js = [
-'js/vendor/openedx/ajax-error.js',
-'js/vendor/openedx/courseware.js',
-'js/vendor/openedx/histogram.js',
-'js/vendor/openedx/navigation.js', # file no longer required (see @https://raw.githubusercontent.com/appsembler/edx-platform/appsembler/hawthorn/master/lms/static/js/navigation.js)
-'js/vendor/openedx/modules/tab.js',
+  'js/vendor/openedx/ajax-error.js',
+  'js/vendor/openedx/courseware.js',
+  'js/vendor/openedx/histogram.js',
+  'js/vendor/openedx/navigation.js', # file no longer required (see @https://raw.githubusercontent.com/appsembler/edx-platform/appsembler/hawthorn/master/lms/static/js/navigation.js)
+  'js/vendor/openedx/modules/tab.js',
 ]
 
 proctoring_js = (
@@ -75,15 +75,17 @@ base_application_js = [
   'js/vendor/openedx/lang_edx.js',
 ]
 
+# `rooted` Glob
 dashboard_js = (
-    sorted(rooted_glob(PROJECT_ROOT / 'static', 'js/dashboard/**/*.js'))
+  'js/vendor/openedx/dashboard/*.js'
 )
+
 discussion_js = (
-    rooted_glob(COMMON_ROOT / 'static', 'common/js/discussion/mathjax_include.js') +
-    rooted_glob(PROJECT_ROOT / 'static', 'js/customwmd.js') +
-    rooted_glob(PROJECT_ROOT / 'static', 'js/mathjax_accessible.js') +
-    rooted_glob(PROJECT_ROOT / 'static', 'js/mathjax_delay_renderer.js') +
-    sorted(rooted_glob(COMMON_ROOT / 'static', 'common/js/discussion/**/*.js'))
+  'js/vendor/openedx/discussion/mathjax_include.js'
+  'js/vendor/openedx/discussion/customwmd.js'
+  'js/vendor/openedx/discussion/mathjax_accessible.js'
+  'js/vendor/openedx/discussion/mathjax_delay_renderer.js'
+  'js/vendor/openedx/discussion/**/*.js'
 )
 
 discussion_vendor_js = [
