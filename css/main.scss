@@ -155,6 +155,12 @@ span {
   display: inline-block;
 }
 
+// prevent word wrap
+.nowrap,
+.no-wrap {
+  white-space: nowrap;
+}
+
 body,
 body.view-in-course {
   div.window-wrap {
