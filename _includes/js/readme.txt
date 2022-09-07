@@ -123,7 +123,9 @@ discussion_vendor_js = [
   'js/vendor/split.js'
 ]
 
-notes_js = ['js/notes.js']
+notes_js = [
+  'js/vendor/openedx/notes.js'
+]
 
 instructor_dash_js = sorted(rooted_glob(PROJECT_ROOT / 'static', 'js/instructor_dashboard/**/*.js'))
 
