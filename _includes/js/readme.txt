@@ -1,13 +1,4 @@
-
-
-courseware_js = [
-  'js/vendor/openedx/ajax-error.js',
-  'js/vendor/openedx/courseware.js',
-  'js/vendor/openedx/histogram.js',
-  'js/vendor/openedx/navigation.js', # file no longer required (see @https://raw.githubusercontent.com/appsembler/edx-platform/appsembler/hawthorn/master/lms/static/js/navigation.js)
-  'js/vendor/openedx/modules/tab.js',
-]
-
+# TODO: Do we even use proctoring? I think not.
 proctoring_js = (
     [
         'proctoring/js/models/proctored_exam_allowance_model.js',
@@ -30,6 +21,15 @@ proctoring_js = (
         'proctoring/js/proctored_app.js'
     ]
 )
+
+# courseware JS
+courseware_js = [
+  'js/vendor/openedx/ajax-error.js',
+  'js/vendor/openedx/courseware.js',
+  'js/vendor/openedx/histogram.js',
+  'js/vendor/openedx/navigation.js', # file no longer required (see @https://raw.githubusercontent.com/appsembler/edx-platform/appsembler/hawthorn/master/lms/static/js/navigation.js)
+  'js/vendor/openedx/modules/tab.js',
+]
 
 # base_vendor_js remapping to _includes folder
 base_vendor_js = [
@@ -146,9 +146,7 @@ instructor_dash_js = [
   'js/vendor/openedx/instructor_dashboard/util.js'
 ]
 
-
-sorted(rooted_glob(PROJECT_ROOT / 'static', 'js/instructor_dashboard/**/*.js'))
-
+# TODO: unused by Gymnasium(?)
 verify_student_js = [
     'js/sticky_filter.js',
     'js/query-params.js',
@@ -168,6 +166,7 @@ verify_student_js = [
     'js/verify_student/pay_and_verify.js',
 ]
 
+# TODO: unused by Gymnasium(?)
 reverify_js = [
     'js/verify_student/views/error_view.js',
     'js/verify_student/views/image_input_view.js',
@@ -182,6 +181,7 @@ reverify_js = [
     'js/verify_student/reverify.js',
 ]
 
+# TODO: unused by Gymnasium(?)
 incourse_reverify_js = [
     'js/verify_student/views/error_view.js',
     'js/verify_student/views/image_input_view.js',
