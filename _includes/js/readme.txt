@@ -127,7 +127,27 @@ notes_js = [
   'js/vendor/openedx/notes.js'
 ]
 
-instructor_dash_js = sorted(rooted_glob(PROJECT_ROOT / 'static', 'js/instructor_dashboard/**/*.js'))
+instructor_dash_js = [
+  'js/vendor/openedx/instructor_dashboard/certificates.js'
+  'js/vendor/openedx/instructor_dashboard/cohort_management.js'
+  'js/vendor/openedx/instructor_dashboard/course_info.js'
+  'js/vendor/openedx/instructor_dashboard/data_download.js'
+  'js/vendor/openedx/instructor_dashboard/discussion_management.js'
+  'js/vendor/openedx/instructor_dashboard/e-commerce.js'
+  'js/vendor/openedx/instructor_dashboard/ecommerce.js'
+  'js/vendor/openedx/instructor_dashboard/extensions.js'
+  'js/vendor/openedx/instructor_dashboard/instructor_dashboard.js'
+  'js/vendor/openedx/instructor_dashboard/membership.js'
+  'js/vendor/openedx/instructor_dashboard/metrics.js'
+  'js/vendor/openedx/instructor_dashboard/open_response_assessment.js'
+  'js/vendor/openedx/instructor_dashboard/proctoring.js'
+  'js/vendor/openedx/instructor_dashboard/send_email.js'
+  'js/vendor/openedx/instructor_dashboard/student_admin.js'
+  'js/vendor/openedx/instructor_dashboard/util.js'
+]
+
+
+sorted(rooted_glob(PROJECT_ROOT / 'static', 'js/instructor_dashboard/**/*.js'))
 
 verify_student_js = [
     'js/sticky_filter.js',
