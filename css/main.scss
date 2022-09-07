@@ -1204,8 +1204,6 @@ Footer CSS (migrated from footer.scss)
       margin-bottom: 0;
     }
 
-    @include gym-text-links;
-
     @include breakpoint(large, min) {
       .text-wrap:before {
         content: "\a";
@@ -1257,8 +1255,6 @@ Footer CSS (migrated from footer.scss)
     margin-top: 5px;
   }
 
-  @include gym-text-links;
-
   & .msg-content {
     @include breakpoint(large, min) {
       padding-left: 15px;
@@ -1282,8 +1278,6 @@ aside.system-status {
     color: $gym-black;
     margin-bottom: 0;
   }
-
-  @include gym-text-links;
 
 // Ukraine Relief related theme
 
