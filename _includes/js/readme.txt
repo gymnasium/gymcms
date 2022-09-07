@@ -81,11 +81,30 @@ dashboard_js = (
 )
 
 discussion_js = (
-  'js/vendor/openedx/discussion/mathjax_include.js'
-  'js/vendor/openedx/discussion/customwmd.js'
-  'js/vendor/openedx/discussion/mathjax_accessible.js'
-  'js/vendor/openedx/discussion/mathjax_delay_renderer.js'
-  'js/vendor/openedx/discussion/**/*.js'
+  'js/vendor/openedx/discussion/mathjax/mathjax_include.js'
+  'js/vendor/openedx/discussion/mathjax/customwmd.js'
+  'js/vendor/openedx/discussion/mathjax/mathjax_accessible.js'
+  'js/vendor/openedx/discussion/mathjax/mathjax_delay_renderer.js'
+  'js/vendor/openedx/discussion/content.js'
+  'js/vendor/openedx/discussion/discussion.js'
+  'js/vendor/openedx/discussion/utils.js'
+  'js/vendor/openedx/discussion/models/discussion_course_settings.js'
+  'js/vendor/openedx/discussion/models/discussion_user.js'
+  'js/vendor/openedx/discussion/views/discussion_content_view.js'
+  'js/vendor/openedx/discussion/views/discussion_inline_view.js'
+  'js/vendor/openedx/discussion/views/discussion_thread_edit_view.js'
+  'js/vendor/openedx/discussion/views/discussion_thread_list_view.js'
+  'js/vendor/openedx/discussion/views/discussion_thread_profile_view.js'
+  'js/vendor/openedx/discussion/views/discussion_thread_show_view.js'
+  'js/vendor/openedx/discussion/views/discussion_thread_view.js'
+  'js/vendor/openedx/discussion/views/discussion_topic_menu_view.js'
+  'js/vendor/openedx/discussion/views/new_post_view.js'
+  'js/vendor/openedx/discussion/views/response_comment_edit_view.js'
+  'js/vendor/openedx/discussion/views/response_comment_show_view.js'
+  'js/vendor/openedx/discussion/views/response_comment_view.js'
+  'js/vendor/openedx/discussion/views/thread_response_edit_view.js'
+  'js/vendor/openedx/discussion/views/thread_response_show_view.js'
+  'js/vendor/openedx/discussion/views/thread_response_view.js'
 )
 
 discussion_vendor_js = [
