@@ -107,21 +107,17 @@
 }
 
 a.gym-button-secondary {
-  font-size: 105%; // !override / reset/rescale font-size adjustment
-  width: auto !important;
-  vertical-align: bottom;
   background-color: #06c;
-  padding: 1.2em 1.6em !important;
-  border: 2px solid $gym-white !important;
+  border: 2px solid $gym-white;
 }
 
 a.gym-button-secondary:hover {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 a.gym-button-secondary:active,
 a.gym-button-secondary:focus {
-  background-color: $gym-dark-gray !important;
+  background-color: $gym-dark-gray;
 }
 
 @include breakpoint(36em, min) {

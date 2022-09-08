@@ -98,18 +98,15 @@
 }
 
 .blue-beanie-day a.gym-button-secondary {
-  width: auto;
-  color: $gym-black !important;
-  background-color: #00aeef !important;
-  border: 2px solid $gym-black !important;
-  padding: 1.2em 1.6em !important;
-  vertical-align: bottom;
+  color: $gym-black;
+  background-color: #00aeef;
+  border: 2px solid $gym-black;
 }
 
 a.gym-button-secondary:hover,
 a.gym-button-secondary:focus,
 a.gym-button-secondary:active {
-  color: $gym-white !important;
-  background-color: transparent !important;
-  border: 2px solid $gym-white !important;
+  color: $gym-white;
+  background-color: transparent;
+  border: 2px solid $gym-white;
 }

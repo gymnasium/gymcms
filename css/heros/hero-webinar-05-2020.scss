@@ -135,17 +135,11 @@
 }
 
 .hero-promo-webinar a.gym-button-secondary {
-  font-size: 105%;
-  width: auto;
-  color: $gym-white !important;
-  border: 2px solid $gym-white !important;
-  padding: 1.2em 2em !important;
-  vertical-align: bottom;
+  border: 2px solid $gym-white;
 }
 
 .hero-promo-webinar a.gym-button-secondary:hover,
 .hero-promo-webinar a.gym-button-secondary:focus,
 .hero-promo-webinar a.gym-button-secondary:active {
-  color: $gym-white !important;
-  border: 2px solid $gym-white !important;
+  border: 2px solid $gym-white;
 }
