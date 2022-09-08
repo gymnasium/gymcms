@@ -16,7 +16,8 @@ a:hover {
 }
 
 // Only use the border bottom text style in the main-container, aka #content
-.main-container {
+.main-container,
+.system-status {
   /* update (text) link style */
 
   a {
