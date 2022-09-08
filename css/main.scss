@@ -155,6 +155,12 @@ span {
   display: inline-block;
 }
 
+// prevent word wrap
+.nowrap,
+.no-wrap {
+  white-space: nowrap;
+}
+
 body,
 body.view-in-course {
   div.window-wrap {
@@ -350,7 +356,7 @@ header.global {
 div.wrapper-footer {
   margin-top: 0;
   background-color: $gym-black;
-  border-top: 10px solid $gym-orange-light;
+  border-top: 10px solid $gym-orange;
   color: $gym-white;
   min-height: 170px;
 
@@ -1204,8 +1210,6 @@ Footer CSS (migrated from footer.scss)
       margin-bottom: 0;
     }
 
-    @include gym-text-links;
-
     @include breakpoint(large, min) {
       .text-wrap:before {
         content: "\a";
@@ -1257,8 +1261,6 @@ Footer CSS (migrated from footer.scss)
     margin-top: 5px;
   }
 
-  @include gym-text-links;
-
   & .msg-content {
     @include breakpoint(large, min) {
       padding-left: 15px;
@@ -1282,8 +1284,6 @@ aside.system-status {
     color: $gym-black;
     margin-bottom: 0;
   }
-
-  @include gym-text-links;
 
 // Ukraine Relief related theme
 
@@ -1391,6 +1391,23 @@ aside.system-status {
     font-size: 1em;
   }
 
+}
+
+// back to top link
+.to-top-link {
+  margin-top: 1.2em;
+
+  b {
+    color: $gym-dark-gray;
+
+    &::before {
+      display: inline-block;
+      content: "↑";
+      font-family: monospace, monospace;
+      vertical-align: top;
+      margin-right: .25em;
+    }
+  }
 }
 
 // Import migrated fixes
