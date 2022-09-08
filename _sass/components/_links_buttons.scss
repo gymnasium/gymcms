@@ -16,7 +16,8 @@ a:hover {
 }
 
 // Only use the border bottom text style in the main-container, aka #content
-.main-container {
+.main-container,
+.system-status {
   /* update (text) link style */
 
   a {
@@ -31,8 +32,8 @@ a:hover {
   a:focus,
   a:active {
     text-decoration: none;
-    border-bottom-width: 2px !important;
-    margin-bottom: -0.125rem;
+    border-bottom-width: 2px;
+    margin-bottom: -2px;
   }
 }
 
@@ -43,11 +44,11 @@ a:focus {
 }
 
 .gym-link {
-  color: #f89820;
+  color: $gym-orange;
 }
 
 .gym-link:hover {
-  border-bottom: 1px solid #f89820;
+  border-bottom: 1px solid $gym-orange;
 }
 
 .gym-link:focus,
@@ -78,7 +79,7 @@ div.problem .save:not(:disabled) {
   border: 0;
   border-radius: 0.125em;
 
-  background-color: $gym-orange;
+  background-color: $gym-blue;
   color: $gym-white;
   font-weight: bold;
   font-size: 1em;
@@ -158,9 +159,11 @@ div.problem .action .save:not(:disabled) {
   width: auto;
 }
 
-.gym-button:focus,
+.gym-button:focus {
+  background: $gym-button-background-focus;
+}
+
 .gym-button:active {
-  text-decoration: none !important;
   background: $gym-button-background-active;
 }
 
@@ -170,16 +173,44 @@ div.problem .action .save:not(:disabled) {
   font-family: $gym-font-stack;
 }
 
-
 .gym-button b {
   font: bold 1.2em/1 $gym-font-stack;
   letter-spacing: 0.025em;
-  vertical-align: bottom;
+  vertical-align: text-top;
 }
 
 .gym-button.natural {
   width: auto;
 }
+
+
+// TODO: Resolve specificity
+
+// secondary button
+#main {
+
+  a.gym-button-secondary {
+    width: auto;
+    color: $gym-white;
+    background-color: transparent;
+    border: 2px solid $gym-blue;
+
+    & b {
+      color: inherit;
+    }
+
+    &:hover {
+      border-color: $gym-button-background-hover;
+    }
+
+    &:focus,
+    &:active {
+      border-color: $gym-button-background-focus;
+    }
+  }
+
+}
+
 
 input[type="submit"]:active:not(:disabled),
 input[type="submit"]:focus:not(:disabled),
