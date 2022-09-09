@@ -264,29 +264,29 @@ white panel (used in multiple places)
   // adjustment for vertical rule (if a sidebar is present)
   @include breakpoint(medium, min) {
     & {
-      padding: 1em 1em 1em 2em;
+      position: relative;
+      padding: 1em 1em 2em 2em;
+    }
 
-      > .row {
-        padding-bottom: 2.2em;
+    // Sidebar dashed line
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -5px;
+      width: 25%;
+      height: 100%;
+      border-left: 1px dashed $gym-gray;
+    }
 
-        > .col-md-9 {
-          position: relative;
-          padding-bottom: 99em;
-          margin-bottom: -99em;
-
-          // Horizontal dashed line
-          &:after {
-            border-right: 1px dashed $gym-gray;
-            content: '';
-            position: absolute;
-            height: calc(100% + 2.2em);
-            top: -1.5rem;
-            right: 0;
-          }
-        }
-      }
+    // Annoying clearfix with zero-width space
+    &:after {
+      content: "\200b";
+      display: table;
+      clear: both;
     }
   }
+
 }
 
 
