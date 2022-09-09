@@ -9,13 +9,15 @@ live: true
 topic: "Career Skills"
 short_description: "Learn how to estimate, plan, track, and manage your time in order to complete projects. Being busy isn’t a bad thing, but not being in control of your own time is."
 instructor: bharned
-skills: 
+skills:
   - label: "Project estimation"
   - label: "Time tracking"
   - label: "Team/client communication skills"
-  - label: "And more…"
 audience:
   - label: "Designers"
   - label: "Developers"
   - label: "Anyone with a deadline"
+lessons_duration: "Under 1 Hour"
+completion_duration: "Up to 1.5 Hours"
+skill_level: "Beginner"
 ---
