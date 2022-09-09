@@ -9,9 +9,12 @@ permalink: /courses/
 <!-- TODO: maybe create a new CSS file for the entire course catalog page? -->
 <section class="find-courses" id="gym-catalog">
 
-  <header class="course-title">
+  <header class="about">
     <div class="container">
-      <h1>Catalog</h1>
+      <h1>Courses</h1>
+      <p>
+        Free online courses and tutorials on design, development, UX, accessibility, and career skills.
+      </p>
     </div>
   </header>
 
@@ -34,57 +37,59 @@ permalink: /courses/
       <div class="row">
         <div class="col-md-9 course-overview">
           <section class="courses-container">
-            <header class="intro" id="full">
-              <h1>Full Courses</h1>
-              <p class="hero">
-                <b>Learn new skills in a few days.</b> Full Courses are free, self-paced video-instructed courses with a forum to share work and get feedback, plus optional homework, quizzes, and exam to test your skills and earn a certificate.
-              </p>
-            </header>
 
-            <ul class="listing-courses list-unstyled">
-              {%- assign base_path = "/courses/full/" | prepend: site.gymurl -%}
-              {%- include_relative full/course-list-recent.html -%}
-            </ul>
-            <div class="to-top-link">
-              <a href="#gym-catalog"><b>Back to top</b></a>
-            </div>
+            <section id="full">
+              <header class="intro">
+                <h1>Full Courses</h1>
+                <p class="hero">
+                  <strong>Learn new skills in a few days.</strong> Full Courses are free, self-paced video-instructed courses with a forum to share work and get feedback, plus optional homework, quizzes, and exam to test your skills and earn a certificate.
+                </p>
+              </header>
+              <ul class="listing-courses list-unstyled">
+                {%- assign base_path = "/courses/full/" | prepend: site.gymurl -%}
+                {%- include_relative full/course-list-recent.html -%}
+              </ul>
+              <div class="to-top-link">
+                <a href="#gym-catalog"><b>Back to top</b></a>
+              </div>
+            </section>
 
-            <header class="intro" id="gymshorts">
-              <h1>Gym Shorts</h1>
-              <p class="hero">
-                <b>Learn new skills in a few hours.</b> Gym Shorts are free, self-paced video-instructed short courses with an optional exam to test your skills and earn a badge.
-              </p>
-            </header>
+            <section id="gymshorts">
+              <header class="intro">
+                <h1>Gym Shorts</h1>
+                <p class="hero">
+                  <strong>Learn new skills in a few hours.</strong> Gym Shorts are free, self-paced video-instructed short courses with an optional exam to test your skills and earn a badge.
+                </p>
+              </header>
+              <ul class="listing-courses list-unstyled" id="gym-shorts-list">
+                {%- assign base_path = "/courses/gym-shorts/" | prepend: site.gymurl -%}
+                {%- include_relative gym-shorts/course-list-recent.html -%}
+              </ul>
+              <div class="to-top-link">
+                <a href="#gym-catalog"><b>Back to top</b></a>
+              </div>
+            </section>
 
-            <ul class="listing-courses list-unstyled" id="gym-shorts-list">
-              {%- assign base_path = "/courses/gym-shorts/" | prepend: site.gymurl -%}
-              {%- include_relative gym-shorts/course-list-recent.html -%}
-            </ul>
-            <div class="to-top-link">
-              <a href="#gym-catalog"><b>Back to top</b></a>
-            </div>
-
-            {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
-
-            <header class="intro" id="take5">
-              <h1>Take 5</h1>
-              <p class="hero">
-                <b>Learn new skills in 5 minutes.</b> Take 5 tutorials are free video tutorials with no homework or exam. Microlearning made for everyone.
-              </p>
-            </header>
-
-            <ul class="listing-courses list-unstyled" id="take5-list">
-            {%- include_relative take5/course-list-recent.html -%}
-            </ul>
-
-            <div class="cta">
-              <a class="gym-button" href="{{ site.gymurl}}/courses/take5/">
-                <b>View All Take 5 Tutorials</b>
-              </a>
-            </div>
-            <div class="to-top-link">
-              <a href="#gym-catalog"><b>Back to top</b></a>
-            </div>
+            <section id="take5">
+              <header class="intro">
+                <h1>Take 5</h1>
+                <p class="hero">
+                  <strong>Learn new skills in 5 minutes.</strong> Take 5 tutorials are free video tutorials with no homework or exam. Microlearning for everyone.
+                </p>
+              </header>
+              <ul class="listing-courses list-unstyled" id="take5-list">
+              {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
+              {%- include_relative take5/course-list-recent.html -%}
+              </ul>
+              <div class="cta">
+                <a class="gym-button" href="{{ site.gymurl}}/courses/take5">
+                  <b>View All Take 5 Tutorials</b>
+                </a>
+              </div>
+              <div class="to-top-link">
+                <a href="#gym-catalog"><b>Back to top</b></a>
+              </div>
+            </section>
           </section>
         </div>
         <div class="col-md-3 sidebar">
