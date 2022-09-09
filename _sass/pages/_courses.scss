@@ -1,7 +1,60 @@
 @import 'variables';
 @import 'functions';
 
+#gym-catalog {
+
+  .about {
+    background-color: #d2d2d2;
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
+    border-bottom: 1px dashed #bbb;
+
+    h1,
+    p {
+      color: $gym-black;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    p {
+      font: normal 1.25em/1.45 $gym-text-font-stack;
+      margin-top: 0.6em;
+      margin-bottom: 0;
+    }
+  }
+
+}
+
 .courses-container {
+
+  > section[id] {
+    padding-top: 1.2em;
+    margin-top: -1.2em;
+
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
+
+  .cta  {
+    margin-top: 1.2em;
+  }
+
+  .course-description {
+
+    h1,
+    h2 {
+      margin-top: 0;
+    }
+
+    h2 {
+      margin-bottom: 0.8em;
+    }
+
+  }
+
   .intro {
     h1 {
       font-size: font-calc(28, rem, 10px);
@@ -12,12 +65,12 @@
     font-family: $gym-font-stack;
     font-size: font-calc(22, rem, 10px);
     line-height: 1.4;
-    padding-bottom: 1em;
-    border-bottom: 1px solid #ddd;
   }
 }
 
 .listing-courses {
+  padding-bottom: 1.2em;
+  border-bottom: 1px solid $gym-gray-2;
 
   h1 {
     font-size: font-calc(32, rem, 10px);
@@ -32,17 +85,26 @@
   }
 
   .course-item {
-    figure img {
-      width: 100%;
+    padding-top: 1.2em;
+    border-top: 1px solid $gym-gray-2;
+    margin-top: 1.2em;
+
+    @include breakpoint(medium, max) {
+
+      figure {
+        max-width: 33.5em;
+        margin-bottom: 1em;
+      }
+
     }
-  
+
     figcaption {
-      background: #444;
+      background: $gym-dark-gray;
       padding: 1.2em;
     }
-  
+
     dl {
-      color: #222;
+      color: $gym-black;
       letter-spacing: 0.06em;
       word-spacing: 0.05em;
       margin-bottom: 0.6em;
@@ -54,7 +116,7 @@
       line-height: 1.2;
       font-family: $gym-font-stack;
       font-weight: 900;
-      color: #222;
+      color: $gym-black;
       letter-spacing: 0.06em;
       word-spacing: 0.05em;
       text-transform: uppercase;
@@ -64,15 +126,36 @@
       display: list-item;
       list-style: disc;
       color: $gym-orange;
-      margin-top: 0.3em;
+      line-height: 1.25;
+      margin-top: 0.4em;
     }
     dd span {
       font-size: font-calc(16, rem, 10px);
       color: #222;
     }
     article {
-      padding-bottom: 3em;
       overflow: hidden;
     }
   }
+}
+
+// --- Courses Take 5 section ---
+
+#take5-list figure > a {
+  display: block;
+  height: 0;
+  background-color: #d2d2d2;
+  padding-bottom: 44.444444444444444%;
+  border: 1px solid $gym-gray-2;
+  border-bottom: 0;
+  overflow: hidden;
+}
+
+#take5-list .img-responsive {
+  display: inline-block;
+  margin-top: -5%;
+}
+
+#take5-list .course-description h2 {
+  margin-top: 0;
 }
