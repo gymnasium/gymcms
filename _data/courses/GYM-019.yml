@@ -6,7 +6,7 @@ course_type: short
 live: true
 url: /courses/course-v1:GYM+019+0/about
 poster_art: /img/course-artwork/png/gym-019.png
-topic: "Design & Development"
+topic: "Development"
 subtopics:
   - label: "Design Systems"
 short_description: "Learn how to use your development skills to help build and support an effective and thriving design system."
@@ -15,9 +15,11 @@ skills:
   - label: "Organizing and naming best practices"
   - label: "Working with design tokens"
   - label: "Pattern library versioning"
-  - label: "And more…"
 audience:
   - label: "Front-end developers"
   - label: "Teams beginning the design systems process"
   - label: "Designers with coding skills"
+lessons_duration: "1 Hour"
+completion_duration: "Up to 1.5 Hours"
+skill_level: "Intermediate"
 ---
