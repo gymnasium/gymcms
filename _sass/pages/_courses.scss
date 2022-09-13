@@ -39,7 +39,7 @@
     }
 
     .white-panel {
-      padding: 1.4em 1.2em;
+      padding: 1.2em;
       margin-bottom: 0;
 
       &:before,
@@ -93,7 +93,7 @@
   @include breakpoint(medium, max) {
 
     .row > div:not(:first-child) {
-      margin-top: 1.4em;
+      margin-top: 1.2em;
     }
 
   }
