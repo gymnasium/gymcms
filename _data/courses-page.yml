@@ -1,0 +1,8 @@
+---
+full_courses:
+  short_description: "Full Courses are free online courses taught by industry experts. They include a series of video lessons, optional quizzes and assignments, and a final exam and certificate if you pass. Plus, a forum to share work and get feedback from students and teaching assistants."
+short_courses:
+  short_description: "Gym Shorts (Short Courses) are free online courses taught by industry experts. They include a series of video lessons, a final exam, and a badge if you pass. Learn at your own pace, on your own time."
+tutorials:
+  short_description: "Take 5 tutorials are 5-minute video tutorials with transcripts available. No homework. No exam. Just free online learning."
+---

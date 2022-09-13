@@ -6,6 +6,8 @@ permalink: /courses/
   {%- include partials/test-top.html -%}
 {%- endif -%}
 
+{%- assign courses = site.data.courses-page -%}
+
 <!-- TODO: maybe create a new CSS file for the entire course catalog page? -->
 <section class="find-courses" id="gym-catalog">
 
@@ -44,7 +46,7 @@ permalink: /courses/
               <header class="intro">
                 <h1>Full Courses</h1>
                 <p class="hero">
-                  <strong>Learn new skills in a few days.</strong> Full Courses are free, self-paced video-instructed courses with a forum to share work and get feedback, plus optional homework, quizzes, and exam to test your skills and earn a certificate.
+                  {{ courses.full_courses.short_description }}
                 </p>
               </header>
               <ul class="listing-courses list-unstyled">
@@ -60,7 +62,7 @@ permalink: /courses/
               <header class="intro">
                 <h1>Gym Shorts</h1>
                 <p class="hero">
-                  <strong>Learn new skills in a few hours.</strong> Gym Shorts are free, self-paced video-instructed short courses with an optional exam to test your skills and earn a badge.
+                  {{ courses.short_courses.short_description }}
                 </p>
               </header>
               <ul class="listing-courses list-unstyled" id="gym-shorts-list">
@@ -76,7 +78,7 @@ permalink: /courses/
               <header class="intro">
                 <h1>Take 5</h1>
                 <p class="hero">
-                  <strong>Learn new skills in 5 minutes.</strong> Take 5 tutorials are free video tutorials with no homework or exam. Microlearning for everyone.
+                  {{ courses.tutorials.short_description }}
                 </p>
               </header>
               <ul class="listing-courses list-unstyled" id="take5-list">
