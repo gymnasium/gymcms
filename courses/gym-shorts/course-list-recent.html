@@ -65,18 +65,34 @@ permalink: /courses/gym-shorts/course-list-recent
         <div class="row">
           <div class="col-md-6">
             <dl>
-              <dt>Skills Covered</dt>
-              {%- for skill in course.skills -%}
-              <dd><span>{{ skill.label }}</span></dd>
-              {%- endfor -%}
+              <div>
+                <dt>Skills Covered</dt>
+                {%- for skill in course.skills -%}
+                <dd><span>{{ skill.label }}</span></dd>
+                {%- endfor -%}
+              </div>
+              <div>
+                <dt>Skill Level</dt>
+                <dd><span>{{ course.skill_level }}</span></dd>
+              </div>
             </dl>
           </div>
           <div class="col-md-6">
             <dl>
-              <dt>This Course Is For</dt>
-              {%- for audience in course.audience -%}
-              <dd><span>{{ audience.label }}</span></dd>
-              {%- endfor -%}
+              <div>
+                <dt>This Course Is For</dt>
+                {%- for audience in course.audience -%}
+                <dd><span>{{ audience.label }}</span></dd>
+                {%- endfor -%}
+              </div>
+              <div>
+                <dt>Video Lessons Length</dt>
+                <dd><span>{{ course.lessons_duration }}</span></dd>
+              </div>
+              <div>
+                <dt>Completion Time</dt>
+                <dd><span>{{ course.completion_duration }}</span></dd>
+              </div>
             </dl>
           </div>
         </div>
