@@ -19,40 +19,47 @@
       margin-top: 0;
     }
 
-    p {
+    h1 + p {
       font: normal 1.25em/1.45 $gym-text-font-stack;
       margin-top: 0.6em;
       margin-bottom: 0;
     }
 
-    .about-courses {
-      font-size: 16px;
-      margin-top: 1em;
+  }
 
-      summary {
-        cursor: pointer;
+  .about-courses {
+    font-size: 16px;
+    margin-top: 1em;
+
+    @include summary-link
+
+    h2 {
+      font-size: 1.6em;
+      margin-top: -0.4rem;
+    }
+
+    .white-panel {
+      padding: 1.4em 1.2em;
+      margin-bottom: 0;
+
+      &:before,
+      &:after {
+        content: none;
       }
 
-      h2 {
-        font-size: 1.6em;
-        margin-top: -0.4rem;
-      }
+    }
 
-      .callout {
-        background-color: $gym-white;
-        padding: 1.6em 1.2em;
-        border: 1px solid $gym-gray;
-        margin-top: 1.2em;
-      }
-
+    p {
+      font-size: 1.15em;
     }
 
   }
 
   dl {
+    font-size: 16px;
     color: $gym-black;
-    margin-top: 1em;
-    margin-left: 1.2em;
+    padding-left: 1em;
+    margin-top: 1.2em;
     margin-bottom: 0;
 
     div {
@@ -61,10 +68,9 @@
 
     dt {
       font-size: font-calc(16, rem, 10px);
-      line-height: 1.2;
+      line-height: 1.25;
       font-family: $gym-font-stack;
       font-weight: 900;
-      color: $gym-black;
       letter-spacing: 0.06em;
       word-spacing: 0.05em;
       text-transform: uppercase;
@@ -74,13 +80,11 @@
     dd {
       display: list-item;
       list-style: disc;
-      color: $gym-orange;
-      line-height: 1.25;
+      line-height: 1.45;
       margin-top: 0.4em;
 
-      span {
-        font-size: font-calc(16, rem, 10px);
-        color: #222;
+      &::marker {
+        color: $gym-orange;
       }
     }
 
@@ -89,7 +93,7 @@
   @include breakpoint(medium, max) {
 
     .row > div:not(:first-child) {
-      margin-top: 1.6em;
+      margin-top: 1.4em;
     }
 
   }
@@ -151,6 +155,7 @@
 
   p, li {
     font-size: font-calc(18, rem, 10px);
+    margin-bottom: 0;
   }
 
   .course-item {
