@@ -1,0 +1,66 @@
+{%- assign about = site.data.courses-page.about_section -%}
+
+<details class="about-courses">
+  <summary class="gym-summary-link"><b>{{ about.summary }}</b></summary>
+  <div class="white-panel container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <header>
+          <h2>{{ courses.full_courses.format }}</h2>
+        </header>
+        <dl>
+          <div>
+            <dt>{{ about.lists[1] }}</dt>
+            {%- for benefits in about.full_courses[1] -%}
+            <dd>{{ benefits.label }}</dd>
+            {%- endfor -%}
+          </div>
+          <div>
+            <dt>{{ about.lists[2] }}</dt>
+            {%- for length in about.full_courses[2] -%}
+            <dd>{{ length.label }}</dd>
+            {%- endfor -%}
+          </div>
+        </dl>
+      </div>
+      <div class="col-md-4">
+        <header>
+          <h2>{{ courses.short_courses.format }}</h2>
+        </header>
+        <dl>
+          <div>
+            <dt>{{ about.lists[1] }}</dt>
+            {%- for benefits in about.short_courses[1] -%}
+            <dd>{{ benefits.label }}</dd>
+            {%- endfor -%}
+          </div>
+          <div>
+            <dt>{{ about.lists[2] }}</dt>
+            {%- for length in about.short_courses[2] -%}
+            <dd>{{ length.label }}</dd>
+            {%- endfor -%}
+          </div>
+        </dl>
+      </div>
+      <div class="col-md-4">
+        <header>
+          <h2>{{ courses.tutorials.format | append: ' Tutorials' }}</h2>
+        </header>
+        <dl>
+          <div>
+            <dt>{{ about.lists[1] }}</dt>
+            {%- for benefits in about.tutorials[1] -%}
+            <dd>{{ benefits.label }}</dd>
+            {%- endfor -%}
+          </div>
+          <div>
+            <dt>{{ about.lists[2] }}</dt>
+            {%- for length in about.tutorials[2] -%}
+            <dd>{{ length.label }}</dd>
+            {%- endfor -%}
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</details>
