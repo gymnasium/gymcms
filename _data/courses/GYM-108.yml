@@ -6,8 +6,9 @@ course_type: full
 live: true
 url: /courses/course-v1:GYM+108+0/about
 poster_art: /img/course-artwork/png/gym-108.png
-topic: "JavaScript"
-subtopics: 
+topic: "Development"
+subtopics:
+  - label: "JavaScript"
   - label: "jQuery"
 short_description: "This course will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples."
 instructor: kchisholm
@@ -15,9 +16,11 @@ skills:
   - label: "Developer Tools"
   - label: "Events and Event Handlers"
   - label: "Manipulating HTML & CSS With jQuery"
-  - label: "And more…"
 audience:
   - label: "Front-End Developers"
   - label: "JavaScript Developers"
   - label: "Full Stack Developers"
+lessons_duration: "3 Hours"
+completion_duration: "Up to 12 Hours"
+skill_level: "Intermediate"
 ---
