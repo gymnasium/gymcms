@@ -379,32 +379,6 @@
   }
 }
 
-@mixin summary-link {
-  summary {
-    width: max-content;
-    cursor: pointer;
-
-    &:focus {
-      outline: none;
-    }
-
-    &:hover b,
-    &:focus b,
-    &:active b {
-      border-bottom: 2px solid $gym-black;
-    }
-
-    b {
-      font-weight: normal;
-      font-family: sans-serif;
-      vertical-align: -.05em;
-      padding-bottom: 2px;
-      border-bottom: 1px solid $gym-black;
-      margin-bottom: -2px;
-    }
-  }
-}
-
 // TODO: figure out where to include these in the future
 @mixin root-variables {
   :root {
