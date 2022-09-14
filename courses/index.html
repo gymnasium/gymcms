@@ -13,10 +13,10 @@ permalink: /courses/
 
   <header class="about">
     <div class="container">
-      <h1>Courses</h1>
+      <h1>{{ courses.main.title }}</h1>
       <p>
-        <strong class="block">Free online courses and tutorials.</strong>
-        Learn new skills on design, development, UX, accessibility, and career skills.
+        <strong class="block">{{ courses.main.tagline }}</strong>
+        {{ courses.main.short_description }}
       </p>
       {%- include_relative about/index.html -%}
     </div>
@@ -25,13 +25,13 @@ permalink: /courses/
   <div class="container">
     <ul class="tabs">
       <li>
-        <a href="#full">Full Courses</a>
+        <a href="#full">{{ courses.full_courses.format }}</a>
       </li>
       <li>
-        <a href="#gymshorts">Gym Shorts</a>
+        <a href="#gymshorts">{{ courses.short_courses.format }}</a>
       </li>
       <li>
-        <a href="#take5">Take 5</a>
+        <a href="#take5">{{ courses.tutorials.format }}</a>
       </li>
     </ul>
   </div>
