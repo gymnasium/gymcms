@@ -1,55 +1,63 @@
+{%- assign about = site.data.courses-page.about_section -%}
+
 <details class="about-courses">
-  <summary><b>Learn About Our Courses</b></summary>
+  <summary class="gym-summary-link"><b>{{ about.summary }}</b></summary>
   <div class="white-panel container-fluid">
     <div class="row">
       <div class="col-md-4">
         <header>
-          <h2>Full Courses</h2>
+          <h2>{{ courses.full_courses.format }}</h2>
         </header>
         <dl>
           <div>
-            <dt>Benefits</dt>
-            <dd>Earn a Certificate: Shareable on LinkedIn (if you pass the final exam)</dd>
-            <dd>Forum: Share work and get feedback from students and teaching assistants</dd>
-            <dd>Optional: Lesson homework and quizzes that prepare you for the final exam</dd>
+            <dt>{{ about.lists[1] }}</dt>
+            {%- for benefits in about.full_courses[1] -%}
+            <dd>{{ benefits.label }}</dd>
+            {%- endfor -%}
           </div>
           <div>
-            <dt>Length</dt>
-            <dd>Video Lessons: 2.5 hours, up to 5 hours</dd>
-            <dd>Course Completion: 12 hours, up to 22 hours</dd>
+            <dt>{{ about.lists[2] }}</dt>
+            {%- for length in about.full_courses[2] -%}
+            <dd>{{ length.label }}</dd>
+            {%- endfor -%}
           </div>
         </dl>
       </div>
       <div class="col-md-4">
         <header>
-          <h2>Gym Shorts</h2>
+          <h2>{{ courses.short_courses.format }}</h2>
         </header>
         <dl>
           <div>
-            <dt>Benefits</dt>
-            <dd>Earn a Badge: Shareable on LinkedIn (if you pass the final exam)</dd>
+            <dt>{{ about.lists[1] }}</dt>
+            {%- for benefits in about.short_courses[1] -%}
+            <dd>{{ benefits.label }}</dd>
+            {%- endfor -%}
           </div>
           <div>
-            <dt>Length</dt>
-            <dd>Video Lessons: Under 1 hour, up to 2 hours</dd>
-            <dd>Course Completion: 1 hour, up to 5 hours</dd>
+            <dt>{{ about.lists[2] }}</dt>
+            {%- for length in about.short_courses[2] -%}
+            <dd>{{ length.label }}</dd>
+            {%- endfor -%}
           </div>
         </dl>
       </div>
       <div class="col-md-4">
         <header>
-          <h2>Take 5 Tutorials</h2>
+          <h2>{{ courses.tutorials.format | append: ' Tutorials' }}</h2>
         </header>
         <dl>
           <div>
-            <dt>Benefits</dt>
-            <dd>Learn new skills in 5 minutes</dd>
-            <dd>No homework or exam</dd>
-            <dd>Video tutorial with transcript</dd>
+            <dt>{{ about.lists[1] }}</dt>
+            {%- for benefits in about.tutorials[1] -%}
+            <dd>{{ benefits.label }}</dd>
+            {%- endfor -%}
           </div>
           <div>
-            <dt>Length</dt>
-            <dd>5 minutes or less</dd>
+            <dt>{{ about.lists[2] }}</dt>
+            {%- for length in about.tutorials[2] -%}
+            <dd>{{ length.label }}</dd>
+            {%- endfor -%}
           </div>
         </dl>
       </div>
