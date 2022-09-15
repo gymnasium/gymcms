@@ -292,9 +292,9 @@ class Gymnasium {
 
         var newColor = `rgb(\'${r}, ${g}, ${b}\')`;
 
-        console.log(newColor);
+        console.log(data, bgTarget, newColor);
   
-        bgTarget.style.backgroundColor = newColor;
+        bgTarget.style['backgroundColor'] = newColor;
 
       });
     }
