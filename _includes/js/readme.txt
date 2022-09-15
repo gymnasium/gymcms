@@ -1,3 +1,6 @@
+# This file hopes to be an exhaustive list of the JS compiled by open edx
+
+
 # TODO: Do we even use proctoring? I think not.
 proctoring_js = (
     [
@@ -392,3 +395,5 @@ WEBPACK_LOADER = {
     }
 }
 WEBPACK_CONFIG_PATH = 'webpack.prod.config.js'
+
+### TODO: determine which JS modules are loaded by webpack and add them.
