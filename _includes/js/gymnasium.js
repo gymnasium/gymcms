@@ -24,7 +24,12 @@ document.write = function(parameter) {
 };
 
 function hasClass(elem,cls) {
-  return elem.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+  return elem.className.match(new RegExp(`(\\s|^)${cls}(\\s|$)`));
+}
+
+// Test for visibility (doesn't work for fixed position elems)
+function isHidden(el) {
+  return (el.offsetParent === null)
 }
 
 class Gymnasium {
