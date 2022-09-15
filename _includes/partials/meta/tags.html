@@ -41,11 +41,12 @@
 Add DNS preload/prefetch meta tags to help prime the browser to fetch our 1st and 3rd party resources
 {%- endcomment -%}
 <link rel="preconnect" href="{{ site.url }}">
-<link rel="dns-prefetch" href="https://api.segment.io">
-<link rel="dns-prefetch" href="https://cdn.segment.com">
-<link rel="dns-prefetch" href="https://www.google-analytics.com">
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
-<link rel="dns-prefetch" href="https://api-iam.intercom.io">
+<link rel="preload" fetchpriority="high" href="{{ site.url }}/css/main.css?{{ site.time | date:'%s' }}" as="style" crossorigin="anonymous">
+
+<link rel="preload" href="{{ site.url }}/fonts/brandon_reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="{{ site.url }}/fonts/brandon_bld-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="{{ site.url }}/fonts/brandon_blk-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
 <link rel="stylesheet" href="{{ site.url }}/css/main.css?{{ site.time | date:'%s' }}">
 
 {% comment -%}
@@ -57,22 +58,13 @@ Exclude rendered CSS in meta tags on localhost, for development/convenience reas
       <link rel="stylesheet" href="{{ site.url }}{{ css_file }}?{{ site.time | date:'%s' }}">
     {%- endfor -%}
   {%- endif -%}
-
 {%- endunless -%}
 
 {%- comment -%}
-Migrate from theme to gymcms
+Try to prefetch JS domains
+<!-- <link rel="dns-prefetch" href="https://api.segment.io"> -->
+<!-- <link rel="dns-prefetch" href="https://cdn.segment.com"> -->
+<!-- <link rel="dns-prefetch" href="https://api-iam.intercom.io"> -->
+TODO: do we really want to prefetch google analytics?
 {%- endcomment -%}
-<link rel="preload" href="{{ site.url }}/fonts/brandon_reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ site.url }}/fonts/brandon_reg_it-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ site.url }}/fonts/brandon_bld-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ site.url }}/fonts/brandon_bld_it-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ site.url }}/fonts/brandon_blk-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ site.url }}/fonts/brandon_blk_it-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
-{%- comment -%} Do we really need to load typekit?
-<script async defer src="//use.typekit.net/rhf0qta.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
-{%- endcomment -%}
-
-<link rel="stylesheet" href="{{ site.url }}/css/vendor/bootstrap.css?{{ site.time | date:'%s' }}">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
