@@ -158,6 +158,8 @@ span {
 // prevent word wrap
 .nowrap,
 .no-wrap {
+  font: inherit;
+  color: inherit;
   white-space: nowrap;
 }
 
