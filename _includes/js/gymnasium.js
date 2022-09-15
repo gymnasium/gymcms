@@ -289,13 +289,8 @@ class Gymnasium {
         var g = data[1];
         var b = data[2];
         var a = data[3]; // we will likely never need non-opaque values
-
-        var newColor = `rgb(${r},${g},${b})`;
-        var workingColor = 'background-color: rgb(' + r + ',' + g + ',' + b + ');';
-
-        console.log(bgTarget, newColor, typeof newColor, workingColor, typeof workingColor);
   
-        bgTarget.style = `background-color: ${newColor}`;
+        bgTarget.style = `background-color: rgb(${r},${g},${b})`;
 
       });
     }
