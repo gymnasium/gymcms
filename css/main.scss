@@ -158,6 +158,8 @@ span {
 // prevent word wrap
 .nowrap,
 .no-wrap {
+  font: inherit;
+  color: inherit;
   white-space: nowrap;
 }
 
@@ -223,7 +225,6 @@ white panel (used in multiple places)
   line-height: 1.5;
   margin: 20px auto;
   padding: 1em 1.4em;
-  overflow: hidden;
 
   @include breakpoint(medium, max) {
     > .row > .col-md-3 {
@@ -886,8 +887,8 @@ https://github.com/gymnasium/tracker/issues/143
 
 /* update font-family for catalog navigation */
 
-// #gym-catalog .course-menu a:focus,
-// #gym-catalog .course-menu a:active {
+// #catalog .course-menu a:focus,
+// #catalog .course-menu a:active {
 //   font-family: $gym-font-stack;
 // }
 

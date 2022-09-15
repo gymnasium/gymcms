@@ -6,7 +6,7 @@ course_type: short
 live: true
 url: /courses/course-v1:GYM+018+0/about
 poster_art: /img/course-artwork/png/gym-018.png
-topic: "User Experience"
+topic: "Design"
 subtopics:
   - label: "Design Systems"
 short_description: "Learn how to incorporate pattern libraries and design systems into your workflow."
@@ -15,9 +15,11 @@ skills:
   - label: "Working with pattern libraries"
   - label: "User experience design"
   - label: "Design tokens"
-  - label: "And more…"
 audience:
   - label: "Web and UX designers"
   - label: "Creative directors"
   - label: "Teams that are new to the design systems process"
+lessons_duration: "1 hour"
+completion_duration: "Up to 1.5 hours"
+skill_level: "Beginner"
 ---

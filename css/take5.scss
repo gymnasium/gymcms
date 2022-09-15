@@ -37,7 +37,6 @@
 
 [role="main"] h3 {
   letter-spacing: 0;
-  text-transform: none;
 }
 
 // paragraphs
@@ -64,11 +63,6 @@
       margin-top: .6rem;
     }
   }
-}
-
-#main .no-wrap {
-  color: inherit;
-  white-space: nowrap;
 }
 
 // --- take-5 catalog ---
@@ -191,29 +185,6 @@ main h3 {
       border-bottom: 1px solid #bbb;
     }
 
-    summary {
-      display: list-item;
-      cursor: pointer;
-
-      &:focus {
-        outline: none;
-      }
-
-      &:hover b,
-      &:focus b,
-      &:active b {
-        border-bottom: 2px solid $gym-black;
-      }
-
-      b {
-        font-weight: normal;
-        font-family: sans-serif;
-        vertical-align: -.05em;
-        padding-bottom: 2px;
-        border-bottom: 1px solid $gym-black;
-        margin-bottom: -2px;
-      }
-    }
   }
 
   &--info {
@@ -360,10 +331,6 @@ main h3 {
       margin-top: .6em;
     }
 
-    .tutorial .subhead-topic {
-      margin-top: 1.6rem;
-    }
-
     &-content {
       padding-bottom: 1.2em;
       border-bottom: 1px dashed $gym-gray;
@@ -436,11 +403,15 @@ main h3 {
     font-weight: 900;
     font-size: 0.9625em;
     margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .take5--details .subhead-topic {
     margin-bottom: 1.6rem;
   }
 
-  .tutorial .subhead-topic {
-    margin-bottom: 1rem;
+  .take5--recommended-content .subhead-topic {
+    margin-top: 1.6rem;
   }
 }
 
