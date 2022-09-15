@@ -179,7 +179,7 @@
 
 // Course tabs (reusable class)
 .tabs {
-  padding: 0;
+  padding: 1em 0;
   font-weight: normal;
   margin: 4px 0 -8px; // offset to ensure being vertical centered above white panel
 
@@ -252,7 +252,7 @@
     line-height: 23.68px;
 
     &.active .icon {
-      color: #f89820;
+      color: $gym-orange;
     }
 
     .icon {
@@ -314,7 +314,7 @@
 
         &.active {
           a {
-            color: #f89820;
+            color: $gym-orange;
           }
         }
         &:last-of-type {
@@ -389,7 +389,7 @@
       color: #ebebeb;
     }
     ul.ui-accordion-content li.active a p {
-      color: #f89820;
+      color: $gym-orange;
       font-weight: bold;
     }
   }
@@ -855,12 +855,12 @@ section.handouts {
   background-color: #fff;
 
   a {
-    color: #f89820;
+    color: $gym-orange;
     display: inline;
 
     &:hover {
       text-decoration: none;
-      border-bottom: 1px solid #f89820;
+      border-bottom: 1px solid $gym-orange;
     }
   }
 

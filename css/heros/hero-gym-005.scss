@@ -140,7 +140,7 @@
 @include breakpoint(30em, max) {
 
   .dark-mode-sketch a.gym-button-secondary {
-    width: 100% !important;
+    width: 100%;
   }
 
 }
@@ -186,17 +186,13 @@
 }
 
 .dark-mode-sketch a.gym-button-secondary {
-  width: auto;
-  color: #75b3af !important;
-  background-color: transparent !important;
-  border: 2px solid #75b3af !important;
-  padding: 1.2em 1.6em !important;
-  vertical-align: bottom;
+  color: #75b3af;
+  border: 2px solid #75b3af;
 }
 
 a.gym-button-secondary:hover,
 a.gym-button-secondary:focus,
 a.gym-button-secondary:active {
-  color: $gym-white !important;
-  border: 2px solid $gym-white !important;
+  color: $gym-white;
+  border: 2px solid $gym-white;
 }
