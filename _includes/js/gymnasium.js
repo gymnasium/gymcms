@@ -289,8 +289,12 @@ class Gymnasium {
         var g = data[1];
         var b = data[2];
         var a = data[3]; // we will likely never need non-opaque values
+
+        var style = `background-color: rgb('${r}, ${g}, ${b}');`;
+
+        console.log(style);
   
-        bgTarget.style = `background-color: rgb('${r},${g},${b}');`;
+        bgTarget.style = style;
 
       });
     }
