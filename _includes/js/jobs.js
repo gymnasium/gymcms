@@ -412,10 +412,12 @@ function processData(d) {
 
 if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
   conductData();
+
+  // Listen for change events from form select
+  form.addEventListener('change', selectChange, false);
 }
 
-// Listen for change events from form select
-form.addEventListener('change', selectChange, false);
+
 
 // Listen for geolocator messages from our iframe
 eventer(messageEvent,function(event) {
@@ -427,9 +429,3 @@ eventer(messageEvent,function(event) {
     parseOptions(event.data,opts);
   }
 }, false);
-
-
-// TODO: add iframe dynamically? 
-// window.onload = function(){
-//   document.getElementById('YOURID').src = 'https://insertYourUrlHere.com'
-// };
