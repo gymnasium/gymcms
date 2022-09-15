@@ -62,8 +62,9 @@ Exclude rendered CSS in meta tags on localhost, for development/convenience reas
 
 {%- comment -%}
 Try to prefetch JS domains
-{%- endcomment -%}
 <!-- <link rel="dns-prefetch" href="https://api.segment.io"> -->
 <!-- <link rel="dns-prefetch" href="https://cdn.segment.com"> -->
-<link rel="dns-prefetch" href="https://www.google-analytics.com">
 <!-- <link rel="dns-prefetch" href="https://api-iam.intercom.io"> -->
+TODO: do we really want to prefetch google analytics?
+{%- endcomment -%}
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
