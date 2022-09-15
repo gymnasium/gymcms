@@ -66,11 +66,6 @@
   }
 }
 
-#main .no-wrap {
-  color: inherit;
-  white-space: nowrap;
-}
-
 // --- take-5 catalog ---
 
 // --- #about ---
@@ -337,12 +332,6 @@ main h3 {
       margin-top: .6em;
     }
 
-    .course .subhead-topic,
-    .tutorial .subhead-topic {
-      margin-top: 1.6rem;
-      margin-bottom: 1rem;
-    }
-
     &-content {
       padding-bottom: 1.2em;
       border-bottom: 1px dashed $gym-gray;
@@ -415,11 +404,15 @@ main h3 {
     font-weight: 900;
     font-size: 0.9625em;
     margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .take5--details .subhead-topic {
     margin-bottom: 1.6rem;
   }
 
-  .tutorial .subhead-topic {
-    margin-bottom: 1rem;
+  .take5--recommended-content .subhead-topic {
+    margin-top: 1.6rem;
   }
 }
 
