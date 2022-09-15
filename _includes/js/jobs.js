@@ -2,12 +2,15 @@
 if (!Array.prototype.filter){
   Array.prototype.filter = function(func, thisArg) {
     'use strict';
-    if ( ! ((typeof func === 'Function' || typeof func === 'function') && this) )
-        throw new TypeError();
+    if ( ! ((typeof func === 'Function' || typeof func === 'function') && this) ) {
+      throw new TypeError();
+    }
 
-    var len = this.length >>> 0,
-        res = new Array(len), // preallocate array
-        t = this, c = 0, i = -1;
+    var len = this.length >>> 0;
+    var res = new Array(len); // preallocate array
+    var t = this;
+    var c = 0;
+    var i = -1;
 
     var kValue;
     if (thisArg === undefined){
@@ -63,12 +66,12 @@ Array.prototype.shuffle = function () {
 // Create IE + others compatible event handler via @https://davidwalsh.name/window-iframe
 var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
 var eventer = window[eventMethod];
-var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+var messageEvent = eventMethod === "attachEvent" ? "onmessage" : "message";
 
 // Get URL Parameter
 function getUrlParameter(name) {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  var regex = new RegExp(`[\\?&]${name}=([^&#]*)`);
   var results = regex.exec(location.search);
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
@@ -109,16 +112,18 @@ const jobsContainer = document.getElementById('jobs-container');
 const msgContainer = document.getElementById('messages');
 const form = document.getElementById('m');
 
-if (jobsContainer.hasAttribute('data-options')) {
-  parseOptions(jobsContainer.getAttribute('data-options'),opts);
-}
-
-if (jobsContainer.hasAttribute('data-endpoint')) {
-  endpoint = jobsContainer.getAttribute('data-endpoint');
-}
-
-if (jobsContainer.hasAttribute('data-fallback')) {
-  fallback = jobsContainer.getAttribute('data-fallback');
+if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
+  if (jobsContainer.hasAttribute('data-options')) {
+    parseOptions(jobsContainer.getAttribute('data-options'),opts);
+  }
+  
+  if (jobsContainer.hasAttribute('data-endpoint')) {
+    endpoint = jobsContainer.getAttribute('data-endpoint');
+  }
+  
+  if (jobsContainer.hasAttribute('data-fallback')) {
+    fallback = jobsContainer.getAttribute('data-fallback');
+  }
 }
 
 // Add exception for `remote` option in the markets dropdown
@@ -160,9 +165,9 @@ function selectChange() {
 
   params.toString();
 
-  window.history.pushState({}, '', '?' + params + '#location');
+  window.history.pushState({}, '', `?${params}#location`);
   
-  outputDebug('[job module] market selected: ' + market);
+  outputDebug(`[job module] market selected: ${market}`);
 
   hideMsg();
   clearResults();
@@ -172,7 +177,7 @@ function selectChange() {
 
 // Update dropdown to the selected option
 function updateDropdown(m) {
-  document.querySelector('#m [value="' + m + '"]').selected = true;
+  document.querySelector(`#m [value="${m}"]`).selected = true;
 }
 
 function hideMsg() {
@@ -249,7 +254,7 @@ function fetchData(url) {
 
         store('jobs', response);
 
-        outputDebug('[job module] fetching data from endpoint: ' + endpoint);
+        outputDebug(`[job module] fetching data from endpoint: ${endpoint}`);
 
         processData(response);
 
@@ -285,7 +290,7 @@ function conductData() {
   } else {
 
     try {
-      testEndpoint(endpoint + '?limit=1', function(){
+      testEndpoint(`${endpoint}?limit=1`, function(){
         outputDebug(`[job module] endpoint ${endpoint} exists: ${endpointExists}`)
         if (endpointExists) {
           endpoint += '?limit=1500';
@@ -341,14 +346,14 @@ function processData(d) {
   if (category) {
     items = items.filter(item => item.category === category);
 
-    outputDebug('[job module] showing jobs for a specific category: ' + category);
+    outputDebug(`[job module] showing jobs for a specific category: ${category}`);
   }
 
   // Filter the jobs by market if we have a market param
   if ((typeof market !== 'undefined' && market !== null) && market.length) {
     items = items.filter(item => item.market === market);
 
-    outputDebug('[job module] showing jobs for a specific market: ' + market);
+    outputDebug(`[job module] showing jobs for a specific market: ${market}`);
   } else {
     // Off-site preference key
     // 0 = Unknown
@@ -388,11 +393,11 @@ function processData(d) {
       list += '<li>';
       // Add optional heading prefix
       if (optHeading) {
-        list += '<' + optHeading + '>';
+        list += `<${optHeading}>`;
       }
-      list += '<a href="' + decodeURI(el.url) + '?utm_source=gymnasium&utm_medium=web&utm_campaign=job-module&utm_content=textlink" title="' + el.title + '"><span class="job-title">' + el.title + ' </span><span class="job-location"> ' + el.city + '</span></a>';
+      list += `<a href="${decodeURI(el.url)}?utm_source=gymnasium&utm_medium=web&utm_campaign=job-module&utm_content=textlink" title="${el.title}"><span class="job-title">{el.title} </span><span class="job-location"> ${el.city}</span></a>`;
       if (optHeading) {
-        list += '</' + optHeading + '>';
+        list += `</${optHeading}>`;
       }
       list += '</li>';
     }
@@ -417,7 +422,7 @@ eventer(messageEvent,function(event) {
   // Reject messages that are not from a valid origin domain
   const regex = new RegExp('https:\/\/.*assets.aquent.com');
   if (regex.test(event.origin)) {
-    outputDebug('[geolocator] ' + event.data);
+    outputDebug(`[geolocator] ${event.data}`);
 
     parseOptions(event.data,opts);
   }
