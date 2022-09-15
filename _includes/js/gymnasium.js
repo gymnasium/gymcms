@@ -290,9 +290,10 @@ class Gymnasium {
         var b = data[2];
         var a = data[3]; // we will likely never need non-opaque values
 
-        var newColor = `rgb(\'${r}, ${g}, ${b}\')`;
+        var newColor = `rgb(\'${r}\, ${g}\, ${b}\')`;
+        var workingColor = 'background-color: rgb(' + r + ',' + g + ',' + b + ');';
 
-        console.log(data, bgTarget, newColor);
+        console.log(bgTarget, newColor, typeof newColor, typeof workingColor);
   
         bgTarget.style['backgroundColor'] = newColor;
 
