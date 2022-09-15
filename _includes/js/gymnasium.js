@@ -9,7 +9,9 @@ Author:       @mbifulco && @rediris
 document.writeText = document.write;
 
 document.write = function(parameter) {
-  if (!parameter) return; 
+  if (!parameter) {
+    return;
+  }
   var scriptPattern = /<script.*?src=['|"](.*?)['|"]/;
   if (scriptPattern.test(parameter)) {
     var srcAttribute = scriptPattern.exec(parameter)[1];
@@ -130,7 +132,10 @@ class Gymnasium {
   ///get a URL parameter passed in with HTTP GET
   ///NOTE: this function is not case sensitive
   getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)), sURLVariables = sPageURL.split("&"), sParameterName, i;
+    var sPageURL = decodeURIComponent(window.location.search.substring(1));
+    var sURLVariables = sPageURL.split("&");
+    var sParameterName;
+    var i;
 
     for (i = 0; i < sURLVariables.length; i++) {
       sParameterName = sURLVariables[i].split("=");
@@ -182,9 +187,9 @@ class Gymnasium {
       last_name: lastName,
       email: emailAddress,
       course: courseId,
-      utm_campaign: courseId + " - Enrollment",
+      utm_campaign: `${courseId} - Enrollment`,
       carrot_type: "Gymnasium Enrollment",
-      carrot_topic: "GYM-" + courseId,
+      carrot_topic:`GYM-${courseId}`,
       PROC: "AWUISubmitExternalLead",
     };
 
@@ -197,7 +202,7 @@ class Gymnasium {
       email: email,
       score: grade,
       course_id: courseId,
-      utm_campaign: courseId + " - Grade",
+      utm_campaign: `${courseId} - Grade`,
     };
     return gym.recordCloudwallRecord(data, callback);
   }
@@ -280,7 +285,7 @@ class Gymnasium {
         var b = data[2];
         var a = data[3]; // we will likely never need non-opaque values
   
-        bgTarget.style = 'background-color: rgb(' + r + ',' + g + ',' + b + ');';
+        bgTarget.style = `background-color: rgb('${r},${g},${b}');`;
 
       });
     }
