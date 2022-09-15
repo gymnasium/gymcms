@@ -6,10 +6,15 @@ TODO: audit these to figure out which we need to load, and where. For example, t
 {%endcomment%}
 
 {% include js/gymnasium.js %}
-{% include js/vendor/openedx/header.js %}
+{%comment%}
+  Temporarily commented out (until we update the theme)
+  {% include js/vendor/openedx/header.js %}
+{%endcomment%}
 {% include js/jobs.js %}
 {% include js/vendor/bootstrap.min.js %}
 {% include js/vendor/jquery.validate.min.js %}
-{% include js/vendor/cookiebanner.js %}
-{% include js/vendor/openedx/navigation.js %}
+{%comment%}
+  Temporarily commented out (until we update the theme)
+  {% include js/vendor/openedx/navigation.js %}
+{%endcomment%}
 {% include_relative vendor/prism.min.js %}
