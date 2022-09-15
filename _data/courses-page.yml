@@ -21,22 +21,21 @@ about_section:
     2: "Length"
   full_courses:
     1:
-      - label: "Earn a Certificate: Shareable on LinkedIn (if you pass the final exam)"
-      - label: "Course Forum: Share work and get feedback from students and teaching assistants"
-      - label: "Optional: Lesson homework and quizzes that prepare you for the final exam"
+      - label: "Certificate to share on social media"
+      - label: "Course forum to share work and get feedback"
+      - label: "Optional homework and quizzes to sharpen your skills"
     2:
-      - label: "Video Lessons: 2.5 hours, up to 5 hours"
-      - label: "Course Completion: 12 hours, up to 22 hours"
+      - label: "Video Lessons: 3–5 hours"
+      - label: "Course Completion: 12–hours"
   short_courses:
     1:
-      - label: "Earn a Badge: Shareable on LinkedIn (if you pass the final exam)"
+      - label: "Badge to share on social media"
     2:
-      - label: "Video Lessons: Under 1 hour, up to 2 hours"
-      - label: "Course Completion: 1 hour, up to 5 hours"
+      - label: "Video Lessons: 1–2 hours"
+      - label: "Course Completion: 1–5 hours"
   tutorials:
     1:
       - label: "Learn new skills in 5 minutes"
-      - label: "No homework or exam"
       - label: "Video tutorial with easy-to-follow transcript"
     2:
       - label: "5 minutes or less"
