@@ -6,10 +6,10 @@ main:
 
 full_courses:
   format: "Full Courses"
-  short_description: "Full Courses include a series of video lessons, optional quizzes and assignments, and a final exam and certificate if you pass. Plus, a forum to share work and get feedback from students and teaching assistants. Free online learning at your own pace."
+  short_description: "Full Courses include a series of video lessons, optional quizzes and assignments, and a final exam and certificate if you pass. Plus, a forum to share work and get feedback from students and teaching assistants."
 short_courses:
   format: "Gym Shorts"
-  short_description: "Gym Shorts (Short Courses) include a series of video lessons, a final exam, and a badge if you pass. Free online learning at your own pace, just shorter."
+  short_description: "Gym Shorts (Short Courses) include a series of video lessons, a final exam, and a badge if you pass."
 tutorials:
   format: "Take 5"
   short_description: "Take 5 tutorials are 5-minute video tutorials with easy-to-follow transcripts. No homework. No exam. Just free online learning."
