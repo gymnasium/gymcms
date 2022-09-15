@@ -293,9 +293,9 @@ class Gymnasium {
         var newColor = `rgb(\'${r}\, ${g}\, ${b}\')`;
         var workingColor = 'background-color: rgb(' + r + ',' + g + ',' + b + ');';
 
-        console.log(bgTarget, newColor, typeof newColor, typeof workingColor);
+        console.log(bgTarget, newColor, typeof newColor, workingColor, typeof workingColor);
   
-        bgTarget.style['backgroundColor'] = newColor;
+        bgTarget.style['backgroundColor'] = workingColor;
 
       });
     }
