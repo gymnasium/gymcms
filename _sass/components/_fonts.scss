@@ -1,4 +1,4 @@
-// TODO: omit or comment out fonts we're not actually using. For instance, the italics versions have been commented out below
+// TODO: omit or comment out fonts we're not actually using. For instance, the italics versions have been commented out below. Additionally, we could emulate google fonts and serve up only woff2.
 @mixin font-brandon {
   @font-face {
     font-family: brandon-grotesque;
@@ -64,17 +64,9 @@
   // TODO: do we want to clean up this list as well?
   @font-face {
     font-family: "FontAwesome";
-    src: url("https://thegymcms.com/fonts/fontawesome-webfont.eot?v=4.6.3");
-    src: url("https://thegymcms.com/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3")
-        format("embedded-opentype"),
-      url("https://thegymcms.com/fonts/fontawesome-webfont.woff2?v=4.6.3")
-        format("woff2"),
-      url("https://thegymcms.com/fonts/fontawesome-webfont.woff?v=4.6.3")
-        format("woff"),
-      url("https://thegymcms.com/fonts/fontawesome-webfont.ttf?v=4.6.3")
-        format("truetype"),
-      url("https://thegymcms.com/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular")
-        format("svg");
+    src: url("https://thegymcms.com/fonts/fontawesome-webfont.woff2?v=4.6.3")
+        format("woff2"), url("https://thegymcms.com/fonts/fontawesome-webfont.woff?v=4.6.3")
+        format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
