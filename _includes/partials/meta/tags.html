@@ -46,12 +46,16 @@ See here for additional notes:
 https://stackoverflow.com/questions/50824181/preloading-google-fonts
 {%- endcomment -%}
 <link rel="preconnect" href="{{ site.url }}">
+<link rel="preload" fetchpriority="high" href="{{ site.url }}/css/fonts/brandon-grotesque.css?{{ site.time | date:'%s' }}" as="stylesheet" crossorigin="anonymous">
+<link rel="preload" fetchpriority="high" href="{{ site.url }}/css/fonts/font-awesome.css?{{ site.time | date:'%s' }}" as="stylesheet" crossorigin="anonymous">
 <link rel="preload" fetchpriority="high" href="{{ site.url }}/css/main.css?{{ site.time | date:'%s' }}" as="style" crossorigin="anonymous">
 
-<link rel="preload" href="{{ site.url }}/fonts/brandon_reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<!-- <link rel="preload" href="{{ site.url }}/fonts/brandon_reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" href="{{ site.url }}/fonts/brandon_bld-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ site.url }}/fonts/brandon_blk-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="{{ site.url }}/fonts/brandon_blk-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
 
+<link rel="stylesheet" href="{{ site.url }}/css/fonts/brandon-grotesque.css?{{ site.time | date:'%s' }}">
+<link rel="stylesheet" href="{{ site.url }}/css/fonts/font-awesome.css?{{ site.time | date:'%s' }}">
 <link rel="stylesheet" href="{{ site.url }}/css/main.css?{{ site.time | date:'%s' }}">
 
 {% comment -%}
