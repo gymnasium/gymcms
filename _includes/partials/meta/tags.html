@@ -39,6 +39,11 @@
 
 {%- comment -%}
 Add DNS preload/prefetch meta tags to help prime the browser to fetch our 1st and 3rd party resources
+
+Note: even though this should technically work, there are browser warnings that the webfont preload didn't get used in time.
+
+See here for additional notes:
+https://stackoverflow.com/questions/50824181/preloading-google-fonts
 {%- endcomment -%}
 <link rel="preconnect" href="{{ site.url }}">
 <link rel="preload" fetchpriority="high" href="{{ site.url }}/css/main.css?{{ site.time | date:'%s' }}" as="style" crossorigin="anonymous">
@@ -61,10 +66,10 @@ Exclude rendered CSS in meta tags on localhost, for development/convenience reas
 {%- endunless -%}
 
 {%- comment -%}
-Try to prefetch JS domains
-<!-- <link rel="dns-prefetch" href="https://api.segment.io"> -->
-<!-- <link rel="dns-prefetch" href="https://cdn.segment.com"> -->
-<!-- <link rel="dns-prefetch" href="https://api-iam.intercom.io"> -->
-TODO: do we really want to prefetch google analytics?
-{%- endcomment -%}
+We used to prefetch these, but we really shouldn't bother with 3rd party tracking stuff, since it can potentially slow down our site...
+<link rel="dns-prefetch" href="https://api.segment.io">
+<link rel="dns-prefetch" href="https://cdn.segment.com">
+<link rel="dns-prefetch" href="https://api-iam.intercom.io">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
+{%- endcomment -%}
+
