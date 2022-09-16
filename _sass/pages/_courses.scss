@@ -105,7 +105,8 @@
   @include breakpoint(medium, max) {
 
     .row > div:not(:first-child) {
-      margin-top: 1.4em;
+      padding-top: 1em;
+      margin-top: 1em;
     }
 
   }
