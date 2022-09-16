@@ -38,16 +38,13 @@
 {%- endif %}
 
 {%- comment -%}
-Add DNS preload/prefetch meta tags to help prime the browser to fetch our 1st and 3rd party resources
-
-Note: even though this should technically work, there are browser warnings that the webfont preload didn't get used in time.
-
-See here for additional notes:
+Add DNS preload/prefetch meta tags to help prime the browser to fetch our resources
+See here for additional notes on how to improve this and avoid browser warnings:
 https://stackoverflow.com/questions/50824181/preloading-google-fonts
 {%- endcomment -%}
 <link rel="preconnect" href="{{ site.url }}">
-<link rel="preload" fetchpriority="high" href="{{ site.url }}/css/fonts/brandon-grotesque.css?{{ site.time | date:'%s' }}" as="stylesheet" crossorigin="anonymous">
-<link rel="preload" fetchpriority="high" href="{{ site.url }}/css/fonts/font-awesome.css?{{ site.time | date:'%s' }}" as="stylesheet" crossorigin="anonymous">
+<link rel="preload" fetchpriority="high" href="{{ site.url }}/css/fonts/brandon-grotesque.css?{{ site.time | date:'%s' }}" as="style" crossorigin="anonymous">
+<link rel="preload" fetchpriority="high" href="{{ site.url }}/css/fonts/font-awesome.css?{{ site.time | date:'%s' }}" as="style" crossorigin="anonymous">
 <link rel="preload" fetchpriority="high" href="{{ site.url }}/css/main.css?{{ site.time | date:'%s' }}" as="style" crossorigin="anonymous">
 
 <!-- <link rel="preload" href="{{ site.url }}/fonts/brandon_reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
