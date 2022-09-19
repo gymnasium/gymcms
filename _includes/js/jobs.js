@@ -395,7 +395,7 @@ class GymJobs {
       
           // Generate job item
           for (var i = 0; i < limit; i++) {
-            el = items[i];
+            var el = items[i];
             list += '<li>';
             // Add optional heading prefix
             if (optHeading) {
