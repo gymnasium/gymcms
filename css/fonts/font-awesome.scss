@@ -1,0 +1,18 @@
+---
+---
+// TODO: omit or comment out fonts we're not actually using. For instance, the italics versions have been commented out below. Additionally, we could emulate google fonts and serve up only woff2.
+
+/*
+*  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+*  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+*/
+// TODO: do we want to clean up this list as well?
+@font-face {
+  font-family: "FontAwesome";
+  src: url("{{ site.url }}/fonts/fontawesome-webfont.woff2?v=4.6.3")
+      format("woff2"), url("{{ site.url }}/fonts/fontawesome-webfont.woff?v=4.6.3")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

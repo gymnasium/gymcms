@@ -1,0 +1,119 @@
+---
+---
+@import 'variables';
+@import 'mixins';
+
+// TODO: add grid layout support with current fallback layout
+
+.hero-promo {
+
+& {
+  font-size: 16px; // !override / reset/rescale Bootstrap (3) handiwork
+  background-color: #2c9959;
+  background-image: url("{{ site.url }}/home/img/hero-courses-evergreen/bg-text-1920w.png?{{ site.time | date:'%s' }}"), linear-gradient(to bottom right, #2c9959 0%, #5ca5a0 100%);
+  background-repeat: repeat-y;
+  background-position: top center;
+  background-size: 250%;
+  padding: 15px 2.5%;
+}
+
+// structural spacing
+
+.container {
+  position: relative;
+  padding-bottom: 1.5em; // section notch/tab
+}
+
+.artwork {
+  text-align: center;
+  margin-bottom: -2.5%;
+}
+
+.artwork img {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+@include breakpoint(medium, min) {
+
+  & {
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+
+  .container {
+    min-height: 29em;
+  }
+
+  .artwork {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 53.5%;
+    height: 0;
+    padding-bottom: 40.5%;
+    margin: auto 0;
+    z-index: 0;
+  }
+
+  .artwork img {
+    margin-top: -0.25em;
+  }
+
+  .content {
+    position: relative;
+    left: 55.5%;
+    width: 44%;
+    z-index: 1;
+  }
+
+  .content header h1 {
+    max-width: 30ex;
+  }
+
+}
+
+// content / copy / cta
+
+.content {
+  margin-top: 5.5%;
+  margin-bottom: 30px;
+}
+
+.content header h1 {
+  font-size: 2.5em;
+  line-height: 1.15;
+  letter-spacing: 0.1rem;
+  color: $gym-white;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.content .description {
+  font-size: 1.35em;
+  font-weight: bold;
+  line-height: 1.35;
+  color: $gym-black;
+  margin-top: 1.5rem;
+}
+
+// cta
+
+.content .cta {
+  margin-top: 2.875rem;
+}
+
+@include breakpoint(36em, min) {
+
+  .no-wrap {
+    white-space: nowrap;
+  }
+
+}
+
+}

@@ -3,19 +3,7 @@
 @import "functions";
 @import "mixins";
 @import "variables";
-@import "components/typography";
 @import "components/resets";
-
-// Render font face rules
-@include font-brandon;
-
-/* Font awesome, used in:
-- main nav
-- course lessons accordion nav
-- forum
-
-*/
-@include font-awesome;
 
 * {
   -webkit-box-sizing: border-box;
@@ -136,16 +124,30 @@ span {
 }
 
 // Misc text details
-
-.break-word {
-  word-break: break-all;
-}
+// TODO: Consolidate and cleanup
 
 .all-caps {
   text-transform: uppercase;
 }
 
+.break-word {
+  word-break: break-all;
+}
+
+.block,
+.break {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+// prevent word wrap
+.nowrap,
 .no-wrap {
+  font: inherit;
+  color: inherit;
   white-space: nowrap;
 }
 
@@ -211,7 +213,6 @@ white panel (used in multiple places)
   line-height: 1.5;
   margin: 20px auto;
   padding: 1em 1.4em;
-  overflow: hidden;
 
   @include breakpoint(medium, max) {
     > .row > .col-md-3 {
@@ -252,29 +253,29 @@ white panel (used in multiple places)
   // adjustment for vertical rule (if a sidebar is present)
   @include breakpoint(medium, min) {
     & {
-      padding: 1em 1em 1em 2em;
+      position: relative;
+      padding: 1em 1em 2em 2em;
+    }
 
-      > .row {
-        padding-bottom: 2.2em;
+    // Sidebar dashed line
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -5px;
+      width: 25%;
+      height: 100%;
+      border-left: 1px dashed $gym-gray;
+    }
 
-        > .col-md-9 {
-          position: relative;
-          padding-bottom: 99em;
-          margin-bottom: -99em;
-
-          // Horizontal dashed line
-          &:after {
-            border-right: 1px dashed $gym-gray;
-            content: '';
-            position: absolute;
-            height: calc(100% + 2.2em);
-            top: -1.5rem;
-            right: 0;
-          }
-        }
-      }
+    // Annoying clearfix with zero-width space
+    &:after {
+      content: "\200b";
+      display: table;
+      clear: both;
     }
   }
+
 }
 
 
@@ -344,7 +345,7 @@ header.global {
 div.wrapper-footer {
   margin-top: 0;
   background-color: $gym-black;
-  border-top: 10px solid $gym-orange-light;
+  border-top: 10px solid $gym-orange;
   color: $gym-white;
   min-height: 170px;
 
@@ -874,8 +875,8 @@ https://github.com/gymnasium/tracker/issues/143
 
 /* update font-family for catalog navigation */
 
-// #gym-catalog .course-menu a:focus,
-// #gym-catalog .course-menu a:active {
+// #catalog .course-menu a:focus,
+// #catalog .course-menu a:active {
 //   font-family: $gym-font-stack;
 // }
 
@@ -1081,10 +1082,6 @@ Footer CSS (migrated from footer.scss)
     margin-bottom: 0;
   }
 
-  .all-caps {
-    text-transform: uppercase;
-  }
-
   .gym-brand {
     margin-bottom: 1em;
   }
@@ -1202,8 +1199,6 @@ Footer CSS (migrated from footer.scss)
       margin-bottom: 0;
     }
 
-    @include gym-text-links;
-
     @include breakpoint(large, min) {
       .text-wrap:before {
         content: "\a";
@@ -1255,8 +1250,6 @@ Footer CSS (migrated from footer.scss)
     margin-top: 5px;
   }
 
-  @include gym-text-links;
-
   & .msg-content {
     @include breakpoint(large, min) {
       padding-left: 15px;
@@ -1280,8 +1273,6 @@ aside.system-status {
     color: $gym-black;
     margin-bottom: 0;
   }
-
-  @include gym-text-links;
 
 // Ukraine Relief related theme
 
@@ -1391,9 +1382,30 @@ aside.system-status {
 
 }
 
+// back to top link
+.to-top-link {
+  margin-top: 1.2em;
+
+  b {
+    color: $gym-dark-gray;
+
+    &::before {
+      display: inline-block;
+      content: "↑";
+      font-family: monospace, monospace;
+      vertical-align: top;
+      margin-right: .25em;
+    }
+  }
+}
+
+// Jobs module
+@import "components/jobs";
+
 // Import migrated fixes
 @import "migrated-fixes";
 
+@import "bootstrap";
 
 // Import gym-snaps support
 @import "components/gym-snaps";

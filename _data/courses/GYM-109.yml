@@ -6,16 +6,18 @@ course_type: full
 live: true
 url: /courses/course-v1:GYM+109+0/about
 poster_art: /img/course-artwork/png/gym-109.png
-topic: "Design & Development"
+topic: "Development"
 short_description: "This is a hands-on, code-intensive course on how to build high-performance, responsive websites that look great across multiple screen sizes and devices."
 instructor: jpamental
-skills: 
+skills:
   - label: "Strategic thinking about responsive process"
   - label: "Page layout structure with HTML & CSS"
   - label: "Responsive typography and image techniques"
-  - label: "And more…"
 audience:
   - label: "Front-End Developers"
   - label: "Designers with coding chops"
   - label: "JavaScript Developers"
+lessons_duration: "4 hours"
+completion_duration: "Up to 16 hours"
+skill_level: "Intermediate"
 ---

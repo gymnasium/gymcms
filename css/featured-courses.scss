@@ -14,7 +14,8 @@
 
 // --- course type(s) ---
 .list-featured-courses {
-  .design-development {
+  .design,
+  .accessibility {
     background-color: $gym-magenta;
   }
 
@@ -22,15 +23,31 @@
     background-color: $gym-purple;
   }
 
-  .prototyping,
-  .user-experience {
+  .ux {
     background-color: $gym-teal;
   }
 
-  .career-skills,
-  .content-creation {
+  .career-skills {
     background-color: $gym-green;
   }
+}
+
+// TODO: Temporary fix until course artwork color-code-theme is resolved
+
+.list-featured-courses li {
+
+  &:first-child > div {
+    background-color: $gym-green;
+  }
+
+  &:nth-child(even) > div {
+    background-color: $gym-teal;
+  }
+
+  &:nth-child(3) > div {
+    background-color: $gym-magenta;
+  }
+
 }
 
 .featured-course {

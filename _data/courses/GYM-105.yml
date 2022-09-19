@@ -16,10 +16,12 @@ skills:
   - label: "Online writing strategies"
   - label: "Content-first UX design"
   - label: "Audience research"
-  - label: "And more…"
 audience:
   - label: "Copy Editors"
   - label: "Marketers"
   - label: "Web Designers"
   - label: "Content Strategists"
+lessons_duration:
+completion_duration:
+skill_level: "Beginner"
 ---

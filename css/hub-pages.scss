@@ -38,46 +38,12 @@
   background: $gym-green;
 }
 
-// --- links / buttons ---
-
-#main a {
-  color: currentColor;
-  border-bottom-color: currentColor;
-}
-
 // cta / structure
 
 .cta {
   text-align: center;
   margin-top: 1.2em;
 }
-
-// back to top
-
-.to-top-link {
-  margin-top: 1.2em;
-
-  b {
-    color: $gym-dark-gray;
-
-    &::before {
-      display: inline-block;
-      content: "↑";
-      font-family: monospace, monospace;
-      vertical-align: top;
-      margin-right: .25em;
-    }
-  }
-}
-
-// gym button
-
-#main .gym-button {
-  width: auto !important; // !override / shrink-wrap
-  padding: 1.2em 2.2em !important; // !override
-  border-radius: 3px;
-}
-
 
 // --- #about ---
 
