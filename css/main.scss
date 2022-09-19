@@ -3,19 +3,7 @@
 @import "functions";
 @import "mixins";
 @import "variables";
-@import "components/typography";
 @import "components/resets";
-
-// Render font face rules
-@include font-brandon;
-
-/* Font awesome, used in:
-- main nav
-- course lessons accordion nav
-- forum
-
-*/
-@include font-awesome;
 
 * {
   -webkit-box-sizing: border-box;
@@ -1411,9 +1399,13 @@ aside.system-status {
   }
 }
 
+// Jobs module
+@import "components/jobs";
+
 // Import migrated fixes
 @import "migrated-fixes";
 
+@import "bootstrap";
 
 // Import gym-snaps support
 @import "components/gym-snaps";
