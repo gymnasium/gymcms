@@ -16,10 +16,5 @@ TODO: audit these to figure out which we need to load, and where. For example, t
   Temporarily commented out (until we update the theme)
   {% include js/vendor/openedx/navigation.js %}
 {%endcomment%}
+{% include js/jobs.js %}
 {% include_relative vendor/prism.min.js %}
-
-{%comment%}
-  Temporarily commented out to diagnose issues
-  {% include js/jobs.js %}
-{%endcomment%}
-
