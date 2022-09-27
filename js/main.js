@@ -15,6 +15,7 @@ TODO: audit these to figure out which we need to load, and where. For example, t
 {% include js/vendor/jquery.validate.min.js %}
 {%comment%}
   Temporarily commented out (until we update the theme)
-  {% include js/vendor/openedx/navigation.js %}
+  
 {%endcomment%}
+{% include js/vendor/openedx/navigation.js %}
 {% include_relative vendor/prism.min.js %}
