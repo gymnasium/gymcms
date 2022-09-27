@@ -291,49 +291,49 @@ white panel (used in multiple places)
   color: $gym-light-gray;
 }
 
-body header.global.slim {
-  border-bottom: none;
-}
+// body header.global.slim {
+//   border-bottom: none;
+// }
 
-header.global {
-  margin: 0;
-  box-shadow: none;
-  border: none;
-  width: inherit;
-  height: 120px;
-  background-color: $gym-black;
+// header.global {
+//   margin: 0;
+//   box-shadow: none;
+//   border: none;
+//   width: inherit;
+//   height: 120px;
+//   background-color: $gym-black;
 
-  .container,
-  .container.grey {
-    min-width: inherit;
-  }
+//   .container,
+//   .container.grey {
+//     min-width: inherit;
+//   }
 
-  nav {
-    .nav-courseware {
-      padding-top: 3px;
-    }
+//   nav {
+//     .nav-courseware {
+//       padding-top: 3px;
+//     }
 
-    .logo {
-      clear: left;
-      margin-top: 30px;
-    }
+//     .logo {
+//       clear: left;
+//       margin-top: 30px;
+//     }
 
-    //odd amount of specificity required to get around built in style rules - MB
-    .cta.cta-register {
-      color: $gym-white;
-      display: inline-block;
-      margin-top: -0.3em;
+//     //odd amount of specificity required to get around built in style rules - MB
+//     .cta.cta-register {
+//       color: $gym-white;
+//       display: inline-block;
+//       margin-top: -0.3em;
 
-      b {
-        margin-top: 4px;
-      }
-    }
+//       b {
+//         margin-top: 4px;
+//       }
+//     }
 
-    .container {
-      background: transparent;
-    }
-  }
-}
+//     .container {
+//       background: transparent;
+//     }
+//   }
+// }
 
 .content-wrapper#content {
   // padding-bottom: 1em;
