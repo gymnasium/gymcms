@@ -16,17 +16,45 @@
 .main-nav {
   padding: 1rem 0;
 
-  a:not(.gym-button) {
-    font-family: $gym-font-stack;
-    font-size: 1.2em;
-    color: $gym-white;
-    padding: 15px;
+
+
+  ul {
+    a:not(.gym-button) {
+      font-family: $gym-font-stack;
+      font-size: 1.2em;
+      color: $gym-white;
+      padding: 1.5rem 0;
+      display: block;
+    }
   }
+
+  @include breakpoint(medium, max) {
+    .navbar-brand {
+      padding: 1rem 0 2rem;
+      display: block;
+    }
+
+    // This is the line below the logo on mobile screens
+    ul {
+      position: relative;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        left: -1.5rem;
+        width: calc(100% + 3rem);
+        border-top: 1px solid $gym-white;
+      }
+    }
+
+  }
+
+
 
   @include breakpoint(medium, min) {
     display: flex;
     order: 2;
-    height: 70px;
+    height: 7rem;
 
     .container {
       display: flex;
@@ -40,11 +68,16 @@
     }
 
     ul {
+      border: 0;
       display: flex;
       align-items: center;
       flex-grow: 1;
       min-width: 50%;
       justify-content: flex-end;
+
+      a:not(.gym-button) {
+        padding: 1.5rem;
+      }
     }
 
     li {
@@ -62,7 +95,7 @@
   }
 
   a {
-    padding: 10px;
+    padding: 1rem;
   }
 
   @include breakpoint(medium, min) {
