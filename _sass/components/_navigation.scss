@@ -31,7 +31,7 @@
   }
 
   @include breakpoint(medium, max) {
-    .navbar-brand {
+    .site-logo {
       padding: 1rem 0;
       display: inline-block;
     }
@@ -86,7 +86,7 @@
       width: 100%;
     }
 
-    .navbar-brand {
+    .site-logo {
       flex-basis: content;
     }
 
