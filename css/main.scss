@@ -651,18 +651,6 @@ code * {
   font-family: monospace, monospace;
 }
 
-/* password reset page */
-.view-passwordreset {
-  .introduction header {
-    background-image: none;
-  }
-
-  div.container,
-  footer.container {
-    padding: 0;
-  }
-}
-
 .cookiebanner {
   span {
     color: $gym-white;
