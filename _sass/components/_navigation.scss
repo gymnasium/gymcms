@@ -81,12 +81,15 @@
           }
         }
       }
-    }
 
-    li {
+      // make the gym button fill the space
+      &.logged-out {
+        li {
 
-      &:last-child {
-        flex-basis: 100%;
+          &:last-child {
+            flex-basis: 100%;
+          }
+        }
       }
     }
   }
