@@ -7,7 +7,7 @@
     padding: 0;
   }
 
-  @include breakpoint(medium, min) {
+  @include breakpoint(700px, min) {
     display: flex;
     flex-direction: column;
   }
@@ -30,7 +30,7 @@
     }
   }
 
-  @include breakpoint(medium, max) {
+  @include breakpoint(700px, max) {
     .site-logo {
       padding: 1rem 0;
       display: inline-block;
@@ -73,7 +73,7 @@
     }
   }
 
-  @include breakpoint(medium, min) {
+  @include breakpoint(700px, min) {
     padding: 1rem 0;
     display: flex;
     order: 3;
@@ -125,7 +125,7 @@
     margin-left: 1rem;
   }
 
-  @include breakpoint(medium, min) {
+  @include breakpoint(700px, min) {
     display: flex;
     order: 2;
     padding: 1rem 0;

@@ -51,15 +51,22 @@
             <a class="site-logo" href="/">
               <img class="gymnasium-logo" src="https://dev.thegymcms.com/img/brand/png/gymnasium-logo-white-4x.png" srcset="https://dev.thegymcms.com/img/brand/svg/gymnasium-logo-white.svg" width="200" height="23" alt="Aquent Gymnasium home page">
             </a>
+
+            {%- assign menuclass = "logged-out" -%}
+            {%- assign dashclass = "gym-button" -%}
+            {%- if page.permalink == '/home/index-auth/' -%}
+              {%- assign menuclass = "logged-in" -%}
+              {%- assign dashclass = "" -%}
+            {%- endif -%}
       
-            <ul>
+            <ul class="{{menuclass}}">
               <li><a href="/courses">Courses</a></li>
               <li><a href="/jobs">Jobs</a></li>
               <li><a href="/about">About</a></li>
-      
-                <li>
-                  <a class="gym-button" href="/login?next=%2F">Log In/Sign Up</a>
-                </li>
+              <li><a class="{{dashclass}}" href="/dashboard">Account</a></li>
+              {%- if page.permalink == '/home/index-auth/' -%}
+                <li><a href="/logout">Log Out</a></li>
+              {%- endif -%}
             </ul>
           </div>
         </nav>
