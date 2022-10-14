@@ -64,6 +64,8 @@
   }
 }
 
+// artwork background placeholders
+
 #meet-the-metaverse .image {
   background: #939eb0;
   background: linear-gradient(to bottom left, #939eb0, #ae9880);
@@ -72,6 +74,8 @@
 #advocating-for-accessibility .image {
   background: #fff;
 }
+
+// breakpoint(s)
 
 @include breakpoint(large, min) {
   .hero-promo {
