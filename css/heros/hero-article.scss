@@ -15,8 +15,7 @@
   }
 
   .image {
-    background: #939eb0;
-    background: linear-gradient(to bottom left, #939eb0, #ae9880);
+    background: transparent;
     margin: -30px -15px 0;
 
     & + .text {
@@ -63,6 +62,15 @@
     }
 
   }
+}
+
+#meet-the-metaverse .image {
+  background: #939eb0;
+  background: linear-gradient(to bottom left, #939eb0, #ae9880);
+}
+
+#advocating-for-accessibility .image {
+  background: #fff;
 }
 
 @include breakpoint(large, min) {
