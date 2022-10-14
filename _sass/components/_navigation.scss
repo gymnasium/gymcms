@@ -119,6 +119,9 @@
     ul {
       border: 0;
       min-width: 50%;
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
       justify-content: flex-end;
       width: unset;
       left: unset;
