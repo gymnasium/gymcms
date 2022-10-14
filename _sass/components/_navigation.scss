@@ -69,6 +69,19 @@
       flex-grow: 1;
       justify-content: space-between;
 
+      // make the gym button fill the space
+      // note: the following classes are available on the ul: ul.logged-in & ul.logged-out
+      &.logged-out {
+        padding-bottom: 1.5rem;
+
+        li {
+
+          &:last-child {
+            flex-basis: 100%;
+          }
+        }
+      }
+
       a {
         &.gym-button {
           border-radius: 0;
@@ -77,18 +90,6 @@
         &:not(.gym-button) {
           &:hover {
             background-color: rgba($gym-dark-gray-2, 0.75);
-          }
-        }
-      }
-
-      // make the gym button fill the space
-      &.logged-out {
-        padding-bottom: 1.5rem;
-
-        li {
-
-          &:last-child {
-            flex-basis: 100%;
           }
         }
       }
