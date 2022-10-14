@@ -100,7 +100,7 @@
   .main-nav {
     padding: 1rem 0;
     display: flex;
-    order: 3;
+    order: 3; // this is if we decide to include the system status banner within .site-header
     height: 7rem;
 
     .container {
@@ -117,9 +117,6 @@
 
     ul {
       border: 0;
-      display: flex;
-      align-items: center;
-      flex-grow: 1;
       min-width: 50%;
       justify-content: flex-end;
       width: unset;
@@ -157,7 +154,7 @@
 @include breakpoint(small, min) {
   .utility-nav {
     display: flex;
-    order: 2;
+    order: 2; // this is if we decide to include the system status banner within .site-header
     padding: 1rem 0;
 
     .container {

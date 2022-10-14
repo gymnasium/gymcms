@@ -63,9 +63,12 @@
               <li><a href="/courses">Courses</a></li>
               <li><a href="/jobs">Jobs</a></li>
               <li><a href="/about">About</a></li>
-              <li><a class="{{dashclass}}" href="/dashboard">Account</a></li>
+              
               {%- if page.permalink == '/home/index-auth/' -%}
+                <li><a class="{{dashclass}}" href="/dashboard">Dashboard</a></li>
                 <li><a href="/logout">Log Out</a></li>
+              {%- else -%}
+                <li><a class="{{dashclass}}" href="/dashboard">Log In/Sign Up</a></li>
               {%- endif -%}
             </ul>
           </div>
