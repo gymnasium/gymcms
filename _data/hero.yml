@@ -33,4 +33,4 @@ embed_auto_play: false
 embed_fetchpriority: "high"
 embed_loading: "eager"
 embed_frameborder: "0"
-embed_scrolling: "0"
+embed_scrolling: "no"
