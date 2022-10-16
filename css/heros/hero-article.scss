@@ -15,7 +15,7 @@
   }
 
   .image {
-    background: transparent;
+    background: $gym-gray;
     margin: -30px -15px 0;
 
     & + .text {
@@ -72,10 +72,20 @@
 }
 
 #advocating-for-accessibility .image {
-  background: #fff;
+  background: $gym-white;
+  background: linear-gradient(135deg, $gym-white 0%, $gym-gray-2 40%, #1ea4ef 100%);
 }
 
-// breakpoint(s)
+@include breakpoint(large, min) {
+
+  #meet-the-metaverse .image {
+    background: #ae9880;
+    background: linear-gradient(to bottom left, #ae9880, #868989);
+  }
+
+}
+
+// breakpoints
 
 @include breakpoint(large, min) {
   .hero-promo {
@@ -96,13 +106,12 @@
 
     .image {
       min-height: 100%;
-      background: #ae9880;
-      background: linear-gradient(to bottom left, #ae9880, #868989);
       margin: 0;
 
       & + .text {
         margin-top: 0;
       }
     }
+
   }
 }
