@@ -1,5 +1,5 @@
-current_promo: articles/meet-the-metaverse.html
-auth_promo: articles/meet-the-metaverse.html
+current_promo: articles/advocating-for-accessibility.html
+auth_promo: articles/advocating-for-accessibility.html
 
 # Live Stream
 # Set true/false (lowercase).
@@ -33,4 +33,4 @@ embed_auto_play: false
 embed_fetchpriority: "high"
 embed_loading: "eager"
 embed_frameborder: "0"
-embed_scrolling: "0"
+embed_scrolling: "no"
