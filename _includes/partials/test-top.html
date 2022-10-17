@@ -47,7 +47,7 @@
 
         <nav id="main-nav" class="main-nav" aria-label="Main Navigation">
           <div class="container">
-      
+
             <a class="site-logo" href="/">
               <img class="gymnasium-logo" src="https://dev.thegymcms.com/img/brand/png/gymnasium-logo-white-4x.png" srcset="https://dev.thegymcms.com/img/brand/svg/gymnasium-logo-white.svg" width="200" height="23" alt="Aquent Gymnasium home page">
             </a>
@@ -58,22 +58,22 @@
               {%- assign menuclass = "logged-in" -%}
               {%- assign dashclass = "" -%}
             {%- endif -%}
-      
+
             <ul class="{{menuclass}}">
               <li><a href="/courses">Courses</a></li>
               <li><a href="/jobs">Jobs</a></li>
               <li><a href="/about">About</a></li>
-              
+
               {%- if page.permalink == '/home/index-auth/' -%}
                 <li><a class="{{dashclass}}" href="/dashboard">Dashboard</a></li>
                 <li><a href="/logout">Log Out</a></li>
               {%- else -%}
-                <li><a class="{{dashclass}}" href="/dashboard">Log In/Sign Up</a></li>
+                <li><a class="{{dashclass}}" href="/dashboard">Log In / Sign Up</a></li>
               {%- endif -%}
             </ul>
           </div>
         </nav>
-      
+
         <nav id="utility-nav" class="utility-nav" aria-label="Affiliated Brands Navigation">
           <div class="container">
             <ul>
@@ -82,7 +82,7 @@
             </ul>
           </div>
         </nav>
-      
+
         <div class="wrapper-msg urgency-high" id="browserWarning" style="display:none;">
             <div class="msg">
                 <div class="msg-content">
