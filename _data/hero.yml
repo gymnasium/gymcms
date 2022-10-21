@@ -4,7 +4,7 @@ auth_promo: articles/advocating-for-accessibility.html
 # Live Stream
 # Set true/false (lowercase).
 # Note: true overrides current/auth promo heros
-live_stream: false
+live_stream: true
 
 # Source
 # Set twitch/youtube (lowercase)
@@ -21,7 +21,7 @@ byline: "The Gymnasium Team"
 twitch_channel: "andrewpmiller"
 
 # youtube
-youtube_video_ID: "PX6QIFPtQUM"
+youtube_video_ID: "lRX4d2rxg4U"
 
 # Aspect Ratio 16:19
 embed_width: "854"
