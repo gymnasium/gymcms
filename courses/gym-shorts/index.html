@@ -1,5 +1,73 @@
 ---
-layout: wrapper-full-default
+layout: raw
 permalink: /courses/gym-shorts/
 ---
-<!-- gym-shorts course content here -->
+{%- if jekyll.environment == "local" -%}
+  {%- include partials/test-top.html -%}
+{%- endif -%}
+
+{%- assign courses = site.data.courses-page -%}
+
+<section class="find-courses" id="catalog">
+
+  <header class="about">
+    <div class="container">
+      <h1>{{ courses.main.title }}</h1>
+      <p>
+        <strong class="block">{{ courses.main.tagline }}</strong>
+        {{ courses.main.short_description }}
+      </p>
+    </div>
+  </header>
+
+  <div class="container">
+    <ul class="tabs">
+      <li>
+        <a href="/courses/full">{{ courses.full_courses.format }}</a>
+      </li>
+      <li>
+        <a href="/courses/gym-shorts">{{ courses.short_courses.format }}</a>
+      </li>
+      <li>
+        <a href="/courses/take5">{{ courses.tutorials.format }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <main id="main" class="container" aria-label="Content" tabindex="-1" role="main">
+    <div class="white-panel catalog-content">
+      <div class="row">
+        <div class="col-md-9 course-overview">
+          <section class="courses-container">
+
+            <section id="gymshorts">
+              <header class="intro">
+                <h1>Gym Shorts</h1>
+                <p class="hero">
+                  {{ courses.short_courses.short_description }}
+                </p>
+              </header>
+              <ul class="listing-courses list-unstyled" id="gym-shorts-list">
+                {%- assign base_path = "/courses/gym-shorts/" | prepend: site.gymurl -%}
+                {%- include_relative course-list-recent.html -%}
+              </ul>
+              <div class="to-top-link">
+                <a href="#catalog"><b>Back to top</b></a>
+              </div>
+            </section>
+
+          </section>
+        </div>
+        <div class="col-md-3 sidebar">
+          {%- comment -%} Get Upcoming/Featured Courses Sidebar {%- endcomment -%}
+          {%- include sidebar-featured.html -%}
+        </div>
+      </div><!-- .catalog-content.row -->
+    </div><!-- .white-panel -->
+
+  </main>
+</section>
+
+{%- if jekyll.environment == "local" -%}
+  {%- include partials/test-bottom.html -%}
+{%- endif -%}
