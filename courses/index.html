@@ -17,7 +17,7 @@ permalink: /courses/
         <strong class="block">{{ courses.main.tagline }}</strong>
         {{ courses.main.short_description }}
       </p>
-      {%- include_relative about/index.html -%}
+      {%- include courses/about/index.html -%}
     </div>
   </header>
 
@@ -27,7 +27,7 @@ permalink: /courses/
         <a href="#full">{{ courses.full_courses.format }}</a>
       </li>
       <li>
-        <a href="#gymshorts">{{ courses.short_courses.format }}</a>
+        <a href="#gym-shorts">{{ courses.short_courses.format }}</a>
       </li>
       <li>
         <a href="#take5">{{ courses.tutorials.format }}</a>
@@ -57,7 +57,7 @@ permalink: /courses/
               </div>
             </section>
 
-            <section id="gymshorts">
+            <section id="gym-shorts">
               <header class="intro">
                 <h1>Gym Shorts</h1>
                 <p class="hero">
@@ -93,6 +93,7 @@ permalink: /courses/
                 <a href="#catalog"><b>Back to top</b></a>
               </div>
             </section>
+
           </section>
         </div>
         <div class="col-md-3 sidebar">
