@@ -336,9 +336,9 @@ class GymJobs {
       
       // Process our JSON data
       function processData(d) {
-
-        if (typeof d !== 'undefined' && d !== null) {
-          data = JSON.parse(d);
+        data = JSON.parse(d);
+        if (typeof data.items !== 'undefined' && data.items !== null) {
+          
           var items = data.items;
       
           // Wrap our jobs in headings or no?
