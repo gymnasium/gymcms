@@ -1,7 +1,7 @@
 .site-header {
   background-color: $gym-black;
-  display: flex;
-  flex-direction: column;
+//   display: flex;
+//   flex-direction: column;
 
   ul {
     list-style: none;
@@ -10,136 +10,243 @@
   }
 }
 
-.site-logo {
-  padding: 1rem 0;
-  display: inline-block;
-}
-
 .main-nav {
-  padding: 1rem 0 0;
+  padding: 1.5rem 0;
+
+  .gymnasium-logo {
+    padding: 0.5rem 0;
+  }
 
   ul {
-    position: relative;
-    left: -1.5rem;
-    width: calc(100% + 3rem);
+    padding-top: 1.75rem;
 
-    a:not(.gym-button) {
+    a {
+      display: block;
       font-family: $gym-font-stack;
       font-size: 1.2em;
+      line-height: 1.5;
       color: $gym-white;
-      padding: 1.5rem;
-      display: block;
+      padding: 1.2rem;
+      border-top: 1px solid $gym-dark-gray;
+      transition: all 250ms ease;
 
       &:hover {
-        transition: all 250ms ease;
+        color: $gym-orange;
       }
     }
+
+    li:last-child {
+      padding-top: 0.5rem;
+    }
+
   }
-}
 
-@include breakpoint(320px, max) {
-  .main-nav {
-    ul {
-      margin-top: 1rem;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 100%;
-        border-top: 1px solid $gym-light-gray;
-        z-index: 1;
-      }
-
-      a {
-        &:not(.gym-button) {
-          border-bottom: 1px solid $gym-light-gray;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width:320px) and (max-width: 639px){
-  .main-nav {
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      flex-grow: 1;
-      justify-content: space-between;
-
-      // make the gym button fill the space
-      // note: the following classes are available on the ul: ul.logged-in & ul.logged-out
-      &.logged-out {
-        padding-bottom: 1.5rem;
-
-        li {
-
-          &:last-child {
-            flex-basis: 100%;
-          }
-        }
-      }
-
-      a {
-        &.gym-button {
-          border-radius: 0;
-        }
-
-        &:not(.gym-button) {
-          &:hover {
-            background-color: rgba($gym-dark-gray-2, 0.75);
-          }
-        }
-      }
-    }
-  }
-}
-
-@include breakpoint(small, min) {
-  .main-nav {
-    padding: 1rem 0;
-    display: flex;
-    order: 3; // this is if we decide to include the system status banner within .site-header
-    height: 7rem;
-
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
+  @include breakpoint(42em, min) {
 
     .site-logo {
-      flex-basis: content;
-      flex-shrink: 0;
+      display: inline-block;
+      vertical-align: -1.4rem;
     }
 
     ul {
-      border: 0;
-      min-width: 50%;
-      display: flex;
-      flex-grow: 1;
-      align-items: center;
-      justify-content: flex-end;
-      width: unset;
-      left: unset;
+      float: right;
+      padding-top: 0;
+      padding-left: 1.2rem;
 
-      a:not(.gym-button) {
-      
-        &:hover {
-          color: $gym-orange;
+      li {
+        display: inline;
+        vertical-align: middle;
+
+        a:not(.gym-button) {
+          display: inline-block;
+          border-top: 0 none;
         }
+
+        .gym-button {
+          width: auto;
+        }
+
+         a[href*="about"]:after {
+          content: "";
+          padding: 1.2rem 0;
+          border-left: 1px solid $gym-dark-gray;
+          margin-left: 2.4rem;
+        }
+
+        &:last-child {
+          padding-top: 0;
+          margin-left: 0.8rem;
+        }
+
       }
+
     }
 
-    li {
-      display: inline-flex;
-      width: auto;
-    }
   }
+
 }
+
+// .main-nav {
+//   position: relative;
+//   padding: 1rem 0;
+//
+// .site-logo {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   height: 25px;
+//   margin: auto 0;
+// }
+//
+//   ul {
+//     float: right;
+//     margin-left: 16em;
+//   }
+//
+//   ul li {
+//     display: inline;
+//   }
+//
+//   li a:not(.gym-button) {
+//     display: inline-block;
+//   }
+//
+//   li a.gym-button {
+//     width: auto;
+//     vertical-align: middle;
+//   }
+//
+// .vbar {
+//   border-right: 1px solid $gym-dark-gray;
+// }
+//
+// }
+
+// .main-nav {
+//   padding: 1rem 0 0;
+//
+//   ul {
+//     position: relative;
+//     left: -1.5rem;
+//     width: calc(100% + 3rem);
+//
+//     a:not(.gym-button) {
+//       font-family: $gym-font-stack;
+//       font-size: 1.2em;
+//       color: $gym-white;
+//       padding: 1.5rem;
+//       display: block;
+//
+//       &:hover {
+//         transition: all 250ms ease;
+//       }
+//     }
+//   }
+// }
+//
+// @include breakpoint(320px, max) {
+//   .main-nav {
+//     ul {
+//       margin-top: 1rem;
+//
+//       &::before {
+//         content: '';
+//         position: absolute;
+//         top: 0;
+//         width: 100%;
+//         border-top: 1px solid $gym-light-gray;
+//         z-index: 1;
+//       }
+//
+//       a {
+//         &:not(.gym-button) {
+//           border-bottom: 1px solid $gym-light-gray;
+//         }
+//       }
+//     }
+//   }
+// }
+//
+// @media (min-width:320px) and (max-width: 639px){
+//   .main-nav {
+//     ul {
+//       display: flex;
+//       flex-wrap: wrap;
+//       align-items: center;
+//       flex-grow: 1;
+//       justify-content: space-between;
+//
+//       // make the gym button fill the space
+//       // note: the following classes are available on the ul: ul.logged-in & ul.logged-out
+//       &.logged-out {
+//         padding-bottom: 1.5rem;
+//
+//         li {
+//
+//           &:last-child {
+//             flex-basis: 100%;
+//           }
+//         }
+//       }
+//
+//       a {
+//         &.gym-button {
+//           border-radius: 0;
+//         }
+//
+//         &:not(.gym-button) {
+//           &:hover {
+//             background-color: rgba($gym-dark-gray-2, 0.75);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+//
+// @include breakpoint(small, min) {
+//   .main-nav {
+//     padding: 1rem 0;
+//     display: flex;
+//     order: 3; // this is if we decide to include the system status banner within .site-header
+//     height: 7rem;
+//
+//     .container {
+//       display: flex;
+//       align-items: center;
+//       justify-content: space-between;
+//       width: 100%;
+//     }
+//
+//     .site-logo {
+//       flex-basis: content;
+//       flex-shrink: 0;
+//     }
+//
+//     ul {
+//       border: 0;
+//       min-width: 50%;
+//       display: flex;
+//       flex-grow: 1;
+//       align-items: center;
+//       justify-content: flex-end;
+//       width: unset;
+//       left: unset;
+//
+//       a:not(.gym-button) {
+//
+//         &:hover {
+//           color: $gym-orange;
+//         }
+//       }
+//     }
+//
+//     li {
+//       display: inline-flex;
+//       width: auto;
+//     }
+//   }
+// }
 
 .utility-nav {
   background-color: black;
