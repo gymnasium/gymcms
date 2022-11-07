@@ -336,82 +336,87 @@ class GymJobs {
       
       // Process our JSON data
       function processData(d) {
-        data = JSON.parse(d);
+
+        if (typeof d !== 'undefined' && d !== null) {
+          data = JSON.parse(d);
+          var items = data.items;
       
-        var items = data.items;
-      
-        // Wrap our jobs in headings or no?
-        var optHeading = opts.heading ? opts.heading : false;
-      
-        // Do we have a specific category?
-        var category = opts.category ? opts.category : false;
-      
-        // Set iteration limits
-        var limit = opts.limit ? parseInt(opts.limit) : 10;
-      
-        if (category) {
-          items = items.filter(item => item.category === category);
-      
-          outputDebug(`[job module] showing jobs for a specific category: ${category}`);
-        }
-      
-        // Filter the jobs by market if we have a market param
-        if ((typeof market !== 'undefined' && market !== null) && market.length) {
-          items = items.filter(item => item.market === market);
-      
-          outputDebug(`[job module] showing jobs for a specific market: ${market}`);
-        } else {
-          // Off-site preference key
-          // 0 = Unknown
-          // 1 = On-Site
-          // 2 = Off-Site
-          // 3 = Either
-          // 4 = Partial on-site
-          items = items.filter(item => parseInt(item.remote) === 2);
-          updateDropdown('remote');
-      
-          outputDebug('[job module] showing only remote options…');
-        }
-      
-        // Randomize the results we show…
-        items = items.shuffle();
-      
-        // How many results do we have?
-        var numResults = items.length;
-      
-        outputDebug(`[job module] results: ${numResults} | limit: ${limit}`);
-      
-        if (numResults > 0) {
-          
-          // Start with an empty list
-          var list = "";
-      
-          // hide our loading message
-          document.getElementById('loading').classList.add('hide');
-      
-          if (numResults < limit) {
-            limit = numResults;
+          // Wrap our jobs in headings or no?
+          var optHeading = opts.heading ? opts.heading : false;
+        
+          // Do we have a specific category?
+          var category = opts.category ? opts.category : false;
+        
+          // Set iteration limits
+          var limit = opts.limit ? parseInt(opts.limit) : 10;
+        
+          if (category) {
+            items = items.filter(item => item.category === category);
+        
+            outputDebug(`[job module] showing jobs for a specific category: ${category}`);
           }
-      
-          // Generate job item
-          for (var i = 0; i < limit; i++) {
-            var el = items[i];
-            list += '<li>';
-            // Add optional heading prefix
-            if (optHeading) {
-              list += `<${optHeading}>`;
-            }
-            list += `<a href="${decodeURI(el.url)}?utm_source=gymnasium&utm_medium=web&utm_campaign=job-module&utm_content=textlink" title="${el.title}"><span class="job-title">${el.title} </span><span class="job-location"> ${el.city}</span></a>`;
-            if (optHeading) {
-              list += `</${optHeading}>`;
-            }
-            list += '</li>';
+        
+          // Filter the jobs by market if we have a market param
+          if ((typeof market !== 'undefined' && market !== null) && market.length) {
+            items = items.filter(item => item.market === market);
+        
+            outputDebug(`[job module] showing jobs for a specific market: ${market}`);
+          } else {
+            // Off-site preference key
+            // 0 = Unknown
+            // 1 = On-Site
+            // 2 = Off-Site
+            // 3 = Either
+            // 4 = Partial on-site
+            items = items.filter(item => parseInt(item.remote) === 2);
+            updateDropdown('remote');
+        
+            outputDebug('[job module] showing only remote options…');
           }
-      
-          // close our list
-          jobsContainer.innerHTML += `<ul>${list}</ul>`;
+        
+          // Randomize the results we show…
+          items = items.shuffle();
+        
+          // How many results do we have?
+          var numResults = items.length;
+        
+          outputDebug(`[job module] results: ${numResults} | limit: ${limit}`);
+        
+          if (numResults > 0) {
+            
+            // Start with an empty list
+            var list = "";
+        
+            // hide our loading message
+            document.getElementById('loading').classList.add('hide');
+        
+            if (numResults < limit) {
+              limit = numResults;
+            }
+        
+            // Generate job item
+            for (var i = 0; i < limit; i++) {
+              var el = items[i];
+              list += '<li>';
+              // Add optional heading prefix
+              if (optHeading) {
+                list += `<${optHeading}>`;
+              }
+              list += `<a href="${decodeURI(el.url)}?utm_source=gymnasium&utm_medium=web&utm_campaign=job-module&utm_content=textlink" title="${el.title}"><span class="job-title">${el.title} </span><span class="job-location"> ${el.city}</span></a>`;
+              if (optHeading) {
+                list += `</${optHeading}>`;
+              }
+              list += '</li>';
+            }
+        
+            // close our list
+            jobsContainer.innerHTML += `<ul>${list}</ul>`;
+          } else {
+            // No jobs in market! Show the appropriate message.
+            showMsg('error-results');
+          }
         } else {
-          // No jobs in market! Show the appropriate message.
+          // No data found, show a message.
           showMsg('error-results');
         }
       }
