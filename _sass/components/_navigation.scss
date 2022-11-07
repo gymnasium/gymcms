@@ -36,12 +36,16 @@
     }
 
     li:last-child {
-      padding-top: 0.5rem;
+      padding-top: 0.4rem;
     }
 
   }
 
   @include breakpoint(42em, min) {
+
+    & {
+      padding: 1.2rem 0;
+    }
 
     .site-logo {
       display: inline-block;
@@ -52,10 +56,10 @@
       float: right;
       padding-top: 0;
       padding-left: 1.2rem;
+      padding-bottom: 0;
 
       li {
         display: inline;
-        vertical-align: middle;
 
         a:not(.gym-button) {
           display: inline-block;
