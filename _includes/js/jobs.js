@@ -317,20 +317,6 @@ class GymJobs {
       
             fetchData(endpoint);
           }
-      
-          // Stone Age Method (JSONP)
-          // function stoneAgeFetch(resp) {
-          //   data = JSON.stringify(resp);
-          //   console.log('[job module] getting data via the stone age fetch');
-          //   store('jobs', data);
-          //   processData(data);
-          // }
-          
-          // let script = document.createElement('script');
-          // script.src = `${endpoint}?callback=stoneAgeFetch`;
-          // script.id = 'stone-age-fetch';
-          // document.body.append(script);
-          
         }
       }
       
@@ -416,8 +402,8 @@ class GymJobs {
             showMsg('error-results');
           }
         } else {
-          // No data found, show a message.
-          showMsg('error-results');
+          // No data found for some reason...
+          showMsg('error-unknown');
         }
       }
       
