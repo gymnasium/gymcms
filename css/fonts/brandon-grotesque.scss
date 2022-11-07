@@ -1,57 +1,91 @@
 ---
 ---
-// TODO: omit or comment out fonts we're not actually using. For instance, the italics versions have been commented out below. Additionally, we could emulate google fonts and serve up only woff2.
+// Regular
 @font-face {
   font-family: brandon-grotesque;
-  src: url("{{ site.url }}/fonts/brandon_reg-webfont.woff2")
+  src:
+    local("Brandon Grotesque Regular"),
+    local("BrandonGrotesque-Regular"),
+    url("{{ site.url }}/fonts/brandon_reg-webfont.woff2")
       format("woff2"),
-    url("{{ site.url }}/fonts/brandon_reg-webfont.woff") format("woff");
+    url("{{ site.url }}/fonts/brandon_reg-webfont.woff")
+      format("woff");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
 }
-// @font-face {
-//   font-family: brandon-grotesque;
-//   src: url("{{ site.url }}/fonts/brandon_reg_it-webfont.woff2")
-//       format("woff2"),
-//     url("{{ site.url }}/fonts/brandon_reg_it-webfont.woff")
-//       format("woff");
-//   font-style: italic;
-//   font-weight: normal;
-// }
+
+// Regular Italic
 @font-face {
   font-family: brandon-grotesque;
-  src: url("{{ site.url }}/fonts/brandon_bld-webfont.woff2")
+  src:
+    local("Brandon Grotesque Regular Italic"),
+    local("BrandonGrotesque-RegularItalic"),
+    url("{{ site.url }}/fonts/brandon_reg_it-webfont.woff2")
       format("woff2"),
-    url("{{ site.url }}/fonts/brandon_bld-webfont.woff") format("woff");
+    url("{{ site.url }}/fonts/brandon_reg_it-webfont.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
+}
+
+// Bold
+@font-face {
+  font-family: brandon-grotesque;
+  src:
+    local("Brandon Grotesque Bold"),
+    local("BrandonGrotesque-Bold"),
+    url("{{ site.url }}/fonts/brandon_bld-webfont.woff2")
+      format("woff2"),
+    url("{{ site.url }}/fonts/brandon_bld-webfont.woff")
+      format("woff");
   font-style: normal;
   font-weight: bold;
   font-display: swap;
 }
-// @font-face {
-//   font-family: brandon-grotesque;
-//   src: url("{{ site.url }}/fonts/brandon_bld_it-webfont.woff2")
-//       format("woff2"),
-//     url("{{ site.url }}/fonts/brandon_bld_it-webfont.woff")
-//       format("woff");
-//   font-style: italic;
-//   font-weight: bold;
-// }
+
+// Bold Italic
 @font-face {
   font-family: brandon-grotesque;
-  src: url("{{ site.url }}/fonts/brandon_blk-webfont.woff2")
+  src:
+    local("Brandon Grotesque Bold Italic"),
+    local("BrandonGrotesque-BoldItalic"),
+    url("{{ site.url }}/fonts/brandon_bld_it-webfont.woff2")
       format("woff2"),
-    url("{{ site.url }}/fonts/brandon_blk-webfont.woff") format("woff");
+    url("{{ site.url }}/fonts/brandon_bld_it-webfont.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
+}
+
+// Black
+@font-face {
+  font-family: brandon-grotesque;
+  src:
+    local("Brandon Grotesque Black"),
+    local("BrandonGrotesque-Black"),
+    url("{{ site.url }}/fonts/brandon_blk-webfont.woff2")
+      format("woff2"),
+    url("{{ site.url }}/fonts/brandon_blk-webfont.woff")
+      format("woff");
   font-style: normal;
   font-weight: 900;
   font-display: swap;
 }
-// @font-face {
-//   font-family: brandon-grotesque;
-//   src: url("{{ site.url }}/fonts/brandon_blk_it-webfont.woff2")
-//       format("woff2"),
-//     url("{{ site.url }}/fonts/brandon_blk_it-webfont.woff")
-//       format("woff");
-//   font-style: italic;
-//   font-weight: 900;
-// }
+
+// Black Italic
+@font-face {
+  font-family: brandon-grotesque;
+  src:
+    local("Brandon Grotesque Black Italic"),
+    local("BrandonGrotesque-BlackItalic"),
+    url("{{ site.url }}/fonts/brandon_blk_it-webfont.woff2")
+      format("woff2"),
+    url("{{ site.url }}/fonts/brandon_blk_it-webfont.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+}
