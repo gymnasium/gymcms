@@ -1,6 +1,23 @@
 .site-header {
   background-color: $gym-black;
 
+  @supports (display: grid) {
+
+    & {
+      display: grid;
+
+      & .container {
+        display: inherit;
+        width: 100%;
+
+        &::before,
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+
   ul {
     list-style: none;
     margin: 0;
@@ -24,8 +41,8 @@
       font-size: 1.2em;
       line-height: 1.5;
       color: $gym-white;
-      letter-spacing: 1px; // Breathe, thank-you!
-      padding: 1.2rem;
+      letter-spacing: 1px; // Readability, thank-you!
+      padding: 1.2rem 1.5rem;
       border-top: 1px solid $gym-dark-gray;
       transition: all 250ms ease;
 
@@ -35,12 +52,12 @@
     }
 
     li:last-child {
-      padding-top: 0.4rem;
+      padding-top: 0.5ex; // Add visual spacing (for descender)
     }
 
   }
 
-  @include breakpoint(44em, min) {
+  @include breakpoint(45em, min) {
 
     & {
       padding: 1.2rem 0;
@@ -48,16 +65,18 @@
 
     .site-logo {
       display: inline-block;
-      line-height: 47px; // 2× (ish) logo height
+      line-height: 47px; // Add 2× (ish) logo height
     }
 
     ul {
       float: right;
+      word-spacing: -0.5ex; // Remove inline gap
       padding-top: 0;
       padding-left: 1.2rem;
 
       li {
         display: inline;
+        word-spacing: 0; // Undo inline gap
 
         a:not(.gym-button) {
           display: inline-block;
@@ -68,21 +87,26 @@
           width: auto;
         }
 
-        a[href*="about"]:after {
-          content: "";
-          padding: 1.2rem 0;
-          border-left: 1px solid $gym-dark-gray;
-          margin-left: 2.7rem; // Plus 0.3rem; Mimic inline-block letter-spacing
-          margin-right: 0.3rem; // Mimic inline-block letter-spacing
-        }
-
         &:last-child {
           padding-top: 0;
-          margin-left: 1rem;
-        }
 
+          a[class] {
+            margin-left: 1.4375rem; // Rounding (text width)
+          }
+
+          a:not([class]) {
+            margin-left: -0.25ex; // Adjust word-spacing
+          }
+        }
       }
 
+      .vbar::after {
+        content: "";
+        padding: 1.2rem 0;
+        border-left: 1px solid $gym-dark-gray;
+        margin-left: 1.5rem;
+        margin-right: 1.5375rem; // Rounding (border)
+      }
     }
 
     @supports (display: grid) {
@@ -90,71 +114,54 @@
       & {
         display: grid;
 
-        & > .container {
-          width: 100%;
+        & > .container,
+        ul {
+          display: inherit;
+          grid-auto-flow: column;
+          align-items: center;
+        }
 
-          &,
-          ul {
-            display: inherit;
-            grid-auto-flow: column;
-            align-items: center;
-          }
+        .site-logo {
+          line-height: initial;
+        }
 
-          &::before,
-          &::after {
-            content: none;
-          }
+        ul {
+          justify-content: end;
+        }
 
-          .site-logo {
-            line-height: initial;
-          }
-
-          ul,
-          li:last-child {
-            padding-top: 0;
-          }
-
-          ul {
-            grid-gap: 0.3rem; // Mimic inline-block letter-spacing
-            justify-content: end;
-
-            a {
-              border-top: 0 none;
-            }
-
-            a[href*="about"]:after {
-              margin-right: 0;
-            }
-
-          }
-
+        ul,
+        li:last-child {
+          padding-top: 0;
         }
       }
-
     }
 
   }
-
 }
 
 .utility-nav {
-  background-color: black;
   display: none;
+  background-color: black;
+
+  ul {
+    float: right;
+  }
 
   li {
-    display: inline-block;
+    display: inline;
   }
 
   a {
-    padding: 1rem 0;
+    display: inline-block;
+    padding: 0;
     margin-left: 1rem;
   }
 }
 
-@include breakpoint(small, min) {
+@include breakpoint(45em, min) {
   .utility-nav {
     display: flex;
-    order: 2; // this is if we decide to include the system status banner within .site-header
+    // order: 2; // this is if we decide to include the system status banner within .site-header
     padding: 1rem 0;
 
     .container {
