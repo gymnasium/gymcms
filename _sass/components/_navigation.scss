@@ -150,6 +150,7 @@
 .utility-nav {
   display: none;
   background-color: black;
+  padding: 0.5rem 0;
 
   ul {
     float: right;
@@ -161,16 +162,38 @@
 
   a {
     display: inline-block;
-    padding: 0;
-    margin-left: 1rem;
+    padding: 0.5rem;;
+    margin-left: 1.5rem;
   }
+
+  .grayscale {
+    filter: gray; // IE6-9
+    filter: grayscale(1);
+  }
+
+  .opacity {
+    opacity: 0.485;
+  }
+
+  a:hover {
+    filter: none;
+    opacity: 1;
+  }
+
+  .icon-aq {
+    height: 1.5625em;
+  }
+
+  .icon-aq-talent {
+    height: 1.8125em;
+  }
+
 }
 
 @include breakpoint(48em, min) {
   .utility-nav {
     display: flex;
     // order: 2; // this is if we decide to include the system status banner within .site-header
-    padding: 1rem 0;
 
     .container {
       display: flex;
