@@ -2,7 +2,6 @@
   background-color: $gym-black;
 
   @supports (display: grid) {
-
     & {
       display: grid;
 
@@ -51,7 +50,6 @@
     }
 
     li:last-child {
-
       a[class] {
         margin-top: 0.5ex; // Add visual spacing (for descender)
       }
@@ -60,11 +58,9 @@
         margin-bottom: -1rem; // Remove spacing when not a button
       }
     }
-
   }
 
   @include breakpoint(48em, min) {
-
     & {
       padding: 1.2rem 0;
     }
@@ -82,7 +78,7 @@
 
       li {
         display: inline;
-        word-spacing: 0; // Undo inline gap
+        word-spacing: 0; // Undo inherit
 
         a:not(.gym-button) {
           display: inline-block;
@@ -94,15 +90,15 @@
         }
 
         &:last-child {
-
           a[class] {
-            margin-top: 0;
+            margin-top: -0.125rem; // Avoid height bump
             margin-left: 1.4375rem; // Rounding (text width)
+            margin-bottom: -0.125rem; // Avoid height bump
           }
 
           a:not([class]) {
             margin-left: -0.5ex; // Adjust word-spacing
-            // margin-right: -1.5rem; // Flush to edge
+            margin-right: -1.2rem;
             margin-bottom: 0;
           }
         }
@@ -118,7 +114,6 @@
     }
 
     @supports (display: grid) {
-
       & {
         display: grid;
 
@@ -143,63 +138,68 @@
         }
       }
     }
-
   }
 }
 
 .utility-nav {
   display: none;
   background-color: black;
-  padding: 0.5rem 0;
+  padding: 0.6rem 0;
 
   ul {
     float: right;
-  }
+    word-spacing: -0.5ex; // Remove inline gap
 
-  li {
-    display: inline;
+    li {
+      display: inline;
+      word-spacing: 0; // Undo inherit
+      margin-left: 2rem;
+    }
   }
 
   a {
     display: inline-block;
-    padding: 0.5rem;;
-    margin-left: 1.5rem;
+    padding: 0.5rem;
+
+    &.grayscale {
+      filter: gray; // IE6-9
+      filter: grayscale(1);
+    }
+
+    &.opacity {
+      opacity: 0.485; // Match orange as gray of #7c7c7c
+    }
+
+    &:hover {
+      filter: none;
+      opacity: 1;
+    }
   }
 
-  .grayscale {
-    filter: gray; // IE6-9
-    filter: grayscale(1);
-  }
-
-  .opacity {
-    opacity: 0.485;
-  }
-
-  a:hover {
-    filter: none;
-    opacity: 1;
-  }
-
-  .icon-aq {
+  .icon-aquent {
     height: 1.5625em;
   }
 
-  .icon-aq-talent {
+  .icon-aquent-talent {
     height: 1.8125em;
   }
-
 }
 
 @include breakpoint(48em, min) {
   .utility-nav {
-    display: flex;
-    // order: 2; // this is if we decide to include the system status banner within .site-header
+    display: block;
+  }
 
-    .container {
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: flex-end;
+  @supports (display: grid) {
+    .utility-nav {
+      display: grid;
+
+      ul {
+        display: inherit;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: end;
+      }
     }
   }
 }
