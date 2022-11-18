@@ -6,15 +6,11 @@ TODO: audit these to figure out which we need to load, and where. For example, t
 {%endcomment%}
 
 {% include js/gymnasium.js %}
-{%comment%}
-  Temporarily commented out (until we update the theme)
-{%endcomment%}
+{% comment %} This is deprecated as of the nav revamp
 {% include js/vendor/openedx/header.js %}
+{% endcomment %}
 {% include js/jobs.js %}
 {% include js/vendor/bootstrap.min.js %}
 {% include js/vendor/jquery.validate.min.js %}
-{%comment%}
-  Temporarily commented out (until we update the theme)
-{%endcomment%}
 {% include js/vendor/openedx/navigation.js %}
 {% include_relative vendor/prism.min.js %}
