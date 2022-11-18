@@ -53,7 +53,6 @@
 
               <dl>
                 <dt>Schedule</dt>
-                <dd>{{ workshop.datetime }}</dd>
                 {%- for schedule in workshop.schedule -%}
                 <dd>{{ schedule.label }}</dd>
                 {%- endfor -%}
@@ -73,7 +72,7 @@
             <section class="course-instructor" id="course-instructor">
               <h2>Meet the Instructor</h2>
               <article>
-                <img alt="Headshot of {{ josborn.name}}" src="/img/webinar-bio-headshots/{{ josborn.headshot }}" width="160" height="160" decoding="async">
+                <img alt="Headshot of {{ josborn.name}}" src="{{site.url}}/img/webinar-bio-headshots/{{ josborn.headshot }}" width="160" height="160" decoding="async">
                 <h3>{{ josborn.name}}</h3>
                 <p><b>{{ josborn.subtitle }}</b></p>
                 <p>{{ josborn.description }}</p>
