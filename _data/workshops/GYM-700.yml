@@ -1,0 +1,38 @@
+---
+course_ID: GYM-007
+title: "Improving Your Portfolio"
+date: 2022-12-05T00:00:00-04:00
+datetime: "December 5–9, Monday–Friday, 4:00–5:00 PM EST"
+course_type: workshop
+url: /courses/GYM/700/0/about
+poster_art: /img/course-artwork/png/gym-700.png
+live: false
+topic: "Career Skills"
+short_description: "This workshop will teach students how to create an outstanding portfolio using content strategy and storytelling skills."
+long_description:
+  - label: "Students will learn how to effectively showcase their past work through collaborative exercises and assignments — including coaching from expert instructors and feedback from fellow students. You will leave with actionable next steps on how to further improve your portfolio."
+  - label: "<b>Pro Tip:</b> You don’t need to wait until you’re looking for a new job to fine-tune your portfolio."
+instructor: josborn
+info:
+  - label: "An interactive workshop of 5–10 participants"
+  - label: "One hour a day for a week of live class via video conferencing"
+  - label: "Count on spending an hour on homework between sessions"
+  - label: "Learn a content-first approach to building your personal brand"
+  - label: "Discover how to make a stronger first impression"
+  - label: "Learn how to write effective case studies"
+  - label: "How to tell a better story with visuals"
+prereqs:
+  - label: "A Google account"
+  - label: "A Gymnasium account"
+  - label: "An existing portfolio (in any condition or format)"
+  - label: "An up-to-date résumé"
+schedule:
+  - label: "<b>Day 1:</b> Making a Great First Impression"
+  - label: "<b>Day 2:</b> Crafting a Concise About Page"
+  - label: "<b>Day 3:</b> Guest Lecture with Invited Expert"
+  - label: "<b>Day 4:</b> Taking Your Case Studies to the Next Level"
+  - label: "<b>Day 5:</b> Presentations & Next Steps"
+lessons_duration: "5 hours"
+completion_duration: "10 hours"
+skill_level: "Intermediate"
+---
