@@ -6,7 +6,7 @@ course_type: short
 live: true
 url: /courses/course-v1:GYM+016+0/about
 poster_art: /img/course-artwork/png/gym-016.png
-topic: "Design & Development"
+topic: "Development"
 subtopics:
   - label: "Accessibility"
 short_description: "Learn accessible and responsive design best practices to help make a more user-friendly web for everyone."
@@ -15,11 +15,11 @@ skills:
   - label: "Accessibility"
   - label: "Responsive design"
   - label: "Intermediate HTML/CSS"
-  - label: "And more…"
 audience:
   - label: "Anyone interested in building more accessible websites"
   - label: "Web designers with coding chops"
   - label: "Front-end developers"
+lessons_duration: "1 hour"
+completion_duration: "Up to 2 hours"
+skill_level: "Intermediate"
 ---
-
-

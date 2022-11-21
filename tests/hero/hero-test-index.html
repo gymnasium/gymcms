@@ -7,19 +7,35 @@ permalink: /tests/hero
 
 <h2>Public Hero</h2>
 
-<p><a href="/tests/hero-public">current_promo</a>: <code>{{ hero.current_promo }}</code></p>
+<p><a href="/tests/hero-public">current_promo</a>: <code>{{ hero.current_promo | prepend: "/heros/" }}</code></p>
 
-   
+
 
 <h2>Authenticated Hero</h2>
 
-<p><a href="/tests/hero-auth">auth_promo</a>: <code>{{ hero.auth_promo | prepend: "/heros/"}}</code></p>
-
- 
-
-<h2>Live Coding Hero</h2>
+<p><a href="/tests/hero-auth">auth_promo</a>: <code>{{ hero.auth_promo | prepend: "/heros/" }}</code></p>
 
 
-<p><a href="/tests/hero-live-coding">live_coding</a>: <code>{{ hero.live_coding | prepend: "/heros/" }}</code></p>
 
+<h2>Live Stream Hero</h2>
 
+<p><a href="/tests/hero-live-stream">live_stream</a>: <code>{{ hero.live_stream }}</code></p>
+
+<p>
+  <b>Source:</b>
+  <code>
+  {{ hero.embed_source }}
+  {%
+    if hero.embed_source != "twitch"
+    and hero.embed_source != "youtube"
+    or hero.embed_source == undefined
+    or hero.embed_source == ""
+    or hero.twitch_channel == undefined
+    or hero.twitch_channel == ""
+    or hero.youtube_video_ID == undefined
+    or hero.youtube_video_ID == ""
+  %}
+    <mark>error</mark>
+  {% endif %}
+  </code>
+</p>

@@ -191,6 +191,9 @@
       font-size: 1.4em;
       line-height: 1.15;
       letter-spacing: 0;
+    }
+
+    h3:not(.all-caps) {
       text-transform: none;
     }
 
@@ -202,24 +205,7 @@
     }
   }
 
-  // prevent word wrap
-  .nowrap,
-  .no-wrap {
-    white-space: nowrap;
-  }
-
   #main {
-    // typographical details
-    .all-caps {
-      text-transform: uppercase;
-    }
-
-    .nowrap,
-    .no-wrap {
-      font: inherit;
-      color: inherit;
-    }
-
     // secondary button
     .gym-button-secondary {
       color: $gym-white;
@@ -402,3 +388,4 @@
     --gym-text-font-stack: #{$gym-text-font-stack};
   }
 }
+

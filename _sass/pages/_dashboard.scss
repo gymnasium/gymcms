@@ -1,0 +1,150 @@
+@import "variables";
+@import "functions";
+
+// Dashboard
+
+.dashboard-main {
+
+  // Reset font size
+  &.white-panel {
+    font-size: 1em;
+  }
+
+  .archived {
+    font-size: 1.45em;
+    color: $gym-white;
+  }
+
+  .course-retired {
+    font-size: 1.3225em;
+    margin: 1.2rem 0 0 0;
+  }
+
+}
+
+/* dashboard / update single-column layout style */
+
+@include breakpoint(medium, max) {
+
+  .dashboard-main .profile-sidebar {
+    border-top: 1px dashed $gym-gray;
+  }
+
+}
+
+
+
+.my-courses {
+  .course-item {
+    margin-top: 1.2em;
+    color: $gym-white;
+  
+    header {
+      margin: 0;
+      padding: 2em;
+      overflow: hidden;
+      background-color: rgb(103, 103, 103);
+      transition: background-color 250ms ease;
+    }
+  }
+
+  .course {
+    background: #444;
+
+    h1 {
+      font-size: font-calc(25.2, rem, 10px);
+    }
+  }
+
+  .course-options {
+    padding: 1em 1.5em;
+    overflow: hidden;
+    list-style: none;
+  
+    li {
+      display: inline;
+      font-size: 0.96em;
+      margin-right: 1.8em;
+    }
+  
+    .dashboard-listing-links {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      margin: 0;
+      margin-top: 0.8em;
+  
+      a.btn:hover {
+        border-color: transparent;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+// Dashboard Sidebar
+.profile-sidebar {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1.8em;
+    margin: 0;
+  }
+  h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+  .profile {
+    padding: 1.2em 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .data,
+  .status,
+  .control {
+    font-size: 0.96em;
+  }
+
+  .title {
+    font-family: $gym-font-stack;
+    display: block;
+    font-size: 1.2em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+
+  .controls--account.password-reset {
+    margin-top: 2em;
+  }
+  .status {
+    width: 6.77966%;
+    display: inline-block;
+  }
+  .provider {
+    width: 66.57627%;
+    display: inline-block;
+  }
+  .control {
+    width: 15.25424%;
+    display: inline-block;
+    text-align: right;
+  }
+  .copy {
+    border: 0;
+    clip: rect(1px 1px 1px 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}

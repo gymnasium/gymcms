@@ -16,6 +16,11 @@
 <meta name="twitter:description" property="og:description" content="{{ og_description }}">
 <meta name="twitter:image" property="og:image" content="{{ og_art }}">
 <meta name="twitter:image:alt" content="{{ og_img_alt }}">
+
+<link rel="alternate icon" href="{{ site.url }}/favicon/favicon.ico" sizes="any">
+<link rel="icon" href="{{ site.url }}/favicon/favicon.svg">
+
+{% comment %} TODO: this block is probably useless for us
 <link rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="{{ site.url }}/favicon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/favicon/apple-icon-72x72.png">
@@ -33,19 +38,30 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="{{ site.url }}/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
+{% endcomment %}
+
 {% if page.robots -%}
   <meta name="robots" content="{{page.robots}}">
 {%- endif %}
 
 {%- comment -%}
-Add DNS preload/prefetch meta tags to help prime the browser to fetch our 1st and 3rd party resources
+Add DNS preload/prefetch meta tags to help prime the browser to fetch our resources
+See here for additional notes on how to improve this and avoid browser warnings:
+https://stackoverflow.com/questions/50824181/preloading-google-fonts
 {%- endcomment -%}
 <link rel="preconnect" href="{{ site.url }}">
-<link rel="dns-prefetch" href="https://api.segment.io">
-<link rel="dns-prefetch" href="https://cdn.segment.com">
-<link rel="dns-prefetch" href="https://www.google-analytics.com">
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
-<link rel="dns-prefetch" href="https://api-iam.intercom.io">
+<link rel="preload" fetchpriority="high" href="{{ site.url }}/css/fonts/brandon-grotesque.css?{{ site.time | date:'%s' }}" as="style">
+<link rel="preload" fetchpriority="high" href="{{ site.url }}/css/fonts/font-awesome.css?{{ site.time | date:'%s' }}" as="style">
+<link rel="preload" fetchpriority="high" href="{{ site.url }}/css/main.css?{{ site.time | date:'%s' }}" as="style">
+
+{%- comment -%} TODO: investigate preloading these directly? See https://github.com/gymnasium/tracker/issues/286
+<link rel="preload" href="{{ site.url }}/fonts/brandon_reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="{{ site.url }}/fonts/brandon_bld-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="{{ site.url }}/fonts/brandon_blk-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+{%- endcomment -%}
+
+<link rel="stylesheet" href="{{ site.url }}/css/fonts/brandon-grotesque.css?{{ site.time | date:'%s' }}">
+<link rel="stylesheet" href="{{ site.url }}/css/fonts/font-awesome.css?{{ site.time | date:'%s' }}">
 <link rel="stylesheet" href="{{ site.url }}/css/main.css?{{ site.time | date:'%s' }}">
 
 {% comment -%}
@@ -57,22 +73,13 @@ Exclude rendered CSS in meta tags on localhost, for development/convenience reas
       <link rel="stylesheet" href="{{ site.url }}{{ css_file }}?{{ site.time | date:'%s' }}">
     {%- endfor -%}
   {%- endif -%}
-
 {%- endunless -%}
 
 {%- comment -%}
-Migrate from theme to gymcms
-{%- endcomment -%}
-<link rel="preload" href="{{ site.url }}/fonts/brandon_reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ site.url }}/fonts/brandon_reg_it-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ site.url }}/fonts/brandon_bld-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ site.url }}/fonts/brandon_bld_it-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ site.url }}/fonts/brandon_blk-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ site.url }}/fonts/brandon_blk_it-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
-{%- comment -%} Do we really need to load typekit?
-<script async defer src="//use.typekit.net/rhf0qta.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
+We used to prefetch these, but we really shouldn't bother with 3rd party tracking stuff, since it can potentially slow down our site...
+<link rel="dns-prefetch" href="https://api.segment.io">
+<link rel="dns-prefetch" href="https://cdn.segment.com">
+<link rel="dns-prefetch" href="https://api-iam.intercom.io">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
 {%- endcomment -%}
 
-<link rel="stylesheet" href="{{ site.url }}/css/vendor/bootstrap.css?{{ site.time | date:'%s' }}">

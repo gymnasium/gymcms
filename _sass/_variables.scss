@@ -1,18 +1,21 @@
 // Colors
-$gym-orange: #f8971d;
-$gym-orange-light: rgba(248, 151, 32, 0.9);
+$gym-orange: #ff5f14;
+// $gym-orange-light: rgba(248, 151, 32, 0.9);
 $gym-black: #222;
+$gym-blue: #0077c8;
 $gym-white: #fff;
 $gym-gray: #ccc;
 $gym-gray-2: adjust-color($gym-gray, $lightness: 6.66%); // example: outputs #ddd, might as well hard-code this here
 $gym-dark-gray: #444;
 $gym-dark-gray-2: #333;
 $gym-light-gray: #a6a6a6;
+$gym-mid-gray: #737373; // grayscale $gym-blue
 $gym-light-page-background: #ebebeb;
 
-$gym-button-background-hover: $gym-light-gray;
-$gym-button-background-active: #939393;
-$gym-button-background-focus: $gym-button-background-active;
+$gym-button-background-hover: $gym-mid-gray;
+$gym-button-background-focus: $gym-light-gray;
+$gym-button-background-active: $gym-button-background-focus;
+
 
 // Fancy colors
 $gym-green: #2c9959;

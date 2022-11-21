@@ -7,11 +7,14 @@ url: /courses/take5/GYM-5044/
 poster_art: /img/take5/posters/gym-5044.jpg
 live: true
 instructor: "Clarissa Peterson"
-topic: "Accessibility"
+instructor_bio: "Strategy Director at Forum One"
+topic: "Development"
+subtopics:
+  - label: "Accessibility"
 video_ID: 72nrJJAf_Ak
 video_duration: "4:43"
 featured: false
-short_description: "Learn how to make sure everyone can complete the forms on your website and learn how to properly use the label element in this tutorial by Clarissa Peterson, a Chicago-based designer who specializes in user experience and content strategy."
+short_description: "Learn how to make sure everyone can complete the forms on your website and learn how to properly use the label element in this tutorial."
 related_content:
 - label: "Labeling Controls"
   url: "https://www.w3.org/WAI/tutorials/forms/labels/"
@@ -21,4 +24,5 @@ related_content:
   url: "https://webaim.org/techniques/forms/advanced"
 - label: "Building Accessible Forms in Front-End Applications by Oyetoke Tobi Emmanuel"
   url: "https://medium.com/better-programming/building-accessible-forms-in-front-end-applications-7446cc3f1644"
+skill_level: "Beginner"
 ---

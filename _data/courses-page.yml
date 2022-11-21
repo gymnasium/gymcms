@@ -1,0 +1,42 @@
+---
+main:
+  title: "Courses"
+  tagline: "Free online courses and tutorials."
+  short_description: "Learn design, development, UX, accessibility, and career skills from industry experts."
+
+full_courses:
+  format: "Full Courses"
+  short_description: "Full Courses include a series of video lessons, optional quizzes and assignments, and a final exam and certificate if you pass. Plus, a forum to share work and get feedback from students and teaching assistants."
+short_courses:
+  format: "Gym Shorts"
+  short_description: "Gym Shorts include a series of video lessons, a final exam, and a badge if you pass."
+tutorials:
+  format: "Take 5"
+  short_description: "Take 5 tutorials are 5-minute video tutorials with easy-to-follow transcripts. No homework. No exam. Just free online learning."
+
+about_section:
+  summary: "Learn About Our Courses"
+  lists:
+    1: "Benefits"
+    2: "Length"
+  full_courses:
+    1:
+      - label: "Certificate to share on social media"
+      - label: "Course forum to share work and get feedback"
+      - label: "Optional homework and quizzes to sharpen your skills"
+    2:
+      - label: "Video Lessons: 3–5 hours"
+      - label: "Course Completion: 12–22 hours"
+  short_courses:
+    1:
+      - label: "Badge to share on social media"
+    2:
+      - label: "Video Lessons: 1–2 hours"
+      - label: "Course Completion: 1–5 hours"
+  tutorials:
+    1:
+      - label: "Learn new skills in 5 minutes"
+      - label: "Video tutorial with easy-to-follow transcript"
+    2:
+      - label: "5 minutes or less"
+---

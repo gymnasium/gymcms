@@ -67,7 +67,7 @@ permalink: /courses/workshops/course-list-recent
             <dl>
               <dt>Skills Covered</dt>
               {%- for skill in course.skills -%}
-              <dd><span>{{ skill.label }}</span></dd>
+              <dd>{{ skill.label }}</dd>
               {%- endfor -%}
             </dl>
           </div>
@@ -75,7 +75,7 @@ permalink: /courses/workshops/course-list-recent
             <dl>
               <dt>This Course Is For</dt>
               {%- for audience in course.audience -%}
-              <dd><span>{{ audience.label }}</span></dd>
+              <dd>{{ audience.label }}</dd>
               {%- endfor -%}
             </dl>
           </div>
