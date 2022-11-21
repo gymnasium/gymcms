@@ -1,0 +1,205 @@
+.site-header {
+  background-color: $gym-black;
+
+  @supports (display: grid) {
+    & {
+      display: grid;
+
+      & .container {
+        display: inherit;
+        width: 100%;
+
+        &::before,
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.main-nav {
+  padding: 1.5rem 0;
+
+  .gymnasium-logo {
+    padding: 0.5rem 0;
+  }
+
+  ul {
+    padding-top: 1.5rem;
+
+    a {
+      display: block;
+      font-family: $gym-font-stack;
+      font-size: 1.2em;
+      color: $gym-white;
+      letter-spacing: 1px; // Readability, thank-you!
+      padding: 1.2rem 1.5rem;
+      border-top: 1px solid $gym-dark-gray;
+      transition: all 250ms ease;
+
+      &:hover {
+        color: $gym-orange;
+      }
+    }
+
+    li:last-child {
+      a[class] {
+        margin-top: 0.5ex; // Add visual spacing (for descender)
+      }
+
+      a:not([class]) {
+        margin-bottom: -1rem; // Remove spacing when not a button
+      }
+    }
+  }
+
+  @include breakpoint(48em, min) {
+    & {
+      padding: 1.2rem 0;
+    }
+
+    .site-logo {
+      display: inline-block;
+      line-height: 47px; // Add 2× (ish) logo height
+    }
+
+    ul {
+      float: right;
+      word-spacing: -0.5ex; // Remove inline gap
+      padding-top: 0;
+      padding-left: 1.2rem;
+
+      li {
+        display: inline;
+        word-spacing: 0; // Undo inherit
+
+        a:not(.gym-button) {
+          display: inline-block;
+          border-top: 0 none;
+        }
+
+        .gym-button {
+          width: auto;
+        }
+
+        &:last-child {
+          a[class] {
+            margin-top: -0.125rem; // Avoid height bump
+            margin-left: 1.4375rem; // Rounding (text width)
+            margin-bottom: -0.125rem; // Avoid height bump
+          }
+
+          a:not([class]) {
+            margin-left: -0.5ex; // Adjust word-spacing
+            margin-right: -1.2rem;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .vbar::after {
+        content: "";
+        padding: 1.2rem 0;
+        border-left: 1px solid $gym-dark-gray;
+        margin-left: 1.5rem;
+        margin-right: 1.5375rem; // Rounding (border)
+      }
+    }
+
+    @supports (display: grid) {
+      & {
+        display: grid;
+
+        & > .container,
+        ul {
+          display: inherit;
+          grid-auto-flow: column;
+          align-items: center;
+        }
+
+        .site-logo {
+          line-height: initial;
+        }
+
+        ul {
+          justify-content: end;
+        }
+
+        ul,
+        li:last-child {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.utility-nav {
+  display: none;
+  background-color: black;
+  padding: 0.6rem 0;
+
+  ul {
+    float: right;
+    word-spacing: -0.5ex; // Remove inline gap
+
+    li {
+      display: inline;
+      word-spacing: 0; // Undo inherit
+      margin-left: 2rem;
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.5rem;
+
+    &.grayscale {
+      filter: gray; // IE6-9
+      filter: grayscale(1);
+    }
+
+    &.opacity {
+      opacity: 0.485; // Match orange as gray of #7c7c7c
+    }
+
+    &:hover {
+      filter: none;
+      opacity: 1;
+    }
+  }
+
+  .icon-aquent {
+    height: 1.5625em;
+  }
+
+  .icon-aquent-talent {
+    height: 1.8125em;
+  }
+}
+
+@include breakpoint(48em, min) {
+  .utility-nav {
+    display: block;
+  }
+
+  @supports (display: grid) {
+    .utility-nav {
+      display: grid;
+
+      ul {
+        display: inherit;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: end;
+      }
+    }
+  }
+}

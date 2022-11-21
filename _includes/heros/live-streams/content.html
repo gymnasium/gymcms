@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="{{ site.url }}/css/heros/hero-live-stream.css?{{ site.time | date:'%s' }}" fetchpriority="high">
+
+<div id="live-stream">
+
+<header>
+  <div class="container">
+    <hgroup>
+      <h2>{{ hero.title }}</h2>
+      <p><b>with {{ hero.byline }}</b></p>
+    </hgroup>
+    <p>{{ hero.short_description }}</p>
+  </div>
+</header>
+
+{% if hero.embed_source == "twitch" %}
+  {%- include /heros/live-streams/embed-twitch.html -%}
+{% else hero.embed_source == "youtube" %}
+  {%- include /heros/live-streams/embed-youtube.html -%}
+{% endif %}
+
+</div>

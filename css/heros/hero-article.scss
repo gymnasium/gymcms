@@ -1,0 +1,117 @@
+---
+---
+@import "variables";
+@import "mixins";
+
+// !override / reset/rescale Bootstrap (3) handiwork — future-friendly
+
+.hero-promo {
+  font-size: 16px;
+  background-color: #2c2c2c;
+
+  // structural spacing
+  .container {
+    padding: 1.75em 15px 3.25em;
+  }
+
+  .image {
+    background: $gym-gray;
+    margin: -30px -15px 0;
+
+    & + .text {
+      margin-top: 2.6rem;
+    }
+  }
+
+  // content text / cta
+
+  .text {
+    max-width: 50em;
+
+    header {
+      .subhead {
+        font-weight: bold;
+        font-size: 1.15em;
+        color: $gym-orange;
+        letter-spacing: 0.125rem;
+        word-spacing: 0;
+        margin-top: -0.5rem;
+        margin-bottom: 2rem;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        line-height: 1.15;
+        letter-spacing: 0.1rem;
+        color: $gym-white;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      & > p {
+        font-size: 1.4em;
+        line-height: 1.45;
+        color: $gym-gray-2;
+        margin-top: 1.6rem;
+      }
+    }
+
+    // cta
+    .cta {
+      margin-top: 3rem;
+    }
+
+  }
+}
+
+// artwork background placeholders
+
+#meet-the-metaverse .image {
+  background: #939eb0;
+  background: linear-gradient(to bottom left, #939eb0, #ae9880);
+}
+
+#advocating-for-accessibility .image {
+  background: $gym-white;
+  background: linear-gradient(135deg, $gym-white 0%, $gym-gray-2 40%, #1ea4ef 100%);
+}
+
+@include breakpoint(large, min) {
+
+  #meet-the-metaverse .image {
+    background: #ae9880;
+    background: linear-gradient(to bottom left, #ae9880, #868989);
+  }
+
+}
+
+// breakpoints
+
+@include breakpoint(large, min) {
+  .hero-promo {
+    .container {
+      padding-top: 2.75em;
+      padding-bottom: 4.25em;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 2.6em;
+
+      & > * {
+        align-self: center;
+      }
+    }
+
+    .image {
+      min-height: 100%;
+      margin: 0;
+
+      & + .text {
+        margin-top: 0;
+      }
+    }
+
+  }
+}

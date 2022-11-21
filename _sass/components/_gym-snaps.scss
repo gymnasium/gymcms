@@ -1,0 +1,23 @@
+/* ---
+Add GYM Screenshot support @https://github.com/gymnasium/gym-screenshots
+--- */
+
+// The gym-snaps screenshot service JS will add .gym-snaps to the html element
+.gym-snaps {
+
+  // hide cookie banner, intercom thing
+  .cookiebanner, .intercom-lightweight-app {
+    display: none !important;
+  }
+
+  // bg-colorize all iframe wrappers
+  .embed-responsive,
+  .event-video,
+  .iframe-video-holder {
+    background-color: #222;
+
+    iframe {
+      display: none !important;
+    }
+  }
+}
