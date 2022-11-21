@@ -78,5 +78,5 @@ Thanks so much for watching. Don’t forget to check out [the other Take 5 video
 
 [1]: https://cdpn.io/eYpGVvJ
 [2]: https://a11yproject.com/posts/aria-landmark-roles/
-[3]: https://thegymnasium.com/take5
+[3]: https://thegymnasium.com/courses/take5
 [4]: https://thegymnasium.com/courses

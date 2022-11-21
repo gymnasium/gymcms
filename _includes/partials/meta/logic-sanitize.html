@@ -1,0 +1,8 @@
+{%- comment -%}
+sanitize and clean up before passing this data for rendering
+{%- endcomment -%}
+{%- assign og_url = og_url | remove: 'https://thegymnasium.com' | prepend: 'https://thegymnasium.com' -%}
+{%- assign og_art = og_art | remove: 'https://thegymnasium.com' | remove: site.url | prepend: site.url -%}
+{%- assign og_title = og_title | strip_html -%}
+{%- assign og_img_alt = og_title -%}
+{%- assign og_description = og_description | strip_html -%}

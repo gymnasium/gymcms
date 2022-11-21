@@ -1,0 +1,85 @@
+<meta name="description" content="{{ og_description }}">
+<meta name="author" content="Aquent Gymnasium">
+<meta property="og:url" content="{{ og_url }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="{{ page_title }}">
+<meta property="og:title" content="{{ og_title }}">
+<meta property="og:description" content="{{ og_description }}">
+<meta property="og:image:alt" content="{{ og_img_alt }}">
+<meta property="og:image" content="{{ og_art }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@AquentGymnasium">
+<meta name="twitter:creator" content="@AquentGymnasium">
+<meta name="twitter:url" property="og:url" content="{{ og_url }}">
+<meta name="twitter:title" property="og:title" content="{{ og_title }}">
+<meta name="twitter:description" property="og:description" content="{{ og_description }}">
+<meta name="twitter:image" property="og:image" content="{{ og_art }}">
+<meta name="twitter:image:alt" content="{{ og_img_alt }}">
+
+<link rel="alternate icon" href="{{ site.url }}/favicon/favicon.ico" sizes="any">
+<link rel="icon" href="{{ site.url }}/favicon/favicon.svg">
+
+{% comment %} TODO: this block is probably useless for us
+<link rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ site.url }}/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ site.url }}/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ site.url }}/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{ site.url }}/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ site.url }}/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/favicon/favicon-16x16.png">
+<link rel="manifest" href="{{ site.url }}/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{{ site.url }}/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+{% endcomment %}
+
+{% if page.robots -%}
+  <meta name="robots" content="{{page.robots}}">
+{%- endif %}
+
+{%- comment -%}
+Add DNS preload/prefetch meta tags to help prime the browser to fetch our resources
+See here for additional notes on how to improve this and avoid browser warnings:
+https://stackoverflow.com/questions/50824181/preloading-google-fonts
+{%- endcomment -%}
+<link rel="preconnect" href="{{ site.url }}">
+<link rel="preload" fetchpriority="high" href="{{ site.url }}/css/fonts/brandon-grotesque.css?{{ site.time | date:'%s' }}" as="style">
+<link rel="preload" fetchpriority="high" href="{{ site.url }}/css/fonts/font-awesome.css?{{ site.time | date:'%s' }}" as="style">
+<link rel="preload" fetchpriority="high" href="{{ site.url }}/css/main.css?{{ site.time | date:'%s' }}" as="style">
+
+{%- comment -%} TODO: investigate preloading these directly? See https://github.com/gymnasium/tracker/issues/286
+<link rel="preload" href="{{ site.url }}/fonts/brandon_reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="{{ site.url }}/fonts/brandon_bld-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="{{ site.url }}/fonts/brandon_blk-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+{%- endcomment -%}
+
+<link rel="stylesheet" href="{{ site.url }}/css/fonts/brandon-grotesque.css?{{ site.time | date:'%s' }}">
+<link rel="stylesheet" href="{{ site.url }}/css/fonts/font-awesome.css?{{ site.time | date:'%s' }}">
+<link rel="stylesheet" href="{{ site.url }}/css/main.css?{{ site.time | date:'%s' }}">
+
+{% comment -%}
+Exclude rendered CSS in meta tags on localhost, for development/convenience reasons
+{%- endcomment -%}
+{%- unless site.environment == 'local' -%}
+  {%- if page.css -%}
+    {%- for css_file in page.css -%}
+      <link rel="stylesheet" href="{{ site.url }}{{ css_file }}?{{ site.time | date:'%s' }}">
+    {%- endfor -%}
+  {%- endif -%}
+{%- endunless -%}
+
+{%- comment -%}
+We used to prefetch these, but we really shouldn't bother with 3rd party tracking stuff, since it can potentially slow down our site...
+<link rel="dns-prefetch" href="https://api.segment.io">
+<link rel="dns-prefetch" href="https://cdn.segment.com">
+<link rel="dns-prefetch" href="https://api-iam.intercom.io">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+{%- endcomment -%}
+

@@ -40,5 +40,5 @@ Also just for kicks, here’s the original loading screen. And then here’s the
 
 [1]: https://gymnasium.github.io/take5/gym-5013.zip
 [2]: https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing
-[3]: https://thegymnasium.com/take5
+[3]: https://thegymnasium.com/courses/take5
 [4]: https://thegymnasium.com/courses

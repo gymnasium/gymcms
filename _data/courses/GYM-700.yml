@@ -1,0 +1,22 @@
+---
+course_ID: GYM-700
+title: "Portfolio Workshop"
+date: 2021-11-30T00:00:00-00:00
+course_type: workshop
+live: false
+url: /courses/course-v1:GYM+700+0/about
+poster_art: /img/course-artwork/png/gym-700.png
+topic: "Portfolio Workshop"
+short_description: "Portfolio Workshop"
+instructor: josborn
+skills:
+  - label: "Populate me"
+  - label: "Populate me"
+  - label: "Populate me"
+  - label: "Populate me"
+audience:
+  - label: "Populate me"
+  - label: "Populate me"
+  - label: "Populate me"
+  - label: "Populate me"
+---

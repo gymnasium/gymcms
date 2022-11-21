@@ -7,11 +7,12 @@ url: /courses/take5/GYM-5024/
 poster_art: /img/take5/posters/gym-5024.jpg
 live: true
 instructor: "Jeremy Osborn"
-topic: "Web Design & Development"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "Development"
 video_ID: Xb3pBj4PKxg
 video_duration: "4:59"
 featured: false
-short_description: "Learn how to add CSS Media Queries in order to get started with responsive web design in this tutorial by Jeremy Osborn, Academic Director of Aquent Gymnasium."
+short_description: "Learn how to add CSS Media Queries in order to get started with responsive web design in this tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"
@@ -31,4 +32,5 @@ related_content:
   url: "https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/"
 - label: "Choosing between min-width and max-width media queries by The Haystack"
   url: "https://www.the-haystack.com/2015/12/23/choosing-between-min-and-max-width/"
+skill_level: "Intermediate"
 ---

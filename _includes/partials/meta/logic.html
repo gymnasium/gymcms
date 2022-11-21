@@ -1,0 +1,17 @@
+{%- include partials/meta/logic-default.html -%}
+
+{%- if page.permalink contains "/webinars" and page.permalink != "/webinars/meta/" -%}
+  {%- assign id = page.event_ID -%}
+  {%- include partials/meta/logic-webinars.html -%}
+
+{%- comment -%} Set up meta tags for all course pages (excluding indices, which are handled by the defaults above) {%- endcomment -%}
+{%- elsif page.permalink contains "/courses" and page.permalink != "/courses/meta/" and page.permalink != "/courses/full/meta/" and page.permalink != "/courses/gym-shorts/meta/" and page.permalink != "/courses/take5/meta/" -%}
+  {%- assign id = page.course_ID -%}
+  {%- if page.permalink contains "/courses/take5" -%}
+    {%- include partials/meta/logic-take5.html -%}
+  {%- else -%}
+    {%- include partials/meta/logic-courses.html -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- include partials/meta/logic-sanitize.html -%}

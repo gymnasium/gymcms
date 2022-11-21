@@ -1,0 +1,9 @@
+{%- comment -%}
+Set up meta tags for full and short courses
+{%- endcomment -%}
+{%- assign course = site.data.courses[id] -%}
+{%- assign og_description = course.short_description -%}
+{%- assign og_url = course.url -%}
+{%- assign og_title = course.title -%}
+{%- assign page_title =  course.title | append: " | Gymnasium" -%}
+{%- assign og_art = course.course_ID | downcase | append: "-social.png" | prepend: "/img/social/courses/" -%}

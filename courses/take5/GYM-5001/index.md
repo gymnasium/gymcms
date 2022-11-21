@@ -46,6 +46,6 @@ There are some workarounds to address this, but we don’t have time to cover th
 
 [1]: https://codepen.io/josborn/pen/joNmyO
 [2]: https://codepen.io/josborn/pen/BebXer
-[3]: https://thegymnasium.com/take5
+[3]: https://thegymnasium.com/courses/take5
 [4]: https://thegymnasium.com/courses
 

@@ -158,5 +158,5 @@ But whatever approach you choose, (Big Idea) **it’s important to remember that
 
 [1]: https://cdpn.io/zYvEWLL
 [2]: https://cdpn.io/QWjqmZg
-[3]: https://thegymnasium.com/take5
+[3]: https://thegymnasium.com/courses/take5
 [4]: https://thegymnasium.com/courses

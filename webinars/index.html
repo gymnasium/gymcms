@@ -2,7 +2,7 @@
 permalink: /webinars/
 layout: raw
 ---
-{%- if jekyll.environment == "development" -%}
+{%- if jekyll.environment == "local" -%}
   {%- include partials/test-top.html -%}
 {%- endif -%}
 
@@ -62,7 +62,7 @@ layout: raw
             </header>
             <div class="webinar--info">
             {%- comment -%}
-              {%- if jekyll.environment == "development" -%}
+              {%- if jekyll.environment == "local" -%}
                 <pre>({{ complete_webinar_title }})</pre>
                 <img src="{{ site.url }}/img/social/webinars/{{ webinar.event_ogimage }}">
               {%- endif -%}
@@ -79,7 +79,7 @@ layout: raw
               {%- if item.register and site.data.bios[speaker].headshot != null -%}
                 <li>
                   <figure>
-                    <img src="{{ site.url }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}">
+                    <img src="{{ site.url }}/img/webinar-bio-headshots/{{ site.data.bios[speaker].headshot }}" alt="{{ site.data.bios[speaker].name }}" loading="lazy">
                     <figcaption>{{ site.data.bios[speaker].name }}</figcaption>
                   </figure>
                 </li>
@@ -88,9 +88,9 @@ layout: raw
               </ul>
               {% else %}
               {%- if headcount == "1" -%}
-              <p class="guest-speakers">With <strong>{{ site.data.bios[speaker_1].name }}</strong></p>
+              <p class="guest-speakers">with <strong>{{ site.data.bios[speaker_1].name }}</strong></p>
               {%- else -%}
-              <p class="guest-speakers">With <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
+              <p class="guest-speakers">with <strong>{{ site.data.bios[speaker_1].name }}</strong> and <strong>{{ site.data.bios[speaker_2].name }}</strong></p>
               {%- endif -%}
               {%- endif -%}
             </div>
@@ -101,7 +101,7 @@ layout: raw
               <b>Register to Attend</b>
             </a>
             {% elsif item.video %}
-            <a class="gym-button gym-button-secondary" href="{{ webinar_url }}">
+            <a class="gym-button" href="{{ webinar_url }}">
               <b>Watch Recording</b>
             </a>
             {% else %}
@@ -118,6 +118,6 @@ layout: raw
 
 </main>
 
-{%- if jekyll.environment == "development" -%}
+{%- if jekyll.environment == "local" -%}
   {%- include partials/test-bottom.html -%}
 {%- endif -%}

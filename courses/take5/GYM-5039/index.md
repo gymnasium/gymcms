@@ -109,5 +109,5 @@ Screen Reader: “THIS WEEK’S MENU” **table**, **3 columns, 6 rows**
 
 Clarissa Peterson: For more tips, check out our [**Resources**](#tutorial-resources) section for links to articles and other tutorials that can help you expand on the concepts we’ve covered here. *Thanks so much for watching.* Don’t forget to check out [the other Take 5 videos][1] as well as the entire [course catalog][2] here at Gymnasium.
 
-[1]: https://thegymnasium.com/take5
+[1]: https://thegymnasium.com/courses/take5
 [2]: https://thegymnasium.com/courses

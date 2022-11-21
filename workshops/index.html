@@ -1,0 +1,13 @@
+---
+layout: raw
+permalink: /workshops/
+---
+{%- if jekyll.environment == "local" -%}
+  {%- include partials/test-top.html -%}
+{%- endif -%}
+
+{%- include workshops/workshop.html -%}
+
+{%- if jekyll.environment == "local" -%}
+  {%- include partials/test-bottom.html -%}
+{%- endif -%}

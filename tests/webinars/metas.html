@@ -1,0 +1,46 @@
+---
+layout: raw
+permalink: /tests/webinars/metas
+---
+
+<title>Webinars: Meta Content Tests</title>
+
+<style>
+pre {
+  max-width: 100%;
+  white-space: pre-line;
+  background-color: aliceblue;
+  padding: 10px;
+}
+th, td {
+  text-align: left;
+  border: 1px solid black;
+}
+
+</style>
+{% assign webinars = site.data['webinars'] | sort: event_date %} 
+
+<h1>Webinars Meta Inspector</h1>
+<p>This test page is intended to help diagnose any missing meta tag data.</p>
+<table>
+
+{%- for item in webinars -%}
+    {%- assign event = item[1] -%}
+    {%- assign id = event.event_ID -%}
+
+    {%- include partials/meta/logic-webinars.html -%}
+
+    {%- include partials/meta/logic-sanitize.html -%}
+
+    <tr><th>{{ id }} - {{ og_title }}</th></tr>
+    
+    {%- capture inline -%}
+      {%- include partials/meta/tags.html -%}
+    {%- endcapture -%}
+    <tr><td>
+      <pre>
+      {{ inline | escape }}
+      </pre>
+    </td></tr>
+{%- endfor -%}
+</table>

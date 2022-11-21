@@ -1,0 +1,130 @@
+---
+layout: raw
+permalink: /tests/meta/env-comparison
+---
+
+<title>Per-Environment Meta Comparison Tool</title>
+
+
+<!-- Styles for the Take 5 testing table -->
+<style>
+a, a:active, a:link, a:visited { 
+    color: black;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+td.error {
+    font-weight: bold;
+    background-color:red;
+    color: white; 
+}
+
+td.warn {
+    background-color: yellow;
+}
+
+td.success {
+    background-color: limegreen;
+}
+</style>
+
+{% assign sorted_catalog = site.data.take5 | sort %}
+
+<h1>Per-Environment Meta Comparison Tool</h1>
+<p>View source on each link to manually compare the rendered meta tags.</p>
+
+<pre>Environment: <b>{{ jekyll.environment | upcase }}</b></pre>
+
+{% assign sortedpages = site.pages | where_exp: 'page', "page.url contains '/courses/'" | sort: "url" %}
+
+<h2 id="courses">Courses</h2>
+<table border="0" style="width:100%">
+    <thead>
+        <th>Local/Development/Deploy Preview</th>
+        <th>Staging</th>
+        <th>Production</th>
+    </thead>
+    <tbody>
+    {% for page in sortedpages %}
+      {%- if page.url contains '/meta/' -%}
+        <tr>
+          <td>
+            <a target="_blank" href="{{ page.url }}">{{ page.url }}</a>
+          </td>
+          <td>
+            <a target="_blank" href="{{ page.url | prepend: 'https://staging.thegymcms.com'}}">{{ page.url | prepend: 'https://staging.thegymcms.com'}}</a>
+          </td>
+          <td>
+            <a target="_blank" href="{{ page.url | prepend: 'https://thegymcms.com'}}">{{ page.url | prepend: 'https://thegymcms.com'}}</a>
+          </td>
+        </tr>
+        
+      {%- endif -%}
+    {% endfor %}
+  </tbody>
+</table>
+
+{% assign sortedpages = site.pages | where_exp: 'page', "page.url contains '/webinars/'" | sort: "url" %}
+
+<h2 id="webinars">Webinars</h2>
+<table border="0" style="width:100%">
+    <thead>
+        <th>Local/Development/Deploy Preview</th>
+        <th>Staging</th>
+        <th>Production</th>
+    </thead>
+    <tbody>
+    {% for page in sortedpages %}
+      {%- if page.url contains '/meta/' -%}
+        <tr>
+          <td>
+            <a target="_blank" href="{{ page.url }}">{{ page.url }}</a>
+          </td>
+          <td>
+            <a target="_blank" href="{{ page.url | prepend: 'https://staging.thegymcms.com'}}">{{ page.url | prepend: 'https://staging.thegymcms.com'}}</a>
+          </td>
+          <td>
+            <a target="_blank" href="{{ page.url | prepend: 'https://thegymcms.com'}}">{{ page.url | prepend: 'https://thegymcms.com'}}</a>
+          </td>
+        </tr>
+        
+      {%- endif -%}
+    {% endfor %}
+  </tbody>
+</table>
+
+{% assign sortedpages = site.pages | sort: "url" %}
+
+<h2 id="everything-else">Everything Else</h2>
+<table border="0" style="width:100%">
+    <thead>
+        <th>Local/Development/Deploy Preview</th>
+        <th>Staging</th>
+        <th>Production</th>
+    </thead>
+    <tbody>
+
+    {% for page in sortedpages %}
+      {%- unless page.url contains '/courses/' or page.url contains '/webinars/' or page.url contains '/tests/' -%}
+        {%- if page.url contains '/meta/' -%}  
+        <tr>
+          <td>
+            <a target="_blank" href="{{ page.url }}">{{ page.url }}</a>
+          </td>
+          <td>
+            <a target="_blank" href="{{ page.url | prepend: 'https://staging.thegymcms.com'}}">{{ page.url | prepend: 'https://staging.thegymcms.com'}}</a>
+          </td>
+          <td>
+            <a target="_blank" href="{{ page.url | prepend: 'https://thegymcms.com'}}">{{ page.url | prepend: 'https://thegymcms.com'}}</a>
+          </td>
+        </tr>
+        {%- endif -%}
+      {%- endunless -%}
+    {% endfor %}
+  </tbody>
+</table>

@@ -1,17 +1,20 @@
 ---
 course_ID: GYM-5035
-title: "Responsively Designing With Viewport Units"
+title: "Responsively Designing with Viewport Units"
 date: 2020-06-25T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5035/
 poster_art: /img/take5/posters/gym-5035.jpg
 live: true
 instructor: "Ethan Marcotte"
-topic: "Web Design & Development"
+instructor_bio: "Partner at Autogram"
+topic: "Development"
+subtopics:
+  - label: "Accessibility"
 video_ID: m1_iOLbtEFM
 video_duration: "4:59"
 featured: false
-short_description: "Learn how to responsively spice up your designs with viewport units in this tutorial by Ethan Marcotte — the fellow who started that whole “responsive design” thing."
+short_description: "Learn how to responsively spice up your designs with viewport units in this tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"
@@ -29,4 +32,5 @@ related_content:
   url: "https://developer.mozilla.org/en-US/docs/Web/CSS/object-position"
 - label: "MDN: The calc CSS function"
   url: "https://developer.mozilla.org/en-US/docs/Web/CSS/calc"
+skill_level: "Intermediate"
 ---

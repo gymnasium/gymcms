@@ -1,5 +1,7 @@
 ---
 ---
+// TODO: refactor webinars.scss and collections.scss into one holistic, agnostic stylesheet
+
 @import 'variables';
 @import 'mixins';
 
@@ -77,16 +79,17 @@
   // topics
 
   .accessibility,
-  .web-design-development {
+  .design,
+  .development {
     border-top-color: $gym-magenta;
   }
 
-  .javascript {
-    border-top-color: $gym-purple;
-  }
+//   .development {
+//     border-top-color: $gym-purple;
+//   }
 
   .prototyping,
-  .user-experience {
+  .ux {
     border-top-color: $gym-teal;
   }
 

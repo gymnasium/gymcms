@@ -37,5 +37,5 @@ And that looks pretty good, but it’s hard to tell at this magnification. So zo
 *That’s it.* If you liked this video, be sure to [check out our other Take 5 videos][2] as well as [our full course catalog at Gymnasium][3].
 
 [1]: https://gymnasium.github.io/take5/gym-5022.zip
-[2]: https://thegymnasium.com/take5
+[2]: https://thegymnasium.com/courses/take5
 [3]: https://thegymnasium.com/courses

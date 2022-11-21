@@ -1,7 +1,11 @@
-{% if webinar.video_ID %}
+{%- comment -%}
+TODO: this include is basically the same as the one used for take 5 video.html. These could be combined into one, assuming the logic were adjusted.
+{%- endcomment -%}
+
+{%- if webinar.video_ID -%}
 <div class="event-video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ webinar.video_ID }}" frameborder="0" allowfullscreen></iframe>
 </div>
-{% else %}
+{%- else -%}
 <h2>No video ID provided</h2>
-{% endif %}
+{%- endif -%}

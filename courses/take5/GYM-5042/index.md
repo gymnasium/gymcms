@@ -34,5 +34,5 @@ Here’s another tool from [Toptal][2]{: target="_blank" rel="noopener"} where y
 
 [1]: https://www.color-blindness.com/coblis-color-blindness-simulator/
 [2]: https://www.toptal.com/designers/colorfilter
-[3]: https://thegymnasium.com/take5
+[3]: https://thegymnasium.com/courses/take5
 [4]: https://thegymnasium.com/courses

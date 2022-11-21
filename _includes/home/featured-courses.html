@@ -1,7 +1,7 @@
 {%- assign featured_courses = page.featured_courses  | split: ", " -%}
 
 {%- assign item_count = featured_courses | size -%}
-<link rel="stylesheet" href="{{ site.url }}/css/featured-courses.css">
+<link rel="stylesheet" href="{{ site.url }}/css/featured-courses.css?{{ site.time | date:'%s' }}">
 
 <div class="section-featured-courses">
   <div class="cols">
@@ -22,18 +22,16 @@
     {%- assign title = site.data.courses[featured].title  -%}
     {%- assign description = site.data.courses[featured].short_description  -%}
 
-    {%- if site.data.courses[featured].topic == "Career Skills" -%}
-        {%- assign content_class = "career-skills" -%}
-    {%- elsif site.data.courses[featured].topic == "Content Creation" -%}
-        {%- assign content_class = "content-creation" -%}
-    {%- elsif site.data.courses[featured].topic == "JavaScript" -%}
+    {%- if site.data.courses[featured].topic == "Design" -%}
+        {%- assign content_class = "design" -%}
+    {%- elsif site.data.courses[featured].topic == "Development" -%}
         {%- assign content_class = "development" -%}
-    {%- elsif site.data.courses[featured].topic == "Prototyping" -%}
-        {%- assign content_class = "user-experience" -%}
-    {%- elsif site.data.courses[featured].topic == "Web Design & Development" -%}
-        {%- assign content_class = "design-development" -%}
-    {%- elsif site.data.courses[featured].topic == "User Experience" -%}
-        {%- assign content_class = "user-experience" -%}
+    {%- elsif site.data.courses[featured].topic == "UX" -%}
+        {%- assign content_class = "ux" -%}
+    {%- elsif site.data.courses[featured].topic == "Accessibility" -%}
+        {%- assign content_class = "accessibility" -%}
+    {%- elsif site.data.courses[featured].topic == "Career Skills" -%}
+        {%- assign content_class = "career-skills" -%}
     {%- endif -%}
 
       <li>
@@ -42,11 +40,11 @@
             <header>
               <b class="course-type">{{ topic }}</b>
               <div class="mask">
-                <a href="{{ url }}" title="Learn More">
-                  <img alt="{{ title }}" srcset="{{ artwork_svg | prepend: artwork_path_svg }}" src="{{ artwork_png | prepend: artwork_path_png }}" width="574" height="488" decoding="async">
+                <a href="{{ url }}">
+                  <img alt="{{ title }}" srcset="{{ artwork_svg | prepend: artwork_path_svg }}" src="{{ artwork_png | prepend: artwork_path_png }}" width="574" height="488" decoding="async" loading="lazy">
                 </a>
               </div>
-              <h2><a href="{{ url }}" title="Learn More">{{ title }}</a></h2>
+              <h2><a href="{{ url }}">{{ title }}</a></h2>
               <p>{{ description }}</p>
             </header>
           </div>
@@ -58,7 +56,7 @@
               </dl>
             </div>
             <div class="card-cta">
-              <a class="gym-button" href="{{ url }}"><b>Learn More</b></a>
+              <a class="gym-button" href="{{ url }}"><b>Learn More <span class="sr-only sr-only-focusable"> about {{ title }}</span></b></a>
             </div>
           </div>
         </div>
@@ -69,7 +67,7 @@
   </div>
   <div class="about-featured-courses">
     <div class="description">
-      <p>Design a career you love with free online courses on web design and development, user experience, accessibility, career skills, prototyping, and content creation.</p>
+      <p>Design a career you love with free online courses on design, development, UX, accessibility, and career skills.</p>
     </div>
     <div class="cta">
      <a class="gym-button" href="https://thegymnasium.com/courses"><b>View all Courses</b></a>

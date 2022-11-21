@@ -1,78 +1,91 @@
-{% assign base_path = "/courses/take5/" | prepend: site.gymurl %}
+{%- comment -%}
+TODO: rather than hard-coding values here, a more flexible method would be to create a variable in a course's data file, which permits the course to be rendered in the recommended content include
+{%- endcomment -%}
 
-{% if course.topic == "Accessibility" %}
+{%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
 
-  {% assign course1 = site.data.courses.GYM-016 %}
-  {% assign course2 = site.data.courses.GYM-007 %}
-  {% assign course3 = site.data.courses.GYM-011 %}
+{%- if course.topic == "Design" -%}
 
-{% elsif course.topic == "Career Skills" %}
+  {%- assign course1 = site.data.courses.GYM-106 -%}
+  {%- assign course2 = site.data.courses.GYM-018 -%}
+  {%- assign course3 = site.data.courses.GYM-013 -%}
 
-  {% assign course1 = site.data.courses.GYM-001 %}
-  {% assign course2 = site.data.courses.GYM-106 %}
-  {% assign course3 = site.data.courses.GYM-015 %}
+{%- elsif course.topic == "Development" -%}
 
-{% elsif course.topic == "Prototyping" %}
+  {%- assign course1 = site.data.courses.GYM-109 -%}
+  {%- assign course2 = site.data.courses.GYM-107 -%}
+  {%- assign course3 = site.data.courses.GYM-011 -%}
 
-  {% assign course1 = site.data.courses.GYM-015 %}
-  {% assign course2 = site.data.courses.GYM-005 %}
-  {% assign course3 = site.data.courses.GYM-008 %}
+{%- elsif course.topic == "UX" -%}
 
-{% elsif course.topic == "User Experience" %}
+  {%- assign course1 = site.data.courses.GYM-103 -%}
+  {%- assign course2 = site.data.courses.GYM-015 -%}
+  {%- assign course3 = site.data.courses.GYM-014 -%}
 
-  {% assign course1 = site.data.courses.GYM-103 %}
-  {% assign course2 = site.data.courses.GYM-015 %}
-  {% assign course3 = site.data.courses.GYM-008 %}
+{%- elsif course.topic == "Accessibility" -%}
 
-{% elsif course.topic == "Web Design & Development" %}
+  {%- assign course1 = site.data.courses.GYM-016 -%}
+  {%- assign course2 = site.data.courses.GYM-007 -%}
+  {%- assign course3 = site.data.courses.GYM-011 -%}
 
-  {% assign course1 = site.data.courses.GYM-109 %}
-  {% assign course2 = site.data.courses.GYM-107 %}
-  {% assign course3 = site.data.courses.GYM-011 %}
+{%- elsif course.topic == "Career Skills" -%}
 
-{% else %}
-{% assign course1 = "" %}
-{% assign course2 = "" %}
-{% assign course3 = "" %}
-{% endif %}
+  {%- assign course1 = site.data.courses.GYM-001 -%}
+  {%- assign course2 = site.data.courses.GYM-106 -%}
+  {%- assign course3 = site.data.courses.GYM-015 -%}
+
+{%- else -%}
+  {%- assign course1 = "" -%}
+  {%- assign course2 = "" -%}
+  {%- assign course3 = "" -%}
+{%- endif -%}
 
 {%- assign recommendations = ""  | split: ", " -%}
 {%- assign this_tutorial = page.course_ID -%}
 {%- assign this_topic = site.data.take5.[page.course_ID].topic -%}
 
-{% assign sorted_catalog = site.data.take5 | sort %}
+{%- assign sorted_catalog = site.data.take5 | sort -%}
 
-{% for take5_hash in sorted_catalog reversed %}
+{%- for take5_hash in sorted_catalog reversed -%}
 
-  {% assign item = take5_hash[1] %}
+{%- assign item = take5_hash[1] -%}
 
-  {% if item.topic == this_topic %}
+{%- if item.topic == this_topic -%}
+  {%- if item.live == true -%}
+    {%- if item.course_ID != this_tutorial -%}
+      {%- assign recommendations = recommendations | push: item.course_ID -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}
 
-        {% if item.live == true %}
-            {% if item.course_ID != this_tutorial %}
-              {%- assign recommendations = recommendations | push: item.course_ID -%}
-            {% endif %}
-        {% endif %}
-      {% endif %}
-  {% endfor %}
+{%- endfor -%}
 
- {%- assign random_recommendations = recommendations | sample: 3 -%}
+{%- assign random_recommendations = recommendations | sample: 3 -%}
 
- {%- assign rec1 = random_recommendations[0] -%}
- {%- assign rec2 = random_recommendations[1] -%}
- {%- assign rec3 = random_recommendations[2] -%}
+{%- assign rec1 = random_recommendations[0] -%}
+{%- assign rec2 = random_recommendations[1] -%}
+{%- assign rec3 = random_recommendations[2] -%}
 
-{% assign tutorial1 = site.data.take5.[rec1] %}
-{% assign tutorial2 = site.data.take5.[rec2] %}
-{% assign tutorial3 = site.data.take5.[rec3] %}
+{%- assign tutorial1 = site.data.take5.[rec1] -%}
+{%- assign tutorial2 = site.data.take5.[rec2] -%}
+{%- assign tutorial3 = site.data.take5.[rec3] -%}
 
+{%- comment -%}
+Placeholder logic for limited design-related recommended content
+{%- endcomment -%}
+
+{%- if tutorial1.topic == "Design" -%}
+  {%- assign tutorial1 = site.data.take5.[rec1] -%}
+  {%- assign tutorial2 = site.data.take5.GYM-5011 -%}
+  {%- assign tutorial3 = site.data.take5.GYM-5042 -%}
+{%- endif -%}
 
 {%- if tutorial1 != "" -%}
 
 <div class="take5--recommended-content">
   <div class="container">
 
-{% if include.rec-take5 %}
+{%- if include.rec-take5 -%}
 
     <section class="take5--recommended" id="recommended-tutorials">
       <header>
@@ -88,7 +101,7 @@
                 </a>
               </div>
               <header>
-                <h4 class="subhead-topic">{{ tutorial1.topic }}</h4>
+                <p class="subhead-topic all-caps">{{ tutorial1.topic }}</p>
                 <h3 class="all-caps">
                   <a href="{{ tutorial1.title | slugify | prepend: base_path  }}">{{ tutorial1.title }}</a>
                 </h3>
@@ -103,7 +116,7 @@
                 </a>
               </div>
               <header>
-                <h4 class="subhead-topic">{{ tutorial2.topic }}</h4>
+                <p class="subhead-topic all-caps">{{ tutorial2.topic }}</p>
                 <h3 class="all-caps">
                   <a href="{{ tutorial2.title | slugify | prepend: base_path  }}">{{ tutorial2.title }}</a>
                 </h3>
@@ -115,10 +128,10 @@
               <div class="artwork" data-duration="{{ tutorial3.video_duration }}">
                 <a href="{{ tutorial3.title | slugify | prepend: base_path  }}" title="Watch Video">
                   <img alt="{{ tutorial3.title }}" src="{{ site.url }}{{ tutorial3.poster_art }}">
-                </a>s
+                </a>
               </div>
               <header>
-                <h4 class="subhead-topic">{{ tutorial3.topic }}</h4>
+                <p class="subhead-topic all-caps">{{ tutorial3.topic }}</p>
                 <h3 class="all-caps">
                   <a href="{{ tutorial3.title | slugify | prepend: base_path  }}">{{ tutorial3.title }}</a>
                 </h3>
@@ -132,9 +145,9 @@
       </div>
     </section>
 
-{% endif %}
+{%- endif -%}
 
-{% if include.rec-courses %}
+{%- if include.rec-courses -%}
 
     <section class="take5--recommended" id="recommended-courses">
       <header>
@@ -150,6 +163,7 @@
                 </a>
               </div>
               <header>
+                <p class="subhead-topic all-caps">{{ course1.topic }}</p>
                 <h3 class="all-caps">
                   <a href="{{ course1.url }}">{{ course1.title }}</a>
                 </h3>
@@ -164,6 +178,7 @@
                 </a>
               </div>
               <header>
+                <p class="subhead-topic all-caps">{{ course2.topic }}</p>
                 <h3 class="all-caps">
                   <a href="{{ course2.url }}">{{ course2.title }}</a>
                 </h3>
@@ -178,6 +193,7 @@
                 </a>
               </div>
               <header>
+                <p class="subhead-topic all-caps">{{ course3.topic }}</p>
                 <h3 class="all-caps">
                   <a href="{{ course3.url }}">{{ course3.title }}</a>
                 </h3>
@@ -209,7 +225,8 @@
   </div>
 </div>
 
-{% endif %}
+{%- endif -%}
+
 {%- else -%}
 <!-- There is no recommended courses module here -->
 {%- endif -%}

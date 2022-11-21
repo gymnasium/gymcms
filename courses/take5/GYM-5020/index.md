@@ -48,5 +48,5 @@ Whether you’re looking to get hired, pitching a new concept, or requesting mor
 
 *Thank you for joining me.* If you like this Take 5 Tutorial, be sure to [check out the rest in the series][1] and [all courses offered by Gymnasium][2].
 
-[1]: https://thegymnasium.com/take5
+[1]: https://thegymnasium.com/courses/take5
 [2]: https://thegymnasium.com/courses

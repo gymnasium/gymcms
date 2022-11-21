@@ -1,0 +1,254 @@
+@import "components/bootstrap/buttons";
+
+// Defaults...
+a,
+a:visited {
+  color: $gym-orange;
+  font-family: $gym-text-font-stack;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $gym-orange;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+// Only use the border bottom text style in the main-container, aka #content
+.main-container,
+.system-status {
+  /* update (text) link style */
+
+  a {
+    line-height: inherit;
+    color: currentColor;
+    text-decoration: none;
+    padding-bottom: 0.125rem;
+    border-bottom: 1px solid currentColor;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    border-bottom-width: 2px;
+    margin-bottom: -2px;
+  }
+}
+
+a:focus {
+  border-bottom: 0;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.gym-link {
+  color: $gym-orange;
+}
+
+.gym-link:hover {
+  border-bottom: 1px solid $gym-orange;
+}
+
+.gym-link:focus,
+.gym-link:active {
+  border-bottom-color: #444;
+}
+
+.gym-button,
+a.gym-button,
+button.u-field-link,
+button[type="submit"],
+a.gym-button:link,
+div.problem .save,
+div.problem .save:not(:disabled) {
+  box-shadow: none;
+  text-shadow: none;
+  background-image: none;
+  text-decoration: none;
+
+  display: inline-block;
+  width: 100%;
+
+  padding: 1em;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+
+  border: 0;
+  border-radius: 0.125em;
+
+  background-color: $gym-blue;
+  color: $gym-white;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  font: bold 1.2em/1 $gym-font-stack;
+
+  a,
+  a:link,
+  a:visited,
+  a b {
+    color: $gym-white;
+    font: bold 1.2em/1 $gym-font-stack;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+
+  b {
+    font: bold 1.2em/1 $gym-font-stack;
+    letter-spacing: 0.025em;
+    color: $gym-white;
+  }
+}
+
+button[type="submit"]:hover,
+#secondary-nav a.gym-button:hover,
+.gym-button:hover,
+.gym-button:active,
+.gym-button:active:hover,
+a.gym-button:hover,
+a.gym-button:hover,
+a.gym-button:active,
+a.gym-button:active:hover,
+a:visited.gym-button:hover,
+a:link.gym-button:hover,
+a:link:visited.gym-button:hover,
+input[type="submit"]:hover:not(:disabled),
+input[type="button"]:hover:not(:disabled),
+button:hover:not(:disabled),
+button:hover:not(:disabled),
+.account-settings-sections .u-field-link:hover,
+div.problem .action .save:hover,
+div.problem .action .save:hover:not(:disabled),
+.courseware-bookmarks-button .bookmarks-list-button:hover {
+  background-color: $gym-button-background-hover;
+  color: $gym-white;
+  background-image: none;
+  box-shadow: none;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  color: $gym-white;
+  font-family: $gym-font-stack;
+
+  a,
+  a:link,
+  a:link:hover,
+  a:link:visited,
+  a:link:visited:hover {
+    text-decoration: none;
+    color: $gym-white;
+
+    b {
+      color: $gym-white;
+    }
+  }
+}
+
+.courseware-bookmarks-button {
+  .bookmarks-list-button {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
+
+div.problem .action .save:not(:disabled) {
+  width: auto;
+}
+
+.gym-button:focus {
+  background: $gym-button-background-focus;
+}
+
+.gym-button:active {
+  background: $gym-button-background-active;
+}
+
+.gym-button:link,
+.gym-button:visited {
+  color: $gym-white;
+  font-family: $gym-font-stack;
+}
+
+.gym-button b {
+  font: bold 1.2em/1 $gym-font-stack;
+  letter-spacing: 0.025em;
+  vertical-align: text-top;
+}
+
+.gym-button.natural {
+  width: auto;
+}
+
+//summary styled as link
+
+.gym-summary-link {
+  width: max-content;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover b,
+  &:focus b,
+  &:active b {
+    border-bottom: 2px solid $gym-black;
+  }
+
+  b {
+    font-weight: normal;
+    font-family: sans-serif;
+    vertical-align: -.05em;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $gym-black;
+    margin-bottom: -2px;
+  }
+}
+
+// TODO: Resolve specificity
+
+// secondary button
+#main {
+
+  a.gym-button-secondary {
+    width: auto;
+    color: $gym-white;
+    background-color: transparent;
+    border: 2px solid $gym-blue;
+
+    & b {
+      color: inherit;
+    }
+
+    &:hover {
+      border-color: $gym-button-background-hover;
+    }
+
+    &:focus,
+    &:active {
+      border-color: $gym-button-background-focus;
+    }
+  }
+
+}
+
+
+input[type="submit"]:active:not(:disabled),
+input[type="submit"]:focus:not(:disabled),
+input[type="button"]:active:not(:disabled),
+input[type="button"]:focus:not(:disabled),
+button:active:not(:disabled),
+button:focus:not(:disabled),
+.button:active:not(:disabled),
+.button:focus:not(:disabled) .gym-button:focus {
+  box-shadow: none;
+}
+
+
+button {
+  cursor: pointer;
+}

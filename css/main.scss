@@ -1,0 +1,1397 @@
+---
+---
+@import "functions";
+@import "mixins";
+@import "variables";
+@import "components/resets";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  // TODO: discuss and implement in the future? - RE
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+}
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #fff;
+  font-family: $gym-text-font-stack;
+  font-style: normal;
+  line-height: 1em;
+}
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  margin: 0;
+}
+
+[tabindex="-1"] {
+  outline: none;
+}
+
+// Responsive (flexible) media
+// 1. Remove text-level descender gap (flush images)
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; /* 1 */
+}
+
+// Responsive images
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+// TODO: clean these up to the best of our ability
+@import "migrated-vendor";
+@import "migrated-main";
+
+
+@import "components/visibility";
+
+
+@import "components/forms";
+
+// @import "components/bootstrap/layout";
+
+
+/* --- BEGIN: Migrated from gymnasium.scss in the open edx theme --- */
+/* negate a silly style rule inherited from the platform */
+div {
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+// button,
+// html button,
+// html body button {
+//   box-shadow: none;
+//   text-shadow: none;
+// }
+
+.content-wrapper {
+  max-width: none;
+  margin: auto;
+  padding: 0;
+}
+
+.home > header {
+  background-position-y: -25px;
+  .container {
+    height: 100%;
+
+    .row {
+      height: 100%;
+
+      .marketing-image-container {
+        height: 100%;
+      }
+    }
+  }
+}
+
+p {
+  font-family: $gym-text-font-stack;
+  font-size: 1em;
+}
+
+span {
+  color: inherit;
+  font: inherit;
+}
+
+// Misc text details
+// TODO: Consolidate and cleanup
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+.break-word {
+  word-break: break-all;
+}
+
+.block,
+.break {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+// prevent word wrap
+.nowrap,
+.no-wrap {
+  font: inherit;
+  color: inherit;
+  white-space: nowrap;
+}
+
+body,
+body.view-in-course {
+  div.window-wrap {
+    min-width: inherit;
+  }
+}
+
+// #primary-nav, #secondary-nav {
+//   .row {
+//     display: block; // fix nav overlap issue with discussion board
+//   }
+// }
+
+.wrapper-footer {
+  .container,
+  .container > div,
+  div.container,
+  div.container > div {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+
+    /* mocking the bootstrap style rule for consistency throughout page */
+    max-width: 1180px;
+  }
+
+  footer {
+    .copyright {
+      text-align: center;
+      margin-top: 1em;
+
+      a {
+        color: $gym-orange !important;
+      }
+    }
+
+    .footer-link-list img {
+      max-width: 1.5em;
+    }
+
+    img[class="open-edx-logo"] {
+      max-width: 10.9375em;
+    }
+  }
+}
+
+/* ---
+white panel (used in multiple places)
+--- */
+
+.white-panel {
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-family: $gym-text-font-stack;
+  background-color: $gym-white;
+  padding: 1em 1.4em;
+  border: 1px solid $gym-gray;
+  border-radius: 2px;
+  margin: 20px auto;
+
+  @include breakpoint(medium, max) {
+    > .row > .col-md-3 {
+      border-top: 1px dashed $gym-gray;
+      margin-top: 1.4em;
+      margin-left: -0.4em;
+      margin-right: -0.4em;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  h2 {
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.3;
+    font-family: $gym-font-stack;
+  }
+
+  h3 {
+    font-weight: bold;
+    color: $gym-black;
+    font-size: 1.2em;
+    line-height: 1.4;
+    font-family: $gym-font-stack;
+    letter-spacing: 0.02em;
+    word-spacing: 0.04em;
+    margin-top: 1em;
+  }
+
+
+  // adjustment for vertical rule (if a sidebar is present)
+  @include breakpoint(medium, min) {
+    & {
+      position: relative;
+      padding: 1em 1em 2em 2em;
+
+      > .row > .col-md-3 {
+        position: static;
+
+        // sidebar dashed line
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          height: 100%;
+          border-left: 1px dashed $gym-gray;
+          margin-left: -15px;
+        }
+      }
+
+    }
+
+    // clearfix with zero-width space
+    &:after {
+      content: "\200b";
+      display: table;
+      clear: both;
+    }
+  }
+
+}
+
+
+@import 'components/sidebar';
+
+.right-gutter {
+  border-right: 15px solid $gym-white;
+}
+
+@import 'components/navigation';
+
+/* global theme styles */
+
+.caret {
+  color: $gym-light-gray;
+}
+
+// body header.global.slim {
+//   border-bottom: none;
+// }
+
+// header.global {
+//   margin: 0;
+//   box-shadow: none;
+//   border: none;
+//   width: inherit;
+//   height: 120px;
+//   background-color: $gym-black;
+
+//   .container,
+//   .container.grey {
+//     min-width: inherit;
+//   }
+
+//   nav {
+//     .nav-courseware {
+//       padding-top: 3px;
+//     }
+
+//     .logo {
+//       clear: left;
+//       margin-top: 30px;
+//     }
+
+//     //odd amount of specificity required to get around built in style rules - MB
+//     .cta.cta-register {
+//       color: $gym-white;
+//       display: inline-block;
+//       margin-top: -0.3em;
+
+//       b {
+//         margin-top: 4px;
+//       }
+//     }
+
+//     .container {
+//       background: transparent;
+//     }
+//   }
+// }
+
+.content-wrapper#content {
+  // padding-bottom: 1em;
+  background-color: $gym-light-page-background;
+}
+
+div.wrapper-footer {
+  margin-top: 0;
+  background-color: $gym-black;
+  border-top: 10px solid $gym-orange;
+  color: $gym-white;
+  min-height: 170px;
+
+  footer {
+    .gymnasium-logo {
+      height: 50px;
+      margin-top: 15px;
+      margin-left: 5px;
+    }
+    .edx-logo {
+      height: 50px;
+    }
+
+    .footer-link-list {
+      margin-top: 30px;
+
+      li {
+        border-right: 1px solid $gym-dark-gray;
+        height: 100%;
+        padding-right: 8px;
+
+        a,
+        a:link {
+          color: $gym-white;
+          font-family: $gym-font-stack;
+        }
+        a:hover {
+          color: $gym-orange;
+        }
+      }
+      li:last-child {
+        border-right: 0;
+      }
+    }
+    .built-on {
+      margin-top: 30px;
+      span {
+        color: $gym-white;
+      }
+      img {
+        margin-top: -15px;
+        vertical-align: text-top;
+      }
+    }
+
+    a:hover {
+      text-decoration: none;
+      border: 0;
+    }
+  }
+}
+
+section {
+  padding: 0;
+}
+
+// .black-background {
+//   top: 0;
+//   background-color: black;
+//   z-index: 0;
+// }
+
+.gym-top-block {
+  z-index: 1;
+  position: relative;
+}
+
+.gym-top-block {
+  .gym-nav-icon {
+    background-position: center;
+    display: inline-block;
+  }
+
+  a {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+}
+
+@import "components/links_buttons";
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.dialog {
+  position: relative;
+  top: 10%;
+  width: 37em;
+  background: $gym-white;
+  padding: 1.2em;
+  border: 1.2em solid #444;
+  border-radius: 0.125em;
+  margin: auto;
+}
+
+.dialog legend {
+  width: 100%;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 1.2em;
+}
+
+.dialog legend b {
+  font: 900 1.6em/1.2 $gym-font-stack;
+  color: $gym-black;
+  letter-spacing: 0.06em;
+  word-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.dialog .error {
+  background: #f2dede;
+  padding: 1em;
+  border: 1px solid #d9534f;
+  border-radius: 0.12em;
+  margin-bottom: 1.2em;
+
+  font-size: 1em;
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.dialog p {
+  font: 0.9em/1.4 $gym-text-font-stack;
+  color: #444;
+  letter-spacing: 0.01em;
+}
+
+.dialog fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.dialog ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dialog li,
+.dialog ul li,
+.dialog ul li:last-child {
+  border-bottom: 0.15em solid $gym-orange;
+  margin-bottom: 1.2em;
+  box-sizing: border-box;
+}
+
+.dialog form label,
+.dialog form input {
+  display: block;
+}
+
+.dialog form label {
+  font: 1.1em/1.2 $gym-font-stack;
+  color: $gym-black;
+  letter-spacing: 0.03em;
+  word-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.dialog form input {
+  background: none;
+  border: none;
+  box-shadow: none;
+
+  font: 1em/1 $gym-text-font-stack;
+  width: 100%;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  border: 0;
+  margin-top: 0.3em;
+  box-sizing: border-box;
+}
+
+.dialog form input[type="checkbox"] {
+  display: inline;
+}
+
+.dialog .message {
+  padding-right: 1.2em;
+  padding-bottom: 1.2em;
+  padding-left: 1.2em;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 1.2em;
+}
+
+.dialog ul + .message {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.dialog form button {
+  margin-top: 1.2em;
+}
+
+.close-modal-content {
+  width: auto;
+  padding: 0.3em 1em;
+  border: 0;
+  border-radius: 0 0 0.125em 0.125em;
+  margin-top: -1.2em;
+}
+
+.close-modal b {
+  font: bold 0.8em/1.3 $gym-text-font-stack;
+  letter-spacing: 0.1em;
+  word-spacing: normal;
+  text-transform: uppercase;
+  padding: 0.7em 1.5em;
+  border-radius: 0 0 0.27em 0.27em;
+}
+
+.close-modal {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1.2em;
+}
+
+.gym-icon {
+  width: 35px;
+  height: 25px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  background-position-x: center;
+
+  filter: gray; /* IE6-9 */
+  filter: grayscale(1); /* Firefox 35+ */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+.gym-icon:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+  background-color: transparent;
+}
+
+.aquent-icon {
+  @extend .gym-icon;
+  background-image: $aquent-icon-image;
+}
+
+.vitamin-t-icon {
+  @extend .gym-icon;
+  background-image: $vitamin-t-icon-image;
+}
+
+html {
+  body {
+    div.info-wrapper section.updates h1,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-align: left;
+      text-transform: uppercase;
+      font-family: $gym-font-stack;
+    }
+
+    h1,
+    h2 {
+      font-weight: 900;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: bold;
+    }
+  }
+}
+
+h1 {
+  font: 900 2.4em/1.2 $gym-font-stack;
+  letter-spacing: 0.04em;
+  word-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font: 900 1em/1.3 $gym-font-stack;
+  letter-spacing: 0.06em;
+  word-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+code,
+code * {
+  font-family: monospace, monospace;
+}
+
+.cookiebanner {
+  span {
+    color: $gym-white;
+  }
+  a {
+    color: $gym-orange;
+  }
+
+  a:hover,
+  a:link:hover {
+    color: $gym-light-gray;
+  }
+}
+
+/* --- Course Resources (Syllabus & Chapter Raw HTML blocks) --- */
+
+.edx-block-resources {
+  font-size: 16px !important;
+  color: $gym-black;
+
+  header {
+    font-size: 16px !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 1em !important;
+  }
+
+  section {
+    padding-top: 1.2em;
+    border-top: 1px dashed $gym-gray;
+    margin-top: 1.4em;
+  }
+
+  h2, h3, p {
+    margin-top: 0;
+    margin-bottom: 0 !important;
+  }
+
+  h3 {
+    font-size: 1.4em !important;
+    line-height: 1.15 !important;
+  }
+
+  p {
+    font: 1em/1.35 $gym-text-font-stack;
+    margin-top: 0.5rem;
+  }
+
+  ul {
+    margin-top: 0 !important;
+  }
+
+  li {
+    line-height: 1.35;
+    margin-top: 1rem;
+    margin-bottom: 0 !important;
+  }
+}
+
+.handouts .handouts-header,
+.edx-block-resources h2 {
+  font: 900 1.55em/1.15 $gym-font-stack !important;
+  color: $gym-black !important;
+  letter-spacing: 0.035rem !important;
+}
+
+.handouts .handouts-header {
+  text-transform: uppercase !important;
+  margin-bottom: 1.2rem !important;
+}
+
+.handouts p,
+.handouts dl div {
+  margin-top: 1rem;
+}
+
+.handouts dt,
+.handouts dd {
+  line-height: 1.35;
+}
+
+/* ---
+https://github.com/gymnasium/tracker/issues/81
+--- */
+
+/* syllabus / add single-column breakpoint fix */
+
+@include breakpoint(medium, max) {
+
+  #main .info-wrapper .updates {
+    padding-bottom: 0;
+    border-right: 0;
+  }
+
+  #main .info-wrapper .handouts {
+    display: block;
+    width: 100%;
+    padding-bottom: 2em;
+    border-top: 1px dashed $gym-gray;
+  }
+
+}
+
+/* about / update sidebar style */
+
+.course-about-sidebar .course-instructor {
+  padding-top: 1.2em;
+}
+
+@include breakpoint(medium, max) {
+
+  .course-about .course-about-overview {
+    padding-right: 0;
+    padding-bottom: 1.2em;
+    border-right: 0;
+    border-bottom: 1px dashed $gym-gray;
+    margin-bottom: 1.2em;
+  }
+
+  .course-about .course-about-sidebar {
+    padding: 0;
+  }
+
+}
+
+/* ---
+https://github.com/gymnasium/tracker/issues/107
+https://github.com/gymnasium/tracker/issues/86
+https://github.com/gymnasium/tracker/issues/85
+--- */
+
+
+
+/*
+https://github.com/gymnasium/tracker/issues/143
+*/
+
+#main {
+  .problems-wrapper {
+    font-size: 16px;
+  }
+
+  .problem-header {
+    font: 900 2.25em $gym-font-stack;
+  }
+
+  .problem-progress {
+    font: bold 1em $gym-text-font-stack;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    word-spacing: 0.02em;
+    color: #222;
+    display: inline-block;
+  }
+
+  .problem-progress + * + main .message:not([hidden]),
+  .problem .solution-span > span {
+    margin-top: -2rem;
+    margin-bottom: 5rem;
+  }
+
+  .problem .response-fieldset-legend {
+    font-size: inherit;
+    border-bottom: 0;
+  }
+
+  .choicegroup legend {
+    margin-bottom: 1rem;
+  }
+
+  .problem .response-fieldset-legend img {
+    box-sizing: border-box;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
+    border: 1px solid #999;
+    margin-top: 1.6rem;
+  }
+
+  .problem .choicegroup_correct:before,
+  .problem .choicetextgroup_correct:before {
+    margin-top: 4px;
+  }
+
+  .problem .choicegroup_incorrect:before,
+  .problem .choicetextgroup_incorrect:before {
+    margin-top: -3px;
+  }
+
+  .message h2 {
+    text-transform: uppercase;
+  }
+
+  .message p a:not(.btn),
+  .message  p a:visited:not(.btn) {
+    font: inherit;
+  }
+
+  /* pre-hawthorn markup patterns */
+
+  .problem strong + .wrapper-problem-response {
+    margin-top: 1rem;
+  }
+
+  .problem strong + pre {
+    margin-top: 1.6rem;
+  }
+}
+
+/* update font-family for catalog navigation */
+
+// #catalog .course-menu a:focus,
+// #catalog .course-menu a:active {
+//   font-family: $gym-font-stack;
+// }
+
+/* ---
+https://github.com/gymnasium/tracker/issues/84
+--- */
+
+/* update color contrast ratio */
+
+main .how-gymnasium-works p {
+  color: #666;
+}
+
+/* ---
+https://github.com/gymnasium/tracker/issues/77
+--- */
+
+.cookiebanner {
+  border-top: 1px dashed #666;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+@include breakpoint(large, max) {
+
+  .cookiebanner {
+    text-align: left !important;
+  }
+
+}
+
+.cookiebanner span {
+  color: $gym-white;
+}
+
+.cookiebanner a {
+  color: $gym-white !important;
+  padding-bottom: 0.125rem;
+  border-bottom: 1px solid currentColor !important;
+  margin-bottom: -0.125rem;
+}
+
+.cookiebanner a:hover,
+.cookiebanner a:focus,
+.cookiebanner a:active {
+  border-bottom-width: 2px !important;
+}
+
+.cookiebanner-close {
+  color: $gym-orange;
+}
+
+/* ---
+https://github.com/gymnasium/tracker/issues/54
+--- */
+
+#homework-materials {
+  font-size: 16px;
+  color: $gym-black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#homework-materials h2 {
+  font-weight: 900;
+  font-size: 1.2em;
+  font-family: $gym-font-stack;
+  color: $gym-black;
+  letter-spacing: .05rem;
+  margin-top: 0;
+  margin-bottom: 1.2em;
+}
+
+#homework-materials p {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+.handouts a,
+.edx-block-resources a,
+#homework-materials a,
+.profile-sidebar a {
+  color: inherit !important;
+  text-decoration: none;
+  padding-bottom: 0.125rem;
+  border-bottom: 1px solid $gym-black !important;
+  margin-bottom: -0.125rem;
+}
+
+.handouts a:hover,
+.handouts a:focus,
+.handouts a:active,
+.edx-block-resources a:hover,
+.edx-block-resources a:focus,
+.edx-block-resources a:active,
+#homework-materials a:hover,
+#homework-materials a:focus,
+#homework-materials a:active,
+.profile-sidebar a:hover,
+.profile-sidebar a:focus,
+.profile-sidebar a:active {
+  border-bottom-width: 2px !important;
+}
+
+/* ---
+https://github.com/gymnasium/tracker/issues/47
+--- */
+
+.courseware-bookmarks-button {
+  padding-left: 30px;
+}
+
+
+
+/* ---
+https://github.com/gymnasium/tracker/issues/43
+--- */
+
+nav.discussion {
+  margin: 0 !important;
+}
+
+nav.discussion .new-post-btn {
+  font-size: 1em;
+  font-family: $gym-font-stack;
+  color: $gym-white;
+  background-color: $gym-orange;
+  padding: .75em 1em;
+  border: 0;
+}
+
+/* ---
+Courseware misc. styling for:
+About, Info, Quizzes, and Final Exam pages
+--- */
+
+#course-exam-instructions,
+.course-quiz-reminder {
+  margin-bottom: 5rem;
+}
+
+.course-lessons:before {
+  content: "🎬" "\00a0";
+}
+
+.course-quizzes:before {
+  content: "🤓" "\00a0";
+}
+
+.course-forum:before {
+  content: "📣" "\00a0";
+}
+
+.course-exam:before {
+  content: "📝" "\00a0";
+}
+
+.course-credential:before {
+  content: "🎉" "\00a0";
+}
+
+.course-reminder:before {
+  content: "👋" "\00a0";
+}
+
+/* Undo outline lesson/chapter title case */
+
+.course-overview .course-about h3,
+#course-outline h3 {
+  text-transform: none;
+}
+
+/* ---
+https://github.com/gymnasium/tracker/issues/40
+--- */
+
+.sidebar #jobs-microservice-frame {
+  min-width: 116% !important;
+  background-color: $gym-dark-gray;
+  padding: 1.4em;
+  margin-top: -1.4em;
+  margin-left: -1.4em;
+}
+
+
+
+/* ---
+Footer CSS (migrated from footer.scss)
+--- */
+
+#contentinfo {
+  font-size: 16px;
+  color: $gym-white;
+  background-color: $gym-black;
+  padding: 5px 10px 30px 10px;
+  margin: 0 auto;
+
+  h2 {
+    font-family: $gym-font-stack;
+    font-size: 1em;
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .gym-brand {
+    margin-bottom: 1em;
+  }
+
+  .gymnasium-logo {
+    width: 12.5em;
+    height: auto;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .gym-brand p {
+    width: 95%;
+    font-size: 1em;
+    line-height: 1.55;
+    margin-top: 1.2em;
+  }
+
+  .resources {
+    clear: left;
+
+    @include breakpoint(medium, min) {
+      clear: none;
+    }
+  }
+
+  .footer-link-list {
+    padding-top: 0.625em;
+    margin-top: 0;
+    margin-bottom: 1.2em;
+  }
+
+  ul {
+    list-style-type: "";
+    padding-left: 0;
+    margin-top: 0.95em;
+    margin-left: 0;
+  }
+
+  ul ::marker {
+    color: transparent;
+  }
+
+  li {
+    line-height: 1.35;
+    height: auto;
+    padding-right: 0;
+    border-right: 0;
+    margin-top: 0.6em;
+  }
+
+  li a {
+    color: $gym-white;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    color: $gym-orange;
+    border-bottom: 0;
+  }
+
+  .open-edx-logo {
+    height: auto;
+  }
+
+  .copyright {
+    text-align: left;
+  }
+
+  .copyright small {
+    font-size: 80%;
+  }
+}
+
+#social {
+  li {
+    position: relative;
+  }
+
+  a[data-title] {
+    display: inline-block;
+
+    &:hover {
+      padding-right: 6ch;
+    }
+
+    &:hover::after,
+    &:focus::after,
+    &:active::after {
+      display: inline;
+      position: absolute;
+      top: 0;
+      left: 2em;
+      content: attr(data-title);
+      color: $gym-orange;
+      line-height: 1.8;
+    }
+  }
+}
+
+// Retired course announcement(s)
+
+.message-banner {
+
+  .announcement {
+    color: $gym-black;
+    background-color: $gym-white;
+    border-bottom: 1px solid $gym-gray;
+    padding: 2rem 0;
+
+    p {
+      font-size: 1.15em;
+      line-height: inherit;
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(large, min) {
+      .text-wrap:before {
+        content: "\a";
+        white-space: pre;
+      }
+    }
+
+  }
+
+}
+
+// Enrollment disabled
+
+.course-metabar .register.disabled {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.3225em;
+  color: $gym-black;
+  background-color: $gym-white;
+  padding: 1em;
+  border: 1px solid $gym-black;
+}
+
+@include breakpoint(medium, min) {
+
+  .course-metabar .register.disabled {
+    position: relative;
+    left: 5%;
+    margin: -0.25rem -3em 0;
+  }
+
+}
+
+@include breakpoint(large, min) {
+
+  .course-metabar .register.disabled {
+    left: 1em;
+  }
+
+}
+
+#failed-verification-banner {
+
+  * {
+    font-family: $gym-text-font-stack;
+  }
+
+  .title:first-child {
+    margin-top: 5px;
+  }
+
+  & .msg-content {
+    @include breakpoint(large, min) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+}
+
+// system-status-helper.html styles
+
+aside.system-status {
+
+  & {
+    font-size: 16px;
+    padding: 1em;
+  }
+
+  p {
+    font: 1em/1.35 $gym-text-font-stack;
+    color: $gym-black;
+    margin-bottom: 0;
+  }
+
+// Ukraine Relief related theme
+
+ & {
+    background-color: $gym-light-page-background;
+    border-bottom: 1px solid $gym-black;
+  }
+
+ p:before {
+    content: "";
+    display: inline-block;
+    width: 4.6ex;
+    vertical-align: -0.5ex;
+    background-color: #fc0;
+    padding-bottom: 1.15ex;
+    border: 1px solid #06c;
+    border-top-width: 1.15ex;
+    margin-right: 1.15ex;
+  }
+
+}
+
+// Exclude sitewide banner from home page
+
+.gymnasium-home #system-status {
+  display: none;
+}
+
+// Courseware Raw HTML styling
+
+.raw-html .content {
+  padding: 0;
+
+  article,
+  section {
+    padding-top: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  h1 {
+    font: 900 2em/1.2 $gym-font-stack;
+    color: $gym-dark-gray-2;
+    text-transform: uppercase;
+    letter-spacing: .03rem;
+    margin-bottom: .6em !important;
+  }
+
+  h2 {
+    font: 900 1.6em/1.2 $gym-font-stack;
+    color: $gym-dark-gray-2;
+    text-transform: uppercase;
+    letter-spacing: .03rem;
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+  }
+
+  h3 {
+    font: 900 1.2em/1.2 $gym-font-stack;
+    color: $gym-dark-gray-2;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  > h2,
+  nav > h2,
+  section[id] ul > li {
+    margin-top: 2.4rem;
+  }
+
+  ol,
+  ul,
+  li {
+    margin-bottom: 0 !important;
+  }
+
+  ol + p,
+  ul + p {
+    margin-top: 2.4rem;
+  }
+
+  ol > li {
+    margin-top: 1.6rem;
+  }
+
+  li li {
+    margin-top: 1rem;
+  }
+
+  li,
+  p {
+    font: normal 1.15em/1.5 $gym-text-font-stack;
+    margin-top: 1rem;
+  }
+
+  p {
+    color: $gym-dark-gray-2;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  li li,
+  li p {
+    font-size: 1em;
+  }
+
+}
+
+// back to top link
+.to-top-link {
+  margin-top: 1.2em;
+
+  b {
+    color: $gym-dark-gray;
+
+    &::before {
+      display: inline-block;
+      content: "↑";
+      font-family: monospace, monospace;
+      vertical-align: top;
+      margin-right: .25em;
+    }
+  }
+}
+
+// Jobs module
+@import "components/jobs";
+
+// Import migrated fixes
+@import "migrated-fixes";
+
+@import "bootstrap";
+
+// Import gym-snaps support
+@import "components/gym-snaps";

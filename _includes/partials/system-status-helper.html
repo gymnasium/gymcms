@@ -1,0 +1,10 @@
+{%- comment -%}
+1. When the `data-active` attribute is set to `true`, the content of this div will automatically appear in the system status bar on the Gymnasium site. Style sheets should target the aside.system-status class, and styles can be added to `main.scss`; see `systemStatus()` in `js/gymnasium.js` for display behavior.
+2. TODO: Home page exclusion toggle `data-active-homepage`. See `.gymnasium-home #system-status` in `css/main.css`.
+{%- endcomment -%}
+<div id="system-status-helper" class="hide" data-active="true">
+  <div class="container">
+    <p>Join us in supporting the CARE Ukraine Crisis Fund. We’re donating $100,000 through matching funds and contributions. <a href="https://my.care.org/site/Donation2?31667.donation=form1&df_id=31667&mfc_pref=T&s_src=382248000000&s_subsrc=FY22UkraineCrisisFundMGAquent&utm_source=gymnasium&utm_medium=web&utm_campaign=AQ_NA_GYM-ukraine-relief&utm_content=banner-sitewide"><b>Donate Now</b></a></p>
+  </div>
+</div>
+<!-- #system-status-helper -->

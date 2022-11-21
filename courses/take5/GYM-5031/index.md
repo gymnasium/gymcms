@@ -112,5 +112,5 @@ So again, let’s check out our final interactivity. And you can see that as you
 [2]: https://codepen.io/josborn/pen/abOLorN
 [3]: https://developers.google.com/chart/interactive/docs/quick_start
 [4]: https://uxtools.co/survey-2019/
-[5]: https://thegymnasium.com/take5
+[5]: https://thegymnasium.com/courses/take5
 [6]: https://thegymnasium.com/courses
