@@ -2,18 +2,18 @@
 
 {%- assign hero = site.data.hero -%}
 
-{%- if jekyll.environment == "development" -%}
+{%- if jekyll.environment == "local" -%}
   {%- include partials/test-top.html -%}
 {%- endif -%}
 
-<div class="home">
+<div id="main" class="home">
 
-  {%- if hero.live_coding == true -%}
+  {%- if hero.live_stream == true -%}
     <!-- Display live coding on both hero includes -->
-    {%- include hero-livecoding.html -%}
+    {%- include heros/hero-live-stream.html -%}
   {%- elsif page.permalink contains "home/index-auth/" and hero.auth_promo -%}
     <!-- Display something specific on the authenticated hero include -->
-    {%- include {{hero.auth_promo | prepend: "/heros/"}} -%} 
+    {%- include {{hero.auth_promo | prepend: "/heros/"}} -%}
   {%- else -%}
     <!-- Display the current promo on both hero includes -->
     {%- include {{hero.current_promo | prepend: "/heros/"}} -%}
@@ -22,14 +22,14 @@
   <section class="container-fluid subsection">
     <div class="container">
       {%- include home/how-it-works.html -%}
-  
+
       <div class="row">
         <section class="highlighted-courses col-md-12">
-  
+
           <header class="text-center header-tab">
             <h1>Featured Courses</h1>
           </header>
-  
+
           <section class="courses row">
             {%- include home/featured-courses.html -%}
           </section>
@@ -45,19 +45,19 @@
           <header class="header-tab text-center">
             <h1>Find Work</h1>
           </header>
-      
+
           {%- comment -%} Get our jobs module {%- endcomment -%}
           {%- assign opt_heading = false -%}
           {%- include /modules/jobs.html -%}
-  
+
         </div><!-- .col-md-8.col-md-offset-2 -->
       </div><!-- .row -->
     </div>
   </section>
-  
-  {%- include home/as-seen-in.html -%}
-</div><!-- .home -->
 
-{%- if jekyll.environment == "development" -%}
+  {%- include home/as-seen-in.html -%}
+</div><!-- #main.home -->
+
+{%- if jekyll.environment == "local" -%}
   {%- include partials/test-bottom.html -%}
 {%- endif -%}

@@ -6,7 +6,7 @@ course_type: short
 live: true
 url: /courses/course-v1:GYM+014+0/about
 poster_art: /img/course-artwork/png/gym-014.png
-topic: "Web Design & Development"
+topic: "Development"
 subtopics:
   - label: "Design Systems"
   - label: "Pattern Library"
@@ -16,9 +16,11 @@ skills:
   - label: "Website prototyping"
   - label: "Designing with dynamic data"
   - label: "Structuring a design system"
-  - label: "And more…"
 audience:
   - label: "Anyone interested in building design systems"
   - label: "Anyone interested in building website or web app prototypes"
   - label: "UX designers with coding chops"
+lessons_duration: "2 hours"
+completion_duration: "Up to 4 hours"
+skill_level: "Intermediate"
 ---

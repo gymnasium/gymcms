@@ -1,0 +1,10 @@
+@import 'variables';
+@import 'functions';
+
+// 'Component-ized' partials
+@import "pages/home";
+@import "pages/logistration";
+@import "pages/courses";
+@import "pages/courseware";
+@import "pages/dashboard";
+@import "pages/account-settings";

@@ -7,11 +7,12 @@ url: /courses/take5/GYM-5032/
 poster_art: /img/take5/posters/gym-5032.jpg
 live: true
 instructor: "Ethan Marcotte"
+instructor_bio: "Partner at Autogram"
 topic: "Accessibility"
 video_ID: Y2vjyDxkIPs
 video_duration: "4:59"
 featured: false
-short_description: "Learn how to get started with VoiceOver, Apple’s built-in screen reader, to read and navigate web pages in this tutorial by Ethan Marcotte — the fellow who started that whole “responsive design” thing."
+short_description: "Learn how to get started with VoiceOver, Apple’s built-in screen reader, to read and navigate web pages in this tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Completed Project"
@@ -29,15 +30,5 @@ related_content:
   url: "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
 - label: "Using VoiceOver to Evaluate Web Accessibility"
   url: "https://webaim.org/articles/voiceover/"
+skill_level: "Beginner"
 ---
-
-
-
-
-
-
-
-
-
-
-

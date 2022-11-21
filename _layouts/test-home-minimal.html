@@ -1,6 +1,6 @@
-{%- if jekyll.environment == "development" -%}
-		{%- include partials/test-top.html -%}
-		<script>
+{%- if jekyll.environment == "local" -%}
+    {%- include partials/test-top.html -%}
+    <script>
       document.title = "Development | Gymnasium";
     </script>
 {%- endif -%}
@@ -11,6 +11,6 @@
 
 </section>
 
-{%- if jekyll.environment == "development" -%}
-		{%- include partials/test-bottom.html -%}
+{%- if jekyll.environment == "local" -%}
+    {%- include partials/test-bottom.html -%}
 {%- endif -%}

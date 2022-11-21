@@ -26,9 +26,9 @@
               </ul>
             </section>
           </div>
-          <div class="col-xs-6 col-md-2 collections">
+          <div class="col-xs-6 col-md-3 collections">
             <section class="footer-link-list" id="collections">
-              <h2>Collections</h2>
+              <h2>Content Collections</h2>
               <ul>
                 <li><a href="/design-systems">Design Systems</a></li>
                 <li><a href="/web-development">Web Development</a></li>
@@ -45,13 +45,14 @@
               <ul>
                 <li><a href="/faq">FAQ</a></li>
                 <li><a href="/support">Support</a></li>
-                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/social-impact">Social Impact</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
                 <li><a href="https://aquent.com/csr-policy" target="_blank" rel="noopener">Corporate Social Responsibility</a></li>
                 <li><a href="https://aquent.de/impressum" target="_blank" rel="noopener">Impressum</a></li>
               </ul>
             </section>
           </div>
-          <div class="col-xs-6 col-md-2 social">
+          <div class="col-xs-6 col-md-1 social">
             <section class="footer-link-list" id="social">
               <h2>Social</h2>
               <ul>
@@ -118,9 +119,11 @@ JS or tracking pixels to be included at the bottom of the theme
 {%- if site.environment == "local" -%}
   {%- assign geolocator_src = "?gymdev=true" | prepend: geolocator_src -%}
 {%- endif -%}
-
-<script id="gymjs" async defer src="{{site.url}}/js/gymnasium.js?{{ site.time | date:'%s' }}"></script>
-
 {%- comment -%} Disabling for now...- RE
 <iframe id="geolocator" src="{{ geolocator_src }}" frameborder="0" style="width:1px;height:1px;visibility:hidden;display:none;"></iframe>
 {%- endcomment -%}
+
+<script id="mainjs" async defer src="{{site.url}}/js/main.js?{{ site.time | date:'%s' }}"></script>
+<script id="cookiebanner" async src="{{site.url}}/js/vendor/cookiebanner.js?{{ site.time | date:'%s' }}" data-link="#f89820" data-message="We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. Find out more about how we use cookies in our" data-linkmsg="Privacy Policy." data-moreinfo="/privacy-policy"></script>
+
+

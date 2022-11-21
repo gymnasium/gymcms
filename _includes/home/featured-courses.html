@@ -22,18 +22,16 @@
     {%- assign title = site.data.courses[featured].title  -%}
     {%- assign description = site.data.courses[featured].short_description  -%}
 
-    {%- if site.data.courses[featured].topic == "Career Skills" -%}
-        {%- assign content_class = "career-skills" -%}
-    {%- elsif site.data.courses[featured].topic == "Content Creation" -%}
-        {%- assign content_class = "content-creation" -%}
-    {%- elsif site.data.courses[featured].topic == "JavaScript" -%}
+    {%- if site.data.courses[featured].topic == "Design" -%}
+        {%- assign content_class = "design" -%}
+    {%- elsif site.data.courses[featured].topic == "Development" -%}
         {%- assign content_class = "development" -%}
-    {%- elsif site.data.courses[featured].topic == "Prototyping" -%}
-        {%- assign content_class = "user-experience" -%}
-    {%- elsif site.data.courses[featured].topic == "Web Design & Development" -%}
-        {%- assign content_class = "design-development" -%}
-    {%- elsif site.data.courses[featured].topic == "User Experience" -%}
-        {%- assign content_class = "user-experience" -%}
+    {%- elsif site.data.courses[featured].topic == "UX" -%}
+        {%- assign content_class = "ux" -%}
+    {%- elsif site.data.courses[featured].topic == "Accessibility" -%}
+        {%- assign content_class = "accessibility" -%}
+    {%- elsif site.data.courses[featured].topic == "Career Skills" -%}
+        {%- assign content_class = "career-skills" -%}
     {%- endif -%}
 
       <li>
@@ -69,7 +67,7 @@
   </div>
   <div class="about-featured-courses">
     <div class="description">
-      <p>Design a career you love with free online courses on web design and development, accessibility, UX, prototyping, content creation, and career skills.</p>
+      <p>Design a career you love with free online courses on design, development, UX, accessibility, and career skills.</p>
     </div>
     <div class="cta">
      <a class="gym-button" href="https://thegymnasium.com/courses"><b>View all Courses</b></a>

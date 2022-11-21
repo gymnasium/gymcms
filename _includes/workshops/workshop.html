@@ -1,0 +1,90 @@
+{%- assign homepage = site.data.workshops.homepage -%}
+<!-- TODO: Update logic-->
+{%- assign workshop = site.data.workshops.GYM-700 -%}
+
+<section class="find-courses" id="catalog">
+
+  <header class="about">
+    <div class="container">
+      <h1>{{ homepage.main.title }}</h1>
+      <p>
+        <strong class="block">{{ homepage.main.tagline }}</strong>
+        {{ homepage.main.short_description }}
+      </p>
+    </div>
+  </header>
+
+  <main id="main" class="container" aria-label="Main Content" tabindex="-1" role="main">
+    <div class="white-panel catalog-content">
+
+      <div class="row">
+        <div class="col-md-9 course-overview">
+          <section class="courses-container">
+
+          <h1>{{ workshop.title }}</h1>
+
+          <h2>{{ workshop.datetime }}</h2>
+
+          <p class="hero">{{ workshop.short_description}}</p>
+
+          {%- for description in workshop.long_description -%}
+          <p class="hero">{{ description.label }}</p>
+          {%- endfor -%}
+
+          <div class="row">
+            <div class="col-md-6">
+
+              <dl>
+                <dt>What To Expect</dt>
+                {%- for info in workshop.info -%}
+                <dd>{{ info.label }}</dd>
+                {%- endfor -%}
+              </dl>
+
+              <dl>
+                <dt>Prerequisites</dt>
+                {%- for prereqs in workshop.prereqs -%}
+                <dd>{{ prereqs.label }}</dd>
+                {%- endfor -%}
+              </dl>
+
+            </div>
+            <div class="col-md-6">
+
+              <dl>
+                <dt>Schedule</dt>
+                {%- for schedule in workshop.schedule -%}
+                <dd>{{ schedule.label }}</dd>
+                {%- endfor -%}
+              </dl>
+
+            </div>
+          </div>
+
+          </section>
+        </div>
+        <div class="col-md-3">
+
+        {%- assign josborn = site.data.bios.josborn -%}
+
+          <section class="course-about-sidebar">
+
+            <section class="course-instructor" id="course-instructor">
+              <h2>Meet the Instructor</h2>
+              <article>
+                <img alt="Headshot of {{ josborn.name}}" src="{{site.url}}/img/webinar-bio-headshots/{{ josborn.headshot }}" width="160" height="160" decoding="async">
+                <h3>{{ josborn.name}}</h3>
+                <p><b>{{ josborn.subtitle }}</b></p>
+                <p>{{ josborn.description }}</p>
+              </article>
+            </section>
+
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</section>

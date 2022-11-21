@@ -1,28 +1,24 @@
 {%- include build-timestamp.html -%}
 
-{%- if jekyll.environment == "development" -%}
+{%- if jekyll.environment == "local" -%}
   {%- include partials/test-top.html -%}
 {%- endif -%}
 
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="white-panel">
-        <div class="row">
-          <div class="col-md-9">
-            {{ content }}
-          </div><!-- .col-md-9 -->
+  <div class="white-panel">
+    <div class="row">
+      <div class="col-md-9">
+        {{ content }}
+      </div><!-- .col-md-9 -->
 
-          <div class="col-md-3">
-            {%- comment -%} Get Upcoming/Featured Courses Sidebar {%- endcomment -%}
-            {%- include featured.html -%}
-          </div><!-- .col-md-3 -->
-        </div><!-- .row -->
-      </div><!-- .white-panel -->
-    </div><!-- .col-md-12 -->
-  </div><!-- .row -->
+      <div class="col-md-3">
+        {%- comment -%} Get Upcoming/Featured Courses Sidebar {%- endcomment -%}
+        {%- include sidebar-featured.html -%}
+      </div><!-- .col-md-3 -->
+    </div><!-- .row -->
+  </div><!-- .white-panel -->
 </div><!-- .container -->
 
-{%- if jekyll.environment == "development" -%}
+{%- if jekyll.environment == "local" -%}
   {%- include partials/test-bottom.html -%}
 {%- endif -%}

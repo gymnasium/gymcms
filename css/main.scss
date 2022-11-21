@@ -3,39 +3,96 @@
 @import "functions";
 @import "mixins";
 @import "variables";
+@import "components/resets";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  // TODO: discuss and implement in the future? - RE
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+}
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #fff;
+  font-family: $gym-text-font-stack;
+  font-style: normal;
+  line-height: 1em;
+}
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  margin: 0;
+}
+
+[tabindex="-1"] {
+  outline: none;
+}
+
+// Responsive (flexible) media
+// 1. Remove text-level descender gap (flush images)
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; /* 1 */
+}
+
+// Responsive images
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+// TODO: clean these up to the best of our ability
+@import "migrated-vendor";
+@import "migrated-main";
+
+
+@import "components/visibility";
+
+
+@import "components/forms";
+
+// @import "components/bootstrap/layout";
 
 
 /* --- BEGIN: Migrated from gymnasium.scss in the open edx theme --- */
 /* negate a silly style rule inherited from the platform */
-html {
-  .container > div,
-  .home .container.grey.div {
-    border-radius: 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
-  }
-}
-
-button,
-html button,
-html body button {
-  box-shadow: none;
-  text-shadow: none;
-}
-
-.content-wrapper .container,
-.container {
-  // border: none;
+div {
+  border-radius: 0;
+  border: 0;
   background: transparent;
-  padding-top: 0;
-  padding-bottom: 0;
+  box-shadow: none;
 }
 
-div#content,
-div.content-wrapper,
-div#content.content-wrapper,
-#main.content-wrapper {
+// button,
+// html button,
+// html body button {
+//   box-shadow: none;
+//   text-shadow: none;
+// }
+
+.content-wrapper {
   max-width: none;
   margin: auto;
   padding: 0;
@@ -58,60 +115,40 @@ div#content.content-wrapper,
 
 p {
   font-family: $gym-text-font-stack;
-  font-size: 1.2em/1.6em;
+  font-size: 1em;
+}
+
+span {
+  color: inherit;
+  font: inherit;
+}
+
+// Misc text details
+// TODO: Consolidate and cleanup
+
+.all-caps {
+  text-transform: uppercase;
 }
 
 .break-word {
   word-break: break-all;
 }
 
-body,
-body.login,
-body.register,
-.register {
-  a:link,
-  a:visited,
-  a:link:visited,
-  a:active,
-  a:link:active,
-  p a,
-  p a:link,
-  p a:visited,
-  a.gymlink,
-  a.gymlink:link,
-  a.gymlink:visited {
-    color: $gym-orange;
-    font-family: $gym-text-font-stack;
-    border-bottom: none;
-  }
-
-  a:hover,
-  a:visited:hover,
-  a:link:hover,
-  a:link:visited:hover,
-  a:active:hover,
-  a:link:active:hover,
-  .hboard .my-courses .course .info > hgroup h3 a:hover,
-  .dashboard .my-courses .course .info > hgroup h3 span:hover,
-  .dashboard .my-courses .course .info > hgroup h3 span:focus,
-  p a:link:hover,
-  p a:hover,
-  a.gymlink:hover,
-  a.gymlink:link:hover,
-  a.gymlink:visited:hover {
-    border-bottom: 1px solid $gym-orange;
-    color: $gym-orange;
-    text-decoration: none;
-  }
-
-  a:focus,
-  .dashboard .my-courses .course .info > hgroup h3 a:focus {
-    border-bottom: 0 none;
-  }
+.block,
+.break {
+  display: block;
 }
 
-.container {
-  min-width: 0px !important;
+.inline-block {
+  display: inline-block;
+}
+
+// prevent word wrap
+.nowrap,
+.no-wrap {
+  font: inherit;
+  color: inherit;
+  white-space: nowrap;
 }
 
 body,
@@ -121,14 +158,12 @@ body.view-in-course {
   }
 }
 
-#primary-nav, #secondary-nav {
-  .row {
-    display: block; // fix nav overlap issue with discussion board
-  }
-}
+// #primary-nav, #secondary-nav {
+//   .row {
+//     display: block; // fix nav overlap issue with discussion board
+//   }
+// }
 
-#primary-nav,
-#secondary-nav,
 .wrapper-footer {
   .container,
   .container > div,
@@ -152,292 +187,103 @@ body.view-in-course {
         color: $gym-orange !important;
       }
     }
+
+    .footer-link-list img {
+      max-width: 1.5em;
+    }
+
+    img[class="open-edx-logo"] {
+      max-width: 10.9375em;
+    }
   }
 }
 
-.white-panel,
-.container.white-panel {
-  background-color: $gym-white;
-  border: 1px solid $gym-gray;
-  border-radius: 2px;
-  font-family: $gym-text-font-stack;
+/* ---
+white panel (used in multiple places)
+--- */
+
+.white-panel {
   font-size: 1.2em;
   line-height: 1.5;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 1em 2.2em 2.2em;
+  font-family: $gym-text-font-stack;
+  background-color: $gym-white;
+  padding: 1em 1.4em;
+  border: 1px solid $gym-gray;
+  border-radius: 2px;
+  margin: 20px auto;
+
+  @include breakpoint(medium, max) {
+    > .row > .col-md-3 {
+      border-top: 1px dashed $gym-gray;
+      margin-top: 1.4em;
+      margin-left: -0.4em;
+      margin-right: -0.4em;
+    }
+  }
 
   ul {
     padding-left: 0;
   }
 
-  a {
-    font-family: $gym-text-font-stack;
-  }
-
   h2 {
-    font-family: $gym-font-stack;
-    font-size: 1.2em;
     font-weight: 900;
+    font-size: 1.2em;
     line-height: 1.3;
+    font-family: $gym-font-stack;
   }
 
   h3 {
     font-weight: bold;
     color: $gym-black;
-    font-family: $gym-font-stack;
     font-size: 1.2em;
-    letter-spacing: 0.02em;
     line-height: 1.4;
-    margin-top: 1em;
+    font-family: $gym-font-stack;
+    letter-spacing: 0.02em;
     word-spacing: 0.04em;
+    margin-top: 1em;
   }
+
+
+  // adjustment for vertical rule (if a sidebar is present)
+  @include breakpoint(medium, min) {
+    & {
+      position: relative;
+      padding: 1em 1em 2em 2em;
+
+      > .row > .col-md-3 {
+        position: static;
+
+        // sidebar dashed line
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          height: 100%;
+          border-left: 1px dashed $gym-gray;
+          margin-left: -15px;
+        }
+      }
+
+    }
+
+    // clearfix with zero-width space
+    &:after {
+      content: "\200b";
+      display: table;
+      clear: both;
+    }
+  }
+
 }
+
+
+@import 'components/sidebar';
 
 .right-gutter {
   border-right: 15px solid $gym-white;
 }
 
-#primary-nav {
-  height: auto;
-
-  .gym-nav-icon-container:hover {
-    background-color: transparent;
-  }
-
-  .navbar {
-    height: auto;
-    border: 0;
-    margin: 0;
-  }
-
-  .navbar-nav > li > a {
-    padding: 10px;
-    margin-left: 4px;
-    margin-top: 2px;
-  }
-
-  .nav li a {
-    background-color: transparent;
-    color: $gym-orange;
-
-    .caret {
-      color: $gym-orange;
-    }
-  }
-
-  .nav li a:hover {
-    //odd specificity to overwrite bootstrap defaults
-    background-color: transparent;
-    color: $gym-white;
-    border-bottom: none;
-
-    .caret {
-      color: $gym-white;
-    }
-  }
-
-  .nav li.dropdown.open {
-    background-color: $gym-white;
-    a {
-      color: $gym-orange;
-    }
-    a:hover .caret {
-      color: $gym-orange;
-    }
-
-    .dropdown-menu {
-      border: none;
-      a:hover {
-        color: $gym-black;
-      }
-    }
-
-    .logged-in-username {
-      color: #f89820;
-    }
-  }
-
-  .navbar-right {
-    li > a {
-      font: normal 1.2em/1 $gym-font-stack;
-    }
-  }
-
-  #dropdown {
-    display: inline-block;
-    color: $gym-orange;
-    border: none;
-  }
-
-  #dropdown:hover,
-  #dropdown:hover span,
-  #dropdown:hover span.caret {
-    color: $gym-orange;
-  }
-
-  #dropdown:hover #dropdown:link:hover {
-    color: $gym-orange;
-    border: none;
-  }
-
-  #dropdown-menu {
-    display: none;
-
-    li {
-      display: inline;
-
-      a {
-        color: $gym-white;
-      }
-
-      a:hover,
-      anchor:link:hover {
-        color: $gym-orange;
-        text-decoration: none;
-      }
-    }
-  }
-
-  #dropdown-menu::before {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    content: " ";
-    line-height: 0;
-    background: #000;
-    padding: 0 0.2em;
-    vertical-align: middle;
-    border-top: 0.25em dashed transparent;
-    border-left: 0.25em solid #f89820;
-    border-bottom: 0.25em dashed transparent;
-    margin-left: -0.8em;
-  }
-}
-
-#secondary-nav {
-  height: 70px;
-  background-color: $gym-black;
-  position: relative;
-  z-index: 999;
-
-  > .container {
-    padding-top: 10px;
-  }
-
-  a {
-    font-size: 1.2em;
-    color: $gym-white;
-    font-family: $gym-font-stack;
-
-    &.gym-button {
-      color: $gym-white;
-    }
-  }
-
-  a:hover {
-    color: $gym-orange;
-    border-bottom: none;
-  }
-
-  .navbar-brand {
-    height: auto;
-    padding: 0;
-    margin-top: 1.75rem;
-    margin-left: 15px;
-  }
-
-  .navbar-brand:hover,
-  .navbar-brand:active,
-  .navbar-brand:link {
-    background: transparent;
-  }
-
-  .navbar-default {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 5px;
-    background-color: $gym-black;
-    border-color: transparent;
-    border: none;
-    margin-bottom: 0;
-    z-index: 100;
-  }
-
-  .navbar-right {
-    position: relative;
-    // top: 6px;
-  }
-
-  .navbar-toggle {
-    margin-top: 15px;
-
-    &:hover,
-    &:focus {
-      border: 1px solid $gym-white;
-    }
-  }
-}
-
-@include breakpoint(small, max) {
-  .navbar-default {
-    .navbar-collapse,
-    .navbar-form {
-      margin: 9px auto 10px;
-    }
-  }
-
-  #primary-nav .navbar-nav {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-
-  #secondary-nav .navbar-nav {
-    li {
-      &:last-child {
-        margin-left: 15px;
-        margin-right: 15px;
-      }
-    }
-  }
-}
-
-@include breakpoint(medium, min) {
-  .navbar-collapse.collapse {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  #secondary-nav {
-    .navbar-right {
-      margin-top: 3px;
-    }
-  }
-
-  #primary-nav,
-  #secondary-nav {
-    .row {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .navbar {
-      border-radius: 0;
-      margin: 0;
-
-      &.collapse {
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
-    .navbar-left {
-      margin-left: 15px;
-    }
-
-    .navbar-right {
-      margin-right: 15px;
-    }
-  }
-}
+@import 'components/navigation';
 
 /* global theme styles */
 
@@ -445,59 +291,59 @@ body.view-in-course {
   color: $gym-light-gray;
 }
 
-body header.global.slim {
-  border-bottom: none;
-}
+// body header.global.slim {
+//   border-bottom: none;
+// }
 
-header.global {
-  margin: 0px;
-  box-shadow: none;
-  border: none;
-  width: inherit;
-  height: 120px;
-  background-color: $gym-black;
+// header.global {
+//   margin: 0;
+//   box-shadow: none;
+//   border: none;
+//   width: inherit;
+//   height: 120px;
+//   background-color: $gym-black;
 
-  .container,
-  .container.grey {
-    min-width: inherit;
-  }
+//   .container,
+//   .container.grey {
+//     min-width: inherit;
+//   }
 
-  nav {
-    .nav-courseware {
-      padding-top: 3px;
-    }
+//   nav {
+//     .nav-courseware {
+//       padding-top: 3px;
+//     }
 
-    .logo {
-      clear: left;
-      margin-top: 30px;
-    }
+//     .logo {
+//       clear: left;
+//       margin-top: 30px;
+//     }
 
-    //odd amount of specificity required to get around built in style rules - MB
-    .cta.cta-register {
-      color: $gym-white;
-      display: inline-block;
-      margin-top: -0.3em;
+//     //odd amount of specificity required to get around built in style rules - MB
+//     .cta.cta-register {
+//       color: $gym-white;
+//       display: inline-block;
+//       margin-top: -0.3em;
 
-      b {
-        margin-top: 4px;
-      }
-    }
+//       b {
+//         margin-top: 4px;
+//       }
+//     }
 
-    .container {
-      background: transparent;
-    }
-  }
-}
+//     .container {
+//       background: transparent;
+//     }
+//   }
+// }
 
 .content-wrapper#content {
-  padding-bottom: 1em;
+  // padding-bottom: 1em;
   background-color: $gym-light-page-background;
 }
 
 div.wrapper-footer {
   margin-top: 0;
   background-color: $gym-black;
-  border-top: 10px solid $gym-orange-light;
+  border-top: 10px solid $gym-orange;
   color: $gym-white;
   min-height: 170px;
 
@@ -529,7 +375,7 @@ div.wrapper-footer {
         }
       }
       li:last-child {
-        border-right: 0px;
+        border-right: 0;
       }
     }
     .built-on {
@@ -545,20 +391,20 @@ div.wrapper-footer {
 
     a:hover {
       text-decoration: none;
-      border: 0px;
+      border: 0;
     }
   }
 }
 
 section {
-  padding: 0px;
+  padding: 0;
 }
 
-.black-background {
-  top: 0px;
-  background-color: black;
-  z-index: 0;
-}
+// .black-background {
+//   top: 0;
+//   background-color: black;
+//   z-index: 0;
+// }
 
 .gym-top-block {
   z-index: 1;
@@ -578,173 +424,8 @@ section {
   }
 }
 
-.gym-button:link,
-.gym-button:visited {
-  color: $gym-white;
-  font-family: $gym-font-stack;
-}
+@import "components/links_buttons";
 
-body {
-  input[type="submit"]:active:not(:disabled),
-  input[type="submit"]:focus:not(:disabled),
-  input[type="button"]:active:not(:disabled),
-  input[type="button"]:focus:not(:disabled),
-  button:active:not(:disabled),
-  button:focus:not(:disabled),
-  .button:active:not(:disabled),
-  .button:focus:not(:disabled) .gym-button:focus {
-    box-shadow: none;
-  }
-}
-
-.gym-button,
-a.gym-button,
-a.gym-button:link,
-.account-settings-sections
-  .section
-  .account-settings-section-body
-  .u-field
-  .field
-  .u-field-link,
-.xmodule_display.xmodule_CapaModule div.problem .action .save,
-.xmodule_display.xmodule_CapaModule div.problem .action .save:not(:disabled),
-.login .form-actions button[type="submit"],
-.register .form-actions button[type="submit"].gym-button,
-.courseware-bookmarks-button .bookmarks-list-button {
-  box-shadow: none;
-  text-shadow: none;
-  background-image: none;
-
-  display: inline-block;
-  width: 100%;
-
-  padding: 1em;
-  margin: auto;
-  text-align: center;
-  cursor: pointer;
-
-  border: 0;
-  border-radius: 0.125em;
-
-  background-color: $gym-orange;
-  color: $gym-white;
-  font-weight: bold;
-  font-size: 1em;
-  text-align: center;
-  font: bold 1.2em/1 $gym-font-stack;
-
-  a,
-  a:link,
-  a:visited,
-  a b {
-    color: $gym-white;
-    font: bold 1.2em/1 $gym-font-stack;
-  }
-  a:hover {
-    text-decoration: none;
-  }
-
-  b {
-    font: bold 1.2em/1 $gym-font-stack;
-    letter-spacing: 0.025em;
-    color: $gym-white;
-  }
-}
-
-body {
-  #secondary-nav a.gym-button:hover,
-  .gym-button:hover,
-  .gym-button:active,
-  .gym-button:active:hover,
-  a.gym-button:hover,
-  a.gym-button:hover,
-  a.gym-button:active,
-  a.gym-button:active:hover,
-  a:visited.gym-button:hover,
-  a:link.gym-button:hover,
-  a:link:visited.gym-button:hover,
-  input[type="submit"]:hover:not(:disabled),
-  input[type="button"]:hover:not(:disabled),
-  button:hover:not(:disabled),
-  button:hover:not(:disabled),
-  .account-settings-sections
-    .section
-    .account-settings-section-body
-    .u-field
-    .field
-    .u-field-link:hover,
-  .xmodule_display.xmodule_CapaModule div.problem .action .save:hover,
-  .xmodule_display.xmodule_CapaModule
-    div.problem
-    .action
-    .save:hover:not(:disabled),
-  .login .form-actions button[type="submit"],
-  .register .form-actions button[type="submit"].gym-button:hover,
-  .courseware-bookmarks-button .bookmarks-list-button:hover {
-    background-color: $gym-button-background-hover;
-    color: $gym-white;
-    background-image: none;
-    box-shadow: none;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    color: $gym-white;
-    font-family: $gym-font-stack;
-
-    a,
-    a:link,
-    a:link:hover,
-    a:link:visited,
-    a:link:visited:hover {
-      text-decoration: none;
-      color: $gym-white;
-
-      b {
-        color: $gym-white;
-      }
-    }
-  }
-
-  .courseware-bookmarks-button {
-    .bookmarks-list-button {
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
-    }
-  }
-
-  .xmodule_display.xmodule_CapaModule div.problem .action .save:not(:disabled) {
-    width: auto;
-  }
-}
-
-.gym-button:focus,
-.gym-button:active {
-  text-decoration: none !important;
-  background: $gym-button-background-active;
-}
-
-.gym-button b {
-  font: bold 1.2em/1 $gym-font-stack;
-  letter-spacing: 0.025em;
-  vertical-align: bottom;
-}
-
-.gym-button.natural {
-  width: auto;
-}
-
-.gym-link {
-  color: #f89820;
-}
-
-.gym-link:hover {
-  border-bottom: 1px solid #f89820;
-}
-
-.gym-link:focus,
-.gym-link:active {
-  border-bottom-color: #444;
-}
 
 .modal {
   position: fixed;
@@ -965,19 +646,7 @@ h2 {
 
 code,
 code * {
-  font-family: monospace, serif;
-}
-
-/* password reset page */
-.view-passwordreset {
-  .introduction header {
-    background-image: none;
-  }
-
-  div.container,
-  footer.container {
-    padding: 0;
-  }
+  font-family: monospace, monospace;
 }
 
 .cookiebanner {
@@ -992,442 +661,6 @@ code * {
   a:link:hover {
     color: $gym-light-gray;
   }
-}
-
-.login-register div.status,
-div.status,
-.status {
-  padding: 1.8em;
-  border: 0;
-  border-radius: 2px;
-  box-shadow: none;
-
-  .message-title {
-    font: bold 2em/1.25 $gym-font-stack;
-    color: $gym-white !important;
-    text-transform: capitalize;
-    margin-top: 0;
-    margin-bottom: 0.625em;
-  }
-
-  .message-copy {
-    color: $gym-white !important;
-  }
-
-  div.status p.message-copy {
-    color: $gym-black !important;
-  }
-
-  a {
-    color: $gym-white !important;
-    border-bottom: 1px solid $gym-white !important;
-  }
-
-  a:hover,
-  a:focus {
-    border-bottom: 1px solid $gym-white !important;
-  }
-
-  ul {
-    margin-top: 1.4em;
-  }
-
-  li {
-    font: bold 1em/1.5 $gym-text-font-stack;
-    letter-spacing: 0.01em;
-    color: $gym-white;
-    margin-top: 1em;
-  }
-
-  &.submission-success {
-    background: #1c7f1f;
-  }
-
-  &.submission-error {
-    background: #d43f3a;
-  }
-}
-
-.login-register div.form-field label.error,
-div.form-field label.error {
-  display: inline-block;
-  color: $gym-white;
-  padding: 0.5em;
-  background: #d43f3a;
-  border-radius: 2px;
-}
-
-.login-register div.form-field input.error,
-div.form-field input.error {
-  border: 2px solid #d43f3a;
-}
-
-/* fix for course image size from gymcms */
-main.course .hero-banner img {
-  max-width: 100%;
-}
-/* --- END: Migrated from gymnasium.scss in the open edx theme --- */
-
-/* --- Migrate logistration css out of theme (see https://github.com/gymnasium/tracker/issues/192) --- */
-.login-register,
-#login-and-registration-container {
-  background: transparent;
-}
-
-.login-register {
-  max-width: none;
-}
-
-#login,
-#register {
-  padding: 0 1.8em 2.2em;
-}
-
-.login-providers h1 + button.login-provider {
-  margin: 1.4em 0 1em;
-}
-
-.login-providers .section-title + button.login-provider {
-  margin-top: 0.6em;
-}
-
-main li:not([class]) > a:not([class]):active,
-main label a:not([class]):hover,
-main label a:not([class]):focus,
-main label a:not([class]):active {
-  text-decoration: none;
-  border-bottom-width: 2px !important;
-  margin-bottom: -0.125rem;
-}
-
-.login-form {
-  a.forgot-password {
-    &:hover,
-    &:focus,
-    &:active {
-      text-decoration: none;
-      border-bottom-width: 2px !important;
-      margin-bottom: -0.125rem;
-    }
-  }
-}
-
-.login-register {
-  h1 {
-    margin-top: 0;
-  }
-
-  div.section-title.lines h2 {
-    font: bold 1.8em/1.15 $gym-font-stack;
-    font-family: $gym-font-stack;
-  }
-
-  form {
-    background: $gym-white;
-  }
-  /*** linkedin Login button styles ***/
-
-  p.action-label {
-    font: normal 1.6em/1.4 $gym-font-stack;
-    margin-bottom: 1em;
-  }
-
-  button.gym-button.button-oa2-linkedin-oauth2.login-provider.login-oa2-linkedin-oauth2,
-  button.gym-button.button-oa2-linkedin-oauth2.login-provider.register-oa2-linkedin-oauth2 {
-    transform: scale(1.5, 1.5);
-    border-color: $linked-in-blue;
-
-    .icon.fa.fa-linkedin {
-      border-radius: 1px;
-      margin: 0;
-    }
-
-    span {
-      font-family: $gym-text-font-stack;
-    }
-  }
-
-  .form-field {
-
-    margin-top: 0.6em;
-    margin-bottom: 1.4em;
-
-    label,
-    input {
-      margin-bottom: 0.6em;
-    }
-
-    input + .tip-input {
-      margin-top: 0.6em;
-    }
-
-    label {
-      font-size: 1.1em;
-      text-transform: uppercase;
-      font-family: $gym-font-stack;
-      font-weight: bold;
-
-      &[for="register-terms_of_service"] {
-        margin: 0;
-      }
-
-      &.focus-out {
-        position: static;
-        padding-top: 0;
-        padding-left: 0;
-        opacity: 1;
-        z-index: auto;
-      }
-    }
-
-    input {
-      height: auto;
-      font-size: 1em;
-      padding: 1em;
-      border: 1px solid $gym-gray;
-      border-bottom: 2px solid $gym-orange;
-      margin-bottom: 0.6em;
-    }
-
-    .tip {
-      color: $gym-dark-gray;
-      display: inline-block;
-
-      &-input {
-        font: normal 1em/1.15 $gym-text-font-stack;
-      }
-    }
-  }
-
-  .logistration-bottom {
-    padding-bottom: 2em;
-    padding-left: 1.8em;
-    padding-right: 1.8em;
-    margin-top: 1.2em;
-
-    h2 {
-      font-family: $gym-font-stack;
-      padding: 0.75em 0;
-      font-size: 2.2em;
-      letter-spacing: 0.01em;
-      text-align: left;
-      padding: 0 0 0.4em;
-
-      .text {
-        text-transform: uppercase;
-      }
-    }
-  }
-
-  .logistration-button {
-    text-transform: capitalize;
-    padding: 1em;
-    font-size: 1.5em;
-    font-weight: 900;
-  }
-
-  form {
-    background: $gym-white;
-  }
-
-  .note {
-    font-weight: bold;
-    color: $gym-black;
-  }
-
-  .toggle-form {
-    font-size: 14px;
-  }
-
-  .login-remember {
-    line-height: 1.15;
-  }
-
-  .checkbox-remember {
-    margin: 1.2em 0 0.6em;
-  }
-
-  .checkbox-terms_of_service {
-    margin: 1em 0;
-  }
-
-  .status.account-activation,
-  .status.account-activation.success,
-  .status.account-activation.success,
-  .financial-assistance-wrapper
-    .financial-assistance-form
-    .status.account-activation.success {
-    background-color: $gym-orange !important;
-    border-color: $gym-orange;
-    color: $gym-white;
-  }
-}
-
-#register .form-field input {
-  margin-bottom: 0;
-}
-
-.register.container,
-.login.container {
-  background-color: $gym-white;
-  border: 1px solid $gym-gray;
-  margin-top: 1.8em;
-  border-radius: 2px;
-
-  #field-password .tip.tip-input {
-    margin-top: -0.3em;
-  }
-
-  .sign-up {
-    border-right: 1px dashed $gym-gray;
-    padding: 1.6em;
-  }
-
-  .additional-information {
-    padding: 1.6em;
-  }
-
-  .instructions {
-    padding-bottom: 1.8em;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 1.8em;
-
-    p {
-      font-family: $gym-font-stack;
-      font-size: 1.6em;
-      line-height: 1.5;
-      letter-spacing: 0.01em;
-      word-spacing: 0.02em;
-    }
-  }
-
-  h2 {
-    margin-bottom: 1.2em;
-    font: 900 1em/1.3 $gym-font-stack;
-  }
-
-  form {
-    .field {
-      .tip {
-        font-size: 1em;
-      }
-    }
-  }
-
-  #market {
-    width: 150px;
-  }
-
-  .err-message {
-    background: #f2dede;
-    display: none;
-    padding: 1.8em;
-    border: 1px solid $error-color;
-    border-radius: 0.12em;
-    margin-bottom: 1em;
-
-    &.is-shown {
-      display: block;
-    }
-
-    h3 {
-      color: $error-color;
-      margin-top: 0;
-      margin-bottom: -0.2em;
-    }
-
-    ul {
-      margin-top: 1.4em;
-      color: $error-color;
-    }
-
-    li {
-      font: bold 1em/1.5 $gym-text-font-stack;
-      color: $error-color;
-      letter-spacing: 0.01em;
-      margin-top: 1em;
-    }
-  }
-}
-
-.login {
-  nav {
-    a:hover {
-      border-bottom: none;
-    }
-  }
-
-  a:hover {
-    border-bottom: 1px solid $gym-orange;
-  }
-}
-
-body,
-body.login,
-body.register {
-  ul.list-input,
-  ol.list-input {
-    label {
-      font: 1em/1.2 $gym-font-stack;
-      color: $gym-black;
-      letter-spacing: 0.03em;
-      word-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    input {
-      font: 1em/1 $gym-text-font-stack;
-      width: 100%;
-      padding-top: 0.6em;
-      padding-bottom: 0.6em;
-      border: 0;
-      border-bottom: 0.2em solid $gym-orange;
-      margin-top: 0.4em;
-      margin-bottom: 0.4em;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      box-shadow: none;
-      background: none;
-    }
-  }
-}
-
-body {
-  ul.list-input,
-  ol.list-input,
-  &.login ul.list-input,
-  &.login ol.list-input,
-  &.register ul.list-input,
-  &.register ol.list-input,
-  .login form,
-  .register form,
-  .passwordreset form,
-  #forgot-password-modal #password-reset form {
-    .field.is-focused {
-      color: $gym-orange;
-
-      input,
-      label,
-      span,
-      span.tip,
-      .tip {
-        color: $gym-orange;
-      }
-
-      input:focus {
-        outline-color: $gym-orange;
-      }
-    }
-  }
-}
-
-
-/* --- Update dashboard course text color --- */
-
-#dashboard-main.course-content .my-courses .course-item h1,
-.my-courses .course-item header p {
-  color: $gym-white;
 }
 
 /* --- Course Resources (Syllabus & Chapter Raw HTML blocks) --- */
@@ -1497,27 +730,6 @@ body {
 }
 
 /* ---
-https://github.com/gymnasium/tracker/issues/129
---- */
-
-#content .course-tabs a {
-  font-family: $gym-font-stack;
-  color: currentColor !important;
-}
-
-#content .course-tabs a b {
-  color: currentColor !important;
-  border-bottom: 1px solid currentColor !important;
-}
-
-#content .course-tabs .active b,
-#content .course-tabs a:hover b,
-#content .course-tabs a:focus b {
-  color: currentColor !important;
-  border-bottom: 2px solid currentColor !important;
-}
-
-/* ---
 https://github.com/gymnasium/tracker/issues/81
 --- */
 
@@ -1534,20 +746,6 @@ https://github.com/gymnasium/tracker/issues/81
     display: block;
     width: 100%;
     padding-bottom: 2em;
-    border-top: 1px dashed $gym-gray;
-  }
-
-}
-
-/* dashboard / update single-column layout style */
-
-@include breakpoint(medium, max) {
-
-  #dashboard-main #my-courses {
-    border-right: 0;
-  }
-
-  #dashboard-main .profile-sidebar {
     border-top: 1px dashed $gym-gray;
   }
 
@@ -1581,47 +779,7 @@ https://github.com/gymnasium/tracker/issues/86
 https://github.com/gymnasium/tracker/issues/85
 --- */
 
-/* update (text) link style */
 
-main p > a:not([class]),
-main li:not([class]) > a:not([class]),
-.white-panel p > a:not(.btn),
-.white-panel li:not([class]) > a:not(.btn),
-.course-menu a:not(.btn),
-main label a:not([class]),
-.login-form a.forgot-password {
-  line-height: inherit;
-  color: currentColor !important;
-  text-decoration: none;
-  padding-bottom: 0.125rem;
-  border-bottom: 1px solid currentColor !important;
-}
-
-main p > a:not([class]):hover,
-main p > a:not([class]):focus,
-main p > a:not([class]):active,
-main li:not([class]) > a:not([class]):hover,
-main li:not([class]) > a:not([class]):focus,
-main li:not([class]) > a:not([class]):active,
-.white-panel p > a:not(.btn):hover,
-.white-panel p > a:not(.btn):focus,
-.white-panel p > a:not(.btn):active,
-.white-panel li:not([class]) > a:not(.btn):hover,
-.white-panel li:not([class]) > a:not(.btn):focus,
-.white-panel li:not([class]) > a:not(.btn):active,
-.course-menu a:not(.btn):hover,
-.course-menu a:not(.btn):focus,
-.course-menu a:not(.btn):active,
-main label a:not([class]):hover,
-main label a:not([class]):focus,
-main label a:not([class]):active,
-.login-form a.forgot-password:hover,
-.login-form a.forgot-password:focus,
-.login-form a.forgot-password:active {
-  text-decoration: none;
-  border-bottom-width: 2px !important;
-  margin-bottom: -0.125rem;
-}
 
 /*
 https://github.com/gymnasium/tracker/issues/143
@@ -1639,6 +797,11 @@ https://github.com/gymnasium/tracker/issues/143
   .problem-progress {
     font: bold 1em $gym-text-font-stack;
     margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    word-spacing: 0.02em;
+    color: #222;
+    display: inline-block;
   }
 
   .problem-progress + * + main .message:not([hidden]),
@@ -1696,79 +859,12 @@ https://github.com/gymnasium/tracker/issues/143
   }
 }
 
-/*
-https://github.com/gymnasium/tracker/issues/127
-*/
-
-/* update password reset form style */
-
-.login-register,
-.login-register .form-type {
-  min-width: none;
-}
-
-#password-reset {
-  padding: 1.8em 1.8em 2.2em;
-  border: 1px solid $gym-gray;
-}
-
-#password-reset > br {
-  display: none;
-}
-
-#password-reset h2.section-title {
-  font: 900 2.571428571428571em/1 $gym-font-stack;
-  color: $gym-dark-gray-2;
-  letter-spacing: 0.01em;
-  word-spacing: 0.04em;
-  margin-top: 0;
-}
-
-#password-reset h2.lines {
-  text-align: left;
-}
-
-#password-reset h2.lines::after {
-  display: none;
-}
-
-#password-reset h2.lines .text {
-  position: static;
-  top: 0;
-  z-index: auto;
-  font-size: inherit;
-  background: none;
-  padding: 0;
-}
-
-#password-reset .paragon__invalid-feedback {
-  font-size: unset;
-}
-
-#password-reset .action-primary {
-  margin-top: 0;
-}
-
-#password-reset .action-primary {
-  width: 100%;
-  font: bold 1.5em/1 $gym-font-stack;
-  background-color: $gym-orange;
-  padding: 1em;
-  border-radius: .125em;
-}
-
-#password-reset .action-primary:hover,
-#password-reset .action-primary:focus,
-#password-reset .action-primary:active {
-  background-color: $gym-light-gray;
-}
-
 /* update font-family for catalog navigation */
 
-#gym-catalog .course-menu a:focus,
-#gym-catalog .course-menu a:active {
-  font-family: $gym-font-stack;
-}
+// #catalog .course-menu a:focus,
+// #catalog .course-menu a:active {
+//   font-family: $gym-font-stack;
+// }
 
 /* ---
 https://github.com/gymnasium/tracker/issues/84
@@ -1879,28 +975,7 @@ https://github.com/gymnasium/tracker/issues/47
   padding-left: 30px;
 }
 
-.course-navigation .button-chapter:only-of-type {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: text;
-}
 
-.course-navigation .button-chapter:only-of-type:focus {
-  outline: none;
-}
-
-.course-navigation .button-chapter:only-of-type .icon {
-  display: none;
-}
-
-.course-navigation .button-chapter:only-of-type .group-heading {
-  line-height: 1.25 !important;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-right: 14px;
-}
 
 /* ---
 https://github.com/gymnasium/tracker/issues/43
@@ -1991,10 +1066,6 @@ Footer CSS (migrated from footer.scss)
     line-height: 1.25;
     margin-top: 0;
     margin-bottom: 0;
-  }
-
-  .all-caps {
-    text-transform: uppercase;
   }
 
   .gym-brand {
@@ -2098,134 +1169,229 @@ Footer CSS (migrated from footer.scss)
   }
 }
 
-/* ---
-Discussion Forum Related
-TODO: migrate discussion CSS out of theme
---- */
+// Retired course announcement(s)
 
-#discussion-container {
+.message-banner {
 
-  // Add post button wrapper
-  .forum-actions {
-    margin-left: 10px;
+  .announcement {
+    color: $gym-black;
+    background-color: $gym-white;
+    border-bottom: 1px solid $gym-gray;
+    padding: 2rem 0;
 
-    // Add post button
-    button {
-      background-color: $gym-orange;
-      border: 1px solid $gym-orange;
-
-      &:active,
-      &:hover {
-        background-color: $gym-light-gray;
-        border: 1px solid $gym-light-gray;
-      }
-    }
-  }
-}
-
-#course-content {
-
-  font-size: 16px;
-
-  :link, :visited, :hover, :focus {
-    color: currentColor;
-  }
-
-  .btn-link {
-    font: inherit;
-    color: currentColor;
-  }
-}
-
-.forum-nav-thread.never-read .forum-nav-thread-link {
-  border-color: $gym-orange;
-
-  .icon {
-    color: $gym-orange;
-  }
-}
-
-#course-content {
-
-  .xmodule_HtmlModule {
-    *:not(h1, h2, h3, h4, h5, h6) {
-      font-family: $gym-text-font-stack;
-      font-size: 1em;
-      color: #222;
-    }
-
-    h1 {
-      font: 900 2.25em/1.2 $gym-font-stack;
-      letter-spacing: 0.04em;
-      word-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 0 !important;
-    }
-
-    h2 {
-      font: 900 1.8em/1.3 $gym-font-stack;
-      letter-spacing: 0.04em;
-      word-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    h3 {
-      font: 900 1.2em/1.3 $gym-font-stack;
-      letter-spacing: 0.04em;
-      word-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    h4 {
-      font: 900 1em/1.3 $gym-font-stack;
-      text-transform: none;
-    }
-
-    h5, h6 {
-      text-transform: none;
-    }
-
-    > * {
-      margin-top: 0;
-    }
-
-    * + * {
-      margin-top: 1rem;
+    p {
+      font-size: 1.15em;
+      line-height: inherit;
       margin-bottom: 0;
     }
+
+    @include breakpoint(large, min) {
+      .text-wrap:before {
+        content: "\a";
+        white-space: pre;
+      }
+    }
+
   }
 
-  .discussion-module .add_post_btn_container {
+}
+
+// Enrollment disabled
+
+.course-metabar .register.disabled {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.3225em;
+  color: $gym-black;
+  background-color: $gym-white;
+  padding: 1em;
+  border: 1px solid $gym-black;
+}
+
+@include breakpoint(medium, min) {
+
+  .course-metabar .register.disabled {
     position: relative;
-    top: -1.6em;
+    left: 5%;
+    margin: -0.25rem -3em 0;
   }
 
-  .add_post_btn_container .btn-link {
-    font-weight: bold;
+}
 
-    &:hover,
-    &:focus {
-      margin-bottom: 2px;
+@include breakpoint(large, min) {
+
+  .course-metabar .register.disabled {
+    left: 1em;
+  }
+
+}
+
+#failed-verification-banner {
+
+  * {
+    font-family: $gym-text-font-stack;
+  }
+
+  .title:first-child {
+    margin-top: 5px;
+  }
+
+  & .msg-content {
+    @include breakpoint(large, min) {
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 
-  .discussion-module {
-    button.discussion-show {
-      display: none;
-    }
+}
 
-    .discussion-module-title {
-      font-size: 1.4em;
-      font-weight: 900;
-    }
+// system-status-helper.html styles
 
-    .inline-discussion-topic, .forum-nav-thread-title, .thread-preview-body {
-      font-family: "Helvetica Neue", sans-serif;
-      font-size: 1em;
-    }
+aside.system-status {
 
-    .forum-nav-thread-title {
-      font-weight: bold;
+  & {
+    font-size: 16px;
+    padding: 1em;
+  }
+
+  p {
+    font: 1em/1.35 $gym-text-font-stack;
+    color: $gym-black;
+    margin-bottom: 0;
+  }
+
+// Ukraine Relief related theme
+
+ & {
+    background-color: $gym-light-page-background;
+    border-bottom: 1px solid $gym-black;
+  }
+
+ p:before {
+    content: "";
+    display: inline-block;
+    width: 4.6ex;
+    vertical-align: -0.5ex;
+    background-color: #fc0;
+    padding-bottom: 1.15ex;
+    border: 1px solid #06c;
+    border-top-width: 1.15ex;
+    margin-right: 1.15ex;
+  }
+
+}
+
+// Exclude sitewide banner from home page
+
+.gymnasium-home #system-status {
+  display: none;
+}
+
+// Courseware Raw HTML styling
+
+.raw-html .content {
+  padding: 0;
+
+  article,
+  section {
+    padding-top: 1.6rem;
+    margin-top: 1rem;
+  }
+
+  h1 {
+    font: 900 2em/1.2 $gym-font-stack;
+    color: $gym-dark-gray-2;
+    text-transform: uppercase;
+    letter-spacing: .03rem;
+    margin-bottom: .6em !important;
+  }
+
+  h2 {
+    font: 900 1.6em/1.2 $gym-font-stack;
+    color: $gym-dark-gray-2;
+    text-transform: uppercase;
+    letter-spacing: .03rem;
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+  }
+
+  h3 {
+    font: 900 1.2em/1.2 $gym-font-stack;
+    color: $gym-dark-gray-2;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  > h2,
+  nav > h2,
+  section[id] ul > li {
+    margin-top: 2.4rem;
+  }
+
+  ol,
+  ul,
+  li {
+    margin-bottom: 0 !important;
+  }
+
+  ol + p,
+  ul + p {
+    margin-top: 2.4rem;
+  }
+
+  ol > li {
+    margin-top: 1.6rem;
+  }
+
+  li li {
+    margin-top: 1rem;
+  }
+
+  li,
+  p {
+    font: normal 1.15em/1.5 $gym-text-font-stack;
+    margin-top: 1rem;
+  }
+
+  p {
+    color: $gym-dark-gray-2;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  li li,
+  li p {
+    font-size: 1em;
+  }
+
+}
+
+// back to top link
+.to-top-link {
+  margin-top: 1.2em;
+
+  b {
+    color: $gym-dark-gray;
+
+    &::before {
+      display: inline-block;
+      content: "↑";
+      font-family: monospace, monospace;
+      vertical-align: top;
+      margin-right: .25em;
     }
   }
 }
+
+// Jobs module
+@import "components/jobs";
+
+// Import migrated fixes
+@import "migrated-fixes";
+
+@import "bootstrap";
+
+// Import gym-snaps support
+@import "components/gym-snaps";

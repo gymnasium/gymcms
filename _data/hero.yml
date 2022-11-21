@@ -1,3 +1,36 @@
-current_promo: hero-bbd-2021.html
-auth_promo: hero-bbd-2021.html
-live_coding: false
+current_promo: articles/advocating-for-accessibility.html
+auth_promo: articles/advocating-for-accessibility.html
+
+# Live Stream
+# Set true/false (lowercase).
+# Note: true overrides current/auth promo heros
+live_stream: false
+
+# Source
+# Set twitch/youtube (lowercase)
+# Note: As a fallback, the current promo displays if a typo/erroneous/null source value is set
+embed_source: "youtube"
+
+# Content
+# Update per live stream, if needed
+title: "Live Stream"
+short_description: "Working within Spatial."
+byline: "The Gymnasium Team"
+
+# twitch
+twitch_channel: "andrewpmiller"
+
+# youtube
+youtube_video_ID: "2vbJPsNNwDM"
+
+# Aspect Ratio 16:19
+embed_width: "854"
+embed_height: "400"
+
+# Options
+embed_allowfullscreen: true
+embed_auto_play: false
+embed_fetchpriority: "high"
+embed_loading: "eager"
+embed_frameborder: "0"
+embed_scrolling: "no"

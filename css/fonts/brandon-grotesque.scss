@@ -1,0 +1,91 @@
+---
+---
+// Regular
+@font-face {
+  font-family: brandon-grotesque;
+  src:
+    local("Brandon Grotesque Regular"),
+    local("BrandonGrotesque-Regular"),
+    url("{{ site.url }}/fonts/brandon_reg-webfont.woff2")
+      format("woff2"),
+    url("{{ site.url }}/fonts/brandon_reg-webfont.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+// Regular Italic
+@font-face {
+  font-family: brandon-grotesque;
+  src:
+    local("Brandon Grotesque Regular Italic"),
+    local("BrandonGrotesque-RegularItalic"),
+    url("{{ site.url }}/fonts/brandon_reg_it-webfont.woff2")
+      format("woff2"),
+    url("{{ site.url }}/fonts/brandon_reg_it-webfont.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: normal;
+  font-display: swap;
+}
+
+// Bold
+@font-face {
+  font-family: brandon-grotesque;
+  src:
+    local("Brandon Grotesque Bold"),
+    local("BrandonGrotesque-Bold"),
+    url("{{ site.url }}/fonts/brandon_bld-webfont.woff2")
+      format("woff2"),
+    url("{{ site.url }}/fonts/brandon_bld-webfont.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+
+// Bold Italic
+@font-face {
+  font-family: brandon-grotesque;
+  src:
+    local("Brandon Grotesque Bold Italic"),
+    local("BrandonGrotesque-BoldItalic"),
+    url("{{ site.url }}/fonts/brandon_bld_it-webfont.woff2")
+      format("woff2"),
+    url("{{ site.url }}/fonts/brandon_bld_it-webfont.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
+}
+
+// Black
+@font-face {
+  font-family: brandon-grotesque;
+  src:
+    local("Brandon Grotesque Black"),
+    local("BrandonGrotesque-Black"),
+    url("{{ site.url }}/fonts/brandon_blk-webfont.woff2")
+      format("woff2"),
+    url("{{ site.url }}/fonts/brandon_blk-webfont.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+// Black Italic
+@font-face {
+  font-family: brandon-grotesque;
+  src:
+    local("Brandon Grotesque Black Italic"),
+    local("BrandonGrotesque-BlackItalic"),
+    url("{{ site.url }}/fonts/brandon_blk_it-webfont.woff2")
+      format("woff2"),
+    url("{{ site.url }}/fonts/brandon_blk_it-webfont.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+}

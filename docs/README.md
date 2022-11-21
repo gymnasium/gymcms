@@ -30,7 +30,7 @@ url: /courses/take5/GYM-5001/                # Only change the course ID!
 poster_art: /img/take5/posters/gym-5001.jpg # Path to poster image (may be deprecated)
 live: true                                  # Only set to live when ready to publish!
 instructor: "Jeremy Osborn"                 # MUST be quoted
-topic: "Web Design & Development"           # MUST be quoted
+topic: "Design & Development"           # MUST be quoted
 video_ID: zRNUPU2dujU                       # YouTube video ID
 video_duration: "4:59"                      # Must be quoted
 featured: true                              # Toggle for display in catalog and hero

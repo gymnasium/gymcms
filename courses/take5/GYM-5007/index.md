@@ -14,7 +14,7 @@ Questions are the heart of any customer interview, so writing good questions can
 
 Good questions follow three simple rules — open-ended, meaning they can’t be answered with just a yes or no; they’re focused on past behaviors, especially those related to using the tool; and they’re relevant to the information that you need to know so that you can draw successful conclusions. Most importantly, when creating questions, you can’t just ask participants directly what they think. Participants tend to speculate about their rationale and draw conclusions without analysis.
 
-A bad question would be to ask, "Why don’t you use the **Share for Review** feature?" Because they don’t use the feature, it’s unlikely they really thought about why in any depth. Remember, you’re looking for behaviors, *not* opinions. Let’s take a look at a good question.
+A bad question would be to ask, “Why don’t you use the **Share for Review** feature?” Because they don’t use the feature, it’s unlikely they really thought about why in any depth. Remember, you’re looking for behaviors, *not* opinions. Let’s take a look at a good question.
 
 This question that asked about the specific behavior that would potentially lead someone to use the Share for Review feature without using those exact words. Asking this type of open-ended question invites users to explain what they do, not what they think.
 
@@ -34,7 +34,7 @@ Here’s an example:
 
 **Moderator:** Thank you so much.
 
-In this video, we heard the participant say, "Oh, we never use the **Share for Feedback** feature because George told us not to."
+In this video, we heard the participant say, “Oh, we never use the **Share for Feedback** feature because George told us not to.”
 
 Getting into that specific detail about George’s request isn’t covered by your question list. But it’s completely relevant information that you need because you didn’t even know it was happening. By following up, we now understand the problem at a deeper level and can account for this concern in our updates.
 
