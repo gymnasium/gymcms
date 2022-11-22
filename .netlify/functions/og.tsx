@@ -1,5 +1,5 @@
 import React from "https://esm.sh/react@18.2.0";
-import { ImageResponse } from "https://deno.land/x/og_edge@0.0.2/mod.ts";
+import { ImportMeta, ImageResponse } from "https://deno.land/x/og_edge@0.0.2/mod.ts";
 
 const font = fetch(new URL('../../fonts/brandon_reg-webfont.woff', import.meta.url)).then(
   (res) => res.arrayBuffer(),
@@ -42,6 +42,7 @@ export default async function handler(req: Request) {
             alignSelf: 'center',
             justifyContent: 'center',
             width: '40%',
+            background: '#2C9959',
           }}
         >
           <img src="https://thegymcms.com/img/course-artwork/svg/gym-001.svg" alt="" width="200" />
