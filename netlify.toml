@@ -22,6 +22,13 @@
     Access-Control-Allow-Origin = "*"
     Cache-Control = "public, max-age=31536000, immutable"
 
+[build]
+edge_functions = ".netlify/functions"
+
+[[edge_functions]]
+  function = "og"
+  path = "/og-image"
+
 # dev branch build
 # https://dev--gymcms.netlify.com/
 [context.dev]
