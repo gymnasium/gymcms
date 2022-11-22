@@ -46,7 +46,7 @@ But again, check out our **Resources** section for links to articles on how to h
 
 [1]: https://codepen.io/josborn/pen/ExaLgod
 [2]: https://codepen.io/josborn/pen/eYmrzMg
-[3]: https://seesparkbox.com/foundry/naming_css_stuff_is_really_hard
+[3]: https://sparkbox.com/foundry/naming_css_stuff_is_really_hard
 [4]: https://caniuse.com/#feat=css-variables
 [5]: https://jhildenbiddle.github.io/css-vars-ponyfill/#/
 [6]: https://thegymnasium.com/courses/take5
