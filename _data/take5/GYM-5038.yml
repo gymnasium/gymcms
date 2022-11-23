@@ -16,8 +16,8 @@ short_description: "Learn how to make the headings and lists in your HTML docume
 related_content:
 - label: "Accessibility Tutorials: Headings"
   url: "https://www.w3.org/WAI/tutorials/page-structure/headings/"
-- label: "HTML5 Accessibility: Headings"
-  url: "https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/headings.html"
+- label: "Accessible Heading Structure"
+  url: "https://www.a11yproject.com/posts/how-to-accessible-heading-structure/"
 - label: "Lists in HTML"
   url: "https://accessibility.psu.edu/listshtml/"
 skill_level: "Beginner"

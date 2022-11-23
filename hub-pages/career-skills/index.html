@@ -2,7 +2,8 @@
 layout: wrapper-full-default
 permalink: /career-skills/
 ---
-<link rel="stylesheet" href="{{ site.url }}/css/hub-pages.css">
+<link rel="stylesheet" href="{{ site.url }}/css/hub-pages.css?{{ site.time | date:'%s' }}" fetchpriority="high">
+
 <main id="main" role="main">
   <section id="about">
     <div class="banner-content container-fluid">
@@ -177,7 +178,7 @@ permalink: /career-skills/
         <a href="#main"><b>Back to top</b></a>
       </div>
     </section>
-  
+
     <section class="section" id="tutorials">
       <div class="section-content">
         <header>
@@ -256,7 +257,7 @@ permalink: /career-skills/
         <a href="#main"><b>Back to top</b></a>
       </div>
     </section>
-  
+
     <section class="section" id="articles">
       <div class="section-content">
         <header>
@@ -301,7 +302,7 @@ permalink: /career-skills/
         </header>
         {%- comment -%} Get our jobs module {%- endcomment -%}
         {%- include /modules/jobs.html -%}
-    
+
       </div><!-- .section-content -->
       <div class="to-top-link">
         <a href="#main"><b>Back to top</b></a>
