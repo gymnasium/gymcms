@@ -1,8 +1,9 @@
 import React from "https://esm.sh/react@18.2.0";
-// import { ImageResponse } from "https://deno.land/x/og_edge@0.0.4/mod.ts";
-const { ImageResponse } = await import("https://deno.land/x/og_edge@0.0.4/mod.ts");
+import { ImageResponse } from "https://deno.land/x/og_edge@0.0.4/mod.ts";
 
 const brandonReg = new URL('../../fonts/brandon_reg-webfont.woff', import.meta.url);
+
+console.log('brandonReg: ', brandonReg);
 
 const font = fetch(brandonReg).then(
   (res) => res.arrayBuffer(),
