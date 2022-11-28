@@ -13,6 +13,7 @@ export default async function handler(req: Request) {
   const url = new URL(req.url);
   const params = new URLSearchParams(url.search);
   const type = params.get("type") ?? 'default';
+  const color = params.get('color') ?? '222';
   const title = params.get("title") ?? "Welcome to Gymnasium";
   const courseNum = params.get("courseNum") ?? "000";
   const pubDate = params.get("pubDate") ?? new Date().toISOString();
@@ -28,7 +29,7 @@ export default async function handler(req: Request) {
 
   const fullUrl = 'https://thegymcms.com' + imgPath + courseNum + ext;
 
-  let WRAPPER_CONFIG = {
+  let CONFIG_WRAPPER = {
     height: '100%',
     width: '100%',
     display: 'flex',
@@ -42,7 +43,8 @@ export default async function handler(req: Request) {
     fontSize: 40,
     fontWeight: '900',
     fontFamily: 'brandon-grotesque',
-    position: 'relative'
+    position: 'relative',
+    zIndex: 1,
   }
 
   let CONFIG_IMG = {
@@ -52,40 +54,50 @@ export default async function handler(req: Request) {
     alignSelf: 'center',
     justifyContent: 'center',
     height: '100%',
-    width: '320px',
-    background: '#2C9959',
+    width: '100%',
+    backgroundColor: '#' + color,
     backgroundImage: 'url(' + fullUrl + ')',
+    backgroundOrigin: '0 0',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'initial',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: 2,
+  }
+
+  let CONFIG_TEXT = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    order: 2,
+    flexGrow: 1,
+    flexShrink: 0,
+    padding: '2rem',
+    position: 'absolute',
+    left: '320px',
+    top: 0,
+    backgroundColor: '#' + color,
+    width: '880px',
+    height: '100%',
+    zIndex: 3,
   }
 
   // Generate the open graph image
   return new ImageResponse(
     (
-      <div
-        style={WRAPPER_CONFIG}
-      >
-        <section
-          style={CONFIG_IMG}
-        >
-        </section>
-        <section
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            alignSelf: 'center',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            order: 2,
-            flexGrow: 1,
-            flexShrink: 0,
-          }}
-        >
+      <div style={CONFIG_WRAPPER}>
+        <figure style={CONFIG_IMG}>
+        </figure>
+        <section style={CONFIG_TEXT}>
           <img src="https://thegymcms.com/img/brand/svg/gymnasium-logo-white.svg" width="300" />
           <h1>{title}</h1>
           <div>{pubDate}</div>
           <div style={{color: '#ff5f14'}}>thegymnasium.com</div>
         </section>
-        
       </div>
     ),
     {
