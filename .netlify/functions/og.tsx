@@ -12,42 +12,60 @@ export default async function handler(req: Request) {
   // Get the query parameters from the request
   const url = new URL(req.url);
   const params = new URLSearchParams(url.search);
+  const type = params.get("type") ?? 'default';
   const title = params.get("title") ?? "Welcome to Gymnasium";
+  const courseNum = params.get("courseNum") ?? "000";
   const pubDate = params.get("pubDate") ?? new Date().toISOString();
+  let imgPath;
+  let ext;
+  if (type === 'take5') {
+    imgPath = '/img/take5/posters/gym-'
+    ext = '.jpg'
+  } else {
+    imgPath = '/img/course-artwork/svg/gym-'
+    ext = '.svg'
+  }
+
+  const fullUrl = 'https://thegymcms.com' + imgPath + courseNum + ext;
+
+  let WRAPPER_CONFIG = {
+    height: '100%',
+    width: '100%',
+    display: 'flex',
+    flexWrap: 'nowrap',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignContent: 'stretch',
+    alignItems: 'flex-start',
+    backgroundColor: '#222',
+    color: '#fff',
+    fontSize: 40,
+    fontWeight: '900',
+    fontFamily: 'brandon-grotesque',
+    position: 'relative'
+  }
+
+  let CONFIG_IMG = {
+    order: 1,
+    flexGrow: 0,
+    flexShrink: 0,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    height: '100%',
+    width: '320px',
+    background: '#2C9959',
+    backgroundImage: 'url(' + fullUrl + ')',
+  }
+
   // Generate the open graph image
   return new ImageResponse(
     (
       <div
-        style={{
-          height: '100%',
-          width: '100%',
-          display: 'flex',
-          flexWrap: 'nowrap',
-          flexDirection: 'row',
-          justifyContent: 'flex-start',
-          alignContent: 'stretch',
-          alignItems: 'flex-start',
-          backgroundColor: '#222',
-          color: '#fff',
-          fontSize: 40,
-          fontWeight: '900',
-          fontFamily: 'brandon-grotesque',
-          padding: '1rem',
-          position: 'relative'
-        }}
+        style={WRAPPER_CONFIG}
       >
         <section
-          style={{
-            order: 1,
-            flexGrow: 1,
-            flexShrink: 0,
-            alignSelf: 'center',
-            justifyContent: 'center',
-            width: '40%',
-            background: '#2C9959',
-          }}
+          style={CONFIG_IMG}
         >
-          <img src="https://thegymcms.com/img/course-artwork/svg/gym-001.svg" alt="" width="200" />
         </section>
         <section
           style={{
