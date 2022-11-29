@@ -1,5 +1,6 @@
-import React from "https://esm.sh/react@18.2.0";
-import { ImageResponse } from "https://deno.land/x/og_edge@0.0.4/mod.ts";
+import React from 'https://esm.sh/react@18.2.0';
+import { ImageResponse } from 'https://deno.land/x/og_edge@0.0.4/mod.ts';
+import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
 
 const brandonReg = new URL('https://thegymcms.com/fonts/brandon_reg-webfont.woff', import.meta.url);
 
@@ -12,20 +13,34 @@ export default async function handler(req: Request) {
   // Get the query parameters from the request
   const url = new URL(req.url);
   const params = new URLSearchParams(url.search);
-  const type = params.get("type") ?? 'default';
+  const type = params.get('type') ?? 'default';
   const color = params.get('color') ?? '222';
-  const title = params.get("title") ?? "Welcome to Gymnasium";
-  const courseNum = params.get("courseNum") ?? "000";
-  const pubDate = params.get("pubDate") ?? new Date().toISOString();
+  const title = params.get('title') ?? 'Welcome to Gymnasium';
+  const courseNum = params.get('courseNum') ?? '000';
+  const pubDate = params.get('pubDate') ?? new Date().toISOString();
   let imgPath;
   let ext;
+  let metaPath;
   if (type === 'take5') {
-    imgPath = '/img/take5/posters/gym-'
-    ext = '.jpg'
+    imgPath = '/img/take5/posters/gym-';
+    ext = '.jpg';
+    metaPath = '/courses/take5/gym-5001/meta/index.html';
   } else {
-    imgPath = '/img/course-artwork/svg/gym-'
-    ext = '.svg'
+    imgPath = '/img/course-artwork/svg/gym-';
+    ext = '.svg';
+    metaPath = false;
   }
+
+  async function loadMeta() {
+    const resp = await fetch('https://thegymcms.com' + metaPath);
+    const html = await resp.text();
+    const parser = new DOMParser();
+    const htmlDoc = parser.parseFromString(html, 'text/html');
+    const metaDesc = htmlDoc.querySelector('meta[property="og:description"]').getAttribute('content');
+    console.log('og description: ', metaDesc);
+  }
+
+  loadMeta();
 
   const fullUrl = 'https://thegymcms.com' + imgPath + courseNum + ext;
 
@@ -59,7 +74,7 @@ export default async function handler(req: Request) {
     backgroundImage: 'url(' + fullUrl + ')',
     backgroundOrigin: '0 0',
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'initial',
+    backgroundSize: 'cover',
     position: 'absolute',
     top: 0,
     left: 0,
@@ -93,7 +108,7 @@ export default async function handler(req: Request) {
         <figure style={CONFIG_IMG}>
         </figure>
         <section style={CONFIG_TEXT}>
-          <img src="https://thegymcms.com/img/brand/svg/gymnasium-logo-white.svg" width="300" />
+          <img src='https://thegymcms.com/img/brand/svg/gymnasium-logo-white.svg' width='300' />
           <h1>{title}</h1>
           <div>{pubDate}</div>
           <div style={{color: '#ff5f14'}}>thegymnasium.com</div>
