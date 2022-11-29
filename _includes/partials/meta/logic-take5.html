@@ -5,6 +5,6 @@ Set up meta tags for a Take 5 meta include
 {%- assign og_description = course.short_description -%}
 {%- assign og_title = course.title -%}
 {%- assign og_url = course.title | slugify | prepend: "/courses/take5/" -%}
-{%- assign page_title = "Take 5 | Gymnasium" -%}
+{%- assign page_title =  course.title | append: " | Gymnasium" -%}
 {%- assign og_art = course.course_ID | downcase | append: "-og.png" | prepend: "/img/take5/og/" -%}
 {%- assign og_img_alt = course.title | prepend: "Video poster for tutorial titled " -%}
