@@ -1,6 +1,10 @@
 import React from 'https://esm.sh/react@18.2.0';
 import { ImageResponse } from 'https://deno.land/x/og_edge@0.0.4/mod.ts';
-import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
+import { DOMParser } from 'https://deno.land/x/deno_dom/deno-dom-wasm.ts';
+
+const domain = window.Location[0];
+
+console.log(domain);
 
 const brandonReg = new URL('https://thegymcms.com/fonts/brandon_reg-webfont.woff', import.meta.url);
 
@@ -15,16 +19,16 @@ export default async function handler(req: Request) {
   const params = new URLSearchParams(url.search);
   const type = params.get('type') ?? 'default';
   const color = params.get('color') ?? '222';
-  const title = params.get('title') ?? 'Welcome to Gymnasium';
   const courseNum = params.get('courseNum') ?? '000';
   const pubDate = params.get('pubDate') ?? new Date().toISOString();
   let imgPath;
   let ext;
   let metaPath;
+  let metaTitle;
   if (type === 'take5') {
     imgPath = '/img/take5/posters/gym-';
     ext = '.jpg';
-    metaPath = '/courses/take5/gym-5001/meta/index.html';
+    metaPath = '/courses/take5/gym-' + courseNum + '/meta/index.html';
   } else {
     imgPath = '/img/course-artwork/svg/gym-';
     ext = '.svg';
@@ -32,15 +36,15 @@ export default async function handler(req: Request) {
   }
 
   async function loadMeta() {
-    const resp = await fetch('https://thegymcms.com' + metaPath);
+    const resp = await fetch('http://localhost:8888' + metaPath);
     const html = await resp.text();
     const parser = new DOMParser();
     const htmlDoc = parser.parseFromString(html, 'text/html');
-    const metaDesc = htmlDoc.querySelector('meta[property="og:description"]').getAttribute('content');
-    console.log('og description: ', metaDesc);
+    metaTitle = htmlDoc.querySelector('[name="og:title"]').getAttribute('content');
+    return metaTitle;
   }
 
-  loadMeta();
+  let title = await loadMeta();
 
   const fullUrl = 'https://thegymcms.com' + imgPath + courseNum + ext;
 
