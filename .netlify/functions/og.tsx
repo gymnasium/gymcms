@@ -8,6 +8,15 @@ const font = fetch(brandonReg).then(
   (res) => res.arrayBuffer(),
 );
 
+async function loadMetaTitle(url: string) {
+  const resp = await fetch(url);
+  const html = await resp.text();
+  const parser = new DOMParser();
+  const htmlDoc = parser.parseFromString(html, 'text/html');
+  const metaTitle = htmlDoc.querySelector('[property="og:title"]').getAttribute('content');
+  return metaTitle;
+}
+
 export default async function handler(req: Request) {
   const fontData = await font;
   // Get the query parameters from the request
@@ -15,40 +24,28 @@ export default async function handler(req: Request) {
   const params = new URLSearchParams(url.search);
   const color = params.get('color') ?? '222';
   const courseNum = params.get('courseNum') ?? 0;
+  const offset = params.get('offset') ?? 0;
   const pubDate = params.get('pubDate') ?? new Date().toISOString();
-  let imgPath;
-  let metaPath;
-  let metaTitle;
-  let courseType;
+  let imgPath: any;
+  let metaPath: any;
+  let courseType: any;
 
   if (courseNum > 0) {
     if (courseNum < 100) {
       courseType = 'gym-shorts';
+      imgPath = `/img/course-artwork/svg/gym-${courseNum}.svg`;
     } else if (courseNum >= 100 && courseNum < 700) {
       courseType = 'full';
+      imgPath = `/img/course-artwork/svg/gym-${courseNum}.svg`;
     } else if (courseNum >= 5000) {
       courseType = 'take5';
+      imgPath = `/img/take5/posters/gym-${courseNum}.jpg`;
     }
 
     metaPath = `/courses/${courseType}/gym-${courseNum}/meta/index.html`;
-
-    if (courseType === 'take5') {
-      imgPath = `/img/take5/posters/gym-${courseNum}.jpg`;
-    } else {
-      imgPath = `/img/course-artwork/svg/gym-${courseNum}.svg`;
-    }
   }
 
-  async function loadMeta() {
-    const resp = await fetch('http://localhost:8888' + metaPath);
-    const html = await resp.text();
-    const parser = new DOMParser();
-    const htmlDoc = parser.parseFromString(html, 'text/html');
-    metaTitle = htmlDoc.querySelector('[property="og:title"]').getAttribute('content');
-    return metaTitle;
-  }
-
-  let title = await loadMeta();
+  let title = await loadMetaTitle(`http://localhost:8888${metaPath}`);
 
   const fullUrl = `https://thegymcms.com${imgPath}`;
 
@@ -78,11 +75,11 @@ export default async function handler(req: Request) {
     justifyContent: 'center',
     height: '100%',
     width: '100%',
-    backgroundColor: '#' + color,
-    backgroundImage: `url(${fullUrl})`,
-    backgroundOrigin: '0 0',
+    backgroundColor: `#${color}`,
+    background: `url(${fullUrl})`,
+    backgroundPosition: `${offset}px 0`,
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
+    // backgroundSize: 'auto',
     position: 'absolute',
     top: 0,
     left: 0,
