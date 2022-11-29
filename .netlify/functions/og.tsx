@@ -2,10 +2,6 @@ import React from 'https://esm.sh/react@18.2.0';
 import { ImageResponse } from 'https://deno.land/x/og_edge@0.0.4/mod.ts';
 import { DOMParser } from 'https://deno.land/x/deno_dom/deno-dom-wasm.ts';
 
-const domain = window.Location[0];
-
-console.log(domain);
-
 const brandonReg = new URL('https://thegymcms.com/fonts/brandon_reg-webfont.woff', import.meta.url);
 
 const font = fetch(brandonReg).then(
@@ -17,22 +13,30 @@ export default async function handler(req: Request) {
   // Get the query parameters from the request
   const url = new URL(req.url);
   const params = new URLSearchParams(url.search);
-  const type = params.get('type') ?? 'default';
   const color = params.get('color') ?? '222';
-  const courseNum = params.get('courseNum') ?? '000';
+  const courseNum = params.get('courseNum') ?? 0;
   const pubDate = params.get('pubDate') ?? new Date().toISOString();
   let imgPath;
-  let ext;
   let metaPath;
   let metaTitle;
-  if (type === 'take5') {
-    imgPath = '/img/take5/posters/gym-';
-    ext = '.jpg';
-    metaPath = '/courses/take5/gym-' + courseNum + '/meta/index.html';
-  } else {
-    imgPath = '/img/course-artwork/svg/gym-';
-    ext = '.svg';
-    metaPath = false;
+  let courseType;
+
+  if (courseNum > 0) {
+    if (courseNum < 100) {
+      courseType = 'gym-shorts';
+    } else if (courseNum >= 100 && courseNum < 700) {
+      courseType = 'full';
+    } else if (courseNum >= 5000) {
+      courseType = 'take5';
+    }
+
+    metaPath = `/courses/${courseType}/gym-${courseNum}/meta/index.html`;
+
+    if (courseType === 'take5') {
+      imgPath = `/img/take5/posters/gym-${courseNum}.jpg`;
+    } else {
+      imgPath = `/img/course-artwork/svg/gym-${courseNum}.svg`;
+    }
   }
 
   async function loadMeta() {
@@ -40,13 +44,13 @@ export default async function handler(req: Request) {
     const html = await resp.text();
     const parser = new DOMParser();
     const htmlDoc = parser.parseFromString(html, 'text/html');
-    metaTitle = htmlDoc.querySelector('[name="og:title"]').getAttribute('content');
+    metaTitle = htmlDoc.querySelector('[property="og:title"]').getAttribute('content');
     return metaTitle;
   }
 
   let title = await loadMeta();
 
-  const fullUrl = 'https://thegymcms.com' + imgPath + courseNum + ext;
+  const fullUrl = `https://thegymcms.com${imgPath}`;
 
   let CONFIG_WRAPPER = {
     height: '100%',
@@ -75,7 +79,7 @@ export default async function handler(req: Request) {
     height: '100%',
     width: '100%',
     backgroundColor: '#' + color,
-    backgroundImage: 'url(' + fullUrl + ')',
+    backgroundImage: `url(${fullUrl})`,
     backgroundOrigin: '0 0',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
