@@ -32,7 +32,9 @@ export default async function handler(req: Request) {
   let imgPath: any;
   let metaPath: any;
   let courseType: any;
+  let defaultTitle: string;
 
+  // If we have a course number, grab specific data
   if (courseNum) {
     if (courseNum < 100) {
       courseType = 'gym-shorts';
@@ -40,6 +42,9 @@ export default async function handler(req: Request) {
     } else if (courseNum >= 100 && courseNum < 700) {
       courseType = 'full';
       imgPath = `/img/course-artwork/svg/gym-${courseNum}.svg`;
+    } else if (courseNum >= 700 && courseNum < 800) {
+      courseType = 'workshops';
+      imgPath = null;
     } else if (courseNum >= 5000) {
       courseType = 'take5';
       imgPath = `/img/take5/posters/gym-${courseNum}.jpg`;
@@ -48,9 +53,16 @@ export default async function handler(req: Request) {
     metaPath = `/courses/${courseType}/gym-${courseNum}/meta/index.html`;
   }
 
-  let title = await loadMetaTitle(`${domain}${metaPath}`);
+  if (metaPath === undefined) {
+    defaultTitle = 'Welcome to Gymnasium';
+  } else {
+    defaultTitle = await loadMetaTitle(`${domain}${metaPath}`);
+  }
 
-  const fullUrl = `${domain}${imgPath}`;
+  // Allow override of title via url params
+  let title = params.get('title') ?? defaultTitle;
+
+  const imgUrl = `${domain}${imgPath}`;
 
   let CONFIG_WRAPPER = {
     height: '100%',
@@ -79,14 +91,18 @@ export default async function handler(req: Request) {
     height: '100%',
     width: '100%',
     backgroundColor: `#${color}`,
-    background: `url(${fullUrl})`,
-    backgroundPosition: `${offset}px 0`,
-    backgroundRepeat: 'no-repeat',
     // backgroundSize: 'auto',
     position: 'absolute',
     top: 0,
     left: 0,
     zIndex: 2,
+  }
+
+  // If we have an image, use these settings
+  if (!!imgPath) {
+    CONFIG_IMG['background'] = `url(${imgUrl})`;
+    CONFIG_IMG['backgroundPosition'] = `${offset}px 0`;
+    CONFIG_IMG['backgroundRepeat'] = 'no-repeat';
   }
 
   let CONFIG_TEXT = {
