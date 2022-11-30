@@ -2,7 +2,10 @@ import React from 'https://esm.sh/react@18.2.0';
 import { ImageResponse } from 'https://deno.land/x/og_edge@0.0.4/mod.ts';
 import { DOMParser } from 'https://deno.land/x/deno_dom/deno-dom-wasm.ts';
 
-const brandonReg = new URL('https://thegymcms.com/fonts/brandon_reg-webfont.woff', import.meta.url);
+// TODO: Change URL before release
+const domain = 'https://staging.thegymcms.com';
+
+const brandonReg = new URL(`${domain}/fonts/brandon_reg-webfont.woff`, import.meta.url);
 
 const font = fetch(brandonReg).then(
   (res) => res.arrayBuffer(),
@@ -23,14 +26,14 @@ export default async function handler(req: Request) {
   const url = new URL(req.url);
   const params = new URLSearchParams(url.search);
   const color = params.get('color') ?? '222';
-  const courseNum = params.get('courseNum') ?? 0;
+  const courseNum: any = params.get('courseNum') ?? false;
   const offset = params.get('offset') ?? 0;
   const pubDate = params.get('pubDate') ?? new Date().toISOString();
   let imgPath: any;
   let metaPath: any;
   let courseType: any;
 
-  if (courseNum > 0) {
+  if (courseNum) {
     if (courseNum < 100) {
       courseType = 'gym-shorts';
       imgPath = `/img/course-artwork/svg/gym-${courseNum}.svg`;
@@ -45,9 +48,9 @@ export default async function handler(req: Request) {
     metaPath = `/courses/${courseType}/gym-${courseNum}/meta/index.html`;
   }
 
-  let title = await loadMetaTitle(`http://localhost:8888${metaPath}`);
+  let title = await loadMetaTitle(`${domain}${metaPath}`);
 
-  const fullUrl = `https://thegymcms.com${imgPath}`;
+  const fullUrl = `${domain}${imgPath}`;
 
   let CONFIG_WRAPPER = {
     height: '100%',
