@@ -53,12 +53,12 @@
       font-size: 1.2em;
       line-height: 1;
       text-align: center;
-    
+
       &:hover {
         border: 1px solid $gym-button-background-hover;
         background-color: $gym-button-background-hover;
       }
-    
+
       &:active,
       &:focus {
         border: 1px solid $gym-button-background-active;
@@ -148,7 +148,7 @@
 
 .discussion-column {
   font-weight: 700;
-  
+
   margin-bottom: 20px;
   width: 100%;
   background: white;
@@ -156,7 +156,7 @@
   // border-radius: 2px;
   padding: 20px;
   width: 100%;
-  
+
 
   @include breakpoint(medium, min) {
     flex-grow: 1;
@@ -1929,4 +1929,10 @@ section.discussion::after {
 
 .fa-filter:before {
   content: "\f0b0";
+}
+
+// inline forum block
+
+.courseware .discussion-module {
+  display: block;
 }
