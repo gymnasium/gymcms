@@ -1935,7 +1935,13 @@ section.discussion::after {
   .discussion-module {
     display: block;
 
+    .inline-discussion-topic-title,
+    .forum-nav-thread-title {
+      font-weight: bold;
+    }
+
     // Hide forum hide/show option
+
     button.discussion-show {
       display: none;
     }
@@ -1974,7 +1980,7 @@ section.discussion::after {
 
   .wmd-prompt-dialog {
     background-color: $gym-white;
-    padding: 1.2rem;
+    padding: 2.2rem;
     border: 0.125em solid $gym-black;
     border-radius: 0.125em;
   }
