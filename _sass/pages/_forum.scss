@@ -1944,25 +1944,32 @@ section.discussion::after {
     display: none;
   }
 
+  .btn {
+    font: bold 1.2em/1 $gym-font-stack;
+
+    &:hover,
+    &:focus {
+      font: bold 1.2em/1 $gym-font-stack;
+  }
+
   button.btn-link,
   button.form-btn {
-    font: bold 1.2em/1 $gym-font-stack;
     color: $gym-white;
     background-color: $gym-blue;
     padding: 1rem 1.2rem;
+    border: 0 none;
     border-radius: 0.125em;
     margin: 1.2em 0;
 
     &:hover,
     &:focus {
-      font: bold 1.2em/1 $gym-font-stack;
       background-color: $gym-mid-gray !important;
     }
   }
 
   // Dialog/Modal (Add a link, photo, etc.)
   .wmd-prompt-background {
-    background-color: $gym-gray;
+    background-color: $gym-dark-gray;
   }
 
   .wmd-prompt-dialog {
