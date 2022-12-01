@@ -1957,8 +1957,8 @@ section.discussion::after {
     }
   }
 
-  button.btn-link,
-  button.form-btn
+  button.btn-link:not(button.action-button),
+  button.form-btn,
   form .btn-primary {
     color: $gym-white;
     background-color: $gym-blue;
@@ -1981,8 +1981,18 @@ section.discussion::after {
   .wmd-prompt-dialog {
     background-color: $gym-white;
     padding: 1.2rem;
-    border: 1px solid $gym-black;
+    border: 0.125em solid $gym-black;
     border-radius: 0.125em;
+  }
+
+  // Details
+
+  .forum-nav-thread-comments-count {
+    background-color: $gym-orange;
+
+    &:after {
+      border-right-color: $gym-orange;
+    }
   }
 
 }
