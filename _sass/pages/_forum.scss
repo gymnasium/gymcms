@@ -1933,8 +1933,11 @@ section.discussion::after {
 
 // inline forum block
 
-.courseware .discussion-module {
-  display: block;
+.courseware {
+
+  .discussion-module {
+    display: block;
+  }
 
   // Hide forum hide/show option
   button.discussion-show {
@@ -1963,7 +1966,7 @@ section.discussion::after {
   }
 
   .wmd-prompt-dialog {
-    background-color: #fff;
+    background-color: $gym-white;
     padding: 1.2rem;
     border: 1px solid $gym-black;
     border-radius: 0.125em;
