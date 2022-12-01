@@ -46,7 +46,7 @@
     &:not(.wmd-button):not(.btn-link) {
       border: 1px solid #f8971d;
       height: 34px;
-      background-color: $gym-orange;
+      background-color: $gym-blue;
       color: white;
       font-family: $gym-font-stack;
       font-weight: 700;
@@ -1941,10 +1941,11 @@ section.discussion::after {
     display: none;
   }
 
-  button.btn-link {
+  button.btn-link,
+  button.form-btn, {
     font: bold 1.2em/1 $gym-font-stack;
-    color: #fff;
-    background-color: #0077c8;
+    color: $gym-white;
+    background-color: $gym-blue;
     padding: 1rem 1.2rem;
     border-radius: 0.125em;
     margin: 1.2em 0;
@@ -1952,7 +1953,20 @@ section.discussion::after {
     &:hover,
     &:focus {
       font: bold 1.2em/1 $gym-font-stack;
-      background-color: #737373 !important;
+      background-color: $gym-mid-gray !important;
     }
   }
+
+  // Dialog/Modal (Add a link, photo, etc.)
+  .wmd-prompt-background {
+    background-color: $gym-gray;
+  }
+
+  .wmd-prompt-dialog {
+    background: #fff;
+    padding: 1.2rem;
+    border: 1px solid $gym-black;
+    border-radius: 0.125em;
+  }
+
 }

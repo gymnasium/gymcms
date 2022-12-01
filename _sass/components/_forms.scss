@@ -9,7 +9,7 @@ input, select, textarea {
   margin: 0 0 0.6em;
   padding: 1em;
   border: 1px solid #ccc;
-  border-bottom: 2px solid #f8971d;
+  border-bottom: 2px solid $gym-orange;
   font-size: 1em;
 
   &.error {
