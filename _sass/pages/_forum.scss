@@ -1954,8 +1954,7 @@ section.discussion::after {
 
    // TODO: Migrate to components: links_buttons.css
 
-  button.btn-link:not(button.action-button),
-  button.btn-link:not(button.all-topics),
+  button.btn-link:not(button.action-button):not(button.all-topics),
   button.form-btn,
   form .btn-primary {
     font: bold 1.2em/1 $gym-font-stack;
@@ -1984,6 +1983,11 @@ section.discussion::after {
     padding: 2.2rem;
     border: 0.125em solid $gym-black;
     border-radius: 0.125em;
+
+    .field a {
+      color: inherit;
+      text-decoration: underline;
+    }
   }
 
   // Details
