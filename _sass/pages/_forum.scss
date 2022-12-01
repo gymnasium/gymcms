@@ -1942,7 +1942,7 @@ section.discussion::after {
   }
 
   button.btn-link,
-  button.form-btn, {
+  button.form-btn {
     font: bold 1.2em/1 $gym-font-stack;
     color: $gym-white;
     background-color: $gym-blue;
@@ -1963,7 +1963,7 @@ section.discussion::after {
   }
 
   .wmd-prompt-dialog {
-    background: #fff;
+    background-color: #fff;
     padding: 1.2rem;
     border: 1px solid $gym-black;
     border-radius: 0.125em;
