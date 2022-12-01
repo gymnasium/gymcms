@@ -1948,11 +1948,11 @@ section.discussion::after {
     padding: 1rem 1.2rem;
     border-radius: 0.125em;
     margin: 1.2em 0;
-  }
 
-  &:hover,
-  &:focus {
-    font: bold 1.2em/1 $gym-font-stack;
-    background-color: #737373 !important;
+    &:hover,
+    &:focus {
+      font: bold 1.2em/1 $gym-font-stack;
+      background-color: #737373 !important;
+    }
   }
 }
