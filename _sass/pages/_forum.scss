@@ -1935,4 +1935,24 @@ section.discussion::after {
 
 .courseware .discussion-module {
   display: block;
+
+  // Hide forum hide/show option
+  button.discussion-show {
+    display: none;
+  }
+
+  button.btn-link {
+    font: bold 1.2em/1 $gym-font-stack;
+    color: #fff;
+    background-color: #0077c8;
+    padding: 1rem 1.2rem;
+    border-radius: 0.125em;
+    margin: 1.2em 0;
+  }
+
+  &:hover,
+  &:focus {
+    font: bold 1.2em/1 $gym-font-stack;
+    background-color: #737373 !important;
+  }
 }
