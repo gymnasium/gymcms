@@ -44,24 +44,21 @@
 
     // TODO: let's figure out a way to streamline this
     &:not(.wmd-button):not(.btn-link) {
-      border: 1px solid #f8971d;
       height: 34px;
-      background-color: $gym-orange;
+      background-color: $gym-blue;
       color: white;
       font-family: $gym-font-stack;
       font-weight: 700;
       font-size: 1.2em;
       line-height: 1;
       text-align: center;
-    
+
       &:hover {
-        border: 1px solid $gym-button-background-hover;
         background-color: $gym-button-background-hover;
       }
-    
+
       &:active,
       &:focus {
-        border: 1px solid $gym-button-background-active;
         background-color: $gym-button-background-active;
       }
     }
@@ -148,7 +145,7 @@
 
 .discussion-column {
   font-weight: 700;
-  
+
   margin-bottom: 20px;
   width: 100%;
   background: white;
@@ -156,7 +153,7 @@
   // border-radius: 2px;
   padding: 20px;
   width: 100%;
-  
+
 
   @include breakpoint(medium, min) {
     flex-grow: 1;
@@ -1929,4 +1926,74 @@ section.discussion::after {
 
 .fa-filter:before {
   content: "\f0b0";
+}
+
+// inline forum block
+
+.courseware {
+
+  .discussion-module {
+    display: block;
+
+    .inline-discussion-topic-title,
+    .forum-nav-thread-title {
+      font-weight: bold;
+    }
+
+    // Hide forum hide/show option
+
+    button.discussion-show {
+      display: none;
+    }
+  }
+
+}
+
+.courseware,
+.gym-forum {
+
+   // TODO: Migrate to components: links_buttons.css
+
+  button.btn-link:not(button.action-button):not(button.all-topics),
+  button.form-btn,
+  form .btn-primary {
+    font: bold 1.2em/1 $gym-font-stack;
+    color: $gym-white;
+    background-color: $gym-blue;
+    padding: 1rem 1.2rem;
+    border: 0;
+    border-radius: 0.125em;
+    margin: 1.2em 0;
+
+    &:hover,
+    &:focus {
+      font: bold 1.2em/1 $gym-font-stack;
+      background-color: $gym-mid-gray !important;
+    }
+  }
+
+  // Dialog/Modal (Add a link, photo, etc.)
+
+  .wmd-prompt-background {
+    background-color: $gym-dark-gray;
+  }
+
+  .wmd-prompt-dialog {
+    background-color: $gym-white;
+    padding: 2.2rem;
+    border: 0.125em solid $gym-black;
+    border-radius: 0.125em;
+
+    .field a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  // Details
+
+  .forum-nav-thread-comments-count {
+    font-weight: bold;
+  }
+
 }
