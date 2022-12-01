@@ -44,7 +44,6 @@
 
     // TODO: let's figure out a way to streamline this
     &:not(.wmd-button):not(.btn-link) {
-      border: 1px solid #f8971d;
       height: 34px;
       background-color: $gym-blue;
       color: white;
@@ -55,13 +54,11 @@
       text-align: center;
 
       &:hover {
-        border: 1px solid $gym-button-background-hover;
         background-color: $gym-button-background-hover;
       }
 
       &:active,
       &:focus {
-        border: 1px solid $gym-button-background-active;
         background-color: $gym-button-background-active;
       }
     }
@@ -1937,14 +1934,21 @@ section.discussion::after {
 
   .discussion-module {
     display: block;
+
+    // Hide forum hide/show option
+    button.discussion-show {
+      display: none;
+    }
   }
 
-  // Hide forum hide/show option
-  button.discussion-show {
-    display: none;
-  }
+}
 
-  .btn {
+.courseware,
+.gym-forum {
+
+   // TODO: Migrate to components: links_buttons.css
+
+  button.btn {
     font: bold 1.2em/1 $gym-font-stack;
 
     &:hover,
@@ -1954,11 +1958,11 @@ section.discussion::after {
   }
 
   button.btn-link,
-  button.form-btn {
+  button.form-btn
+  form .btn-primary {
     color: $gym-white;
     background-color: $gym-blue;
     padding: 1rem 1.2rem;
-    border: 0 none;
     border-radius: 0.125em;
     margin: 1.2em 0;
 
@@ -1969,6 +1973,7 @@ section.discussion::after {
   }
 
   // Dialog/Modal (Add a link, photo, etc.)
+
   .wmd-prompt-background {
     background-color: $gym-dark-gray;
   }
