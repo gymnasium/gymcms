@@ -2,12 +2,17 @@ import React from 'https://esm.sh/react@18.2.0';
 import { ImageResponse } from 'https://deno.land/x/og_edge@0.0.4/mod.ts';
 import { DOMParser } from 'https://deno.land/x/deno_dom/deno-dom-wasm.ts';
 
+// $gym-green: #2c9959;
+// $gym-magenta: #d73158;
+// $gym-purple: #764c9f;
+// $gym-teal: #5ca5a0;
+
 // TODO: Change URL before release
 const domain = 'https://staging.thegymcms.com';
 
-const brandonReg = new URL(`${domain}/fonts/brandon_reg-webfont.woff`, import.meta.url);
+const brandon = new URL(`../../fonts/brandon_bld-webfont.woff`, import.meta.url);
 
-const font = fetch(brandonReg).then(
+const font = fetch(brandon).then(
   (res) => res.arrayBuffer(),
 );
 
@@ -16,8 +21,17 @@ async function loadMetaTitle(url: string) {
   const html = await resp.text();
   const parser = new DOMParser();
   const htmlDoc = parser.parseFromString(html, 'text/html');
-  const metaTitle = htmlDoc.querySelector('[property="og:title"]').getAttribute('content');
-  return metaTitle;
+  const metaTitle = htmlDoc.querySelector('[property="og:title"]');
+  const ogTitle = metaTitle.getAttribute('content');
+  const topic = metaTitle.getAttribute('data-topic');
+  return {ogTitle, topic};
+}
+
+// Calculate aspect ratio of a resized image, assuming one knows the initial dimensions
+function aspectRatio(width:number, height:number, newWidth:number) {
+  let ratio = height/width;
+
+  return newWidth * ratio; 
 }
 
 export default async function handler(req: Request) {
@@ -25,14 +39,16 @@ export default async function handler(req: Request) {
   // Get the query parameters from the request
   const url = new URL(req.url);
   const params = new URLSearchParams(url.search);
-  const color = params.get('color') ?? '222';
+  const bgColor = params.get('bg') ?? '222';
+  const imgBgColor = params.get('imgbg') ?? '222';
   const courseNum: any = params.get('courseNum') ?? false;
   const offset = params.get('offset') ?? 0;
-  const pubDate = params.get('pubDate') ?? new Date().toISOString();
+  let footerText = params.get('footer') ?? 'thegymnasium.com';
+  // const pubDate = params.get('pubDate') ?? new Date().toISOString();
   let imgPath: any;
   let metaPath: any;
   let courseType: any;
-  let defaultTitle: string;
+  let metaData: any;
 
   // If we have a course number, grab specific data
   if (courseNum) {
@@ -53,16 +69,63 @@ export default async function handler(req: Request) {
     metaPath = `/courses/${courseType}/gym-${courseNum}/meta/index.html`;
   }
 
-  if (metaPath === undefined) {
-    defaultTitle = 'Welcome to Gymnasium';
+  console.log(metaPath);
+  if (!metaPath) {
+    metaData = '';
   } else {
-    defaultTitle = await loadMetaTitle(`${domain}${metaPath}`);
+    metaData = await loadMetaTitle(`http://localhost:8888/${metaPath}`);
   }
 
   // Allow override of title via url params
-  let title = params.get('title') ?? defaultTitle;
+  let title = params.get('title') ?? metaData.ogTitle;
 
   const imgUrl = `${domain}${imgPath}`;
+
+  // defaults
+  const wrapperWidth = 1200;
+  const wrapperHeight = 628;
+  let imgWidth = 0;
+  let bgImg = '';
+  let bgSize = '';
+  let bgPos = '0 0';
+  let titleFontSize = 50;
+  let footerColor = 'ff5f14';
+  let footerCase = 'initial';
+  let contentJustify = 'space-around';
+  let logoDisplay = 'flex';
+  let headerDisplay = 'none';
+  let headerText = '';
+
+  if (!!imgPath) {
+    // General defaults + some take 5 settings
+    bgImg = `url(${imgUrl})`;
+    bgSize = 'initial';
+
+    if (courseType === 'take5') {
+      imgWidth = 320;
+      titleFontSize = 90;
+      footerColor = 'ccc';
+      contentJustify = 'space-between';
+      bgPos = `-${offset}px 0px`;
+      footerCase = 'uppercase';
+      logoDisplay = 'none';
+      headerDisplay = 'flex';
+      headerText = 'Take 5';
+      if (metaData.topic) {
+        footerText = metaData.topic;
+      }
+    } else {
+      const iconSize = 300;
+      bgSize = `${iconSize}px ${aspectRatio(574,488,iconSize)}px`;
+
+      imgWidth = 516;
+      bgPos = `10% 40%`;
+      titleFontSize = 80;
+      contentJustify = 'space-around';
+    }
+  }
+
+  let contentWidth = wrapperWidth - imgWidth;
 
   let CONFIG_WRAPPER = {
     height: '100%',
@@ -75,8 +138,8 @@ export default async function handler(req: Request) {
     alignItems: 'flex-start',
     backgroundColor: '#222',
     color: '#fff',
-    fontSize: 40,
-    fontWeight: '900',
+    fontSize: '50px',
+    fontWeight: 'bold',
     fontFamily: 'brandon-grotesque',
     position: 'relative',
     zIndex: 1,
@@ -90,65 +153,74 @@ export default async function handler(req: Request) {
     justifyContent: 'center',
     height: '100%',
     width: '100%',
-    backgroundColor: `#${color}`,
-    // backgroundSize: 'auto',
+    backgroundImage: `${bgImg}`,
+    backgroundColor: `#${imgBgColor}`,
+    backgroundOrigin: 'border-box',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: `${bgPos}`,
+    backgroundSize: `${bgSize}`,
     position: 'absolute',
     top: 0,
     left: 0,
     zIndex: 2,
   }
 
-  // If we have an image, use these settings
-  if (!!imgPath) {
-    CONFIG_IMG['background'] = `url(${imgUrl})`;
-    CONFIG_IMG['backgroundPosition'] = `${offset}px 0`;
-    CONFIG_IMG['backgroundRepeat'] = 'no-repeat';
-  }
-
-  let CONFIG_TEXT = {
+  let CONFIG_CONTENT = {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-start',
-    alignSelf: 'center',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    order: 2,
-    flexGrow: 1,
-    flexShrink: 0,
-    padding: '2rem',
-    position: 'absolute',
-    left: '320px',
-    top: 0,
-    backgroundColor: '#' + color,
-    width: '880px',
+    justifyContent: `${contentJustify}`,
+    padding: '60px',
+    marginLeft: `${imgWidth}px`,
+    backgroundColor: `#${bgColor}`,
+    width: `${contentWidth}px`,
     height: '100%',
-    zIndex: 3,
+  }
+
+  let CONFIG_TITLE = {
+    color: '#fff',
+    textTransform: 'uppercase',
+    fontSize: `${titleFontSize}px`,
+    lineHeight: 1,
+  }
+
+  let CONFIG_FOOTER = {
+    color: `#${footerColor}`,
+    textTransform: `${footerCase}`,
   }
 
   // Generate the open graph image
   return new ImageResponse(
     (
       <div style={CONFIG_WRAPPER}>
-        <figure style={CONFIG_IMG}>
-        </figure>
-        <section style={CONFIG_TEXT}>
-          <img src='https://thegymcms.com/img/brand/svg/gymnasium-logo-white.svg' width='300' />
-          <h1>{title}</h1>
-          <div>{pubDate}</div>
-          <div style={{color: '#ff5f14'}}>thegymnasium.com</div>
+        <figure style={CONFIG_IMG}></figure>
+        <section style={CONFIG_CONTENT}>
+          <header style={
+            {
+              color: '#000',
+              display: `${headerDisplay}`,
+            }
+          }>{headerText}</header>
+          <img style={
+            {
+              display: `${logoDisplay}`,
+            }
+          } src='https://thegymcms.com/img/brand/svg/gymnasium-logo-white.svg' width='300' />
+          <h1 style={CONFIG_TITLE}>{title}</h1>
+          <div style={CONFIG_FOOTER}>{footerText}</div>
         </section>
       </div>
     ),
     {
       width: 1200,
       height: 628,
+      debug: true,
       fonts: [
         {
           name: 'brandon-grotesque',
           data: fontData,
-          style: 'normal'
+          style: 'normal',
         }
-      ]
+      ],
     }
   );
 }
