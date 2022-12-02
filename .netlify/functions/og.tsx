@@ -8,9 +8,9 @@ import { DOMParser } from 'https://deno.land/x/deno_dom/deno-dom-wasm.ts';
 // $gym-teal: #5ca5a0;
 
 // TODO: Change URL before release
-const domain = 'https://staging.thegymcms.com';
+const domain = 'https://deploy-preview-832--thegymcms.netlify.app/';
 
-const brandon = new URL(`../../fonts/brandon_bld-webfont.woff`, import.meta.url);
+const brandon = new URL(`${domain}/fonts/brandon_bld-webfont.woff`, import.meta.url);
 
 const font = fetch(brandon).then(
   (res) => res.arrayBuffer(),
@@ -73,7 +73,7 @@ export default async function handler(req: Request) {
   if (!metaPath) {
     metaData = '';
   } else {
-    metaData = await loadMetaTitle(`http://localhost:8888/${metaPath}`);
+    metaData = await loadMetaTitle(`${domain}/${metaPath}`);
   }
 
   // Allow override of title via url params
