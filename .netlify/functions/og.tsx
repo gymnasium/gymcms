@@ -38,11 +38,12 @@ export default async function handler(req: Request) {
   const fontData = await font;
   // Get the query parameters from the request
   const url = new URL(req.url);
-  const params = new URLSearchParams(url.search);
+  const params:any = new URLSearchParams(url.search);
   const bgColor = params.get('bg') ?? '222';
   const imgBgColor = params.get('imgbg') ?? '222';
   const courseNum: any = params.get('courseNum') ?? false;
-  const offset = params.get('offset') ?? 0;
+  const offset:any = Math.abs(params.get('offset')) ?? 0;
+  let titleFontSize = 50;
   let footerText = params.get('footer') ?? 'thegymnasium.com';
   // const pubDate = params.get('pubDate') ?? new Date().toISOString();
   let imgPath: any;
@@ -88,18 +89,21 @@ export default async function handler(req: Request) {
   let bgImg = '';
   let bgSize = '';
   let bgPos = '0 0';
-  let titleFontSize = 50;
   let footerColor = 'ff5f14';
   let footerCase = 'initial';
-  let contentJustify = 'space-around';
+  let contentJustify = 'center';
   let logoDisplay = 'flex';
   let headerDisplay = 'none';
   let headerText = '';
+  let wrapperJustify = 'center';
+  let wrapperAlign = 'center';
 
   if (!!imgPath) {
     // General defaults + some take 5 settings
     bgImg = `url(${imgUrl})`;
     bgSize = 'initial';
+    wrapperJustify = 'flex-start';
+    wrapperAlign = 'flex-start';
 
     if (courseType === 'take5') {
       imgWidth = 320;
@@ -119,8 +123,8 @@ export default async function handler(req: Request) {
       bgSize = `${iconSize}px ${aspectRatio(574,488,iconSize)}px`;
 
       imgWidth = 516;
-      bgPos = `10% 40%`;
-      titleFontSize = 80;
+      bgPos = `9% 30%`;
+      titleFontSize = 70;
       contentJustify = 'space-around';
     }
   }
@@ -133,9 +137,9 @@ export default async function handler(req: Request) {
     display: 'flex',
     flexWrap: 'nowrap',
     flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignContent: 'stretch',
-    alignItems: 'flex-start',
+    justifyContent: `${wrapperJustify}`,
+    // alignContent: 'stretch',
+    alignItems: `${wrapperAlign}`,
     backgroundColor: '#222',
     color: '#fff',
     fontSize: '50px',
@@ -143,9 +147,11 @@ export default async function handler(req: Request) {
     fontFamily: 'brandon-grotesque',
     position: 'relative',
     zIndex: 1,
+    lineHeight: 1,
   }
 
   let CONFIG_IMG = {
+    display: 'flex',
     order: 1,
     flexGrow: 0,
     flexShrink: 0,
@@ -179,8 +185,16 @@ export default async function handler(req: Request) {
   let CONFIG_TITLE = {
     color: '#fff',
     textTransform: 'uppercase',
-    fontSize: `${titleFontSize}px`,
-    lineHeight: 1,
+    fontSize: titleFontSize,
+  }
+
+  let CONFIG_HEADER = {
+    color: '#000',
+    display: `${headerDisplay}`,
+  }
+
+  let CONFIG_LOGO = {
+    display: `${logoDisplay}`,
   }
 
   let CONFIG_FOOTER = {
@@ -194,17 +208,8 @@ export default async function handler(req: Request) {
       <div style={CONFIG_WRAPPER}>
         <figure style={CONFIG_IMG}></figure>
         <section style={CONFIG_CONTENT}>
-          <header style={
-            {
-              color: '#000',
-              display: `${headerDisplay}`,
-            }
-          }>{headerText}</header>
-          <img style={
-            {
-              display: `${logoDisplay}`,
-            }
-          } src='https://thegymcms.com/img/brand/svg/gymnasium-logo-white.svg' width='300' />
+          <header style={CONFIG_HEADER}>{headerText}</header>
+          <img style={CONFIG_LOGO} src='https://thegymcms.com/img/brand/svg/gymnasium-logo-white.svg' width='300' />
           <h1 style={CONFIG_TITLE}>{title}</h1>
           <div style={CONFIG_FOOTER}>{footerText}</div>
         </section>
