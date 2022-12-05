@@ -119,13 +119,15 @@ export default async function handler(req: Request) {
         footerText = metaData.topic;
       }
     } else {
-      const iconSize = 300;
-      bgSize = `${iconSize}px ${aspectRatio(574,488,iconSize)}px`;
+      const iconWidth = 516;
+      let iconHeight = aspectRatio(574,488,iconWidth);
+      bgSize = `${iconWidth}px ${iconHeight}px`;
+      const iconVOffset = (wrapperHeight - iconHeight)/2;
 
-      imgWidth = 516;
-      bgPos = `9% 30%`;
+      imgWidth = iconWidth;
+      bgPos = `0px ${iconVOffset}px`;
       titleFontSize = 70;
-      contentJustify = 'space-around';
+      contentJustify = 'center';
     }
   }
 
