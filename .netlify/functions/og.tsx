@@ -86,6 +86,7 @@ export default async function handler(req: Request) {
   const wrapperWidth = 1200;
   const wrapperHeight = 628;
   let imgWidth = 0;
+  let imgDisplay = 'none';
   let bgImg = '';
   let bgSize = '';
   let bgPos = '0 0';
@@ -97,6 +98,7 @@ export default async function handler(req: Request) {
   let headerText = '';
   let wrapperJustify = 'center';
   let wrapperAlign = 'center';
+  let contentAlign = 'center';
 
   if (!!imgPath) {
     // General defaults + some take 5 settings
@@ -104,6 +106,8 @@ export default async function handler(req: Request) {
     bgSize = 'initial';
     wrapperJustify = 'flex-start';
     wrapperAlign = 'flex-start';
+    imgDisplay = 'flex';
+    contentAlign = 'flex-start';
 
     if (courseType === 'take5') {
       imgWidth = 320;
@@ -153,7 +157,7 @@ export default async function handler(req: Request) {
   }
 
   let CONFIG_IMG = {
-    display: 'flex',
+    display: `${imgDisplay}`,
     order: 1,
     flexGrow: 0,
     flexShrink: 0,
@@ -177,6 +181,7 @@ export default async function handler(req: Request) {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: `${contentJustify}`,
+    alignItems: `${contentAlign}`,
     padding: '60px',
     marginLeft: `${imgWidth}px`,
     backgroundColor: `#${bgColor}`,
