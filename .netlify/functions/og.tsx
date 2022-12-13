@@ -70,7 +70,6 @@ export default async function handler(req: Request) {
     metaPath = `/courses/${courseType}/gym-${courseNum}/meta/index.html`;
   }
 
-  console.log(metaPath);
   if (!metaPath) {
     metaData = '';
   } else {
@@ -99,6 +98,7 @@ export default async function handler(req: Request) {
   let wrapperJustify = 'center';
   let wrapperAlign = 'center';
   let contentAlign = 'center';
+  let logoWidth = 834;
 
   if (!!imgPath) {
     // General defaults + some take 5 settings
@@ -108,6 +108,7 @@ export default async function handler(req: Request) {
     wrapperAlign = 'flex-start';
     imgDisplay = 'flex';
     contentAlign = 'flex-start';
+    logoWidth = 300;
 
     if (courseType === 'take5') {
       imgWidth = 320;
@@ -202,6 +203,7 @@ export default async function handler(req: Request) {
 
   let CONFIG_LOGO = {
     display: `${logoDisplay}`,
+    width: `${logoWidth}`,
   }
 
   let CONFIG_FOOTER = {
@@ -216,7 +218,7 @@ export default async function handler(req: Request) {
         <figure style={CONFIG_IMG}></figure>
         <section style={CONFIG_CONTENT}>
           <header style={CONFIG_HEADER}>{headerText}</header>
-          <img style={CONFIG_LOGO} src='https://thegymcms.com/img/brand/svg/gymnasium-logo-white.svg' width='300' />
+          <img style={CONFIG_LOGO} src='https://thegymcms.com/img/brand/svg/gymnasium-logo-white.svg' />
           <h1 style={CONFIG_TITLE}>{title}</h1>
           <div style={CONFIG_FOOTER}>{footerText}</div>
         </section>
