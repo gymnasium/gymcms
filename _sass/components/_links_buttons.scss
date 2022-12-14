@@ -130,7 +130,7 @@ div.problem .action .save:hover:not(:disabled),
   box-shadow: none;
   text-decoration: none;
   font-weight: bold;
-  border: none;
+  border: inherit dashed transparent;
   color: $gym-white;
   font-family: $gym-font-stack;
 
