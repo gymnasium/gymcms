@@ -4,58 +4,9 @@
 @import "mixins";
 @import "variables";
 
-// This emulates prismjs using our own custom class name
-pre.gym-custom-css {
-  padding: 2rem;
-  margin: 4rem 0;
-}
-code.gym-custom-css {
-  padding: 0;
-}
-code.gym-custom-css, pre.gym-custom-css {
-  background-color: $gym-black;
-  color: $gym-white;
-  text-shadow: none;
-  font-size: 4rem;
-  font-size: calc(2.5 * (0.5vw + 0.5vh));
-  font-family: Consolas, Monaco, "Andale Mono", monospace;
-  direction: ltr;
-  text-align: left;
-  // white-space: pre;
-  word-spacing: normal;
-  word-break: break-word;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
 
-.token {
-  &.style {
-    color: $gym-green;
-  }
-  &.comment, &.prolog, &.doctype, &.cdata {
-    color: $gym-mid-gray;
-  }
-  &.selector, &.attr-name, &.string, &.char, &.builtin, &.inserted {
-    color: $gym-magenta;
-  }
-  &.punctuation {
-    color: $gym-white;
-  }
-  &.property, &.tag, &.boolean, &.number, &.constant, &.symbol, &.deleted {
-    color: $gym-light-gray;
-  }
-  &.operator, &.entity, &.url, &.string {
-    color: $gym-white;
-    background: transparent;
-  }
-}
 
-.card-content {
-  font-size: 3rem;
-}
+@include holiday-cards($font-size: calc(2.5 * (0.5vw + 0.5vh)));
+
+
+

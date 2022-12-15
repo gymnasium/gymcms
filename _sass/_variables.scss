@@ -34,6 +34,9 @@ $gym-teal: #5ca5a0;
 $gym-teal-dark: adjust-color($gym-teal, $lightness: -11.58%); // outputs #46807c
 $gym-teal-darker: adjust-color($gym-teal, $lightness: -26.9%); // #2b4d4b
 
+$holiday-red: #f30d21;
+$holiday-green: #00b600;
+
 // Fonts
 $gym-text-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $gym-font-stack: "brandon-grotesque", $gym-text-font-stack;
