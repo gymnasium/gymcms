@@ -5,18 +5,25 @@
 @import "variables";
 
 // This emulates prismjs using our own custom class name
-
-code[class*="gym-custom-"], pre[class*="gym-custom-"] {
+pre.gym-custom-css {
+  padding: 2rem;
+  margin: 4rem 0;
+}
+code.gym-custom-css {
+  padding: 0;
+}
+code.gym-custom-css, pre.gym-custom-css {
   background-color: $gym-black;
   color: $gym-white;
   text-shadow: none;
   font-size: 4rem;
+  font-size: calc(2.5 * (0.5vw + 0.5vh));
   font-family: Consolas, Monaco, "Andale Mono", monospace;
   direction: ltr;
   text-align: left;
-  white-space: pre;
+  // white-space: pre;
   word-spacing: normal;
-  word-break: normal;
+  word-break: break-word;
   line-height: 1.5;
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -47,4 +54,8 @@ code[class*="gym-custom-"], pre[class*="gym-custom-"] {
     color: $gym-white;
     background: transparent;
   }
+}
+
+.card-content {
+  font-size: 3rem;
 }
