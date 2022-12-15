@@ -10,6 +10,7 @@ Jeremy Osborn: Case studies are one of the most powerful tools in your portfolio
 
 It gives the visitor insight into your thought process and your workflow. Here is a brief list of what you might find in a good case study:
 
+{:.list-margin-half}
 - The client and deliverables
 - Your role and contributions
 - The process and approach used
