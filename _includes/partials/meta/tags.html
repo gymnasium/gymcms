@@ -64,16 +64,11 @@ https://stackoverflow.com/questions/50824181/preloading-google-fonts
 <link rel="stylesheet" href="{{ site.url }}/css/fonts/font-awesome.css?{{ site.time | date:'%s' }}">
 <link rel="stylesheet" href="{{ site.url }}/css/main.css?{{ site.time | date:'%s' }}">
 
-{% comment -%}
-Exclude rendered CSS in meta tags on localhost, for development/convenience reasons
-{%- endcomment -%}
-{%- unless site.environment == 'local' -%}
-  {%- if page.css -%}
-    {%- for css_file in page.css -%}
-      <link rel="stylesheet" href="{{ site.url }}{{ css_file }}?{{ site.time | date:'%s' }}">
-    {%- endfor -%}
-  {%- endif -%}
-{%- endunless -%}
+{%- if page.css -%}
+  {%- for css_file in page.css -%}
+    <link rel="stylesheet" href="{{ site.url }}{{ css_file }}?{{ site.time | date:'%s' }}">
+  {%- endfor -%}
+{%- endif -%}
 
 {%- comment -%}
 We used to prefetch these, but we really shouldn't bother with 3rd party tracking stuff, since it can potentially slow down our site...
