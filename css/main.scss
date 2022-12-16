@@ -244,8 +244,9 @@ white panel (used in multiple places)
   }
 
 
-  // adjustment for vertical rule (if a sidebar is present)
   @include breakpoint(medium, min) {
+
+    // adjustment for vertical rule (if a sidebar is present)
     & {
       position: relative;
       padding: 1em 1em 2em 2em;
@@ -271,6 +272,11 @@ white panel (used in multiple places)
       content: "\200b";
       display: table;
       clear: both;
+    }
+
+    // adjustment when sidebar is not present
+    &.white-panel-space-equal-lr {
+      padding: 1em 2em 2em;
     }
   }
 
