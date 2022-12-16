@@ -332,5 +332,3 @@ document.onreadystatechange = function() {
     gym.accountDeletion();
   }
 };
-
-document.domain = "courses.gymna.si";
