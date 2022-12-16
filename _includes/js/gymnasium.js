@@ -333,4 +333,4 @@ document.onreadystatechange = function() {
   }
 };
 
-document.domain = "thegymnasium.com";
+document.domain = "courses.gymna.si";
