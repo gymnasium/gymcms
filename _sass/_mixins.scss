@@ -435,7 +435,7 @@ To use, `@include holiday-cards;`, then write appropriate overrides.
     &.comment, &.prolog, &.doctype, &.cdata {
       color: $gym-mid-gray;
     }
-    &.selector, &.attr-name, &.string, &.char, &.builtin, &.inserted {
+    &.selector, &.attr-name, &.char, &.builtin, &.inserted {
       color: $holiday-red;
     }
     &.punctuation {
