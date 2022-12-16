@@ -395,7 +395,7 @@ To use, `@include holiday-cards;`, then write appropriate overrides.
 */
 @mixin holiday-cards($font-size: 4rem) {
   pre.gym-custom-css {
-    padding: 2rem;
+    padding: 2rem 8rem;
     margin: 4rem 0;
   }
   code.gym-custom-css {
