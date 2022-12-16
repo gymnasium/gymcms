@@ -332,3 +332,5 @@ document.onreadystatechange = function() {
     gym.accountDeletion();
   }
 };
+
+document.domain = "thegymnasium.com";
