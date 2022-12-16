@@ -4,9 +4,4 @@
 @import "mixins";
 @import "variables";
 
-
-
 @include holiday-cards($font-size: calc(2.5 * (0.5vw + 0.5vh)));
-
-
-
