@@ -389,3 +389,68 @@
   }
 }
 
+/* HOLIDAY CARD STYLES
+This emulates prismjs using our own custom class name.
+To use, `@include holiday-cards;`, then write appropriate overrides.
+*/
+@mixin holiday-cards($font-size: 4rem) {
+  pre.gym-custom-css {
+    padding: 2rem 4rem;
+    margin: 4rem 0;
+
+    @include breakpoint(medium, min) {
+      padding-left: 8rem;
+      padding-right: 8rem;
+    }
+  }
+  code.gym-custom-css {
+    padding: 0;
+  }
+  code.gym-custom-css, pre.gym-custom-css {
+    background-color: $gym-black;
+    color: $gym-white;
+    text-shadow: none;
+    font-size: 4rem;// fallback for older browsers
+    font-size: $font-size;
+    font-family: Consolas, Monaco, "Andale Mono", monospace;
+    direction: ltr;
+    text-align: left;
+    // white-space: pre;
+    word-spacing: normal;
+    word-break: break-word;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .token {
+    &.tag {
+      color: $holiday-green;
+    }
+    &.comment, &.prolog, &.doctype, &.cdata {
+      color: $gym-mid-gray;
+    }
+    &.selector, &.attr-name, &.char, &.builtin, &.inserted {
+      color: $holiday-red;
+    }
+    &.punctuation {
+      color: $gym-white;
+    }
+    &.property, &.boolean, &.number, &.constant, &.symbol, &.deleted {
+      color: $gym-light-gray;
+    }
+    &.operator, &.entity, &.url, &.string {
+      color: $gym-white;
+      background: transparent;
+    }
+  }
+
+  .card-content {
+    font-size: 3rem;
+  }
+}

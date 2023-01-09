@@ -44,7 +44,7 @@ permalink: /courses/take5/course-list-recent
     <article class="row">
       <figure class="col-md-4">
         <a href="{{ course.title | slugify | prepend: base_path }}">
-          <img src="{{ course.poster_art | prepend: site.url }}" alt="{{ course.course_ID | remove: 'gym-' }} {{ course.title }} cover image." decoding="async" loading="lazy">
+          <img src="{{ course.poster_art | prepend: site.url }}" alt="{{ course.course_ID | remove: 'gym-' }} {{ course.title }} cover image." decoding="async" priority="low">
         </a>
         <figcaption>
           <a href="{{ course.title | slugify | prepend: base_path }}" class="gym-button"><b>Watch Now</b></a>
