@@ -1,4 +1,4 @@
-// site.webmanifest (json)
+// manifest.json
 {
   "icons": [
     { "src": "{{ site.url }}/favicon-192.png", "type": "image/png", "sizes": "192x192" },
