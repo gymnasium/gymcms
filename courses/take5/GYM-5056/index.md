@@ -38,7 +38,7 @@ Don’t forget, the project is not the hero of the case study, *you are*.
 
 **Tip number two:** Focus on the process.
 
-Over the years I’ve worked with people who have looked at thousands of portfolios. And the complaint that comes up the most often is, where is the process?
+Over the years, I’ve worked with people who have looked at thousands of portfolios. And the complaint that comes up the most often is, where is the process?
 
 > Now in this case, “the process” is the evidence of how you solve problems.
 
