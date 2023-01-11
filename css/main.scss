@@ -244,8 +244,9 @@ white panel (used in multiple places)
   }
 
 
-  // adjustment for vertical rule (if a sidebar is present)
   @include breakpoint(medium, min) {
+
+    // adjustment for vertical rule (if a sidebar is present)
     & {
       position: relative;
       padding: 1em 1em 2em 2em;
@@ -271,6 +272,11 @@ white panel (used in multiple places)
       content: "\200b";
       display: table;
       clear: both;
+    }
+
+    // adjustment when sidebar is not present
+    &.white-panel-space-equal-lr {
+      padding: 1em 2em 2em;
     }
   }
 
@@ -571,35 +577,6 @@ section {
   margin-left: auto;
   margin-right: auto;
   margin-top: -1.2em;
-}
-
-.gym-icon {
-  width: 35px;
-  height: 25px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  background-position-x: center;
-
-  filter: gray; /* IE6-9 */
-  filter: grayscale(1); /* Firefox 35+ */
-  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
-}
-
-.gym-icon:hover {
-  filter: none;
-  -webkit-filter: grayscale(0);
-  background-color: transparent;
-}
-
-.aquent-icon {
-  @extend .gym-icon;
-  background-image: $aquent-icon-image;
-}
-
-.vitamin-t-icon {
-  @extend .gym-icon;
-  background-image: $vitamin-t-icon-image;
 }
 
 html {

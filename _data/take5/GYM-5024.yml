@@ -29,7 +29,7 @@ related_content:
 - label: "Using Media Queries for Responsive Design in 2018 by Rachel Andrew"
   url: "https://www.smashingmagazine.com/2018/02/media-queries-responsive-design-2018/"
 - label: "Media Queries for Common Device Breakpoints by Justin Avery"
-  url: "https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/"
+  url: "https://ui.dev/rwd/develop/browser-feature-support/media-queries-for-common-device-breakpoints"
 - label: "Choosing between min-width and max-width media queries by The Haystack"
   url: "https://www.the-haystack.com/2015/12/23/choosing-between-min-and-max-width/"
 skill_level: "Intermediate"

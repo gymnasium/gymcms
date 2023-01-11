@@ -1,11 +1,8 @@
 ---
 layout: wrapper-75-25
 permalink: /about/
+css: [/css/static-main-content.css]
 ---
-{%- if site.environment == 'local' -%}
-<link rel="stylesheet" href="{{ site.url }}/css/static-main-content.css?{{ site.time | date:'%s' }}">
-{%- endif -%}
-
 <!-- Temporary HTML for style hooks -->
 <div class="main-content-static">
 
