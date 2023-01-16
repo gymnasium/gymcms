@@ -7,7 +7,7 @@ import { DOMParser } from 'https://deno.land/x/deno_dom/deno-dom-wasm.ts';
 // $gym-purple: #764c9f;
 // $gym-teal: #5ca5a0;
 
-// TODO: Change URL before release
+// TODO: Change URL to production before release
 const domain = 'https://deploy-preview-832--thegymcms.netlify.app';
 
 const brandon = new URL(`${domain}/fonts/brandon_bld-webfont.woff`, import.meta.url);
@@ -42,7 +42,7 @@ export default async function handler(req: Request) {
   const bgColor = params.get('bg') ?? '222';
   const imgBgColor = params.get('imgbg') ?? '222';
   const courseNum: any = params.get('courseNum') ?? false;
-  const offset:any = Math.abs(params.get('offset')) ?? 0;
+  const imgOffset:any = Math.abs(params.get('offset')) ?? 0;
   let titleFontSize = 50;
   let footerText = params.get('footer') ?? 'thegymnasium.com';
   // const pubDate = params.get('pubDate') ?? new Date().toISOString();
@@ -50,6 +50,18 @@ export default async function handler(req: Request) {
   let metaPath: any;
   let courseType: any;
   let metaData: any;
+  let hideFooter: boolean = false;
+  let debug: boolean = false;
+
+  if (params.has('debug')) {
+    debug = true;
+    params.delete('debug');
+  }
+
+  // Are there any URL parameters (other than debug [see above]) attached? If not, hide the footer too. This is to display only the Gymnasium logo when visiting /og-image
+  if (params && params.toString().length === 0) {
+    hideFooter = true;
+  }
 
   // If we have a course number, grab specific data
   if (courseNum) {
@@ -76,29 +88,35 @@ export default async function handler(req: Request) {
     metaData = await loadMetaTitle(`${domain}/${metaPath}`);
   }
 
-  // Allow override of title via url params
-  let title = params.get('title') ?? metaData.ogTitle;
-
-  const imgUrl = `${domain}${imgPath}`;
-
   // defaults
   const wrapperWidth = 1200;
   const wrapperHeight = 628;
-  let imgWidth = 0;
   let imgDisplay = 'none';
+  let imgWidth = 0;
   let bgImg = '';
   let bgSize = '';
   let bgPos = '0 0';
-  let footerColor = 'ff5f14';
-  let footerCase = 'initial';
+  let contentAlign = 'center';
   let contentJustify = 'center';
+  let footerCase = 'initial';
+  let footerColor = 'ff5f14';
+  let footerDisplay = 'flex';
   let logoDisplay = 'flex';
+  let logoWidth = 834;
   let headerDisplay = 'none';
   let headerText = '';
-  let wrapperJustify = 'center';
   let wrapperAlign = 'center';
-  let contentAlign = 'center';
-  let logoWidth = 834;
+  let wrapperJustify = 'center';
+
+  // Allow override of title via url params
+  let title = params.get('title') ?? metaData.ogTitle;
+
+  // Permit hiding the footer (?footer=false)
+  if (hideFooter === true) {
+    footerDisplay = 'none';
+  }
+
+  const imgUrl = `${domain}${imgPath}`;
 
   if (!!imgPath) {
     // General defaults + some take 5 settings
@@ -115,7 +133,7 @@ export default async function handler(req: Request) {
       titleFontSize = 90;
       footerColor = 'ccc';
       contentJustify = 'space-between';
-      bgPos = `-${offset}px 0px`;
+      bgPos = `-${imgOffset}px 0px`;
       footerCase = 'uppercase';
       logoDisplay = 'none';
       headerDisplay = 'flex';
@@ -124,6 +142,7 @@ export default async function handler(req: Request) {
         footerText = metaData.topic;
       }
     } else {
+      // calculate aspect ratio for proportional resizing
       const iconWidth = 516;
       let iconHeight = aspectRatio(574,488,iconWidth);
       bgSize = `${iconWidth}px ${iconHeight}px`;
@@ -209,6 +228,28 @@ export default async function handler(req: Request) {
   let CONFIG_FOOTER = {
     color: `#${footerColor}`,
     textTransform: `${footerCase}`,
+    display: `${footerDisplay}`,
+  }
+
+  if (debug) {
+    console.log(
+      'URL parameters: ',
+      params.toString(), '\n',
+      'CONFIG_WRAPPER =',
+      CONFIG_WRAPPER, '\n',
+      'CONFIG_IMG =',
+      CONFIG_IMG, '\n',
+      'CONFIG_CONTENT =',
+      CONFIG_CONTENT, '\n',
+      'CONFIG_HEADER =',
+      CONFIG_HEADER, '\n',
+      'CONFIG_LOGO =',
+      CONFIG_LOGO, '\n',
+      'CONFIG_TITLE =',
+      CONFIG_TITLE, '\n',
+      'CONFIG_FOOTER =',
+      CONFIG_FOOTER, '\n',
+    );
   }
 
   // Generate the open graph image
@@ -227,7 +268,7 @@ export default async function handler(req: Request) {
     {
       width: 1200,
       height: 628,
-      debug: true,
+      debug: debug,
       fonts: [
         {
           name: 'brandon-grotesque',
