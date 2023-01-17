@@ -729,3 +729,80 @@ footer.card-cta {
   }
 
 }
+
+
+// --- featured jobs ---
+
+.job-listing {
+  padding-top: 0;
+  margin-top: 1.2em;
+
+  details {
+
+    summary {
+      font-size: 1.15em;
+      cursor: pointer;
+    }
+
+    & > .container {
+      padding-top: 1.2em;
+      border-top: 1px dashed $gym-gray;
+      margin-top: 1.2em;
+    }
+
+  }
+
+  #content {
+
+    .subheader {
+      font-weight: normal;
+      font-size: 1.25em;
+      margin-bottom: 1.4rem;
+
+      & + h3 {
+        font-size: 1.8em;
+      }
+    }
+
+    .cta {
+      font-weight: bold;
+      font-size: 1.25em;
+      text-align: left;
+      margin-left: 0;
+      margin-bottom: 1.2em;
+
+      a {
+        font-size: inherit;
+        color: $gym-blue;
+      }
+
+      #apply-button-bottom {
+        margin-left: -15px;
+      }
+    }
+
+    ul,
+    ol {
+      font-size: inherit;
+      padding-left: 1.35rem;
+    }
+
+    li {
+      margin-top: 0.6rem;
+    }
+
+    .share  {
+
+      label {
+        margin-bottom: 0;
+      }
+
+      a::before {
+        display: block;
+        content: "";
+        margin-top: 1em;
+      }
+    }
+
+  }
+}
