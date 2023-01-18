@@ -2,6 +2,16 @@ import React from 'https://esm.sh/react@18.2.0';
 import { ImageResponse } from 'https://deno.land/x/og_edge/mod.ts'
 import { DOMParser } from 'https://deno.land/x/deno_dom/deno-dom-wasm.ts';
 
+
+// import { ProfanityEngine } from 'npm:@coffeeandfun/google-profanity-words';
+
+import {
+  parse as yamlParse,
+  parseAll as yamlParseAll,
+  stringify as yamlStringify,
+} from 'https://deno.land/std/encoding/yaml.ts';
+
+
 // $gym-green: #2c9959;
 // $gym-magenta: #d73158;
 // $gym-purple: #764c9f;
@@ -15,6 +25,71 @@ const brandon = new URL(`${domain}/fonts/brandon_bld-webfont.woff`, import.meta.
 const font = fetch(brandon).then(
   (res) => res.arrayBuffer(),
 );
+
+// Get a full file name if we only have the first part
+async function getFileName(currentPath: string, fileFragment: string) {
+
+  try {
+    for await (const dirEntry of Deno.readDir(currentPath)) {
+      // console.log(dirEntry);
+      const fileName = dirEntry.name.startsWith(fileFragment) &&  dirEntry.isFile ? dirEntry.name : false;
+      
+      if (fileName) {
+        console.log(fileName);
+        return fileName;
+      }
+    }
+  } catch(err) {
+    console.error(err);
+  }
+}
+
+// Parse YAML data file!
+async function loadDataFile(id: string) {
+  // TODO: process incoming ID and determine data file path based on ID
+  const lowerId = id.toLowerCase();
+  const upperId = id.toUpperCase();
+  let pathFragment:any = '';
+  let fullPath:string = '';
+
+  if (lowerId.startsWith('gym')) {
+
+    const checkId = id.match(/\d+/);
+    const numericId = checkId !== null ? parseInt(checkId, 10) : ()=> {return false};
+
+    if (numericId < 700) {
+      pathFragment = 'courses';
+    } else if (numericId >= 700 && numericId < 800) {
+      pathFragment = 'workshop';
+    } else if (numericId >= 5000) {
+      pathFragment = 'take5';
+    }
+
+    fullPath = `${pathFragment}/${upperId}.yml`;
+
+  } else if (lowerId.startsWith('web')) {
+    let fileName = await getFileName('./_data/webinars/', lowerId);
+    fullPath = `webinars/${fileName}`;
+  }
+
+  try {
+    const yaml = yamlParseAll(await Deno.readTextFile(`./_data/${fullPath}`));
+    const data = yaml[0];
+    const ogTitle = data['title'] ? data['title'] : '[Unspecified]';
+    const topic = data['topic'] ? data['topic'] : '[Unspecified]';
+    const imgBg = data['image_background_color'] ? data['image_background_color'] : '[Unspecified]';
+    const img = data['poster_art'] ? data['poster_art'] : '[Unspecified]';
+    return {ogTitle, topic, imgBg, img};
+
+  } catch(err) {
+    console.error(err);
+  }
+}
+
+// TODO: get meta data file from path (for static pages without data files)
+async function loadMetaData(path: string) {
+  // TODO
+}
 
 async function loadMetaTitle(url: string) {
   const resp = await fetch(url);
@@ -86,6 +161,11 @@ export default async function handler(req: Request) {
     metaData = '';
   } else {
     metaData = await loadMetaTitle(`${domain}/${metaPath}`);
+    
+  }
+
+  if (params.get('id')) {
+    console.log(await loadDataFile(params.get('id')));
   }
 
   // defaults
