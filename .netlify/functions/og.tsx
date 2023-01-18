@@ -75,11 +75,12 @@ async function loadDataFile(id: string) {
   try {
     const yaml = yamlParseAll(await Deno.readTextFile(`./_data/${fullPath}`));
     const data = yaml[0];
-    const ogTitle = data['title'] ? data['title'] : '[Unspecified]';
-    const topic = data['topic'] ? data['topic'] : '[Unspecified]';
-    const imgBg = data['image_background_color'] ? data['image_background_color'] : '[Unspecified]';
-    const img = data['poster_art'] ? data['poster_art'] : '[Unspecified]';
-    return {ogTitle, topic, imgBg, img};
+    const ogTitle = data['title'] ? data['title'] : null;
+    const topic = data['topic'] ? data['topic'] : null;
+    const courseType = data['course_type'] ? data['course_type'] : null;
+    const imgBg = data['image_background_color'] ? data['image_background_color'] : null;
+    const img = data['poster_art'] ? data['poster_art'] : null;
+    return {ogTitle, topic, imgBg, img, courseType};
 
   } catch(err) {
     console.error(err);
