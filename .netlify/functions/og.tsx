@@ -1,14 +1,16 @@
 import React from 'https://esm.sh/react@18.2.0';
 import { ImageResponse } from 'https://deno.land/x/og_edge/mod.ts'
 import { DOMParser } from 'https://deno.land/x/deno_dom/deno-dom-wasm.ts';
-
+import { basename, dirname } from 'https://deno.land/std/path/mod.ts';
+import { Buffer } from "https://deno.land/std/io/buffer.ts";
+import { readableStreamFromReader } from "https://deno.land/std@0.140.0/streams/conversion.ts";
 
 // import { ProfanityEngine } from 'npm:@coffeeandfun/google-profanity-words';
 
 import {
-  parse as yamlParse,
+  // parse as yamlParse,
   parseAll as yamlParseAll,
-  stringify as yamlStringify,
+  // stringify as yamlStringify,
 } from 'https://deno.land/std/encoding/yaml.ts';
 
 
@@ -17,12 +19,9 @@ import {
 // $gym-purple: #764c9f;
 // $gym-teal: #5ca5a0;
 
-// TODO: Change URL to production before release
-const domain = 'https://deploy-preview-832--thegymcms.netlify.app';
+const fontUrl = new URL(`${Deno.cwd()}/fonts/brandon_bld-webfont.woff`, import.meta.url);
 
-const brandon = new URL(`${domain}/fonts/brandon_bld-webfont.woff`, import.meta.url);
-
-const font = fetch(brandon).then(
+const font = fetch(fontUrl).then(
   (res) => res.arrayBuffer(),
 );
 
@@ -80,6 +79,9 @@ async function loadDataFile(id: string) {
     const courseType = data['course_type'] ? data['course_type'] : null;
     const imgBg = data['image_background_color'] ? data['image_background_color'] : null;
     const img = data['poster_art'] ? data['poster_art'] : null;
+    
+    console.log(data);
+
     return {ogTitle, topic, imgBg, img, courseType};
 
   } catch(err) {
@@ -92,16 +94,17 @@ async function loadMetaData(path: string) {
   // TODO
 }
 
-async function loadMetaTitle(url: string) {
-  const resp = await fetch(url);
-  const html = await resp.text();
-  const parser = new DOMParser();
-  const htmlDoc = parser.parseFromString(html, 'text/html');
-  const metaTitle = htmlDoc.querySelector('[property="og:title"]');
-  const ogTitle = metaTitle.getAttribute('content');
-  const topic = metaTitle.getAttribute('data-topic');
-  return {ogTitle, topic};
-}
+// async function loadMetaTitle(url: string) {
+//   // const resp = await fetch(url);
+//   const resp = await Deno.readFile(`./${url}`);
+//   const html = await resp.text();
+//   const parser = new DOMParser();
+//   const htmlDoc = parser.parseFromString(html, 'text/html');
+//   const metaTitle = htmlDoc.querySelector('[property="og:title"]');
+//   const ogTitle = metaTitle.getAttribute('content');
+//   const topic = metaTitle.getAttribute('data-topic');
+//   return {ogTitle, topic};
+// }
 
 // Calculate aspect ratio of a resized image, assuming one knows the initial dimensions
 function aspectRatio(width:number, height:number, newWidth:number) {
@@ -112,9 +115,11 @@ function aspectRatio(width:number, height:number, newWidth:number) {
 
 export default async function handler(req: Request) {
   const fontData = await font;
+
   // Get the query parameters from the request
   const url = new URL(req.url);
   const params:any = new URLSearchParams(url.search);
+  const id = params.get('id') ?? null;
   const bgColor = params.get('bg') ?? '222';
   const imgBgColor = params.get('imgbg') ?? '222';
   const courseNum: any = params.get('courseNum') ?? false;
@@ -139,6 +144,7 @@ export default async function handler(req: Request) {
     hideFooter = true;
   }
 
+  // TODO: refactor courseNum to use id
   // If we have a course number, grab specific data
   if (courseNum) {
     if (courseNum < 100) {
@@ -155,18 +161,23 @@ export default async function handler(req: Request) {
       imgPath = `/img/take5/posters/gym-${courseNum}.jpg`;
     }
 
-    metaPath = `/courses/${courseType}/gym-${courseNum}/meta/index.html`;
+    metaPath = `/courses/${courseType}/GYM-${courseNum}/meta.md`;
   }
 
-  if (!metaPath) {
-    metaData = '';
-  } else {
-    metaData = await loadMetaTitle(`${domain}/${metaPath}`);
-    
+  try {
+    metaData = await loadDataFile(`gym-${courseNum}`);
+  } catch(err) {
+    console.error(err);
   }
 
-  if (params.get('id')) {
-    console.log(await loadDataFile(params.get('id')));
+  // TODO: refactor courseNum to use id
+  if (id) {
+    try {
+      metaData = await loadDataFile(id);
+      imgPath = metaData.img;
+    } catch(err) {
+      console.error(err);
+    }
   }
 
   // defaults
@@ -197,7 +208,8 @@ export default async function handler(req: Request) {
     footerDisplay = 'none';
   }
 
-  const imgUrl = `${domain}${imgPath}`;
+  const imgUrl = `file://${Deno.cwd()}${imgPath}`;
+  courseType = metaData.courseType;
 
   if (!!imgPath) {
     // General defaults + some take 5 settings
