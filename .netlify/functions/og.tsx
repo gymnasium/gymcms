@@ -90,9 +90,9 @@ async function loadDataFile(id: string) {
 }
 
 // TODO: get meta data file from path (for static pages without data files)
-async function loadMetaData(path: string) {
-  // TODO
-}
+// async function loadMetaData(path: string) {
+//   // TODO
+// }
 
 // async function loadMetaTitle(url: string) {
 //   // const resp = await fetch(url);
@@ -147,27 +147,28 @@ export default async function handler(req: Request) {
   // TODO: refactor courseNum to use id
   // If we have a course number, grab specific data
   if (courseNum) {
-    if (courseNum < 100) {
-      courseType = 'gym-shorts';
-      imgPath = `/img/course-artwork/svg/gym-${courseNum}.svg`;
-    } else if (courseNum >= 100 && courseNum < 700) {
-      courseType = 'full';
-      imgPath = `/img/course-artwork/svg/gym-${courseNum}.svg`;
-    } else if (courseNum >= 700 && courseNum < 800) {
-      courseType = 'workshops';
-      imgPath = null;
-    } else if (courseNum >= 5000) {
-      courseType = 'take5';
-      imgPath = `/img/take5/posters/gym-${courseNum}.jpg`;
+    // if (courseNum < 100) {
+    //   courseType = 'gym-shorts';
+    //   imgPath = `/img/course-artwork/svg/gym-${courseNum}.svg`;
+    // } else if (courseNum >= 100 && courseNum < 700) {
+    //   courseType = 'full';
+    //   imgPath = `/img/course-artwork/svg/gym-${courseNum}.svg`;
+    // } else if (courseNum >= 700 && courseNum < 800) {
+    //   courseType = 'workshops';
+    //   imgPath = null;
+    // } else if (courseNum >= 5000) {
+    //   courseType = 'take5';
+    //   imgPath = `/img/take5/posters/gym-${courseNum}.jpg`;
+    // }
+
+    // metaPath = `/courses/${courseType}/GYM-${courseNum}/meta.md`;
+
+    try {
+      metaData = await loadDataFile(`gym-${courseNum}`);
+      imgPath = metaData.img;
+    } catch(err) {
+      console.error(err);
     }
-
-    metaPath = `/courses/${courseType}/GYM-${courseNum}/meta.md`;
-  }
-
-  try {
-    metaData = await loadDataFile(`gym-${courseNum}`);
-  } catch(err) {
-    console.error(err);
   }
 
   // TODO: refactor courseNum to use id
@@ -201,7 +202,7 @@ export default async function handler(req: Request) {
   let wrapperJustify = 'center';
 
   // Allow override of title via url params
-  let title = params.get('title') ?? metaData.ogTitle;
+  let title;
 
   // Permit hiding the footer (?footer=false)
   if (hideFooter === true) {
@@ -209,9 +210,13 @@ export default async function handler(req: Request) {
   }
 
   const imgUrl = `file://${Deno.cwd()}${imgPath}`;
-  courseType = metaData.courseType;
 
-  if (!!imgPath) {
+  if (metaData) {
+    courseType = metaData.courseType;
+    title = params.get('title') ?? metaData.ogTitle;
+  }
+  
+  if (metaData.img) {
     // General defaults + some take 5 settings
     bgImg = `url(${imgUrl})`;
     bgSize = 'initial';
