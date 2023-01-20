@@ -1,13 +1,22 @@
 import React from "https://esm.sh/react@18.2.0";
 import { ImageResponse } from 'https://deno.land/x/og_edge/mod.ts'
+// import { serve } from "https://deno.land/std/http/server.ts";
 
-const font = fetch('https://deploy-preview-832--thegymcms.netlify.app/fonts/brandon_bld-webfont.woff').then(
-  (res) => res.arrayBuffer(),
-);
+// const font = fetch('http://localhost:8888/fonts/brandon_bld-webfont.woff').then(
+//   (res) => res.arrayBuffer(),
+// );
+function Uint8ArrayToArrayBuffer(array: Uint8Array): ArrayBuffer {
+  return array.buffer.slice(array.byteOffset, array.byteLength + array.byteOffset);
+}
+
+const __root = Deno.cwd();
+
+const font = await Deno.readFile(`${__root}/fonts/brandon_bld-webfont.woff`);
+const buffer = Uint8ArrayToArrayBuffer(font);
 
 export default async function handler(req: Request) {
   try {
-    const fontData = await font;
+    const fontData = await buffer;
     const url = new URL(req.url);
     const params:any = new URLSearchParams(url.search);
 
