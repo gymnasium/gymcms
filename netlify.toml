@@ -33,11 +33,11 @@ edge_functions = ".netlify/functions"
   function = "test"
   path = "/test"
 
-[functions."og"]
-  included_files = ["fonts/brandon_bld-webfont.woff","_data/courses/**.yml", "_data/take5/**.yml", "_data/workshops/**.yml", "_data/webinars/**.yml"]
+# [functions."og"]
+#   included_files = ["fonts/brandon_bld-webfont.woff","_data/courses/**.yml", "_data/take5/**.yml", "_data/workshops/**.yml", "_data/webinars/**.yml"]
 
-[functions."test"]
-  included_files = ["fonts/brandon_bld-webfont.woff","_data/courses/**.yml", "_data/take5/**.yml", "_data/workshops/**.yml", "_data/webinars/**.yml"]
+# [functions."test"]
+#   included_files = ["fonts/brandon_bld-webfont.woff","_data/courses/**.yml", "_data/take5/**.yml", "_data/workshops/**.yml", "_data/webinars/**.yml"]
 
 # dev branch build
 # https://dev--gymcms.netlify.com/
