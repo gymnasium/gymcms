@@ -29,6 +29,9 @@ edge_functions = ".netlify/functions"
   function = "og"
   path = "/og-image"
 
+[functions."og"]
+  included_files = ["_data/courses/**.yml", "_data/take5/**.yml", "_data/workshops/**.yml", "_data/webinars/**.yml"]
+
 # dev branch build
 # https://dev--gymcms.netlify.com/
 [context.dev]
