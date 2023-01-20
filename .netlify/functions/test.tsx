@@ -1,9 +1,7 @@
 import React from "https://esm.sh/react@18.2.0";
 import { ImageResponse } from 'https://deno.land/x/og_edge/mod.ts'
 
-const fontUrl = new URL(`https://deploy-preview-832--thegymcms.netlify.app/fonts/brandon_bld-webfont.woff`, import.meta.url);
-
-const font = fetch(fontUrl).then(
+const font = fetch('https://deploy-preview-832--thegymcms.netlify.app/fonts/brandon_bld-webfont.woff').then(
   (res) => res.arrayBuffer(),
 );
 
