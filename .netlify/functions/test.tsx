@@ -1,19 +1,20 @@
 import React from "https://esm.sh/react@18.2.0";
 import { ImageResponse } from 'https://deno.land/x/og_edge/mod.ts'
-// import { serve } from "https://deno.land/std/http/server.ts";
 
-// const font = fetch('http://localhost:8888/fonts/brandon_bld-webfont.woff').then(
-//   (res) => res.arrayBuffer(),
-// );
 function Uint8ArrayToArrayBuffer(array: Uint8Array): ArrayBuffer {
   return array.buffer.slice(array.byteOffset, array.byteLength + array.byteOffset);
 }
 
 export default async function handler(req: Request) {
   try {
-    const font = await Deno.readFile(`./fonts/brandon_bld-webfont.woff`);
-    const buffer = Uint8ArrayToArrayBuffer(font);
-    const fontData = await buffer;
+    const font = fetch('https://thegymcms.com/fonts/brandon_bld-webfont.woff').then(
+      (res) => res.arrayBuffer(),
+    );
+
+    // const font = await Deno.readFile(`./fonts/brandon_bld-webfont.woff`);
+    // const buffer = Uint8ArrayToArrayBuffer(font);
+    const fontData = await font;
+
     const url = new URL(req.url);
     const params:any = new URLSearchParams(url.search);
 
