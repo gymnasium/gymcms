@@ -1,13 +1,18 @@
-import React from "https://esm.sh/react@18.2.0";
+import React from "https://esm.sh/react";
 import { ImageResponse } from 'https://deno.land/x/og_edge/mod.ts'
+import { Context } from "https://edge.netlify.com";
 
 function Uint8ArrayToArrayBuffer(array: Uint8Array): ArrayBuffer {
   return array.buffer.slice(array.byteOffset, array.byteLength + array.byteOffset);
 }
 
-export default async function handler(req: Request) {
+export default async (req: Request, context: Context) => {
   try {
-    const font = fetch('https://thegymcms.com/fonts/brandon_bld-webfont.woff').then(
+    const headers= req.headers;
+    const domain = headers.get('host');
+    const protocol = req.url.split(':')[0];
+
+    const font = fetch(`${protocol}://${domain}/fonts/brandon_bld-webfont.woff`).then(
       (res) => res.arrayBuffer(),
     );
 
