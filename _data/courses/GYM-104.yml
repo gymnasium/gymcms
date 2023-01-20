@@ -6,6 +6,7 @@ course_type: full
 live: true
 url: /courses/GYM/104/0/about
 poster_art: /img/course-artwork/png/gym-104.png
+img_bg_color: 764c9f
 topic: "Development"
 subtopics:
   - label: "JavaScript"
