@@ -8,20 +8,25 @@ function Uint8ArrayToArrayBuffer(array: Uint8Array): ArrayBuffer {
 
 export default async (req: Request, context: Context) => {
   try {
-    const headers= req.headers;
-    const domain = headers.get('host');
-    const protocol = req.url.split(':')[0];
+    const url = new URL(req.url);
+    const params:any = new URLSearchParams(url.search);
+    let fontData:any;
 
-    const font = fetch(`${protocol}://${domain}/fonts/brandon_bld-webfont.woff`).then(
-      (res) => res.arrayBuffer(),
-    );
+    try {
+      fontData = await fetch(`${url.origin}/fonts/brandon_bld-webfont.woff`).then(
+        (res) => res.arrayBuffer(),
+      );
+    } catch(e:any) {
+      console.log(`${e.message}`);
+      return new Response(`Failed to get font`, {
+        status: 500,
+      });
+    }
+    
 
     // const font = await Deno.readFile(`./fonts/brandon_bld-webfont.woff`);
     // const buffer = Uint8ArrayToArrayBuffer(font);
-    const fontData = await font;
 
-    const url = new URL(req.url);
-    const params:any = new URLSearchParams(url.search);
 
     // ?title=<title>
     const hasTitle = params.has("title");
