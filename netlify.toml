@@ -25,9 +25,9 @@
 [build]
 edge_functions = ".netlify/functions"
 
-[[edge_functions]]
-  function = "og"
-  path = "/og-image"
+# [[edge_functions]]
+#   function = "og"
+#   path = "/og-image"
 
 [[edge_functions]]
   function = "test"
