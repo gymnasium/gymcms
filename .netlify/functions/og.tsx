@@ -19,7 +19,10 @@ import {
 // $gym-purple: #764c9f;
 // $gym-teal: #5ca5a0;
 
-const fontUrl = new URL(`file://${Deno.cwd()}/fonts/brandon_bld-webfont.woff`, import.meta.url);
+const __dirname = new URL('.', import.meta.url).pathname;
+const __root = `${__dirname}../../`;
+
+const fontUrl = new URL(`${__root}fonts/brandon_bld-webfont.woff`, import.meta.url);
 
 const font = fetch(fontUrl).then(
   (res) => res.arrayBuffer(),
@@ -74,7 +77,7 @@ async function loadDataFile(id: string) {
   try {
     const yaml = yamlParseAll(await Deno.readTextFile(`./_data/${fullPath}`));
     const data = yaml[0];
-    const ogTitle = data['title'] ? data['title'] : null;
+    const title = data['title'] ? data['title'] : null;
     const topic = data['topic'] ? data['topic'] : null;
     const type = data['course_type'] ? data['course_type'] : null;
     const imgBgColor = data['img_bg_color'] ? data['img_bg_color'] : null;
@@ -83,7 +86,7 @@ async function loadDataFile(id: string) {
     
     // console.log(data);
 
-    return {ogTitle, topic, imgBgColor, bgColor, img, type};
+    return {title, topic, imgBgColor, bgColor, img, type};
 
   } catch(err) {
     console.error(err);
@@ -91,9 +94,19 @@ async function loadDataFile(id: string) {
 }
 
 // TODO: get meta data file from path (for static pages without data files)
-// async function loadMetaData(path: string) {
-//   // TODO
-// }
+async function loadMetaData(path: string) {
+
+  if (path) {
+    const metaPath = path.replaceAll('"','');
+    console.log(`metaPath: ${metaPath}`);
+    try {
+      const md = await Deno.readTextFile(`.${metaPath}`);
+      return md;
+    } catch(err) {
+      console.error(err);
+    }
+  }
+}
 
 // async function loadMetaTitle(url: string) {
 //   // const resp = await fetch(url);
@@ -121,6 +134,7 @@ export default async function handler(req: Request) {
   const url = new URL(req.url);
   const params:any = new URLSearchParams(url.search);
   const id = params.get('id') ?? null;
+  const metaPath = params.get('metapath') ?? null;
   let bgColor = params.get('bg') ?? '222';
   let imgBgColor = params.get('imgbg') ?? '222';
   const courseNum: any = params.get('courseNum') ?? false;
@@ -129,7 +143,7 @@ export default async function handler(req: Request) {
   let footerText = params.get('footer') ?? 'thegymnasium.com';
   // const pubDate = params.get('pubDate') ?? new Date().toISOString();
   let imgPath: any;
-  let metaPath: any;
+  let title: any;
   let type: any;
   let metaData: any;
   let hideFooter: boolean = false;
@@ -185,10 +199,23 @@ export default async function handler(req: Request) {
       if (metaData.bgColor) {
         bgColor = metaData.bgColor;
       }
+
+      if (metaData.type) {
+        type = metaData.type;
+      }
+      
+      if (metaData.title) {
+        title = metaData.title;
+      }
       
     } catch(err) {
       console.error(err);
     }
+  }
+
+  if (metaPath) {
+    metaData = await loadMetaData(metaPath);
+    console.log(`metaData from meta file: ${metaData}`)
   }
 
   // defaults
@@ -211,30 +238,17 @@ export default async function handler(req: Request) {
   let wrapperAlign = 'center';
   let wrapperJustify = 'center';
 
-  // Allow override of title via url params
-  let title;
-
   // Permit hiding the footer (?footer=false)
   if (hideFooter === true) {
     footerDisplay = 'none';
   }
 
   let imgUrl;
+
   if (imgPath) {
-    imgUrl = `file://${Deno.cwd()}${imgPath}`;
+    imgUrl = `file://${__root}${imgPath}`;
   }
   
-  if (metaData) {
-    if (metaData.type) {
-      type = metaData.type;
-    }
-    
-    if (metaData.title) {
-      title = metaData.ogTitle;
-    }
-    
-  }
-
   if (params.get('title')) {
     title = params.get('title')
   }
