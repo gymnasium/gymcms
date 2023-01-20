@@ -77,19 +77,22 @@ async function loadDataFile(id: string) {
   try {
     const yaml = yamlParseAll(await Deno.readTextFile(`./_data/${fullPath}`));
     const data = yaml[0];
-    const title = data['title'] ? data['title'] : null;
-    const topic = data['topic'] ? data['topic'] : null;
-    const type = data['course_type'] ? data['course_type'] : null;
-    const imgBgColor = data['img_bg_color'] ? data['img_bg_color'] : null;
-    const bgColor = data['bg_color'] ? data['bg_color'] : null;
-    const img = data['poster_art'] ? data['poster_art'] : 'none';
+    const title = data['title'] ?? null;
+    const topic = data['topic'] ?? null;
+    const type = data['course_type'] ?? null;
+    const imgBgColor = data['img_bg_color'] ?? null;
+    const bgColor = data['bg_color'] ?? null;
+    const img = data['poster_art'] ?? 'none';
     
     // console.log(data);
 
     return {title, topic, imgBgColor, bgColor, img, type};
 
-  } catch(err) {
-    console.error(err);
+  } catch(e: any) {
+    console.warn(`${e.message}`);
+    return new Response(`Failed loading data file.`, {
+      status: 500,
+    });
   }
 }
 
@@ -97,13 +100,27 @@ async function loadDataFile(id: string) {
 async function loadMetaData(path: string) {
 
   if (path) {
-    const metaPath = path.replaceAll('"','');
+    path = path.replace(/['"]+/g, '');
+    const metaPath = `${path}meta.md`;
     console.log(`metaPath: ${metaPath}`);
     try {
-      const md = await Deno.readTextFile(`.${metaPath}`);
-      return md;
-    } catch(err) {
-      console.error(err);
+      const yaml = yamlParseAll(await Deno.readTextFile(`.${metaPath}`));
+      const data = yaml[0];
+      const title = data['og_title'] ?? null;
+      const topic = data['topic'] ?? null;
+      const type = 'static';
+      const imgBgColor = data['img_bg_color'] ?? null;
+      const bgColor = data['bg_color'] ?? null;
+      const img = data['poster_art'] ?? null;
+      
+      console.log(data);
+  
+      return {title, topic, imgBgColor, bgColor, img, type};
+    } catch(e: any) {
+      console.warn(`${e.message}`);
+      return new Response(`Failed loading meta file.`, {
+        status: 500,
+      });
     }
   }
 }
@@ -181,41 +198,53 @@ export default async function handler(req: Request) {
     try {
       metaData = await loadDataFile(`gym-${courseNum}`);
       imgPath = metaData.img;
-    } catch(err) {
-      console.error(err);
+    } catch(e: any) {
+      console.warn(`${e.message}`);
+      return new Response(`Invalid course number (course data not found)`, {
+        status: 500,
+      });
     }
   }
 
   // TODO: refactor courseNum to use id
   if (id) {
     try {
-      metaData = await loadDataFile(id);
-      if (metaData.img) {
-        imgPath = metaData.img;
-      }
-      if (metaData.imgBgColor) {
-        imgBgColor = metaData.imgBgColor;
-      }
-      if (metaData.bgColor) {
-        bgColor = metaData.bgColor;
-      }
-
-      if (metaData.type) {
-        type = metaData.type;
-      }
-      
-      if (metaData.title) {
-        title = metaData.title;
-      }
-      
-    } catch(err) {
-      console.error(err);
+      metaData = await loadDataFile(id);      
+    } catch(e: any) {
+      console.warn(`${e.message}`);
+      return new Response(`Invalid id (data file not found)`, {
+        status: 500,
+      });
     }
   }
 
   if (metaPath) {
-    metaData = await loadMetaData(metaPath);
-    console.log(`metaData from meta file: ${metaData}`)
+    try {
+      metaData = await loadMetaData(metaPath);     
+    } catch(e: any) {
+      console.warn(`${e.message}`);
+      return new Response(`Invalid meta path (file not found)`, {
+        status: 500,
+      });
+    }
+  }
+
+  if (metaData) {
+    if (metaData.img) {
+      imgPath = metaData.img;
+    }
+    if (metaData.imgBgColor) {
+      imgBgColor = metaData.imgBgColor;
+    }
+    if (metaData.bgColor) {
+      bgColor = metaData.bgColor;
+    }
+    if (metaData.type) {
+      type = metaData.type;
+    }
+    if (metaData.title) {
+      title = metaData.title;
+    }
   }
 
   // defaults
