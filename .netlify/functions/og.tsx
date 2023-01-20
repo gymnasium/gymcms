@@ -18,9 +18,8 @@ import {
 // $gym-magenta: #d73158;
 // $gym-purple: #764c9f;
 // $gym-teal: #5ca5a0;
-console.log(`cwd: ${Deno.cwd()}`);
 
-const fontUrl = new URL(`${Deno.cwd()}/fonts/brandon_bld-webfont.woff`, import.meta.url);
+const fontUrl = new URL(`file://${Deno.cwd()}/fonts/brandon_bld-webfont.woff`, import.meta.url);
 
 const font = fetch(fontUrl).then(
   (res) => res.arrayBuffer(),
