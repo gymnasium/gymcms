@@ -12,17 +12,18 @@ export default async (req: Request, context: Context) => {
     const params:any = new URLSearchParams(url.search);
     let fontData:any;
 
-    try {
-      fontData = await fetch(`${url.origin}/fonts/brandon_bld-webfont.woff`).then(
-        (res) => res.arrayBuffer(),
-      );
-    } catch(e:any) {
-      console.log(`${e.message}`);
-      return new Response(`Failed to get font`, {
-        status: 500,
-      });
-    }
-    
+    const origin = url.origin;
+
+    // try {
+    //   fontData = await fetch(`https://thegymcms.com/fonts/brandon_bld-webfont.woff`).then(
+    //     (res) => res.arrayBuffer(),
+    //   );
+    // } catch(e:any) {
+    //   console.log(`${e.message}`);
+    //   return new Response(`Failed to get font`, {
+    //     status: 500,
+    //   });
+    // }
 
     // const font = await Deno.readFile(`./fonts/brandon_bld-webfont.woff`);
     // const buffer = Uint8ArrayToArrayBuffer(font);
@@ -85,13 +86,13 @@ export default async (req: Request, context: Context) => {
       {
         width: 1200,
         height: 630,
-        fonts: [
-          {
-            name: 'brandon-grotesque',
-            data: fontData,
-            style: 'normal',
-          }
-        ],
+        // fonts: [
+        //   {
+        //     name: 'brandon-grotesque',
+        //     data: fontData,
+        //     style: 'normal',
+        //   }
+        // ],
       },
     );
   } catch (e: any) {
