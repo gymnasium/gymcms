@@ -9,13 +9,10 @@ function Uint8ArrayToArrayBuffer(array: Uint8Array): ArrayBuffer {
   return array.buffer.slice(array.byteOffset, array.byteLength + array.byteOffset);
 }
 
-const __root = Deno.cwd();
-
-const font = await Deno.readFile(`${__root}/fonts/brandon_bld-webfont.woff`);
-const buffer = Uint8ArrayToArrayBuffer(font);
-
 export default async function handler(req: Request) {
   try {
+    const font = await Deno.readFile(`./fonts/brandon_bld-webfont.woff`);
+    const buffer = Uint8ArrayToArrayBuffer(font);
     const fontData = await buffer;
     const url = new URL(req.url);
     const params:any = new URLSearchParams(url.search);
