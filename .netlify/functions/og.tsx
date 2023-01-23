@@ -7,15 +7,6 @@ import { DOMParser } from 'https://deno.land/x/deno_dom/deno-dom-wasm.ts';
 // $gym-purple: #764c9f;
 // $gym-teal: #5ca5a0;
 
-// TODO: Change URL to production before release
-const domain = 'https://deploy-preview-851--thegymcms.netlify.app';
-
-const brandon = new URL(`${domain}/fonts/brandon_bld-webfont.woff`, import.meta.url);
-
-const font = fetch(brandon).then(
-  (res) => res.arrayBuffer(),
-);
-
 async function loadMetaTitle(url: string) {
   const resp = await fetch(url);
   const html = await resp.text();
@@ -35,9 +26,16 @@ function aspectRatio(width:number, height:number, newWidth:number) {
 }
 
 export default async function handler(req: Request) {
+  const url = new URL(req.url);
+  const domain = url.origin;
+  const brandon = new URL(`${domain}/fonts/brandon_bld-webfont.woff`);
+
+  const font = fetch(brandon).then(
+    (res) => res.arrayBuffer(),
+  );
+
   const fontData = await font;
   // Get the query parameters from the request
-  const url = new URL(req.url);
   const params:any = new URLSearchParams(url.search);
   const bgColor = params.get('bg') ?? '222';
   const imgBgColor = params.get('imgbg') ?? '222';
