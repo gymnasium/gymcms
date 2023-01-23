@@ -8,7 +8,7 @@ import { DOMParser } from 'https://deno.land/x/deno_dom/deno-dom-wasm.ts';
 // $gym-teal: #5ca5a0;
 
 // TODO: Change URL to production before release
-const domain = 'https://deploy-preview-832--thegymcms.netlify.app';
+const domain = 'https://deploy-preview-851--thegymcms.netlify.app';
 
 const brandon = new URL(`${domain}/fonts/brandon_bld-webfont.woff`, import.meta.url);
 
