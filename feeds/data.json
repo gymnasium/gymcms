@@ -33,7 +33,7 @@ permalink: /feeds/data.json
         "title": "{{ item.title }}",
         "type": "{{ item.course_type }}",
         "topic": "{{ item.topic }}",
-        "img": "{{ item.poster_art | replace: 'png', 'svg' }}",
+        "img": "{{ item.poster_art }}",
         "img_offset": "{{ item.img_offset }}",
         "img_bg_color": "{{ item.img_bg_color }}",
         "bg_color": "{{ item.bg_color }}"
@@ -49,7 +49,7 @@ permalink: /feeds/data.json
         "title": "{{ item.title }}",
         "type": "{{ item.course_type }}",
         "topic": "{{ item.topic }}",
-        "img": "{{ item.poster_art }}",
+        "img": "{{ item.poster_art | replace: '.jpg', '-hero.jpg' }}",
         "img_offset": "{{ item.img_offset }}",
         "img_bg_color": "{{ item.img_bg_color }}",
         "bg_color": "{{ item.bg_color }}"
