@@ -5,6 +5,9 @@ date: 2020-02-03T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5026/
 poster_art: /img/take5/posters/gym-5026.jpg
+img_bg_color:
+img_offset:
+bg_color: d73158
 live: true
 instructor: "Mike Bifulco"
 instructor_bio: "Developer Advocate at Stripe"
