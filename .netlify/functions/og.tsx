@@ -32,16 +32,26 @@ async function getData(domain: string, id:string) {
 }
 
 // Calculate aspect ratio of a resized image, assuming one knows the initial dimensions
-async function newImgHeight(width:number, height:number, newDimension:number) {
-  let ratio = height/width;
+async function aspectRatio(width:number, height:number, dimension:{type: string,value: number}) {
+  let ratio: any;
 
-  return newDimension * ratio; 
-}
-// TODO: combine these into one
-async function newImgWidth(width:number, height:number, newDimension:number) {
-  let ratio = width/height;
-
-  return newDimension * ratio; 
+  try {
+    if (dimension.type === 'width') {
+      // return a width
+      ratio = width/height;
+    } else if (dimension.type === 'height') {
+      // return a height
+      ratio = height/width;
+    } else {
+      throw new Error('dimension.type must be `width` or `height`!');
+    }
+  } catch(e:any) {
+    console.warn(`${e.message}`);
+    return new Response(`Failed to calculate aspect ratio.`, {
+      status: 500,
+    });
+  }
+  return dimension.value * ratio; 
 }
 
 export default async function handler(req: Request) {
@@ -170,7 +180,8 @@ export default async function handler(req: Request) {
     logoWidth = 300;
 
     if (type === 'take5') {
-      let iconWidth = await newImgWidth(1920,1080,wrapperHeight);
+      // let iconWidth = await newImgWidth(1920,1080,wrapperHeight);
+      let iconWidth = await aspectRatio(1920,1080,{type:'width',value:wrapperHeight});
 
       bgSize = `${iconWidth}px ${wrapperHeight}px`;
 
@@ -178,7 +189,7 @@ export default async function handler(req: Request) {
       titleFontSize = 90;
       footerColor = 'ccc';
       contentJustify = 'space-between';
-      bgPos = `-${imgOffset}px 0px`;
+      bgPos = imgOffset ? `-${imgOffset}px 0px` : '0 0';
       footerCase = 'uppercase';
       logoDisplay = 'none';
       headerDisplay = 'flex';
@@ -189,7 +200,7 @@ export default async function handler(req: Request) {
     } else {
       // calculate aspect ratio for proportional resizing
       const iconWidth = 516;
-      let iconHeight = await newImgHeight(574,488,iconWidth);
+      let iconHeight:any = await aspectRatio(574,488,{type:'height',value:iconWidth});
       const iconVOffset = (wrapperHeight - iconHeight)/2;
 
       bgSize = `${iconWidth}px ${iconHeight}px`;
