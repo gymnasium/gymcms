@@ -74,18 +74,34 @@ permalink: /feeds/data.json
       }
       {%- if forloop.index != forloop.length -%},{%- endif -%}
     {%- endfor -%}
-  ]
-  {%- assign sortedpages = site.pages | where_exp: 'page', "page.url contains '/courses/'" | sort: "url" -%}
+  ],
 
-  {%-comment-%}
+  {%- assign sortedpages = site.pages | where_exp: 'page', "page.permalink contains '/meta/'" | sort: "url" -%}
+  {%- assign filtered_pages = ""  | split: ", " -%}
+  {%- for page in sortedpages -%}
+    {%- unless page.permalink contains '/courses/' or page.permalink contains '/webinars/' -%}
+      {%- assign filtered_pages = filtered_pages | push: page -%}
+    {%- endunless -%}
+  {%- endfor -%}
+
   "static":[
-    {%- for page in sortedpages -%}
-      {%- if page.url contains '/meta/' -%}
-        {{ page | replace: "=>", ":" }}
-      {%- endif -%}
+    {%- for page in filtered_pages -%}
+      {%- comment -%}
+      {{ page | replace: "=>", ":" }}
+      {%- endcomment -%}
+      {
+        "path": "{{ page.permalink }}",
+        "title": "{{ page.og_title }}",
+        "type": "static",
+        "topic": "",
+        "img": "",
+        "img_offset": "",
+        "img_bg_color": "",
+        "bg_color": ""
+      }
+      {%- if forloop.index != forloop.length -%},{%- endif -%}
     {%- endfor -%}
   ]
-  {%-endcomment-%}
 }
 {%- else -%}
 {"error": "no JSON feed found!"}
