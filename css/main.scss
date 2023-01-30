@@ -1009,6 +1009,21 @@ Footer CSS (migrated from footer.scss)
       }
     }
 
+    .social {
+      a:hover:after,
+      a:focus:after,
+      a:active:after {
+        display: inline-block;
+        content: "";
+        line-height: 0;
+        vertical-align: middle;
+        border: 0.375em dashed transparent;
+        border-left-color: $gym-orange;
+        border-right: 0 none;
+        margin-left: 0.25em;
+      }
+    }
+
     ul {
       list-style: none;
       padding-left: 0;
