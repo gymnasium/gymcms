@@ -971,7 +971,7 @@ Footer CSS (migrated from footer.scss)
         font-size: 1em;
         line-height: 1.55;
         margin-top: 1.2em;
-        @include breakpoint(medium, min) {
+        @include breakpoint(74em, min) {
           & {
             max-width: 24rem;
           }
@@ -989,19 +989,23 @@ Footer CSS (migrated from footer.scss)
       }
     }
 
-    @include breakpoint(medium, min) {
-      .what-we-do,
-      .collections {
-        margin-left: -1.2em;
-        margin-right: -1em;
+    .col {
+      float: left;
+      padding-left: 15px;
+      padding-right: 15px;
+      &:not(affiliated-sites) {
+        margin-right: 15px;
       }
-      .resources,
-      .social {
-        margin-left: -1em;
-      }
-      .affiliated-sites {
-        margin-left: 0.6em;
-        margin-right: -1em;
+    }
+
+    .resources {
+      max-width: 10em;
+    }
+
+    @include breakpoint(74em, max) {
+      .brand {
+        float: none;
+        margin-bottom: 25px;
       }
     }
 
