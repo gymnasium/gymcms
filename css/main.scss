@@ -971,7 +971,7 @@ Footer CSS (migrated from footer.scss)
         font-size: 1em;
         line-height: 1.55;
         margin-top: 1.2em;
-        @include breakpoint(74em, min) {
+        @include breakpoint(large, min) {
           & {
             max-width: 24rem;
           }
@@ -1002,7 +1002,7 @@ Footer CSS (migrated from footer.scss)
       max-width: 10em;
     }
 
-    @include breakpoint(74em, max) {
+    @include breakpoint(large, max) {
       .brand {
         float: none;
         margin-bottom: 25px;
