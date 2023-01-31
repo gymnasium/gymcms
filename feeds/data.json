@@ -82,6 +82,9 @@ permalink: /feeds/data.json
     {%- unless page.permalink contains '/courses/' or page.permalink contains '/webinars/' or page.permalink contains '/tests/' -%}
       {%- assign filtered_pages = filtered_pages | push: page -%}
     {%- endunless -%}
+    {%-if page.permalink == '/courses/meta/' or page.permalink == '/webinars/meta/' -%}
+      {%- assign filtered_pages = filtered_pages | push: page -%}
+    {%- endif -%}
   {%- endfor -%}
 
   "static":[
