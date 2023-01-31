@@ -77,19 +77,23 @@ permalink: /feeds/data.json
   ],
 
   {%- assign sortedpages = site.pages | where_exp: 'page', "page.permalink contains '/meta/'" | sort: "url" -%}
-  {%- assign filtered_pages = ""  | split: ", " -%}
+  {%- assign filtered_pages = "" | split: ", " -%}
   {%- for page in sortedpages -%}
-    {%- unless page.permalink contains '/courses/' or page.permalink contains '/webinars/' -%}
+    {%- unless page.permalink contains '/courses/' or page.permalink contains '/webinars/' or page.permalink contains '/tests/' -%}
       {%- assign filtered_pages = filtered_pages | push: page -%}
     {%- endunless -%}
   {%- endfor -%}
 
   "static":[
     {%- for page in filtered_pages -%}
-      {%- comment -%}
-      {{ page | replace: "=>", ":" }}
-      {%- endcomment -%}
       {
+        "id": "",
+        "data": [{
+          {%- for item in page -%}
+            "{{item[0] | JSON }}": "{{item[1] | JSON }}"
+            {%- if forloop.index != forloop.length -%},{%- endif -%}
+          {%- endfor -%}
+        }],
         "path": "{{ page.permalink }}",
         "title": "{{ page.og_title }}",
         "type": "static",
