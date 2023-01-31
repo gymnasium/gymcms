@@ -31,7 +31,7 @@ async function getData(domain: string, id:any, path:any) {
       
       Object.entries(data[type]).map(obj => {
         const item:any = obj[1];
-        
+
         if (path === item['path'].toLowerCase()) {
           itemData = item;
         }
@@ -207,6 +207,8 @@ export default async function handler(req: Request) {
   if (path) {
     contentAlign = 'flex-start';
     contentJustify = 'space-between';
+    wrapperJustify = 'space-between';
+    logoWidth = 400;
   }
   
   if (imgUrl) {
