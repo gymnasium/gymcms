@@ -198,6 +198,7 @@ export default async function handler(req: Request) {
     title = params.get('title')
   }
 
+  // TODO: something to calculate number of words to apply font size adjustments?
   let numWords:number;
 
   if (title) {
@@ -240,9 +241,7 @@ export default async function handler(req: Request) {
         footerText = topic;
       }
 
-
-      console.log(numWords);
-
+      // TODO: improve logic for font size, based on sentence length
       if (title.length >= 50) {
         titleFontSize = titleFontSize * 0.80;
       } else if (title.length >= 40) {
@@ -250,8 +249,6 @@ export default async function handler(req: Request) {
       } else {
         titleFontSize = titleFontSize;
       }
-
-      console.log(titleFontSize);
     } else {
       // calculate aspect ratio for proportional resizing
       const iconWidth = 516;
