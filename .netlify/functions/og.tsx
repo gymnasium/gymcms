@@ -2,25 +2,41 @@ import React from 'https://esm.sh/react@18.2.0';
 import { ImageResponse } from 'https://deno.land/x/og_edge/mod.ts';
 
 // Parse Data File
-async function getData(domain: string, id:string) {
+async function getData(domain: string, id:any, path:any) {
   try {
     const JSON = await fetch(`${domain}/feeds/data.json`);
     const data = await JSON.json();
+    id = id ? id.toLowerCase(): null;
+    path = path ? `/${path.toLowerCase()}/meta/`: null;
     let itemData: any;
+    let type: any;
 
-    let type = 'courses';
-
-    if (id.toLowerCase().startsWith('web')) {
-      type = 'webinars';
-    }
-
-    Object.entries(data[type]).map(obj => {
-      const item:any = obj[1];
-
-      if (id.toLowerCase() === item['id'].toLowerCase()) {
-        itemData = item;
+    if (id) {
+      if (id.startsWith('web')) {
+        type = 'webinars';
+      } else if (id.startsWith('gym-')) {
+        type = 'courses';
       }
-    });
+  
+      Object.entries(data[type]).map(obj => {
+        const item:any = obj[1];
+
+        if (id === item['id'].toLowerCase()) {
+          itemData = item;
+        }
+      });
+
+    } else if (path) {
+      type = 'static';
+      
+      Object.entries(data[type]).map(obj => {
+        const item:any = obj[1];
+        
+        if (path === item['path'].toLowerCase()) {
+          itemData = item;
+        }
+      });
+    }
 
     return itemData;
   } catch(e:any) {
@@ -66,6 +82,7 @@ export default async function handler(req: Request) {
   // Get the query parameters from the request
   const params:any = new URLSearchParams(url.search);
   const id = params.get('id') ?? null;
+  const path = params.get('path') ?? null;
   let bgColor = params.get('bg') ?? '222';
   let imgBgColor = params.get('imgbg') ?? '222';
   let imgOffset:any = Math.abs(params.get('offset')) ?? 0;
@@ -90,13 +107,25 @@ export default async function handler(req: Request) {
     hideFooter = true;
   }
 
-  // TODO: refactor courseNum to use id
+  // have id?
   if (id) {
     try {
-      metaData = await getData(domain, id);
+      metaData = await getData(domain, id, null);
     } catch(e: any) {
       console.warn(`${e.message}`);
       return new Response(`Invalid id (data file not found)`, {
+        status: 500,
+      });
+    }
+  }
+
+  // have path?
+  if (path) {
+    try {
+      metaData = await getData(domain, null, path);
+    } catch(e: any) {
+      console.warn(`${e.message}`);
+      return new Response(`Invalid path (data not found)`, {
         status: 500,
       });
     }
@@ -168,6 +197,17 @@ export default async function handler(req: Request) {
   if (params.get('title')) {
     title = params.get('title')
   }
+
+  let numWords:number;
+
+  if (title) {
+    numWords = title.split(' ').length;
+  }
+
+  if (path) {
+    contentAlign = 'flex-start';
+    contentJustify = 'space-between';
+  }
   
   if (imgUrl) {
     // General defaults + some take 5 settings
@@ -184,10 +224,10 @@ export default async function handler(req: Request) {
       let iconWidth = await aspectRatio(1920,1080,{type:'width',value:wrapperHeight});
 
       bgSize = `${iconWidth}px ${wrapperHeight}px`;
-
+      titleFontSize = 80;
       imgWidth = 320;
-      titleFontSize = 90;
       footerColor = 'ccc';
+      contentAlign = 'flex-start';
       contentJustify = 'space-between';
       bgPos = imgOffset ? `-${imgOffset}px 0px` : '0 0';
       footerCase = 'uppercase';
@@ -197,6 +237,19 @@ export default async function handler(req: Request) {
       if (topic) {
         footerText = topic;
       }
+
+
+      console.log(numWords);
+
+      if (title.length >= 50) {
+        titleFontSize = titleFontSize * 0.80;
+      } else if (title.length >= 40) {
+        titleFontSize = titleFontSize * 0.90;
+      } else {
+        titleFontSize = titleFontSize;
+      }
+
+      console.log(titleFontSize);
     } else {
       // calculate aspect ratio for proportional resizing
       const iconWidth = 516;
@@ -263,17 +316,20 @@ export default async function handler(req: Request) {
     backgroundColor: `${bgColor}`,
     width: `${contentWidth}px`,
     height: '100%',
+    lineHeight: 1,
   }
 
   let CONFIG_TITLE = {
     color: '#fff',
     textTransform: 'uppercase',
     fontSize: titleFontSize,
+    lineHeight: 1,
   }
 
   let CONFIG_HEADER = {
     color: '#000',
     display: `${headerDisplay}`,
+    lineHeight: 1,
   }
 
   let CONFIG_LOGO = {
@@ -285,6 +341,7 @@ export default async function handler(req: Request) {
     color: `#${footerColor}`,
     textTransform: `${footerCase}`,
     display: `${footerDisplay}`,
+    lineHeight: 1,
   }
 
   if (debug) {
