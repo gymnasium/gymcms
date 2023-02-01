@@ -935,6 +935,10 @@ https://github.com/gymnasium/tracker/issues/40
   margin-left: -1.4em;
 }
 
+
+@import 'components/footer';
+
+
 // Retired course announcement(s)
 
 .message-banner {
@@ -1150,9 +1154,6 @@ aside.system-status {
     }
   }
 }
-
-
-@import 'components/footer';
 
 // Jobs module
 @import "components/jobs";
