@@ -233,7 +233,7 @@ export default async function handler(req: Request) {
       imgWidth = 320;
       footerColor = 'ccc';
       contentAlign = 'flex-start';
-      contentJustify = 'flex-start';
+      contentJustify = 'space-between';
       bgPos = imgOffset ? `-${imgOffset}px 0px` : '0 0';
       footerCase = 'uppercase';
       logoDisplay = 'none';
