@@ -6,7 +6,7 @@ course_type: take5
 url: /courses/take5/GYM-5020/
 poster_art: /img/take5/posters/gym-5020.jpg
 img_bg_color:
-img_offset:
+img_offset: 365
 bg_color: 2c9959
 live: true
 instructor: "Lee Andrese"
