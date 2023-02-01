@@ -171,6 +171,7 @@ export default async function handler(req: Request) {
   let bgImg = 'none';
   let bgSize = 'contain';
   let bgPos = '0 0';
+  let contentBorderLeft = 'none';
   let contentAlign = 'center';
   let contentJustify = 'center';
   let footerCase = 'initial';
@@ -228,10 +229,11 @@ export default async function handler(req: Request) {
 
       bgSize = `${iconWidth}px ${wrapperHeight}px`;
       titleFontSize = 80;
+      contentBorderLeft = '2px solid #ccc';
       imgWidth = 320;
       footerColor = 'ccc';
       contentAlign = 'flex-start';
-      contentJustify = 'space-between';
+      contentJustify = 'flex-start';
       bgPos = imgOffset ? `-${imgOffset}px 0px` : '0 0';
       footerCase = 'uppercase';
       logoDisplay = 'none';
@@ -306,6 +308,7 @@ export default async function handler(req: Request) {
   }
 
   let CONFIG_CONTENT = {
+    borderLeft: `${contentBorderLeft}`,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: `${contentJustify}`,
