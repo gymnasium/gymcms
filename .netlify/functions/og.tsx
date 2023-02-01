@@ -245,12 +245,19 @@ export default async function handler(req: Request) {
 
       // TODO: improve logic for font size, based on sentence length
       if (title.length >= 50) {
+        titleFontSize = titleFontSize * 0.75;
+      } else if (title.length >= 45) {
         titleFontSize = titleFontSize * 0.80;
       } else if (title.length >= 40) {
+        titleFontSize = titleFontSize * 0.85;
+      } else if (title.length >= 35) {
         titleFontSize = titleFontSize * 0.90;
       } else {
         titleFontSize = titleFontSize;
       }
+
+      console.log(title.length, titleFontSize);
+
     } else {
       // calculate aspect ratio for proportional resizing
       const iconWidth = 516;
