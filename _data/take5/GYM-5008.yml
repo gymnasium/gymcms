@@ -6,7 +6,7 @@ course_type: take5
 url: /courses/take5/GYM-5008/
 poster_art: /img/take5/posters/gym-5008.jpg
 img_bg_color:
-img_offset:
+img_offset: 335
 bg_color: 5ca5a0
 live: true
 instructor: "Heather O’Neill"

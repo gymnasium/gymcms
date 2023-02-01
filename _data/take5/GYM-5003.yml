@@ -6,7 +6,7 @@ course_type: take5
 url: /courses/take5/GYM-5003/
 poster_art: /img/take5/posters/gym-5003.jpg
 img_bg_color:
-img_offset:
+img_offset: 315
 bg_color: d73158
 live: true
 instructor: "Jeremy Osborn"
