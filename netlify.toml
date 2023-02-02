@@ -7,6 +7,10 @@
     [headers.values]
     Access-Control-Allow-Origin = "*"
 [[headers]]
+  for = "/manifest.json"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+[[headers]]
   for = "*.js"
   [headers.values] # cache for 1 year
     Access-Control-Allow-Origin = "*"
