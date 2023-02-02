@@ -1,4 +1,4 @@
-{%- assign jobs_endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl -%}
+{%- assign jobs_endpoint = "/apps/gym/jobs.json" | prepend: site.gymurl -%}
 {%- assign jobs_fallback = "/feeds/jobs.json" | prepend: site.url -%}
 
 {%- if site.environment == "local" -%}
