@@ -374,7 +374,7 @@ export default async function handler(req: Request) {
     );
   }
 
-  const layout1 = (
+  const defaultLayout = (
     <div style={CONFIG_WRAPPER}>
       <figure style={CONFIG_IMG}></figure>
       <section style={CONFIG_CONTENT}>
@@ -386,9 +386,19 @@ export default async function handler(req: Request) {
     </div>
   );
 
+  const logoOnlyLayout = (
+    <div style={CONFIG_WRAPPER}>
+      <section style={CONFIG_CONTENT}>
+        <img style={CONFIG_LOGO} src='https://thegymcms.com/img/brand/svg/gymnasium-logo-white.svg' />
+      </section>
+    </div>
+  );
+
+  const layout = defaultLayout;
+
 
   // Generate the open graph image
-  return new ImageResponse(layout1,
+  return new ImageResponse(layout,
     {
       width: 1200,
       height: 628,
