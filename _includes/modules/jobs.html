@@ -40,7 +40,7 @@
 <form id="location" class="location">
   <select name="m" id="m" class="form-control">
     <option value="">Select a location nearest you</option>
-    <option value="remote">Remote</option>
+    <option value="remote">Remote, all locations</option>
     <optgroup label="Australia">
       {%- for market in markets_au -%}
         <option value="{{market.id}}">{{market.title}}</option>
