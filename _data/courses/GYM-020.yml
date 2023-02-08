@@ -6,6 +6,7 @@ course_type: short
 live: true
 url: /courses/course-v1:GYM+020+0/about
 poster_art: /img/course-artwork/png/gym-020.png
+img_bg_color: 5ca5a0
 topic: "Design"
 subtopics:
   - label: "Design Systems"

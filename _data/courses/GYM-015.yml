@@ -6,6 +6,7 @@ course_type: short
 live: true
 url: /courses/course-v1:GYM+015+0/about
 poster_art: /img/course-artwork/png/gym-015.png
+img_bg_color: 5ca5a0
 topic: "UX"
 subtopics:
   - label: "Prototyping"

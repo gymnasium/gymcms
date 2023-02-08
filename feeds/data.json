@@ -1,0 +1,116 @@
+---
+layout: null
+permalink: /feeds/data.json
+---
+{%- if site.data -%}
+{
+  "title": "Gymnasium Edge Function Data Feed",
+  "feed_url": "{{site.url}}{{page.permalink}}",
+  "date_modified": "{{ site.time | date_to_xmlschema }}",
+  "courses":[
+    {%- assign sorted = site.data.courses | sort: course_id -%}
+    {%- for hash in sorted -%}
+      {%- assign id = hash[0] -%}
+      {%- assign item = hash[1] -%}
+      {
+        "id": "{{ id }}",
+        "title": "{{ item.title }}",
+        "type": "{{ item.course_type }}",
+        "topic": "{{ item.topic }}",
+        "img": "{{ item.poster_art }}",
+        "img_offset": "{{ item.img_offset }}",
+        "img_bg_color": "{{ item.img_bg_color }}",
+        "bg_color": "{{ item.bg_color }}"
+      },
+    {%- endfor -%}
+
+    {%- assign sorted = site.data.workshops | sort: course_id -%}
+    {%- for hash in sorted -%}
+      {%- assign id = hash[0] -%}
+      {%- assign item = hash[1] -%}
+      {
+        "id": "{{ id }}",
+        "title": "{{ item.title }}",
+        "type": "{{ item.course_type }}",
+        "topic": "{{ item.topic }}",
+        "img": "{{ item.poster_art }}",
+        "img_offset": "{{ item.img_offset }}",
+        "img_bg_color": "{{ item.img_bg_color }}",
+        "bg_color": "{{ item.bg_color }}"
+      }, 
+    {%- endfor -%}
+
+    {%- assign sorted = site.data.take5 | sort: course_id -%}
+    {%- for hash in sorted -%}
+      {%- assign id = hash[0] -%}
+      {%- assign item = hash[1] -%}
+      {
+        "id": "{{ id }}",
+        "title": "{{ item.title }}",
+        "type": "{{ item.course_type }}",
+        "topic": "{{ item.topic }}",
+        "img": "{{ item.poster_art | replace: '.jpg', '-hero.jpg' }}",
+        "img_offset": "{{ item.img_offset }}",
+        "img_bg_color": "{{ item.img_bg_color }}",
+        "bg_color": "{{ item.bg_color }}"
+      }
+      {%- if forloop.index != forloop.length -%},{%- endif -%}
+    {%- endfor -%}
+  ],
+  "webinars":[
+    {%- assign sorted = site.data.webinars | sort: event_ID -%}
+    {%- for hash in sorted -%}
+      {%- assign id = hash[0] -%}
+      {%- assign item = hash[1] -%}
+      {
+        "id": "{{ id | slice: 0,7 }}",
+        "title": "{{ item.event_title | strip_html }}",
+        "type": "webinar",
+        "topic": "{{ item.topic | strip_html }}",
+        "img": "/img/social/webinars/{{ item.event_ogimage }}",
+        "img_offset": "{{ item.img_offset }}",
+        "img_bg_color": "{{ item.img_bg_color }}",
+        "bg_color": "{{ item.bg_color }}"
+      }
+      {%- if forloop.index != forloop.length -%},{%- endif -%}
+    {%- endfor -%}
+  ],
+
+  {%- assign sortedpages = site.pages | where_exp: 'page', "page.permalink contains '/meta/'" | sort: "url" -%}
+  {%- assign filtered_pages = "" | split: ", " -%}
+  {%- for page in sortedpages -%}
+    {%- unless page.permalink contains '/courses/' or page.permalink contains '/webinars/' or page.permalink contains '/tests/' -%}
+      {%- assign filtered_pages = filtered_pages | push: page -%}
+    {%- endunless -%}
+    {%-if page.permalink == '/courses/meta/' or page.permalink == '/webinars/meta/' -%}
+      {%- assign filtered_pages = filtered_pages | push: page -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  "static":[
+    {%- for page in filtered_pages -%}
+      {
+        "id": "",
+        "data": [{
+          {%- for item in page -%}
+            "{{item[0] | JSON }}": "{{item[1] | JSON }}"
+            {%- if forloop.index != forloop.length -%},{%- endif -%}
+          {%- endfor -%}
+        }],
+        "path": "{{ page.permalink }}",
+        "title": "{{ page.og_description }}",
+        "type": "static",
+        "topic": "",
+        "img": "",
+        "img_offset": "",
+        "img_bg_color": "",
+        "bg_color": ""
+      }
+      {%- if forloop.index != forloop.length -%},{%- endif -%}
+    {%- endfor -%}
+  ]
+}
+{%- else -%}
+{"error": "no JSON feed found!"}
+{%- endif -%}
+

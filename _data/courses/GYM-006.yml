@@ -6,6 +6,7 @@ course_type: short
 live: true
 url: /courses/GYM/006/0/about
 poster_art: /img/course-artwork/png/gym-006.png
+img_bg_color: 2c9959
 topic: "Development"
 short_description: "Learn the basics of version control and get a high-level overview of both Git and GitHub. Perfect for someone with little to no first-hand experience with either."
 instructor: jausura
