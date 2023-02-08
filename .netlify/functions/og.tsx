@@ -95,6 +95,7 @@ export default async function handler(req: Request) {
   let type: any;
   let metaData: any;
   let hideFooter: boolean = false;
+  let layoutType = 'default';
   let debug: boolean = false;
 
   if (params.has('debug')) {
@@ -105,6 +106,7 @@ export default async function handler(req: Request) {
   // Are there any URL parameters (other than debug [see above]) attached? If not, hide the footer too. This is to display only the Gymnasium logo when visiting /og-image
   if (params && params.toString().length === 0) {
     hideFooter = true;
+    layoutType = 'logo';
   }
 
   // have id?
@@ -374,7 +376,7 @@ export default async function handler(req: Request) {
     );
   }
 
-  const defaultLayout = (
+  const layoutDefault = (
     <div style={CONFIG_WRAPPER}>
       <figure style={CONFIG_IMG}></figure>
       <section style={CONFIG_CONTENT}>
@@ -386,7 +388,7 @@ export default async function handler(req: Request) {
     </div>
   );
 
-  const logoOnlyLayout = (
+  const layoutLogo = (
     <div style={CONFIG_WRAPPER}>
       <section style={CONFIG_CONTENT}>
         <img style={CONFIG_LOGO} src='https://thegymcms.com/img/brand/svg/gymnasium-logo-white.svg' />
@@ -394,8 +396,12 @@ export default async function handler(req: Request) {
     </div>
   );
 
-  const layout = defaultLayout;
+  let layout = layoutDefault;
 
+  // TODO: refactor to improve logic
+  if (layoutType === 'logo') {
+    layout = layoutLogo;
+  }
 
   // Generate the open graph image
   return new ImageResponse(layout,
