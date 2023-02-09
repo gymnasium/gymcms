@@ -119,6 +119,15 @@ class GymJobs {
       const msgContainer = document.getElementById('messages');
       const form = document.getElementById('m');
 
+      // Off-site preference key
+      let remoteLegend = {
+        0: "Unknown",
+        1: "On-Site",
+        2: "Off-Site",
+        3: "Either",
+        4: "Partial on-site",
+      }
+
       if (jobsContainer.hasAttribute('data-options')) {
         parseOptions(jobsContainer.getAttribute('data-options'),opts);
       }
@@ -382,6 +391,9 @@ class GymJobs {
             // Generate job item
             for (var i = 0; i < limit; i++) {
               var el = items[i];
+
+              outputDebug(`[job module] job id ${el.id} remote type: ${remoteLegend[el.remote]}`);
+
               list += '<li>';
               // Add optional heading prefix
               if (optHeading) {
