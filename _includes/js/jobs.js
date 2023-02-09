@@ -326,6 +326,8 @@ class GymJobs {
         if (typeof data.items !== 'undefined' && data.items !== null) {
           
           var items = data.items;
+
+          outputDebug(`[job module] ${items.length} total jobs available.`);
       
           // Wrap our jobs in headings or no?
           var optHeading = opts.heading ? opts.heading : false;
@@ -339,14 +341,14 @@ class GymJobs {
           if (category) {
             items = items.filter(item => item.category === category);
         
-            outputDebug(`[job module] showing jobs for a specific category: ${category}`);
+            outputDebug(`[job module] showing up to ${items.length} jobs for category: ${category}.`);
           }
         
           // Filter the jobs by market if we have a market param
           if ((typeof market !== 'undefined' && market !== null) && market.length) {
             items = items.filter(item => item.market === market);
         
-            outputDebug(`[job module] showing jobs for a specific market: ${market}`);
+            outputDebug(`[job module] showing up to ${items.length} jobs for market: ${market}.`);
           } else {
             // Off-site preference key
             // 0 = Unknown
@@ -354,19 +356,16 @@ class GymJobs {
             // 2 = Off-Site
             // 3 = Either
             // 4 = Partial on-site
-            items = items.filter(item => parseInt(item.remote) === 2);
+            items = items.filter(item => parseInt(item.remote) >= 2);
             updateDropdown('remote');
         
-            outputDebug('[job module] showing only remote options…');
+            outputDebug('[job module] showing only remote & hybrid options…');
           }
-        
-          // Randomize the results we show…
-          items = items.shuffle();
         
           // How many results do we have?
           var numResults = items.length;
         
-          outputDebug(`[job module] results: ${numResults} | limit: ${limit}`);
+          outputDebug(`[job module] total results: ${numResults} | limit: ${limit}`);
         
           if (numResults > 0) {
             
