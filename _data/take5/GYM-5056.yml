@@ -5,7 +5,7 @@ date: 2022-12-05T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5056/
 poster_art: /img/take5/posters/gym-5056.jpg
-live: false
+live: true
 instructor: "Jeremy Osborn"
 instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "Career Skills"

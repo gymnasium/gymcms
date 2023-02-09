@@ -5,7 +5,7 @@ date: 2022-08-22T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5052/
 poster_art: /img/take5/posters/gym-5052.jpg
-live: false
+live: true
 instructor: "Jeremy Osborn"
 instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "Career Skills"
@@ -13,7 +13,7 @@ subtopics:
   - label: "Portfolio Development"
 video_ID: Q2dafEXRx_s
 video_duration: "4:35"
-featured: false
+featured: true
 short_description: "In this tutorial, you’ll learn three ways to make a great first impression with your online portfolio and improve your chances of getting hired."
 project_file_source:
 project_files:
