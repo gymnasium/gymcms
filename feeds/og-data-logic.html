@@ -1,0 +1,32 @@
+{%- assign id = hash[0] -%}
+{%- assign item = hash[1] -%}
+{%- assign title = item.title -%}
+{%- assign type = item.course_type -%}
+{%- assign topic = item.topic -%}
+{%- assign img = item.poster_art -%}
+{%- assign img_offset = item.img_offset -%}
+{%- assign img_bg_color = item.img_bg_color -%}
+{%- assign bg_color = item.bg_color -%}
+{%- if item.og_gen_data -%}
+  {%- if item.og_gen_data.bg_color -%}
+    {%- assign bg_color = item.og_gen_data.bg_color -%}
+  {%- endif -%}
+  {%- if item.og_gen_data.title -%}
+    {%- assign title = item.og_gen_data.title -%}
+  {%- endif -%}
+  {%- if item.og_gen_data.topic -%}
+    {%- assign topic = item.og_gen_data.topic -%}
+  {%- endif -%}
+  {%- if item.og_gen_data.img -%}
+    {%- assign img = item.og_gen_data.img -%}
+  {%- endif -%}
+  {%- if item.og_gen_data.img2 -%}
+    {%- assign img2 = item.og_gen_data.img2 -%}
+  {%- endif -%}
+  {%- if item.og_gen_data.img_bg_color -%}
+    {%- assign img_bg_color = item.og_gen_data.img_bg_color -%}
+  {%- endif -%}
+  {%- if item.og_gen_data.img_offset -%}
+    {%- assign img_offset = item.og_gen_data.img_offset -%}
+  {%- endif -%}
+{%- endif -%}

@@ -10,49 +10,46 @@ permalink: /feeds/data.json
   "courses":[
     {%- assign sorted = site.data.courses | sort: course_id -%}
     {%- for hash in sorted -%}
-      {%- assign id = hash[0] -%}
-      {%- assign item = hash[1] -%}
+      {%- include_relative og-data-logic.html -%}
       {
         "id": "{{ id }}",
-        "title": "{{ item.title }}",
-        "type": "{{ item.course_type }}",
-        "topic": "{{ item.topic }}",
-        "img": "{{ item.poster_art }}",
-        "img_offset": "{{ item.img_offset }}",
-        "img_bg_color": "{{ item.img_bg_color }}",
-        "bg_color": "{{ item.bg_color }}"
+        "title": "{{ title }}",
+        "type": "{{ type }}",
+        "topic": "{{ topic }}",
+        "img": "{{ img }}",
+        "img_offset": "{{ img_offset }}",
+        "img_bg_color": "{{ img_bg_color }}",
+        "bg_color": "{{ bg_color }}"
       },
     {%- endfor -%}
 
     {%- assign sorted = site.data.workshops | sort: course_id -%}
     {%- for hash in sorted -%}
-      {%- assign id = hash[0] -%}
-      {%- assign item = hash[1] -%}
+      {%- include_relative og-data-logic.html -%}
       {
         "id": "{{ id }}",
-        "title": "{{ item.title }}",
-        "type": "{{ item.course_type }}",
-        "topic": "{{ item.topic }}",
-        "img": "{{ item.poster_art }}",
-        "img_offset": "{{ item.img_offset }}",
-        "img_bg_color": "{{ item.img_bg_color }}",
-        "bg_color": "{{ item.bg_color }}"
-      }, 
+        "title": "{{ title }}",
+        "type": "{{ type }}",
+        "topic": "{{ topic }}",
+        "img": "{{ img }}",
+        "img_offset": "{{ img_offset }}",
+        "img_bg_color": "{{ img_bg_color }}",
+        "bg_color": "{{ bg_color }}"
+      },
     {%- endfor -%}
 
     {%- assign sorted = site.data.take5 | sort: course_id -%}
     {%- for hash in sorted -%}
-      {%- assign id = hash[0] -%}
-      {%- assign item = hash[1] -%}
+      {%- include_relative og-data-logic.html -%}
       {
         "id": "{{ id }}",
-        "title": "{{ item.title }}",
-        "type": "{{ item.course_type }}",
-        "topic": "{{ item.topic }}",
-        "img": "{{ item.poster_art | replace: '.jpg', '-hero.jpg' }}",
-        "img_offset": "{{ item.img_offset }}",
-        "img_bg_color": "{{ item.img_bg_color }}",
-        "bg_color": "{{ item.bg_color }}"
+        "title": "{{ title }}",
+        "type": "{{ type }}",
+        "topic": "{{ topic }}",
+        "img": "{{ img | replace: '.jpg', '-hero.jpg' }}",
+        "img_offset": "{{ img_offset }}",
+        "img_bg_color": "{{ img_bg_color }}",
+        "bg_color": "{{ bg_color }}"
       }
       {%- if forloop.index != forloop.length -%},{%- endif -%}
     {%- endfor -%}
