@@ -109,6 +109,7 @@ function processJobs(JSONP) {
     var debug = getUrlParameter('debug') ? true : false;
     var data;
     var url = new URL(window.location.href);
+    var selectedMarket;
     const msgContainer = document.getElementById('messages');
     const form = document.getElementById('m');
 
@@ -263,8 +264,10 @@ function processJobs(JSONP) {
         // Filter the jobs by market if we have a market param
         if ((typeof market !== 'undefined' && market !== null) && market.length) {
           items = items.filter(item => item.market === market);
+
+          selectedMarket = document.querySelector(`#m [value="${market}"]`).innerText;
       
-          outputDebug(`[job module] showing ${items.length} jobs for market: ${market}.`);
+          outputDebug(`[job module] showing ${items.length} jobs for market: ${market}, aka ${selectedMarket}`);
         } else {
           // Off-site preference key
           // 0 = Unknown
