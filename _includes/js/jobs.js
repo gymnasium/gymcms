@@ -257,14 +257,14 @@ function processJobs(JSONP) {
         if (category) {
           items = items.filter(item => item.category === category);
       
-          outputDebug(`[job module] showing up to ${items.length} jobs for category: ${category}.`);
+          outputDebug(`[job module] showing ${items.length} jobs for category: ${category}.`);
         }
       
         // Filter the jobs by market if we have a market param
         if ((typeof market !== 'undefined' && market !== null) && market.length) {
           items = items.filter(item => item.market === market);
       
-          outputDebug(`[job module] showing up to ${items.length} jobs for market: ${market}.`);
+          outputDebug(`[job module] showing ${items.length} jobs for market: ${market}.`);
         } else {
           // Off-site preference key
           // 0 = Unknown
