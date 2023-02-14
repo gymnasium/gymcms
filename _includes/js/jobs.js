@@ -125,15 +125,6 @@ function processJobs(JSONP) {
       parseOptions(jobsContainer.getAttribute('data-options'),opts);
     }
     
-    if (jobsContainer.hasAttribute('data-endpoint')) {
-      endpoint = jobsContainer.getAttribute('data-endpoint');
-    }
-    
-    if (jobsContainer.hasAttribute('data-fallback')) {
-      fallback = jobsContainer.getAttribute('data-fallback');
-    }
-
-    
     // Add exception for `remote` option in the markets dropdown
     var market = getUrlParameter('m') === 'remote' ? undefined : getUrlParameter('m');
     
