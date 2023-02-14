@@ -1,10 +1,4 @@
-{%- assign jobs_endpoint = "/feeds/jobs.json" | prepend: site.gymurl -%}
-{%- assign jobs_fallback = "/feeds/jobs.json" | prepend: site.url -%}
-
-{%- if site.environment == "local" -%}
-  {%- assign jobs_endpoint = "/feeds/jobs.json" -%}
-  {%- assign jobs_fallback = jobs_endpoint -%}
-{%- endif -%}
+{%- assign jobs_endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl -%}
 
 {%- assign markets_au = site.data.markets.items | where: "countryCode", "AU" -%}
 {%- assign markets_ca = site.data.markets.items | where: "countryCode", "CA" -%}
@@ -98,4 +92,5 @@
     <p>We were unable to retrieve jobs because of an unknown error. Please try again later.</p>
   </div>
 </div>
-<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-endpoint="{{jobs_endpoint}}" data-fallback="{{jobs_fallback}}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
+<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
+<script async defer src="{{jobs_endpoint}}?limit=1500&callback=processJobs"></script>
