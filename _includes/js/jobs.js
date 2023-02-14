@@ -253,7 +253,7 @@ function processJobs(JSONP) {
       
         // Set iteration limits
         var limit = opts.limit ? parseInt(opts.limit) : 10;
-      
+
         if (category) {
           items = items.filter(item => item.category === category);
       
@@ -284,6 +284,19 @@ function processJobs(JSONP) {
         outputDebug(`[job module] total results: ${numResults} | limit: ${limit}`);
       
         if (numResults > 0) {
+          // Sort array by mod/post date properly, whichever is more recent
+          items = items.sort((a, b) => {
+            
+            const aModDate = new Date(a.modDate).getTime();
+            const aPostDate = new Date(a.postedDate).getTime();
+            const bModDate = new Date(b.modDate).getTime();
+            const bPostDate = new Date(b.postedDate).getTime();
+
+            const compA = aModDate > aPostDate ? aModDate : aPostDate;
+            const compB = bModDate > bPostDate ? bModDate : bPostDate;
+
+            return compB - compA;
+          });
           
           // Start with an empty list
           var list = "";
@@ -298,8 +311,10 @@ function processJobs(JSONP) {
           // Generate job item
           for (var i = 0; i < limit; i++) {
             var el = items[i];
+            var postDate = el.postedDate;
+            var modDate = el.modDate;
 
-            outputDebug(`[job module] job id ${el.id} remote type: ${remoteLegend[el.remote]}`);
+            outputDebug(`[job module] job id: ${el.id}\n   remote type: ${remoteLegend[el.remote]}\n   posted: ${postDate}\n   mod date: ${modDate}`);
 
             list += '<li>';
             // Add optional heading prefix
