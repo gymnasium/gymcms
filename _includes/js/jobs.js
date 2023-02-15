@@ -105,6 +105,7 @@ function parseOptions(input, output) {
 
 if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
   const endpoint = jobsContainer.hasAttribute('data-script') ? jobsContainer.getAttribute('data-script') : 'error';
+  const urchin = jobsContainer.hasAttribute('data-utm') ? `?${jobsContainer.getAttribute('data-utm')}` : '';
   const msgContainer = document.getElementById('messages');
 
   function hideMsg() {
@@ -340,7 +341,7 @@ if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
             if (optHeading) {
               list += `<${optHeading}>`;
             }
-            list += `<a href="${decodeURI(el.url)}?utm_source=gymnasium&utm_medium=web&utm_campaign=job-module&utm_content=textlink" title="${el.title}"><span class="job-title">${el.title} </span><span class="job-location"> ${el.city}</span></a>`;
+            list += `<a href="${decodeURI(el.url)}${urchin}" title="${el.title}"><span class="job-title">${el.title} </span><span class="job-location"> ${el.city}</span></a>`;
             if (optHeading) {
               list += `</${optHeading}>`;
             }

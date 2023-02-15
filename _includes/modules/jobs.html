@@ -1,4 +1,7 @@
 {%- assign jobs_endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl -%}
+{%- assign utm = "utm_source=gymnasium&utm_medium=web&utm_campaign=job-module&utm_content=textlink" -%}
+
+{%- capture send_errors_to_aquent -%}<p>Please visit the <a href="https://aquent.com/find-work/?{{utm}}" target="_blank">Aquent jobs page</a> to view the most recent jobs.</p>{%- endcapture -%}
 
 {%- assign markets_au = site.data.markets.items | where: "countryCode", "AU" -%}
 {%- assign markets_ca = site.data.markets.items | where: "countryCode", "CA" -%}
@@ -25,7 +28,6 @@
 {%- if opt_category != false -%}
   {%- assign cat_text = opt_category -%}
 {%- endif -%}
-
 
 {%- unless opt_limit -%}
   {%- assign opt_limit = 10 -%}
@@ -81,15 +83,15 @@
   </div>
   <div id="error-server" class="hide">
     <h4>Ooops!</h4>
-    <p>We were unable to retrieve jobs due to a server error. Please try again later.</p>
+    <p>We were unable to retrieve jobs due to a server error. Please try again later.</p>{{send_errors_to_aquent}}
   </div>
   <div id="error-connection" class="hide">
     <h4>Ooops!</h4>
-    <p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. Please try again later.</p>
+    <p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. Please try again later.</p>{{send_errors_to_aquent}}
   </div>
   <div id="error-unknown" class="hide">
     <h4>Ooops!</h4>
-    <p>We were unable to retrieve jobs because of an unknown error. Please try again later.</p>
+    <p>We were unable to retrieve jobs because of an unknown error. Please try again later.</p>{{send_errors_to_aquent}}
   </div>
 </div>
-<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-script="{{jobs_endpoint}}?limit=1500&callback=processJobs"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
+<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-utm="{{utm}}" data-script="{{jobs_endpoint}}?limit=1500&callback=processJobs"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
