@@ -92,5 +92,4 @@
     <p>We were unable to retrieve jobs because of an unknown error. Please try again later.</p>
   </div>
 </div>
-<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
-<script async defer src="{{jobs_endpoint}}?limit=1500&callback=processJobs"></script>
+<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-script="{{jobs_endpoint}}?limit=1500&callback=processJobs"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->

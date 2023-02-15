@@ -68,6 +68,8 @@ var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
 var eventer = window[eventMethod];
 var messageEvent = eventMethod === "attachEvent" ? "onmessage" : "message";
 
+const jobsContainer = document.getElementById('jobs-container');
+
 // Get URL Parameter
 function getUrlParameter(name) {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -101,18 +103,48 @@ function parseOptions(input, output) {
   });
 }
 
-function processJobs(JSONP) {
-  const jobsContainer = document.getElementById('jobs-container');
+if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
+  const endpoint = jobsContainer.hasAttribute('data-script') ? jobsContainer.getAttribute('data-script') : 'error';
+  const msgContainer = document.getElementById('messages');
 
-  if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
+  function hideMsg() {
+    // firstly, hide any visible messaging
+    msgContainer.querySelectorAll('div').forEach(el => {
+      el.classList.add('hide');
+    });
+  }
+  
+  // Show our messaging accordingly
+  // TODO: add support for dynamic content
+  function showMsg(id) {
+    // firstly, hide any visible messaging
+    hideMsg();
+  
+    // show the element we want!
+    document.getElementById(id).classList.remove('hide');
+  }
+
+  let script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = endpoint;
+  script.id = 'jobs-feed';
+  script.async = true;
+  document.body.appendChild(script);
+
+  // Throws a generic error to the user if it fails. Due to CORS, we can't get a more detailed error from the server, but we will at least know it didn't work.
+  script.onerror = function() {
+    showMsg('error-connection');
+  };
+
+  function processJobs(JSONP) {
     var opts = {};
     var debug = getUrlParameter('debug') ? true : false;
     var data;
     var url = new URL(window.location.href);
     var selectedMarket;
-    const msgContainer = document.getElementById('messages');
+    
     const form = document.getElementById('m');
-
+  
     // Off-site preference key
     let remoteLegend = {
       0: "Unknown",
@@ -121,7 +153,7 @@ function processJobs(JSONP) {
       3: "Either",
       4: "Partial on-site",
     }
-
+  
     if (jobsContainer.hasAttribute('data-options')) {
       parseOptions(jobsContainer.getAttribute('data-options'),opts);
     }
@@ -179,23 +211,7 @@ function processJobs(JSONP) {
     function updateDropdown(m) {
       document.querySelector(`#m [value="${m}"]`).selected = true;
     }
-    
-    function hideMsg() {
-      // firstly, hide any visible messaging
-      msgContainer.querySelectorAll('div').forEach(el => {
-        el.classList.add('hide');
-      });
-    }
-    
-    // Show our messaging accordingly
-    function showMsg(id) {
-      // firstly, hide any visible messaging
-      hideMsg();
-    
-      // show the element we want!
-      document.getElementById(id).classList.remove('hide');
-    }
-    
+  
     // Store our data in session storage
     function store(name,data) {
       if (window.sessionStorage) {
@@ -216,12 +232,12 @@ function processJobs(JSONP) {
         } catch(err) {
           console.warn('[job module] error retrieving sessionStorage data.', err);
         }
-
+  
       } else {
     
         try {
           outputDebug(`[job module] storing JSONP data.`);
-
+  
           data = JSON.stringify(JSONP);
           store('jobs', data);
     
@@ -229,7 +245,7 @@ function processJobs(JSONP) {
           console.warn('[job module] error storing/processing JSONP!', err);
         }
       }
-
+  
       try {
         processData(data);
       } catch(err) {
@@ -243,7 +259,7 @@ function processJobs(JSONP) {
       if (typeof data.items !== 'undefined' && data.items !== null) {
         
         var items = data.items;
-
+  
         outputDebug(`[job module] ${items.length} total jobs available.`);
     
         // Wrap our jobs in headings or no?
@@ -254,7 +270,7 @@ function processJobs(JSONP) {
       
         // Set iteration limits
         var limit = opts.limit ? parseInt(opts.limit) : 10;
-
+  
         if (category) {
           items = items.filter(item => item.category === category);
       
@@ -264,7 +280,7 @@ function processJobs(JSONP) {
         // Filter the jobs by market if we have a market param
         if ((typeof market !== 'undefined' && market !== null) && market.length) {
           items = items.filter(item => item.market === market);
-
+  
           selectedMarket = document.querySelector(`#m [value="${market}"]`).innerText;
       
           outputDebug(`[job module] showing ${items.length} jobs for market: ${market}, aka ${selectedMarket}`);
@@ -294,10 +310,10 @@ function processJobs(JSONP) {
             const aPostDate = new Date(a.postedDate).getTime();
             const bModDate = new Date(b.modDate).getTime();
             const bPostDate = new Date(b.postedDate).getTime();
-
+  
             const compA = aModDate > aPostDate ? aModDate : aPostDate;
             const compB = bModDate > bPostDate ? bModDate : bPostDate;
-
+  
             return compB - compA;
           });
           
@@ -316,9 +332,9 @@ function processJobs(JSONP) {
             var el = items[i];
             var postDate = el.postedDate;
             var modDate = el.modDate;
-
+  
             outputDebug(`[job module] job id: ${el.id}\n   remote type: ${remoteLegend[el.remote]}\n   posted: ${postDate}\n   mod date: ${modDate}`);
-
+  
             list += '<li>';
             // Add optional heading prefix
             if (optHeading) {
@@ -347,7 +363,7 @@ function processJobs(JSONP) {
     
     // Listen for change events from form select
     form.addEventListener('change', selectChange, false);
-
+  
     /* Currently unused/inactive
     // Listen for geolocator messages from our iframe
     eventer(messageEvent,function(event) {
