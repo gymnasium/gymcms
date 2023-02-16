@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /feeds/jobs.jsonp
+---
+{%- comment -%}
+This component spews out a statically-generated fallback feed for the jobs module (just in case dynamic JSONP loading doesn't work)
+{%- endcomment -%}
+{%- capture aq_feed_url -%}{{ site.aqassetsurl }}/apps/gym/jobs.json{%- endcapture -%}
+{%- capture gym_feed_url -%}{{ site.gymurl }}/feeds/jobs.jsonp{%- endcapture -%}
+{%- if site.data.jobs -%}
+{%- assign jobs = site.data.jobs | replace: "=>", ":" -%}
+{%- assign jobs = jobs | replace: aq_feed_url, gym_feed_url -%}
+{%- assign jobs = jobs | replace: "Aquent Job Feed for Gymnasium", "Fallback Job Feed" -%}
+processJobs({{ jobs }});
+{%- else -%}
+{"error": "no JSONP feed found!"}
+{%- endif -%}

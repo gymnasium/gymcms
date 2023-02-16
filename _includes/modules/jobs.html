@@ -1,10 +1,12 @@
-{%- assign jobs_endpoint = "/feeds/jobs.json" | prepend: site.gymurl -%}
-{%- assign jobs_fallback = "/feeds/jobs.json" | prepend: site.url -%}
+{%- unless jobs_endpoint -%}
+  {%- assign jobs_endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl -%}
+{%- endunless -%}
+{%- unless jobs_fallback -%}
+  {%- assign jobs_fallback = "/feeds/jobs.jsonp" | prepend: site.url -%}
+{%- endunless -%}
+{%- assign utm = "utm_source=gymnasium&utm_medium=web&utm_campaign=job-module&utm_content=textlink" -%}
 
-{%- if site.environment == "local" -%}
-  {%- assign jobs_endpoint = "/feeds/jobs.json" -%}
-  {%- assign jobs_fallback = jobs_endpoint -%}
-{%- endif -%}
+{%- capture send_errors_to_aquent -%}Please try again later, or visit the <a href="https://aquent.com/find-work/?{{utm}}" target="_blank">Aquent jobs page</a> for the most recent jobs.{%- endcapture -%}
 
 {%- assign markets_au = site.data.markets.items | where: "countryCode", "AU" -%}
 {%- assign markets_ca = site.data.markets.items | where: "countryCode", "CA" -%}
@@ -31,7 +33,6 @@
 {%- if opt_category != false -%}
   {%- assign cat_text = opt_category -%}
 {%- endif -%}
-
 
 {%- unless opt_limit -%}
   {%- assign opt_limit = 10 -%}
@@ -87,15 +88,15 @@
   </div>
   <div id="error-server" class="hide">
     <h4>Ooops!</h4>
-    <p>We were unable to retrieve jobs due to a server error. Please try again later.</p>
+    <p>We were unable to retrieve jobs due to a server error. {{ send_errors_to_aquent }}</p>
   </div>
   <div id="error-connection" class="hide">
     <h4>Ooops!</h4>
-    <p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. Please try again later.</p>
+    <p>The hamsters running this wheel were conspicuously absent. As a result, your request fell on deaf ears. {{ send_errors_to_aquent }}</p>
   </div>
   <div id="error-unknown" class="hide">
     <h4>Ooops!</h4>
-    <p>We were unable to retrieve jobs because of an unknown error. Please try again later.</p>
+    <p>We were unable to retrieve jobs because of an unknown error. {{ send_errors_to_aquent }}</p>
   </div>
 </div>
-<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-endpoint="{{jobs_endpoint}}" data-fallback="{{jobs_fallback}}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
+<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-utm="{{utm}}" data-script="{{jobs_endpoint}}?limit=1500&callback=processJobs" data-script-fallback="{{jobs_fallback}}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
