@@ -104,7 +104,8 @@ function parseOptions(input, output) {
 }
 
 if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
-  const endpoint = jobsContainer.hasAttribute('data-script') ? jobsContainer.getAttribute('data-script') : 'error';
+  const fallback = jobsContainer.getAttribute('data-script-fallback');
+  const endpoint = jobsContainer.getAttribute('data-script');
   const urchin = jobsContainer.hasAttribute('data-utm') ? `?${jobsContainer.getAttribute('data-utm')}` : '';
   const msgContainer = document.getElementById('messages');
 
@@ -125,17 +126,29 @@ if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
     document.getElementById(id).classList.remove('hide');
   }
 
-  let script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = endpoint;
-  script.id = 'jobs-feed';
-  script.async = true;
-  document.body.appendChild(script);
+  // grab our JSONP feed
+  function createJobScript(src, id, fallback) {
+    let script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = src;
+    script.id = id;
+    document.body.appendChild(script);
 
-  // Throws a generic error to the user if it fails. Due to CORS, we can't get a more detailed error from the server, but we will at least know it didn't work.
-  script.onerror = function() {
-    showMsg('error-connection');
-  };
+    script.onerror = function() {
+      if (fallback) {
+        // if we have an error in the fallback, show the user an error message
+        showMsg('error-connection');
+      } else {
+        // if we have an error loading the script, remove it and try the fallback
+        script.parentNode.removeChild(script);
+        console.warn(`[job module] error with primary feed. trying fallback.`);
+        createJobScript(fallback, 'jobs-feed-fallback', true);
+      }
+    }
+  }
+
+  createJobScript(endpoint, 'jobs-feed');
 
   function processJobs(JSONP) {
     var opts = {};
