@@ -68,6 +68,8 @@ var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
 var eventer = window[eventMethod];
 var messageEvent = eventMethod === "attachEvent" ? "onmessage" : "message";
 
+const jobsContainer = document.getElementById('jobs-container');
+
 // Get URL Parameter
 function getUrlParameter(name) {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -101,333 +103,292 @@ function parseOptions(input, output) {
   });
 }
 
-class GymJobs {
-  constructor() {}
+if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
+  const fallback = jobsContainer.getAttribute('data-script-fallback');
+  const endpoint = jobsContainer.getAttribute('data-script');
+  const urchin = jobsContainer.hasAttribute('data-utm') ? `?${jobsContainer.getAttribute('data-utm')}` : '';
+  const msgContainer = document.getElementById('messages');
 
-  loadJobs() {
-
-    const jobsContainer = document.getElementById('jobs-container');
-
-    if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
-      var opts = {};
-      var debug = getUrlParameter('debug') ? true : false;
-      var data;
-      var endpoint;
-      var fallback;
-      var endpointExists = false;
-      var url = new URL(window.location.href);
-      const msgContainer = document.getElementById('messages');
-      const form = document.getElementById('m');
-
-      if (jobsContainer.hasAttribute('data-options')) {
-        parseOptions(jobsContainer.getAttribute('data-options'),opts);
-      }
-      
-      if (jobsContainer.hasAttribute('data-endpoint')) {
-        endpoint = jobsContainer.getAttribute('data-endpoint');
-      }
-      
-      if (jobsContainer.hasAttribute('data-fallback')) {
-        fallback = jobsContainer.getAttribute('data-fallback');
-      }
+  function hideMsg() {
+    // firstly, hide any visible messaging
+    msgContainer.querySelectorAll('div').forEach(el => {
+      el.classList.add('hide');
+    });
+  }
   
-      
-      // Add exception for `remote` option in the markets dropdown
-      var market = getUrlParameter('m') === 'remote' ? undefined : getUrlParameter('m');
-      
-      // If we have a market populated on page load, update the dropdown
-      if (typeof market !== 'undefined' && market !== null && market.length) {
-        updateDropdown(market);
-      }
-      
-      function outputDebug(message) {
-        if (debug) {
-          console.log(message);
-        }
-      }
-      
-      // Clear results completely
-      function clearResults() {
-        jobsContainer.innerHTML = '';
-      }
-      
-      // What to do when the select updates
-      function selectChange() {
-        var value = this.value
-        if (value === 'remote') {
-          market = undefined;
-        } else {
-          market = value;
-        }
-      
-        let params = new URLSearchParams(url.search);
-      
-        // add "topic" parameter
-        params.set('m', value);
-      
-        if(debug) {
-          params.set('debug', true);
-        }
-      
-        params.toString();
-      
-        window.history.pushState({}, '', `?${params}#location`);
-        
-        outputDebug(`[job module] market selected: ${market}`);
-      
-        hideMsg();
-        clearResults();
-      
-        conductData();
-      }
-      
-      // Update dropdown to the selected option
-      function updateDropdown(m) {
-        document.querySelector(`#m [value="${m}"]`).selected = true;
-      }
-      
-      function hideMsg() {
-        // firstly, hide any visible messaging
-        msgContainer.querySelectorAll('div').forEach(el => {
-          el.classList.add('hide');
-        });
-      }
-      
-      // Show our messaging accordingly
-      function showMsg(id) {
-        // firstly, hide any visible messaging
-        hideMsg();
-      
-        // show the element we want!
-        document.getElementById(id).classList.remove('hide');
-      }
-      
-      // Store our data in session storage
-      function store(name,data) {
-        if (window.sessionStorage) {
-          sessionStorage.setItem(name, data);
-        } else {
-          console.warn('[job module] No browser support for sessionStorage!');
-        }
-      }
-      
-      function handleEvent(e) {
-        outputDebug(`[job module] ${e.type}: ${e.loaded} bytes transferred\n`)
-      
-        if (e.type === 'error' || e.type === 'abort') {
-          endpointExists = false;
-        } else if (e.type === 'loadend') {
-          endpointExists = true;
-        }
-      }
-      
-      function addListeners(xhr) {
-        xhr.addEventListener('loadstart', handleEvent);
-        xhr.addEventListener('load', handleEvent);
-        xhr.addEventListener('loadend', handleEvent);
-        xhr.addEventListener('progress', handleEvent);
-        xhr.addEventListener('error', handleEvent);
-        xhr.addEventListener('abort', handleEvent);
-      }
-      
-      function testEndpoint(url, cb) {
-        var request = new XMLHttpRequest();
-      
-        addListeners(request);
-        request.open('GET', url, true);
-      
-        request.send();
-      
-        if (cb) {
-          cb();
-        }
-      }
-      
-      // AJAX fetch
-      function fetchData(url) {
-      
-        var request = new XMLHttpRequest();
-        
-        request.open('GET', url, true);
-      
-        request.send();
-      
-        request.onload = function() {
-      
-          if (this.status >= 200 && this.status < 400) {
-            if (typeof this.response !== "undefined" && this.response !== null) {
-              var response = this.response;
-      
-              store('jobs', response);
-      
-              outputDebug(`[job module] fetching data from endpoint: ${endpoint}`);
-      
-              processData(response);
-      
-            } else {
-              // No jobs in market (or there was no data)! Show the appropriate message.
-              showMsg('error-results');
-            }
-          } else {
-            // We reached our target server, but it returned an error
-            showMsg('error-server');
-          }
-        };
-      
-        request.onerror = function() {
-          // There was a connection error of some sort
-          showMsg('error-connection');
-        };
-      
-        request.onabort = function() {
-          // There was a connection error of some sort
-          showMsg('error-connection');
-        };
-      }
-      
-      function conductData() {
-        // If we have jobs stored locally already in the browser session...
-        if (window.sessionStorage && sessionStorage.getItem('jobs')) {
-          data = sessionStorage.getItem('jobs');
-      
-          outputDebug('[job module] data from sessionStorage');
-      
-          processData(data);
-        } else {
-      
-          try {
-            testEndpoint(`${endpoint}?limit=1`, function(){
-              outputDebug(`[job module] endpoint ${endpoint} exists: ${endpointExists}`)
-              if (endpointExists) {
-                endpoint += '?limit=1500';
-              } else {
-                endpoint = fallback;
-              }
-      
-              outputDebug(`[job module] fetching ${endpoint}`);
-      
-              fetchData(endpoint);
-            });
-      
-          } catch(err) {
-      
-            console.warn('[job module] some type of error occurred, reverting to local feed! ', err);
-      
-            endpoint = fallback;
-      
-            fetchData(endpoint);
-          }
-        }
-      }
-      
-      // Process our JSON data
-      function processData(d) {
-        data = JSON.parse(d);
-        if (typeof data.items !== 'undefined' && data.items !== null) {
-          
-          var items = data.items;
-      
-          // Wrap our jobs in headings or no?
-          var optHeading = opts.heading ? opts.heading : false;
-        
-          // Do we have a specific category?
-          var category = opts.category ? opts.category : false;
-        
-          // Set iteration limits
-          var limit = opts.limit ? parseInt(opts.limit) : 10;
-        
-          if (category) {
-            items = items.filter(item => item.category === category);
-        
-            outputDebug(`[job module] showing jobs for a specific category: ${category}`);
-          }
-        
-          // Filter the jobs by market if we have a market param
-          if ((typeof market !== 'undefined' && market !== null) && market.length) {
-            items = items.filter(item => item.market === market);
-        
-            outputDebug(`[job module] showing jobs for a specific market: ${market}`);
-          } else {
-            // Off-site preference key
-            // 0 = Unknown
-            // 1 = On-Site
-            // 2 = Off-Site
-            // 3 = Either
-            // 4 = Partial on-site
-            items = items.filter(item => parseInt(item.remote) === 2);
-            updateDropdown('remote');
-        
-            outputDebug('[job module] showing only remote options…');
-          }
-        
-          // Randomize the results we show…
-          items = items.shuffle();
-        
-          // How many results do we have?
-          var numResults = items.length;
-        
-          outputDebug(`[job module] results: ${numResults} | limit: ${limit}`);
-        
-          if (numResults > 0) {
-            
-            // Start with an empty list
-            var list = "";
-        
-            // hide our loading message
-            document.getElementById('loading').classList.add('hide');
-        
-            if (numResults < limit) {
-              limit = numResults;
-            }
-        
-            // Generate job item
-            for (var i = 0; i < limit; i++) {
-              var el = items[i];
-              list += '<li>';
-              // Add optional heading prefix
-              if (optHeading) {
-                list += `<${optHeading}>`;
-              }
-              list += `<a href="${decodeURI(el.url)}?utm_source=gymnasium&utm_medium=web&utm_campaign=job-module&utm_content=textlink" title="${el.title}"><span class="job-title">${el.title} </span><span class="job-location"> ${el.city}</span></a>`;
-              if (optHeading) {
-                list += `</${optHeading}>`;
-              }
-              list += '</li>';
-            }
-        
-            // close our list
-            jobsContainer.innerHTML += `<ul>${list}</ul>`;
-          } else {
-            // No jobs in market! Show the appropriate message.
-            showMsg('error-results');
-          }
-        } else {
-          // No data found for some reason...
-          showMsg('error-unknown');
-        }
-      }
-      
-      conductData();
-      
-      // Listen for change events from form select
-      form.addEventListener('change', selectChange, false);
+  // Show our messaging accordingly
+  // TODO: add support for dynamic content
+  function showMsg(id) {
+    // firstly, hide any visible messaging
+    hideMsg();
+  
+    // show the element we want!
+    document.getElementById(id).classList.remove('hide');
+  }
 
-      /* Currently unused/inactive
-      // Listen for geolocator messages from our iframe
-      eventer(messageEvent,function(event) {
-        // Reject messages that are not from a valid origin domain
-        const regex = new RegExp('https:\/\/.*assets.aquent.com');
-        if (regex.test(event.origin)) {
-          outputDebug(`[geolocator] ${event.data}`);
-      
-          parseOptions(event.data,opts);
-        }
-      }, false);
-      */
+  // grab our JSONP feed
+  function createJobScript(src, id, retry) {
+    let script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = src;
+    script.id = id;
+    document.body.appendChild(script);
+
+    script.onerror = function() {
+      if (retry) {
+        // if we have an error in the fallback, show the user an error message
+        showMsg('error-connection');
+      } else {
+        // if we have an error loading the script, remove it and try the fallback
+        script.parentNode.removeChild(script);
+        console.warn(`[job module] error with primary feed. trying fallback.`);
+        createJobScript(fallback, 'jobs-feed-fallback', true);
+      }
     }
   }
+
+  createJobScript(endpoint, 'jobs-feed');
+
+  function processJobs(JSONP) {
+    var opts = {};
+    var debug = getUrlParameter('debug') ? true : false;
+    var data;
+    var url = new URL(window.location.href);
+    var selectedMarket;
+    
+    const form = document.getElementById('m');
+  
+    // Off-site preference key
+    let remoteLegend = {
+      0: "Unknown",
+      1: "On-Site",
+      2: "Off-Site",
+      3: "Either",
+      4: "Partial on-site",
+    }
+  
+    if (jobsContainer.hasAttribute('data-options')) {
+      parseOptions(jobsContainer.getAttribute('data-options'),opts);
+    }
+    
+    // Add exception for `remote` option in the markets dropdown
+    var market = getUrlParameter('m') === 'remote' ? undefined : getUrlParameter('m');
+    
+    // If we have a market populated on page load, update the dropdown
+    if (typeof market !== 'undefined' && market !== null && market.length) {
+      updateDropdown(market);
+    }
+    
+    function outputDebug(message) {
+      if (debug) {
+        console.log(message);
+      }
+    }
+    
+    // Clear results completely
+    function clearResults() {
+      jobsContainer.innerHTML = '';
+    }
+    
+    // What to do when the select updates
+    function selectChange() {
+      var value = this.value
+      if (value === 'remote') {
+        market = undefined;
+      } else {
+        market = value;
+      }
+    
+      let params = new URLSearchParams(url.search);
+    
+      // add "topic" parameter
+      params.set('m', value);
+    
+      if(debug) {
+        params.set('debug', true);
+      }
+    
+      params.toString();
+    
+      window.history.pushState({}, '', `?${params}#location`);
+      
+      outputDebug(`[job module] market selected: ${market}`);
+    
+      hideMsg();
+      clearResults();
+    
+      conductData();
+    }
+    
+    // Update dropdown to the selected option
+    function updateDropdown(m) {
+      document.querySelector(`#m [value="${m}"]`).selected = true;
+    }
+  
+    // Store our data in session storage
+    function store(name,data) {
+      if (window.sessionStorage) {
+        sessionStorage.setItem(name, data);
+      } else {
+        console.warn('[job module] No browser support for sessionStorage!');
+      }
+    }
+    
+    function conductData() {
+      // If we have jobs stored locally already in the browser session...
+      if (window.sessionStorage && sessionStorage.getItem('jobs')) {
+        try {
+          data = sessionStorage.getItem('jobs');
+    
+          outputDebug('[job module] data from sessionStorage');
+      
+        } catch(err) {
+          console.warn('[job module] error retrieving sessionStorage data.', err);
+        }
+  
+      } else {
+    
+        try {
+          outputDebug(`[job module] storing JSONP data.`);
+  
+          data = JSON.stringify(JSONP);
+          store('jobs', data);
+    
+        } catch(err) {
+          console.warn('[job module] error storing/processing JSONP!', err);
+        }
+      }
+  
+      try {
+        processData(data);
+      } catch(err) {
+        console.warn('[job module] error processing data!', err);
+      }
+    }
+    
+    // Process our JSON data
+    function processData(d) {
+      data = JSON.parse(d);
+      if (typeof data.items !== 'undefined' && data.items !== null) {
+        
+        var items = data.items;
+  
+        outputDebug(`[job module] ${items.length} total jobs available.`);
+    
+        // Wrap our jobs in headings or no?
+        var optHeading = opts.heading ? opts.heading : false;
+      
+        // Do we have a specific category?
+        var category = opts.category ? opts.category : false;
+      
+        // Set iteration limits
+        var limit = opts.limit ? parseInt(opts.limit) : 10;
+  
+        if (category) {
+          items = items.filter(item => item.category === category);
+      
+          outputDebug(`[job module] showing ${items.length} jobs for category: ${category}.`);
+        }
+      
+        // Filter the jobs by market if we have a market param
+        if ((typeof market !== 'undefined' && market !== null) && market.length) {
+          items = items.filter(item => item.market === market);
+  
+          selectedMarket = document.querySelector(`#m [value="${market}"]`).innerText;
+      
+          outputDebug(`[job module] showing ${items.length} jobs for market: ${market}, aka ${selectedMarket}`);
+        } else {
+          // Off-site preference key
+          // 0 = Unknown
+          // 1 = On-Site
+          // 2 = Off-Site
+          // 3 = Either
+          // 4 = Partial on-site
+          items = items.filter(item => parseInt(item.remote) >= 2);
+          updateDropdown('remote');
+      
+          outputDebug('[job module] showing only remote & hybrid options…');
+        }
+      
+        // How many results do we have?
+        var numResults = items.length;
+      
+        outputDebug(`[job module] total results: ${numResults} | limit: ${limit}`);
+      
+        if (numResults > 0) {
+          // Sort array by mod/post date properly, whichever is more recent
+          items = items.sort((a, b) => {
+            
+            const aModDate = new Date(a.modDate).getTime();
+            const aPostDate = new Date(a.postedDate).getTime();
+            const bModDate = new Date(b.modDate).getTime();
+            const bPostDate = new Date(b.postedDate).getTime();
+  
+            const compA = aModDate > aPostDate ? aModDate : aPostDate;
+            const compB = bModDate > bPostDate ? bModDate : bPostDate;
+  
+            return compB - compA;
+          });
+          
+          // Start with an empty list
+          var list = "";
+      
+          // hide our loading message
+          document.getElementById('loading').classList.add('hide');
+      
+          if (numResults < limit) {
+            limit = numResults;
+          }
+      
+          // Generate job item
+          for (var i = 0; i < limit; i++) {
+            var el = items[i];
+            var postDate = el.postedDate;
+            var modDate = el.modDate;
+  
+            outputDebug(`[job module] job id: ${el.id}\n   remote type: ${remoteLegend[el.remote]}\n   posted: ${postDate}\n   mod date: ${modDate}`);
+  
+            list += '<li>';
+            // Add optional heading prefix
+            if (optHeading) {
+              list += `<${optHeading}>`;
+            }
+            list += `<a href="${decodeURI(el.url)}${urchin}" title="${el.title}"><span class="job-title">${el.title} </span><span class="job-location"> ${el.city}</span></a>`;
+            if (optHeading) {
+              list += `</${optHeading}>`;
+            }
+            list += '</li>';
+          }
+      
+          // close our list
+          jobsContainer.innerHTML += `<ul>${list}</ul>`;
+        } else {
+          // No jobs in market! Show the appropriate message.
+          showMsg('error-results');
+        }
+      } else {
+        // No data found for some reason...
+        showMsg('error-unknown');
+      }
+    }
+    
+    conductData();
+    
+    // Listen for change events from form select
+    form.addEventListener('change', selectChange, false);
+  
+    /* Currently unused/inactive
+    // Listen for geolocator messages from our iframe
+    eventer(messageEvent,function(event) {
+      // Reject messages that are not from a valid origin domain
+      const regex = new RegExp('https:\/\/.*assets.aquent.com');
+      if (regex.test(event.origin)) {
+        outputDebug(`[geolocator] ${event.data}`);
+    
+        parseOptions(event.data,opts);
+      }
+    }, false);
+    */
+  }
 }
-
-var gymjobs = new GymJobs();
-
-gymjobs.loadJobs();

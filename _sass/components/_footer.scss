@@ -1,0 +1,136 @@
+/* ---
+Footer CSS (migrated from footer.scss)
+--- */
+
+.wrapper-footer {
+  background-color: $gym-black;
+  padding: 30px 0;
+  border-top: 10px solid $gym-orange;
+
+  footer {
+    font-size: 16px;
+    color: $gym-white;
+
+    nav {
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-family: $gym-font-stack;
+      font-size: 1em;
+      line-height: 1.25;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .gym-brand {
+      margin-bottom: 1em;
+
+      .gymnasium-logo {
+        width: 12.5em;
+        height: auto;
+        margin-top: 0;
+        margin-left: 0;
+      }
+
+      p {
+        font-size: 1em;
+        line-height: 1.55;
+        margin-top: 1.2em;
+        @include breakpoint(large, min) {
+          & {
+            max-width: 24rem;
+          }
+        }
+      }
+    }
+
+    .footer-link-list {
+      padding-top: 0.6em;
+      margin-top: 0;
+      margin-bottom: 1.2em;
+
+      img {
+        max-width: 1.25em;
+        margin-top: -0.325em;
+        margin-right: 0.25em;
+      }
+    }
+
+    .col {
+      float: left;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-right: 14px;
+    }
+
+    .resources {
+      max-width: 10em;
+    }
+
+    .social ul {
+      min-width: 6.625em;
+    }
+
+    .affiliated-sites {
+      margin-right: -15px;
+    }
+
+    @include breakpoint(large, min) {
+      .what-we-do {
+        margin-left: -15px;
+      }
+    }
+
+    @include breakpoint(large, max) {
+      .brand {
+        float: none;
+        margin-bottom: 25px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0.975em;
+      margin-left: 0;
+
+      li {
+        font-family: $gym-font-stack;
+        font-size: 1.05em;
+        line-height: 1.5;
+        letter-spacing: 0.1116625ex; // 0.75px
+        padding-right: 0;
+        margin-top: 0.6em;
+
+        a {
+          font-family: inherit;
+          color: $gym-white;
+
+          &:hover,
+          &:focus,
+          &:active {
+            color: $gym-orange;
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .open-edx-logo {
+      max-width: 10.9375em;
+      object-position: -2.375em center;
+    }
+
+    .copyright {
+      text-align: left;
+      margin-top: 1em;
+
+      small {
+        font-size: 80%;
+        letter-spacing: 0.1ex;
+      }
+    }
+  }
+}
