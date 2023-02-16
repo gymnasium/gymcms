@@ -1,5 +1,9 @@
-{%- assign jobs_endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl -%}
-{%- assign jobs_fallback = "/feeds/jobs.jsonp" -%}
+{%- unless jobs_endpoint -%}
+  {%- assign jobs_endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl -%}
+{%- endunless -%}
+{%- unless jobs_fallback -%}
+  {%- assign jobs_fallback = "/feeds/jobs.jsonp" | prepend: site.url -%}
+{%- endunless -%}
 {%- assign utm = "utm_source=gymnasium&utm_medium=web&utm_campaign=job-module&utm_content=textlink" -%}
 
 {%- capture send_errors_to_aquent -%}Please try again later, or visit the <a href="https://aquent.com/find-work/?{{utm}}" target="_blank">Aquent jobs page</a> for the most recent jobs.{%- endcapture -%}

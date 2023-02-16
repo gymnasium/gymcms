@@ -127,7 +127,7 @@ if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
   }
 
   // grab our JSONP feed
-  function createJobScript(src, id, fallback) {
+  function createJobScript(src, id, retry) {
     let script = document.createElement('script');
     script.type = 'text/javascript';
     script.async = true;
@@ -136,7 +136,7 @@ if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
     document.body.appendChild(script);
 
     script.onerror = function() {
-      if (fallback) {
+      if (retry) {
         // if we have an error in the fallback, show the user an error message
         showMsg('error-connection');
       } else {
