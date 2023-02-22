@@ -5,9 +5,10 @@ date: 2019-11-11T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5016/
 poster_art: /img/take5/posters/gym-5016.jpg
-img_bg_color:
-img_offset: 70
-bg_color: 2c9959
+og_gen_data:
+  img_bg_color:
+  img_offset: 70
+  bg_color: 2c9959
 live: true
 instructor: "Lee Andrese"
 instructor_bio: "Vice President of Learning and Development at Onward Search"

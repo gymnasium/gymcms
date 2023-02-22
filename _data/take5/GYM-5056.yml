@@ -4,9 +4,10 @@ title: "Taking Your Portfolio Case Studies to the Next Level"
 date: 2022-12-05T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5056/
-img_bg_color:
-img_offset:
-bg_color: 2c9959
+og_gen_data:
+  img_bg_color:
+  img_offset:
+  bg_color: 2c9959
 poster_art: /img/take5/posters/gym-5056.jpg
 live: false
 instructor: "Jeremy Osborn"

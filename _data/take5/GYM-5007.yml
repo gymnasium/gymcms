@@ -5,9 +5,10 @@ date: 2019-11-19T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5007/
 poster_art: /img/take5/posters/gym-5007.jpg
-img_bg_color:
-img_offset: 100
-bg_color: 5ca5a0
+og_gen_data:
+  img_bg_color:
+  img_offset: 100
+  bg_color: 5ca5a0
 live: true
 instructor: "Heather O’Neill"
 instructor_bio: "CEO of Pixels for Humans"

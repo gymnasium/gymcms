@@ -5,7 +5,8 @@ date: 2019-10-28T00:00:00-04:00
 course_type: short
 url: /courses/GYM/001/0/about
 poster_art: /img/course-artwork/png/gym-001.png
-img_bg_color: 2c9959
+og_gen_data:
+  img_bg_color: 2c9959
 live: true
 topic: "Career Skills"
 short_description: "Learn how to estimate, plan, track, and manage your time in order to complete projects. Being busy isn’t a bad thing, but not being in control of your own time is."

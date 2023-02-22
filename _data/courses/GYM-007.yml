@@ -6,7 +6,8 @@ course_type: short
 live: true
 url: /courses/GYM/007/0/about
 poster_art: /img/course-artwork/png/gym-007.png
-img_bg_color: d73158
+og_gen_data:
+  img_bg_color: d73158
 topic: "Development"
 short_description: "Learn some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes."
 instructor: jkramer

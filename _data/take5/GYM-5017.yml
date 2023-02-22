@@ -5,9 +5,10 @@ date: 2019-11-12T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5017/
 poster_art: /img/take5/posters/gym-5017.jpg
-img_bg_color:
-img_offset: 175
-bg_color: 2c9959
+og_gen_data:
+  img_bg_color:
+  img_offset: 175
+  bg_color: 2c9959
 live: true
 instructor: "Anne Ditmeyer"
 instructor_bio: "Creative Coach"
