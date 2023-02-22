@@ -10,7 +10,7 @@ permalink: /feeds/data.json
   "courses":[
     {%- assign sorted = site.data.courses | sort: course_id -%}
     {%- for hash in sorted -%}
-      {%- include_relative og-data-logic.html -%}
+      {%- include_relative og-data-logic.liquid -%}
       {
         "id": "{{ id }}",
         "title": "{{ title }}",
@@ -25,7 +25,7 @@ permalink: /feeds/data.json
 
     {%- assign sorted = site.data.workshops | sort: course_id -%}
     {%- for hash in sorted -%}
-      {%- include_relative og-data-logic.html -%}
+      {%- include_relative og-data-logic.liquid -%}
       {
         "id": "{{ id }}",
         "title": "{{ title }}",
@@ -40,7 +40,7 @@ permalink: /feeds/data.json
 
     {%- assign sorted = site.data.take5 | sort: course_id -%}
     {%- for hash in sorted -%}
-      {%- include_relative og-data-logic.html -%}
+      {%- include_relative og-data-logic.liquid -%}
       {
         "id": "{{ id }}",
         "title": "{{ title }}",
