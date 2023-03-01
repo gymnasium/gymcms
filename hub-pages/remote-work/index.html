@@ -3,6 +3,27 @@ layout: wrapper-full-default
 permalink: /remote-work/
 css: [/css/hub-pages.css]
 ---
+{%- assign courses = site.data.courses-page -%}
+
+<nav class="courses-format" aria-label="Courses">
+  <div class="container">
+    <ul role="list">
+      <li>
+        <a href="/courses/full">{{ courses.full_courses.format }}</a>
+      </li>
+      <li>
+        <a href="/courses/gym-shorts">{{ courses.short_courses.format }}</a>
+      </li>
+      <li>
+        <a href="/courses/take5">{{ courses.tutorials.format }}</a>
+      </li>
+      <li>
+        <a href="/collections" aria-current="page">Collections</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <main id="main" role="main">
   <section id="about">
     <div class="banner-content container-fluid">
