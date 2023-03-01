@@ -2,6 +2,7 @@
 ---
 @import 'variables';
 @import 'mixins';
+@import 'pages/courses';
 
 @include defaults;
 
@@ -95,10 +96,6 @@
 #about p {
   font: normal 1.25em/1.45 $gym-text-font-stack;
   margin-top: .6em;
-}
-
-#about p strong:first-child {
-  display: block;
 }
 
 main h3 {

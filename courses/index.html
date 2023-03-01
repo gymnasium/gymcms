@@ -7,6 +7,26 @@ permalink: /courses/
 {%- endif -%}
 
 {%- assign courses = site.data.courses-page -%}
+{%- assign about = site.data.courses-page.about_section -%}
+
+<nav class="courses-format" aria-label="Courses">
+  <div class="container">
+    <ul role="list">
+      <li>
+        <a href="/courses/full">{{ courses.full_courses.format }}</a>
+      </li>
+      <li>
+        <a href="/courses/gym-shorts">{{ courses.short_courses.format }}</a>
+      </li>
+      <li>
+        <a href="/courses/take5">{{ courses.tutorials.format }}</a>
+      </li>
+      <li>
+        <a href="/collections">Collections</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <section class="find-courses" id="catalog">
 
@@ -17,93 +37,237 @@ permalink: /courses/
         <strong class="block">{{ courses.main.tagline }}</strong>
         {{ courses.main.short_description }}
       </p>
-      {%- include courses/about/index.html -%}
     </div>
   </header>
 
-  <div class="container">
-    <ul class="tabs">
-      <li>
-        <a href="#full">{{ courses.full_courses.format }}</a>
-      </li>
-      <li>
-        <a href="#gym-shorts">{{ courses.short_courses.format }}</a>
-      </li>
-      <li>
-        <a href="#take5">{{ courses.tutorials.format }}</a>
-      </li>
-    </ul>
-  </div>
-
   <main id="main" class="container" aria-label="Content" tabindex="-1" role="main">
-    <div class="white-panel catalog-content">
-      <div class="row">
-        <div class="col-md-9 course-overview">
-          <section class="courses-container">
-
-            <section id="full">
-              <header class="intro">
-                <h1>Full Courses</h1>
-                <p class="hero">
-                  {{ courses.full_courses.short_description }}
-                </p>
-              </header>
-              <ul class="listing-courses list-unstyled">
-                {%- assign base_path = "/courses/full/" | prepend: site.gymurl -%}
-                {%- include_relative full/course-list-recent.html -%}
-              </ul>
-              <div class="to-top-link">
-                <a href="#catalog"><b>Back to top</b></a>
+    <div class="row courses-portal">
+      <div class="col-md-12">
+      <div class="white-panel">
+        <article class="courses-promo">
+          <h2>{{ courses.full_courses.format }}</h2>
+          <p class="hero">Learn new skills in a day or less and earn a certificate. <a href="{{ site.gymurl }}/courses/full"><b>Learn More</b></a></p>
+          <div class="promo">
+          <div class="row">
+            <div class="col-md-8 promo-item">
+              <h2>Most Popular</h2>
+              <div class="row">
+                <div class="col-md-5">
+                  <figure>
+                    <img alt="" src="{{ site.data.courses.GYM-107.poster_art }}">
+                  </figure>
+                </div>
+                <div class="col-md-7">
+                  <article>
+                    <header>
+                      <hgroup>
+                        <p class="subhead all-caps"><b>{{ site.data.courses.GYM-107.topic }}</b></p>
+                        <h2><a href="{{ site.gymurl }}{{ site.data.courses.GYM-107.url }}">{{ site.data.courses.GYM-107.title }}</a></h2>
+                      </hgroup>
+                    </header>
+                    <p>{{ site.data.courses.GYM-107.short_description }}</p>
+                    <div class="cta">
+                      <a class="gym-button" href="{{ site.gymurl }}{{ site.data.courses.GYM-107.url }}">Learn More</a> <a class="gym-button" href="{{ site.gymurl }}/courses/full">View All Full Courses</a>
+                    </div>
+                  </article>
+                </div>
               </div>
-            </section>
-
-            <section id="gym-shorts">
-              <header class="intro">
-                <h1>Gym Shorts</h1>
-                <p class="hero">
-                  {{ courses.short_courses.short_description }}
-                </p>
-              </header>
-              <ul class="listing-courses list-unstyled" id="gym-shorts-list">
-                {%- assign base_path = "/courses/gym-shorts/" | prepend: site.gymurl -%}
-                {%- include_relative gym-shorts/course-list-recent.html -%}
-              </ul>
-              <div class="to-top-link">
-                <a href="#catalog"><b>Back to top</b></a>
+            </div>
+            <div class="col-md-4">
+              <dl>
+                <div>
+                  <dt>{{ about.lists[1] }}</dt>
+                  {%- for benefits in about.full_courses[1] -%}
+                  <dd>{{ benefits.label }}</dd>
+                  {%- endfor -%}
+                </div>
+                <div>
+                  <dt>{{ about.lists[2] }}</dt>
+                  {%- for length in about.full_courses[2] -%}
+                  <dd>{{ length.label }}</dd>
+                  {%- endfor -%}
+                </div>
+              </dl>
+            </div>
+          </div>
+          </div>
+        </article>
+      </div><!-- .white-panel -->
+      </div>
+      <div class="col-md-12">
+      <div class="white-panel">
+        <article class="courses-promo">
+          <h2>{{ courses.short_courses.format }}</h2>
+          <p class="hero">Learn new skills in a few hours and earn a badge. <a href="{{ site.gymurl }}/courses/gym-shorts"><b>Learn More</b></a></p>
+          <div class="promo">
+          <div class="row">
+            <div class="col-md-8 promo-item">
+              <h2>Most Popular</h2>
+              <div class="row">
+                <div class="col-md-5">
+                  <figure>
+                    <img alt="" src="{{ site.data.courses.GYM-017.poster_art }}">
+                  </figure>
+                </div>
+                <div class="col-md-7">
+                  <article>
+                    <header>
+                      <hgroup>
+                        <p class="subhead all-caps"><b>{{ site.data.courses.GYM-017.topic }}</b></p>
+                        <h2><a href="{{ site.gymurl }}{{ site.data.courses.GYM-017.url }}">{{ site.data.courses.GYM-017.title }}</a></h2>
+                      </hgroup>
+                    </header>
+                    <p>{{ site.data.courses.GYM-017.short_description }}</p>
+                    <div class="cta">
+                      <a class="gym-button" href="{{ site.gymurl }}{{ site.data.courses.GYM-017.url }}">Learn More</a> <a class="gym-button" href="{{ site.gymurl }}/courses/gym-shorts">View All Gym Shorts</a>
+                    </div>
+                  </article>
+                </div>
               </div>
-            </section>
-
-            <section id="take5">
-              <header class="intro">
-                <h1>Take 5</h1>
-                <p class="hero">
-                  {{ courses.tutorials.short_description }}
-                </p>
-              </header>
-              <ul class="listing-courses list-unstyled" id="take5-list">
-              {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
-              {%- include_relative take5/course-list-recent.html -%}
-              </ul>
-              <div class="cta">
-                <a class="gym-button" href="{{ site.gymurl}}/courses/take5">
-                  <b>View All Take 5 Tutorials</b>
-                </a>
+            </div>
+            <div class="col-md-4">
+              <dl>
+                <div>
+                  <dt>{{ about.lists[1] }}</dt>
+                  {%- for benefits in about.short_courses[1] -%}
+                  <dd>{{ benefits.label }}</dd>
+                  {%- endfor -%}
+                </div>
+                <div>
+                  <dt>{{ about.lists[2] }}</dt>
+                  {%- for length in about.short_courses[2] -%}
+                  <dd>{{ length.label }}</dd>
+                  {%- endfor -%}
+                </div>
+              </dl>
+            </div>
+          </div>
+          </div>
+        </article>
+      </div><!-- .white-panel -->
+      </div>
+      <div class="col-md-12">
+      <div class="white-panel">
+        <article class="courses-promo">
+          <h2>{{ courses.tutorials.format }}</h2>
+          <p class="hero">Learn new skills with 5-minute tutorials. <a href="{{ site.gymurl }}/courses/take5"><b>Learn More</b></a></p>
+          <div class="promo">
+          <div class="row">
+            <div class="col-md-8 promo-item">
+              <h2>Most Popular</h2>
+              <div class="row">
+                <div class="col-md-5">
+                  <figure>
+                    <img alt="" src="{{ site.data.take5.GYM-5042.poster_art }}">
+                  </figure>
+                </div>
+                <div class="col-md-7">
+                  <article>
+                    <header>
+                      <hgroup>
+                        <p class="subhead all-caps"><b>{{ site.data.take5.GYM-5042.topic }}</b></p>
+                        <h2><a href="{{ site.gymurl }}{{ site.data.take5.GYM-5042.url }}">{{ site.data.take5.GYM-5042.title }}</a></h2>
+                      </hgroup>
+                    </header>
+                    <p>{{ site.data.take5.GYM-5042.short_description }}</p>
+                    <div class="cta">
+                      <a class="gym-button" href="{{ site.gymurl }}{{ site.data.take5.GYM-5042.url }}">Learn More</a> <a class="gym-button" href="{{ site.gymurl }}/courses/take5">View All Tutorials</a>
+                    </div>
+                  </article>
+                </div>
               </div>
-              <div class="to-top-link">
-                <a href="#catalog"><b>Back to top</b></a>
+            </div>
+            <div class="col-md-4">
+              <dl>
+                <div>
+                  <dt>{{ about.lists[1] }}</dt>
+                  {%- for benefits in about.short_courses[1] -%}
+                  <dd>{{ benefits.label }}</dd>
+                  {%- endfor -%}
+                </div>
+                <div>
+                  <dt>{{ about.lists[2] }}</dt>
+                  {%- for length in about.short_courses[2] -%}
+                  <dd>{{ length.label }}</dd>
+                  {%- endfor -%}
+                </div>
+              </dl>
+            </div>
+          </div>
+          </div>
+        </article>
+      </div><!-- .white-panel -->
+      </div>
+      <div class="col-md-12">
+      <div class="white-panel">
+        <article class="courses-promo">
+          <h2>Collections</h2>
+          <p class="hero">Explore specific topics with free courses, tutorials, resources, and jobs. <a href="{{ site.gymurl }}/collections"><b>Learn More</b></a></p>
+          <div class="promo">
+          <div class="row">
+            <div class="col-md-8 promo-item">
+              <h2>Most Popular</h2>
+              <div class="row">
+                <div class="col-md-5">
+                  <figure>
+                    <img alt="" src="/img/hub-pages/og/design-systems-collection-og.png">
+                  </figure>
+                </div>
+                <div class="col-md-7">
+                  <article>
+                    <header>
+                      <hgroup>
+                        <p class="subhead all-caps"><b>Content Collection</b></p>
+                        <h2><a href="{{ site.gymurl }}/collections/design-systems">Design Systems</a></h2>
+                      </hgroup>
+                    </header>
+                    <p>Teamwork (and creating effective pattern libraries) makes the dream work.</p>
+                    <div class="cta">
+                      <a class="gym-button" href="{{ site.gymurl }}{{ site.data.take5.GYM-5042.url }}">Learn More</a> <a class="gym-button" href="{{ site.gymurl }}/collections">View All Collections</a>
+                    </div>
+                  </article>
+                </div>
               </div>
-            </section>
-
-          </section>
-        </div>
-        <div class="col-md-3 sidebar">
-          {%- comment -%} Get Upcoming/Featured Courses Sidebar {%- endcomment -%}
-          {%- include sidebar-featured.html -%}
-        </div>
-      </div><!-- .catalog-content.row -->
-    </div><!-- .white-panel -->
-
+            </div>
+            <div class="col-md-4">
+              <dl>
+                <div>
+                  <dt>Content Collections</dt>
+                  <dd><a href="{{ site.gymurl }}/design-systems">Design Systems</a>
+                  <dd><a href="{{ site.gymurl }}/web-development">Web Development</a></dd>
+                  <dd><a href="{{ site.gymurl }}/ux-design">UX Design</a></dd>
+                  <dd><a href="{{ site.gymurl }}/prototyping">Prototyping</a></dd>
+                  <dd><a href="{{ site.gymurl }}/accessibility">Accessibility</a></dd>
+                   <dd><a href="{{ site.gymurl }}/career-skills">Career Skills</a></dd>
+                </div>
+              </dl>
+            </div>
+<!--
+            <div class="col-md-4">
+              <dl>
+                <div>
+                  <dt>{{ about.lists[1] }}</dt>
+                  {%- for benefits in about.short_courses[1] -%}
+                  <dd>{{ benefits.label }}</dd>
+                  {%- endfor -%}
+                </div>
+                <div>
+                  <dt>{{ about.lists[2] }}</dt>
+                  {%- for length in about.short_courses[2] -%}
+                  <dd>{{ length.label }}</dd>
+                  {%- endfor -%}
+                </div>
+              </dl>
+            </div>
+ -->
+          </div>
+          </div>
+        </article>
+      </div><!-- .white-panel -->
+      </div>
+    </div>
   </main>
+
 </section>
 
 {%- if jekyll.environment == "local" -%}

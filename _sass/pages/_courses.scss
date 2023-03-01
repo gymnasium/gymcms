@@ -66,7 +66,7 @@
     font-size: 16px;
     color: $gym-black;
     padding-left: 1em;
-    margin-top: 1.2em;
+    margin-top: 1.4em;
     margin-bottom: 0;
 
     div {
@@ -97,6 +97,16 @@
 
   }
 
+  dl.row {
+    margin-top: 0.4em;
+  }
+
+  dl.row + p {
+    font-size: 1em;
+    margin-top: 1.4em;
+    margin-bottom: 0;
+  }
+
   @include breakpoint(medium, max) {
 
     .row > div:not(:first-child) {
@@ -104,6 +114,175 @@
       margin-top: 1em;
     }
 
+  }
+
+  & > .container .white-panel {
+    padding: 1.2em;
+  }
+
+  @include breakpoint(medium, min) {
+
+    .gym-button + .gym-button {
+      margin-left: 1em;
+    }
+
+  }
+
+  .courses-portal > div:not(:first-child) {
+    margin-top: -1.4em;
+  }
+
+  .courses-portal {
+
+    p.hero a {
+      font: inherit;
+    }
+
+  }
+
+  .promo {
+    border-top: 1px dashed $gym-gray;
+    margin-top: 1.2em;
+  }
+
+  .promo-item {
+    margin-top: 1.2em;
+
+    > h2 {
+      font-size: font-calc(16, rem, 10px);
+      line-height: 1.25;
+      font-family: $gym-font-stack;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      word-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.6em;
+
+      + .row {
+        margin-top: 1em;
+      }
+    }
+  }
+
+}
+
+.courses-format {
+  font-size: 16px;
+  background-color: #292929;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  ul {
+    float: left;
+    list-style: none;
+    color: #fff;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li {
+      display: inline;
+      font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.05em;
+      letter-spacing: 0.1116625ex;
+
+      &:not(:first-child) {
+        margin-left: 2rem;
+      }
+
+      a {
+        display: inline-block;
+      }
+    }
+  }
+
+  a {
+    font: inherit;
+    border-bottom: 0 none;
+
+    &:not([aria-current="page"]) {
+      color: $gym-light-gray;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #ff5f14;
+    }
+  }
+
+}
+
+.container + main {
+  margin-top: -1.2em;
+}
+
+.courses-promo {
+
+  ul[role="list"] {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 1.2em;
+    list-style: none;
+    padding-top: 1.2em;
+    padding-left: 0;
+    border-top: 1px solid $gym-gray;
+    margin-top: 1.2em;
+  }
+
+  article {
+    display: grid;
+    grid-auto-rows: auto auto 1fr;
+  }
+
+  header {
+    align-self: start;
+    // margin-top: 1em;
+  }
+
+  figure {
+    margin-bottom: 1em;
+  }
+
+  .cta {
+    align-self: end;
+    margin-top: 1.2em;
+
+    a.gym-button {
+      width: auto;
+    }
+  }
+
+  header {
+    margin-bottom: 0.6em;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  & > h2 {
+    font-size: 2.8rem;
+  }
+
+  div[class] > h2 {
+    margin-bottom: 1.2em;
+  }
+
+  p {
+    margin-top: 1.2rem;
+  }
+
+  .hero {
+    font-family: $gym-font-stack;
+    font-size: 2.2rem;
+    line-height: 1.4;
+  }
+
+  .subhead {
+    letter-spacing: 0.1ex;
+    margin-top: 0;
+    margin-bottom: 0.6em;
   }
 
 }
@@ -167,9 +346,12 @@
   }
 
   .course-item {
-    padding-top: 1.2em;
-    border-top: 1px solid $gym-gray-2;
-    margin-top: 1.2em;
+
+    &:not(:first-child) {
+      padding-top: 1.2em;
+      border-top: 1px solid $gym-gray-2;
+      margin-top: 1.2em;
+    }
 
     @include breakpoint(medium, max) {
 
