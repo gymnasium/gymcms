@@ -25,3 +25,6 @@ Standard course layouts use a course icon/badge and a hex color value to color t
 
 ##### Take 5 Tutorial Layouts
 Take 5 tutorials are visually different from course layouts, utilizing a custom image and an image offset.
+
+### Additional Documentation
+- [Satori](https://github.com/vercel/satori) - documentation on the Satori library, by Vercel. Of particular interest should be the section on permissible CSS.
