@@ -197,16 +197,23 @@
 
   a {
     font: inherit;
-    border-bottom: 0 none;
-
-    &:not([aria-current="page"]) {
-      color: $gym-light-gray;
-    }
+    color: $gym-white;
+    border-bottom-color: transparent;
 
     &:hover,
     &:focus,
     &:active {
-      color: #ff5f14;
+      color: $gym-orange;
+    }
+
+    &[aria-current="page"] {
+      border-bottom-color: $gym-white;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-bottom-color: $gym-orange;
+      }
     }
   }
 
