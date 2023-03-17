@@ -21,20 +21,23 @@ about_section:
     2: "Length"
   full_courses:
     1:
-      - label: "Certificate to share on social media"
-      - label: "Course forum to share work and get feedback"
+      - label: "Completely free self-paced online courses"
+      - label: "Earn a Certificate to share on your résumé and social media"
+      - label: "Discuss, share, and get feedback from students and teaching assistants in the forum"
       - label: "Optional homework and quizzes to sharpen your skills"
     2:
       - label: "Video Lessons: 3–5 hours"
       - label: "Course Completion: 12–22 hours"
   short_courses:
     1:
-      - label: "Badge to share on social media"
+      - label: "Completely free self-paced online courses"
+      - label: "Earn a Badge to share on your résumé and social media"
     2:
       - label: "Video Lessons: 1–2 hours"
       - label: "Course Completion: 1–5 hours"
   tutorials:
     1:
+      - label: "Completely free online video tutorials"
       - label: "Learn new skills in 5 minutes"
       - label: "Video tutorial with easy-to-follow transcript"
     2:
