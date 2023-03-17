@@ -20,6 +20,12 @@
       color: $gym-black;
     }
 
+    @include breakpoint(small, max) {
+      span.block {
+        display: inline;
+      }
+    }
+
     h1 {
       margin-top: 0;
     }
@@ -108,12 +114,10 @@
   }
 
   @include breakpoint(medium, max) {
-
     .row > div:not(:first-child) {
       padding-top: 1em;
       margin-top: 1em;
     }
-
   }
 
   & > .container .white-panel {
