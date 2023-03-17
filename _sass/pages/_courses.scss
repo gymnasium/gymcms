@@ -294,6 +294,16 @@
 
 }
 
+@include breakpoint(medium, max) {
+  #catalog .courses-promo > .container > .row > div[class] {
+    margin-top: 1rem;
+  }
+  #catalog .courses-promo .row > div:not(:first-child) {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
 .courses-container {
 
   > section[id] {
