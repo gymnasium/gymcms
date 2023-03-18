@@ -173,11 +173,9 @@
 .courses-format {
   font-size: 16px;
   background-color: #292929;
-  padding-top: 1em;
   padding-bottom: 1em;
 
   ul {
-    float: left;
     list-style: none;
     color: #fff;
     padding-left: 0;
@@ -185,16 +183,18 @@
 
     li {
       display: inline;
-      font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.05em;
+      font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
       letter-spacing: 0.1116625ex;
+      white-space: nowrap;
 
-      &:not(:first-child) {
-        margin-left: 2rem;
+      &:not(:last-child) {
+        margin-right: 2em;
       }
 
       a {
         display: inline-block;
+        margin-top: 1em;
       }
     }
   }
@@ -208,6 +208,7 @@
     &:focus,
     &:active {
       color: $gym-orange;
+      margin-bottom: -1px;
     }
 
     &[aria-current="page"] {
