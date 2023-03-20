@@ -301,7 +301,10 @@
 
 @include breakpoint(medium, max) {
   #catalog .courses-promo > .container > .row > div[class] {
-    margin-top: 1rem;
+    margin-top: 0.5em;
+    &:not(:first-child) {
+      margin-top: 2em;
+    }
   }
   #catalog .courses-promo .row > div:not(:first-child) {
     padding-top: 0;
