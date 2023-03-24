@@ -6,6 +6,7 @@ permalink: /courses/
   {%- include partials/test-top.html -%}
 {%- endif -%}
 
+{%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
 {%- assign courses = site.data.courses-page -%}
 {%- assign about = site.data.courses-page.about_section -%}
 
@@ -46,15 +47,15 @@ permalink: /courses/
       <div class="white-panel">
         <article class="courses-promo">
           <h2>{{ courses.full_courses.format }}</h2>
-          <p class="hero">Learn new skills in a day or less and earn a certificate. <a href="{{ site.gymurl }}/courses/full"><b>Learn More</b></a></p>
+          <p class="hero">Learn new skills in a day or less and earn a certificate. <a href="{{ site.gymurl }}/courses/full"><b>View All Full Courses</b></a></p>
           <div class="promo">
           <div class="row">
             <div class="col-md-8 promo-item">
-              <h2>Most Popular</h2>
+              <h2>Featured</h2>
               <div class="row">
                 <div class="col-md-5">
                   <figure>
-                    <img alt="{{ site.data.courses.GYM-107.title }} cover image." src="{{ site.url }}/{{ site.data.courses.GYM-107.poster_art }}" decoding="async" fetchpriority="high">
+                    <a href="{{ site.gymurl }}{{ site.data.courses.GYM-107.url }}"><img alt="{{ site.data.courses.GYM-107.title }} cover image." src="{{ site.url }}/{{ site.data.courses.GYM-107.poster_art }}" decoding="async" fetchpriority="high"></a>
                   </figure>
                 </div>
                 <div class="col-md-7">
@@ -66,7 +67,6 @@ permalink: /courses/
                     <p>{{ site.data.courses.GYM-107.short_description }}</p>
                     <div class="cta">
                       <a class="gym-button natural" href="{{ site.gymurl }}{{ site.data.courses.GYM-107.url }}">Learn More</a>
-                      <a class="gym-button natural" href="{{ site.gymurl }}/courses/full">View All Full Courses</a>
                     </div>
                   </article>
                 </div>
@@ -97,15 +97,15 @@ permalink: /courses/
       <div class="white-panel">
         <article class="courses-promo">
           <h2>{{ courses.short_courses.format }}</h2>
-          <p class="hero">Learn new skills in a few hours and earn a badge. <a href="{{ site.gymurl }}/courses/gym-shorts"><b>Learn More</b></a></p>
+          <p class="hero">Learn new skills in a few hours and earn a badge. <a href="{{ site.gymurl }}/courses/gym-shorts"><b>View All Gym Shorts</b></a></p>
           <div class="promo">
           <div class="row">
             <div class="col-md-8 promo-item">
-              <h2>Most Popular</h2>
+              <h2>Featured</h2>
               <div class="row">
                 <div class="col-md-5">
                   <figure>
-                    <img alt="{{ site.data.courses.GYM-017.title }} cover image." src="{{ site.url }}/{{ site.data.courses.GYM-017.poster_art }}" decoding="async" fetchpriority="high">
+                    <a href="{{ site.gymurl }}{{ site.data.courses.GYM-017.url }}"><img alt="{{ site.data.courses.GYM-017.title }} cover image." src="{{ site.url }}/{{ site.data.courses.GYM-017.poster_art }}" decoding="async" fetchpriority="high"></a>
                   </figure>
                 </div>
                 <div class="col-md-7">
@@ -117,7 +117,6 @@ permalink: /courses/
                     <p>{{ site.data.courses.GYM-017.short_description }}</p>
                     <div class="cta">
                       <a class="gym-button natural" href="{{ site.gymurl }}{{ site.data.courses.GYM-017.url }}">Learn More</a>
-                      <a class="gym-button natural" href="{{ site.gymurl }}/courses/gym-shorts">View All Gym Shorts</a>
                     </div>
                   </article>
                 </div>
@@ -148,27 +147,26 @@ permalink: /courses/
       <div class="white-panel">
         <article class="courses-promo">
           <h2>{{ courses.tutorials.format }}</h2>
-          <p class="hero">Learn new skills with 5-minute tutorials. <a href="{{ site.gymurl }}/courses/take5"><b>Learn More</b></a></p>
+          <p class="hero">Learn new skills with 5-minute tutorials. <a href="{{ site.gymurl }}/courses/take5"><b>View All Tutorials</b></a></p>
           <div class="promo">
           <div class="row">
             <div class="col-md-8 promo-item">
-              <h2>Most Popular</h2>
+              <h2>Featured</h2>
               <div class="row">
                 <div class="col-md-5">
                   <figure>
-                    <img alt="{{ site.data.take5.GYM-5042.title }} cover image." src="{{ site.url }}/{{ site.data.take5.GYM-5042.poster_art }}" decoding="async" fetchpriority="high">
+                    <a href="{{ site.data.take5.GYM-5042.title | slugify | prepend: base_path }}"><img alt="{{ site.data.take5.GYM-5042.title }} cover image." src="{{ site.url }}/{{ site.data.take5.GYM-5042.poster_art }}" decoding="async" fetchpriority="high"></a>
                   </figure>
                 </div>
                 <div class="col-md-7">
                   <article>
                     <header>
                       <p class="subhead all-caps"><b>{{ site.data.take5.GYM-5042.topic }}</b></p>
-                      <h2><a href="{{ site.gymurl }}{{ site.data.take5.GYM-5042.url }}">{{ site.data.take5.GYM-5042.title }}</a></h2>
+                      <h2><a href="{{ site.data.take5.GYM-5042.title | slugify | prepend: base_path }}">{{ site.data.take5.GYM-5042.title }}</a></h2>
                     </header>
                     <p>{{ site.data.take5.GYM-5042.short_description }}</p>
                     <div class="cta">
-                      <a class="gym-button natural" href="{{ site.gymurl }}{{ site.data.take5.GYM-5042.url }}">Learn More</a>
-                      <a class="gym-button natural" href="{{ site.gymurl }}/courses/take5">View All Tutorials</a>
+                      <a class="gym-button natural" href="{{ site.data.take5.GYM-5042.title | slugify | prepend: base_path }}">Learn More</a>
                     </div>
                   </article>
                 </div>
@@ -199,29 +197,28 @@ permalink: /courses/
       <div class="white-panel">
         <article class="courses-promo">
           <h2>Collections</h2>
-          <p class="hero">Explore specific topics with free courses, tutorials, resources, and jobs. <a href="{{ site.gymurl }}/collections"><b>Learn More</b></a></p>
+          <p class="hero">Explore specific topics with free courses, tutorials, resources, and jobs. <a href="{{ site.gymurl }}/collections"><b>View All Collections</b></a></p>
           <div class="promo">
           <div class="row">
             <div class="col-md-8 promo-item">
-              <h2>Most Popular</h2>
+              <h2>Featured</h2>
               <div class="row">
                 <div class="col-md-5">
                   <figure>
-                    <img alt="Design Systems Collection cover image." src="{{ site.url }}/img/hub-pages/og/design-systems-collection-og.png" decoding="async" fetchpriority="high">
+                    <a href="{{ site.gymurl }}/collections/design-systems"><img alt="Design Systems Collection cover image." src="{{ site.url }}/img/hub-pages/og/design-systems-collection-og.png" decoding="async" fetchpriority="high"></a>
                   </figure>
                 </div>
                 <div class="col-md-7">
                   <article>
                     <header>
                       <hgroup>
-                        <p class="subhead all-caps"><b>Content Collection</b></p>
+                        <!-- <p class="subhead all-caps"><b>Content Collection</b></p> -->
                         <h2><a href="{{ site.gymurl }}/collections/design-systems">Design Systems</a></h2>
                       </hgroup>
                     </header>
                     <p>Teamwork (and creating effective pattern libraries) makes the dream work.</p>
                     <div class="cta">
                       <a class="gym-button natural" href="{{ site.gymurl }}{{ site.data.take5.GYM-5042.url }}">Learn More</a>
-                      <a class="gym-button natural" href="{{ site.gymurl }}/collections">View All Collections</a>
                     </div>
                   </article>
                 </div>
