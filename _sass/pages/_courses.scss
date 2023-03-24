@@ -124,14 +124,6 @@
     padding: 1.2em;
   }
 
-  @include breakpoint(medium, min) {
-
-    .gym-button + .gym-button {
-      margin-left: 1em;
-    }
-
-  }
-
   .courses-portal > div:not(:first-child) {
     margin-top: -1.4em;
   }
@@ -248,7 +240,7 @@
 
   header {
     align-self: start;
-    // margin-top: 1em;
+    margin-bottom: 0.6em;
   }
 
   figure {
@@ -257,15 +249,14 @@
 
   .cta {
     align-self: end;
-    margin-top: 1.2em;
 
-    a.gym-button {
-      width: auto;
+    .gym-button {
+      margin-top: 1.2em;
+
+      &:first-child {
+        margin-right: 1em;
+      }
     }
-  }
-
-  header {
-    margin-bottom: 0.6em;
   }
 
   h2 {
@@ -283,6 +274,7 @@
 
   p {
     margin-top: 1.2rem;
+    margin-bottom: 0;
   }
 
   .hero {
