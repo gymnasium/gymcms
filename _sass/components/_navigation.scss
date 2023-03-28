@@ -166,6 +166,17 @@
   }
 }
 
+// Exclude courseware-related about pages /courseware/*/*/about from /courses page(s)
+
+.gym-course-about {
+  .main-nav {
+    .vbar a {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+}
+
 .utility-nav {
   display: none;
   background-color: black;
