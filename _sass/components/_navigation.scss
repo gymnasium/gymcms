@@ -61,7 +61,7 @@
       }
     }
 
-    li.active {
+    li.active a {
       background-color: #292929;
     }
 
@@ -101,7 +101,7 @@
         display: inline;
         word-spacing: 0; // Undo inherit
 
-        &.active {
+        &.active a {
           box-shadow: 0 -1.5rem #292929, 0 1.5rem #292929; // top/bottom
         }
 
