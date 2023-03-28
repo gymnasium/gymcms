@@ -44,200 +44,250 @@ permalink: /courses/
   <main id="main" class="container" aria-label="Content" tabindex="-1" role="main">
     <div class="row courses-portal">
       <div class="col-md-12">
-      <div class="white-panel">
-        <article class="courses-promo">
-          <h2>{{ courses.full_courses.format }}</h2>
-          <p class="hero">Learn new skills in a day or less and earn a certificate. <a href="{{ site.gymurl }}/courses/full"><b>View All Full Courses</b></a></p>
-          <div class="promo">
-          <div class="row">
-            <div class="col-md-8 promo-item">
-              <h2>Featured</h2>
+        <div class="white-panel">
+          <article class="courses-promo">
+            <h2>
+              {{ courses.full_courses.format }}
+            </h2>
+            <p class="hero">
+              Learn new skills in a day or less and earn a certificate. <a href="{{ site.gymurl }}/courses/full"><b>View All Full Courses</b></a>
+            </p>
+            <div class="promo">
               <div class="row">
-                <div class="col-md-5">
-                  <figure>
-                    <a href="{{ site.gymurl }}{{ site.data.courses.GYM-107.url }}"><img alt="{{ site.data.courses.GYM-107.title }} cover image." src="{{ site.url }}/{{ site.data.courses.GYM-107.poster_art }}" decoding="async" fetchpriority="high"></a>
-                  </figure>
-                </div>
-                <div class="col-md-7">
-                  <article>
-                    <header>
-                      <p class="subhead all-caps"><b>{{ site.data.courses.GYM-107.topic }}</b></p>
-                      <h2><a href="{{ site.gymurl }}{{ site.data.courses.GYM-107.url }}">{{ site.data.courses.GYM-107.title }}</a></h2>
-                    </header>
-                    <p>{{ site.data.courses.GYM-107.short_description }}</p>
-                    <div class="cta">
-                      <a class="gym-button natural" href="{{ site.gymurl }}{{ site.data.courses.GYM-107.url }}">Learn More</a>
+                <div class="col-md-8 promo-item">
+                  <h2>
+                    Featured
+                  </h2>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <figure>
+                        <a href="{{ site.gymurl }}{{ site.data.courses.GYM-107.url }}"><img alt="{{ site.data.courses.GYM-107.title }} cover image." src="{{ site.url }}/{{ site.data.courses.GYM-107.poster_art }}" decoding="async" fetchpriority="high"></a>
+                      </figure>
                     </div>
-                  </article>
+                    <div class="col-md-7">
+                      <article>
+                        <header>
+                          <p class="subhead all-caps">
+                            <b>{{ site.data.courses.GYM-107.topic }}</b>
+                          </p>
+                          <h2>
+                            <a href="{{ site.gymurl }}{{ site.data.courses.GYM-107.url }}">{{ site.data.courses.GYM-107.title }}</a>
+                          </h2>
+                        </header>
+                        <p>
+                          {{ site.data.courses.GYM-107.short_description }}
+                        </p>
+                        <div class="cta">
+                          <a class="gym-button natural" href="{{ site.gymurl }}{{ site.data.courses.GYM-107.url }}">Learn More</a>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <dl>
+                    <div>
+                      <dt>{{ about.lists[1] }}</dt>
+                      {%- for benefits in about.full_courses[1] -%}
+                      <dd>{{ benefits.label }}</dd>
+                      {%- endfor -%}
+                    </div>
+                    <div>
+                      <dt>{{ about.lists[2] }}</dt>
+                      {%- for length in about.full_courses[2] -%}
+                      <dd>{{ length.label }}</dd>
+                      {%- endfor -%}
+                    </div>
+                  </dl>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <dl>
-                <div>
-                  <dt>{{ about.lists[1] }}</dt>
-                  {%- for benefits in about.full_courses[1] -%}
-                  <dd>{{ benefits.label }}</dd>
-                  {%- endfor -%}
-                </div>
-                <div>
-                  <dt>{{ about.lists[2] }}</dt>
-                  {%- for length in about.full_courses[2] -%}
-                  <dd>{{ length.label }}</dd>
-                  {%- endfor -%}
-                </div>
-              </dl>
-            </div>
-          </div>
-          </div>
-        </article>
-      </div><!-- .white-panel -->
+          </article>
+        </div>
+    <!-- .white-panel -->
       </div>
       <div class="col-md-12">
-      <div class="white-panel">
-        <article class="courses-promo">
-          <h2>{{ courses.short_courses.format }}</h2>
-          <p class="hero">Learn new skills in a few hours and earn a badge. <a href="{{ site.gymurl }}/courses/gym-shorts"><b>View All Gym Shorts</b></a></p>
-          <div class="promo">
-          <div class="row">
-            <div class="col-md-8 promo-item">
-              <h2>Featured</h2>
+        <div class="white-panel">
+          <article class="courses-promo">
+            <h2>
+              {{ courses.short_courses.format }}
+            </h2>
+            <p class="hero">
+              Learn new skills in a few hours and earn a badge. <a href="{{ site.gymurl }}/courses/gym-shorts"><b>View All Gym Shorts</b></a>
+            </p>
+            <div class="promo">
               <div class="row">
-                <div class="col-md-5">
-                  <figure>
-                    <a href="{{ site.gymurl }}{{ site.data.courses.GYM-017.url }}"><img alt="{{ site.data.courses.GYM-017.title }} cover image." src="{{ site.url }}/{{ site.data.courses.GYM-017.poster_art }}" decoding="async" fetchpriority="high"></a>
-                  </figure>
-                </div>
-                <div class="col-md-7">
-                  <article>
-                    <header>
-                      <p class="subhead all-caps"><b>{{ site.data.courses.GYM-017.topic }}</b></p>
-                      <h2><a href="{{ site.gymurl }}{{ site.data.courses.GYM-017.url }}">{{ site.data.courses.GYM-017.title }}</a></h2>
-                    </header>
-                    <p>{{ site.data.courses.GYM-017.short_description }}</p>
-                    <div class="cta">
-                      <a class="gym-button natural" href="{{ site.gymurl }}{{ site.data.courses.GYM-017.url }}">Learn More</a>
+                <div class="col-md-8 promo-item">
+                  <h2>
+                    Featured
+                  </h2>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <figure>
+                        <a href="{{ site.gymurl }}{{ site.data.courses.GYM-017.url }}"><img alt="{{ site.data.courses.GYM-017.title }} cover image." src="{{ site.url }}/{{ site.data.courses.GYM-017.poster_art }}" decoding="async" fetchpriority="high"></a>
+                      </figure>
                     </div>
-                  </article>
+                    <div class="col-md-7">
+                      <article>
+                        <header>
+                          <p class="subhead all-caps">
+                            <b>{{ site.data.courses.GYM-017.topic }}</b>
+                          </p>
+                          <h2>
+                            <a href="{{ site.gymurl }}{{ site.data.courses.GYM-017.url }}">{{ site.data.courses.GYM-017.title }}</a>
+                          </h2>
+                        </header>
+                        <p>
+                          {{ site.data.courses.GYM-017.short_description }}
+                        </p>
+                        <div class="cta">
+                          <a class="gym-button natural" href="{{ site.gymurl }}{{ site.data.courses.GYM-017.url }}">Learn More</a>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <dl>
+                    <div>
+                      <dt>{{ about.lists[1] }}</dt>
+                      {%- for benefits in about.short_courses[1] -%}
+                      <dd>{{ benefits.label }}</dd>
+                      {%- endfor -%}
+                    </div>
+                    <div>
+                      <dt>{{ about.lists[2] }}</dt>
+                      {%- for length in about.short_courses[2] -%}
+                      <dd>{{ length.label }}</dd>
+                      {%- endfor -%}
+                    </div>
+                  </dl>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <dl>
-                <div>
-                  <dt>{{ about.lists[1] }}</dt>
-                  {%- for benefits in about.short_courses[1] -%}
-                  <dd>{{ benefits.label }}</dd>
-                  {%- endfor -%}
-                </div>
-                <div>
-                  <dt>{{ about.lists[2] }}</dt>
-                  {%- for length in about.short_courses[2] -%}
-                  <dd>{{ length.label }}</dd>
-                  {%- endfor -%}
-                </div>
-              </dl>
-            </div>
-          </div>
-          </div>
-        </article>
-      </div><!-- .white-panel -->
+          </article>
+        </div>
+    <!-- .white-panel -->
       </div>
       <div class="col-md-12">
-      <div class="white-panel">
-        <article class="courses-promo">
-          <h2>{{ courses.tutorials.format }}</h2>
-          <p class="hero">Learn new skills with 5-minute tutorials. <a href="{{ site.gymurl }}/courses/take5"><b>View All Tutorials</b></a></p>
-          <div class="promo">
-          <div class="row">
-            <div class="col-md-8 promo-item">
-              <h2>Featured</h2>
+        <div class="white-panel">
+          <article class="courses-promo">
+            <h2>
+              {{ courses.tutorials.format }}
+            </h2>
+            <p class="hero">
+              Learn new skills with 5-minute tutorials. <a href="{{ site.gymurl }}/courses/take5"><b>View All Tutorials</b></a>
+            </p>
+            <div class="promo">
               <div class="row">
-                <div class="col-md-5">
-                  <figure>
-                    <a href="{{ site.data.take5.GYM-5042.title | slugify | prepend: base_path }}"><img alt="{{ site.data.take5.GYM-5042.title }} cover image." src="{{ site.url }}/{{ site.data.take5.GYM-5042.poster_art }}" decoding="async" fetchpriority="high"></a>
-                  </figure>
-                </div>
-                <div class="col-md-7">
-                  <article>
-                    <header>
-                      <p class="subhead all-caps"><b>{{ site.data.take5.GYM-5042.topic }}</b></p>
-                      <h2><a href="{{ site.data.take5.GYM-5042.title | slugify | prepend: base_path }}">{{ site.data.take5.GYM-5042.title }}</a></h2>
-                    </header>
-                    <p>{{ site.data.take5.GYM-5042.short_description }}</p>
-                    <div class="cta">
-                      <a class="gym-button natural" href="{{ site.data.take5.GYM-5042.title | slugify | prepend: base_path }}">Learn More</a>
+                <div class="col-md-8 promo-item">
+                  <h2>
+                    Featured
+                  </h2>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <figure>
+                        <a href="{{ site.data.take5.GYM-5042.title | slugify | prepend: base_path }}"><img alt="{{ site.data.take5.GYM-5042.title }} cover image." src="{{ site.url }}/{{ site.data.take5.GYM-5042.poster_art }}" decoding="async" fetchpriority="high"></a>
+                      </figure>
                     </div>
-                  </article>
+                    <div class="col-md-7">
+                      <article>
+                        <header>
+                          <p class="subhead all-caps">
+                            <b>{{ site.data.take5.GYM-5042.topic }}</b>
+                          </p>
+                          <h2>
+                            <a href="{{ site.data.take5.GYM-5042.title | slugify | prepend: base_path }}">{{ site.data.take5.GYM-5042.title }}</a>
+                          </h2>
+                        </header>
+                        <p>
+                          {{ site.data.take5.GYM-5042.short_description }}
+                        </p>
+                        <div class="cta">
+                          <a class="gym-button natural" href="{{ site.data.take5.GYM-5042.title | slugify | prepend: base_path }}">Learn More</a>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <dl>
+                    <div>
+                      <dt>{{ about.lists[1] }}</dt>
+                      {%- for benefits in about.short_courses[1] -%}
+                      <dd>{{ benefits.label }}</dd>
+                      {%- endfor -%}
+                    </div>
+                    <div>
+                      <dt>{{ about.lists[2] }}</dt>
+                      {%- for length in about.short_courses[2] -%}
+                      <dd>{{ length.label }}</dd>
+                      {%- endfor -%}
+                    </div>
+                  </dl>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <dl>
-                <div>
-                  <dt>{{ about.lists[1] }}</dt>
-                  {%- for benefits in about.short_courses[1] -%}
-                  <dd>{{ benefits.label }}</dd>
-                  {%- endfor -%}
-                </div>
-                <div>
-                  <dt>{{ about.lists[2] }}</dt>
-                  {%- for length in about.short_courses[2] -%}
-                  <dd>{{ length.label }}</dd>
-                  {%- endfor -%}
-                </div>
-              </dl>
-            </div>
-          </div>
-          </div>
-        </article>
-      </div><!-- .white-panel -->
+          </article>
+        </div>
+    <!-- .white-panel -->
       </div>
       <div class="col-md-12">
-      <div class="white-panel">
-        <article class="courses-promo">
-          <h2>Collections</h2>
-          <p class="hero">Explore specific topics with free courses, tutorials, resources, and jobs. <a href="{{ site.gymurl }}/collections"><b>View All Collections</b></a></p>
-          <div class="promo">
-          <div class="row">
-            <div class="col-md-8 promo-item">
-              <h2>Featured</h2>
+        <div class="white-panel">
+          <article class="courses-promo">
+            <h2>
+              Collections
+            </h2>
+            <p class="hero">
+              Explore specific topics with free courses, tutorials, resources, and jobs. <a href="{{ site.gymurl }}/collections"><b>View All Collections</b></a>
+            </p>
+            <div class="promo">
               <div class="row">
-                <div class="col-md-5">
-                  <figure>
-                    <a href="{{ site.gymurl }}/design-systems"><img alt="Design Systems Collection cover image." src="{{ site.url }}/img/hub-pages/og/design-systems-collection-og.png" decoding="async" fetchpriority="high"></a>
-                  </figure>
-                </div>
-                <div class="col-md-7">
-                  <article>
-                    <header>
-                        <h2><a href="{{ site.gymurl }}/design-systems">Design Systems</a></h2>
-                    </header>
-                    <p>Teamwork (and creating effective pattern libraries) makes the dream work.</p>
-                    <div class="cta">
-                      <a class="gym-button natural" href="{{ site.gymurl }}/design-systems">Learn More</a>
+                <div class="col-md-8 promo-item">
+                  <h2>
+                    Featured
+                  </h2>
+                  <div class="row">
+                    <div class="col-md-5">
+                      <figure>
+                        <a href="{{ site.gymurl }}/design-systems"><img alt="Design Systems Collection cover image." src="{{ site.url }}/img/hub-pages/og/design-systems-collection-og.png" decoding="async" fetchpriority="high"></a>
+                      </figure>
                     </div>
-                  </article>
+                    <div class="col-md-7">
+                      <article>
+                        <header>
+                          <h2>
+                            <a href="{{ site.gymurl }}/design-systems">Design Systems</a>
+                          </h2>
+                        </header>
+                        <p>
+                          Teamwork (and creating effective pattern libraries) makes the dream work.
+                        </p>
+                        <div class="cta">
+                          <a class="gym-button natural" href="{{ site.gymurl }}/design-systems">Learn More</a>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <dl>
+                    <div>
+                      <dt>Content Collections</dt>
+                      <dd><a href="{{ site.gymurl }}/design-systems">Design Systems</a>
+                        <dd><a href="{{ site.gymurl }}/web-development">Web Development</a></dd>
+                        <dd><a href="{{ site.gymurl }}/ux-design">UX Design</a></dd>
+                        <dd><a href="{{ site.gymurl }}/prototyping">Prototyping</a></dd>
+                        <dd><a href="{{ site.gymurl }}/accessibility">Accessibility</a></dd>
+                        <dd><a href="{{ site.gymurl }}/remote-work">Remote Work</a></dd>
+                    </div>
+                  </dl>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <dl>
-                <div>
-                  <dt>Content Collections</dt>
-                  <dd><a href="{{ site.gymurl }}/design-systems">Design Systems</a>
-                  <dd><a href="{{ site.gymurl }}/web-development">Web Development</a></dd>
-                  <dd><a href="{{ site.gymurl }}/ux-design">UX Design</a></dd>
-                  <dd><a href="{{ site.gymurl }}/prototyping">Prototyping</a></dd>
-                  <dd><a href="{{ site.gymurl }}/accessibility">Accessibility</a></dd>
-                  <dd><a href="{{ site.gymurl }}/remote-work">Remote Work</a></dd>
-                </div>
-              </dl>
-            </div>
-          </div>
-          </div>
-        </article>
-      </div><!-- .white-panel -->
+          </article>
+        </div>
+    <!-- .white-panel -->
       </div>
     </div>
   </main>
