@@ -3,22 +3,22 @@ layout: wrapper-full-default
 permalink: /web-development/
 css: [/css/hub-pages.css]
 ---
-{%- assign courses = site.data.courses-page -%}
+{%- assign main = site.data.courses-page -%}
 
 <nav class="courses-format" aria-label="Courses">
   <div class="container">
     <ul role="list">
       <li>
-        <a href="/courses/full">{{ courses.full_courses.format }}</a>
+        <a href="/courses/full">{{ main.full_courses.format }}</a>
       </li>
       <li>
-        <a href="/courses/gym-shorts">{{ courses.short_courses.format }}</a>
+        <a href="/courses/gym-shorts">{{ main.short_courses.format }}</a>
       </li>
       <li>
-        <a href="/courses/take5">{{ courses.tutorials.format }}</a>
+        <a href="/courses/take5">{{ main.tutorials.format }}</a>
       </li>
       <li>
-        <a href="/collections" aria-current="page">Collections</a>
+        <a href="/collections" aria-current="page">{{ main.collections.format }}</a>
       </li>
     </ul>
   </div>

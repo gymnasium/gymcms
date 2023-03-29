@@ -4,23 +4,23 @@ permalink: /courses/take5/
 css: [/css/take5.css]
 ---
 {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
-{%- assign courses = site.data.courses-page -%}
+{%- assign main = site.data.courses-page -%}
 {%- assign about = site.data.courses-page.about_section -%}
 
 <nav class="courses-format" aria-label="Courses">
   <div class="container">
     <ul role="list">
       <li>
-        <a href="/courses/full">{{ courses.full_courses.format }}</a>
+        <a href="/courses/full">{{ main.full_courses.format }}</a>
       </li>
       <li>
-        <a href="/courses/gym-shorts">{{ courses.short_courses.format }}</a>
+        <a href="/courses/gym-shorts">{{ main.gym_shorts.format }}</a>
       </li>
       <li>
-        <a href="/courses/take5" aria-current="page">{{ courses.tutorials.format }}</a>
+        <a href="/courses/take5" aria-current="page">{{ main.take5_tutorials.format }}</a>
       </li>
       <li>
-        <a href="/collections">Collections</a>
+        <a href="/collections">{{ main.collections.format }}</a>
       </li>
     </ul>
   </div>
@@ -37,13 +37,13 @@ css: [/css/take5.css]
         <dl class="row">
           <div class="col-md-4">
             <dt>{{ about.lists[1] }}</dt>
-            {%- for benefits in about.tutorials[1] -%}
+            {%- for benefits in about.take5_tutorials[1] -%}
             <dd>{{ benefits.label }}</dd>
             {%- endfor -%}
           </div>
           <div class="col-md-8">
             <dt>{{ about.lists[2] }}</dt>
-            {%- for length in about.tutorials[2] -%}
+            {%- for length in about.take5_tutorials[2] -%}
             <dd>{{ length.label }}</dd>
             {%- endfor -%}
           </div>
