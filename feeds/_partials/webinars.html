@@ -1,0 +1,14 @@
+{%- assign list = site.data.webinars | sort -%}
+{%- for hash in list -%}
+  {%- assign data = hash[1] | jsonify -%}
+  {%- assign data = data | replace: 'short_description', 'description' -%}
+  {%- assign data = data | replace: 'event_date', 'date' -%}
+  {%- assign data = data | replace: 'event_guests', 'subtitle' -%}
+  {%- assign data = data | replace: 'event_title', 'title' -%}
+  {%- assign data = data | replace: 'event_ID', 'id' -%}
+  {%- assign data = data | replace: 'content_category', 'category' -%}
+  {%- assign data = data | replace: 'video_ID', 'video_id' -%}
+  {%- assign data = data | replace: 'webinar_ID', 'webinar_id' -%}
+  {{data}}
+  {% unless forloop.last %},{% endunless %}
+{%- endfor -%}

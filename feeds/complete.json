@@ -1,0 +1,24 @@
+---
+layout: null
+permalink: /feeds/complete.json
+---
+{
+  "title": "Gymnasium Complete Data Feed",
+  "feed_url": "{{site.url}}/feeds/complete.json",
+  "date_modified": "{{ site.time }}",
+  "environment": "{{ jekyll.environment }}",
+  "items": {
+    "bios":[
+      {%-include_relative _partials/bios.html -%}
+    ],
+    "courses":[
+      {%-include_relative _partials/courses.html -%}
+    ],
+    "tutorials":[
+      {%-include_relative _partials/tutorials.html -%}
+    ],
+    "webinars":[
+      {%-include_relative _partials/webinars.html -%}
+    ]
+  }
+}
