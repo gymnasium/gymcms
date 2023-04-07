@@ -61,7 +61,7 @@
       }
     }
 
-    li.active {
+    li.active a {
       background-color: #292929;
     }
 
@@ -101,7 +101,7 @@
         display: inline;
         word-spacing: 0; // Undo inherit
 
-        &.active {
+        &.active a {
           box-shadow: 0 -1.5rem #292929, 0 1.5rem #292929; // top/bottom
         }
 
@@ -162,6 +162,17 @@
           padding-top: 0;
         }
       }
+    }
+  }
+}
+
+// Exclude courseware-related about pages /courseware/*/*/about from /courses page(s)
+// TODO: clean up after theme update is complete
+.gym-course-about {
+  .main-nav {
+    .vbar a {
+      background-color: transparent;
+      box-shadow: none;
     }
   }
 }
