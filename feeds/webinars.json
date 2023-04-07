@@ -1,0 +1,75 @@
+---
+layout: null
+permalink: /feeds/webinars.json
+---
+{%- assign webinars_ascending_date = "" | split: ", " -%}
+{%- assign webinars_descending_date = "" | split: ", " -%}
+
+{%- assign sorted_webinars = site.data.webinars | sort: event_date -%}
+
+{% for webinar_list in sorted_webinars %}
+{% assign webinar = webinar_list[1] %}
+{%- assign webinars_ascending_date = webinars_ascending_date | push: webinar.event_ID -%}
+{% endfor %}
+
+{%- assign webinars_descending_date = webinars_ascending_date | reverse -%}
+
+{%- assign counter = site.data.webinars | size -%}
+
+{
+  "title": "Gymnasium Webibars Feed",
+  "feed_url": "{{site.url}}/feeds/webinars.json",
+  "date_modified": "{{ site.time }}",
+  "environment": "{{ jekyll.environment }}",
+  "items": [
+{%- for webinar in webinars_descending_date -%}
+  {%- assign data = site.data.webinars[webinar] -%}
+
+  {%- assign title = data.event_title | strip_html -%}
+  {%- assign description = data.short_description | strip_html -%}
+  {%- assign decolonized_webinar_title = title | split: ":"  -%}
+  {%- assign webinar_title = decolonized_webinar_title[0] -%}
+  {%- assign webinar_subtitle = decolonized_webinar_title[1] -%}
+  {%- assign speaker_1 = data.speaker[0]  -%}
+  {%- assign speaker_2 = data.speaker[1]  -%}
+
+  {%- assign webinar_url = data.permalink | prepend: site.gymurl -%}
+
+  {
+    "id": "{{ data.event_ID | slice: 0,7 }}",
+    "slug": "{{ data.permalink | replace: '/webinars/', '' }}",
+    "category": "{{ data.content_category }}",
+    "date": "{{ data.event_date }}",
+    "description": "{{ data.short_description | strip_html }}",
+    "host": "{{ data.host }}",
+    "event_ogimage": "/img/social/webinars/{{ data.event_ogimage }}",
+    "recording_ogimage": "/img/social/webinars/{{ data.recording_ogimage }}",
+    "landing": {%- if data.landing -%}{{data.landing}}{%- else -%}false{%- endif -%},
+    "resources":
+      {%- assign resources = data.resources | jsonify -%}
+      {{ resources}},
+    "register": {%- if data.register -%}{{data.register}}{%- else -%}false{%- endif -%},
+    "speakers": [
+      {%- assign subcounter = data.speaker | size -%}
+      {%- for item in data.speaker -%} 
+        {
+          "title": "{{site.data.bios[item].name}}",
+          "subtitle": "{{site.data.bios[item].subtitle}}",
+          "img": "/img/webinar-bio-headshots/{{site.data.bios[item].headshot}}",
+          "description": "{{site.data.bios[item].description | strip_html}}"
+        }
+        {% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ],
+    "subtitle": "{{ data.event_guests | strip_html }}",
+    "time": "{{ data.event_time }}",
+    "time_blurb": "Live streaming on {{ data.event_date | date: '%A, %B %-d, %Y at ' }}{{ data.event_time }}",
+    "title": "{{ title }}",
+    "video": {%- if data.video -%}{{data.video}}{%- else -%}false{%- endif -%},
+    "video_id": "{{ data.video_ID }}",
+    "webinar_id": "{{ data.webinar_ID }}",
+    "webinar_question_key": "{{ data.webinar_question_key }}"
+  }
+  {% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+]}

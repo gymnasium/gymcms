@@ -1,0 +1,11 @@
+{%- for bio_hash in site.data.bios -%}
+  {%- assign bio = bio_hash[1] -%}
+  {
+    "id": "{{bio_hash[0]}}",
+    "title": "{{bio.name}}",
+    "subtitle": "{{bio.subtitle}}",
+    "img": "{{ site.url }}/img/webinar-bio-headshots/{{bio.headshot}}",
+    "description": "{{bio.description | strip_html}}"
+  }
+  {% unless forloop.last %},{% endunless %}
+{%- endfor -%}
