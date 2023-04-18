@@ -120,7 +120,7 @@
     }
   }
 
-  & > .container .white-panel {
+  & > .container .white-panel:not(.courses-promo .white-panel) {
     padding: 1.2em;
   }
 
@@ -222,6 +222,11 @@
 
 .courses-promo {
 
+  article {
+    display: grid;
+    grid-auto-rows: auto auto 1fr;
+  }
+
   ul[role="list"] {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -231,11 +236,6 @@
     padding-left: 0;
     border-top: 1px solid $gym-gray;
     margin-top: 1.2em;
-  }
-
-  article {
-    display: grid;
-    grid-auto-rows: auto auto 1fr;
   }
 
   header {
