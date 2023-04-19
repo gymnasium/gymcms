@@ -4,9 +4,12 @@
 #catalog {
 
   .about,
-  .about-courses,
   .white-panel {
     font-size: 16px;
+  }
+
+  .white-panel:after {
+    content: none;
   }
 
   .about {
@@ -34,36 +37,6 @@
       font: normal 1.25em/1.45 $gym-text-font-stack;
       margin-top: 0.6em;
       margin-bottom: 0;
-    }
-
-  }
-
-  .about-courses {
-    margin-top: 1.2em;
-
-    header {
-      font-size: 16px;
-    }
-
-    h2 {
-      font-size: 1.6em;
-      margin-top: -0.4rem;
-      margin-bottom: 0;
-    }
-
-    .white-panel {
-      padding: 1.4em;
-      margin-bottom: 0;
-
-      p {
-        font-size: 1em;
-        margin-top: 0.8em;
-        margin-bottom: 0;
-      }
-
-      dl + p {
-        margin-left: 1em;
-      }
     }
 
   }
@@ -120,8 +93,8 @@
     }
   }
 
-  & > .container .white-panel:not(.courses-promo .white-panel) {
-    padding: 1.2em;
+  & > .container .white-panel {
+    padding: 1.4em;
   }
 
   .courses-portal > div:not(:first-child) {
@@ -216,30 +189,24 @@
 
 }
 
-.container + main {
-  margin-top: -1.2em;
-}
-
 .courses-promo {
 
-  article {
-    display: grid;
-    grid-auto-rows: auto auto 1fr;
+  &:not(main .courses-promo) {
+    margin-top: 1.4em;
   }
 
-  ul[role="list"] {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-gap: 1.2em;
-    list-style: none;
-    padding-top: 1.2em;
-    padding-left: 0;
-    border-top: 1px solid $gym-gray;
-    margin-top: 1.2em;
+  & > .container > .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .white-panel {
+    height: 100%;
+    padding: 1.4em;
+    margin: 0;
   }
 
   header {
-    align-self: start;
     margin-bottom: 0.6em;
   }
 
@@ -248,7 +215,6 @@
   }
 
   .cta {
-    align-self: end;
 
     .gym-button {
       margin-top: 1.2em;
@@ -269,7 +235,8 @@
   }
 
   div[class] > h2 {
-    margin-bottom: 1.2em;
+    margin-top: -0.5ex;
+    margin-bottom: 1.8rem;
   }
 
   p {
@@ -285,7 +252,7 @@
 
   .subhead {
     letter-spacing: 0.1ex;
-    margin-top: 0;
+    margin-top: -0.5ex;
     margin-bottom: 0.6em;
   }
 
