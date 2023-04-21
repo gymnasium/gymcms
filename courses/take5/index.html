@@ -5,7 +5,7 @@ css: [/css/take5.css]
 ---
 {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
 {%- assign main = site.data.courses-page -%}
-{%- assign about = site.data.courses-page.about_section -%}
+{%- assign about = site.data.courses-page.about -%}
 
 <nav class="courses-format" aria-label="Courses">
   <div class="container">
@@ -33,7 +33,7 @@ css: [/css/take5.css]
     <header class="take5--about" id="about">
       <div class="container">
         <h1>{{ main.take5_tutorials.format }}</h1>
-        <p><span class="block"><strong>Free online video tutorials.</strong> Practical skills in 5 minutes.</span> {{ main.main.short_description }}</p>
+        <p><span class="block"><strong>Free online video tutorials.</strong> Practical skills in 5 minutes.</span> {{ main.short_description }}</p>
         <dl class="row">
           <div class="col-md-4">
             <dt>{{ about.lists[1] }}</dt>

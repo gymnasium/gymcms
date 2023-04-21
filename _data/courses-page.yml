@@ -32,7 +32,36 @@ collections:
   promo_label: "Featured"
   promo_ID: "design-systems"
 
-about_section:
+# Note: Keep heading "label" max character count at 24 to maintain single-line length
+featured:
+  full_courses:
+    promo_1:
+      label: "Most Popular This Week"
+      ID: "GYM-107"
+      CTA: "Learn More"
+    promo_2:
+      label: "JavaScript for Beginners"
+      ID: "GYM-104"
+      CTA: "Learn More"
+    promo_3:
+      label: "User Experience 101"
+      ID: "GYM-103"
+      CTA: "Learn More"
+  gym_shorts:
+    promo_1:
+      label: "Most Popular This Week"
+      ID: "GYM-018"
+      CTA: "Learn More"
+    promo_2:
+      label: "Accessibility Skills"
+      ID: "GYM-016"
+      CTA: "Learn More"
+    promo_3:
+      label: "Benefits of Prototyping"
+      ID: "GYM-015"
+      CTA: "Learn More"
+
+about:
   summary: "Learn About Our Courses"
   lists:
     1: "Benefits"
