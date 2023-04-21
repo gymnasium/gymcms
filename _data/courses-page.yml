@@ -32,6 +32,7 @@ collections:
   promo_label: "Featured"
   promo_ID: "design-systems"
 
+# Note: Keep heading "label" max character count at 24 to maintain single-line length
 featured:
   full_courses:
     promo_1:
