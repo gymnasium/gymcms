@@ -37,3 +37,9 @@
     }
   }
 }
+
+#messages {
+  p + p {
+    margin-top: inherit;
+  }
+}

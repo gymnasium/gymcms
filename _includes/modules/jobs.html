@@ -81,13 +81,14 @@
     <p>Please wait while we find you some jobs…</p>
   </div>
   <div id="error-results" class="hide">
-    <h4>Ooops!</h4>
-    <p>We were unable to find {{ cat_text }} jobs for this location. Please try another location, or come back later to check for freshly posted jobs.</p>
+    <h3>It’s Not You, It’s Us</h3>
+    <p>We’re unable to find {{ cat_text }} jobs in this location.</p>
+    <p>Please try another location or check back later for new jobs.</p>
   </div>
   <div id="error-general" class="hide">
-    <h4>It’s not you, it’s us.</h4>
+    <h3>We’re Working On It</h3>
     <p>Something broke on our end and we’re working on fixing it.</p>
-    <p>Continue exploring jobs at <a href="https://aquent.com/find-work/?{{utm}}" target="_blank">Aquent</a>.</p>
+    <p>Continue exploring jobs at <a href="https://aquent.com/find-work/?{{utm}}" target="_blank" rel="noopener">Aquent</a>.</p>
   </div>
 </div>
 <div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-utm="{{utm}}" data-script="{{jobs_endpoint}}?limit=1500&callback=processJobs" data-script-fallback="{{jobs_fallback}}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
