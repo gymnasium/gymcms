@@ -4,8 +4,8 @@ permalink: /courses/take5/
 css: [/css/take5.css]
 ---
 {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
-{%- assign main = site.data.courses-page -%}
-{%- assign about = site.data.courses-page.about -%}
+{%- assign main = site.data.page.courses -%}
+{%- assign about = site.data.page.courses.about -%}
 
 {%- assign page_active = "take5" -%}
 {%- include partials/nav-courses-format.html -%}
