@@ -5,8 +5,7 @@ css: [/css/hub-pages.css]
 ---
 {%- assign main = site.data.pages.courses -%}
 
-{%- assign page_active = "collections" -%}
-{%- include partials/nav-courses-format.html -%}
+{%- include partials/nav-courses-format.html page_active = "collections" -%}
 
 <main id="main" role="main">
 

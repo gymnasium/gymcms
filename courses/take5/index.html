@@ -7,8 +7,7 @@ css: [/css/take5.css]
 {%- assign main = site.data.pages.courses -%}
 {%- assign about = site.data.pages.courses.about -%}
 
-{%- assign page_active = "take5" -%}
-{%- include partials/nav-courses-format.html -%}
+{%- include partials/nav-courses-format.html page_active = "take5" -%}
 
 <main id="main" role="main">
 

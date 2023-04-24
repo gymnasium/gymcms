@@ -9,8 +9,7 @@
 {%- assign main = site.data.pages.courses -%}
 {%- assign course = site.data.take5[page.course_ID] -%}
 
-{%- assign page_active = "take5" -%}
-{%- include partials/nav-courses-format.html -%}
+{%- include partials/nav-courses-format.html page_active = "take5" -%}
 
 <div class="container">
   <div class="row">
