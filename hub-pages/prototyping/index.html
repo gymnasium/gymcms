@@ -5,25 +5,8 @@ css: [/css/hub-pages.css]
 ---
 {%- assign main = site.data.courses-page -%}
 
-
-<nav class="courses-format" aria-label="Courses">
-  <div class="container">
-    <ul role="list">
-      <li>
-        <a href="/courses/full">{{ main.full_courses.format }}</a>
-      </li>
-      <li>
-        <a href="/courses/gym-shorts">{{ main.gym_shorts.format }}</a>
-      </li>
-      <li>
-        <a href="/courses/take5">{{ main.take5_tutorials.format }}</a>
-      </li>
-      <li>
-        <a href="/collections" aria-current="page">{{ main.collections.format }}</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+{%- assign page_active = "collections" -%}
+{%- include partials/nav-courses-format.html -%}
 
 <main id="main" role="main">
   <section id="about">

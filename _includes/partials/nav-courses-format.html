@@ -1,0 +1,21 @@
+{%- unless page_active -%}
+  {%- assign page_active = "" -%}
+{%- endunless -%}
+<nav class="courses-format" aria-label="Courses">
+  <div class="container">
+    <ul role="list">
+      <li>
+        <a href="/courses/full"{%- if page_active == "full" -%} aria-current="page"{%- endif -%}>{{ main.full_courses.format }}</a>
+      </li>
+      <li>
+        <a href="/courses/gym-shorts"{%- if page_active == "gym-shorts" -%} aria-current="page"{%- endif -%}>{{ main.gym_shorts.format }}</a>
+      </li>
+      <li>
+        <a href="/courses/take5"{%- if page_active == "take5" -%} aria-current="page"{%- endif -%}>{{ main.take5_tutorials.format }}</a>
+      </li>
+      <li>
+        <a href="/collections"{%- if page_active == "collections" -%} aria-current="page"{%- endif -%}>{{ main.collections.format }}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
