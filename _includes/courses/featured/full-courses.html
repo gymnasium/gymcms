@@ -1,0 +1,109 @@
+<article class="courses-promo">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="white-panel">
+          <h2>{{ featured.full_courses.promo_1.label }}</h2>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-12">
+              <figure>
+                <a href="{{ site.gymurl }}{{ courses[featured.full_courses.promo_1.ID].url }}">
+                  <img alt="{{ courses[featured.full_courses.promo_1.ID].title }} cover image." src="{{ site.url }}{{ courses[featured.full_courses.promo_1.ID].poster_art }}" decoding="async" fetchpriority="high">
+                </a>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-12">
+              <article>
+                <header>
+                  <p class="subhead all-caps">
+                    <b>{{ courses[featured.full_courses.promo_1.ID].topic }}</b>
+                  </p>
+                  <h2>
+                    <a href="{{ site.gymurl }}{{ courses[featured.full_courses.promo_1.ID].url }}">
+                    {{ courses[featured.full_courses.promo_1.ID].title }}
+                    </a>
+                  </h2>
+                </header>
+                <p>{{ courses[featured.full_courses.promo_1.ID].short_description }}</p>
+                <div class="cta">
+                  <a class="gym-button natural" href="{{ site.gymurl }}{{ courses[featured.full_courses.promo_1.ID].url }}">
+                    <b>{{ featured.full_courses.promo_1.CTA }}</b>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="white-panel">
+          <h2>{{ featured.full_courses.promo_2.label }}</h2>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-12">
+              <figure>
+                <a href="{{ site.gymurl }}{{ courses[featured.full_courses.promo_2.ID].url }}">
+                  <img alt="{{ courses[featured.full_courses.promo_2.ID].title }} cover image." src="{{ site.url }}{{ courses[featured.full_courses.promo_2.ID].poster_art }}" decoding="async" fetchpriority="high">
+                </a>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-12">
+              <article>
+                <header>
+                  <p class="subhead all-caps">
+                    <b>{{ courses[featured.full_courses.promo_2.ID].topic }}</b>
+                  </p>
+                  <h2>
+                    <a href="{{ site.gymurl }}{{ courses[featured.full_courses.promo_2.ID].url }}">
+                    {{ courses[featured.full_courses.promo_2.ID].title }}
+                    </a>
+                  </h2>
+                </header>
+                <p>{{ courses[featured.full_courses.promo_2.ID].short_description }}</p>
+                <div class="cta">
+                  <a class="gym-button natural" href="{{ site.gymurl }}{{ courses[featured.full_courses.promo_2.ID].url }}">
+                    <b>{{ featured.full_courses.promo_2.CTA }}</b>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="white-panel">
+          <h2>{{ featured.full_courses.promo_3.label }}</h2>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-12">
+              <figure>
+                <a href="{{ site.gymurl }}{{ courses[featured.full_courses.promo_3.ID].url }}">
+                  <img alt="{{ courses[featured.full_courses.promo_3.ID].title }} cover image." src="{{ site.url }}{{ courses[featured.full_courses.promo_3.ID].poster_art }}" decoding="async" fetchpriority="high">
+                </a>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-12">
+              <article>
+                <header>
+                  <p class="subhead all-caps">
+                    <b>{{ courses[featured.full_courses.promo_3.ID].topic }}</b>
+                  </p>
+                  <h2>
+                    <a href="{{ site.gymurl }}{{ courses[featured.full_courses.promo_3.ID].url }}">
+                    {{ courses[featured.full_courses.promo_3.ID].title }}
+                    </a>
+                  </h2>
+                </header>
+                <p>{{ courses[featured.full_courses.promo_3.ID].short_description }}</p>
+                <div class="cta">
+                  <a class="gym-button natural" href="{{ site.gymurl }}{{ courses[featured.full_courses.promo_3.ID].url }}">
+                    <b>{{ featured.full_courses.promo_3.CTA }}</b>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+

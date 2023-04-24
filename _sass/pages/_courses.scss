@@ -4,9 +4,12 @@
 #catalog {
 
   .about,
-  .about-courses,
   .white-panel {
     font-size: 16px;
+  }
+
+  .white-panel:after {
+    content: none;
   }
 
   .about {
@@ -18,6 +21,12 @@
     h1,
     p {
       color: $gym-black;
+    }
+
+    @include breakpoint(small, max) {
+      span.block {
+        display: inline;
+      }
     }
 
     h1 {
@@ -32,41 +41,11 @@
 
   }
 
-  .about-courses {
-    margin-top: 1.2em;
-
-    header {
-      font-size: 16px;
-    }
-
-    h2 {
-      font-size: 1.6em;
-      margin-top: -0.4rem;
-      margin-bottom: 0;
-    }
-
-    .white-panel {
-      padding: 1.4em;
-      margin-bottom: 0;
-
-      p {
-        font-size: 1em;
-        margin-top: 0.8em;
-        margin-bottom: 0;
-      }
-
-      dl + p {
-        margin-left: 1em;
-      }
-    }
-
-  }
-
   dl {
     font-size: 16px;
     color: $gym-black;
     padding-left: 1em;
-    margin-top: 1.2em;
+    margin-top: 1.4em;
     margin-bottom: 0;
 
     div {
@@ -97,15 +76,199 @@
 
   }
 
-  @include breakpoint(medium, max) {
+  dl.row {
+    margin-top: 0.4em;
+  }
 
+  dl.row + p {
+    font-size: 1em;
+    margin-top: 1.4em;
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(medium, max) {
     .row > div:not(:first-child) {
       padding-top: 1em;
       margin-top: 1em;
     }
+  }
+
+  & > .container .white-panel {
+    padding: 1.4em;
+  }
+
+  .courses-portal > div:not(:first-child) {
+    margin-top: -1.4em;
+  }
+
+  .courses-portal {
+
+    p.hero a {
+      font: inherit;
+    }
 
   }
 
+  .promo {
+    border-top: 1px dashed $gym-gray;
+    margin-top: 1.2em;
+  }
+
+  .promo-item {
+    margin-top: 1.2em;
+
+    > h2 {
+      font-size: font-calc(16, rem, 10px);
+      line-height: 1.25;
+      font-family: $gym-font-stack;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      word-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.6em;
+
+      + .row {
+        margin-top: 1em;
+      }
+    }
+  }
+
+}
+
+.courses-format {
+  font-size: 16px;
+  background-color: #292929;
+  padding-bottom: 1em;
+
+  ul {
+    list-style: none;
+    color: #fff;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li {
+      display: inline;
+      font-size: 1.05em;
+      font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      letter-spacing: 0.1116625ex;
+      white-space: nowrap;
+
+      &:not(:last-child) {
+        margin-right: 1.4em;
+      }
+
+      a {
+        display: inline-block;
+        margin-top: 1em;
+      }
+    }
+  }
+
+  a {
+    font: inherit;
+    color: $gym-white;
+    border-bottom-color: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $gym-orange;
+      margin-bottom: -1px;
+    }
+
+    &[aria-current="page"] {
+      border-bottom-color: $gym-white;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-bottom-color: $gym-orange;
+      }
+    }
+  }
+
+}
+
+.courses-promo {
+
+  &:not(main .courses-promo) {
+    margin-top: 1.4em;
+  }
+
+  & > .container > .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .white-panel {
+    height: 100%;
+    padding: 1.4em;
+    margin: 0;
+  }
+
+  header {
+    margin-bottom: 0.6em;
+  }
+
+  figure {
+    margin-bottom: 1em;
+  }
+
+  .cta {
+
+    .gym-button {
+      margin-top: 1.2em;
+
+      &:first-child {
+        margin-right: 1em;
+      }
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  & > h2 {
+    font-size: 2.8rem;
+  }
+
+  div[class] > h2 {
+    margin-top: -0.5ex;
+    margin-bottom: 1.8rem;
+  }
+
+  p {
+    margin-top: 1.2rem;
+    margin-bottom: 0;
+  }
+
+  .hero {
+    font-family: $gym-font-stack;
+    font-size: 2.2rem;
+    line-height: 1.4;
+  }
+
+  .subhead {
+    letter-spacing: 0.1ex;
+    margin-top: -0.5ex;
+    margin-bottom: 0.6em;
+  }
+
+}
+
+@include breakpoint(medium, max) {
+  #catalog .courses-promo > .container > .row > div[class] {
+    margin-top: 0.5em;
+    &:not(:first-child) {
+      margin-top: 2em;
+    }
+  }
+  #catalog .courses-promo .row > div:not(:first-child) {
+    padding-top: 0;
+    margin-top: 0;
+  }
 }
 
 .courses-container {
@@ -167,9 +330,12 @@
   }
 
   .course-item {
-    padding-top: 1.2em;
-    border-top: 1px solid $gym-gray-2;
-    margin-top: 1.2em;
+
+    &:not(:first-child) {
+      padding-top: 1.2em;
+      border-top: 1px solid $gym-gray-2;
+      margin-top: 1.2em;
+    }
 
     @include breakpoint(medium, max) {
 

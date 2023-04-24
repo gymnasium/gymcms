@@ -7,34 +7,84 @@ main:
 full_courses:
   format: "Full Courses"
   short_description: "Full Courses include a series of video lessons, optional quizzes and assignments, and a final exam and certificate if you pass. Plus, a forum to share work and get feedback from students and teaching assistants."
-short_courses:
+  hero_text: "Learn new skills in a day or less and earn a certificate."
+  hero_CTA: "View All Full Courses"
+  promo_label: "Featured"
+  promo_ID: "GYM-107"
+gym_shorts:
   format: "Gym Shorts"
   short_description: "Gym Shorts include a series of video lessons, a final exam, and a badge if you pass."
-tutorials:
+  hero_text: "Learn new skills in a few hours and earn a badge."
+  hero_CTA: "View All Gym Shorts"
+  promo_label: "Featured"
+  promo_ID: "GYM-017"
+take5_tutorials:
   format: "Take 5"
   short_description: "Take 5 tutorials are 5-minute video tutorials with easy-to-follow transcripts. No homework. No exam. Just free online learning."
+  hero_text: "Learn new skills with 5-minute tutorials."
+  hero_CTA: "View All Tutorials"
+  promo_label: "Featured"
+  promo_ID: "GYM-5052"
+collections:
+  format: "Collections"
+  hero_text: "Explore specific topics with free courses, tutorials, resources, and jobs."
+  hero_CTA: "View All Collections"
+  promo_label: "Featured"
+  promo_ID: "design-systems"
 
-about_section:
+# Note: Keep heading "label" max character count at 24 to maintain single-line length
+featured:
+  full_courses:
+    promo_1:
+      label: "Most Popular This Week"
+      ID: "GYM-107"
+      CTA: "Learn More"
+    promo_2:
+      label: "JavaScript for Beginners"
+      ID: "GYM-104"
+      CTA: "Learn More"
+    promo_3:
+      label: "User Experience 101"
+      ID: "GYM-103"
+      CTA: "Learn More"
+  gym_shorts:
+    promo_1:
+      label: "Most Popular This Week"
+      ID: "GYM-018"
+      CTA: "Learn More"
+    promo_2:
+      label: "Accessibility Skills"
+      ID: "GYM-016"
+      CTA: "Learn More"
+    promo_3:
+      label: "Benefits of Prototyping"
+      ID: "GYM-015"
+      CTA: "Learn More"
+
+about:
   summary: "Learn About Our Courses"
   lists:
     1: "Benefits"
     2: "Length"
   full_courses:
     1:
-      - label: "Certificate to share on social media"
-      - label: "Course forum to share work and get feedback"
+      - label: "Completely free self-paced online courses"
+      - label: "Earn a Certificate to share on your résumé and social media"
+      - label: "Discuss, share, and get feedback from students and teaching assistants in the forum"
       - label: "Optional homework and quizzes to sharpen your skills"
     2:
       - label: "Video Lessons: 3–5 hours"
       - label: "Course Completion: 12–22 hours"
-  short_courses:
+  gym_shorts:
     1:
-      - label: "Badge to share on social media"
+      - label: "Completely free self-paced online courses"
+      - label: "Earn a Badge to share on your résumé and social media"
     2:
       - label: "Video Lessons: 1–2 hours"
       - label: "Course Completion: 1–5 hours"
-  tutorials:
+  take5_tutorials:
     1:
+      - label: "Completely free online video tutorials"
       - label: "Learn new skills in 5 minutes"
       - label: "Video tutorial with easy-to-follow transcript"
     2:

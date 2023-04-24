@@ -2,6 +2,7 @@
 ---
 @import 'variables';
 @import 'mixins';
+@import 'pages/courses';
 
 @include defaults;
 
@@ -87,18 +88,20 @@
   padding-bottom: 0;
 }
 
-
-#main h1 {
-  font-size: 2.25em;
-}
-
 #about p {
   font: normal 1.25em/1.45 $gym-text-font-stack;
   margin-top: .6em;
+
+  @include breakpoint(small, max) {
+    span.block {
+      display: inline;
+    }
+  }
+
 }
 
-#about p strong:first-child {
-  display: block;
+#main h1 {
+  font-size: 2.25em;
 }
 
 main h3 {

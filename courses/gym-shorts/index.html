@@ -1,5 +1,95 @@
 ---
-layout: wrapper-full-default
+layout: raw
 permalink: /courses/gym-shorts/
 ---
-<!-- gym-shorts course content here -->
+{%- if jekyll.environment == "local" -%}
+  {%- include partials/test-top.html -%}
+{%- endif -%}
+
+{%- assign main = site.data.courses-page -%}
+{%- assign featured = site.data.courses-page.featured -%}
+{%- assign about = site.data.courses-page.about -%}
+{%- assign courses = site.data.courses -%}
+
+<nav class="courses-format" aria-label="Courses">
+  <div class="container">
+    <ul role="list">
+      <li>
+        <a href="/courses/full">{{ main.full_courses.format }}</a>
+      </li>
+      <li>
+        <a href="/courses/gym-shorts" aria-current="page">{{ main.gym_shorts.format }}</a>
+      </li>
+      <li>
+        <a href="/courses/take5">{{ main.take5_tutorials.format }}</a>
+      </li>
+      <li>
+        <a href="/collections">{{ main.collections.format }}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<section class="find-courses" id="catalog">
+
+  <header class="about">
+    <div class="container">
+      <h1>{{ main.gym_shorts.format }}</h1>
+      <p>
+        <span class="block"><strong>Free online short courses.</strong> Earn a badge in a few hours.</span>
+        {{ main.short_description }}
+      </p>
+      <dl class="row">
+        <div class="col-md-5">
+          <dt>{{ about.lists[1] }}</dt>
+          {%- for benefits in about.gym_shorts[1] -%}
+          <dd>{{ benefits.label }}</dd>
+          {%- endfor -%}
+        </div>
+        <div class="col-md-7">
+          <dt>{{ about.lists[2] }}</dt>
+          {%- for length in about.gym_shorts[2] -%}
+          <dd>{{ length.label }}</dd>
+          {%- endfor -%}
+        </div>
+      </dl>
+      <p><b>Looking for career advancement?</b> Explore our <a href="/courses/full"><b>Full Courses</b></a> and earn a certificate in a day or less.</p>
+    </div>
+  </header>
+
+  {% include courses/featured/gym-shorts.html %}
+
+  <main id="main" class="container" aria-label="Content" tabindex="-1" role="main">
+    <div class="white-panel catalog-content">
+      <div class="row">
+        <div class="col-md-12 course-overview">
+          <section class="courses-container">
+
+            <section id="gymshorts">
+              <ul class="listing-courses list-unstyled" id="gym-shorts-list">
+                {%- assign base_path = "/courses/gym-shorts/" | prepend: site.gymurl -%}
+                {%- include_relative course-list-recent.html -%}
+              </ul>
+              <div class="to-top-link">
+                <a href="#catalog"><b>Back to top</b></a>
+              </div>
+            </section>
+
+          </section>
+        </div>
+        {%- comment -%}
+        <div class="col-md-3 sidebar">
+          {%- comment -%} Get Upcoming/Featured Courses Sidebar {%- endcomment -%}
+          {%- include sidebar-featured.html -%}
+        </div>
+        {%- endcomment -%}
+      </div><!-- .catalog-content.row -->
+    </div><!-- .white-panel -->
+
+  </main>
+
+</section>
+
+{%- if jekyll.environment == "local" -%}
+  {%- include partials/test-bottom.html -%}
+{%- endif -%}

@@ -26,6 +26,7 @@
 
 .main-nav {
   padding: 1.5rem 0;
+  overflow: hidden;
 
   .gymnasium-logo {
     padding: 0.5rem 0;
@@ -34,6 +35,36 @@
   ul {
     padding-top: 1.5rem;
 
+    @include breakpoint(48em, max) {
+      li {
+        border-top: 1px solid $gym-dark-gray;
+
+        &:nth-child(3) {
+          border-bottom: 1px solid $gym-dark-gray;
+        }
+
+        &:nth-child(4),
+        &:last-child {
+          display: inline-block;
+          border-top: 0 none;
+        }
+      }
+    }
+
+    li:last-child {
+      a[class] {
+        margin-top: 1.5rem; // Add visual spacing (for descender)
+      }
+
+      a:not([class]) {
+        margin-bottom: -1rem; // Remove spacing when not a button
+      }
+    }
+
+    li.active a {
+      background-color: #292929;
+    }
+
     a {
       display: block;
       font-family: $gym-font-stack;
@@ -41,22 +72,12 @@
       color: $gym-white;
       letter-spacing: 0.1116625ex; // 0.75px
       padding: 1.2rem 1.5rem;
-      border-top: 1px solid $gym-dark-gray;
       transition: all 250ms ease;
 
       &:hover {
         color: $gym-orange;
       }
-    }
 
-    li:last-child {
-      a[class] {
-        margin-top: 0.5ex; // Add visual spacing (for descender)
-      }
-
-      a:not([class]) {
-        margin-bottom: -1rem; // Remove spacing when not a button
-      }
     }
   }
 
@@ -79,6 +100,10 @@
       li {
         display: inline;
         word-spacing: 0; // Undo inherit
+
+        &.active a {
+          box-shadow: 0 -1.5rem #292929, 0 1.5rem #292929; // top/bottom
+        }
 
         a:not(.gym-button) {
           display: inline-block;
@@ -137,6 +162,17 @@
           padding-top: 0;
         }
       }
+    }
+  }
+}
+
+// Exclude courseware-related about pages /courseware/*/*/about from /courses page(s)
+// TODO: clean up after theme update is complete
+.gym-course-about {
+  .main-nav {
+    .vbar a {
+      background-color: transparent;
+      box-shadow: none;
     }
   }
 }
