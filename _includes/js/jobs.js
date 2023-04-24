@@ -106,7 +106,7 @@ function parseOptions(input, output) {
 if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
   const fallback = jobsContainer.getAttribute('data-script-fallback');
   const endpoint = jobsContainer.getAttribute('data-script');
-  const urchin = jobsContainer.hasAttribute('data-utm') ? `?${jobsContainer.getAttribute('data-utm')}` : '';
+  var utms = jobsContainer.hasAttribute('data-utm') ? `?${jobsContainer.getAttribute('data-utm')}` : '';
   const msgContainer = document.getElementById('messages');
 
   function hideMsg() {
@@ -355,7 +355,7 @@ if (typeof jobsContainer !== 'undefined' && jobsContainer !== null) {
             if (optHeading) {
               list += `<${optHeading}>`;
             }
-            list += `<a href="${decodeURI(el.url)}${urchin}" title="${el.title}"><span class="job-title">${el.title} </span><span class="job-location"> ${el.city}</span></a>`;
+            list += `<a href="${decodeURI(el.url)}${utms}" title="${el.title}"><span class="job-title">${el.title} </span><span class="job-location"> ${el.city}</span></a>`;
             if (optHeading) {
               list += `</${optHeading}>`;
             }
