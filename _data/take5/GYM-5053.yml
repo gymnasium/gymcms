@@ -13,7 +13,7 @@ subtopics:
   - label: "Portfolio Development"
 video_ID: DgungAdVLPA
 video_duration: "4:52"
-featured: true
+featured: false
 short_description: "In this tutorial, you’ll learn three ways to create a compelling and unique About page for your online portfolio."
 project_file_source:
 project_files:
