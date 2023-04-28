@@ -7,29 +7,12 @@ permalink: /courses/
 {%- endif -%}
 
 {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
-{%- assign main = site.data.courses-page -%}
-{%- assign about = site.data.courses-page.about_section -%}
+{%- assign main = site.data.pages.courses -%}
+{%- assign about = site.data.pages.courses.about -%}
 {%- assign courses = site.data.courses -%}
 {%- assign take5 = site.data.take5 -%}
 
-<nav class="courses-format" aria-label="Courses">
-  <div class="container">
-    <ul role="list">
-      <li>
-        <a href="/courses/full">{{ main.full_courses.format }}</a>
-      </li>
-      <li>
-        <a href="/courses/gym-shorts">{{ main.gym_shorts.format }}</a>
-      </li>
-      <li>
-        <a href="/courses/take5">{{ main.take5_tutorials.format }}</a>
-      </li>
-      <li>
-        <a href="/collections">{{ main.collections.format }}</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+{%- include partials/nav-courses-format.html -%}
 
 <section class="find-courses" id="catalog">
 
@@ -63,7 +46,8 @@ permalink: /courses/
                   <div class="row">
                     <div class="col-md-5">
                       <figure>
-                        <a href="{{ site.gymurl }}{{ courses[main.full_courses.promo_ID].url }}"><img alt="{{ courses[main.full_courses.promo_ID].title }} cover image." src="{{ site.url }}{{ courses[main.full_courses.promo_ID].poster_art }}" decoding="async" fetchpriority="high"></a>
+                        <a href="{{ site.gymurl }}{{ courses[main.full_courses.promo_ID].url }}">
+                          <img alt="{{ courses[main.full_courses.promo_ID].title }} cover image." src="{{ site.url }}{{ courses[main.full_courses.promo_ID].poster_art }}" decoding="async" fetchpriority="high"></a>
                       </figure>
                     </div>
                     <div class="col-md-7">
@@ -126,7 +110,8 @@ permalink: /courses/
                   <div class="row">
                     <div class="col-md-5">
                       <figure>
-                        <a href="{{ site.gymurl }}{{ courses[main.gym_shorts.promo_ID].url }}"><img alt="{{ courses[main.gym_shorts.promo_ID].title }} cover image." src="{{ site.url }}{{ courses[main.gym_shorts.promo_ID].poster_art }}" decoding="async" fetchpriority="high"></a>
+                        <a href="{{ site.gymurl }}{{ courses[main.gym_shorts.promo_ID].url }}">
+                          <img alt="{{ courses[main.gym_shorts.promo_ID].title }} cover image." src="{{ site.url }}{{ courses[main.gym_shorts.promo_ID].poster_art }}" decoding="async" fetchpriority="high"></a>
                       </figure>
                     </div>
                     <div class="col-md-7">
@@ -189,7 +174,8 @@ permalink: /courses/
                   <div class="row">
                     <div class="col-md-5">
                       <figure>
-                        <a href="{{ take5[main.take5_tutorials.promo_ID].title | slugify | prepend: base_path }}"><img alt="{{ take5[main.take5_tutorials.promo_ID].title }} cover image." src="{{ site.url }}{{ take5[main.take5_tutorials.promo_ID].poster_art }}" decoding="async" fetchpriority="high"></a>
+                        <a href="{{ take5[main.take5_tutorials.promo_ID].title | slugify | prepend: base_path }}">
+                          <img alt="{{ take5[main.take5_tutorials.promo_ID].title }} cover image." src="{{ site.url }}{{ take5[main.take5_tutorials.promo_ID].poster_art }}" decoding="async" fetchpriority="high"></a>
                       </figure>
                     </div>
                     <div class="col-md-7">
@@ -252,7 +238,8 @@ permalink: /courses/
                   <div class="row">
                     <div class="col-md-5">
                       <figure>
-                        <a href="{{ site.gymurl }}/{{ main.collections.promo_ID }}"><img alt="{{ main.collections.promo_ID | capitalize | replace: '-', ' ' }} cover image." src="{{ site.url | append: '/img/hub-pages/og/' }}{{ main.collections.promo_ID | append: '-collection-og.png' }}" decoding="async" fetchpriority="high"></a>
+                        <a href="{{ site.gymurl }}/{{ main.collections.promo_ID }}">
+                          <img alt="{{ main.collections.promo_ID | capitalize | replace: '-', ' ' }} cover image." src="{{ site.url | append: '/img/hub-pages/og/' }}{{ main.collections.promo_ID | append: '-collection-og.png' }}" decoding="async" fetchpriority="high"></a>
                       </figure>
                     </div>
                     <div class="col-md-7">
