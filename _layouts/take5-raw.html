@@ -6,27 +6,10 @@
 
 <link rel="stylesheet" href="{{ site.url }}/css/take5.css?{{ site.time | date:'%s' }}" fetchpriority="high">
 
-{%- assign main = site.data.courses-page -%}
+{%- assign main = site.data.pages.courses -%}
 {%- assign course = site.data.take5[page.course_ID] -%}
 
-<nav class="courses-format" aria-label="Courses">
-  <div class="container">
-    <ul role="list">
-      <li>
-        <a href="/courses/full">{{ main.full_courses.format }}</a>
-      </li>
-      <li>
-        <a href="/courses/gym-shorts">{{ main.gym_shorts.format }}</a>
-      </li>
-      <li>
-        <a href="/courses/take5" aria-current="page">{{ main.take5_tutorials.format }}</a>
-      </li>
-      <li>
-        <a href="/collections">{{ main.collections.format }}</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+{%- include partials/nav-courses-format.html page_active = "take5" -%}
 
 <div class="container">
   <div class="row">

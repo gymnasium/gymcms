@@ -6,29 +6,12 @@ permalink: /courses/full/
   {%- include partials/test-top.html -%}
 {%- endif -%}
 
-{%- assign main = site.data.courses-page -%}
-{%- assign featured = site.data.courses-page.featured -%}
-{%- assign about = site.data.courses-page.about -%}
+{%- assign main = site.data.pages.courses -%}
+{%- assign featured = site.data.pages.courses.featured -%}
+{%- assign about = site.data.pages.courses.about -%}
 {%- assign courses = site.data.courses -%}
 
-<nav class="courses-format" aria-label="Courses">
-  <div class="container">
-    <ul role="list">
-      <li>
-        <a href="/courses/full" aria-current="page">{{ main.full_courses.format }}</a>
-      </li>
-      <li>
-        <a href="/courses/gym-shorts">{{ main.gym_shorts.format }}</a>
-      </li>
-      <li>
-        <a href="/courses/take5">{{ main.take5_tutorials.format }}</a>
-      </li>
-      <li>
-        <a href="/collections">{{ main.collections.format }}</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+{%- include partials/nav-courses-format.html page_active = "full" -%}
 
 <section class="find-courses" id="catalog">
 
