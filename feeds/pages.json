@@ -2,17 +2,7 @@
 layout: null
 permalink: /feeds/pages.json
 ---
-
-{%- assign pages = "" | split: "," -%}
-
-{%- for page in site.pages -%}
-{%- if page.url contains "/feeds/" or page.url contains "/tests/" or page.url contains "/css/" or page.url contains "/js/" or page.url contains "/partials/" or page.url contains "/raw-html-css/" or page.url contains "/fonts/" -%}
-{%- else -%}
-{%- assign pages = pages | push:page -%}
-{%- endif -%}
-{%- endfor -%}
-
-{%- assign list = pages | sort:"url" -%}
+{%- assign list = site.data.pages -%}
 {%- assign counter = list | size -%}
 {%- assign list = list | jsonify -%}
 {

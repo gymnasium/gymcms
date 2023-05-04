@@ -1,0 +1,24 @@
+---
+layout: null
+permalink: /feeds/generated-pages.json
+---
+
+{%- assign pages = "" | split: "," -%}
+
+{%- for page in site.pages -%}
+{%- if page.url contains "/feeds/" or page.url contains "/tests/" or page.url contains "/css/" or page.url contains "/js/" or page.url contains "/partials/" or page.url contains "/raw-html-css/" or page.url contains "/fonts/" or page.url contains "/prototypes/" or page.url contains "/dev/" -%}
+{%- else -%}
+{%- assign pages = pages | push:page -%}
+{%- endif -%}
+{%- endfor -%}
+
+{%- assign list = pages | sort:"url" -%}
+{%- assign counter = list | size -%}
+{%- assign list = list | jsonify -%}
+{
+  "title": "Gymnasium GeneratedPages Feed",
+  "feed_url": "{{site.url}}/feeds/generated-pages.json",
+  "date_modified": "{{ site.time }}",
+  "environment": "{{ jekyll.environment }}",
+  "items": {{list}}
+}
