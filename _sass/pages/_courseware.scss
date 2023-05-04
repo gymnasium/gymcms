@@ -121,6 +121,7 @@
     margin: 0;
   }
 
+  // Fixes overflowing content/horizontal scroll issue @https://github.com/gymnasium/tracker/issues/333
   button {
     width: auto;
   }
