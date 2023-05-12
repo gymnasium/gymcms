@@ -32,7 +32,7 @@ video_ID: {{ webinar.video_ID }}
 <!-- TODO: this page title does nothing to the theme front end, and should probably be removed -->
 <title>{{ page_title }}</title>
 
-<link rel="stylesheet" href="{{ site.url }}/css/webinars.css?{{ site.time | date:'%s' }}">
+<link rel="stylesheet" href="/css/webinars.css?{{ site.time | date:'%s' }}">
 
 <div class="container">
   <div class="row">
@@ -121,6 +121,6 @@ video_ID: {{ webinar.video_ID }}
 </div><!-- .container -->
 
 <!-- TODO: move this function to the main gymnasium.js file, scoped appropriately -->
-<script src="{{ site.url }}/js/functions.js?{{ site.time | date:'%s' }}" async defer></script>
+<script src="/js/functions.js?{{ site.time | date:'%s' }}" async defer></script>
 
 {%- include partials/template-bottom.html -%}
