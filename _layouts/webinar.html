@@ -1,8 +1,7 @@
-{%- if jekyll.environment == "local" -%}
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.slim.min.js"></script>
-  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.min.js"></script>
-  {%- include partials/test-top.html -%}
-{%- endif -%}
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.slim.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.min.js"></script>
+{%- include partials/template-top.html -%}
 
 {% assign webinar = site.data.webinars[page.event_ID] %}
 <!--//
@@ -33,7 +32,7 @@ video_ID: {{ webinar.video_ID }}
 <!-- TODO: this page title does nothing to the theme front end, and should probably be removed -->
 <title>{{ page_title }}</title>
 
-<link rel="stylesheet" href="{{ site.url }}/css/webinars.css?{{ site.time | date:'%s' }}">
+<link rel="stylesheet" href="/css/webinars.css?{{ site.time | date:'%s' }}">
 
 <div class="container">
   <div class="row">
@@ -122,8 +121,6 @@ video_ID: {{ webinar.video_ID }}
 </div><!-- .container -->
 
 <!-- TODO: move this function to the main gymnasium.js file, scoped appropriately -->
-<script src="{{ site.url }}/js/functions.js?{{ site.time | date:'%s' }}" async defer></script>
+<script src="/js/functions.js?{{ site.time | date:'%s' }}" async defer></script>
 
-{%- if jekyll.environment == "local" -%}
-  {%- include partials/test-bottom.html -%}
-{%- endif -%}
+{%- include partials/template-bottom.html -%}

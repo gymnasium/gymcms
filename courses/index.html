@@ -2,9 +2,7 @@
 layout: raw
 permalink: /courses/
 ---
-{%- if jekyll.environment == "local" -%}
-  {%- include partials/test-top.html -%}
-{%- endif -%}
+{%- include partials/template-top.html -%}
 
 {%- assign base_path = "/courses/take5/" | prepend: site.gymurl -%}
 {%- assign main = site.data.pages.courses -%}
@@ -35,7 +33,7 @@ permalink: /courses/
               {{ main.full_courses.format }}
             </h2>
             <p class="hero">
-              {{ main.full_courses.hero_text }} <a href="{{ site.gymurl }}/courses/full"><b>{{ main.full_courses.hero_CTA }}</b></a>
+              {{ main.full_courses.hero_text }} <a href="/courses/full"><b>{{ main.full_courses.hero_CTA }}</b></a>
             </p>
             <div class="promo">
               <div class="row">
@@ -46,7 +44,7 @@ permalink: /courses/
                   <div class="row">
                     <div class="col-md-5">
                       <figure>
-                        <a href="{{ site.gymurl }}{{ courses[main.full_courses.promo_ID].url }}">
+                        <a href="{{ courses[main.full_courses.promo_ID].url }}">
                           <img alt="{{ courses[main.full_courses.promo_ID].title }} cover image." src="{{ site.url }}{{ courses[main.full_courses.promo_ID].poster_art }}" decoding="async" fetchpriority="high"></a>
                       </figure>
                     </div>
@@ -57,14 +55,14 @@ permalink: /courses/
                             <b>{{ courses[main.full_courses.promo_ID].topic }}</b>
                           </p>
                           <h2>
-                            <a href="{{ site.gymurl }}{{ courses[main.full_courses.promo_ID].url }}">{{ courses[main.full_courses.promo_ID].title }}</a>
+                            <a href="{{ courses[main.full_courses.promo_ID].url }}">{{ courses[main.full_courses.promo_ID].title }}</a>
                           </h2>
                         </header>
                         <p>
                           {{ courses[main.full_courses.promo_ID].short_description }}
                         </p>
                         <div class="cta">
-                          <a class="gym-button natural" href="{{ site.gymurl }}{{ courses[main.full_courses.promo_ID].url }}">Learn More</a>
+                          <a class="gym-button natural" href="{{ courses[main.full_courses.promo_ID].url }}">Learn More</a>
                         </div>
                       </article>
                     </div>
@@ -99,7 +97,7 @@ permalink: /courses/
               {{ main.gym_shorts.format }}
             </h2>
             <p class="hero">
-              {{ main.gym_shorts.hero_text }} <a href="{{ site.gymurl }}/courses/gym-shorts"><b>{{ main.gym_shorts.hero_CTA }}</b></a>
+              {{ main.gym_shorts.hero_text }} <a href="/courses/gym-shorts"><b>{{ main.gym_shorts.hero_CTA }}</b></a>
             </p>
             <div class="promo">
               <div class="row">
@@ -110,7 +108,7 @@ permalink: /courses/
                   <div class="row">
                     <div class="col-md-5">
                       <figure>
-                        <a href="{{ site.gymurl }}{{ courses[main.gym_shorts.promo_ID].url }}">
+                        <a href="{{ courses[main.gym_shorts.promo_ID].url }}">
                           <img alt="{{ courses[main.gym_shorts.promo_ID].title }} cover image." src="{{ site.url }}{{ courses[main.gym_shorts.promo_ID].poster_art }}" decoding="async" fetchpriority="high"></a>
                       </figure>
                     </div>
@@ -121,14 +119,14 @@ permalink: /courses/
                             <b>{{ courses[main.gym_shorts.promo_ID].topic }}</b>
                           </p>
                           <h2>
-                            <a href="{{ site.gymurl }}{{ courses[main.gym_shorts.promo_ID].url }}">{{ courses[main.gym_shorts.promo_ID].title }}</a>
+                            <a href="{{ courses[main.gym_shorts.promo_ID].url }}">{{ courses[main.gym_shorts.promo_ID].title }}</a>
                           </h2>
                         </header>
                         <p>
                           {{ courses[main.gym_shorts.promo_ID].short_description }}
                         </p>
                         <div class="cta">
-                          <a class="gym-button natural" href="{{ site.gymurl }}{{ courses[main.gym_shorts.promo_ID].url }}">Learn More</a>
+                          <a class="gym-button natural" href="{{ courses[main.gym_shorts.promo_ID].url }}">Learn More</a>
                         </div>
                       </article>
                     </div>
@@ -163,7 +161,7 @@ permalink: /courses/
               {{ main.take5_tutorials.format }}
             </h2>
             <p class="hero">
-              {{ main.take5_tutorials.hero_text }} <a href="{{ site.gymurl }}/courses/gym-shorts"><b>{{ main.take5_tutorials.hero_CTA }}</b></a>
+              {{ main.take5_tutorials.hero_text }} <a href="/courses/gym-shorts"><b>{{ main.take5_tutorials.hero_CTA }}</b></a>
             </p>
             <div class="promo">
               <div class="row">
@@ -227,7 +225,7 @@ permalink: /courses/
               {{ main.collections.format }}
             </h2>
             <p class="hero">
-              {{ main.collections.hero_text }} <a href="{{ site.gymurl }}/collections"><b>{{ main.collections.hero_CTA }}</b></a>
+              {{ main.collections.hero_text }} <a href="/collections"><b>{{ main.collections.hero_CTA }}</b></a>
             </p>
             <div class="promo">
               <div class="row">
@@ -238,7 +236,7 @@ permalink: /courses/
                   <div class="row">
                     <div class="col-md-5">
                       <figure>
-                        <a href="{{ site.gymurl }}/{{ main.collections.promo_ID }}">
+                        <a href="/{{ main.collections.promo_ID }}">
                           <img alt="{{ main.collections.promo_ID | capitalize | replace: '-', ' ' }} cover image." src="{{ site.url | append: '/img/hub-pages/og/' }}{{ main.collections.promo_ID | append: '-collection-og.png' }}" decoding="async" fetchpriority="high"></a>
                       </figure>
                     </div>
@@ -246,14 +244,14 @@ permalink: /courses/
                       <article>
                         <header>
                           <h2>
-                            <a href="{{ site.gymurl }}/{{ main.collections.promo_ID }}">{{ main.collections.promo_ID | capitalize | replace: '-', ' ' }}</a>
+                            <a href="/{{ main.collections.promo_ID }}">{{ main.collections.promo_ID | capitalize | replace: '-', ' ' }}</a>
                           </h2>
                         </header>
                         <p>
                           {{ courses[main.gym_shorts.promo_ID].short_description }}
                         </p>
                         <div class="cta">
-                          <a class="gym-button natural" href="{{ site.gymurl }}/{{ main.collections.promo_ID }}">Learn More</a>
+                          <a class="gym-button natural" href="/{{ main.collections.promo_ID }}">Learn More</a>
                         </div>
                       </article>
                     </div>
@@ -263,12 +261,12 @@ permalink: /courses/
                   <dl>
                     <div>
                       <dt>{{ main.collections.format | prepend: 'Content ' }}</dt>
-                      <dd><a href="{{ site.gymurl }}/design-systems">Design Systems</a>
-                      <dd><a href="{{ site.gymurl }}/web-development">Web Development</a></dd>
-                      <dd><a href="{{ site.gymurl }}/ux-design">UX Design</a></dd>
-                      <dd><a href="{{ site.gymurl }}/prototyping">Prototyping</a></dd>
-                      <dd><a href="{{ site.gymurl }}/accessibility">Accessibility</a></dd>
-                      <dd><a href="{{ site.gymurl }}/remote-work">Remote Work</a></dd>
+                      <dd><a href="/design-systems">Design Systems</a>
+                      <dd><a href="/web-development">Web Development</a></dd>
+                      <dd><a href="/ux-design">UX Design</a></dd>
+                      <dd><a href="/prototyping">Prototyping</a></dd>
+                      <dd><a href="/accessibility">Accessibility</a></dd>
+                      <dd><a href="/remote-work">Remote Work</a></dd>
                     </div>
                   </dl>
                 </div>
@@ -283,6 +281,4 @@ permalink: /courses/
 
 </section>
 
-{%- if jekyll.environment == "local" -%}
-  {%- include partials/test-bottom.html -%}
-{%- endif -%}
+{%- include partials/template-bottom.html -%}

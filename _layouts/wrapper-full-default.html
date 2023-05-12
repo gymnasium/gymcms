@@ -1,13 +1,9 @@
 {%- include build-timestamp.html -%}
 
-{%- if jekyll.environment == "local" -%}
-  {%- include partials/test-top.html -%}
-{%- endif -%}
+{%- include partials/template-top.html -%}
 
 <div class="container">
   {{ content }}
 </div><!-- .container -->
 
-{%- if jekyll.environment == "local" -%}
-  {%- include partials/test-bottom.html -%}
-{%- endif -%}
+{%- include partials/template-bottom.html -%}

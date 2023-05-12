@@ -1,7 +1,7 @@
 {%- assign featured_courses = page.featured_courses  | split: ", " -%}
 
 {%- assign item_count = featured_courses | size -%}
-<link rel="stylesheet" href="{{ site.url }}/css/featured-courses.css?{{ site.time | date:'%s' }}">
+<link rel="stylesheet" href="/css/featured-courses.css?{{ site.time | date:'%s' }}">
 
 <div class="section-featured-courses">
   <div class="cols">
@@ -70,11 +70,11 @@
       <p>Design a career you love with free online courses on design, development, UX, accessibility, and career skills.</p>
     </div>
     <div class="cta">
-     <a class="gym-button" href="https://thegymnasium.com/courses"><b>View all Courses</b></a>
+     <a class="gym-button" href="/courses"><b>View all Courses</b></a>
     </div>
   </div>
 </div>
 
 <!-- polyfills -->
-<script async nomodule src="{{ site.url }}/js/polyfills/prefixfree.min.js"></script>
-<script async nomodule src="{{ site.url }}/js/polyfills/grid-equal-height.js"></script>
+<script async nomodule src="/js/polyfills/prefixfree.min.js"></script>
+<script async nomodule src="/js/polyfills/grid-equal-height.js"></script>
