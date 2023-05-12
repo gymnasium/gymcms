@@ -2,12 +2,8 @@
 layout: raw
 permalink: /courses/workshops/
 ---
-{%- if jekyll.environment == "local" -%}
-  {%- include partials/test-top.html -%}
-{%- endif -%}
+{%- include partials/template-top.html -%}
 
 {%- include workshops/workshop.html -%}
 
-{%- if jekyll.environment == "local" -%}
-  {%- include partials/test-bottom.html -%}
-{%- endif -%}
+{%- include partials/template-bottom.html -%}

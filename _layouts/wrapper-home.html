@@ -2,9 +2,7 @@
 
 {%- assign hero = site.data.hero -%}
 
-{%- if jekyll.environment == "local" -%}
-  {%- include partials/test-top.html -%}
-{%- endif -%}
+{%- include partials/template-top.html -%}
 
 <div id="main" class="home">
 
@@ -58,6 +56,4 @@
   {%- include home/as-seen-in.html -%}
 </div><!-- #main.home -->
 
-{%- if jekyll.environment == "local" -%}
-  {%- include partials/test-bottom.html -%}
-{%- endif -%}
+{%- include partials/template-bottom.html -%}

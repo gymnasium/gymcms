@@ -2,9 +2,7 @@
 layout: raw
 permalink: /courses/full/
 ---
-{%- if jekyll.environment == "local" -%}
-  {%- include partials/test-top.html -%}
-{%- endif -%}
+{%- include partials/template-top.html -%}
 
 {%- assign main = site.data.pages.courses -%}
 {%- assign featured = site.data.pages.courses.featured -%}
@@ -73,6 +71,4 @@ permalink: /courses/full/
 
 </section>
 
-{%- if jekyll.environment == "local" -%}
-  {%- include partials/test-bottom.html -%}
-{%- endif -%}
+{%- include partials/template-bottom.html -%}

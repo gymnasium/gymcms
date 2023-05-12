@@ -2,9 +2,7 @@
 permalink: /webinars/
 layout: raw
 ---
-{%- if jekyll.environment == "local" -%}
-  {%- include partials/test-top.html -%}
-{%- endif -%}
+{%- include partials/template-top.html -%}
 
 {%- assign webinars_ascending_date = "" | split: ", " -%}
 {%- assign webinars_descending_date = "" | split: ", " -%}
@@ -62,10 +60,8 @@ layout: raw
             </header>
             <div class="webinar--info">
             {%- comment -%}
-              {%- if jekyll.environment == "local" -%}
-                <pre>({{ complete_webinar_title }})</pre>
-                <img src="{{ site.url }}/img/social/webinars/{{ webinar.event_ogimage }}">
-              {%- endif -%}
+            <pre>({{ complete_webinar_title }})</pre>
+            <img src="{{ site.url }}/img/social/webinars/{{ webinar.event_ogimage }}">
             {%- endcomment -%}
             {%- capture headcount -%}{{ item.speaker | size }}{%- endcapture -%}
               {%- if item.register -%}
@@ -118,6 +114,4 @@ layout: raw
 
 </main>
 
-{%- if jekyll.environment == "local" -%}
-  {%- include partials/test-bottom.html -%}
-{%- endif -%}
+{%- include partials/template-bottom.html -%}
