@@ -68,3 +68,15 @@
   minify = true
 [context.production.processing.js]
   minify = true
+
+# data branch build
+# https://data.thegymcms.com/
+[context.data]
+  command = "JEKYLL_ENV=data bundle exec jekyll build --config _data_config.yml"
+
+[context.data.processing.images]
+  compress = true
+[context.data.processing.css]
+  minify = true
+[context.data.processing.js]
+  minify = true
