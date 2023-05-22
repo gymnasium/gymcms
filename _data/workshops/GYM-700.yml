@@ -3,7 +3,7 @@ id: GYM-007
 title: "Improving Your Portfolio"
 date: 2022-12-05T00:00:00-04:00
 datetime: "December 5–9, Monday–Friday, 4–5 PM EST"
-course_type: workshop
+type: workshop
 url: /courses/GYM/700/0/about
 img: /img/course-artwork/png/gym-700.png
 live: false

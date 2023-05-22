@@ -25,7 +25,7 @@ This YAML file defines the key paramters for a Take 5.
 id: GYM-5001                         # Unique course ID
 title: "Making a CSS Parallax Effect"       # MUST be quoted
 date: 2019-10-28T00:00:00-04:00             # Publish date — MUST be in this format
-course_type: take5                          # This is required
+type: take5                          # This is required
 url: /courses/take5/GYM-5001/                # Only change the course ID!
 img: /img/take5/posters/gym-5001.jpg # Path to poster image (may be deprecated)
 live: true                                  # Only set to live when ready to publish!
@@ -60,7 +60,7 @@ related_content:
 id: GYM-5000
 title: 
 date: 2019-11-15T00:00:00-04:00
-course_type: take5
+type: take5
 url: /courses/take5/GYM-5000/
 img: /img/take5/posters/gym-5000.jpg
 live: false

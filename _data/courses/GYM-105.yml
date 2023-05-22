@@ -2,7 +2,7 @@
 id: GYM-105
 title: "Writing for Web & Mobile"
 date: 2022-05-26T00:00:00-04:00
-course_type: full
+type: full
 live: false
 retired_message:
   1: "<strong>This course has been retired.</strong>"
