@@ -56,7 +56,7 @@ css: [/css/take5.css]
         {%- if site.data.take5[item].featured == true -%}
             {%- assign featured = site.data.take5[item].course_ID -%}
             {%- assign featured_title = site.data.take5[item].title -%}
-            {%- assign featured_description = site.data.take5[item].short_description -%}
+            {%- assign featured_description = site.data.take5[item].description -%}
             {%- assign featured_url = site.data.take5[item].title | slugify | prepend: base_path -%}
             {%- assign featured_instructor = site.data.take5[item].instructor -%}
             {%- assign featured_topic = site.data.take5[item].topic -%}

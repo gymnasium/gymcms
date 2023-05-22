@@ -9,8 +9,8 @@ retired_message:
 url: /courses/GYM/101/0/about
 poster_art: /img/course-artwork/png/gym-101.png
 topic: "Development"
-short_description: "This course has been retired."
-short_description_orig: "In this course, you’ll learn best practices for building responsive websites that adapt to different devices and user behaviors."
+description: "This course has been retired."
+description_orig: "In this course, you’ll learn best practices for building responsive websites that adapt to different devices and user behaviors."
 instructor: josborn
 skills:
   - label: "HTML5 and CSS3"

@@ -18,7 +18,7 @@ permalink: /tests/catalog/
     <pre>Production URL: <a href="{{ item.url }}" target="_blank">{{ item.course_ID }}</a></pre>
     <pre>Course Artwork PNG: {{ png_path | prepend: site.url }}</pre>
     <pre>Course Artwork SVG: {{ svg_path | prepend: site.url }}</pre>
-    <pre>Short Description: {{ item.short_description }}</pre>
+    <pre>Description: {{ item.description }}</pre>
     <dl>
       <dt>Skills Covered</dt>
       {%- for skill in item.skills -%}
@@ -44,7 +44,7 @@ permalink: /tests/catalog/
     {%- if item.live -%}
         <h3>{{ item.title }}</h3>
         <pre>Course ID: {{ item.course_ID }}</pre>
-        <pre>Short Description: {{ item.short_description }}</pre>
+        <pre>Description: {{ item.description }}</pre>
         <pre>URL: {{ item.title | slugify | prepend: take5_path }}</pre>
         <pre>Poster Art: {{ item.poster_art | prepend: site.url }}</pre>
     {%- endif -%}

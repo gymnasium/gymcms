@@ -9,7 +9,7 @@ poster_art: /img/course-artwork/png/gym-016.png
 topic: "Development"
 subtopics:
   - label: "Accessibility"
-short_description: "Learn accessible and responsive design best practices to help make a more user-friendly web for everyone."
+description: "Learn accessible and responsive design best practices to help make a more user-friendly web for everyone."
 instructor: emarcotte
 skills:
   - label: "Accessibility"

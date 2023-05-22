@@ -14,7 +14,7 @@ subtopics:
 video_ID: UYsT7xAhQZM
 video_duration: "4:55"
 featured: false
-short_description: "Learn advanced Auto Layout techniques in Figma such as alignment, distribution, resizing, and nesting to create complex interfaces."
+description: "Learn advanced Auto Layout techniques in Figma such as alignment, distribution, resizing, and nesting to create complex interfaces."
 project_file_source: Figma Community
 project_files:
 - label: "Starting Project"

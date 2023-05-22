@@ -1,7 +1,7 @@
 {%- assign list = site.data.courses | sort -%}
 {%- for hash in list -%}
   {%- assign data = hash[1] | jsonify -%}
-  {%- assign data = data | replace: 'short_description', 'description' -%}
+  {%- assign data = data | replace: 'description', 'description' -%}
   {%- assign data = data | replace: 'course_ID', 'id' -%}
   {%- assign data = data | replace: 'course_type', 'type' -%}
   {%- assign data = data | replace: 'poster_art', 'img' -%}

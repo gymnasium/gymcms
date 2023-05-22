@@ -7,7 +7,7 @@ live: true
 url: /courses/GYM/106/0/about
 poster_art: /img/course-artwork/png/gym-106.png
 topic: "Design"
-short_description: "Learn the design and visual principles needed to create effective information graphics and data visualizations."
+description: "Learn the design and visual principles needed to create effective information graphics and data visualizations."
 instructor: groberts
 skills:
   - label: "Visual design principles"

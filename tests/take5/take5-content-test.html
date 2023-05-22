@@ -62,7 +62,7 @@ td.success {
         <th>Date</th>
         <th>Video ID</th>
         <th>Video Duration</th>
-        <th>Short Description</th>
+        <th>Description</th>
         <th>Meta Partial?</th>
         <th>Poster Art</th>
     </thead>
@@ -127,9 +127,9 @@ td.success {
     <td>{{ item.video_duration }}</td>
     {% endif %}
 
-    <!-- Short Description -->
-    {% if item.short_description == null %}<td class="error">MISSING VALUE</td>{% else %}
-    {% assign this_description = item.short_description | strip_html %}
+    <!-- Description -->
+    {% if item.description == null %}<td class="error">MISSING VALUE</td>{% else %}
+    {% assign this_description = item.description | strip_html %}
     {% if this_description contains "lorem" or this_description contains "ipsum" %}
     <td class="warn" title="{{this_description}}">May contain placeholder text! ({{this_description | size }} chars)</td>{% else %}
     <td title="{{this_description}}">true ({{this_description | size }} chars)</td>

@@ -11,8 +11,8 @@ poster_art: /img/course-artwork/png/gym-005.png
 topic: "UX"
 subtopics:
   - label: "Prototyping"
-short_description: "This course has been retired."
-short_description_orig: "Learn how to use Sketch tools and features in order to build an interactive prototype for a mobile website."
+description: "This course has been retired."
+description_orig: "Learn how to use Sketch tools and features in order to build an interactive prototype for a mobile website."
 instructor: josborn
 skills:
   - label: "Sketch fundamentals"

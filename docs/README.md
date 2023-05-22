@@ -34,7 +34,7 @@ topic: "Design & Development"           # MUST be quoted
 video_ID: zRNUPU2dujU                       # YouTube video ID
 video_duration: "4:59"                      # Must be quoted
 featured: true                              # Toggle for display in catalog and hero
-short_description: "Learn how to create a scrolling background effect using CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
+description: "Learn how to create a scrolling background effect using CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
 project_file_source: Codepen                # Required if there are project files
 project_files:
 - label: "Starting Project"
@@ -69,7 +69,7 @@ topic:
 video_ID: 
 video_duration: "0:00"
 featured: false
-short_description: 
+description: 
 project_file_source: 
 project_files:
 - label: 

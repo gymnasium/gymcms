@@ -7,7 +7,7 @@ live: true
 url: /courses/GYM/107/0/about
 poster_art: /img/course-artwork/png/gym-107.png
 topic: "Development"
-short_description: "This course will prepare you to be a front-end developer by walking you through the process of building a simple, responsive website using HTML, CSS, and JavaScript."
+description: "This course will prepare you to be a front-end developer by walking you through the process of building a simple, responsive website using HTML, CSS, and JavaScript."
 instructor: agustafson
 skills:
   - label: "HTML Markup"

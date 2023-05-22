@@ -10,7 +10,7 @@ topic: "Development"
 subtopics:
   - label: "JavaScript"
   - label: "jQuery"
-short_description: "This course will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples."
+description: "This course will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples."
 instructor: kchisholm
 skills:
   - label: "Developer Tools"

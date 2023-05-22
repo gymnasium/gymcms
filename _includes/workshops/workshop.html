@@ -9,7 +9,7 @@
       <h1>{{ homepage.main.title }}</h1>
       <p>
         <strong class="block">{{ homepage.main.tagline }}</strong>
-        {{ homepage.main.short_description }}
+        {{ homepage.main.description }}
       </p>
     </div>
   </header>
@@ -25,7 +25,7 @@
 
           <h2>{{ workshop.datetime }}</h2>
 
-          <p class="hero">{{ workshop.short_description}}</p>
+          <p class="hero">{{ workshop.description}}</p>
 
           {%- for description in workshop.long_description -%}
           <p class="hero">{{ description.label }}</p>

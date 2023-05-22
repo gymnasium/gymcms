@@ -9,7 +9,7 @@ poster_art: /img/course-artwork/png/gym-020.png
 topic: "Design"
 subtopics:
   - label: "Design Systems"
-short_description: "Learn how pattern libraries and design systems can change and improve the work your teams do on a daily basis."
+description: "Learn how pattern libraries and design systems can change and improve the work your teams do on a daily basis."
 instructor: emarcotte
 skills:
   - label: "Improving team collaboration"

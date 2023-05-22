@@ -16,7 +16,7 @@ css: [/css/take5.css]
     <header class="take5--about" id="about">
       <div class="container">
         <h1>{{ main.take5_tutorials.format }}</h1>
-        <p><span class="block"><strong>Free online video tutorials.</strong> Practical skills in 5 minutes.</span> {{ main.short_description }}</p>
+        <p><span class="block"><strong>Free online video tutorials.</strong> Practical skills in 5 minutes.</span> {{ main.description }}</p>
         <dl class="row">
           <div class="col-md-4">
             <dt>{{ about.lists[1] }}</dt>
@@ -72,7 +72,7 @@ css: [/css/take5.css]
             {%- if site.data.take5[item].featured == true -%}
                 {%- assign featured = site.data.take5[item].course_ID -%}
                 {%- assign featured_title = site.data.take5[item].title -%}
-                {%- assign featured_description = site.data.take5[item].short_description -%}
+                {%- assign featured_description = site.data.take5[item].description -%}
                 {%- assign featured_url = site.data.take5[item].title | slugify | prepend: base_path -%}
                 {%- assign featured_instructor = site.data.take5[item].instructor -%}
                 {%- assign featured_instructor_bio = site.data.take5[item].instructor_bio -%}

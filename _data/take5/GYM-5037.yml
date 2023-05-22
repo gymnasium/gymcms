@@ -12,7 +12,7 @@ topic: "Accessibility"
 video_ID: qfdOIriWM90
 video_duration: "3:52"
 featured: false
-short_description: "Learn how to leverage the inherent accessibility of HTML documents in this tutorial."
+description: "Learn how to leverage the inherent accessibility of HTML documents in this tutorial."
 related_content:
 - label: "HTML: A good basis for accessibility"
   url: "https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML"

@@ -56,7 +56,7 @@ layout: raw
               <p class="all-caps topic"><b>{{ item.content_category }}</b></p>
               <h2 class="title">{{ webinar_title }}{% if webinar_subtitle %}<span class="subhead"><span class="visuallyhidden">:</span> {{ webinar_subtitle }}</span>{%- endif -%}</h2>
               {%- if item.register -%}
-              <p class="short-description">{{ item.short_description }}</p>
+              <p class="short-description">{{ item.description }}</p>
               <p class="datetime">Live streaming on <strong>{{ item.event_date | date: "%A, %B %-d, %Y at " }}{{ item.event_time }}</strong></p>
               {%- endif -%}
             </header>

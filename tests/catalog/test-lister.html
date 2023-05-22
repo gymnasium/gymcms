@@ -14,7 +14,7 @@ permalink: /tests/catalog/lister
     <thead>
         <th>Course ID</th>
         <th>Title</th>
-        <th>Short Description</th>
+        <th>Description</th>
         <th>Length</th>
     </thead>
 
@@ -30,11 +30,11 @@ permalink: /tests/catalog/lister
     <td>{{ item.title }}</td>
     {% endif %}
 
-    <!-- Short Description -->
-    <td title="{{ item.short_description }}">{{ item.short_description | truncate: 160 }}</td>
+    <!-- Description -->
+    <td title="{{ item.description }}">{{ item.description | truncate: 160 }}</td>
 
-    <!-- Short Description Length -->
-    <td>{{ item.short_description | size }}</td>
+    <!-- Description Length -->
+    <td>{{ item.description | size }}</td>
 </tr>
 {% endfor %}
 </table>

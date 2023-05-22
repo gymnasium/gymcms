@@ -9,7 +9,7 @@ poster_art: /img/course-artwork/png/gym-012.png
 topic: "Development"
 subtopics:
   - label: "JavaScript"
-short_description: "In this course, you will learn how to build a simple web app using Node.js."
+description: "In this course, you will learn how to build a simple web app using Node.js."
 instructor: tsellon
 skills:
   - label: "Installing Node.js"

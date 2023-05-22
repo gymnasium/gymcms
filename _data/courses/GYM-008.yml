@@ -11,8 +11,8 @@ poster_art: /img/course-artwork/png/gym-008.png
 topic: "UX"
 subtopics:
   - label: "Prototyping"
-short_description: "This course has been retired."
-short_description_orig: "Learn how to use the conditional logic features in Axure in order to quickly create an interactive prototype."
+description: "This course has been retired."
+description_orig: "Learn how to use the conditional logic features in Axure in order to quickly create an interactive prototype."
 instructor: tslate
 skills:
   - label: "Interactive prototyping"

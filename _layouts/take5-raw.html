@@ -41,7 +41,7 @@
                       <p class="instructor"><b>with {{ course.instructor }}, {{ course.instructor_bio }}</b></p>
                       {% endif %}
                     </header>
-                    <p class="description">{{ course.short_description }}</p>
+                    <p class="description">{{ course.description }}</p>
                     <div class="embed" id="tutorial-video">
                       <div class="embed-responsive embed-responsive-16by9">
                         {% include take5/video.html video_ID=course.video_ID %}

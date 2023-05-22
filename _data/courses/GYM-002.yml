@@ -9,8 +9,8 @@ retired_message:
 url: /courses/GYM/002/0/about
 poster_art: /img/course-artwork/png/gym-002.png
 topic: "Development"
-short_description: "This course has been retired."
-short_description_orig: "Learn the basics of Node.js by building a “sample social” profile form."
+description: "This course has been retired."
+description_orig: "Learn the basics of Node.js by building a “sample social” profile form."
 instructor: jhargrove
 skills:
   - label: "Installing a Node.js server"

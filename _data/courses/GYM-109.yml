@@ -7,7 +7,7 @@ live: true
 url: /courses/course-v1:GYM+109+0/about
 poster_art: /img/course-artwork/png/gym-109.png
 topic: "Development"
-short_description: "This is a hands-on, code-intensive course on how to build high-performance, responsive websites that look great across multiple screen sizes and devices."
+description: "This is a hands-on, code-intensive course on how to build high-performance, responsive websites that look great across multiple screen sizes and devices."
 instructor: jpamental
 skills:
   - label: "Strategic thinking about responsive process"
