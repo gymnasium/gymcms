@@ -4,7 +4,7 @@
 {%- for take5_hash in catalog -%}
     {%- assign item = take5_hash[1] -%}
     {%- if item.featured == true -%}
-        {%- assign hero_id = item.course_id | downcase -%}
+        {%- assign hero_id = item.id | downcase -%}
         {%- assign hero_topic = item.topic -%}
         {%- assign hero_title = item.title -%}
         {%- assign hero_instructor = item.instructor | prepend: "with " -%}

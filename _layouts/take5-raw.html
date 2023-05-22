@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{{ site.url }}/css/take5.css?{{ site.time | date:'%s' }}" fetchpriority="high">
 
 {%- assign main = site.data.pages.courses -%}
-{%- assign course = site.data.take5[page.course_id] -%}
+{%- assign course = site.data.take5[page.id] -%}
 
 {%- include partials/nav-courses-format.html page_active = "take5" -%}
 
@@ -16,7 +16,7 @@
     <div class="col-md-12">
 
       <main id="main" role="main">
-        <article class="take5--main" id="{{ course.course_id }}">
+        <article class="take5--main" id="{{ course.id }}">
           {%- comment -%}
           //
           // VIDEO
@@ -139,7 +139,7 @@
                   </summary>
                   <article
                     class="take5--transcript"
-                    id="{{ course.course_id }}-transcript">
+                    id="{{ course.id }}-transcript">
                     <header class="visuallyhidden">
                       <h1>{{ course.title }}</h1>
                       <p>with {{ course.instructor }}</p>

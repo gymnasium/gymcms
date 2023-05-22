@@ -21,7 +21,7 @@ permalink: /courses/take5/course-list-recent
   {%- for course_hash in catalog -%}
     {%- assign item = course_hash[1] -%}
     {%- if item.date == pubdate -%}
-      {%- assign publish_order = publish_order | push: item.course_id -%}
+      {%- assign publish_order = publish_order | push: item.id -%}
     {%- endif -%}
   {%- endfor -%}
 
@@ -31,7 +31,7 @@ permalink: /courses/take5/course-list-recent
 
 {%- for item in publish_order -%}
   {%- if site.data.take5[item].live == true -%}
-    {%- assign recent = recent | push: site.data.take5[item].course_id -%}
+    {%- assign recent = recent | push: site.data.take5[item].id -%}
   {%- endif -%}
 {%- endfor -%}
 
@@ -40,11 +40,11 @@ permalink: /courses/take5/course-list-recent
 {%- for item in recent limit: 5 -%}
   {%- assign course = site.data.take5[item] -%}
 
-  <li class="course-item" data-course-id="{{ course.course_id | remove: 'GYM-' }}">
+  <li class="course-item" data-course-id="{{ course.id | remove: 'GYM-' }}">
     <article class="row">
       <figure class="col-md-4">
         <a href="{{ course.title | slugify | prepend: base_path }}">
-          <img src="{{ course.poster_art | prepend: site.url }}" alt="{{ course.course_id | remove: 'gym-' }} {{ course.title }} cover image." decoding="async" priority="low">
+          <img src="{{ course.poster_art | prepend: site.url }}" alt="{{ course.id | remove: 'gym-' }} {{ course.title }} cover image." decoding="async" priority="low">
         </a>
         <figcaption>
           <a href="{{ course.title | slugify | prepend: base_path }}" class="gym-button"><b>Watch Now</b></a>

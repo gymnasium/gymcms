@@ -73,7 +73,7 @@ td.success {
     {% assign item = take5_hash[1] %}
 <tr>
     <!-- Course ID -->
-    <td>{{ item.course_id }}</td>
+    <td>{{ item.id }}</td>
     
     <!-- Title -->
     {% if item.title == null %}<td class="error">MISSING VALUE</td>{% else %}
@@ -137,12 +137,12 @@ td.success {
     {% endif %}
 
     <!-- Meta tag partial -->
-    {% assign meta_partial = item.course_id | prepend: 'courses/take5/' | append: '/meta.md' %}
+    {% assign meta_partial = item.id | prepend: 'courses/take5/' | append: '/meta.md' %}
     <!-- *** {{ meta_partial }} -->
     {% capture meta_partial_test %}{% file_exists {{ meta_partial }} %}{% endcapture %}
     {% if meta_partial_test == "false" %}<td class="error">MISSING FILE</td>{% else %}
     <td>
-        <a href="/courses/take5/{{ item.course_id | append: '/meta/' | downcase }}" target="_blank">{{ meta_partial_test }}</a>
+        <a href="/courses/take5/{{ item.id | append: '/meta/' | downcase }}" target="_blank">{{ meta_partial_test }}</a>
     </td>
     {% endif %}
 

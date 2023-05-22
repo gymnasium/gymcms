@@ -42,7 +42,7 @@ Webinar Count: {{ site.data.webinars | size }}
 
 {% for webinar_list in sorted_webinars %}
 {% assign webinar = webinar_list[1] %}
-{%- assign webinars_ascending_date = webinars_ascending_date | push: webinar.event_id -%}
+{%- assign webinars_ascending_date = webinars_ascending_date | push: webinar.id -%}
 {% endfor %}
 
 {%- assign webinars_descending_date = webinars_ascending_date | reverse -%}

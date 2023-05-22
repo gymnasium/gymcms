@@ -4,7 +4,7 @@
   {%- include partials/test-top.html -%}
 {%- endif -%}
 
-{% assign webinar = site.data.webinars[page.event_id] %}
+{% assign webinar = site.data.webinars[page.id] %}
 <!--//
 title: {{ webinar.title | strip_html }}
 event_guests: {{ webinar.event_guests | strip_html }}

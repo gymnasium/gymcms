@@ -3,13 +3,13 @@ Set up meta tags for a webinar meta include
 {%- endcomment -%}
 {%- assign event = site.data.webinars[id] -%}
 {%- assign og_description = event.description | strip_html -%}
-{%- if event.event_id == "web0005-state-of-responsive-web-design" -%}
+{%- if event.id == "web0005-state-of-responsive-web-design" -%}
     {%- assign og_url = "https://thegymnasium.com/webinars/state-of-responsive-web-design" -%}
     {%- assign og_title = event.title -%}
 
 {%- else -%}
 
-    {%- assign path = event.event_id -%}
+    {%- assign path = event.id -%}
     {%- assign path =  path | slice: 8,path.size   -%}
     {%- assign og_url = path | prepend: "https://thegymnasium.com/webinars/" -%}
     {%- assign og_title = event.title -%}

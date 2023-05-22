@@ -23,7 +23,7 @@ permalink: /courses/full/course-list-recent
   {% for course_hash in catalog %}
     {% assign item = course_hash[1] %}
     {%- if item.date == pubdate -%}
-      {%- assign publish_order = publish_order | push: item.course_id -%}
+      {%- assign publish_order = publish_order | push: item.id -%}
     {%- endif -%}
   {% endfor %}
 
@@ -33,7 +33,7 @@ permalink: /courses/full/course-list-recent
 
 {%- for item in publish_order -%}
   {%- if site.data.courses[item].live == true and site.data.courses[item].course_type == "full" -%}
-    {%- assign recent = recent | push: site.data.courses[item].course_id -%}
+    {%- assign recent = recent | push: site.data.courses[item].id -%}
   {%- endif -%}
 {%- endfor -%}
 
@@ -41,14 +41,14 @@ permalink: /courses/full/course-list-recent
 
 {%- for item in recent -%}
   {%- assign course = site.data.courses[item] -%}
-  {%- assign png_path = "/img/course-artwork/png/" | append: course.course_id | downcase | append: ".png" -%}
-  {%- assign svg_path = "/img/course-artwork/svg/" | append: course.course_id | downcase | append: ".svg" -%}
+  {%- assign png_path = "/img/course-artwork/png/" | append: course.id | downcase | append: ".png" -%}
+  {%- assign svg_path = "/img/course-artwork/svg/" | append: course.id | downcase | append: ".svg" -%}
 
-  <li class="course-item {% if course.retired_message %}retired-message{% endif %}" data-course-id="{{ course.course_id | remove: 'GYM-' }}">
+  <li class="course-item {% if course.retired_message %}retired-message{% endif %}" data-course-id="{{ course.id | remove: 'GYM-' }}">
     <article class="row">
       <figure class="col-md-4">
         <a href="{{ course.url | prepend: site.gymurl }}">
-          <img src="{{ png_path | prepend: site.url }}" srcset="{{ svg_path | prepend: site.url }}" alt="{{ course.course_id | remove: 'gym-' }} {{ course.title }} cover image." decoding="async" fetchpriority="low">
+          <img src="{{ png_path | prepend: site.url }}" srcset="{{ svg_path | prepend: site.url }}" alt="{{ course.id | remove: 'gym-' }} {{ course.title }} cover image." decoding="async" fetchpriority="low">
         </a>
         <figcaption>
           <a href="{{ course.url | prepend: site.gymurl }}" class="gym-button"><b>Learn More</b></a>
