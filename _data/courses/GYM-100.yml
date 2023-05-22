@@ -2,7 +2,7 @@
 id: GYM-100
 title: "Coding for Designers"
 date: 2019-10-28T00:00:00-04:00
-course_type: full
+type: full
 live: false
 retired_message:
   1: "<strong>This course is retiring on March 25, 2022.</strong> All coursework needs to be completed by that date."

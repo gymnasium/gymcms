@@ -32,7 +32,7 @@ permalink: /courses/gym-shorts/course-list-recent
 {%- assign publish_order = publish_order | uniq | join: ', ' | split: ', ' -%}
 
 {%- for item in publish_order -%}
-  {%- if site.data.courses[item].live == true and site.data.courses[item].course_type == "short" -%}
+  {%- if site.data.courses[item].live == true and site.data.courses[item].type == "short" -%}
     {%- assign recent = recent | push: site.data.courses[item].id -%}
   {%- endif -%}
 {%- endfor -%}

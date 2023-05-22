@@ -2,7 +2,7 @@
 id: GYM-009
 title: "Creating A Drupal 8 Theme"
 date: 2019-10-28T00:00:00-04:00
-course_type: short
+type: short
 live: true
 url: /courses/GYM/009/0/about
 img: /img/course-artwork/png/gym-009.png
