@@ -12,7 +12,7 @@ topic: "Development"
 video_ID: qfDPi1nnHSk
 video_duration: "4:48"
 featured: false
-short_description: "Learn how to add generated content to the links on a web page using CSS in this tutorial."
+description: "Learn how to add generated content to the links on a web page using CSS in this tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"

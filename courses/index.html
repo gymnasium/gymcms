@@ -21,7 +21,7 @@ permalink: /courses/
       <h1>{{ main.main.title }}</h1>
       <p>
         <strong class="block">{{ main.main.tagline }}</strong>
-        {{ main.main.short_description }}
+        {{ main.main.description }}
       </p>
     </div>
   </header>
@@ -61,7 +61,7 @@ permalink: /courses/
                           </h2>
                         </header>
                         <p>
-                          {{ courses[main.full_courses.promo_ID].short_description }}
+                          {{ courses[main.full_courses.promo_ID].description }}
                         </p>
                         <div class="cta">
                           <a class="gym-button natural" href="{{ site.gymurl }}{{ courses[main.full_courses.promo_ID].url }}">Learn More</a>
@@ -125,7 +125,7 @@ permalink: /courses/
                           </h2>
                         </header>
                         <p>
-                          {{ courses[main.gym_shorts.promo_ID].short_description }}
+                          {{ courses[main.gym_shorts.promo_ID].description }}
                         </p>
                         <div class="cta">
                           <a class="gym-button natural" href="{{ site.gymurl }}{{ courses[main.gym_shorts.promo_ID].url }}">Learn More</a>
@@ -189,7 +189,7 @@ permalink: /courses/
                           </h2>
                         </header>
                         <p>
-                          {{ take5[main.take5_tutorials.promo_ID].short_description }}
+                          {{ take5[main.take5_tutorials.promo_ID].description }}
                         </p>
                         <div class="cta">
                           <a class="gym-button natural" href="{{ take5[main.take5_tutorials.promo_ID].title | slugify | prepend: base_path }}">Learn More</a>
@@ -250,7 +250,7 @@ permalink: /courses/
                           </h2>
                         </header>
                         <p>
-                          {{ courses[main.gym_shorts.promo_ID].short_description }}
+                          {{ courses[main.gym_shorts.promo_ID].description }}
                         </p>
                         <div class="cta">
                           <a class="gym-button natural" href="{{ site.gymurl }}/{{ main.collections.promo_ID }}">Learn More</a>

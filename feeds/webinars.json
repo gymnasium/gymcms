@@ -26,7 +26,7 @@ permalink: /feeds/webinars.json
   {%- assign data = site.data.webinars[webinar] -%}
 
   {%- assign title = data.event_title | strip_html -%}
-  {%- assign description = data.short_description | strip_html -%}
+  {%- assign description = data.description | strip_html -%}
   {%- assign decolonized_webinar_title = title | split: ":"  -%}
   {%- assign webinar_title = decolonized_webinar_title[0] -%}
   {%- assign webinar_subtitle = decolonized_webinar_title[1] -%}
@@ -40,7 +40,7 @@ permalink: /feeds/webinars.json
     "slug": "{{ data.permalink | replace: '/webinars/', '' }}",
     "category": "{{ data.content_category }}",
     "date": "{{ data.event_date }}",
-    "description": "{{ data.short_description | strip_html }}",
+    "description": "{{ data.description | strip_html }}",
     "host": "{{ data.host }}",
     "event_ogimage": "/img/social/webinars/{{ data.event_ogimage }}",
     "recording_ogimage": "/img/social/webinars/{{ data.recording_ogimage }}",

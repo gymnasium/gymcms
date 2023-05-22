@@ -12,7 +12,7 @@ topic: "Accessibility"
 video_ID: 9ylBqOnEXos
 video_duration: "4:39"
 featured: false
-short_description: "Learn how to make the headings and lists in your HTML documents more accessible for everyone in this tutorial."
+description: "Learn how to make the headings and lists in your HTML documents more accessible for everyone in this tutorial."
 related_content:
 - label: "Accessibility Tutorials: Headings"
   url: "https://www.w3.org/WAI/tutorials/page-structure/headings/"

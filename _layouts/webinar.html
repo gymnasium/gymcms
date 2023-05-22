@@ -9,7 +9,7 @@
 event_title: {{ webinar.event_title | strip_html }}
 event_guests: {{ webinar.event_guests | strip_html }}
 page_title: {{ webinar.page_title | strip_html }}
-short_description: {{ webinar.short_description  | strip_html }}
+description: {{ webinar.description  | strip_html }}
 event_date: {{ webinar.event_date }}
 event_time: {{ webinar.event_time }}
 event_ogimage: {{ webinar.event_ogimage }}
@@ -65,7 +65,7 @@ video_ID: {{ webinar.video_ID }}
       {% endif %}
     </header>
 
-      <p class="call-out">{{ webinar.short_description }}</p>
+      <p class="call-out">{{ webinar.description }}</p>
 
       {% if webinar.register %}
         {% include webinar-registration-form.html %}

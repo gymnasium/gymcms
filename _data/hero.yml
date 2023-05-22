@@ -14,7 +14,7 @@ embed_source: "youtube"
 # Content
 # Update per live stream, if needed
 title: "Live Stream"
-short_description: "Working within Spatial."
+description: "Working within Spatial."
 byline: "The Gymnasium Team"
 
 # twitch

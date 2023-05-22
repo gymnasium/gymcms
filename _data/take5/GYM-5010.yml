@@ -12,7 +12,7 @@ topic: "UX"
 video_ID: PwuPv7JwzCA
 video_duration: "4:50"
 featured: false
-short_description: "Learn how to silently collaborate with a team in order to get group consensus in this tutorial."
+description: "Learn how to silently collaborate with a team in order to get group consensus in this tutorial."
 related_content:
 - label: "18F Methods instructions on the KJ method"
   url: "https://methods.18f.gov/discover/kj-method/"

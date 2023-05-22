@@ -29,7 +29,7 @@
           <h3 class="all-caps">
             <a href="{{ item.title | slugify | prepend: base_path }}">{{ item.title }}</a>
           </h3>
-          <p>{{ item.short_description }}</p>
+          <p>{{ item.description }}</p>
         </header>
         <div class="cta cta-left">
           <a class="gym-button" href="{{ item.title | slugify | prepend: base_path }}">
