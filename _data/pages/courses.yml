@@ -10,27 +10,27 @@ full_courses:
   hero_text: "Learn new skills in a day or less and earn a certificate."
   hero_CTA: "View All Full Courses"
   promo_label: "Featured"
-  promo_ID: "GYM-107"
+  promo_id: "GYM-107"
 gym_shorts:
   format: "Gym Shorts"
   description: "Gym Shorts include a series of video lessons, a final exam, and a badge if you pass."
   hero_text: "Learn new skills in a few hours and earn a badge."
   hero_CTA: "View All Gym Shorts"
   promo_label: "Featured"
-  promo_ID: "GYM-017"
+  promo_id: "GYM-017"
 take5_tutorials:
   format: "Take 5"
   description: "Take 5 tutorials are 5-minute video tutorials with easy-to-follow transcripts. No homework. No exam. Just free online learning."
   hero_text: "Learn new skills with 5-minute tutorials."
   hero_CTA: "View All Tutorials"
   promo_label: "Featured"
-  promo_ID: "GYM-5052"
+  promo_id: "GYM-5052"
 collections:
   format: "Collections"
   hero_text: "Explore specific topics with free courses, tutorials, resources, and jobs."
   hero_CTA: "View All Collections"
   promo_label: "Featured"
-  promo_ID: "design-systems"
+  promo_id: "design-systems"
 
 # Note: Keep heading "label" max character count at 24 to maintain single-line length
 featured:

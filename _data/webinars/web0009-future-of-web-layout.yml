@@ -1,5 +1,5 @@
 ---
-event_ID: web0009-future-of-web-layout
+event_id: web0009-future-of-web-layout
 title: "The Future of <span class=\"nowrap\">Web Layout</span>"
 event_guests: "with Rachel Andrew <span class=\"nowrap\">and Jason Pamental</span>"
 description: "A webinar discussing new advances in web layout techniques that will impact web designers and developers in the near future."
@@ -17,9 +17,9 @@ content_category: design
 landing: true
 register: false
 video: true
-webinar_ID: 6418447894000198914
+webinar_id: 6418447894000198914
 webinar_question_key: 85618975
-video_ID: LUMkgn_xtlg
+video_id: LUMkgn_xtlg
 ---
 
 <p>

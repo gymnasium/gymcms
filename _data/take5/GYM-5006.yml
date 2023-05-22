@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5006
+course_id: GYM-5006
 title: "Leading a Card Sorting Session"
 date: 2019-11-18T00:00:00-04:00
 course_type: take5
@@ -9,7 +9,7 @@ live: true
 instructor: "Heather O’Neill"
 instructor_bio: "CEO of Pixels for Humans"
 topic: "UX"
-video_ID: FfQ55Q15xUA
+video_id: FfQ55Q15xUA
 video_duration: "4:47"
 featured: false
 description: "Learn how to run a card sorting session in order to better understand your users’ mental models in this tutorial."

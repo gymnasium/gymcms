@@ -270,7 +270,7 @@ function exam() {
 
   let previous_score;
 
-  let COURSE_ID;
+  let COURSE_id;
 
   // this helper function gets a ton of information about the score for this particular problem
   // based on information embedded on this page
@@ -280,8 +280,8 @@ function exam() {
       GYM_SHORT: 'GYM_SHORT',
     };
 
-    COURSE_ID = parseInt($('#__course_number__').text(), 10);
-    const COURSE_TYPE = COURSE_ID >= 100 ? COURSE_TYPES.FULL_COURSE : COURSE_TYPES.GYM_SHORT;
+    COURSE_id = parseInt($('#__course_number__').text(), 10);
+    const COURSE_TYPE = COURSE_id >= 100 ? COURSE_TYPES.FULL_COURSE : COURSE_TYPES.GYM_SHORT;
     let PASSING_SCORE = 85;
 
     if (COURSE_TYPE === COURSE_TYPES.FULL_COURSE) {
@@ -340,7 +340,7 @@ function exam() {
 
     // we have a score, let's do stuff
     if (score >= passingScore) {
-      // previous_score = getPrevScore(COURSE_ID);
+      // previous_score = getPrevScore(COURSE_id);
 
       // if (score > previous_score && attempts_remaining > 0) {
       //   console.log('[gym] new high score! ', score, '\nprevious score: ', previous_score);
@@ -394,9 +394,9 @@ function exam() {
 
     let problem_id = document.getElementById('exam-problem').getAttribute('data-id');
 
-    COURSE_ID = parseInt(document.getElementById('__course_number__').innerText, 10);
+    COURSE_id = parseInt(document.getElementById('__course_number__').innerText, 10);
 
-    // previous_score = getPrevScore(COURSE_ID);
+    // previous_score = getPrevScore(COURSE_id);
 
     // console.log('[gym] exam page | previous score: ', previous_score);
 

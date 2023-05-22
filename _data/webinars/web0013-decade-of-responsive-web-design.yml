@@ -1,5 +1,5 @@
 ---
-event_ID: web0013-decade-of-responsive-web-design
+event_id: web0013-decade-of-responsive-web-design
 title: "A Decade of Responsive <span class=\"nowrap\">Web Design</span>"
 event_guests: "with Ethan Marcotte"
 description: "Join us for a webinar with Ethan Marcotte as we celebrate the past decade of his groundbreaking work. We’ll be discussing inclusivity, accessibility, and all things responsive web design."
@@ -15,9 +15,9 @@ content_category: design
 landing: true
 register: false
 video: true
-webinar_ID: 4094344214168045584
+webinar_id: 4094344214168045584
 webinar_question_key: 152948572
-video_ID: FzVEz761JgA
+video_id: FzVEz761JgA
 resources:
   - label: "A List Apart: Responsive Web Design"
     url: "https://alistapart.com/article/responsive-web-design/"

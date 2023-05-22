@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5008
+course_id: GYM-5008
 title: "Writing Effective Survey Questions"
 date: 2019-11-20T00:00:00-04:00
 course_type: take5
@@ -9,7 +9,7 @@ live: true
 instructor: "Heather O’Neill"
 instructor_bio: "CEO of Pixels for Humans"
 topic: "UX"
-video_ID: eE0rJNHvAzs
+video_id: eE0rJNHvAzs
 video_duration: "3:48"
 featured: false
 description: "Learn how to write survey questions to gather high-level information about your market in this tutorial."

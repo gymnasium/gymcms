@@ -1,6 +1,6 @@
 ---
 layout: take5-raw
-course_ID: GYM-5017
+course_id: GYM-5017
 permalink: /courses/take5/gym-5017
 ---
 

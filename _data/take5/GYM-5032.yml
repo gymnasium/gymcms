@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5032
+course_id: GYM-5032
 title: "Introduction to Screen Readers Using VoiceOver"
 date: 2020-06-22T00:00:00-04:00
 course_type: take5
@@ -9,7 +9,7 @@ live: true
 instructor: "Ethan Marcotte"
 instructor_bio: "Partner at Autogram"
 topic: "Accessibility"
-video_ID: Y2vjyDxkIPs
+video_id: Y2vjyDxkIPs
 video_duration: "4:59"
 featured: false
 description: "Learn how to get started with VoiceOver, Apple’s built-in screen reader, to read and navigate web pages in this tutorial."

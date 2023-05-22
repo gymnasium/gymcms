@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5033
+course_id: GYM-5033
 title: "Designing Beautiful Focus States"
 date: 2020-06-23T00:00:00-04:00
 course_type: take5
@@ -11,7 +11,7 @@ instructor_bio: "Partner at Autogram"
 topic: "Development"
 subtopics:
   - label: "Accessibility"
-video_ID: mmXdKhB7Ueg
+video_id: mmXdKhB7Ueg
 video_duration: "4:50"
 featured: false
 description: "Learn how to design beautiful and accessible link focus states in this tutorial."

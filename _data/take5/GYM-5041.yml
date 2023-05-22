@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5041
+course_id: GYM-5041
 title: "Writing Effective and Accessible Alt Text"
 date: 2020-10-06T00:00:00-04:00
 course_type: take5
@@ -9,7 +9,7 @@ live: true
 instructor: "Clarissa Peterson"
 instructor_bio: "Strategy Director at Forum One"
 topic: "Accessibility"
-video_ID: iyzPK-Mz_CY
+video_id: iyzPK-Mz_CY
 video_duration: "4:13"
 featured: false
 description: "Learn how to write alt text for more complex image use, such as charts, graphs, and image links in this tutorial."

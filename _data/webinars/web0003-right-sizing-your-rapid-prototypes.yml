@@ -1,5 +1,5 @@
 ---
-event_ID: web0003-right-sizing-your-rapid-prototypes
+event_id: web0003-right-sizing-your-rapid-prototypes
 title: "Right-Sizing Your Rapid Prototypes for Web & Mobile"
 event_guests: "with Erin Young and <span class=\"nowrap\">Tracy Singleton</span>"
 description: "A conversation about choosing the appropriate fidelity of breadth, depth, and content for rapid prototyping with special guests Erin Young and Tracy Singleton."
@@ -16,6 +16,6 @@ content_category: ux
 landing: true
 register: false
 video: true
-webinar_ID:
-video_ID: m3az0D8mUV4
+webinar_id:
+video_id: m3az0D8mUV4
 ---

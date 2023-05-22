@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5005
+course_id: GYM-5005
 title: "Creating a Duotone with CSS"
 date: 2019-11-01T00:00:00-04:00
 course_type: take5
@@ -9,7 +9,7 @@ live: true
 instructor: "Jeremy Osborn"
 instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "Development"
-video_ID: _12cCrECCdY
+video_id: _12cCrECCdY
 video_duration: "4:59"
 featured: false
 description: "Learn how to turn a grayscale image into a duotone using CSS blend modes in this hands-on tutorial."

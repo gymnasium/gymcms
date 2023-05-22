@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5044
+course_id: GYM-5044
 title: "Designing Accessible Forms for Everyone"
 date: 2020-10-27T00:00:00-04:00
 course_type: take5
@@ -11,7 +11,7 @@ instructor_bio: "Strategy Director at Forum One"
 topic: "Development"
 subtopics:
   - label: "Accessibility"
-video_ID: 72nrJJAf_Ak
+video_id: 72nrJJAf_Ak
 video_duration: "4:43"
 featured: false
 description: "Learn how to make sure everyone can complete the forms on your website and learn how to properly use the label element in this tutorial."

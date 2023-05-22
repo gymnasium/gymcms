@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5045
+course_id: GYM-5045
 title: "Improving Form Usability and Accessibility"
 date: 2020-11-03T00:00:00-04:00
 course_type: take5
@@ -12,7 +12,7 @@ topic: "Development"
 subtopics:
   - label: "Accessibility"
   - label: "UX"
-video_ID: m3M7QbDE3Lg
+video_id: m3M7QbDE3Lg
 video_duration: "4:33"
 featured: false
 description: "Forms are a frequent source of accessibility problems on websites. Learn some tips and tricks on how to make your web forms easier to use and understand in this tutorial."
