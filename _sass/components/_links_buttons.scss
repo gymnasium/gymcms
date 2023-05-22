@@ -35,6 +35,13 @@ a:hover {
     border-bottom-width: 2px;
     margin-bottom: -2px;
   }
+
+  // Remove descender spacing (fix inherited spacing from above link style)
+
+  a > img[src*="course-artwork"] {
+    margin-bottom: -0.125rem;
+  }
+
 }
 
 a:focus {
