@@ -36,7 +36,7 @@ layout: raw
     {%- for webinar in webinars_descending_date -%}
       {%- assign item = site.data.webinars[webinar] -%}
 
-      {%- assign complete_webinar_title = item.event_title | strip_html -%}
+      {%- assign complete_webinar_title = item.title | strip_html -%}
       {%- assign decolonized_webinar_title = complete_webinar_title | split: ":"  -%}
       {%- assign webinar_title = decolonized_webinar_title[0] -%}
       {%- assign webinar_subtitle = decolonized_webinar_title[1] -%}

@@ -25,7 +25,7 @@ permalink: /feeds/webinars.json
 {%- for webinar in webinars_descending_date -%}
   {%- assign data = site.data.webinars[webinar] -%}
 
-  {%- assign title = data.event_title | strip_html -%}
+  {%- assign title = data.title | strip_html -%}
   {%- assign description = data.description | strip_html -%}
   {%- assign decolonized_webinar_title = title | split: ":"  -%}
   {%- assign webinar_title = decolonized_webinar_title[0] -%}

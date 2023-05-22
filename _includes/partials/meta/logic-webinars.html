@@ -5,14 +5,14 @@ Set up meta tags for a webinar meta include
 {%- assign og_description = event.description | strip_html -%}
 {%- if event.event_ID == "web0005-state-of-responsive-web-design" -%}
     {%- assign og_url = "https://thegymnasium.com/webinars/state-of-responsive-web-design" -%}
-    {%- assign og_title = event.event_title -%}
+    {%- assign og_title = event.title -%}
 
 {%- else -%}
 
     {%- assign path = event.event_ID -%}
     {%- assign path =  path | slice: 8,path.size   -%}
     {%- assign og_url = path | prepend: "https://thegymnasium.com/webinars/" -%}
-    {%- assign og_title = event.event_title -%}
+    {%- assign og_title = event.title -%}
 {%- endif -%}
 
 {%- if event.register == true -%}
