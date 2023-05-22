@@ -1,6 +1,6 @@
 ---
 layout: meta
-course_ID: GYM-100
+course_id: GYM-100
 permalink: /courses/full/gym-100/meta/
 css: [/css/forum-hacks.css]
 ---

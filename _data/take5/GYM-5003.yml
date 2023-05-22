@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5003
+course_id: GYM-5003
 title: "Adding a CSS Gradient Overlay to an Image"
 date: 2019-10-30T00:00:00-04:00
 course_type: take5
@@ -9,7 +9,7 @@ live: true
 instructor: "Jeremy Osborn"
 instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "Development"
-video_ID: SaO2hO-4yEY
+video_id: SaO2hO-4yEY
 video_duration: "4:13"
 featured: false
 description: "Learn how to add a gradient overlay to an image more efficiently using only CSS in this hands-on tutorial."

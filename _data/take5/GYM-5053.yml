@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5053
+course_id: GYM-5053
 title: "Crafting a Concise About Page"
 date: 2022-08-24T00:00:00-04:00
 course_type: take5
@@ -11,7 +11,7 @@ instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "Career Skills"
 subtopics:
   - label: "Portfolio Development"
-video_ID: DgungAdVLPA
+video_id: DgungAdVLPA
 video_duration: "4:52"
 featured: false
 description: "In this tutorial, you’ll learn three ways to create a compelling and unique About page for your online portfolio."

@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5012
+course_id: GYM-5012
 title: "Prototyping in the Browser with CSS Grid Layout"
 date: 2019-11-05T00:00:00-04:00
 course_type: take5
@@ -12,7 +12,7 @@ topic: "Development"
 subtopics:
 subtopics:
   - label: "Prototyping"
-video_ID: IqAizKPCC9U
+video_id: IqAizKPCC9U
 video_duration: "4:59"
 featured: false
 description: "Learn the benefits of prototyping web page layouts using CSS Grid Layout in this hands-on tutorial."

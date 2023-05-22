@@ -22,7 +22,7 @@ This YAML file defines the key paramters for a Take 5.
 
 ```yaml
 ---
-course_ID: GYM-5001                         # Unique course ID
+course_id: GYM-5001                         # Unique course ID
 title: "Making a CSS Parallax Effect"       # MUST be quoted
 date: 2019-10-28T00:00:00-04:00             # Publish date — MUST be in this format
 course_type: take5                          # This is required
@@ -31,7 +31,7 @@ poster_art: /img/take5/posters/gym-5001.jpg # Path to poster image (may be depre
 live: true                                  # Only set to live when ready to publish!
 instructor: "Jeremy Osborn"                 # MUST be quoted
 topic: "Design & Development"           # MUST be quoted
-video_ID: zRNUPU2dujU                       # YouTube video ID
+video_id: zRNUPU2dujU                       # YouTube video ID
 video_duration: "4:59"                      # Must be quoted
 featured: true                              # Toggle for display in catalog and hero
 description: "Learn how to create a scrolling background effect using CSS in this hands-on tutorial with Jeremy Osborn, Academic Director of Aquent Gymnasium."
@@ -57,7 +57,7 @@ related_content:
 
 ```yaml
 ---
-course_ID: GYM-5000
+course_id: GYM-5000
 title: 
 date: 2019-11-15T00:00:00-04:00
 course_type: take5
@@ -66,7 +66,7 @@ poster_art: /img/take5/posters/gym-5000.jpg
 live: false
 instructor: 
 topic: 
-video_ID: 
+video_id: 
 video_duration: "0:00"
 featured: false
 description: 
@@ -139,7 +139,7 @@ The Take 5 stub page contains frontmatter and the full text from the video trans
 ```yaml
 ---
 layout: take5-raw
-course_ID: GYM-5001
+course_id: GYM-5001
 permalink: /courses/take5/gym-5001
 ---
 
@@ -158,7 +158,7 @@ The meta include stub file only contains frontmatter.
 ```yaml
 ---
 layout: meta
-course_ID: GYM-5001
+course_id: GYM-5001
 permalink: /courses/take5/gym-5001/meta/
 ---
 ```

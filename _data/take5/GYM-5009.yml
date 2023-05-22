@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5009
+course_id: GYM-5009
 title: "Leading Your First Usability Test"
 date: 2019-11-21T00:00:00-04:00
 course_type: take5
@@ -9,7 +9,7 @@ live: true
 instructor: "Heather O’Neill"
 instructor_bio: "CEO of Pixels for Humans"
 topic: "UX"
-video_ID: I1uO3rwcG8U
+video_id: I1uO3rwcG8U
 video_duration: "4:35"
 featured: false
 description: "Learn how to lead a usability test in order to see how people interact with a product in this tutorial."

@@ -30,7 +30,7 @@ such that the value can be defined later than this assignment (file load order).
 (function() {
     'use strict';
     var $activeSection,
-        CSS_ACTIVE_SECTION, CSS_IDASH_SECTION, CSS_INSTRUCTOR_CONTENT, CSS_INSTRUCTOR_NAV, HASH_LINK_PREFIX,
+        CSS_ACTIVE_SECTION, CSS_idASH_SECTION, CSS_INSTRUCTOR_CONTENT, CSS_INSTRUCTOR_NAV, HASH_LINK_PREFIX,
         SafeWaiter, plantTimeout, sectionsHaveLoaded, setupInstructorDashboard,
         setupInstructorDashboardSections;
 
@@ -42,7 +42,7 @@ such that the value can be defined later than this assignment (file load order).
 
     CSS_ACTIVE_SECTION = 'active-section';
 
-    CSS_IDASH_SECTION = 'idash-section';
+    CSS_idASH_SECTION = 'idash-section';
 
     CSS_INSTRUCTOR_NAV = 'instructor-nav';
 
@@ -110,7 +110,7 @@ such that the value can be defined later than this assignment (file load order).
                 e.preventDefault();
                 idashContent.find('.' + CSS_INSTRUCTOR_NAV + ' li').children().removeClass(CSS_ACTIVE_SECTION);
                 idashContent.find('.' + CSS_INSTRUCTOR_NAV + ' li').children().attr('aria-pressed', 'false');
-                idashContent.find('.' + CSS_IDASH_SECTION).removeClass(CSS_ACTIVE_SECTION);
+                idashContent.find('.' + CSS_idASH_SECTION).removeClass(CSS_ACTIVE_SECTION);
                 itemSectionName = $(this).data('section');
                 $section = idashContent.find('#' + itemSectionName);
                 $(this).addClass(CSS_ACTIVE_SECTION);
@@ -159,53 +159,53 @@ such that the value can be defined later than this assignment (file load order).
         sectionsToInitialize = [
             {
                 constructor: window.InstructorDashboard.sections.CourseInfo,
-                $element: idashContent.find('.' + CSS_IDASH_SECTION + '#course_info')
+                $element: idashContent.find('.' + CSS_idASH_SECTION + '#course_info')
             }, {
                 constructor: window.InstructorDashboard.sections.DataDownload,
-                $element: idashContent.find('.' + CSS_IDASH_SECTION + '#data_download')
+                $element: idashContent.find('.' + CSS_idASH_SECTION + '#data_download')
             }, {
                 constructor: window.InstructorDashboard.sections.ECommerce,
-                $element: idashContent.find('.' + CSS_IDASH_SECTION + '#e-commerce')
+                $element: idashContent.find('.' + CSS_idASH_SECTION + '#e-commerce')
             }, {
                 constructor: window.InstructorDashboard.sections.Membership,
-                $element: idashContent.find('.' + CSS_IDASH_SECTION + '#membership')
+                $element: idashContent.find('.' + CSS_idASH_SECTION + '#membership')
             }, {
                 constructor: window.InstructorDashboard.sections.StudentAdmin,
-                $element: idashContent.find('.' + CSS_IDASH_SECTION + '#student_admin')
+                $element: idashContent.find('.' + CSS_idASH_SECTION + '#student_admin')
             }, {
                 constructor: window.InstructorDashboard.sections.Extensions,
-                $element: idashContent.find('.' + CSS_IDASH_SECTION + '#extensions')
+                $element: idashContent.find('.' + CSS_idASH_SECTION + '#extensions')
             }, {
                 constructor: window.InstructorDashboard.sections.Email,
-                $element: idashContent.find('.' + CSS_IDASH_SECTION + '#send_email')
+                $element: idashContent.find('.' + CSS_idASH_SECTION + '#send_email')
             }, {
                 constructor: window.InstructorDashboard.sections.InstructorAnalytics,
-                $element: idashContent.find('.' + CSS_IDASH_SECTION + '#instructor_analytics')
+                $element: idashContent.find('.' + CSS_idASH_SECTION + '#instructor_analytics')
             }, {
                 constructor: window.InstructorDashboard.sections.Metrics,
-                $element: idashContent.find('.' + CSS_IDASH_SECTION + '#metrics')
+                $element: idashContent.find('.' + CSS_idASH_SECTION + '#metrics')
             }, {
                 constructor: window.InstructorDashboard.sections.CohortManagement,
-                $element: idashContent.find('.' + CSS_IDASH_SECTION + '#cohort_management')
+                $element: idashContent.find('.' + CSS_idASH_SECTION + '#cohort_management')
             }, {
                 constructor: window.InstructorDashboard.sections.DiscussionsManagement,
-                $element: idashContent.find('.' + CSS_IDASH_SECTION + '#discussions_management')
+                $element: idashContent.find('.' + CSS_idASH_SECTION + '#discussions_management')
             }, {
                 constructor: window.InstructorDashboard.sections.Certificates,
-                $element: idashContent.find('.' + CSS_IDASH_SECTION + '#certificates')
+                $element: idashContent.find('.' + CSS_idASH_SECTION + '#certificates')
             }, {
                 constructor: window.InstructorDashboard.sections.OpenResponseAssessment,
-                $element: idashContent.find('.' + CSS_IDASH_SECTION + '#open_response_assessment')
+                $element: idashContent.find('.' + CSS_idASH_SECTION + '#open_response_assessment')
             }
         ];
         if (edx.instructor_dashboard.proctoring !== void 0) {
             sectionsToInitialize = sectionsToInitialize.concat([
                 {
                     constructor: edx.instructor_dashboard.proctoring.ProctoredExamAllowanceView,
-                    $element: idashContent.find('.' + CSS_IDASH_SECTION + '#special_exams')
+                    $element: idashContent.find('.' + CSS_idASH_SECTION + '#special_exams')
                 }, {
                     constructor: edx.instructor_dashboard.proctoring.ProctoredExamAttemptView,
-                    $element: idashContent.find('.' + CSS_IDASH_SECTION + '#special_exams')
+                    $element: idashContent.find('.' + CSS_idASH_SECTION + '#special_exams')
                 }
             ]);
         }

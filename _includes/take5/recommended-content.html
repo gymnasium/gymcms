@@ -41,8 +41,8 @@ TODO: rather than hard-coding values here, a more flexible method would be to cr
 {%- endif -%}
 
 {%- assign recommendations = ""  | split: ", " -%}
-{%- assign this_tutorial = page.course_ID -%}
-{%- assign this_topic = site.data.take5.[page.course_ID].topic -%}
+{%- assign this_tutorial = page.course_id -%}
+{%- assign this_topic = site.data.take5.[page.course_id].topic -%}
 
 {%- assign sorted_catalog = site.data.take5 | sort -%}
 
@@ -52,8 +52,8 @@ TODO: rather than hard-coding values here, a more flexible method would be to cr
 
 {%- if item.topic == this_topic -%}
   {%- if item.live == true -%}
-    {%- if item.course_ID != this_tutorial -%}
-      {%- assign recommendations = recommendations | push: item.course_ID -%}
+    {%- if item.course_id != this_tutorial -%}
+      {%- assign recommendations = recommendations | push: item.course_id -%}
     {%- endif -%}
   {%- endif -%}
 {%- endif -%}
@@ -149,7 +149,7 @@ TODO: rather than hard-coding values here, a more flexible method would be to cr
             <section class="course">
               <div class="artwork">
                 <a href="{{ course1.url }}">
-                  <img alt="{{ course1.title }}" src="{{ site.url }}{{ course1.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ course1.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
+                  <img alt="{{ course1.title }}" src="{{ site.url }}{{ course1.course_id | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ course1.course_id | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
                 </a>
               </div>
               <header>
@@ -164,7 +164,7 @@ TODO: rather than hard-coding values here, a more flexible method would be to cr
             <section class="course">
               <div class="artwork">
                 <a href="{{ course2.url }}">
-                  <img alt="{{ course2.title }}" src="{{ site.url }}{{ course2.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ course2.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
+                  <img alt="{{ course2.title }}" src="{{ site.url }}{{ course2.course_id | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ course2.course_id | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
                 </a>
               </div>
               <header>
@@ -179,7 +179,7 @@ TODO: rather than hard-coding values here, a more flexible method would be to cr
             <section class="course">
               <div class="artwork">
                 <a href="{{ course3.url }}">
-                  <img alt="{{ course3.title }}" src="{{ site.url }}{{ course3.course_ID | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ course3.course_ID | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
+                  <img alt="{{ course3.title }}" src="{{ site.url }}{{ course3.course_id | downcase | prepend: '/img/course-artwork/png/' | append: '.png' }}" srcset="{{ site.url }}{{ course3.course_id | downcase | prepend: '/img/course-artwork/svg/' | append: '.svg' }}">
                 </a>
               </div>
               <header>

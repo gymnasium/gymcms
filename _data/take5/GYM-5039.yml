@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5039
+course_id: GYM-5039
 title: "Designing Accessible Data Tables"
 date: 2020-09-22T00:00:00-04:00
 course_type: take5
@@ -9,7 +9,7 @@ live: true
 instructor: "Clarissa Peterson"
 instructor_bio: "Strategy Director at Forum One"
 topic: "Accessibility"
-video_ID: npto50RJpDc
+video_id: npto50RJpDc
 video_duration: "4:28"
 featured: false
 description: "Learn how to make the data tables in your HTML documents more accessible for everyone in this tutorial."

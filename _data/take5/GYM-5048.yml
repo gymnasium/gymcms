@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5048
+course_id: GYM-5048
 title: "Using Motion and Web Animation Responsibly"
 date: 2020-11-24T00:00:00-04:00
 course_type: take5
@@ -9,7 +9,7 @@ live: true
 instructor: "Clarissa Peterson"
 instructor_bio: "Strategy Director at Forum One"
 topic: "Accessibility"
-video_ID: Njn6CQwiafQ
+video_id: Njn6CQwiafQ
 video_duration: "3:41"
 featured: false
 description: "You don’t have to forgo animation entirely to accommodate users with disabilities. Learn how to ensure that animated elements won’t compromise the accessibility of your website in this tutorial."
