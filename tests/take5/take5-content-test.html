@@ -147,8 +147,8 @@ td.success {
     {% endif %}
 
     <!-- Poster Art -->
-    {% if item.poster_art == null %}<td class="error">MISSING VALUE</td>{% else %}
-    <td><a href="{{item.poster_art}}" target="_blank">true</a></td>
+    {% if item.img == null %}<td class="error">MISSING VALUE</td>{% else %}
+    <td><a href="{{item.img}}" target="_blank">true</a></td>
     {% endif %}
 </tr>
 {% endfor %}

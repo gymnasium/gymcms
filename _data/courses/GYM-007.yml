@@ -5,7 +5,7 @@ date: 2019-10-28T00:00:00-04:00
 course_type: short
 live: true
 url: /courses/GYM/007/0/about
-poster_art: /img/course-artwork/png/gym-007.png
+img: /img/course-artwork/png/gym-007.png
 topic: "Development"
 description: "Learn some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes."
 instructor: jkramer

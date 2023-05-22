@@ -5,7 +5,7 @@ date: 2019-10-28T00:00:00-04:00
 course_type: full
 live: true
 url: /courses/GYM/103/0/about
-poster_art: /img/course-artwork/png/gym-103.png
+img: /img/course-artwork/png/gym-103.png
 topic: "UX"
 description: "Learn how to apply user-centered design principles to improve your website and mobile app design. A must-take course for anyone working in design and development."
 instructor: jwebb

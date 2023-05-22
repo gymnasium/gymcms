@@ -77,7 +77,7 @@ css: [/css/take5.css]
                 {%- assign featured_instructor = site.data.take5[item].instructor -%}
                 {%- assign featured_instructor_bio = site.data.take5[item].instructor_bio -%}
                 {%- assign featured_topic = site.data.take5[item].topic -%}
-                {%- assign featured_poster_art = site.data.take5[item].poster_art -%}
+                {%- assign featured_img = site.data.take5[item].img -%}
                 {%- assign featured_video_duration = site.data.take5[item].video_duration -%}
             {%- else -%}
                 {%- comment -%} Not featured, but live? Add the id to the RECENT list {%- endcomment -%}
@@ -121,7 +121,7 @@ css: [/css/take5.css]
                 <article class="tutorial">
                   <div class="artwork" data-duration="{{ featured_video_duration }}">
                     <a href="{{ featured_url }}" title="Watch Video">
-                      <img alt="{{ featured_description }}" src="{{ site.url }}{{ featured_poster_art }}?{{ site.time | date:'%s' }}" width="1280" height="720" decoding="async" fetchpriority="high">
+                      <img alt="{{ featured_description }}" src="{{ site.url }}{{ featured_img }}?{{ site.time | date:'%s' }}" width="1280" height="720" decoding="async" fetchpriority="high">
                     </a>
                   </div>
                   <header>

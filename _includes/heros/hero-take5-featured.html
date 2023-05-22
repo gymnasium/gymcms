@@ -8,7 +8,7 @@
         {%- assign hero_topic = item.topic -%}
         {%- assign hero_title = item.title -%}
         {%- assign hero_instructor = item.instructor | prepend: "with " -%}
-        {%- assign hero_art = item.poster_art | replace: ".jpg", "-hero.jpg" -%}
+        {%- assign hero_art = item.img | replace: ".jpg", "-hero.jpg" -%}
         {%- assign hero_utm = "" -%}
         {%- assign hero_link = item.title | downcase | slugify | append: hero_utm | prepend: base_path -%}
     {%- endif -%}

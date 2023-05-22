@@ -60,7 +60,7 @@ css: [/css/take5.css]
             {%- assign featured_url = site.data.take5[item].title | slugify | prepend: base_path -%}
             {%- assign featured_instructor = site.data.take5[item].instructor -%}
             {%- assign featured_topic = site.data.take5[item].topic -%}
-            {%- assign featured_poster_art = site.data.take5[item].poster_art -%}
+            {%- assign featured_img = site.data.take5[item].img -%}
             {%- assign featured_video_duration = site.data.take5[item].video_duration -%}
         {%- else -%}
             {%- comment -%} Not featured, but live? Add the id to the RECENT list {%- endcomment -%}
@@ -84,7 +84,7 @@ css: [/css/take5.css]
               </header>
               <div class="tutorial">
                 <div class="artwork" data-duration="{{ featured_video_duration }}">
-                  <a href="{{ featured_url }}" title="Watch Video"><img alt="{{ featured_description }}" src="{{ site.url }}{{ featured_poster_art }}"></a>
+                  <a href="{{ featured_url }}" title="Watch Video"><img alt="{{ featured_description }}" src="{{ site.url }}{{ featured_img }}"></a>
                 </div><!-- .artwork -->
                 <header>
                   <h2 class="all-caps subhead-topic">{{ featured_topic }}</h2>
@@ -148,7 +148,7 @@ css: [/css/take5.css]
                 <article class="tutorial">
                   <div class="artwork" data-duration="{{ recent_take5.video_duration }}">
                     <a href="{{ recent_take5.title | slugify | prepend: base_path }}" title="Watch Video">
-                    <img alt="{{ recent_take5.title }}" src="{{ site.url }}{{ recent_take5.poster_art }}"></a>
+                    <img alt="{{ recent_take5.title }}" src="{{ site.url }}{{ recent_take5.img }}"></a>
                   </div><!-- .artwork -->
                   <header>
                     <h4 class="all-caps subhead-topic">{{ recent_take5.topic }}</h4>
