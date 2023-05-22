@@ -8,8 +8,8 @@
     <ul class="list-featured-courses">
 
     {%- for featured in featured_courses -%}
-    {%- assign artwork_png = site.data.courses[featured].course_id | downcase | append: '.png' -%}
-    {%- assign artwork_svg = site.data.courses[featured].course_id | downcase | append: '.svg' -%}
+    {%- assign artwork_png = site.data.courses[featured].id | downcase | append: '.png' -%}
+    {%- assign artwork_svg = site.data.courses[featured].id | downcase | append: '.svg' -%}
     {%- assign artwork_path_png = site.url | append: "/img/course-artwork/png/"-%}
     {%- assign artwork_path_svg = site.url | append: "/img/course-artwork/svg/"-%}
 

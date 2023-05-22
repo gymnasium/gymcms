@@ -1,5 +1,5 @@
 ---
-event_id: web0008-rethinking-full-stack
+id: web0008-rethinking-full-stack
 permalink: /webinars/rethinking-full-stack/
 layout: webinar
 ---

@@ -2,7 +2,7 @@
 {%- for hash in list -%}
   {%- assign data = hash[1] | jsonify -%}
   {%- assign data = data | replace: 'description', 'description' -%}
-  {%- assign data = data | replace: 'course_id', 'id' -%}
+  {%- assign data = data | replace: 'id', 'id' -%}
   {%- assign data = data | replace: 'course_type', 'type' -%}
   {%- assign data = data | replace: 'poster_art', 'img' -%}
   {%- assign data = data | replace: 'video_id', 'video_id' -%}

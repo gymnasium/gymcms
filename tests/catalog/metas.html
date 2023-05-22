@@ -37,7 +37,7 @@ Combine all course types into one array
 
 {%- for item in catalog -%}
 
-    {%- assign id = item.course_id -%}
+    {%- assign id = item.id -%}
 
     {%- assign course_prefix = id | remove: "GYM-" | slice: 0, 2 -%}
     {% comment %} Exceptions for Take5™ tutorials {% endcomment %}

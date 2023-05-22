@@ -1,5 +1,5 @@
 ---
 layout: meta
-course_id: GYM-009
+id: GYM-009
 permalink: /courses/gym-shorts/gym-009/meta/
 ---

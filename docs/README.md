@@ -22,7 +22,7 @@ This YAML file defines the key paramters for a Take 5.
 
 ```yaml
 ---
-course_id: GYM-5001                         # Unique course ID
+id: GYM-5001                         # Unique course ID
 title: "Making a CSS Parallax Effect"       # MUST be quoted
 date: 2019-10-28T00:00:00-04:00             # Publish date — MUST be in this format
 course_type: take5                          # This is required
@@ -57,7 +57,7 @@ related_content:
 
 ```yaml
 ---
-course_id: GYM-5000
+id: GYM-5000
 title: 
 date: 2019-11-15T00:00:00-04:00
 course_type: take5
@@ -139,7 +139,7 @@ The Take 5 stub page contains frontmatter and the full text from the video trans
 ```yaml
 ---
 layout: take5-raw
-course_id: GYM-5001
+id: GYM-5001
 permalink: /courses/take5/gym-5001
 ---
 
@@ -158,7 +158,7 @@ The meta include stub file only contains frontmatter.
 ```yaml
 ---
 layout: meta
-course_id: GYM-5001
+id: GYM-5001
 permalink: /courses/take5/gym-5001/meta/
 ---
 ```

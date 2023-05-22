@@ -9,7 +9,7 @@ permalink: /feeds/webinars.json
 
 {% for webinar_list in sorted_webinars %}
 {% assign webinar = webinar_list[1] %}
-{%- assign webinars_ascending_date = webinars_ascending_date | push: webinar.event_id -%}
+{%- assign webinars_ascending_date = webinars_ascending_date | push: webinar.id -%}
 {% endfor %}
 
 {%- assign webinars_descending_date = webinars_ascending_date | reverse -%}
@@ -36,7 +36,7 @@ permalink: /feeds/webinars.json
   {%- assign webinar_url = data.permalink | prepend: site.gymurl -%}
 
   {
-    "id": "{{ data.event_id | slice: 0,7 }}",
+    "id": "{{ data.id | slice: 0,7 }}",
     "slug": "{{ data.permalink | replace: '/webinars/', '' }}",
     "category": "{{ data.content_category }}",
     "date": "{{ data.event_date }}",

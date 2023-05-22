@@ -61,7 +61,7 @@ td.success {
 
 <tr>
     <!-- Course ID -->
-    <td>{{ item.course_id }}</td>
+    <td>{{ item.id }}</td>
     
     <!-- Title -->
     {% if item.title ==null %}
@@ -74,7 +74,7 @@ td.success {
     <td><pre><a href="{{ item.url | absolute_url }}">{{ item.url | absolute_url }}</a></pre></td>
     
     <!-- Meta tag partial -->
-    {% assign meta_url = item.course_id | prepend: '/' | prepend: base_path | append: '/meta/' | downcase %}
+    {% assign meta_url = item.id | prepend: '/' | prepend: base_path | append: '/meta/' | downcase %}
     <td>
         <a target="_blank" href="{{ meta_url | absolute_url }}"><pre>{{ meta_url | absolute_url }}</pre></a>
     </td>
