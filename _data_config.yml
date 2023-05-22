@@ -1,6 +1,6 @@
 # Setup
 title: Gymnasium Data Feeds
-url: https://data.thegymcms.com
+url: https://data--thegymcms.netlify.app #https://data.thegymcms.com
 gymurl: https://thegymnasium.com
 aqassetsurl: https://assets.aquent.com
 timezone: America/New_York
