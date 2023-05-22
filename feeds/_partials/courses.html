@@ -4,7 +4,7 @@
   {%- assign data = data | replace: 'description', 'description' -%}
   {%- assign data = data | replace: 'id', 'id' -%}
   {%- assign data = data | replace: 'course_type', 'type' -%}
-  {%- assign data = data | replace: 'poster_art', 'img' -%}
+  {%- assign data = data | replace: 'img', 'img' -%}
   {{data}}
   {% unless forloop.last %},{% endunless %}
 {%- endfor -%}

@@ -27,7 +27,7 @@ title: "Making a CSS Parallax Effect"       # MUST be quoted
 date: 2019-10-28T00:00:00-04:00             # Publish date — MUST be in this format
 course_type: take5                          # This is required
 url: /courses/take5/GYM-5001/                # Only change the course ID!
-poster_art: /img/take5/posters/gym-5001.jpg # Path to poster image (may be deprecated)
+img: /img/take5/posters/gym-5001.jpg # Path to poster image (may be deprecated)
 live: true                                  # Only set to live when ready to publish!
 instructor: "Jeremy Osborn"                 # MUST be quoted
 topic: "Design & Development"           # MUST be quoted
@@ -62,7 +62,7 @@ title:
 date: 2019-11-15T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5000/
-poster_art: /img/take5/posters/gym-5000.jpg
+img: /img/take5/posters/gym-5000.jpg
 live: false
 instructor: 
 topic: 

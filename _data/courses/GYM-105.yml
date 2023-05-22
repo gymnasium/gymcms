@@ -7,7 +7,7 @@ live: false
 retired_message:
   1: "<strong>This course has been retired.</strong>"
 url: /courses/GYM/105/0/about
-poster_art: /img/course-artwork/png/gym-105.png
+img: /img/course-artwork/png/gym-105.png
 topic: "Career Skills"
 description: "This course has been retired."
 description_orig: "Learn how to write compelling content through meaningful audience research and find the right words to attract and engage users."
