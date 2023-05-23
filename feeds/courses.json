@@ -8,5 +8,5 @@ permalink: /feeds/courses.json
   "date_modified": "{{ site.time }}",
   "environment": "{{ jekyll.environment }}",
   "items": [
-    {%-include_relative _partials/courses.html -%}
+    {%-include_relative _partials/courses.liquid -%}
 ]}
