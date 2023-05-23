@@ -8,5 +8,5 @@ permalink: /feeds/bios.json
   "date_modified": "{{ site.time }}",
   "environment": "{{ jekyll.environment }}",
   "items": [
-    {%-include_relative _partials/bios.html -%}
+    {%-include_relative _partials/bios.liquid -%}
 ]}

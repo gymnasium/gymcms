@@ -9,16 +9,16 @@ permalink: /feeds/complete.json
   "environment": "{{ jekyll.environment }}",
   "items": {
     "bios":[
-      {%-include_relative _partials/bios.html -%}
+      {%-include_relative _partials/bios.liquid -%}
     ],
     "courses":[
-      {%-include_relative _partials/courses.html -%}
+      {%-include_relative _partials/courses.liquid -%}
     ],
     "tutorials":[
-      {%-include_relative _partials/tutorials.html -%}
+      {%-include_relative _partials/tutorials.liquid -%}
     ],
     "webinars":[
-      {%-include_relative _partials/webinars.html -%}
+      {%-include_relative _partials/webinars.liquid -%}
     ]
   }
 }
