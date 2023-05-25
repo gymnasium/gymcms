@@ -16,7 +16,7 @@ permalink: /feeds/generated-pages.json
 {%- assign counter = list | size -%}
 {%- assign list = list | jsonify -%}
 {
-  "title": "Gymnasium GeneratedPages Feed",
+  "title": "Gymnasium Generated Pages Feed",
   "feed_url": "{{site.url}}/feeds/generated-pages.json",
   "date_modified": "{{ site.time }}",
   "environment": "{{ jekyll.environment }}",

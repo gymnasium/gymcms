@@ -1,6 +1,7 @@
 # Setup
 title: Gymnasium Static Content
 url: http://localhost:4000
+lms_url: https://learn.gym.soy
 gymurl: https://courses.gymna.si
 aqassetsurl: https://stag-assets.aquent.com
 timezone: America/New_York

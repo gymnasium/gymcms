@@ -1,0 +1,4 @@
+{%- assign list = site.data.pages -%}
+{%- assign counter = list | size -%}
+{%- assign data = list | jsonify -%}
+{{data}}
