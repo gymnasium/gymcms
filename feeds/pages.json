@@ -2,13 +2,13 @@
 layout: null
 permalink: /feeds/pages.json
 ---
-{%- assign list = site.data.pages -%}
-{%- assign counter = list | size -%}
-{%- assign list = list | jsonify -%}
+
 {
   "title": "Gymnasium Pages Feed",
   "feed_url": "{{site.url}}/feeds/pages.json",
   "date_modified": "{{ site.time }}",
   "environment": "{{ jekyll.environment }}",
-  "items": {{list}}
+  "items": [
+    {%-include_relative _partials/pages.liquid -%}
+  ]
 }

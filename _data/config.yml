@@ -1,0 +1,37 @@
+meta: 
+  title: Aquent Gymnasium
+  subtitle: 
+  author: Gymnasium
+  description: Design a career you love with free online courses on design, development, accessibility, prototyping, UX, and career skills.
+navigation:
+  - title: About
+    url: /about/
+  - title: Courses
+    url: /courses/
+  - title: Tutorials
+    url: /tutorials/
+  - title: Webinars
+    url: /webinars/
+  - title: Instructors
+    url: /instructors/
+  - title: Blog
+    url: /blog/
+feeds:
+  - blog: https://medium.com/feed/gymnasium
+social:
+  - title: Twitter
+    url: https://twitter.com/AquentGymnasium
+  - title: Facebook
+    url: https://www.facebook.com/aquentgymnasium/
+  - title: Instagram
+    url: https://www.instagram.com/aquent_gymnasium/
+  - title: YouTube
+    url: https://www.youtube.com/channel/UCsAAa0dL-ZJpq4gN1zEcXYw
+  - title: LinkedIn
+    url: https://www.linkedin.com/school/gymnasium/
+  - title: Medium
+    url: https://medium.com/gymnasium
+  - title: Github
+    url: https://github.com/gymnasium
+  - title: TikTok
+    url: https://tiktok.com/@aquentgymnasium

@@ -4,8 +4,6 @@
   {%- assign data = data | replace: 'event_date', 'date' -%}
   {%- assign data = data | replace: 'event_guests', 'subtitle' -%}
   {%- assign data = data | replace: 'content_category', 'category' -%}
-  {%- assign data = data | replace: 'video_id', 'video_id' -%}
-  {%- assign data = data | replace: 'webinar_id', 'webinar_id' -%}
   {{data}}
   {% unless forloop.last %},{% endunless %}
 {%- endfor -%}
