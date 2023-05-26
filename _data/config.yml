@@ -3,35 +3,107 @@ meta:
   subtitle: 
   author: Gymnasium
   description: Design a career you love with free online courses on design, development, accessibility, prototyping, UX, and career skills.
+  og_img: /img/brand/og/gym-brand-og.png
+  twitter_handle: "@AquentGymnasium"
 navigation:
-  - title: About
-    url: /about/
-  - title: Courses
-    url: /courses/
-  - title: Tutorials
-    url: /tutorials/
-  - title: Webinars
-    url: /webinars/
-  - title: Instructors
-    url: /instructors/
-  - title: Blog
-    url: /blog/
+  main:
+    - title: About
+      url: /about/
+    - title: Courses
+      url: /courses/
+    - title: Tutorials
+      url: /tutorials/
+    - title: Webinars
+      url: /webinars/
+    - title: Instructors
+      url: /instructors/
+    - title: Blog
+      url: /blog/
+  footer:
+    What We Do:
+      - title: Courses
+        url: /courses/
+      - title: Tutorials
+        url: /courses/take5/
+      - title: Jobs
+        url: /jobs/
+      - title: Webinars
+        url: /webinars/
+      - title: Articles
+        url: https://medium.com/gymnasium
+        target: _blank
+        rel: noopener
+      - title: About
+        url: /about/
+    Content Collections:
+      - title: Design Systems
+        url: /design-systems/
+      - title: Web Development
+        url: /web-development/
+      - title: UX Design
+        url: /ux-design/
+      - title: Prototyping
+        url: /prototyping/
+      - title: Accessibility
+        url: /accessibility/
+      - title: Remote Work
+        url: /remote-work/
+    Resources:
+      - title: FAQ
+        url: /faq/
+      - title: Support
+        url: /support/
+      - title: Social Impact
+        url: /social-impact/
+      - title: Privacy Policy
+        url: /privacy-policy/
+      - title: Corporate Social Responsibility
+        url: https://aquent.com/csr-policy
+        target: _blank
+        rel: noopener
+      - title: Impressum
+        url: https://aquent.de/impressum
+        target: _blank
+        rel: noopener
+    Social:
+      - title: Twitter
+        url: https://twitter.com/AquentGymnasium
+      - title: Facebook
+        url: https://www.facebook.com/aquentgymnasium/
+      - title: Instagram
+        url: https://www.instagram.com/aquent_gymnasium/
+      - title: YouTube
+        url: https://www.youtube.com/channel/UCsAAa0dL-ZJpq4gN1zEcXYw
+      - title: LinkedIn
+        url: https://www.linkedin.com/school/gymnasium/
+      - title: Medium
+        url: https://medium.com/gymnasium
+      - title: Github
+        url: https://github.com/gymnasium
+      - title: TikTok
+        url: https://tiktok.com/@aquentgymnasium
+    Affiliated Sites:
+      - title: Aquent
+        url: https://aquent.com
+        target: _blank
+        rel: noopener
+      - title: Aquent Talent
+        url: https://aquenttalent.com
+        target: _blank
+        rel: noopener
+      - title: Aquent Studios
+        url: https://aquentstudios.com
+        target: _blank
+        rel: noopener
+      - title: Aquent RoboHead
+        url: https://www.robohead.net
+        target: _blank
+        rel: noopener
+      - title: Aquent Scout
+        url: https://aquentscout.com
+        target: _blank
+        rel: noopener
+  
 feeds:
   - blog: https://medium.com/feed/gymnasium
-social:
-  - title: Twitter
-    url: https://twitter.com/AquentGymnasium
-  - title: Facebook
-    url: https://www.facebook.com/aquentgymnasium/
-  - title: Instagram
-    url: https://www.instagram.com/aquent_gymnasium/
-  - title: YouTube
-    url: https://www.youtube.com/channel/UCsAAa0dL-ZJpq4gN1zEcXYw
-  - title: LinkedIn
-    url: https://www.linkedin.com/school/gymnasium/
-  - title: Medium
-    url: https://medium.com/gymnasium
-  - title: Github
-    url: https://github.com/gymnasium
-  - title: TikTok
-    url: https://tiktok.com/@aquentgymnasium
+
