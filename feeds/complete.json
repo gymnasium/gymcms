@@ -8,9 +8,9 @@ permalink: /feeds/complete.json
   "date_modified": "{{ site.time }}",
   "environment": "{{ site.environment }}",
   "items": {
-    "config":[
+    "config": {
       {%-include_relative _partials/config.liquid -%}
-    ],
+    },
     "bios":[
       {%-include_relative _partials/bios.liquid -%}
     ],
