@@ -7,103 +7,107 @@ meta:
   twitter_handle: "@AquentGymnasium"
 navigation:
   main:
-    - title: About
-      url: /about/
-    - title: Courses
-      url: /courses/
-    - title: Tutorials
-      url: /tutorials/
-    - title: Webinars
-      url: /webinars/
-    - title: Instructors
-      url: /instructors/
-    - title: Blog
-      url: /blog/
+  - title: About
+    href: /about/
+  - title: Courses
+    href: /courses/
+  - title: Tutorials
+    href: /tutorials/
+  - title: Webinars
+    href: /webinars/
+  - title: Instructors
+    href: /instructors/
+  - title: Blog
+    href: /blog/
   footer:
-    What We Do:
+  - title: What We Do
+    links:
       - title: Courses
-        url: /courses/
+        href: /courses/
       - title: Tutorials
-        url: /courses/take5/
+        href: /courses/take5/
       - title: Jobs
-        url: /jobs/
+        href: /jobs/
       - title: Webinars
-        url: /webinars/
+        href: /webinars/
       - title: Articles
-        url: https://medium.com/gymnasium
+        href: https://medium.com/gymnasium
         target: _blank
         rel: noopener
       - title: About
-        url: /about/
-    Content Collections:
+        href: /about/
+  - title: Content Collections
+    links:
       - title: Design Systems
-        url: /design-systems/
+        href: /design-systems/
       - title: Web Development
-        url: /web-development/
+        href: /web-development/
       - title: UX Design
-        url: /ux-design/
+        href: /ux-design/
       - title: Prototyping
-        url: /prototyping/
+        href: /prototyping/
       - title: Accessibility
-        url: /accessibility/
+        href: /accessibility/
       - title: Remote Work
-        url: /remote-work/
-    Resources:
+        href: /remote-work/
+  - title: Resources
+    links:
       - title: FAQ
-        url: /faq/
+        href: /faq/
       - title: Support
-        url: /support/
+        href: /support/
       - title: Social Impact
-        url: /social-impact/
+        href: /social-impact/
       - title: Privacy Policy
-        url: /privacy-policy/
+        href: /privacy-policy/
       - title: Corporate Social Responsibility
-        url: https://aquent.com/csr-policy
+        href: https://aquent.com/csr-policy
         target: _blank
         rel: noopener
       - title: Impressum
-        url: https://aquent.de/impressum
+        href: https://aquent.de/impressum
         target: _blank
         rel: noopener
-    Social:
+  - title: Social
+    links:
       - title: Twitter
-        url: https://twitter.com/AquentGymnasium
+        href: https://twitter.com/AquentGymnasium
       - title: Facebook
-        url: https://www.facebook.com/aquentgymnasium/
+        href: https://www.facebook.com/aquentgymnasium/
       - title: Instagram
-        url: https://www.instagram.com/aquent_gymnasium/
+        href: https://www.instagram.com/aquent_gymnasium/
       - title: YouTube
-        url: https://www.youtube.com/channel/UCsAAa0dL-ZJpq4gN1zEcXYw
+        href: https://www.youtube.com/channel/UCsAAa0dL-ZJpq4gN1zEcXYw
       - title: LinkedIn
-        url: https://www.linkedin.com/school/gymnasium/
+        href: https://www.linkedin.com/school/gymnasium/
       - title: Medium
-        url: https://medium.com/gymnasium
+        href: https://medium.com/gymnasium
       - title: Github
-        url: https://github.com/gymnasium
+        href: https://github.com/gymnasium
       - title: TikTok
-        url: https://tiktok.com/@aquentgymnasium
-    Affiliated Sites:
+        href: https://tiktok.com/@aquentgymnasium
+  - title: Affiliated Sites
+    links:
       - title: Aquent
-        url: https://aquent.com
+        href: https://aquent.com
         target: _blank
         rel: noopener
       - title: Aquent Talent
-        url: https://aquenttalent.com
+        href: https://aquenttalent.com
         target: _blank
         rel: noopener
       - title: Aquent Studios
-        url: https://aquentstudios.com
+        href: https://aquentstudios.com
         target: _blank
         rel: noopener
       - title: Aquent RoboHead
-        url: https://www.robohead.net
+        href: https://www.robohead.net
         target: _blank
         rel: noopener
       - title: Aquent Scout
-        url: https://aquentscout.com
+        href: https://aquentscout.com
         target: _blank
         rel: noopener
-  
 feeds:
   - blog: https://medium.com/feed/gymnasium
 

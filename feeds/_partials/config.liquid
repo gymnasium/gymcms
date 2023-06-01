@@ -1,13 +1,17 @@
 {%- assign data = site.data.config -%}
 {%- comment -%}
-{{data | jsonify}},
+{{ data | jsonify }},
 {%- endcomment -%}
-{%- for hash in data -%}
-  {
-    "{{ hash[0] }}": {{ hash[1] | jsonify }}
-  }
+
+{%- assign list = site.data.config -%}
+{%- for hash in list -%}
+  {%- assign key = hash[0] | jsonify -%}
+  {%- assign value = hash[1] | jsonify -%}
+  {{key}}:{{value}},
+  {% if forloop.last %}
+  "cms_url": "{{ site.url }}",
+  "lms_url": "{{ site.lms_url }}",
+  "eleventy_url": "{{ site.eleventy_url }}",
+  "astro_url": "{{ site.astro_url }}"
+  {% endif %}
 {%- endfor -%}
-{"cms_url": "{{ site.url }}"},
-{"lms_url": "{{ site.lms_url }}"},
-{"eleventy_url": "{{ site.eleventy_url }}"},
-{"astro_url": "{{ site.astro_url }}"}
