@@ -1,6 +1,6 @@
 # Setup
 title: Gymnasium Data Feeds
-url: https://data--thegymcms.netlify.app #https://data.thegymcms.com
+url: https://data.gym.soy #https://data.thegymcms.com
 lms_url: https://learn.gym.soy
 astro_url: https://astro.gym.soy
 eleventy_url: https://11ty.gym.soy
