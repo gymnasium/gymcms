@@ -110,4 +110,20 @@ navigation:
         rel: noopener
 feeds:
   - blog: https://medium.com/feed/gymnasium
-
+logos:
+  main:
+    white:
+      src: /img/brand/png/gymnasium-logo-white-4x.png
+      srcset: /img/brand/svg/gymnasium-logo-white.svg
+    black:
+      src: /img/brand/png/gymnasium-logo-black-lg.png
+      srcset: /img/brand/svg/gymnasium-logo-black.svg
+colors:
+  orange: "#ff5f14"
+  blue: "#0077c8"
+  white: "#fff"
+  light-gray: "#ccc"
+  gray: "#a6a6a6"
+  medium-gray: "#737373"
+  dark-gray: "#444"
+  black: "#181818"
