@@ -1,45 +1,45 @@
 // Colors
-$gym-orange: #ff5f14;
-// $gym-orange-light: rgba(248, 151, 32, 0.9);
-$gym-black: #181818;
-$gym-blue: #0077c8;
-$gym-white: #fff;
-$gym-gray: #ccc;
-$gym-gray-2: adjust-color($gym-gray, $lightness: 6.66%); // example: outputs #ddd, might as well hard-code this here
-$gym-dark-gray: #444;
-$gym-dark-gray-2: #333;
-$gym-light-gray: #a6a6a6;
-$gym-mid-gray: #737373; // grayscale $gym-blue
-$gym-light-page-background: #ebebeb;
+$gym-orange: #ff5f14 !default;
+// $gym-orange-light: rgba(248, 151, 32, 0.9) !default;
+$gym-black: #181818 !default;
+$gym-blue: #0077c8 !default;
+$gym-white: #fff !default;
+$gym-gray: #ccc !default;
+$gym-gray-2: adjust-color($gym-gray, $lightness: 6.66%) !default; // example: outputs #ddd, might as well hard-code this here
+$gym-dark-gray: #444 !default;
+$gym-dark-gray-2: #333 !default;
+$gym-light-gray: #a6a6a6 !default;
+$gym-mid-gray: #737373 !default; // grayscale $gym-blue
+$gym-light-page-background: #ebebeb !default;
 
-$gym-button-background-hover: $gym-mid-gray;
-$gym-button-background-focus: $gym-light-gray;
-$gym-button-background-active: $gym-button-background-focus;
+$gym-button-background-hover: $gym-mid-gray !default;
+$gym-button-background-focus: $gym-light-gray !default;
+$gym-button-background-active: $gym-button-background-focus !default;
 
 
 // Fancy colors
-$gym-green: #2c9959;
-$gym-green-dark: adjust-color($gym-green, $lightness: -7.7%); // #237b47
-$gym-green-darker: adjust-color($gym-green, $lightness: -19.1%); // #164d2d
+$gym-green: #2c9959 !default;
+$gym-green-dark: adjust-color($gym-green, $lightness: -7.7%) !default; // #237b47
+$gym-green-darker: adjust-color($gym-green, $lightness: -19.1%) !default; // #164d2d
 
-$gym-magenta: #d73158;
-$gym-magenta-dark: adjust-color($gym-magenta, $lightness: -11.5%); // outputs #ac2142
-$gym-magenta-darker: adjust-color($gym-magenta, $lightness: -23%); // outputs #7b182f
+$gym-magenta: #d73158 !default;
+$gym-magenta-dark: adjust-color($gym-magenta, $lightness: -11.5%) !default; // outputs #ac2142
+$gym-magenta-darker: adjust-color($gym-magenta, $lightness: -23%) !default; // outputs #7b182f
 
-$gym-purple: #764c9f;
-$gym-purple-dark: adjust-color($gym-purple, $lightness: -11.5%);
-$gym-purple-darker: adjust-color($gym-purple, $lightness: -23%);
+$gym-purple: #764c9f !default;
+$gym-purple-dark: adjust-color($gym-purple, $lightness: -11.5%) !default;
+$gym-purple-darker: adjust-color($gym-purple, $lightness: -23%) !default;
 
-$gym-teal: #5ca5a0;
-$gym-teal-dark: adjust-color($gym-teal, $lightness: -11.58%); // outputs #46807c
-$gym-teal-darker: adjust-color($gym-teal, $lightness: -26.9%); // #2b4d4b
+$gym-teal: #5ca5a0 !default;
+$gym-teal-dark: adjust-color($gym-teal, $lightness: -11.58%) !default; // outputs #46807c
+$gym-teal-darker: adjust-color($gym-teal, $lightness: -26.9%) !default; // #2b4d4b
 
-$holiday-red: #f30d21;
-$holiday-green: #00b600;
+$holiday-red: #f30d21 !default;
+$holiday-green: #00b600 !default;
 
 // Fonts
-$gym-text-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$gym-font-stack: "brandon-grotesque", $gym-text-font-stack;
+$gym-text-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$gym-font-stack: "brandon-grotesque", $gym-text-font-stack !default;
 
 // A map of (commonly used) breakpoints.
 // TODO: we have a lot of other breakpoints specified in our CSS - maybe we can work to combine/reduce some of these rules
@@ -47,8 +47,8 @@ $breakpoints: (
   small: 640px, // 40em
   medium: 992px, // 62em
   large: 1200px // 75em
-);
+) !default;
 
 // Migrated from theme
-$linked-in-blue: #0077b5;
-$error-color: #d9534f; // replace with the magenta color above?
+$linked-in-blue: #0077b5 !default;
+$error-color: #d9534f !default; // replace with the magenta color above?
