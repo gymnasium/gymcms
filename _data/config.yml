@@ -108,6 +108,18 @@ navigation:
         href: https://aquentscout.com
         target: _blank
         rel: noopener
+  - title: Dev Links
+    links:
+      - title: Gymnasium (Production)
+        href: https://thegymnasium.com
+      - title: Gym Astro
+        href: GYM_ASTRO_URL
+      - title: Gym Eleventy
+        href: GYM_ELEVENTY_URL
+      - title: Gym Soy Data
+        href: GYM_DATA_URL
+      - title: Gym LMS
+        href: GYM_LMS_URL
 feeds:
   - blog: https://medium.com/feed/gymnasium
 logos:
