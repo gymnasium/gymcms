@@ -7,6 +7,10 @@
 {%- for hash in list -%}
   {%- assign key = hash[0] | jsonify -%}
   {%- assign value = hash[1] | jsonify -%}
+  {%- assign value = value | replace: 'GYM_ASTRO_URL', site.astro_url -%}
+  {%- assign value = value | replace: 'GYM_ELEVENTY_URL', site.eleventy_url -%}
+  {%- assign value = value | replace: 'GYM_LMS_URL', site.lms_url -%}
+  {%- assign value = value | replace: 'GYM_DATA_URL', site.url -%}
   {{key}}:{{value}},
   {% if forloop.last %}
   "cms_url": "{{ site.url }}",
