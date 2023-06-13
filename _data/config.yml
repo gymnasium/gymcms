@@ -121,7 +121,7 @@ navigation:
       - title: Gym LMS
         href: GYM_LMS_URL
 feeds:
-  - blog: https://medium.com/feed/gymnasium
+  blog: https://medium.com/feed/gymnasium
 logos:
   main:
     white:
