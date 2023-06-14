@@ -1,5 +1,10 @@
 ---
 ---
+{%- for color in site.data.config.colors -%}
+$gym-{{color[0]}}: {{color[1]}};
+@debug "{{color[0]}}: #{$gym-{{color[0]}}}";
+{%- endfor -%}
+
 @import "functions";
 @import "mixins";
 @import "variables";
