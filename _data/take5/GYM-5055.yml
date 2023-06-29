@@ -12,10 +12,10 @@ topic: "Design"
 subtopics:
 video_ID:
 video_duration:
-featured: true
+featured: false
 short_description:
 project_file_source:
 project_files:
 related_content:
-skill_level:
+skill_level: "Beginner"
 ---
