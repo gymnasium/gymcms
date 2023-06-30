@@ -13,9 +13,11 @@ subtopics:
 video_ID:
 video_duration:
 featured: false
-short_description:
+short_description: "Learn how typography can improve your content’s structure, readability, and accessibility, when it has the appropriate level of contrast in this tutorial."
 project_file_source:
 project_files:
 related_content:
+- label: "Gymnasium: Improving Accessibility with Color Contrast"
+  url: "https://thegymnasium.com/courses/take5/improving-accessibility-with-color-contrast"
 skill_level: "Beginner"
 ---
