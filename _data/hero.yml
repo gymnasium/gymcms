@@ -4,7 +4,7 @@ auth_promo: hero-take5-portfolio.html
 # Live Stream
 # Set true/false (lowercase).
 # Note: true overrides current/auth promo heros
-live_stream: false
+live_stream: true
 
 # Source
 # Set twitch/youtube (lowercase)
@@ -14,14 +14,14 @@ embed_source: "youtube"
 # Content
 # Update per live stream, if needed
 title: "Live Stream"
-short_description: "Working within Spatial."
+short_description: "DIY AI"
 byline: "The Gymnasium Team"
 
 # twitch
 twitch_channel: "andrewpmiller"
 
 # youtube
-youtube_video_ID: "2vbJPsNNwDM"
+youtube_video_ID: "uA1Ho_bfMhw"
 
 # Aspect Ratio 16:19
 embed_width: "854"
