@@ -4,7 +4,7 @@ auth_promo: hero-take5-portfolio.html
 # Live Stream
 # Set true/false (lowercase).
 # Note: true overrides current/auth promo heros
-live_stream: true
+live_stream: false
 
 # Source
 # Set twitch/youtube (lowercase)
@@ -13,7 +13,7 @@ embed_source: "youtube"
 
 # Content
 # Update per live stream, if needed
-title: "Live Stream"
+title: "Livestream"
 short_description: "DIY AI"
 byline: "The Gymnasium Team"
 
