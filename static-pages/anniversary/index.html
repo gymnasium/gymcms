@@ -3,19 +3,129 @@ layout: wrapper-full-white
 permalink: /anniversary/
 css: [/css/static-main-content.css]
 ---
+
+{%- assign img_path = "/img/static-pages/anniversary/" | prepend: site.url -%}
+
+<style>
+
+.main-content-static article {
+  padding-top: 1.2em;
+  border-top: 1px dashed #ccc;
+  margin-top: 1.2em;
+}
+
+.main-content-static article .date {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 1.6rem;
+  border-left: 2px solid #222;
+}
+
+.main-content-static article .date:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 0;
+  padding-left: 90%;
+  border: 2rem solid transparent;
+  border-top-color: #ff5f14;
+  border-bottom-color: #ff5f14;
+  border-left-width: 1rem;
+  border-right-style: dashed;
+  z-index: 0;
+}
+
+.main-content-static article .date b {
+  display: inline-block;
+  position: relative;
+  color: #181818;
+  line-height: 1.15;
+  letter-spacing: 0.2ex;
+  background-color: #ff5f14;
+  padding: 1rem 1.2rem;
+  z-index: 1;
+}
+
+.main-content-static article h2 {
+  font-size: 1.6em;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+}
+
+.main-content-static .images {
+  margin-right: -2em;
+}
+
+.main-content-static article figure {
+  display: inline-block;
+  width: 100%;
+  max-width: 20.5em;
+  vertical-align: top;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  margin-top: 1.2em;
+  margin-right: 1.125em;
+}
+
+.main-content-static article figure .video-embed {
+  position: relative;
+  height: 0;
+  background-color: #ccc;
+  padding-bottom: 56.25%;
+}
+
+.main-content-static article figure iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.main-content-static article figcaption {
+  display: inline-block;
+  width: 100%;
+  line-height: 1.35;
+  background-color: #fff;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.main-content-static aside ul {
+  padding-left: 1.15em;
+}
+
+</style>
+
 <!-- Temporary HTML for style hooks -->
 <div class="main-content-static">
 
-  <h1>10 Year Anniversary</h1>
+  <h1>10 Years of Aquent Gymnasium</h1>
 
-  <p class="hero-text">Design a career you love with free online courses on design, development, UX, accessibility, and career skills from industry experts.</p>
+  <p class="hero-text">It’s officially been a decade since we launched our free online learning platform in 2013. <span class="no-wrap">To celebrate</span> 10 years, we’re taking a look back at some of the milestones that helped make Gymnasium what it is today. Join us for a scroll down memory lane.</p>
 
   <article>
-    <p><b>2012</b></p>
-    <h2>Gymnasium <cite>Summer of Learning</cite> Pilot</h2>
+    <p class="date"><b>2012</b></p>
+    <h2><cite>Summer of Learning</cite> Pilot</h2>
     <p>Aquent shows the creative community some love during the <cite>Summer of Learning</cite> in 2012 by providing creative professionals classes on HTML5 and career skills.</p>
+    <div class="images">
+      <figure>
+        <img alt="The Summer of Learning homepage hero." src="{{ img_path }}homepages/gym-homepage-hero-2012-08-24-1920w.jpg" width="" height="" decoding="async">
+        <figcaption>
+        <small>Aquent’s <a href="https://web.archive.org/web/20120824001413/http://www.thesummeroflearning.com/?src=sol-aq-home-0712" target="_blank" rel="noopener">thesummeroflearning.com</a> homepage circa July 2012.</small>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="video-embed">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_NSJd_0BkF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <figcaption>
+        <small>Aquent’s Summer of Learning webcast <cite>Transform HTML Into HTML5</cite> on <a href="https://www.youtube.com/@TheSummerOfLearning" target="_blank" rel="noopener">YouTube</a>.</small>
+        </figcaption>
+      </figure>
+    </div>
     <aside>
-      <h3>Related Content</h3>
+      <h3>From the Archives</h3>
       <ul>
         <li><a href="https://www.youtube.com/@TheSummerOfLearning" target="_blank" rel="noopener">Summer of Learning YouTube Channel</a>
         <li><a href="https://www.learningguild.com/articles/1199/real-life-moocs-filling-private-sector-skills-gaps/" target="_blank" rel="noopener">
@@ -25,47 +135,153 @@ css: [/css/static-main-content.css]
   </article>
 
   <article>
-    <p><b>2013</b></p>
-    <h2>Gymnasium Official Launch (Version 1)</h2>
-    <p>Aquent Gymnasium releases two free certificate online courses, <cite>Coding for Designers</cite> and <cite>Responsive Web Design</cite> (both retired now) in July 2013 for another summer of free online learning.</p>
+    <p class="date"><b>2013</b></p>
+    <h2>Aquent Gymnasium Launch</h2>
+    <p>Aquent Gymnasium officially launches with two full courses following the success of the Summer of Learning — first <cite>Coding for Designers</cite> (July) and then <cite>Responsive Web Design</cite> (October) in 2013.</p>
+    <div class="images">
+      <figure>
+        <div class="video-embed">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/snmz3M2RUBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <figcaption>
+        <small>Aquent Gymnasium promo video from July 2013.</small>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="video-embed aspect-legacy-1">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qYqIS2CSH28" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <figcaption>
+        <small>Aquent Gymnasium Launch Party — London</small>
+        </figcaption>
+      </figure>
+      <figure>
+        <div class="video-embed aspect-legacy-2">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4PiVJvIzX_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <figcaption>
+        <small><cite>Responsive Web Design</cite> course promo</small>
+        </figcaption>
+      </figure>
+      <figure>
+        <img alt="Gymnasium homepage circa 2013 with original yellow color theme." src="{{ img_path }}homepages/gym-homepape-hero-2013-06-06-1920w.jpg" width="" height="" decoding="async">
+        <figcaption>
+        <small>Gymnasium <a href="https://web.archive.org/web/20130606210459/http://www.thegymnasium.com/" target="_blank" rel="noopener">homepage</a> (soft launch) with original torch logo and yellow color theme in June 2013.</small>
+        </figcaption>
+      </figure>
+      <figure>
+        <img alt="Gymnasium homepage circa 2013 with updated Aquent orange color theme." src="{{ img_path }}homepages/gym-homepage-hero-2013-10-19-1920w.jpg" width="" height="" decoding="async">
+        <figcaption>
+        <small> Gymnasium <a href="https://web.archive.org/web/20131019214057/http://thegymnasium.com/" target="_blank" rel="noopener">homepage</a> with Aquent orange theme rebrand in October 2013.</small>
+        </figcaption>
+      </figure>
+      <figure>
+        <img alt="Gymnasium catalog with its first two courses in 2013." src="{{ img_path }}homepages/gym-catalog-2013-11-07-1920w.jpg" width="" height="" decoding="async">
+        <figcaption>
+        <small>The <a href="https://web.archive.org/web/20131123134750/http://thegymnasium.com/catalog" target="_blank" rel="noopener">catalog</a> featuring <cite>Coding for Designers</cite> (July) and <cite>Responsive Web Design</cite> (October) in 2013.</small>
+        </figcaption>
+      </figure>
+    </div>
+    <aside>
+      <h3>From the Archives</h3>
+      <ul>
+        <li><a href="https://web.archive.org/web/20131115035751/http://aquent.com/blog/free-online-course-mooc-html-css-for-designers">Aquent Gymnasium Offers MOOCs for Digital Creatives</a></li>
+        <li><a href="https://web.archive.org/web/20131115042229/http://aquent.com/blog/free-courses-practical-skills-aquent-gymnasium">Laser Focus and Useful Information: Jeremy Osborn on Aquent Gymnasium</a></li>
+      </ul>
+    </aside>
   </article>
 
   <article>
-    <p><b>2014</b></p>
-    <h2>Gymnasium <cite>Gym Shorts</cite></h2>
-    <p>Aquent Gymnasium releases the short course format Gym Shorts, learning within an hour or less, with <cite><a href="https://thegymnasium.com/courses/GYM/001/0/about">Defeating Busy</a></cite> with Brett Harned, teaching you how to estimate, plan, track, and manage your time to complete projects.</p>
+    <p class="date"><b>2014</b></p>
+    <h2><cite>Gym Shorts</cite> Drop</h2>
+    <p>Gymnasium releases the short course format Gym Shorts, learning within an hour or less, with <cite><a href="https://thegymnasium.com/courses/GYM/001/0/about">Defeating Busy</a></cite> with Brett Harned, teaching you how to estimate, plan, track, and manage your time to complete projects.</p>
+    <figure>
+      <div class="video-embed">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I1KGMtQBFs0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <figcaption>
+      <small>Aquent Gymnasium: Behind the Scenes (2014)</small>
+      </figcaption>
+    </figure>
+    <figure>
+      <img alt="" src="{{ img_path }}homepages/gym-homepage-hero-2015-08-11-1920w.jpg" width="1920" height="1080" decoding="async">
+      <figcaption>
+        <small> Gymnasium <a href="https://archive.li/FwO73" target="_blank" rel="noopener">homepage</a> in 2014 (and 2015).</small>
+      </figcaption>
+    </figure>
+    <aside>
+      <h3>From the Archives</h3>
+      <ul>
+        <li><a href="https://www.providencejournal.com/story/news/2014/06/05/20140605-aquent-gymnasium-launches-gym-shorts-series-new-one-hour-mooc-courses-ece/35338443007/" target="_blank" rel="noopener">Aquent Gymnasium Launches "Gym Shorts" Series - New One-Hour MOOC Courses</a></li>
+        <li><a href="https://www.fastcompany.com/3024661/hacking-hack-schools-to-make-them-work" target="_blank" rel="noopener">Fast Company: Hacking Hack Schools To Make Them Work</a></li>
+      </ul>
+    </aside>
   </article>
 
   <article>
-    <p><b>2015</b></p>
+    <p class="date"><b>2015</b></p>
     <h2>Gymnasium Relaunch on Open edX (Version 2)</h2>
     <p>Aquent Gymnasium relaunches in November 2015, built on the Open edX platform, developed by MIT, Harvard, and edX.</p>
-    <p></p>
+    <div class="images">
+      <figure>
+      <img alt="" src="{{ img_path }}homepages/gym-homepage-hero-2016-01-11-1920w.jpg" width="1920" height="1080" decoding="async">
+      <figcaption>
+        <small> Gymnasium <a href="https://web.archive.org/web/20160306065332/http://gymnasium.aquent.com/" target="_blank" rel="noopener">homepage</a> in late 2015 (and 2016).</small>
+      </figcaption>
+    </figure>
+    </div>
+    <aside>
+      <h3>From the Archives</h3>
+      <ul>
+        <li><a href="https://medium.com/gymnasium/a-year-of-gymnasium-on-open-edx-2f0c6df2afee" target="_blank" rel="noopener">A year of Gymnasium on Open edX</a></li>
+        <li><a href="https://www.forbes.com/sites/sap/2015/02/23/hate-formal-career-training-go-guerrilla-on-it/?sh=4fc01c9b5899" target="_blank" rel="noopener">Forbes: Hate Formal Career Training? Go Guerrilla On It.</a></li>
+      </ul>
+    </aside>
   </article>
 
   <article>
-    <p><b>2015</b></p>
+    <p class="date"><b>2015</b></p>
     <h2>Live Coding on Twitch</h2>
     <p>Aquent Gymnasium livestreams (former) Director of Technology Mike Bifulco’s weekly live, in the wild, open development on Twitch in December 2015 — available on the Gymnasium <a href="https://www.youtube.com/watch?v=YOG8_QKrhRs&list=PL0Y6L6nQtNzfvDq2rzNJ0YbjvHebRyEom" target="_blank" rel="noopener">YouTube</a> channel.</p>
+    <div class="images">
+      <figure>
+        <div class="video-embed">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YOG8_QKrhRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <figcaption>
+        <small>Live Coding, weekly, from 2017 to 2019.</small>
+        </figcaption>
+      </figure>
+    </div>
   </article>
 
   <article>
-    <p><b>2016</b></p>
+    <p class="date"><b>2016</b></p>
     <h2>Gymnasium Release Webinars</h2>
-    <p>Aquent Gymnasium releases their first of many webinars in April 2015, <cite><a href="https://thegymnasium.com/webinars/designing-for-understanding">Designing for Understanding</a></cite> with Stephanie Hay and John Hodgins.</p>
+    <p>Aquent Gymnasium releases their first of many <a href="https://thegymnasium.com/webinars">webinars</a> in April 2015, <cite><a href="https://thegymnasium.com/webinars/designing-for-understanding">Designing for Understanding</a></cite> with Stephanie Hay.</p>
+    <div class="images">
+      <figure>
+      <div class="video-embed">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5W7sJzfPwjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <figcaption>
+      <small>Designing for Understanding</a></cite> webinar with Stephanie Hay.</small>
+      </figcaption>
+    </figure>
+    </div>
     <aside>
-      <h3>Related Content</h3>
+      <h3>From the Archives</h3>
       <ul>
-        <li><a href="https://thegymnasium.com/webinars">Gymnasium Webinars</a></li>
+        <li><a href="https://www.foxbusiness.com/features/training-workers-the-netflix-way-moocs-in-the-job-industry">Training Workers the Netflix Way: MOOCs in the Job Industry</a></li>
       </ul>
     </aside>
   </article>
 
 <!--
   <article>
-    <p><b>2017</b></p>
+    <p class="date"><b>2017</b></p>
     <aside>
-      <h3>Related Content</h3>
+      <h3>From the Archives</h3>
       <ul>
         <li><a href="https://www.prweb.com/releases/2017/08/prweb14581659.htm" target="_blank" rel="noopener">Vitamin T and Aquent Celebrate Gymnasium’s 4-Year Anniversary</a></li>
       </ul>
@@ -74,39 +290,99 @@ css: [/css/static-main-content.css]
  -->
 
   <article>
-    <p><b>2018</b></p>
-    <h2>Gymnasium Launch Badges for <cite>Gym Shorts</cite></h2>
-    <p>Aquent Gymnasium launches badges for <cite>Gym Shorts</cite> with the release of Brad Frost’s course <cite><a href="https://thegymnasium.com/courses/course-v1:GYM+014+0/about">Working with Atomic Design and Pattern Lab</a></cite> in July 2015.</p>
+    <p class="date"><b>2018</b></p>
+    <h2>Badges for <cite>Gym Shorts</cite></h2>
+    <p>Aquent Gymnasium launches badges for <cite>Gym Shorts</cite> with the release of Brad Frost’s course <cite><a href="https://thegymnasium.com/courses/course-v1:GYM+014+0/about">Working with Atomic Design and Pattern Lab</a></cite> in the summer of 2018.</p>
+    <div class="images">
+      <figure>
+        <img alt="" src="{{ img_path }}homepages/gym-homepage-hero-badges-2018-1920w.jpg" width="1920" height="1080" decoding="async">
+      <figcaption>
+      <small>Gymnasium homepage promoting Badges for <cite>Gym Shorts</cite>.</small>
+      </figcaption>
+    </figure>
+      <figure>
+        <img alt="" src="{{ img_path }}homepages/gym-homepage-hero-pattern-lab-2018-07-20-1920w.jpg" width="1920" height="1080" decoding="async">
+      <figcaption>
+      <small>Gymnasium <a href="https://web.archive.org/web/20180720163349/https://thegymnasium.com/" target="_blank" rel="noopener">homepage</a> promoting <cite>Working with Atomic Design and Pattern Lab</cite> in 2018.</small>
+      </figcaption>
+    </figure>
+    </div>
+    <aside>
+      <h3>From the Archives</h3>
+      <ul>
+        <li><a href="https://dribbble.com/shots/1836254-Gymnasium-Course-Badge-WIP" target="_blank" rel="noopener">Gymnasium Course Badge (WIP)</a> by Zachary Siswick (former Gymnasium Creative Director)</li>
+        <li><a href="https://bradfrost.com/blog/post/working-with-atomic-design-and-pattern-lab-online-course/" target="_blank" rel="noopener">Working With Atomic Design and Pattern Lab Online Course</a></li>
+        <li><a href="https://medium.com/gymnasium/brad-frost-on-how-and-why-to-use-pattern-lab-49607f89d7f0" target="_blank" rel="noopener">Brad Frost on How (and Why) to Use Pattern Lab</a></li>
+      </ul>
+    </aside>
   </article>
 
   <article>
-    <p><b>2018</b></p>
-    <h2>Gymnasium Win Elevate Award</h2>
+    <p class="date"><b>2018</b></p>
+    <h2>Gymnasium Wins Elevate Award</h2>
     <p>Aquent Gymnasium wins the American Staffing Association’s first-ever <a href="https://www.prnewswire.com/news-releases/american-staffing-association-honors-most-outstanding-work-based-learning-programs-in-staffing-and-recruiting-industry-300714691.html" target="_blank" rel="noopener">Elevate Award</a> in October 2018, honoring the most outstanding work-based learning programs in the staffing and recruiting industry.</p>
+    <div class="images">
+      <figure>
+        <img alt="" src="{{ img_path }}awards/gym-asa-elevate-award-2018-1920w.jpg" width="1920" height="1080" decoding="async">
+      <figcaption>
+      <small>American Staffing Association’s Elevate Award ceremony in 2018.</small>
+      </figcaption>
+    </figure>
+    </div>
   </article>
 
   <article>
-    <p><b>2018</b></p>
-    <h2>Gymnasium Release Take 5 Tutorials </h2>
-    <p>Aquent Gymnasium releases Take 5 tutorials, a five-minute video-based course format for learning design, development, UX, accessibility, and career skills from industry experts, continuing their mission to provide free online learning to anyone, anywhere in the world.</p>
+    <p class="date"><b>2019</b></p>
+    <h2>Take 5 Tutorials </h2>
+    <p>Gymnasium releases <a href="http://thegymnasium.com/courses/take5/">Take 5</a> tutorials, a five-minute video-based course format for learning from industry experts.</p>
+    <div class="images">
+      <figure>
+        <img alt="" src="{{ img_path }}homepages/gym-take5-blitz-2019-10-28-1920w.jpg" width="1920" height="1080" decoding="async">
+        <figcaption>
+        <small>Gymnasium Take 5 tutorials landing page from it’s initial release week (and month, also known as, the “blitz”) in late October, early November 2019.</small>
+        </figcaption>
+      </figure>
+        <figure>
+        <img alt="" src="{{ img_path }}social/gym-take5-instagram-2019-11-22-1920w.jpg" width="1920" height="1080" decoding="async">
+        <figcaption>
+        <small><a href="https://www.instagram.com/p/B5L-EtyAWQS/" target="_blank" rel="noopener">Instagram</a> post celebrating 20 days of Take 5 tutorials in late November.</small>
+        </figcaption>
+      </figure>
+    </div>
   </article>
 
   <article>
-    <p><b>2020</b></p>
-    <h2>Gymnasium Win Elevate Award, Again</h2>
+    <p class="date"><b>2020</b></p>
+    <h2>Gymnasium Wins Second Elevate Award</h2>
     <p>Aquent Gymnasium wins a second American Staffing Association <a href="https://medium.com/gymnasium/aquent-gymnasium-wins-asa-elevate-award-again-d97fe0841a57" target="_blank" rel="noopener">Elevate Award</a> in September 2020, honoring the most outstanding work-based learning programs in the staffing and recruiting industry.</p>
   </article>
 
   <article>
-    <p><b>2022</b></p>
+    <p class="date"><b>2022</b></p>
     <h2>Gymnasium Launch <cite>Portfolio Workshop</cite> Pilot</h2>
     <p>Aquent Gymnasium launches its live, real-time online <cite><a href="https://thegymnasium.com/workshops">Improving Your Portfolio</a></cite> workshop.</p>
+    <div class="images">
+      <figure>
+        <img alt="" src="{{ img_path }}courseware/gym-workshops-portfolio-2022-12-5-1920w.jpg" width="1920" height="1080" decoding="async">
+        <figcaption>
+        <small>Gymnasium’s first-ever live, real-time, week-long online course in December 2022.</small>
+        </figcaption>
+      </figure>
+      <figure>
+        <img alt="" src="{{ img_path }}homepages/gym-homepage-hero-take5-portfolio-2023-1920w.jpg" width="1920" height="1080" decoding="async">
+        <figcaption>
+        <small>Gymnasium homepage hero promoting the <a href="https://www.youtube.com/watch?v=Q2dafEXRx_s&list=PL0Y6L6nQtNzdN9nJp_tfJQ5I5uB7tK6yn" target="_blank" rel="noopener">Take 5 Portfolio Tutorials</a>.</small>
+        </figcaption>
+      </figure>
+    </div>
   </article>
 
   <article>
-    <p><b>2023</b></p>
+    <p class="date"><b>2023</b></p>
     <h2>10 Years of Free Online Learning</h2>
     <p>Aquent Gymnasium celebrates 10 years of providing free online learning with courses, tutorials, articles, and webinars on design, development, UX, accessibility, and career skills from industry experts to anyone, anywhere in the world.</p>
+    <div class="images">
+    </div>
   </article>
 
 </div><!-- .main-content-static -->
