@@ -123,3 +123,86 @@
     border: 0;
   }
 }
+
+// anniversary (10 year)
+#anniversary {
+
+  article {
+    padding-top: 1.2em;
+    border-top: 1px dashed $gym-gray;
+    margin-top: 1.2em;
+
+    .date {
+      display: inline-block;
+      position: relative;
+      padding-bottom: 1.6rem;
+      border-left: 2px solid #222;
+
+      &:before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        height: 0;
+        padding-left: 90%;
+        border: 2rem solid transparent;
+        border-top-color: $gym-orange;
+        border-bottom-color: $gym-orange;
+        border-left-width: 1rem;
+        border-right-style: dashed;
+        z-index: 0;
+      }
+
+      b {
+        display: inline-block;
+        position: relative;
+        color: #181818;
+        line-height: 1.15;
+        letter-spacing: 0.2ex;
+        background-color: $gym-orange;
+        padding: 1rem 1.2rem;
+        z-index: 1;
+      }
+    }
+
+    h2 {
+      font-size: 1.6em;
+      margin-top: 0;
+      margin-bottom: 1.6rem;
+    }
+
+    .images {
+      margin-right: -2em;
+    }
+
+    figure {
+      display: inline-block;
+      width: 100%;
+      max-width: 20.5em;
+      vertical-align: top;
+      background-color: $gym-gray;
+      border: 1px solid $gym-gray;
+      margin-top: 1.2em;
+      margin-right: 1.125em;
+
+      .iframe-video-holder {
+        padding-bottom: 56.25%;
+      }
+
+      figcaption {
+        display: inline-block;
+        width: 100%;
+        line-height: 1.35;
+        background-color: #fff;
+        padding: 1rem;
+        border-top: 1px solid $gym-gray;
+      }
+    }
+
+    aside ul {
+      padding-left: 1.15em;
+    }
+  }
+
+}

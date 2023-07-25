@@ -6,99 +6,8 @@ css: [/css/static-main-content.css]
 
 {%- assign img_path = "/img/static-pages/anniversary/" | prepend: site.url -%}
 
-<style>
-
-.main-content-static article {
-  padding-top: 1.2em;
-  border-top: 1px dashed #ccc;
-  margin-top: 1.2em;
-}
-
-.main-content-static article .date {
-  display: inline-block;
-  position: relative;
-  padding-bottom: 1.6rem;
-  border-left: 2px solid #222;
-}
-
-.main-content-static article .date:before {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  height: 0;
-  padding-left: 90%;
-  border: 2rem solid transparent;
-  border-top-color: #ff5f14;
-  border-bottom-color: #ff5f14;
-  border-left-width: 1rem;
-  border-right-style: dashed;
-  z-index: 0;
-}
-
-.main-content-static article .date b {
-  display: inline-block;
-  position: relative;
-  color: #181818;
-  line-height: 1.15;
-  letter-spacing: 0.2ex;
-  background-color: #ff5f14;
-  padding: 1rem 1.2rem;
-  z-index: 1;
-}
-
-.main-content-static article h2 {
-  font-size: 1.6em;
-  margin-top: 0;
-  margin-bottom: 1.6rem;
-}
-
-.main-content-static .images {
-  margin-right: -2em;
-}
-
-.main-content-static article figure {
-  display: inline-block;
-  width: 100%;
-  max-width: 20.5em;
-  vertical-align: top;
-  background-color: #ccc;
-  border: 1px solid #ccc;
-  margin-top: 1.2em;
-  margin-right: 1.125em;
-}
-
-.main-content-static article figure .video-embed {
-  position: relative;
-  height: 0;
-  background-color: #ccc;
-  padding-bottom: 56.25%;
-}
-
-.main-content-static article figure iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.main-content-static article figcaption {
-  display: inline-block;
-  width: 100%;
-  line-height: 1.35;
-  background-color: #fff;
-  padding: 1rem;
-  border-top: 1px solid #ccc;
-}
-
-.main-content-static aside ul {
-  padding-left: 1.15em;
-}
-
-</style>
-
 <!-- Temporary HTML for style hooks -->
-<div class="main-content-static">
+<div class="main-content-static" id="anniversary">
 
   <h1>10 Years of Aquent Gymnasium</h1>
 
@@ -116,7 +25,7 @@ css: [/css/static-main-content.css]
         </figcaption>
       </figure>
       <figure>
-        <div class="video-embed">
+        <div class="iframe-video-holder">
           <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_NSJd_0BkF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <figcaption>
@@ -140,7 +49,7 @@ css: [/css/static-main-content.css]
     <p>Aquent Gymnasium officially launches with two full courses following the success of the Summer of Learning — first <cite>Coding for Designers</cite> (July) and then <cite>Responsive Web Design</cite> (October) in 2013.</p>
     <div class="images">
       <figure>
-        <div class="video-embed">
+        <div class="iframe-video-holder">
           <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/snmz3M2RUBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <figcaption>
@@ -148,7 +57,7 @@ css: [/css/static-main-content.css]
         </figcaption>
       </figure>
       <figure>
-        <div class="video-embed aspect-legacy-1">
+        <div class="iframe-video-holder aspect-legacy-1">
           <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qYqIS2CSH28" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <figcaption>
@@ -156,7 +65,7 @@ css: [/css/static-main-content.css]
         </figcaption>
       </figure>
       <figure>
-        <div class="video-embed aspect-legacy-2">
+        <div class="iframe-video-holder aspect-legacy-2">
           <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4PiVJvIzX_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <figcaption>
@@ -196,7 +105,7 @@ css: [/css/static-main-content.css]
     <h2><cite>Gym Shorts</cite> Drop</h2>
     <p>Gymnasium releases the short course format Gym Shorts, learning within an hour or less, with <cite><a href="https://thegymnasium.com/courses/GYM/001/0/about">Defeating Busy</a></cite> with Brett Harned, teaching you how to estimate, plan, track, and manage your time to complete projects.</p>
     <figure>
-      <div class="video-embed">
+      <div class="iframe-video-holder">
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I1KGMtQBFs0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <figcaption>
@@ -245,7 +154,7 @@ css: [/css/static-main-content.css]
     <p>Aquent Gymnasium livestreams (former) Director of Technology Mike Bifulco’s weekly live, in the wild, open development on Twitch in December 2015 — available on the Gymnasium <a href="https://www.youtube.com/watch?v=YOG8_QKrhRs&list=PL0Y6L6nQtNzfvDq2rzNJ0YbjvHebRyEom" target="_blank" rel="noopener">YouTube</a> channel.</p>
     <div class="images">
       <figure>
-        <div class="video-embed">
+        <div class="iframe-video-holder">
           <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YOG8_QKrhRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <figcaption>
@@ -261,7 +170,7 @@ css: [/css/static-main-content.css]
     <p>Aquent Gymnasium releases their first of many <a href="https://thegymnasium.com/webinars">webinars</a> in April 2015, <cite><a href="https://thegymnasium.com/webinars/designing-for-understanding">Designing for Understanding</a></cite> with Stephanie Hay.</p>
     <div class="images">
       <figure>
-      <div class="video-embed">
+      <div class="iframe-video-holder">
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5W7sJzfPwjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <figcaption>
