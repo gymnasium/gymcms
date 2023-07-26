@@ -136,7 +136,7 @@
       display: inline-block;
       position: relative;
       padding-bottom: 1.6rem;
-      border-left: 2px solid #222;
+      border-left: 2px solid $gym-black;
 
       &:before {
         display: block;
@@ -149,15 +149,15 @@
         border: 2rem solid transparent;
         border-top-color: $gym-orange;
         border-bottom-color: $gym-orange;
-        border-left-width: 1rem;
+        border-left-width: 0.6rem;
         border-right-style: dashed;
         z-index: 0;
       }
 
       b {
-        display: inline-block;
-        position: relative;
-        color: #181818;
+        display: inherit;
+        position: inherit;
+        color: $gym-black;
         line-height: 1.15;
         letter-spacing: 0.2ex;
         background-color: $gym-orange;
@@ -181,10 +181,13 @@
       width: 100%;
       max-width: 20.5em;
       vertical-align: top;
-      background-color: $gym-gray;
       border: 1px solid $gym-gray;
       margin-top: 1.2em;
       margin-right: 1.125em;
+
+      & > :first-child:not(figcaption) {
+        background-color: $gym-black;
+      }
 
       .iframe-video-holder {
         padding-bottom: 56.25%;
@@ -194,7 +197,6 @@
         display: inline-block;
         width: 100%;
         line-height: 1.35;
-        background-color: #fff;
         padding: 1rem;
         border-top: 1px solid $gym-gray;
       }
