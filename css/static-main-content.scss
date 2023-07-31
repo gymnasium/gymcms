@@ -97,29 +97,123 @@
   .ratio-4-3 {
     padding-bottom: 75%;
   }
-}
 
+  @include breakpoint(medium, min) {
 
-@include breakpoint(medium, min) {
+    .w-75 {
+      width: 75%;
+    }
+  }
 
-  .main-content-static .w-75 {
-    width: 75%;
+  .iframe-video-holder {
+    position: relative;
+    height: 0;
+    background: $gym-black;
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: none transparent;
+      border: 0;
+    }
+  }
+
+  // anniversary (10 year)
+  #anniversary {
+
+    article {
+      padding-top: 1.2em;
+      border-top: 1px dashed $gym-gray;
+      margin-top: 1.2em;
+
+      p {
+        margin-top: 1rem;
+      }
+
+      .date {
+        display: inline-block;
+        position: relative;
+        padding-bottom: 1.6rem;
+        border-left: 2px solid $gym-black;
+
+        &:before {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: "";
+          height: 0;
+          padding-left: 90%;
+          border: 2rem solid transparent;
+          border-top-color: $gym-orange;
+          border-bottom-color: $gym-orange;
+          border-left-width: 0.6rem;
+          border-right-style: dashed;
+          z-index: 0;
+        }
+
+        b {
+          display: inherit;
+          position: inherit;
+          color: $gym-black;
+          line-height: 1.15;
+          letter-spacing: 0.2ex;
+          background-color: $gym-orange;
+          padding: 1rem 1.2rem;
+          z-index: 1;
+        }
+      }
+
+      h2 {
+        font-size: 1.6em;
+        margin-top: 0;
+        margin-bottom: 1.6rem;
+      }
+
+      .images {
+        margin-right: -2em;
+      }
+
+      figure {
+        display: inline-block;
+        width: 100%;
+        max-width: 20.5em;
+        vertical-align: top;
+        border: 1px solid $gym-gray;
+        margin-top: 1.2em;
+        margin-right: 1.125em;
+
+        & > :first-child:not(figcaption) {
+          background-color: $gym-black;
+        }
+
+        .iframe-video-holder {
+          padding-bottom: 56.25%;
+        }
+
+        figcaption {
+          display: inline-block;
+          width: 100%;
+          line-height: 1.35;
+          padding: 1rem;
+          border-top: 1px solid $gym-gray;
+        }
+      }
+
+      aside ul {
+        padding-left: 1.15em;
+      }
+    }
+
   }
 }
 
-.iframe-video-holder {
-  position: relative;
-  height: 0;
-  background: $gym-black;
-  overflow: hidden;
 
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: none transparent;
-    border: 0;
-  }
+// back to top offset
+#main:target {
+  scroll-margin-top: 3em;
 }

@@ -13,15 +13,15 @@ embed_source: "youtube"
 
 # Content
 # Update per live stream, if needed
-title: "Live Stream"
-short_description: "Working within Spatial."
+title: "Livestream"
+short_description: "DIY AI"
 byline: "The Gymnasium Team"
 
 # twitch
 twitch_channel: "andrewpmiller"
 
 # youtube
-youtube_video_ID: "2vbJPsNNwDM"
+youtube_video_ID: "uA1Ho_bfMhw"
 
 # Aspect Ratio 16:19
 embed_width: "854"
