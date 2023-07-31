@@ -97,32 +97,33 @@
   .ratio-4-3 {
     padding-bottom: 75%;
   }
-}
 
+  @include breakpoint(medium, min) {
 
-@include breakpoint(medium, min) {
-
-  .main-content-static .w-75 {
-    width: 75%;
+    .w-75 {
+      width: 75%;
+    }
   }
-}
 
-.iframe-video-holder {
-  position: relative;
-  height: 0;
-  background: $gym-black;
-  overflow: hidden;
+  .iframe-video-holder {
+    position: relative;
+    height: 0;
+    background: $gym-black;
+    overflow: hidden;
 
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: none transparent;
-    border: 0;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: none transparent;
+      border: 0;
+    }
   }
+
 }
+
 
 // anniversary (10 year)
 #anniversary {
