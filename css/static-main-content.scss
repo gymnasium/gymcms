@@ -99,7 +99,6 @@
   }
 
   @include breakpoint(medium, min) {
-
     .w-75 {
       width: 75%;
     }
@@ -174,8 +173,10 @@
         margin-bottom: 1.6rem;
       }
 
-      .images {
-        margin-right: -2em;
+      @include breakpoint(medium, min) {
+        .images {
+          margin-right: -2em;
+        }
       }
 
       figure {
@@ -197,7 +198,6 @@
 
         figcaption {
           display: inline-block;
-          width: 100%;
           line-height: 1.35;
           padding: 1rem;
           border-top: 1px solid $gym-gray;
