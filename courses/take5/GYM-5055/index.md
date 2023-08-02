@@ -28,7 +28,7 @@ Low contrast colors make it difficult for users with vision differences to engag
 
 **Best Practice:** That’s why it’s always important to check your colors in an accessibility color checker.
 
-Simply add your color palette to the tool, and it will tell you if your choices are accessible to a wide range of users or not. Choosing to skip this step could result in a design that’s frustrating or even impossible for some people to engage with. If you haven’t already, I suggest watching my tutorial, [Getting Contrast right in Your Typography][1] to learn more about this topic.
+Simply add your color palette to the tool, and it will tell you if your choices are accessible to a wide range of users or not. Choosing to skip this step could result in a design that’s frustrating or even impossible for some people to engage with. If you haven’t already, I suggest watching my tutorial, [Getting Contrast right in Your Typography][3] to learn more about this topic.
 
 **Tip:** Another factor to consider when making color choices — be careful of breaking industry standard color conventions.
 
@@ -50,8 +50,8 @@ If different buttons and links use different colors, some of them may be overloo
 
 Compare the first design, which uses a variety of colors for clickable elements, with one that stays consistent throughout. You can see how the clickable elements are easier to spot in the second version. For more guidance on color accessibility, conventions, and the role it plays in a brand’s personality, check out the [**Resources**](#tutorial-resources) section of this video.
 
-And there you have it, three tips to help you create an effective color palette in web design. Thanks for watching, and be sure to check out our other [Take 5 tutorials][2], as well as the entire [course catalog][3] here at Gymnasium.
+*And there you have it*, three tips to help you create an effective color palette in web design. Thanks for watching, and be sure to check out our other [Take 5 tutorials][1], as well as the entire [course catalog][2] here at Gymnasium.
 
-[1]: https://thegymnasium.com/courses/take5/getting-contrast-right-in-your-typography
-[2]: https://thegymnasium.com/courses/take5
-[3]: https://thegymnasium.com/courses
+[1]: https://thegymnasium.com/courses/take5
+[2]: https://thegymnasium.com/courses
+[3]: https://thegymnasium.com/courses/take5/getting-contrast-right-in-your-typography
