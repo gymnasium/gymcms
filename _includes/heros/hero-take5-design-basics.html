@@ -1,0 +1,23 @@
+{%- assign hero_img_path = "/home/img/hero-take5-design-basics/" -%}
+{%- assign hero_img = "take5-design-basics.gif" | prepend: hero_img_path -%}
+{%- assign hero_link = "https://www.youtube.com/watch?v=MPxEtMX-rqI&list=PL0Y6L6nQtNzd3XnFuT7IwqDunTyOnUVh2" -%}
+
+<link rel="preload" as="image" href="{{ site.url }}{{ hero_img }}?{{ site.time | date:'%s' }}" fetchpriority="high">
+<link rel="stylesheet" href="{{ site.url }}{{ '/css/heros/hero-take5.css' }}?{{ site.time | date:'%s' }}" fetchpriority="high">
+  <div class="hero-promo topic-design" id="hero-take5-design-basics">
+  <div class="container">
+    <div class="hero-content-art" style="background-image: url('{{ site.url }}{{ hero_img }}?{{ site.time | date:'%s' }}'); border-image-source: url('{{ site.url }}{{ hero_img }}?{{ site.time | date:'%s' }}');"></div>
+    <div class="hero-content-copy">
+      <header>
+        <h3 class="subhead-topic">Design</h3>
+        <h2 class="take5-brand-kern">Take 5</h2>
+        <h1>Design Like a Pro</h1>
+        <p class="description"><b>Type. Color. Layout. </b></p>
+        <p class="description">We’re going back to design basics with these 5-minute tutorials taught by Meagan Fisher.</p>
+      </header>
+      <div class="cta">
+        <a class="gym-button" href="{{ hero_link }}" target="_blank" rel="noopener"><b>Watch the Tutorials</b></a>
+      </div>
+    </div>
+  </div>
+</div>
