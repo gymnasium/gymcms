@@ -5,7 +5,7 @@ date: 2023-07-25T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5054/
 poster_art: /img/take5/posters/gym-5054.jpg
-live: false
+live: true
 instructor: "Meagan Fisher"
 instructor_bio: "Web Designer and Developer at Owltastic"
 topic: "Design"
@@ -13,7 +13,7 @@ subtopics:
   - label: "Accessibility"
 video_ID: MPxEtMX-rqI
 video_duration: "4:17"
-featured: false
+featured: true
 short_description: "Learn how contrast in your typography can improve your content’s structure, readability, and accessibility in this tutorial."
 project_file_source:
 project_files:
