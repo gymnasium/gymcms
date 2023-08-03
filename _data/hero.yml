@@ -14,14 +14,14 @@ embed_source: "youtube"
 # Content
 # Update per live stream, if needed
 title: "Livestream"
-short_description: "DIY AI"
-byline: "The Gymnasium Team"
+short_description: "AI-Powered Mockup Magic"
+byline: "with Andrew Miller and Jeremy Osborn"
 
 # twitch
 twitch_channel: "andrewpmiller"
 
 # youtube
-youtube_video_ID: "uA1Ho_bfMhw"
+youtube_video_ID: "tJ_eN805Y6w"
 
 # Aspect Ratio 16:19
 embed_width: "854"
