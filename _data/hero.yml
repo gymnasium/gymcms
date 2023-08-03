@@ -14,8 +14,8 @@ embed_source: "youtube"
 # Content
 # Update per live stream, if needed
 title: "Livestream"
-short_description: "AI-Powered Mockup Magic: Prototyping Landing Pages with ChatGPT and Midjourney"
-byline: ""
+short_description: "AI-Powered Mockup Magic: Prototyping Landing Pages"
+byline: "with Andrew Miller and Jeremy Osborn"
 
 # twitch
 twitch_channel: "andrewpmiller"
