@@ -149,3 +149,31 @@
   border: 2px solid $gym-white !important;
   z-index: 1;
 }
+
+// hero-take5-design-basics.html
+
+// static first (default)
+
+#hero-take5-design-basics {
+
+  .hero-content-art {
+    background-image: url("{{ site.url }}/img/take5/posters/gym-5055-hero.jpg");
+    border-image-source: url("{{ site.url }}/img/take5/posters/gym-5055-hero.jpg");
+  }
+
+}
+
+// animated (enhancement)
+
+@media (prefers-reduced-motion: no-preference) {
+
+  #hero-take5-design-basics {
+
+    .hero-content-art {
+      background-image: url("{{ site.url }}/home/img/hero-take5-design-basics/take5-design-basics.gif");
+      border-image-source: url("{{ site.url }}/home/img/hero-take5-design-basics/take5-design-basics.gif");
+    }
+
+  }
+
+}

@@ -1,7 +1,6 @@
 {%- assign hero_img_path = "/home/img/hero-take5-portfolio/" -%}
 {%- assign hero_img = "take5-portfolio-refresh.jpg" | prepend: hero_img_path -%}
-{%- assign hero_utm = "&utm_source=gymnasium&utm_medium=hero&utm_campaign=AQ_NA_GYM-take5-portfolio-refresh&utm_content=050923" -%}
-{%- assign hero_link = "https://www.youtube.com/playlist?list=PL0Y6L6nQtNzdN9nJp_tfJQ5I5uB7tK6yn" | append: hero_utm -%}
+{%- assign hero_link = "https://www.youtube.com/playlist?list=PL0Y6L6nQtNzdN9nJp_tfJQ5I5uB7tK6yn" -%}
 
 <link rel="preload" as="image" href="{{ site.url }}{{ hero_img }}?{{ site.time | date:'%s' }}" fetchpriority="high">
 <link rel="stylesheet" href="{{ site.url }}{{ '/css/heros/hero-take5.css' }}?{{ site.time | date:'%s' }}" fetchpriority="high">
