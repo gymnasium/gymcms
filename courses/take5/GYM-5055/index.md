@@ -48,9 +48,11 @@ As you can see in the example here, if you use this attention-grabbing color thr
 
 If different buttons and links use different colors, some of them may be overlooked or seem static.
 
-Compare the first design, which uses a variety of colors for clickable elements, with one that stays consistent throughout. You can see how the clickable elements are easier to spot in the second version. For more guidance on color accessibility, conventions, and the role it plays in a brand’s personality, check out the [**Resources**](#tutorial-resources) section of this video.
+Compare the first design, which uses a variety of colors for clickable elements, with one that stays consistent throughout. You can see how the clickable elements are easier to spot in the second version.
 
-And there you have it, three tips to help you create an effective color palette in web design. Thanks for watching, and be sure to check out our other [Take 5 tutorials][2], as well as the entire [course catalog][3] here at Gymnasium.
+For more guidance on color accessibility, conventions, and the role it plays in a brand’s personality, check out the [**Resources**](#tutorial-resources) section of this video.
+
+*And there you have it*, three tips to help you create an effective color palette in web design. Thanks for watching, and be sure to check out our other [Take 5 tutorials][2], as well as the entire [course catalog][3] here at Gymnasium.
 
 [1]: https://thegymnasium.com/courses/take5/getting-contrast-right-in-your-typography
 [2]: https://thegymnasium.com/courses/take5
