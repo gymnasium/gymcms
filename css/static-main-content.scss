@@ -124,10 +124,51 @@
   // anniversary (10 year)
   #anniversary {
 
+    h2 {
+      font-size: 1.6em;
+      margin-top: 0;
+      margin-bottom: 1.6rem;
+    }
+
+    header figure:first-child {
+      max-width: 42.4em;
+    }
+
+    @include breakpoint(medium, max) {
+      header figure:first-child {
+        margin-bottom: 0.6em;
+      }
+    }
+
+    header .list {
+      border: 0 none;
+
+      ul {
+        padding-top: 1.2em;
+        padding-bottom: 1.2em;
+        border-top: 1px solid $gym-gray;
+
+        li:first-child {
+          margin-top: 0;
+        }
+      }
+
+      figcaption {
+        padding-top: 1.2rem;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    ul:not([class]) {
+      padding-left: 1em;
+      margin-bottom: 0;
+    }
+
     article {
       padding-top: 1.2em;
       border-top: 1px dashed $gym-gray;
-      margin-top: 1.2em;
+      margin-top: 1.8em;
 
       p {
         margin-top: 1rem;
@@ -167,45 +208,38 @@
         }
       }
 
-      h2 {
-        font-size: 1.6em;
-        margin-top: 0;
-        margin-bottom: 1.6rem;
+    }
+
+    @include breakpoint(medium, min) {
+      .images {
+        margin-right: -2em;
+      }
+    }
+
+    figure {
+      display: inline-block;
+      width: 100%;
+      max-width: 20.5em;
+      vertical-align: top;
+      border: 1px solid $gym-gray;
+      margin-top: 1.2em;
+      margin-right: 1.125em;
+
+      & > [class="iframe-video-holder"],
+      & > img {
+        background-color: $gym-black;
       }
 
-      @include breakpoint(medium, min) {
-        .images {
-          margin-right: -2em;
-        }
+      .iframe-video-holder {
+        padding-bottom: 56.25%;
       }
 
-      figure {
+      figcaption {
         display: inline-block;
         width: 100%;
-        max-width: 20.5em;
-        vertical-align: top;
-        border: 1px solid $gym-gray;
-        margin-top: 1.2em;
-        margin-right: 1.125em;
-
-        & > :first-child:not(figcaption) {
-          background-color: $gym-black;
-        }
-
-        .iframe-video-holder {
-          padding-bottom: 56.25%;
-        }
-
-        figcaption {
-          display: inline-block;
-          line-height: 1.35;
-          padding: 1rem;
-          border-top: 1px solid $gym-gray;
-        }
-      }
-
-      aside ul {
-        padding-left: 1.15em;
+        line-height: 1.35;
+        padding: 1rem;
+        border-top: 1px solid $gym-gray;
       }
     }
 
