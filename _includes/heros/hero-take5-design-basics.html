@@ -1,5 +1,3 @@
-{%- assign hero_img_path = "/home/img/hero-take5-design-basics/" -%}
-{%- assign hero_img = "take5-design-basics.gif" | prepend: hero_img_path -%}
 {%- assign hero_link = "/courses/take5/#design" -%}
 
 <link rel="preload" as="image" href="{{ site.url }}{{ hero_img }}?{{ site.time | date:'%s' }}" fetchpriority="high">
@@ -7,7 +5,7 @@
   <div class="hero-promo topic-design" id="hero-take5-design-basics">
   <div class="container">
     <a href="{{ site.url }}{{ hero_link }}">
-      <div class="hero-content-art" style="background-image: url('{{ site.url }}{{ hero_img }}?{{ site.time | date:'%s' }}'); border-image-source: url('{{ site.url }}{{ hero_img }}?{{ site.time | date:'%s' }}');"></div>
+      <div class="hero-content-art"></div>
     </a>
     <div class="hero-content-copy">
       <header>
