@@ -40,15 +40,11 @@
     padding: 0 30px 3em;
   }
 
-}
+  .hero-content-art {
+    display: none;
+  }
 
-.hero-content-art {
-  display: none;
-}
-
-@include breakpoint(medium, min) {
-
-  .hero-promo {
+  @include breakpoint(medium, min) {
 
     .container {
       position: relative;
@@ -79,72 +75,72 @@
 
   }
 
-}
+  // content / copy
 
-// content / copy
+  .hero-content-copy {
+    margin-top: 6%;
+    margin-bottom: 4%;
 
-.hero-content-copy {
-  margin-top: 6%;
-  margin-bottom: 4%;
+    header {
+      max-width: 36.5em;
+    }
 
-  header {
-    max-width: 36.5em;
-  }
+    h1 {
+      font-size: 2.5em;
+      line-height: 1.15;
+      letter-spacing: .1rem;
+      color: $gym-white;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 
-  h1 {
-    font-size: 2.5em;
-    line-height: 1.15;
-    letter-spacing: .1rem;
-    color: $gym-white;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+    h2 {
+      font-size: 2.5em;
+      line-height: 1.15;
+      letter-spacing: .1rem;
+      word-spacing: -.05rem;
+      color: $gym-black;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 
-  h2 {
-    font-size: 2.5em;
-    line-height: 1.15;
-    letter-spacing: .1rem;
-    word-spacing: -.05rem;
-    color: $gym-black;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+    .take5-brand-kern {
+      word-spacing: -.1rem;
+    }
 
-  .take5-brand-kern {
-    word-spacing: -.1rem;
-  }
+    .subhead-topic {
+      font-weight: bold;
+      font-size: 1em;
+      color: #e1e1e1;
+      letter-spacing: .1rem;
+      margin-bottom: 2.5rem;
+    }
 
-  .subhead-topic {
-    font-weight: bold;
-    font-size: 1em;
-    color: #e1e1e1;
-    letter-spacing: .1rem;
-    margin-bottom: 2.5rem;
-  }
+    .description {
+      font-size: 1.4em;
+      color: $gym-black;
+      margin-top: 1.6rem;
+    }
 
-  .description {
-    font-size: 1.4em;
-    color: $gym-black;
-    margin-top: 1.6rem;
-  }
+    // cta
 
-}
+    .cta {
+      margin-top: 2.5rem;
 
-// cta
+    // !override / reset/rescale font-size adjustment
 
-.hero-promo .cta {
-  margin-top: 2.5rem;
+      a.gym-button {
+        position: relative;
+        font-size: 105%;
+        width: auto;
+        vertical-align: bottom;
+        padding: 1.2em 1.6em;
+        border: 2px solid $gym-white;
+        z-index: 1;
+      }
 
-// !override / reset/rescale font-size adjustment
+    }
 
-  a.gym-button {
-    position: relative;
-    font-size: 105%;
-    width: auto !important;
-    vertical-align: bottom;
-    padding: 1.2em 1.6em !important;
-    border: 2px solid $gym-white !important;
-    z-index: 1;
   }
 
 }
@@ -170,7 +166,7 @@
 
     .hero-content-art {
       background-image: url("{{ site.url }}/home/img/hero-take5-design-basics/take5-design-basics.gif?{{ site.time | date:'%s' }}");
-      border-image-source: url("{{ site.url }}/home/img/hero-take5-design-basics/take5-design-basics-fill.gif?{{ site.time | date:'%s' }}");
+      border-image-source: url("{{ site.url }}/home/img/hero-take5-design-basics/take5-design-basics.gif?{{ site.time | date:'%s' }}");
     }
 
   }
