@@ -5,8 +5,7 @@
 
 .topic-design,
 .topic-development,
-.topic-accessibility
- {
+.topic-accessibility {
   background-color: $gym-magenta;
 }
 
@@ -85,38 +84,37 @@
       max-width: 36.5em;
     }
 
-    h1 {
-      font-size: 2.5em;
-      line-height: 1.15;
-      letter-spacing: .1rem;
-      color: $gym-white;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
+    h1,
     h2 {
       font-size: 2.5em;
       line-height: 1.15;
-      letter-spacing: .1rem;
-      word-spacing: -.05rem;
-      color: $gym-black;
+      letter-spacing: 0.1rem;
       margin-top: 0;
       margin-bottom: 0;
     }
 
+    h1 {
+      color: $gym-white;
+    }
+
+    h2 {
+      word-spacing: -0.05rem;
+      color: $gym-black;
+    }
+
     .take5-brand-kern {
-      word-spacing: -.1rem;
+      word-spacing: -0.1rem;
     }
 
     .subhead-topic {
       font-weight: bold;
       font-size: 1em;
       color: #e1e1e1;
-      letter-spacing: .1rem;
+      letter-spacing: 0.1rem;
       margin-bottom: 2.5rem;
     }
 
-    .description {
+    p:not([class]) {
       font-size: 1.4em;
       color: $gym-black;
       margin-top: 1.6rem;
@@ -132,7 +130,6 @@
       a.gym-button {
         position: relative;
         font-size: 105%;
-        width: auto;
         vertical-align: bottom;
         padding: 1.2em 1.6em;
         border: 2px solid $gym-white;
