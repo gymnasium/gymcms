@@ -22,7 +22,7 @@ Often, I’ll do an exercise where I describe the personality of a design in wor
 
 As a general rule, darker and more muted tones convey more authority, trustworthiness, and quality. That’s why we often see palettes of navy, maroon, and black from institutions in finance, education, and government. Brighter tones convey more energy, happiness, and approachability. Note how the use of brighter color palettes can make a product feel more youthful, fresh, and vibrant.
 
-**Tip:** The most important criteria any pallet must meet is that it must be accessible.
+**Tip:** The most important criteria any palette must meet is that it must be accessible.
 
 Low contrast colors make it difficult for users with vision differences to engage with your designs. For example, someone with a visual impairment may struggle to make out light texts on a white background, or for users who are colorblind, certain colors may blend together in a way that prohibits readability.
 
