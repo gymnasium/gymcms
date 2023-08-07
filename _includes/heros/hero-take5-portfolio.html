@@ -1,22 +1,25 @@
 {%- assign hero_img_path = "/home/img/hero-take5-portfolio/" -%}
 {%- assign hero_img = "take5-portfolio-refresh.jpg" | prepend: hero_img_path -%}
-{%- assign hero_link = "https://www.youtube.com/playlist?list=PL0Y6L6nQtNzdN9nJp_tfJQ5I5uB7tK6yn" -%}
+<!-- {%- assign hero_link = "https://www.youtube.com/playlist?list=PL0Y6L6nQtNzdN9nJp_tfJQ5I5uB7tK6yn" -%} -->
+{%- assign hero_link = "/courses/take5#career-skills" -%}
 
-<link rel="preload" as="image" href="{{ site.url }}{{ hero_img }}?{{ site.time | date:'%s' }}" fetchpriority="high">
+<link rel="preload" as="image" media="(min-width: 62em)" href="{{ site.url }}{{ hero_img }}?{{ site.time | date:'%s' }}" fetchpriority="high">
 <link rel="stylesheet" href="{{ site.url }}{{ '/css/heros/hero-take5.css' }}?{{ site.time | date:'%s' }}" fetchpriority="high">
   <div class="hero-promo topic-career-skills" id="hero-take5-portfolio">
   <div class="container">
-    <div class="hero-content-art" style="background-image: url('{{ site.url }}{{ hero_img }}?{{ site.time | date:'%s' }}'); border-image-source: url('{{ site.url }}{{ hero_img }}?{{ site.time | date:'%s' }}');"></div>
+    <a href="{{ hero_link }}">
+      <div class="hero-content-art" style="background-image: url('{{ site.url }}{{ hero_img }}?{{ site.time | date:'%s' }}'); border-image-source: url('{{ site.url }}{{ hero_img }}?{{ site.time | date:'%s' }}');"></div>
+    </a>
     <div class="hero-content-copy">
       <header>
         <h3 class="subhead-topic">Career Skills</h3>
         <h2 class="take5-brand-kern">Take 5</h2>
         <h1>Portfolio Tutorials</h1>
-        <p class="description"><b>Job opportunities. Career pivots. Passion projects.</b></p>
-        <p class="description">There’s always a reason to refresh your online portfolio. Improving your content just got easier thanks to these <span class="no-wrap">5-minute</span> video tutorials.</p>
+        <p><b>Job opportunities. Career pivots. Passion projects.</b></p>
+        <p>There’s always a reason to refresh your online portfolio. Improving your content just got easier thanks to these <span class="no-wrap">5-minute</span> video tutorials.</p>
       </header>
       <div class="cta">
-        <a class="gym-button" href="{{ hero_link }}" target="_blank" rel="noopener"><b>Watch the Tutorials</b></a>
+        <a class="gym-button natural" href="{{ hero_link }}"><b>Watch the Tutorials</b></a>
       </div>
     </div>
   </div>

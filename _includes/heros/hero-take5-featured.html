@@ -44,19 +44,22 @@
     <!-- Change to fallback: {{ hero_art }} -->
 {%- endif -%}
 
+<link rel="preload" as="image" media="(min-width: 62em)" href="{{ site.url }}{{ hero_art }}?{{ site.time | date:'%s' }}" fetchpriority="high">
 <link rel="stylesheet" href="{{ site.url }}/css/heros/hero-take5.css?{{ site.time | date:'%s' }}" fetchpriority="high">
   <div class="{{ 'hero-promo' }} {{ hero_style }}" id="hero-{{ hero_ID }}">
   <div class="container">
-    <div class="hero-content-art" style="background-image: url('{{ site.url }}{{ hero_art }}?{{ site.time | date:'%s' }}'); border-image-source: url('{{ site.url }}{{ hero_art }}?{{ site.time | date:'%s' }}');"></div>
+    <a href="{{ hero_link }}">
+      <div class="hero-content-art" style="background-image: url('{{ site.url }}{{ hero_art }}?{{ site.time | date:'%s' }}'); border-image-source: url('{{ site.url }}{{ hero_art }}?{{ site.time | date:'%s' }}');"></div>
+    </a>
     <div class="hero-content-copy">
       <header>
         <h3 class="subhead-topic">{{ hero_topic }}</h3>
         <h2 class="take5-brand-kern">Take 5</h2>
         <h1>{{ hero_title }}</h1>
-        <p class="description"><strong>Take 5 minutes to learn a practical skill for free <span class="inline-block">{{ hero_instructor }}</span>.</strong></p>
+        <p><b>Take 5 minutes to learn a practical skill for free <span class="inline-block">{{ hero_instructor }}</span>.</b></p>
       </header>
       <div class="cta">
-        <a class="gym-button" href="{{ hero_link }}"><b>Watch and Learn</b></a>
+        <a class="gym-button natural" href="{{ hero_link }}"><b>Watch and Learn</b></a>
       </div>
     </div>
   </div>
