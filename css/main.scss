@@ -1057,6 +1057,12 @@ aside.system-status {
   // display: none;
 }
 
+// Exclude `#utility-nav` when banner is active
+
+#utility-nav {
+  display: none;
+}
+
 // Courseware Raw HTML styling
 
 .raw-html .content {
