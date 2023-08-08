@@ -1032,29 +1032,29 @@ aside.system-status {
 
 // Ukraine Relief related theme
 
- & {
-    background-color: $gym-light-page-background;
-    border-bottom: 1px solid $gym-black;
-  }
-
- p:before {
-    content: "";
-    display: inline-block;
-    width: 4.6ex;
-    vertical-align: -0.5ex;
-    background-color: #fc0;
-    padding-bottom: 1.15ex;
-    border: 1px solid #06c;
-    border-top-width: 1.15ex;
-    margin-right: 1.15ex;
-  }
+//  & {
+//     background-color: $gym-light-page-background;
+//     border-bottom: 1px solid $gym-black;
+//   }
+//
+//  p:before {
+//     content: "";
+//     display: inline-block;
+//     width: 4.6ex;
+//     vertical-align: -0.5ex;
+//     background-color: #fc0;
+//     padding-bottom: 1.15ex;
+//     border: 1px solid #06c;
+//     border-top-width: 1.15ex;
+//     margin-right: 1.15ex;
+//   }
 
 }
 
 // Exclude sitewide banner from home page
 
 .gymnasium-home #system-status {
-  display: none;
+  // display: none;
 }
 
 // Courseware Raw HTML styling
