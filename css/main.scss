@@ -1020,6 +1020,7 @@ https://github.com/gymnasium/tracker/issues/40
 aside.system-status {
 
   & {
+    background-color: $gym-light-page-background;
     font-size: 16px;
     padding: 1em;
   }
@@ -1032,28 +1033,25 @@ aside.system-status {
 
 // Ukraine Relief related theme
 
- & {
-    background-color: $gym-light-page-background;
-    border-bottom: 1px solid $gym-black;
-  }
+  .ukr-relief {
 
- p:before {
-    content: "";
-    display: inline-block;
-    width: 4.6ex;
-    vertical-align: -0.5ex;
-    background-color: #fc0;
-    padding-bottom: 1.15ex;
-    border: 1px solid #06c;
-    border-top-width: 1.15ex;
-    margin-right: 1.15ex;
+    p:before {
+      content: "";
+      display: inline-block;
+      width: 4.6ex;
+      vertical-align: -0.5ex;
+      background-color: #fc0;
+      padding-bottom: 1.15ex;
+      border: 1px solid #06c;
+      border-top-width: 1.15ex;
+      margin-right: 1.15ex;
+    }
   }
 
 }
 
-// Exclude sitewide banner from home page
-
-.gymnasium-home #system-status {
+// #system-status: Exclude `#utility-nav` when banner is active
+.system-status.active + .site-header .utility-nav {
   display: none;
 }
 

@@ -9,4 +9,5 @@ og_keywords: "free online courses designers design user experience UX javascript
 og_art: /img/static-pages/og/ten-year-anniversary-og.png
 og_url: https://thegymnasium.com/anniversary
 css: [/css/static-main-content.css]
+banner: false
 ---

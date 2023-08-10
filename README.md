@@ -9,11 +9,18 @@ This repo serves as CMS for some of the static content on our Open EdX site. Con
 
 ## Getting started
 
-1. clone this repo.
-1. run `docker-compose up` in the repo root.
-1. Wait patiently for stuff to load & compile.
-1. navigate to [http://localhost:4000](http://localhost:4000) to see the build status.
-1. Get busy making beautiful things!
+- clone this repo.
+[Docker Compose V1][1]
+- run `docker-compose up` in the repo root.
+[Docker Compose V2][1]
+- run `docker compose up` in the repo root.
+
+- Wait patiently for stuff to load & compile.
+- navigate to [http://localhost:4000](http://localhost:4000) to see the build status.
+- Get busy making beautiful things!
 
 ## Static Content Site Map
-* [http://localhost:4000/sitemap](http://localhost:4000/sitemap)
+- [http://localhost:4000/sitemap](http://localhost:4000/sitemap)
+
+## References
+[1]: https://docs.docker.com/compose/migrate/ "Migrate to Docker Compose V2"
