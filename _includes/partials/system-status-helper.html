@@ -11,8 +11,13 @@
   site.banner: {{ site.banner }}
   page.banner: {{ page.banner }}
   banner_active: {{ banner_active }}
- -->
-<div id="system-status-helper" class="hide" data-active="{{ banner_active }}">
+-->
+{%- capture banner_exclusions -%}
+{%- for item in site.banner_exclude -%}
+{{item.url}}{%- unless forloop.last -%},{%- endunless -%}
+{%- endfor -%}
+{%- endcapture -%}
+<div id="system-status-helper" class="hide" data-active="{{ banner_active }}" data-exclude="{{banner_exclusions}}">
   <div class="container">
     <p><strong>We’re celebrating 10 years of Gymnasium!</strong> <span aria-label="Party Popper emoji" role="img">&#127881;</span> Join us for a <a href="{{ site.gymurl }}/anniversary">scroll down memory lane</a>.</p>
   </div>
