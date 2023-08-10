@@ -1,6 +1,5 @@
 {%- comment -%}
-1. When the `data-active` attribute is set to `true`, the content of this div will automatically appear in the system status bar on the Gymnasium site. Style sheets should target the aside.system-status class, and styles can be added to `main.scss`; see `systemStatus()` in `js/gymnasium.js` for display behavior.
-2. TODO: we don't need it now, but if we ever wanted to only have the banner appear on a couple of pages, add support for page-specific banners, as in page.banner = true
+1. Use _config.yml (and per-environment) file(s) to define whether or not the banner shows site-wide. Adding a banner: false to a page's front-matter will exclude the banner from that page. Conversely, if the site banner is set to false, individual pages can still display the banner using the page's front-matter. The current behavior is to hide the utility nav when the banner is active via CSS; see `systemStatus()` in `js/gymnasium.js` for additional display behavior.
 {%- endcomment -%}
 {%- assign banner_active = site.banner -%}
 {%- if page.banner == false or page.banner == true -%}
