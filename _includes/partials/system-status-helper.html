@@ -7,6 +7,11 @@
 {%- else if page.banner == true -%}
   {%- assign banner_active = true -%}
 {%- endif -%}
+<!-- DEBUG
+  site.banner: {{ site.banner }}
+  page.banner: {{ page.banner }}
+  banner_active: {{ banner_active }}
+ -->
 <div id="system-status-helper" class="hide" data-active="{{ banner_active }}">
   <div class="container">
     <p><strong>We’re celebrating 10 years of Gymnasium!</strong> <span aria-label="Party Popper emoji" role="img">&#127881;</span> Join us for a <a href="{{ site.gymurl }}/anniversary">scroll down memory lane</a>.</p>
