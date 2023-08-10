@@ -21,6 +21,10 @@
   <meta name="robots" content="{{page.robots}}">
 {%- endif %}
 
+{% if page.banner == false -%}
+  <meta id="banner-exclude" name="banner-exclude" content="true">
+{%- endif %}
+
 {%- comment -%}
 Add DNS preload/prefetch meta tags to help prime the browser to fetch our resources
 See here for additional notes on how to improve this and avoid browser warnings:
