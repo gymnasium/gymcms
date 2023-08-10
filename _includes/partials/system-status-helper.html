@@ -3,10 +3,9 @@
 2. TODO: we don't need it now, but if we ever wanted to only have the banner appear on a couple of pages, add support for page-specific banners, as in page.banner = true
 {%- endcomment -%}
 {%- assign banner_active = site.banner -%}
-{%- if page.banner == false -%}
+{%- if page.banner == false or page.banner == true -%}
   {%- assign banner_active = page.banner -%}
 {%- endif -%}
-<!-- banner_active: {{ banner_active }} | site.banner: {{ site.banner }} | page.banner: {{ page.banner }}-->
 <div id="system-status-helper" class="hide" data-active="{{ banner_active }}">
   <div class="container">
     <p><strong>We’re celebrating 10 years of Gymnasium!</strong> <span aria-label="Party Popper emoji" role="img">&#127881;</span> Join us for a <a href="{{ site.gymurl }}/anniversary">scroll down memory lane</a>.</p>
