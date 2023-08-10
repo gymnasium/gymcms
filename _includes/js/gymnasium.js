@@ -315,18 +315,6 @@ class Gymnasium {
       exclude = true;
     }
 
-    // Method 2: pull url pathnames from the site config yml
-    if (helper.getAttribute('data-exclude') !== 'undefined' && helper.getAttribute('data-exclude') !== null) {
-      var exclusions = helper.getAttribute('data-exclude');
-      var paths = exclusions.split(',');
-      paths.forEach(url => {
-        if (window.location.pathname.toString().includes(url)) {
-          // console.log(`The URL contains the string ${url}`);
-          exclude = true;
-        }
-      });
-    }
-
     if (helper.getAttribute('data-active') === 'true' && exclude !== true) {
       showBanner();
     }

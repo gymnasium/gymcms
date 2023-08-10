@@ -6,9 +6,6 @@ aqassetsurl: https://stag-assets.aquent.com
 timezone: America/New_York
 environment: local
 banner: true
-banner_exclude:
-  - url: /anniversary
-  - url: /anniversary/
 
 # Building
 
