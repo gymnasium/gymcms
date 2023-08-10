@@ -5,7 +5,8 @@ gymurl: https://courses.gymna.si
 aqassetsurl: https://stag-assets.aquent.com
 timezone: America/New_York
 environment: development
-   
+banner: true
+
 # Building
 
 exclude:

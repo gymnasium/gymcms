@@ -303,6 +303,7 @@ class Gymnasium {
     if (helper.getAttribute('data-active') === 'true') {
       banner.innerHTML = helper.innerHTML;
       banner.classList.remove('hide');
+      banner.classList.add('active');
       console.log('[gym] system status banner active!');
     }
   }

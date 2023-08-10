@@ -1050,15 +1050,8 @@ aside.system-status {
 
 }
 
-// Exclude sitewide banner from home page
-
-.gymnasium-home #system-status {
-  // display: none;
-}
-
-// Exclude `#utility-nav` when banner is active
-
-#utility-nav {
+// #system-status: Exclude `#utility-nav` when banner is active
+.system-status.active + .site-header .utility-nav {
   display: none;
 }
 
