@@ -210,16 +210,10 @@
 
     }
 
-    @include breakpoint(medium, min) {
-      .images {
-        margin-right: -2em;
-      }
-    }
-
     figure {
       display: inline-block;
       width: 100%;
-      max-width: 20.5em;
+      max-width: 31.45em; /* 2 column default */
       vertical-align: top;
       border: 1px solid $gym-gray;
       margin-top: 1.2em;
@@ -227,11 +221,12 @@
 
       & > [class="iframe-video-holder"],
       & > img {
+        color: $gym-white;
         background-color: $gym-black;
       }
 
       .iframe-video-holder {
-        padding-bottom: 56.25%;
+        padding-bottom: 56.24%;
       }
 
       figcaption {
@@ -240,6 +235,20 @@
         line-height: 1.35;
         padding: 1rem;
         border-top: 1px solid $gym-gray;
+      }
+    }
+
+    .col-3 figure {
+      max-width: 20.5em;
+    }
+
+    .portrait {
+      max-width: 15.025em;
+    }
+
+    @include breakpoint(medium, min) {
+      .images {
+        margin-right: -2em;
       }
     }
 
