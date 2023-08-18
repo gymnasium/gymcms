@@ -24,7 +24,7 @@ take5_tutorials:
   hero_text: "Learn new skills with 5-minute tutorials."
   hero_CTA: "View All Tutorials"
   promo_label: "Featured"
-  promo_ID: "GYM-5052"
+  promo_ID: "GYM-5054"
 collections:
   format: "Collections"
   hero_text: "Explore specific topics with free courses, tutorials, resources, and jobs."

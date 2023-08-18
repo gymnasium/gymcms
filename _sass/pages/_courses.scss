@@ -212,6 +212,11 @@
 
   figure {
     margin-bottom: 1em;
+
+    img {
+      background-color: $gym-gray;
+      border: 1px solid $gym-gray;
+    }
   }
 
   .cta {
