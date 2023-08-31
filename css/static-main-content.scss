@@ -242,13 +242,12 @@
       max-width: 20.5em;
     }
 
-    .portrait {
-      max-width: 15.025em;
-    }
-
     @include breakpoint(medium, min) {
       .images {
         margin-right: -2em;
+      }
+      .portrait {
+        max-width: 15.025em;
       }
     }
 
