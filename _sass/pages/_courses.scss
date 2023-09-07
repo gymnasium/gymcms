@@ -388,13 +388,15 @@
 
 .banner-email-campaign {
 
-  .banner-fragment {
-    display: none;
+  @include breakpoint(medium, min) {
+    .banner-fragment {
+      display: none;
+    }
   }
 
   .banner-promo {
     display: none;
-    width: max-content;
+    max-width: max-content;
     background-color: $gym-white;
     padding: 1em;
     border: 1px dashed $gym-orange;
@@ -412,5 +414,12 @@
   [id$="-student"]:target + .banner-promo,
   [id$="-talent"]:target + .banner-promo {
     display: block;
+  }
+
+  @include breakpoint(small, max) {
+    [id$="-student"]:target,
+    [id$="-talent"]:target {
+      scroll-margin-top: 8em;
+    }
   }
 }
