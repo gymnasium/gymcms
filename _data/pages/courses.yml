@@ -1,5 +1,6 @@
 ---
-main:
+header:
+  banner_email_campaign: "true"
   title: "Courses"
   tagline: "Free online courses and tutorials."
   short_description: "Learn design, development, UX, accessibility, and career skills from industry experts."

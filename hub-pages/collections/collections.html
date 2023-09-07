@@ -20,7 +20,7 @@ css: [/css/collections.css]
     <div class="cols">
       <ul>
       {%- assign collections_sorted = site.data.collections | sort -%}
-      {%- for collection_hash in collections_sorted reversed -%}
+      {%- for collection_hash in collections_sorted -%}
         {%- assign hub_page = collection_hash[1] -%}
         {%- unless hub_page.exclude -%}
         <li class="collection">

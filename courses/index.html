@@ -18,10 +18,13 @@ permalink: /courses/
 
   <header class="about">
     <div class="container">
-      <h1>{{ main.main.title }}</h1>
+      {%- unless main.header.banner_email_campaign != "true" -%}
+        {%- include partials/courses-banner-email-campaign.html -%}
+      {%- endunless -%}
+      <h1>{{ main.header.title }}</h1>
       <p>
-        <strong class="block">{{ main.main.tagline }}</strong>
-        {{ main.main.short_description }}
+        <strong class="block">{{ main.header.tagline }}</strong>
+        {{ main.header.short_description }}
       </p>
     </div>
   </header>
