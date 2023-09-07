@@ -383,3 +383,34 @@
 #take5-list .course-description h2 {
   margin-top: 0;
 }
+
+// --- Email campaign banner ---
+
+.banner-email-campaign {
+
+  .banner-fragment {
+    display: none;
+  }
+
+  .banner-promo {
+    display: none;
+    width: max-content;
+    background-color: $gym-white;
+    padding: 1em;
+    border: 1px dashed $gym-orange;
+    margin-bottom: 1.4em;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    [role="img"] {
+      letter-spacing: 0.3ex;
+    }
+  }
+
+  [id$="-student"]:target + .banner-promo,
+  [id$="-talent"]:target + .banner-promo {
+    display: block;
+  }
+}
