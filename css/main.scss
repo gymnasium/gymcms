@@ -967,6 +967,7 @@ https://github.com/gymnasium/tracker/issues/40
 }
 
 // Enrollment disabled
+// Courseware About page, course level and CTA
 
 .course-metabar {
   .action {
@@ -984,6 +985,10 @@ https://github.com/gymnasium/tracker/issues/40
   }
 
   @include breakpoint(medium, max) {
+    .meta.level strong {
+      margin-top: 0;
+    }
+    .gym-button.get-started,
     .register.disabled {
       margin-top: 1em;
     }
