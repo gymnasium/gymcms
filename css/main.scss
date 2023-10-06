@@ -984,8 +984,9 @@ https://github.com/gymnasium/tracker/issues/40
   }
 
   @include breakpoint(medium, max) {
-    .register.disabled
+    .register.disabled {
       margin-top: 1em;
+    }
   }
 }
 
