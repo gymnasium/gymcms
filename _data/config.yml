@@ -130,6 +130,8 @@ logos:
     black:
       src: /img/brand/png/gymnasium-logo-black-lg.png
       srcset: /img/brand/svg/gymnasium-logo-black.svg
+  openedx:
+    src: /img/openedx/edx-logo-bw.png
 colors:
   orange: "#ff5f14"
   blue: "#0077c8"
