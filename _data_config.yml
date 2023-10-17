@@ -1,6 +1,7 @@
 # Setup
 title: Gymnasium Data Feeds
 url: https://data.gym.soy #https://data.thegymcms.com
+root_url: https://gym.soy
 lms_url: https://learn.gym.soy
 astro_url: https://astro.gym.soy
 eleventy_url: https://11ty.gym.soy
