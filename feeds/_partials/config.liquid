@@ -15,6 +15,7 @@
   {%- assign value = value | replace: 'GYM_ROOT_URL', site.root_url -%}
   {{key}}:{{value}},
   {% if forloop.last %}
+  "root_url": "{{ site.root_url }}",
   "cms_url": "{{ site.url }}",
   "lms_url": "{{ site.lms_url }}",
   "eleventy_url": "{{ site.eleventy_url }}",
