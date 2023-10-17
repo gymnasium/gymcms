@@ -1,6 +1,7 @@
 # Setup
 title: Gymnasium Static Content
 url: http://localhost:4000
+root_url: https://gym.soy
 lms_url: https://learn.gym.soy
 astro_url: http://localhost:3030
 eleventy_url: http://localhost:4040
