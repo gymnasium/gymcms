@@ -12,6 +12,8 @@
   {%- assign value = value | replace: 'GYM_LMS_URL', site.lms_url -%}
   {%- assign value = value | replace: 'GYM_DATA_URL', site.url -%}
   {{key}}:{{value}},
+  {%- assign value = value | replace: 'GYM_ROOT_URL', site.root_url -%}
+  {{key}}:{{value}},
   {% if forloop.last %}
   "cms_url": "{{ site.url }}",
   "lms_url": "{{ site.lms_url }}",
