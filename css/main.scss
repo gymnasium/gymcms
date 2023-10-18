@@ -967,34 +967,34 @@ https://github.com/gymnasium/tracker/issues/40
 }
 
 // Enrollment disabled
+// Courseware About page, course level and CTA
 
-.course-metabar .register.disabled {
-  display: inline-block;
-  font-weight: bold;
-  font-size: 1.3225em;
-  color: $gym-black;
-  background-color: $gym-white;
-  padding: 1em;
-  border: 1px solid $gym-black;
-}
-
-@include breakpoint(medium, min) {
-
-  .course-metabar .register.disabled {
-    position: relative;
-    left: 5%;
-    margin: -0.25rem -3em 0;
+.course-metabar {
+  .action {
+    text-align: center;
   }
 
-}
-
-@include breakpoint(large, min) {
-
-  .course-metabar .register.disabled {
-    left: 1em;
+  .register.disabled {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.3225em;
+    color: $gym-black;
+    background-color: $gym-white;
+    padding: 1em;
+    border: 1px solid $gym-black;
   }
 
+  @include breakpoint(medium, max) {
+    .meta.level strong {
+      margin-top: 0;
+    }
+    .gym-button.get-started,
+    .register.disabled {
+      margin-top: 1em;
+    }
+  }
 }
+
 
 #failed-verification-banner {
 
