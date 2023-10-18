@@ -11,8 +11,10 @@
 
     ul {
       list-style: disc;
-      padding-top: 1.2em;
+      padding: 1.2em 0;
       border-top: 1px dashed $gym-gray-2;
+      border-bottom: 1px dashed $gym-gray-2;
+      margin-bottom: 0;
     }
 
     li:first-child {
@@ -21,8 +23,24 @@
   }
 
   li {
-    margin-top: .625em;
+    margin-top: 0.625em;
     margin-left: 1.2em;
+    margin-bottom: 0.625em;
+  }
+
+  ::marker,
+  .to-top-link b:before {
+    color: $gym-orange;
+  }
+
+  .to-top-link {
+    b {
+      font-weight: normal;
+    }
+
+    &:b:before {
+      font-weight: bold;
+    }
   }
 
   p {
@@ -31,6 +49,51 @@
 
   section {
     padding-top: 1.2em;
+    margin-top: 1.2em;
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  .note {
+    padding: 1.2em 0;
+    border-top: 1px dashed $gym-gray-2;
+    border-bottom: 1px dashed $gym-gray-2;
+    margin-top: 1.2em;
+  }
+
+  table {
+    margin-top: 1.2em;
+
+    thead {
+      border-top: 1px solid $gym-black;
+      border-bottom: 1px solid $gym-black;
+      margin-bottom: 1.2em;
+
+      th {
+        padding: 0.625em 0;
+      }
+    }
+
+    tbody {
+      tr {
+        vertical-align: top;
+        border-top: 1px dashed $gym-gray-2;
+      }
+      td {
+        padding-top: 1.2em;
+        padding-bottom: 0.625em;
+      }
+      td + td {
+        padding-left: 1.2em;
+      }
+      ul:first-child {
+        li:first-child {
+          margin-top: 0;
+        }
+      }
+    }
   }
 
   address {
