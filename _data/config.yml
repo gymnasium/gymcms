@@ -8,58 +8,58 @@ meta:
 navigation:
   main:
   - title: About
-    href: /about/
+    href: GYM_ROOT_URL/about/
   - title: Courses
-    href: /courses/
+    href: GYM_ROOT_URL/courses/
   - title: Tutorials
-    href: /tutorials/
+    href: GYM_ROOT_URL/tutorials/
   - title: Webinars
-    href: /webinars/
+    href: GYM_ROOT_URL/webinars/
   - title: Instructors
-    href: /instructors/
+    href: GYM_ROOT_URL/instructors/
   - title: Blog
-    href: /blog/
+    href: GYM_ROOT_URL/blog/
   footer:
   - title: What We Do
     links:
       - title: Courses
-        href: /courses/
+        href: GYM_ROOT_URL/courses/
       - title: Tutorials
-        href: /courses/take5/
+        href: GYM_ROOT_URL/courses/take5/
       - title: Jobs
-        href: /jobs/
+        href: GYM_ROOT_URL/jobs/
       - title: Webinars
-        href: /webinars/
+        href: GYM_ROOT_URL/webinars/
       - title: Articles
         href: https://medium.com/gymnasium
         target: _blank
         rel: noopener
       - title: About
-        href: /about/
+        href: GYM_ROOT_URL/about/
   - title: Content Collections
     links:
       - title: Design Systems
-        href: /design-systems/
+        href: GYM_ROOT_URL/design-systems/
       - title: Web Development
-        href: /web-development/
+        href: GYM_ROOT_URL/web-development/
       - title: UX Design
-        href: /ux-design/
+        href: GYM_ROOT_URL/ux-design/
       - title: Prototyping
-        href: /prototyping/
+        href: GYM_ROOT_URL/prototyping/
       - title: Accessibility
-        href: /accessibility/
+        href: GYM_ROOT_URL/accessibility/
       - title: Remote Work
-        href: /remote-work/
+        href: GYM_ROOT_URL/remote-work/
   - title: Resources
     links:
       - title: FAQ
-        href: /faq/
+        href: GYM_ROOT_URL/faq/
       - title: Support
-        href: /support/
+        href: GYM_ROOT_URL/support/
       - title: Social Impact
-        href: /social-impact/
+        href: GYM_ROOT_URL/social-impact/
       - title: Privacy Policy
-        href: /privacy-policy/
+        href: GYM_ROOT_URL/privacy-policy/
       - title: Corporate Social Responsibility
         href: https://aquent.com/csr-policy
         target: _blank
