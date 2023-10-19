@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5055
+id: GYM-5055
 title: "Creating an Effective Color Palette in Design"
 date: 2023-03-16T00:00:00-04:00
 course_type: take5
@@ -11,7 +11,7 @@ instructor_bio: "Web Designer and Developer at Owltastic"
 topic: "Design"
 subtopics:
   - label: "Accessibility"
-video_ID: KrN5qckZ7iA
+video_id: KrN5qckZ7iA
 video_duration: "4:14"
 featured: false
 description: "Learn how to choose a color palette that strengthens the branding, accessibility, and UX of your design in this tutorial."

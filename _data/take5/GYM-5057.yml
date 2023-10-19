@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5057
+id: GYM-5057
 title: "Leveling Up Your Layouts in Web Design"
 date: 2023-07-05T00:00:00-04:00
 course_type: take5
@@ -11,7 +11,7 @@ instructor_bio: "Web Designer and Developer at Owltastic"
 topic: "Design"
 subtopics:
   - label: "Accessibility"
-video_ID: FDlpkWUp8wk
+video_id: FDlpkWUp8wk
 video_duration: "4:39"
 featured: false
 description: Learn how to use grids, whitespace, and responsive design to make better layouts for your web pages in this tutorial.

@@ -1,5 +1,5 @@
 ---
-course_ID: GYM-5054
+id: GYM-5054
 title: "Getting Contrast Right in Your Typography"
 date: 2023-07-25T00:00:00-04:00
 course_type: take5
@@ -11,7 +11,7 @@ instructor_bio: "Web Designer and Developer at Owltastic"
 topic: "Design"
 subtopics:
   - label: "Accessibility"
-video_ID: oaAJzDFXHvc
+video_id: oaAJzDFXHvc
 video_duration: "4:17"
 featured: true
 description: "Learn how contrast in your typography can improve your content’s structure, readability, and accessibility in this tutorial."
