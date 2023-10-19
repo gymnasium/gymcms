@@ -14,7 +14,7 @@ embed_source: "youtube"
 # Content
 # Update per live stream, if needed
 title: "Livestream"
-short_description: "Testing the Limits of LLMs"
+description: "Testing the Limits of LLMs"
 byline: "with Andrew Miller and Jeremy Osborn"
 
 # twitch
