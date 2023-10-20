@@ -1,6 +1,7 @@
 ---
 ---
 @import 'variables';
+@import 'mixins';
 
 .privacy-policy {
   nav {
@@ -23,6 +24,7 @@
   }
 
   li {
+    max-width: 40em;
     margin-top: 0.625em;
     margin-left: 1.2em;
     margin-bottom: 0.625em;
@@ -53,6 +55,10 @@
 
     h2 {
       margin-top: 0;
+
+      + p {
+        margin-top: 1.2em;
+      }
     }
   }
 
@@ -64,33 +70,68 @@
   }
 
   table {
-    margin-top: 1.2em;
-
-    thead {
-      border-top: 1px solid $gym-black;
-      border-bottom: 1px solid $gym-black;
-      margin-bottom: 1.2em;
-
-      th {
-        padding: 0.625em 0;
-      }
-    }
-
     tbody {
       tr {
         vertical-align: top;
-        border-top: 1px dashed $gym-gray-2;
       }
-      td {
-        padding-top: 1.2em;
-        padding-bottom: 0.625em;
-      }
-      td + td {
-        padding-left: 1.2em;
+      td:first-child {
+        margin-top: 0.625em;
       }
       ul:first-child {
         li:first-child {
           margin-top: 0;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium, max) {
+    table {
+      th {
+        color: transparent;
+        line-height: 0;
+        user-select: none;
+      }
+      tr:first-child td:first-child {
+        margin-top: 0.4em;
+      }
+      td {
+        display: block;
+
+        p:only-of-type {
+          margin-bottom: 0.625em;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium, min) {
+    table {
+      margin-top: 1.2em;
+
+      thead {
+        border-top: 1px solid $gym-black;
+        border-bottom: 1px solid $gym-black;
+        margin-bottom: 1.2em;
+
+        th {
+          padding: 0.625em 0;
+        }
+        th + th {
+          padding-left: 1.2em;
+        }
+      }
+
+      tbody {
+        tr {
+          border-top: 1px dashed $gym-gray-2;
+        }
+        td {
+          padding-top: 1.2em;
+        }
+        td + td {
+          padding-left: 1.2em;
+          padding-bottom: 0.625em;
         }
       }
     }
