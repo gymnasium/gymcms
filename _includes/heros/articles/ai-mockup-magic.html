@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="{{ site.url }}/css/heros/hero-article.css?{{ site.time | date:'%s' }}" fetchpriority="high">
+<link rel="preload" href="{{ site.url }}/home/img/heros/articles/ai-mockup-magic/ai-mockup-magic-1280w.jpg?{{ site.time | date:'%s' }}" as="image" media="(max-width: 75em)" fetchpriority="high">
+<link rel="preload" href="{{ site.url }}/home/img/heros/articles/ai-mockup-magic/ai-mockup-magic-768w.jpg?{{ site.time | date:'%s' }}" as="image" media="(min-width: 75em)" fetchpriority="high">
+<script nomodule src="{{ site.url }}/js/polyfills/picture/plugins/intrinsic-dimension/pf.intrinsic.min.js?{{ site.time | date:'%s' }}"></script>
+<script nomodule src="{{ site.url }}/js/polyfills/picture/picturefill.min.js?{{ site.time | date:'%s' }}"></script>
+<article class="hero-promo" id="ai-mockup-magic">
+  <div class="container">
+    <div class="content">
+      <div class="image">
+        <a href="https://medium.com/gymnasium/">
+          <picture>
+            <source srcset="{{ site.url }}/home/img/heros/articles/ai-mockup-magic/ai-mockup-magic-768w.jpg?{{ site.time | date:'%s' }}" width="768" height="714" media="(min-width: 1200px)">
+            <img alt="Automagical mockups shown on various screens and devices." src="{{ site.url }}/home/img/heros/articles/ai-mockup-magic/ai-mockup-magic-1280w.jpg?{{ site.time | date:'%s' }}" width="1280" height="720" decoding="async" fetchpriority="high">
+          </picture>
+        </a>
+      </div>
+      <div class="text">
+        <header>
+          <hgroup>
+            <p class="subhead all-caps">
+              <b>New Article</b>
+            </p>
+            <h1>AI Mockup Magic: Prototyping Landing Pages With Llms</h1>
+          </hgroup>
+          <p>Automagically prototype faster with more meaningful content and less gray boxes and lorem ipsum. Learn how to turn a prompt into productivity in our latest article (and livestream).</p>
+        </header>
+        <div class="cta">
+          <a class="gym-button natural" href="https://medium.com/gymnasium/"><b>Embrace the Magic</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
