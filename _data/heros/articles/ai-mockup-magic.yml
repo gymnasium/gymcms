@@ -1,0 +1,10 @@
+id: ai-mockup-magic
+subhead: "New Article"
+title: "AI Mockup Magic: Prototyping Landing Pages with LLMs"
+description: "Automagically prototype faster with more meaningful content and less gray boxes and lorem ipsum. Learn how to turn a prompt into productivity in our latest article (and livestream)."
+cta: "Embrace the Magic"
+cta_url: https:medium.com/gymnasium/
+alt_text: "Automagical mockups shown on various screens and devices."
+artwork:
+  1: /ai-mockup-magic-768w.jpg
+  2: /ai-mockup-magic-1280w.jpg
