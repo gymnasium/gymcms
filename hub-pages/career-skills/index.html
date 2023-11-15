@@ -28,7 +28,7 @@ css: [/css/hub-pages.css]
                          <h2 class="all-caps">Courses</h2>
                         </header>
                         <figure class="course-artwork">
-                          <img alt="Design Systems for Everyone" srcset="{{ site.url }}/img/course-artwork/svg/gym-017.svg" src="{{ site.url }}/img/course-artwork/png/gym-017.png" width="574" height="488" decoding="async">
+                          <img alt="Design Systems for Everyone" srcset="{{ site.url }}/img/course-artwork/svg/gym-017.svg" src="{{ site.url }}/img/course-artwork/png/gym-017.png" width="574" height="488" decoding="async" fetchpriority="high">
                         </figure>
                       <h3 class="all-caps">Design Systems for Everyone</h3>
                       </div>
@@ -49,7 +49,7 @@ css: [/css/hub-pages.css]
                           <h2 class="all-caps">Tutorials</h2>
                         </header>
                         <figure class="full-width">
-                          <img alt="Making a Great First Impression with Your Portfolio" src="{{ site.url }}/img/take5/posters/gym-5052.jpg" width="1280" height="720" decoding="async">
+                          <img alt="Making a Great First Impression with Your Portfolio" src="{{ site.url }}/img/take5/posters/gym-5052.jpg" width="1280" height="720" decoding="async" fetchpriority="high">
                         </figure>
                         <h3 class="all-caps">Making a Great First Impression with Your Portfolio</h3>
                       </div>
@@ -70,7 +70,7 @@ css: [/css/hub-pages.css]
                           <h2 class="all-caps">Articles</h2>
                         </header>
                         <figure class="full-width">
-                          <img alt="Improving Your Portfolio is Easier Than You Think" src="{{ site.url }}/img/hub-pages/articles/featured/improving-your-portfolio.png" width="1280" height="720" decoding="async">
+                          <img alt="Improving Your Portfolio is Easier Than You Think" src="{{ site.url }}/img/hub-pages/articles/featured/improving-your-portfolio.png" width="1280" height="720" decoding="async" fetchpriority="high">
                         </figure>
                         <h3 class="all-caps">Improving Your Portfolio is Easier Than You Think</h3>
                       </div>
@@ -213,10 +213,10 @@ css: [/css/hub-pages.css]
             <li>
               <section class="tutorial">
                 <figure>
-                  <a href="https://thegymnasium.com/courses/take5/managing-your-time-like-a-pro" title="Watch Now"><img alt="Managing Your Time Like a Pro" src="{{ site.url }}/img/take5/posters/gym-5027.jpg" width="1280" height="720"></a>
+                  <a href="https://thegymnasium.com/courses/take5/crafting-your-story" title="Watch Now"><img alt="Crafting Your Story" src="{{ site.url }}/img/take5/posters/gym-5018.jpg" width="1280" height="720"></a>
                 </figure>
                 <header>
-                  <h3><a href="https://thegymnasium.com/courses/take5/managing-your-time-like-a-pro">Managing Your Time Like a Pro</a></h3>
+                  <h3><a href="https://thegymnasium.com/courses/take5/crafting-your-story">Crafting Your Story</a></h3>
                 </header>
               </section>
             </li>
@@ -243,20 +243,20 @@ css: [/css/hub-pages.css]
             <li>
               <section class="tutorial">
                 <figure>
-                  <a href="https://thegymnasium.com/courses/take5/crafting-your-story" title="Watch Now"><img alt="Crafting Your Story" src="{{ site.url }}/img/take5/posters/gym-5018.jpg" width="1280" height="720"></a>
+                  <a href="https://thegymnasium.com/courses/take5/how-to-tell-the-story-of-a-mid-career-pivot" title="Watch Now"><img alt="How to Tell the Story of a Mid-Career Pivot" src="{{ site.url }}/img/take5/posters/gym-5017.jpg" width="1280" height="720"></a>
                 </figure>
                 <header>
-                  <h3><a href="https://thegymnasium.com/courses/take5/crafting-your-story">Crafting Your Story</a></h3>
+                  <h3><a href="https://thegymnasium.com/courses/take5/how-to-tell-the-story-of-a-mid-career-pivot" title="Watch Now">How to Tell the Story of a Mid-Career Pivot</a></h3>
                 </header>
               </section>
             </li>
             <li>
               <section class="tutorial">
                 <figure>
-                  <a href="https://thegymnasium.com/courses/take5/how-to-tell-the-story-of-a-mid-career-pivot" title="Watch Now"><img alt="How to Tell the Story of a Mid-Career Pivot" src="{{ site.url }}/img/take5/posters/gym-5017.jpg" width="1280" height="720"></a>
+                  <a href="https://thegymnasium.com/courses/take5/managing-your-time-like-a-pro" title="Watch Now"><img alt="Managing Your Time Like a Pro" src="{{ site.url }}/img/take5/posters/gym-5027.jpg" width="1280" height="720"></a>
                 </figure>
                 <header>
-                  <h3><a href="https://thegymnasium.com/courses/take5/how-to-tell-the-story-of-a-mid-career-pivot" title="Watch Now">How to Tell the Story of a Mid-Career Pivot</a></h3>
+                  <h3><a href="https://thegymnasium.com/courses/take5/managing-your-time-like-a-pro">Managing Your Time Like a Pro</a></h3>
                 </header>
               </section>
             </li>
@@ -275,22 +275,17 @@ css: [/css/hub-pages.css]
       <div class="section-content">
         <header>
           <h2 class="all-caps">Articles</h2>
-          <p></p>
+          <p>TK</p>
         </header>
         <div class="subsection list-hr" id="portfolio">
+          <header>
             <h3 class="all-caps">{{ career_skills.portfolio.header }}</h3>
           </header>
           <ul>
             {%- for item in career_skills.portfolio.links -%}
-            {%- if item.url contains "medium.com/gymnasium/" -%}
-            <li>
-              <h3><a href="{{ item.url }}">{{ item.label }}</a></h3>
-            </li>
-            {%- else -%}
             <li>
               <h3><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.label }}</a></h3>
             </li>
-            {%- endif -%}
             {%- endfor -%}
           </ul>
         </div>
@@ -300,15 +295,9 @@ css: [/css/hub-pages.css]
           </header>
           <ul>
             {%- for item in career_skills.networking.links -%}
-            {%- if item.url contains "medium.com/gymnasium/" -%}
-            <li>
-              <h3><a href="{{ item.url }}">{{ item.label }}</a></h3>
-            </li>
-            {%- else -%}
             <li>
               <h3><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.label }}</a></h3>
             </li>
-            {%- endif -%}
             {%- endfor -%}
           </ul>
         </div>
@@ -318,15 +307,9 @@ css: [/css/hub-pages.css]
           </header>
           <ul>
             {%- for item in career_skills.interview.links -%}
-            {%- if item.url contains "medium.com/gymnasium/" -%}
-            <li>
-              <h3><a href="{{ item.url }}">{{ item.label }}</a></h3>
-            </li>
-            {%- else -%}
             <li>
               <h3><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.label }}</a></h3>
             </li>
-            {%- endif -%}
             {%- endfor -%}
           </ul>
         </div>
@@ -336,15 +319,9 @@ css: [/css/hub-pages.css]
           </header>
           <ul>
             {%- for item in career_skills.designers.links -%}
-            {%- if item.url contains "medium.com/gymnasium/" -%}
-            <li>
-              <h3><a href="{{ item.url }}">{{ item.label }}</a></h3>
-            </li>
-            {%- else -%}
             <li>
               <h3><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.label }}</a></h3>
             </li>
-            {%- endif -%}
             {%- endfor -%}
           </ul>
         </div>
@@ -354,15 +331,9 @@ css: [/css/hub-pages.css]
           </header>
           <ul>
             {%- for item in career_skills.managers.links -%}
-            {%- if item.url contains "medium.com/gymnasium/" -%}
-            <li>
-              <h3><a href="{{ item.url }}">{{ item.label }}</a></h3>
-            </li>
-            {%- else -%}
             <li>
               <h3><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.label }}</a></h3>
             </li>
-            {%- endif -%}
             {%- endfor -%}
           </ul>
         </div>
@@ -372,23 +343,15 @@ css: [/css/hub-pages.css]
           </header>
           <ul>
             {%- for item in career_skills.diversity.links -%}
-            {%- if item.url contains "medium.com/gymnasium/" -%}
-            <li>
-              <h3><a href="{{ item.url }}">{{ item.label }}</a></h3>
-            </li>
-            {%- else -%}
             <li>
               <h3><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.label }}</a></h3>
             </li>
-            {%- endif -%}
             {%- endfor -%}
           </ul>
         </div>
-<!--
         <div class="cta">
           <a class="gym-button" href="https://medium.com/gymnasium" target="_blank" rel="noopener"><b>View More Articles</b></a>
         </div>
- -->
       </div>
       <div class="to-top-link">
         <a href="#main"><b>Back to top</b></a>
