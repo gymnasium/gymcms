@@ -2,9 +2,9 @@
 collection_ID: COL-007
 title: "Career Skills"
 topic: "Career Skills"
-short_description: "Improve the skills you need to develop and advance your career."
+short_description: "Whether you’re a newbie or a pro, we’ve got you covered."
 url: https://thegymnasium.com/career-skills
-order: 1
+order: 6
 
 portfolio:
   header: "Portfolio Development"
@@ -31,6 +31,8 @@ networking:
     url: "https://vitamintalent.com/blog/linkedins-and-outs-get-noticed-and-find-opportunities"
   - label: "It Pays to Build a Network of Recruiters Who See Your Value"
     url: "https://aquenttalent.com/blog/it-pays-to-build-a-network-of-recruiters-who-see-your-value"
+  - label: "How to Apply Online (and Actually Get a Job)"
+    url: "https://vitamintalent.com/blog/how-to-apply-online-and-actually-get-a-job"
 
 interview:
   header: "Ace the Interview"
