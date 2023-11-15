@@ -112,10 +112,6 @@ navigation:
     links:
       - title: Gymnasium (Production)
         href: https://thegymnasium.com
-      - title: Gym Astro
-        href: GYM_ASTRO_URL
-      - title: Gym Eleventy
-        href: GYM_ELEVENTY_URL
       - title: Gym Soy Data
         href: GYM_DATA_URL
       - title: Gym LMS
