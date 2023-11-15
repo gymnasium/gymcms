@@ -17,13 +17,17 @@
 <link rel="apple-touch-icon" href="{{ site.url }}/favicon-180.png">
 <link rel="manifest" href="{{ site.url }}/manifest.json">
 
-{% if page.robots -%}
+{%- if page.robots -%}
   <meta name="robots" content="{{page.robots}}">
-{%- endif %}
+{%- endif -%}
 
-{% if page.banner == false -%}
+{%- if page.banner == false -%}
   <meta id="banner-exclude" name="banner-exclude" content="true">
-{%- endif %}
+{%- endif -%}
+
+{%- if page.redirect -%}
+  <script>window.location = `{{page.redirect}}`;</script>
+{%- endif -%}
 
 {%- comment -%}
 Add DNS preload/prefetch meta tags to help prime the browser to fetch our resources

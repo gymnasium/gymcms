@@ -7,4 +7,5 @@ og_description: "Explore our free collection of remote work resources and jobs f
 og_art: /img/hub-pages/og/remote-work-resources-og.png
 og_url: https://thegymnasium.com/remote-work
 css: [/css/hub-pages.css]
+redirect: /career-skills
 ---
