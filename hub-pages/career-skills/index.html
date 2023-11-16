@@ -3,9 +3,10 @@ layout: wrapper-full-default
 permalink: /career-skills/
 css: [/css/hub-pages.css]
 ---
-{%- include partials/nav-courses-format.html page_active = "collections" -%}
-
+{%- assign main = site.data.pages.courses -%}
 {%- assign career_skills = site.data.collections.COL-06-007 -%}
+
+{%- include partials/nav-courses-format.html page_active = "collections" -%}
 
 <main id="main" role="main">
 
