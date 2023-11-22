@@ -4,5 +4,6 @@ title: "Remote Work"
 topic: "Career Skills"
 description: "Whether you’re WFH or a digital nomad, we’ve got you covered."
 url: https://thegymnasium.com/remote-work
-order: 6
+order: 0
+exclude: true
 ---

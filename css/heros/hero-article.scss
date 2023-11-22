@@ -23,6 +23,10 @@
     }
   }
 
+  div[class] a {
+    border: 0;
+  }
+
   // content text / cta
 
   .text {
@@ -59,12 +63,21 @@
     // cta
     .cta {
       margin-top: 3rem;
+
+      .gym-button {
+        border: 2px solid $gym-white;
+      }
     }
 
   }
 }
 
 // artwork background placeholders
+
+#ai-mockup-magic .image {
+  background: #183b65;
+  background: linear-gradient(135deg, #5eb5f8, #183b65);
+}
 
 #meet-the-metaverse .image {
   background: #939eb0;
@@ -77,6 +90,11 @@
 }
 
 @include breakpoint(large, min) {
+
+ #ai-mockup-magic .image {
+   background: #1036bd;
+   background: radial-gradient(#5eb5f8, #1036bd);
+ }
 
   #meet-the-metaverse .image {
     background: #ae9880;

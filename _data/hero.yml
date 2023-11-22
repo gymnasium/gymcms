@@ -1,5 +1,5 @@
-current_promo: hero-take5-design-basics.html
-auth_promo: hero-take5-design-basics.html
+current_promo: articles/ai-mockup-magic.html
+auth_promo: articles/ai-mockup-magic.html
 
 # Live Stream
 # Set true/false (lowercase).
@@ -14,14 +14,14 @@ embed_source: "youtube"
 # Content
 # Update per live stream, if needed
 title: "Livestream"
-description: "Testing the Limits of LLMs"
+description: "Picture Perfect: Using AI to Enhance Images"
 byline: "with Andrew Miller and Jeremy Osborn"
 
 # twitch
 twitch_channel: "andrewpmiller"
 
 # youtube
-youtube_video_id: "S5ySexy58kI"
+youtube_video_id: "Ii_4MC5KuiQ"
 
 # Aspect Ratio 16:19
 embed_width: "854"

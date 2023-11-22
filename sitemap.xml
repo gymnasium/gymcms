@@ -130,7 +130,7 @@ permalink: sitemap.xml
 </url>
 
 <url>
-  <loc>https://thegymnasium.com/remote-work</loc>
+  <loc>https://thegymnasium.com/career-skills</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
