@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="{{ site.url }}/css/heros/hero-blue-beanie-day.css?{{ site.time | date:'%s' }}" fetchpriority="high">
+<link rel="preload" href="{{ site.url }}/home/img/heros/evergreen/blue-beanie-day/gym-bbd-gang-1280w.png?{{ site.time | date:'%s' }}" as="image" media="(min-width: 75em)" fetchpriority="high">
+
+<div class="hero-promo" id="hero-blue-beanie-day">
+  <div class="container">
+    <div class="hero-content-art">
+      <picture id="blue-beanie-gang" decoding="async" fetchpriority="high">
+        <source srcset="{{ site.url }}/home/img/heros/evergreen/blue-beanie-day/gym-bbd-gang-1280w.png?{{ site.time | date:'%s' }}" media="(min-width: 40em)">
+        <img alt="A five-person team from various web-related roles wearing blue beanies. One beanie says “Web,” another says “Standards.”" src="{{ site.url }}/home/img/heros/evergreen/blue-beanie-day/gym-bbd-gang-720w.png?{{ site.time | date:'%s' }}" width="720" height="446">
+      </picture>
+    </div>
+    <div class="hero-content-copy">
+      <header>
+        <h1 class="all-caps">Blue Beanie Day <time datetime="{{ 'now' | date: '%Y' }}-11-30">{{ 'now' | date: '%Y' }}</time></h1>
+        <p class="description">Learn how to make a more user-friendly web with <b><a href="https://thegymnasium.com/courses/course-v1:GYM+016+0/about">Designing Accessible and Responsive Websites</a></b> taught by Ethan Marcotte.</p>
+      </header>
+      <div class="cta">
+        <a class="gym-button natural" href="https://thegymnasium.com/courses/course-v1:GYM+016+0/about"><b>Celebrate Web Standards</b></a>
+      </div>
+    </div>
+  </div>
+</div>
