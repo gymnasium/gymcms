@@ -1,20 +1,20 @@
 ---
-course_ID: GYM-5056
+id: GYM-5056
 title: "Taking Your Portfolio Case Studies to the Next Level"
 date: 2022-12-05T00:00:00-04:00
-course_type: take5
+type: take5
 url: /courses/take5/GYM-5056/
-poster_art: /img/take5/posters/gym-5056.jpg
+img: /img/tutorials/gym-5056.jpg
 live: true
 instructor: "Jeremy Osborn"
 instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "Career Skills"
 subtopics:
   - label: "Portfolio Development"
-video_ID: er1hK-a7pQA
+video_id: er1hK-a7pQA
 video_duration: "4:52"
 featured: false
-short_description: "In this tutorial, you’ll learn three tips on how to write compelling case studies for your online portfolio."
+description: "In this tutorial, you’ll learn three tips on how to write compelling case studies for your online portfolio."
 project_file_source:
 project_files:
 related_content:

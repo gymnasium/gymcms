@@ -1,0 +1,12 @@
+---
+layout: null
+permalink: /feeds/tutorials.json
+---
+{
+  "title": "Gymnasium Tutorials (Take 5) Feed",
+  "feed_url": "{{site.url}}/feeds/tutorials.json",
+  "date_modified": "{{ site.time }}",
+  "environment": "{{ jekyll.environment }}",
+  "items": [
+    {%-include_relative _partials/tutorials.liquid -%}
+]}

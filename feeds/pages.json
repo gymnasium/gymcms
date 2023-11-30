@@ -1,0 +1,14 @@
+---
+layout: null
+permalink: /feeds/pages.json
+---
+
+{
+  "title": "Gymnasium Pages Feed",
+  "feed_url": "{{site.url}}/feeds/pages.json",
+  "date_modified": "{{ site.time }}",
+  "environment": "{{ jekyll.environment }}",
+  "items": [
+    {%-include_relative _partials/pages.liquid -%}
+  ]
+}

@@ -37,50 +37,50 @@
 // animation: 60s ease-in-out infinite running slide-show;
 
 #slide-1 {
-  background-image: url("{{ site.url }}/img/take5/posters/gym-5019.jpg?{{ site.time | date:'%s' }}");
+  background-image: url("{{ site.url }}/img/tutorials/gym-5019.jpg?{{ site.time | date:'%s' }}");
   animation-name: fade-1;
 }
 
 #slide-2 {
-  background-image: url("{{ site.url }}/img/take5/posters/gym-5013.jpg?{{ site.time | date:'%s' }}");
+  background-image: url("{{ site.url }}/img/tutorials/gym-5013.jpg?{{ site.time | date:'%s' }}");
   animation-name: fade-2;
 }
 
 #slide-3 {
-  background-image: url("{{ site.url }}/img/take5/posters/gym-5002.jpg?{{ site.time | date:'%s' }}");
+  background-image: url("{{ site.url }}/img/tutorials/gym-5002.jpg?{{ site.time | date:'%s' }}");
   animation-name: fade-3;
 }
 
 #slide-4 {
-  background-image: url("{{ site.url }}/img/take5/posters/gym-5001.jpg?{{ site.time | date:'%s' }}");
+  background-image: url("{{ site.url }}/img/tutorials/gym-5001.jpg?{{ site.time | date:'%s' }}");
   animation-name: fade-4;
 }
 
 #slide-5 {
-  background-image: url("{{ site.url }}/img/take5/posters/gym-5007.jpg?{{ site.time | date:'%s' }}");
+  background-image: url("{{ site.url }}/img/tutorials/gym-5007.jpg?{{ site.time | date:'%s' }}");
   animation-name: fade-5;
 }
 
 @include breakpoint(large, min) {
 
   #slide-1 {
-    background-image: url("{{ site.url }}/img/take5/posters/gym-5019-hero.jpg?{{ site.time | date:'%s' }}");
+    background-image: url("{{ site.url }}/img/tutorials/gym-5019-hero.jpg?{{ site.time | date:'%s' }}");
   }
 
   #slide-2 {
-    background-image: url("{{ site.url }}/img/take5/posters/gym-5013-hero.jpg?{{ site.time | date:'%s' }}");
+    background-image: url("{{ site.url }}/img/tutorials/gym-5013-hero.jpg?{{ site.time | date:'%s' }}");
   }
 
   #slide-3 {
-    background-image: url("{{ site.url }}/img/take5/posters/gym-5002-hero.jpg?{{ site.time | date:'%s' }}");
+    background-image: url("{{ site.url }}/img/tutorials/gym-5002-hero.jpg?{{ site.time | date:'%s' }}");
   }
 
   #slide-4 {
-    background-image: url("{{ site.url }}/img/take5/posters/gym-5001-hero.jpg?{{ site.time | date:'%s' }}");
+    background-image: url("{{ site.url }}/img/tutorials/gym-5001-hero.jpg?{{ site.time | date:'%s' }}");
   }
 
   #slide-5 {
-    background-image: url("{{ site.url }}/img/take5/posters/gym-5007-hero.jpg?{{ site.time | date:'%s' }}");
+    background-image: url("{{ site.url }}/img/tutorials/gym-5007-hero.jpg?{{ site.time | date:'%s' }}");
   }
 
 }

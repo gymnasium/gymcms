@@ -1,20 +1,20 @@
 ---
-course_ID: GYM-5012
+id: GYM-5012
 title: "Prototyping in the Browser with CSS Grid Layout"
 date: 2019-11-05T00:00:00-04:00
-course_type: take5
+type: take5
 url: /courses/take5/GYM-5012/
-poster_art: /img/take5/posters/gym-5012.jpg
+img: /img/tutorials/gym-5012.jpg
 live: true
 instructor: "Jeremy Osborn"
 instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "Development"
 subtopics:
   - label: "Prototyping"
-video_ID: IqAizKPCC9U
+video_id: IqAizKPCC9U
 video_duration: "4:59"
 featured: false
-short_description: "Learn the benefits of prototyping web page layouts using CSS Grid Layout in this hands-on tutorial."
+description: "Learn the benefits of prototyping web page layouts using CSS Grid Layout in this hands-on tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"

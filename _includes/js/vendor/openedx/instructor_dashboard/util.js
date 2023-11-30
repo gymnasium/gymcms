@@ -401,7 +401,7 @@
         keywordValidator.keyword_regex = /%%+[^%]+%%/g;
 
         keywordValidator.keywords = [
-            '%%USER_ID%%', '%%USER_FULLNAME%%', '%%COURSE_DISPLAY_NAME%%', '%%COURSE_END_DATE%%'
+            '%%USER_id%%', '%%USER_FULLNAME%%', '%%COURSE_DISPLAY_NAME%%', '%%COURSE_END_DATE%%'
         ];
 
         keywordValidator.validate_string = function(string) {

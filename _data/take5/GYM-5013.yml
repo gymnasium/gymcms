@@ -1,20 +1,20 @@
 ---
-course_ID: GYM-5013
+id: GYM-5013
 title: "Working with the Timeline in InVision Studio"
 date: 2019-11-06T00:00:00-04:00
-course_type: take5
+type: take5
 url: /courses/take5/GYM-5013/
-poster_art: /img/take5/posters/gym-5013.jpg
+img: /img/tutorials/gym-5013.jpg
 live: true
 instructor: "Jeremy Osborn"
 instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "UX"
 subtopics:
   - label: "Prototyping"
-video_ID: QxN2wVlBTTw
+video_id: QxN2wVlBTTw
 video_duration: "4:51"
 featured: false
-short_description: "Learn how to create animated micro-interactions using InVision Studio’s timeline feature in this hands-on tutorial."
+description: "Learn how to create animated micro-interactions using InVision Studio’s timeline feature in this hands-on tutorial."
 project_file_source: GitHub
 project_files:
 - label: "Lesson Files"

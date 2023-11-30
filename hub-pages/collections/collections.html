@@ -24,11 +24,11 @@ css: [/css/collections.css]
         {%- assign hub_page = collection_hash[1] -%}
         {%- unless hub_page.exclude -%}
         <li class="collection">
-          <div class="collection--card {{ hub_page.topic | slugify }}" id="{{ hub_page.collection_ID | slugify }}">
+          <div class="collection--card {{ hub_page.topic | slugify }}" id="{{ hub_page.id | slugify }}">
             <div class="collection--main">
               <header>
                 <h2 class="title">{{ hub_page.title }}</h2>
-                <p class="short-description">{{ hub_page.short_description }}</p>
+                <p class="short-description">{{ hub_page.description }}</p>
               </header>
             </div>
             <div class="collection--cta">

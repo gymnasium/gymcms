@@ -149,8 +149,8 @@
 #hero-take5-design-basics {
 
   .hero-content-art {
-    background-image: url("{{ site.url }}/img/take5/posters/gym-5055-hero.jpg?{{ site.time | date:'%s' }}");
-    border-image-source: url("{{ site.url }}/img/take5/posters/gym-5055-hero.jpg?{{ site.time | date:'%s' }}");
+    background-image: url("{{ site.url }}/img/tutorials/gym-5055-hero.jpg?{{ site.time | date:'%s' }}");
+    border-image-source: url("{{ site.url }}/img/tutorials/gym-5055-hero.jpg?{{ site.time | date:'%s' }}");
   }
 
 }

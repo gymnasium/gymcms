@@ -14,7 +14,7 @@ permalink: /tests/take5/lister/
     <thead>
         <th>Course ID</th>
         <th>Title</th>
-        <th>Short Description</th>
+        <th>Description</th>
     </thead>
 
     {% for take5_hash in sorted_catalog %}
@@ -22,15 +22,15 @@ permalink: /tests/take5/lister/
 
 <tr>
     <!-- Course ID -->
-    <td>{{ item.course_ID }}</td>
+    <td>{{ item.id }}</td>
     
     <!-- Title -->
     {% if item.title ==null %}<td class="error">MISSING VALUE</td>{% else %}
     <td>{{ item.title }}</td>
     {% endif %}
 
-    <!-- Short Description -->
-    <td>{{ item.short_description }}</td>
+    <!-- Description -->
+    <td>{{ item.description }}</td>
 </tr>
 {% endfor %}
 </table>

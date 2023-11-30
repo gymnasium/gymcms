@@ -1,20 +1,20 @@
 ---
-course_ID: GYM-5023
+id: GYM-5023
 title: "Creating A Harmonious Color Scheme with HSL"
 date: 2020-01-13T00:00:00-04:00
-course_type: take5
+type: take5
 url: /courses/take5/GYM-5023/
-poster_art: /img/take5/posters/gym-5023.jpg
+img: /img/tutorials/gym-5023.jpg
 live: true
 instructor: "Jeremy Osborn"
 instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "Design"
 subtopics:
   - label: "Development"
-video_ID: 1430bmqJ9xw
+video_id: 1430bmqJ9xw
 video_duration: "4:57"
 featured: false
-short_description: "Learn how to create a pleasing analogous color scheme using the HSL color system with this tutorial."
+description: "Learn how to create a pleasing analogous color scheme using the HSL color system with this tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"

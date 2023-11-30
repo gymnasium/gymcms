@@ -41,7 +41,7 @@ css: [/css/take5.css]
     {%- for take5_hash in catalog -%}
         {%- assign item = take5_hash[1] -%}
         {%- if item.date == pubdate -%}
-            {%- assign publish_order = publish_order | push: item.course_ID -%}
+            {%- assign publish_order = publish_order | push: item.id -%}
         {%- endif -%}
     {%- endfor -%}
 
@@ -54,21 +54,21 @@ css: [/css/take5.css]
     {%- if site.data.take5[item].live == true -%}
 
         {%- if site.data.take5[item].featured == true -%}
-            {%- assign featured = site.data.take5[item].course_ID -%}
+            {%- assign featured = site.data.take5[item].id -%}
             {%- assign featured_title = site.data.take5[item].title -%}
-            {%- assign featured_description = site.data.take5[item].short_description -%}
+            {%- assign featured_description = site.data.take5[item].description -%}
             {%- assign featured_url = site.data.take5[item].title | slugify | prepend: base_path -%}
             {%- assign featured_instructor = site.data.take5[item].instructor -%}
             {%- assign featured_topic = site.data.take5[item].topic -%}
-            {%- assign featured_poster_art = site.data.take5[item].poster_art -%}
+            {%- assign featured_img = site.data.take5[item].img -%}
             {%- assign featured_video_duration = site.data.take5[item].video_duration -%}
         {%- else -%}
-            {%- comment -%} Not featured, but live? Add the course_ID to the RECENT list {%- endcomment -%}
-            {%- assign recent = recent | push: site.data.take5[item].course_ID -%}
+            {%- comment -%} Not featured, but live? Add the id to the RECENT list {%- endcomment -%}
+            {%- assign recent = recent | push: site.data.take5[item].id -%}
         {%- endif -%}
     {%- else -%}
-        {%- comment -%} Not live? Add the course_ID to the UPCOMING list {%- endcomment -%}
-        {%- assign upcoming = upcoming | push: site.data.take5[item].course_ID -%}
+        {%- comment -%} Not live? Add the id to the UPCOMING list {%- endcomment -%}
+        {%- assign upcoming = upcoming | push: site.data.take5[item].id -%}
     {%- endif -%}
 {%- endfor -%}
   
@@ -84,7 +84,7 @@ css: [/css/take5.css]
               </header>
               <div class="tutorial">
                 <div class="artwork" data-duration="{{ featured_video_duration }}">
-                  <a href="{{ featured_url }}" title="Watch Video"><img alt="{{ featured_description }}" src="{{ site.url }}{{ featured_poster_art }}"></a>
+                  <a href="{{ featured_url }}" title="Watch Video"><img alt="{{ featured_description }}" src="{{ site.url }}{{ featured_img }}"></a>
                 </div><!-- .artwork -->
                 <header>
                   <h2 class="all-caps subhead-topic">{{ featured_topic }}</h2>
@@ -137,7 +137,7 @@ css: [/css/take5.css]
           </header>
           <div class="cols cols-max-3">
             {%- comment -%}
-            Reverse the order of the recents (most recent = highest course_ID)
+            Reverse the order of the recents (most recent = highest id)
             {%- endcomment -%}
             <ul>
     {%- assign recent = recent | reverse -%}
@@ -148,7 +148,7 @@ css: [/css/take5.css]
                 <article class="tutorial">
                   <div class="artwork" data-duration="{{ recent_take5.video_duration }}">
                     <a href="{{ recent_take5.title | slugify | prepend: base_path }}" title="Watch Video">
-                    <img alt="{{ recent_take5.title }}" src="{{ site.url }}{{ recent_take5.poster_art }}"></a>
+                    <img alt="{{ recent_take5.title }}" src="{{ site.url }}{{ recent_take5.img }}"></a>
                   </div><!-- .artwork -->
                   <header>
                     <h4 class="all-caps subhead-topic">{{ recent_take5.topic }}</h4>

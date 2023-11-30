@@ -1,20 +1,20 @@
 ---
-course_ID: GYM-5051
+id: GYM-5051
 title: "Advanced Auto Layout in Figma"
 date: 2021-06-29T00:00:00-04:00
-course_type: take5
+type: take5
 url: /courses/take5/GYM-5051/
-poster_art: /img/take5/posters/gym-5051.jpg
+img: /img/tutorials/gym-5051.jpg
 live: true
 instructor: "Jeremy Osborn"
 instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "UX"
 subtopics:
   - label: "Prototyping"
-video_ID: UYsT7xAhQZM
+video_id: UYsT7xAhQZM
 video_duration: "4:55"
 featured: false
-short_description: "Learn advanced Auto Layout techniques in Figma such as alignment, distribution, resizing, and nesting to create complex interfaces."
+description: "Learn advanced Auto Layout techniques in Figma such as alignment, distribution, resizing, and nesting to create complex interfaces."
 project_file_source: Figma Community
 project_files:
 - label: "Starting Project"

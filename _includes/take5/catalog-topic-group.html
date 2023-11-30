@@ -21,7 +21,7 @@
       <article class="tutorial">
         <div class="artwork" data-duration="{{ item.video_duration }}">
           <a href="{{ item.title | slugify | prepend: base_path }}" title="Watch Video">
-            <img alt="{{ item.title }}" src="{{ site.url }}{{ item.poster_art }}?{{ site.time | date:'%s' }}" width="1280" height="720" decoding="async" fetchpriority="low">
+            <img alt="{{ item.title }}" src="{{ site.url }}{{ item.img }}?{{ site.time | date:'%s' }}" width="1280" height="720" decoding="async" fetchpriority="low">
           </a>
         </div>
         <header>
@@ -29,7 +29,7 @@
           <h3 class="all-caps">
             <a href="{{ item.title | slugify | prepend: base_path }}">{{ item.title }}</a>
           </h3>
-          <p>{{ item.short_description }}</p>
+          <p>{{ item.description }}</p>
         </header>
         <div class="cta cta-left">
           <a class="gym-button" href="{{ item.title | slugify | prepend: base_path }}">
@@ -37,7 +37,7 @@
           </a>
         </div>
         <footer>
-          <p><b>{{ item.course_type | replace: 'take5', 'Tutorial' }}</b></p>
+          <p><b>{{ item.type | replace: 'take5', 'Tutorial' }}</b></p>
           <p>{{ item.skill_level }}</p>
         </footer>
       </article>

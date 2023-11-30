@@ -1,15 +1,15 @@
 ---
-course_ID: GYM-017
+id: GYM-017
 title: "Design Systems for Everyone"
 date: 2019-10-28T00:00:00-04:00
-course_type: short
+type: short
 live: true
 url: /courses/course-v1:GYM+017+0/about
-poster_art: /img/course-artwork/png/gym-017.png
+img: /img/courses/gym-017.svg
 topic: "Design"
 subtopics:
   - label: "Design Systems"
-short_description: "Learn how to effectively integrate pattern libraries and design systems into your organization’s workflow."
+description: "Learn how to effectively integrate pattern libraries and design systems into your organization’s workflow."
 instructor: emarcotte
 skills:
   - label: "Design Thinking"

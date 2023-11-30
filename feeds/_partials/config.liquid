@@ -1,0 +1,25 @@
+{%- assign data = site.data.config -%}
+{%- comment -%}
+{{ data | jsonify }},
+{%- endcomment -%}
+
+{%- assign list = site.data.config -%}
+{%- for hash in list -%}
+  {% if forloop.first %}
+    "root_url": "{{ site.root_url }}",
+    "cms_url": "{{ site.url }}",
+    "lms_url": "{{ site.lms_url }}",
+    "eleventy_url": "{{ site.eleventy_url }}",
+    "astro_url": "{{ site.astro_url }}",
+  {% endif %}
+  {%- assign key = hash[0] | jsonify -%}
+  {%- assign value = hash[1] | jsonify -%}
+  {%- assign value = value | replace: 'GYM_ASTRO_URL', site.astro_url -%}
+  {%- assign value = value | replace: 'GYM_ELEVENTY_URL', site.eleventy_url -%}
+  {%- assign value = value | replace: 'GYM_LMS_URL', site.lms_url -%}
+  {%- assign value = value | replace: 'GYM_DATA_URL', site.url -%}
+  {{key}}:{{value}},
+  {%- assign value = value | replace: 'GYM_ROOT_URL', site.root_url -%}
+  {{key}}:{{value}}
+  {% unless forloop.last %},{% endunless %}
+{%- endfor -%}

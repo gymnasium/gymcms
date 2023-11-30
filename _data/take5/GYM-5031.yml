@@ -1,18 +1,18 @@
 ---
-course_ID: GYM-5031
+id: GYM-5031
 title: "Creating an Interactive Chart for the Web"
 date: 2020-03-31T00:00:00-04:00
-course_type: take5
+type: take5
 url: /courses/take5/GYM-5031/
-poster_art: /img/take5/posters/gym-5031.jpg
+img: /img/tutorials/gym-5031.jpg
 live: true
 instructor: "Jeremy Osborn"
 instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "Development"
-video_ID: 0X4uxoKMwew
+video_id: 0X4uxoKMwew
 video_duration: "4:59"
 featured: false
-short_description: "Learn how to make an interactive column chart using Google Charts in this tutorial."
+description: "Learn how to make an interactive column chart using Google Charts in this tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Completed Project"

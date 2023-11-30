@@ -1,0 +1,12 @@
+---
+layout: null
+permalink: /feeds/bios.json
+---
+{
+  "title": "Gymnasium Bios Feed",
+  "feed_url": "{{site.url}}/feeds/bios.json",
+  "date_modified": "{{ site.time }}",
+  "environment": "{{ jekyll.environment }}",
+  "items": [
+    {%-include_relative _partials/bios.liquid -%}
+]}

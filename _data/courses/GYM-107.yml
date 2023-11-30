@@ -1,13 +1,13 @@
 ---
-course_ID: GYM-107
+id: GYM-107
 title: "Modern Web Design"
 date: 2019-10-28T00:00:00-04:00
-course_type: full
+type: full
 live: true
 url: /courses/GYM/107/0/about
-poster_art: /img/course-artwork/png/gym-107.png
+img: /img/courses/gym-107.svg
 topic: "Development"
-short_description: "This course will prepare you to be a front-end developer by walking you through the process of building a simple, responsive website using HTML, CSS, and JavaScript."
+description: "This course will prepare you to be a front-end developer by walking you through the process of building a simple, responsive website using HTML, CSS, and JavaScript."
 instructor: agustafson
 skills:
   - label: "HTML Markup"

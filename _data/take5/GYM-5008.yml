@@ -1,18 +1,18 @@
 ---
-course_ID: GYM-5008
+id: GYM-5008
 title: "Writing Effective Survey Questions"
 date: 2019-11-20T00:00:00-04:00
-course_type: take5
+type: take5
 url: /courses/take5/GYM-5008/
-poster_art: /img/take5/posters/gym-5008.jpg
+img: /img/tutorials/gym-5008.jpg
 live: true
 instructor: "Heather O’Neill"
 instructor_bio: "CEO of Pixels for Humans"
 topic: "UX"
-video_ID: eE0rJNHvAzs
+video_id: eE0rJNHvAzs
 video_duration: "3:48"
 featured: false
-short_description: "Learn how to write survey questions to gather high-level information about your market in this tutorial."
+description: "Learn how to write survey questions to gather high-level information about your market in this tutorial."
 related_content:
 - label: "The Essential Guide to Writing Effective Survey Questions an article by Jennifer Leigh Brown"
   url: "https://www.uxbooth.com/articles/the-essential-guide-to-writing-effective-survey-questions/"

@@ -1,16 +1,16 @@
 ---
-course_ID: GYM-108
+id: GYM-108
 title: "JavaScript and jQuery Survival Guide"
 date: 2019-10-28T00:00:00-04:00
-course_type: full
+type: full
 live: true
 url: /courses/course-v1:GYM+108+0/about
-poster_art: /img/course-artwork/png/gym-108.png
+img: /img/courses/gym-108.svg
 topic: "Development"
 subtopics:
   - label: "JavaScript"
   - label: "jQuery"
-short_description: "This course will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples."
+description: "This course will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples."
 instructor: kchisholm
 skills:
   - label: "Developer Tools"

@@ -1,15 +1,15 @@
 ---
-course_ID: GYM-012
+id: GYM-012
 title: "Introduction to Node.js"
 date: 2019-10-28T00:00:00-04:00
-course_type: short
+type: short
 live: true
 url: /courses/course-v1:GYM+012+0/about
-poster_art: /img/course-artwork/png/gym-012.png
+img: /img/courses/gym-012.svg
 topic: "Development"
 subtopics:
   - label: "JavaScript"
-short_description: "In this course, you will learn how to build a simple web app using Node.js."
+description: "In this course, you will learn how to build a simple web app using Node.js."
 instructor: tsellon
 skills:
   - label: "Installing Node.js"

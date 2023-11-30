@@ -62,7 +62,7 @@ td.success {
         <th>Date</th>
         <th>Video ID</th>
         <th>Video Duration</th>
-        <th>Short Description</th>
+        <th>Description</th>
         <th>Meta Partial?</th>
         <th>Poster Art</th>
     </thead>
@@ -73,7 +73,7 @@ td.success {
     {% assign item = take5_hash[1] %}
 <tr>
     <!-- Course ID -->
-    <td>{{ item.course_ID }}</td>
+    <td>{{ item.id }}</td>
     
     <!-- Title -->
     {% if item.title == null %}<td class="error">MISSING VALUE</td>{% else %}
@@ -115,8 +115,8 @@ td.success {
     {% endif %}
 
     <!-- Video ID -->
-    {% if item.video_ID == null %}<td class="error">MISSING VALUE</td>{% else %}
-    <td><a href="https://www.youtube.com/watch?v={{ item.video_ID }}" target="_blank">{{ item.video_ID }}</td>
+    {% if item.video_id == null %}<td class="error">MISSING VALUE</td>{% else %}
+    <td><a href="https://www.youtube.com/watch?v={{ item.video_id }}" target="_blank">{{ item.video_id }}</td>
     {% endif %}
     
     <!-- Video Duration -->
@@ -127,9 +127,9 @@ td.success {
     <td>{{ item.video_duration }}</td>
     {% endif %}
 
-    <!-- Short Description -->
-    {% if item.short_description == null %}<td class="error">MISSING VALUE</td>{% else %}
-    {% assign this_description = item.short_description | strip_html %}
+    <!-- Description -->
+    {% if item.description == null %}<td class="error">MISSING VALUE</td>{% else %}
+    {% assign this_description = item.description | strip_html %}
     {% if this_description contains "lorem" or this_description contains "ipsum" %}
     <td class="warn" title="{{this_description}}">May contain placeholder text! ({{this_description | size }} chars)</td>{% else %}
     <td title="{{this_description}}">true ({{this_description | size }} chars)</td>
@@ -137,18 +137,18 @@ td.success {
     {% endif %}
 
     <!-- Meta tag partial -->
-    {% assign meta_partial = item.course_ID | prepend: 'courses/take5/' | append: '/meta.md' %}
+    {% assign meta_partial = item.id | prepend: 'courses/take5/' | append: '/meta.md' %}
     <!-- *** {{ meta_partial }} -->
     {% capture meta_partial_test %}{% file_exists {{ meta_partial }} %}{% endcapture %}
     {% if meta_partial_test == "false" %}<td class="error">MISSING FILE</td>{% else %}
     <td>
-        <a href="/courses/take5/{{ item.course_ID | append: '/meta/' | downcase }}" target="_blank">{{ meta_partial_test }}</a>
+        <a href="/courses/take5/{{ item.id | append: '/meta/' | downcase }}" target="_blank">{{ meta_partial_test }}</a>
     </td>
     {% endif %}
 
     <!-- Poster Art -->
-    {% if item.poster_art == null %}<td class="error">MISSING VALUE</td>{% else %}
-    <td><a href="{{item.poster_art}}" target="_blank">true</a></td>
+    {% if item.img == null %}<td class="error">MISSING VALUE</td>{% else %}
+    <td><a href="{{item.img}}" target="_blank">true</a></td>
     {% endif %}
 </tr>
 {% endfor %}

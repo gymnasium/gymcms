@@ -1,0 +1,9 @@
+{%- assign list = site.data.webinars | sort -%}
+{%- for hash in list -%}
+  {%- assign data = hash[1] | jsonify -%}
+  {%- assign data = data | replace: 'event_date', 'date' -%}
+  {%- assign data = data | replace: 'event_guests', 'subtitle' -%}
+  {%- assign data = data | replace: 'content_category', 'category' -%}
+  {{data}}
+  {% unless forloop.last %},{% endunless %}
+{%- endfor -%}

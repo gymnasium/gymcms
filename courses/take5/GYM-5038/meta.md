@@ -1,5 +1,5 @@
 ---
 layout: meta
-course_ID: GYM-5038
+id: GYM-5038
 permalink: /courses/take5/gym-5038/meta/
 ---

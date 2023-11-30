@@ -1,13 +1,13 @@
 ---
-course_ID: GYM-013
+id: GYM-013
 title: "3D Modeling for Virtual Reality Creation"
 date: 2019-10-28T00:00:00-04:00
-course_type: short
+type: short
 live: true
 url: /courses/course-v1:GYM+013+0/about
-poster_art: /img/course-artwork/png/gym-013.png
+img: /img/courses/gym-013.svg
 topic: "Design"
-short_description: "Learn how to create 3D generated imagery in Maya for use in Virtual Reality production."
+description: "Learn how to create 3D generated imagery in Maya for use in Virtual Reality production."
 instructor: groberts
 skills:
   - label: "Basic 3D Modeling, Animation and Rigging"

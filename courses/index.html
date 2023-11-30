@@ -24,7 +24,7 @@ permalink: /courses/
       <h1>{{ main.header.title }}</h1>
       <p>
         <strong class="block">{{ main.header.tagline }}</strong>
-        {{ main.header.short_description }}
+        {{ main.header.description }}
       </p>
     </div>
   </header>
@@ -38,7 +38,7 @@ permalink: /courses/
               {{ main.full_courses.format }}
             </h2>
             <p class="hero">
-              {{ main.full_courses.hero_text }} <a href="{{ site.gymurl }}/courses/full"><b>{{ main.full_courses.hero_CTA }}</b></a>
+              {{ main.full_courses.hero_text }} <a href="{{ site.gymurl }}/courses/full"><b>{{ main.full_courses.hero_cta }}</b></a>
             </p>
             <div class="promo">
               <div class="row">
@@ -49,25 +49,25 @@ permalink: /courses/
                   <div class="row">
                     <div class="col-md-5">
                       <figure>
-                        <a href="{{ site.gymurl }}{{ courses[main.full_courses.promo_ID].url }}">
-                          <img alt="{{ courses[main.full_courses.promo_ID].title }} cover image." src="{{ site.url }}{{ courses[main.full_courses.promo_ID].poster_art }}" width="574" height="488" decoding="async" fetchpriority="high"></a>
+                        <a href="{{ site.gymurl }}{{ courses[main.full_courses.promo_id].url }}">
+                          <img alt="{{ courses[main.full_courses.promo_id].title }} cover image." src="{{ site.url }}{{ courses[main.full_courses.promo_id].poster_art }}" width="574" height="488" decoding="async" fetchpriority="high"></a>
                       </figure>
                     </div>
                     <div class="col-md-7">
                       <article>
                         <header>
                           <p class="subhead all-caps">
-                            <b>{{ courses[main.full_courses.promo_ID].topic }}</b>
+                            <b>{{ courses[main.full_courses.promo_id].topic }}</b>
                           </p>
                           <h2>
-                            <a href="{{ site.gymurl }}{{ courses[main.full_courses.promo_ID].url }}">{{ courses[main.full_courses.promo_ID].title }}</a>
+                            <a href="{{ site.gymurl }}{{ courses[main.full_courses.promo_id].url }}">{{ courses[main.full_courses.promo_id].title }}</a>
                           </h2>
                         </header>
                         <p>
-                          {{ courses[main.full_courses.promo_ID].short_description }}
+                          {{ courses[main.full_courses.promo_id].description }}
                         </p>
                         <div class="cta">
-                          <a class="gym-button natural" href="{{ site.gymurl }}{{ courses[main.full_courses.promo_ID].url }}">Learn More</a>
+                          <a class="gym-button natural" href="{{ site.gymurl }}{{ courses[main.full_courses.promo_id].url }}">Learn More</a>
                         </div>
                       </article>
                     </div>
@@ -102,7 +102,7 @@ permalink: /courses/
               {{ main.gym_shorts.format }}
             </h2>
             <p class="hero">
-              {{ main.gym_shorts.hero_text }} <a href="{{ site.gymurl }}/courses/gym-shorts"><b>{{ main.gym_shorts.hero_CTA }}</b></a>
+              {{ main.gym_shorts.hero_text }} <a href="{{ site.gymurl }}/courses/gym-shorts"><b>{{ main.gym_shorts.hero_cta }}</b></a>
             </p>
             <div class="promo">
               <div class="row">
@@ -113,25 +113,25 @@ permalink: /courses/
                   <div class="row">
                     <div class="col-md-5">
                       <figure>
-                        <a href="{{ site.gymurl }}{{ courses[main.gym_shorts.promo_ID].url }}">
-                          <img alt="{{ courses[main.gym_shorts.promo_ID].title }} cover image." src="{{ site.url }}{{ courses[main.gym_shorts.promo_ID].poster_art }}" width="574" height="488" decoding="async" fetchpriority="high"></a>
+                        <a href="{{ site.gymurl }}{{ courses[main.gym_shorts.promo_id].url }}">
+                          <img alt="{{ courses[main.gym_shorts.promo_id].title }} cover image." src="{{ site.url }}{{ courses[main.gym_shorts.promo_id].poster_art }}" width="574" height="488" decoding="async" fetchpriority="high"></a>
                       </figure>
                     </div>
                     <div class="col-md-7">
                       <article>
                         <header>
                           <p class="subhead all-caps">
-                            <b>{{ courses[main.gym_shorts.promo_ID].topic }}</b>
+                            <b>{{ courses[main.gym_shorts.promo_id].topic }}</b>
                           </p>
                           <h2>
-                            <a href="{{ site.gymurl }}{{ courses[main.gym_shorts.promo_ID].url }}">{{ courses[main.gym_shorts.promo_ID].title }}</a>
+                            <a href="{{ site.gymurl }}{{ courses[main.gym_shorts.promo_id].url }}">{{ courses[main.gym_shorts.promo_id].title }}</a>
                           </h2>
                         </header>
                         <p>
-                          {{ courses[main.gym_shorts.promo_ID].short_description }}
+                          {{ courses[main.gym_shorts.promo_id].description }}
                         </p>
                         <div class="cta">
-                          <a class="gym-button natural" href="{{ site.gymurl }}{{ courses[main.gym_shorts.promo_ID].url }}">Learn More</a>
+                          <a class="gym-button natural" href="{{ site.gymurl }}{{ courses[main.gym_shorts.promo_id].url }}">Learn More</a>
                         </div>
                       </article>
                     </div>
@@ -166,7 +166,7 @@ permalink: /courses/
               {{ main.take5_tutorials.format }}
             </h2>
             <p class="hero">
-              {{ main.take5_tutorials.hero_text }} <a href="{{ site.gymurl }}/courses/take5"><b>{{ main.take5_tutorials.hero_CTA }}</b></a>
+              {{ main.take5_tutorials.hero_text }} <a href="{{ site.gymurl }}/courses/take5"><b>{{ main.take5_tutorials.hero_cta }}</b></a>
             </p>
             <div class="promo">
               <div class="row">
@@ -177,25 +177,25 @@ permalink: /courses/
                   <div class="row">
                     <div class="col-md-5">
                       <figure>
-                        <a href="{{ take5[main.take5_tutorials.promo_ID].title | slugify | prepend: base_path }}">
-                          <img alt="{{ take5[main.take5_tutorials.promo_ID].title }} cover image." src="{{ site.url }}{{ take5[main.take5_tutorials.promo_ID].poster_art }}" width="1280" height="720" decoding="async" fetchpriority="high"></a>
+                        <a href="{{ take5[main.take5_tutorials.promo_id].title | slugify | prepend: base_path }}">
+                          <img alt="{{ take5[main.take5_tutorials.promo_id].title }} cover image." src="{{ site.url }}{{ take5[main.take5_tutorials.promo_id].poster_art }}" width="1280" height="720" decoding="async" fetchpriority="high"></a>
                       </figure>
                     </div>
                     <div class="col-md-7">
                       <article>
                         <header>
                           <p class="subhead all-caps">
-                            <b>{{ take5[main.take5_tutorials.promo_ID].topic }}</b>
+                            <b>{{ take5[main.take5_tutorials.promo_id].topic }}</b>
                           </p>
                           <h2>
-                            <a href="{{ take5[main.take5_tutorials.promo_ID].title | slugify | prepend: base_path }}">{{ take5[main.take5_tutorials.promo_ID].title }}</a>
+                            <a href="{{ take5[main.take5_tutorials.promo_id].title | slugify | prepend: base_path }}">{{ take5[main.take5_tutorials.promo_id].title }}</a>
                           </h2>
                         </header>
                         <p>
-                          {{ take5[main.take5_tutorials.promo_ID].short_description }}
+                          {{ take5[main.take5_tutorials.promo_id].description }}
                         </p>
                         <div class="cta">
-                          <a class="gym-button natural" href="{{ take5[main.take5_tutorials.promo_ID].title | slugify | prepend: base_path }}">Learn More</a>
+                          <a class="gym-button natural" href="{{ take5[main.take5_tutorials.promo_id].title | slugify | prepend: base_path }}">Learn More</a>
                         </div>
                       </article>
                     </div>
@@ -230,7 +230,7 @@ permalink: /courses/
               {{ main.collections.format }}
             </h2>
             <p class="hero">
-              {{ main.collections.hero_text }} <a href="{{ site.gymurl }}/collections"><b>{{ main.collections.hero_CTA }}</b></a>
+              {{ main.collections.hero_text }} <a href="{{ site.gymurl }}/collections"><b>{{ main.collections.hero_cta }}</b></a>
             </p>
             <div class="promo">
               <div class="row">
@@ -241,22 +241,22 @@ permalink: /courses/
                   <div class="row">
                     <div class="col-md-5">
                       <figure>
-                        <a href="{{ site.gymurl }}/{{ main.collections.promo_ID }}">
-                          <img alt="{{ main.collections.promo_ID | capitalize | replace: '-', ' ' }} cover image." src="{{ site.url | append: '/img/hub-pages/og/' }}{{ main.collections.promo_ID | append: '-collection-og.png' }}" width="1200" height="628" decoding="async" fetchpriority="high"></a>
+                        <a href="{{ site.gymurl }}/{{ main.collections.promo_id }}">
+                          <img alt="{{ main.collections.promo_id | capitalize | replace: '-', ' ' }} cover image." src="{{ site.url | append: '/img/hub-pages/og/' }}{{ main.collections.promo_id | append: '-collection-og.png' }}" width="1200" height="628" decoding="async" fetchpriority="high"></a>
                       </figure>
                     </div>
                     <div class="col-md-7">
                       <article>
                         <header>
                           <h2>
-                            <a href="{{ site.gymurl }}/{{ main.collections.promo_ID }}">{{ main.collections.promo_ID | capitalize | replace: '-', ' ' }}</a>
+                            <a href="{{ site.gymurl }}/{{ main.collections.promo_id }}">{{ main.collections.promo_id | capitalize | replace: '-', ' ' }}</a>
                           </h2>
                         </header>
                         <p>
-                          {{ courses[main.gym_shorts.promo_ID].short_description }}
+                          {{ courses[main.gym_shorts.promo_id].description }}
                         </p>
                         <div class="cta">
-                          <a class="gym-button natural" href="{{ site.gymurl }}/{{ main.collections.promo_ID }}">Learn More</a>
+                          <a class="gym-button natural" href="{{ site.gymurl }}/{{ main.collections.promo_id }}">Learn More</a>
                         </div>
                       </article>
                     </div>

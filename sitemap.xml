@@ -61,7 +61,7 @@ permalink: sitemap.xml
 
     {%- assign url = item.url | prepend: "https://thegymnasium.com" -%}
 
-    {%- if item.course_type == "take5" -%}
+    {%- if item.type == "take5" -%}
       {%- assign slug = item.title | downcase | slugify -%}
       {%- assign url = slug | prepend: "/courses/take5/" | prepend: "https://thegymnasium.com" -%}
     {%- endif -%}

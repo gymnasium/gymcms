@@ -1,20 +1,20 @@
 ---
-course_ID: GYM-5034
+id: GYM-5034
 title: "Flexible and Accessible Typesetting"
 date: 2020-06-24T00:00:00-04:00
-course_type: take5
+type: take5
 url: /courses/take5/GYM-5034/
-poster_art: /img/take5/posters/gym-5034.jpg
+img: /img/tutorials/gym-5034.jpg
 live: true
 instructor: "Ethan Marcotte"
 instructor_bio: "Partner at Autogram"
 topic: "Development"
 subtopics:
   - label: "Accessibility"
-video_ID: fk-eu9TmFNk
+video_id: fk-eu9TmFNk
 video_duration: "4:58"
 featured: false
-short_description: "Learn how to set flexible and accessible type sizes for a more user-friendly web in this tutorial."
+description: "Learn how to set flexible and accessible type sizes for a more user-friendly web in this tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"

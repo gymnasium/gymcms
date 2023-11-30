@@ -1,18 +1,18 @@
 ---
-course_ID: GYM-5002
+id: GYM-5002
 title: "Creating a CSS Knockout Text Effect"
 date: 2019-10-29T00:00:00-04:00
-course_type: take5
+type: take5
 url: /courses/take5/GYM-5002/
-poster_art: /img/take5/posters/gym-5002.jpg
+img: /img/tutorials/gym-5002.jpg
 live: true
 instructor: "Jeremy Osborn"
 instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "Development"
-video_ID: Q66-TDbHiIs
+video_id: Q66-TDbHiIs
 video_duration: "4:48"
 featured: false
-short_description: "Learn how to make an image appear inside the outline of plain text using CSS in this hands-on tutorial."
+description: "Learn how to make an image appear inside the outline of plain text using CSS in this hands-on tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"

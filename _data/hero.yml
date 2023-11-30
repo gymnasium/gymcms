@@ -14,14 +14,14 @@ embed_source: "youtube"
 # Content
 # Update per live stream, if needed
 title: "Livestream"
-short_description: "Picture Perfect: Using AI to Enhance Images"
+description: "Picture Perfect: Using AI to Enhance Images"
 byline: "with Andrew Miller and Jeremy Osborn"
 
 # twitch
 twitch_channel: "andrewpmiller"
 
 # youtube
-youtube_video_ID: "Ii_4MC5KuiQ"
+youtube_video_id: "Ii_4MC5KuiQ"
 
 # Aspect Ratio 16:19
 embed_width: "854"

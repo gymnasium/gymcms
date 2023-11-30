@@ -1,0 +1,7 @@
+{%- assign list = site.data.take5 | sort -%}
+{%- for hash in list -%}
+  {%- assign data = hash[1] | jsonify -%}
+  {%- assign data = data | replace: 'course_type', 'type' -%}
+  {{data}}
+  {% unless forloop.last %},{% endunless %}
+{%- endfor -%}

@@ -1,0 +1,12 @@
+---
+layout: null
+permalink: /feeds/courses.json
+---
+{
+  "title": "Gymnasium Courses Feed",
+  "feed_url": "{{site.url}}/feeds/courses.json",
+  "date_modified": "{{ site.time }}",
+  "environment": "{{ jekyll.environment }}",
+  "items": [
+    {%-include_relative _partials/courses.liquid -%}
+]}

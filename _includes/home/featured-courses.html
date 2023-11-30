@@ -8,10 +8,10 @@
     <ul class="list-featured-courses">
 
     {%- for featured in featured_courses -%}
-    {%- assign artwork_png = site.data.courses[featured].course_ID | downcase | append: '.png' -%}
-    {%- assign artwork_svg = site.data.courses[featured].course_ID | downcase | append: '.svg' -%}
-    {%- assign artwork_path_png = site.url | append: "/img/course-artwork/png/"-%}
-    {%- assign artwork_path_svg = site.url | append: "/img/course-artwork/svg/"-%}
+    {%- assign artwork_png = site.data.courses[featured].id | downcase | append: '.png' -%}
+    {%- assign artwork_svg = site.data.courses[featured].id | downcase | append: '.svg' -%}
+    {%- assign artwork_path_png = site.url | append: "/img/courses/"-%}
+    {%- assign artwork_path_svg = site.url | append: "/img/courses/"-%}
 
     {%- assign instructor = site.data.courses[featured].instructor -%}
     {%- assign instructor_name = site.data.bios[instructor].name  -%}
@@ -20,7 +20,7 @@
     {%- assign topic = site.data.courses[featured].topic  -%}
     {%- assign url = site.data.courses[featured].url  -%}
     {%- assign title = site.data.courses[featured].title  -%}
-    {%- assign description = site.data.courses[featured].short_description  -%}
+    {%- assign description = site.data.courses[featured].description  -%}
 
     {%- if site.data.courses[featured].topic == "Design" -%}
         {%- assign content_class = "design" -%}

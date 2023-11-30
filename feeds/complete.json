@@ -1,0 +1,30 @@
+---
+layout: null
+permalink: /feeds/complete.json
+---
+{
+  "title": "Gymnasium Complete Data Feed",
+  "feed_url": "{{site.url}}/feeds/complete.json",
+  "date_modified": "{{ site.time }}",
+  "environment": "{{ site.environment }}",
+  "items": {
+    "config": {
+      {%-include_relative _partials/config.liquid -%}
+    },
+    "bios":[
+      {%-include_relative _partials/bios.liquid -%}
+    ],
+    "courses":[
+      {%-include_relative _partials/courses.liquid -%}
+    ],
+    "pages": [
+      {%-include_relative _partials/pages.liquid -%}
+    ],
+    "tutorials":[
+      {%-include_relative _partials/tutorials.liquid -%}
+    ],
+    "webinars":[
+      {%-include_relative _partials/webinars.liquid -%}
+    ]
+  }
+}

@@ -23,7 +23,7 @@ permalink: /courses/workshops/course-list-recent
   {% for course_hash in catalog %}
     {% assign item = course_hash[1] %}
     {%- if item.date == pubdate -%}
-      {%- assign publish_order = publish_order | push: item.course_ID -%}
+      {%- assign publish_order = publish_order | push: item.id -%}
     {%- endif -%}
   {% endfor %}
 
@@ -32,8 +32,8 @@ permalink: /courses/workshops/course-list-recent
 {%- assign publish_order = publish_order | uniq | join: ', ' | split: ', ' -%}
 
 {%- for item in publish_order -%}
-  {%- if site.data.courses[item].live == true and site.data.courses[item].course_type == "workshop" -%}
-    {%- assign recent = recent | push: site.data.courses[item].course_ID -%}
+  {%- if site.data.courses[item].live == true and site.data.courses[item].type == "workshop" -%}
+    {%- assign recent = recent | push: site.data.courses[item].id -%}
   {%- endif -%}
 {%- endfor -%}
 
@@ -41,14 +41,14 @@ permalink: /courses/workshops/course-list-recent
 
 {%- for item in recent -%}
   {%- assign course = site.data.courses[item] -%}
-  {%- assign png_path = "/img/course-artwork/png/" | append: course.course_ID | downcase | append: ".png" -%}
-  {%- assign svg_path = "/img/course-artwork/svg/" | append: course.course_ID | downcase | append: ".svg" -%}
+  {%- assign png_path = "/img/courses/" | append: course.id | downcase | append: ".png" -%}
+  {%- assign svg_path = "/img/courses/" | append: course.id | downcase | append: ".svg" -%}
 
-  <li class="course-item" data-course-id="{{ course.course_ID | remove: 'GYM-' }}">
+  <li class="course-item" data-course-id="{{ course.id | remove: 'GYM-' }}">
     <article class="row">
       <figure class="col-md-4">
         <a href="{{ course.url | prepend: site.gymurl }}">
-          <img class="img-responsive" src="{{ png_path | prepend: site.url }}" srcset="{{ svg_path | prepend: site.url }}" alt="{{ course.course_ID | remove: 'gym-' }} {{ course.title }} Cover Image" decoding="async" loading="lazy">
+          <img class="img-responsive" src="{{ png_path | prepend: site.url }}" srcset="{{ svg_path | prepend: site.url }}" alt="{{ course.id | remove: 'gym-' }} {{ course.title }} Cover Image" decoding="async" loading="lazy">
         </a>
         <figcaption>
           <a href="{{ course.url | prepend: site.gymurl }}" class="gym-button"><b>Learn More</b></a>
@@ -60,7 +60,7 @@ permalink: /courses/workshops/course-list-recent
           <h1>{{ course.title }}</h1>
         </header>
         <p>
-          {{ course.short_description }}
+          {{ course.description }}
         </p>
         <div class="row">
           <div class="col-md-6">

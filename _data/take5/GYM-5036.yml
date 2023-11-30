@@ -1,20 +1,20 @@
 ---
-course_ID: GYM-5036
+id: GYM-5036
 title: "Creating Beautiful and Accessible Drop Caps"
 date: 2020-06-26T00:00:00-04:00
-course_type: take5
+type: take5
 url: /courses/take5/GYM-5036/
-poster_art: /img/take5/posters/gym-5036.jpg
+img: /img/tutorials/gym-5036.jpg
 live: true
 instructor: "Ethan Marcotte"
 instructor_bio: "Partner at Autogram"
 topic: "Development"
 subtopics:
   - label: "Accessibility"
-video_ID: nt7p3CuxUzA
+video_id: nt7p3CuxUzA
 video_duration: "4:55"
 featured: false
-short_description: "Learn how to create visually compelling and accessible drop caps on the web in this tutorial."
+description: "Learn how to create visually compelling and accessible drop caps on the web in this tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"

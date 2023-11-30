@@ -1,0 +1,63 @@
+# Setup
+title: Gymnasium Data Feeds
+url: https://data.gym.soy #https://data.thegymcms.com
+root_url: https://gym.soy
+lms_url: https://learn.gym.soy
+astro_url: https://astro.gym.soy
+eleventy_url: https://11ty.gym.soy
+gymurl: https://thegymnasium.com
+aqassetsurl: https://assets.aquent.com
+timezone: America/New_York
+environment: data
+
+# Building
+
+exclude:
+  - 'docker-compose.yml'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'README.md'
+  - 'netlify.toml'
+  - '.jekyll-cache'
+  - 'local'
+
+include:
+  - '_redirects'
+
+repository: gymnasium/gymcms
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+
+# Serving (local)
+detach: false
+port: 4000
+host: 127.0.0.1
+
+# Markdown Processing
+kramdown:
+  auto_ids:       true
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
+  show_warnings:  false
+
+## CSS Preprocessing/SASS (see @https://github.com/jekyll/jekyll-sass-converter)
+sass:
+  sass_dir: _sass
+  style: compressed
+
+## Additional Plugins
+plugins:
+  - jekyll-get-json
+
+## JSON Fetch
+jekyll_get_json:
+  - data: jobs
+    json: 'https://assets.aquent.com/apps/gym/jobs.json?limit=1500'
+  - data: markets
+    json: 'https://assets.aquent.com/apps/gym/markets.json'
