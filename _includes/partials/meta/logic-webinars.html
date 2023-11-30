@@ -17,10 +17,10 @@ Set up meta tags for a webinar meta include
 
 {%- if event.register == true -%}
     {%- assign page_title = "Webinar Registration | Gymnasium" -%}
-    {%- assign og_art = event.event_ogimage | prepend: "/img/social/webinars/" -%}
+    {%- assign og_art = event.event_ogimage | prepend: "/img/webinars/og/" -%}
 {%- endif -%}
 
 {%- if event.video == true -%}
     {%- assign page_title = "Webinar Recording | Gymnasium" -%}
-    {%- assign og_art = event.recording_ogimage | prepend: "/img/social/webinars/" -%}
+    {%- assign og_art = event.recording_ogimage | prepend: "/img/webinars/og/" -%}
 {%- endif -%}

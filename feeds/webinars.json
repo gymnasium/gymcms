@@ -42,8 +42,8 @@ permalink: /feeds/webinars.json
     "date": "{{ data.event_date }}",
     "description": "{{ data.description | strip_html }}",
     "host": "{{ data.host }}",
-    "event_ogimage": "/img/social/webinars/{{ data.event_ogimage }}",
-    "recording_ogimage": "/img/social/webinars/{{ data.recording_ogimage }}",
+    "event_ogimage": "/img/webinars/og/{{ data.event_ogimage }}",
+    "recording_ogimage": "/img/webinars/og/{{ data.recording_ogimage }}",
     "landing": {%- if data.landing -%}{{data.landing}}{%- else -%}false{%- endif -%},
     "resources":
       {%- assign resources = data.resources | jsonify -%}

@@ -5,7 +5,7 @@ date: 2019-10-28T00:00:00-04:00
 type: full
 live: true
 url: /courses/GYM/102/0/about
-img: /img/course-artwork/png/gym-102.png
+img: /img/courses/gym-102.svg
 topic: "Development"
 subtopics:
   - label: "JavaScript"

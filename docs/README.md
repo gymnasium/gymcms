@@ -6,7 +6,7 @@ To create a new Take 5 tutorial, several files and assets need to be created and
 
 1. Create the tutorial data file in `_data/take5/`
 2. Create the stub files in `take5/` and `take5/meta/`
-3. Add image assets to `img/take5/posters/` and `img/take5/og/`
+3. Add image assets to `img/tutorials/` and `img/tutorials/og/`
 4. Publish the Take 5 tutorial
 
 ---
@@ -27,7 +27,7 @@ title: "Making a CSS Parallax Effect"       # MUST be quoted
 date: 2019-10-28T00:00:00-04:00             # Publish date — MUST be in this format
 type: take5                          # This is required
 url: /courses/take5/GYM-5001/                # Only change the course ID!
-img: /img/take5/posters/gym-5001.jpg # Path to poster image (may be deprecated)
+img: /img/tutorials/gym-5001.jpg # Path to poster image (may be deprecated)
 live: true                                  # Only set to live when ready to publish!
 instructor: "Jeremy Osborn"                 # MUST be quoted
 topic: "Design & Development"           # MUST be quoted
@@ -62,7 +62,7 @@ title:
 date: 2019-11-15T00:00:00-04:00
 type: take5
 url: /courses/take5/GYM-5000/
-img: /img/take5/posters/gym-5000.jpg
+img: /img/tutorials/gym-5000.jpg
 live: false
 instructor: 
 topic: 
@@ -167,17 +167,17 @@ permalink: /courses/take5/gym-5001/meta/
 
 ### OG Image
 
-- **File location:** `img/take5/og/gym-5000-og.png`
+- **File location:** `img/tutorials/og/gym-5000-og.png`
 
 <details>
 <summary>View Sample</summary>
 
-![img/take5/og/gym-5001-og.png](https://thegymcms.com/img/take5/og/gym-5001-og.png)
+![img/tutorials/og/gym-5001-og.png](https://thegymcms.com/img/tutorials/og/gym-5001-og.png)
 </details>
 
 ### Video Poster Image
 
-- **File location:** `img/take5/posters/gym-5000.jpg`
+- **File location:** `img/tutorials/gym-5000.jpg`
   - This is the poster frame image that is used in the following contexts:
     - Featured tutorial on the Take 5 catalog page
     - Thumbnails for other "Recent" Take 5s on the Take 5 catalog page
@@ -187,18 +187,18 @@ permalink: /courses/take5/gym-5001/meta/
 <details>
 <summary>View Sample</summary>
 
-![img/take5/posters/gym-5001.png](https://thegymcms.com/img/take5/posters/gym-5001.jpg)
+![img/tutorials/gym-5001.png](https://thegymcms.com/img/tutorials/gym-5001.jpg)
 </details>
 
 ### Hero Poster Image
 
-- **File location:** `img/take5/posters/gym-5000-hero.jpg`
+- **File location:** `img/tutorials/gym-5000-hero.jpg`
   - This is the hero-sized version of the video poster image that is used when the specific tutorial is featured in the homepage hero component
 
 <details>
 <summary>View Sample</summary>
 
-![img/take5/posters/gym-5001-hero.png](https://thegymcms.com/img/take5/posters/gym-5001-hero.jpg)
+![img/tutorials/gym-5001-hero.png](https://thegymcms.com/img/tutorials/gym-5001-hero.jpg)
 </details>
 
 

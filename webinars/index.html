@@ -64,7 +64,7 @@ layout: raw
             {%- comment -%}
               {%- if jekyll.environment == "local" -%}
                 <pre>({{ complete_webinar_title }})</pre>
-                <img src="{{ site.url }}/img/social/webinars/{{ webinar.event_ogimage }}">
+                <img src="{{ site.url }}/img/webinars/og/{{ webinar.event_ogimage }}">
               {%- endif -%}
             {%- endcomment -%}
             {%- capture headcount -%}{{ item.speaker | size }}{%- endcapture -%}

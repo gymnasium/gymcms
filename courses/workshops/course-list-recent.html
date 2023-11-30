@@ -41,8 +41,8 @@ permalink: /courses/workshops/course-list-recent
 
 {%- for item in recent -%}
   {%- assign course = site.data.courses[item] -%}
-  {%- assign png_path = "/img/course-artwork/png/" | append: course.id | downcase | append: ".png" -%}
-  {%- assign svg_path = "/img/course-artwork/svg/" | append: course.id | downcase | append: ".svg" -%}
+  {%- assign png_path = "/img/courses/" | append: course.id | downcase | append: ".png" -%}
+  {%- assign svg_path = "/img/courses/" | append: course.id | downcase | append: ".svg" -%}
 
   <li class="course-item" data-course-id="{{ course.id | remove: 'GYM-' }}">
     <article class="row">
