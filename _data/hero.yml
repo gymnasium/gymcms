@@ -34,35 +34,3 @@ embed_fetchpriority: "high"
 embed_loading: "eager"
 embed_frameborder: "0"
 embed_scrolling: "no"
-
-# Note: true overrides current/auth promo heros
-live_stream: false
-
-# Source
-# Set twitch/youtube (lowercase)
-# Note: As a fallback, the current promo displays if a typo/erroneous/null source value is set
-embed_source: "youtube"
-
-# Content
-# Update per live stream, if needed
-title: "Livestream"
-short_description: "Coding in the Kitchen with ChatGPT"
-byline: "with Andrew Miller and Jeremy Osborn"
-
-# twitch
-twitch_channel: "andrewpmiller"
-
-# youtube
-youtube_video_ID: "aoqJiFrdaCY"
-
-# Aspect Ratio 16:19
-embed_width: "854"
-embed_height: "400"
-
-# Options
-embed_allowfullscreen: true
-embed_auto_play: false
-embed_fetchpriority: "high"
-embed_loading: "eager"
-embed_frameborder: "0"
-embed_scrolling: "no"
