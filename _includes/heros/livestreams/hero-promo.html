@@ -1,0 +1,32 @@
+{%- assign hero = site.data.heros.livestreams.fill-in-the-blanks -%}
+{%- assign img_path = "/home/img/heros/livestreams/" -%}
+<link rel="stylesheet" href="{{ site.url }}/css/heros/hero-article.css?{{ site.time | date:'%s' }}" fetchpriority="high">
+<link rel="preload" href="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[2] }}?{{ site.time | date:'%s' }}" as="image" media="(max-width: 75em)" fetchpriority="high">
+<link rel="preload" href="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[1] }}?{{ site.time | date:'%s' }}" as="image" media="(min-width: 75em)" fetchpriority="high">
+<script nomodule src="{{ site.url }}/js/polyfills/picture/plugins/intrinsic-dimension/pf.intrinsic.min.js?{{ site.time | date:'%s' }}"></script>
+<script nomodule src="{{ site.url }}/js/polyfills/picture/picturefill.min.js?{{ site.time | date:'%s' }}"></script>
+<article class="hero-promo" id="{{ hero.id }}">
+  <div class="container">
+    <div class="content">
+      <div class="image">
+        <a href="{{ hero.cta_url }}">
+          <picture decoding="async" fetchpriority="high">
+            <source srcset="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[1] }}?{{ site.time | date:'%s' }}" width="768" height="714" media="(min-width: 1200px)">
+            <img alt="{{ hero.alt_text }}" src="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[2] }}?{{ site.time | date:'%s' }}" width="1280" height="720">
+          </picture>
+        </a>
+      </div>
+      <div class="text">
+        <header>
+          <hgroup>
+            <p class="subhead all-caps">
+              <b>{{ hero.subhead }}</b>
+            </p>
+            <h1>{{ hero.title }}</h1>
+          </hgroup>
+          <p>{{ hero.description }} on <b>{{ hero.date }}</b> at <b>{{ hero.time }}</b>.</p>
+        </header>
+      </div>
+    </div>
+  </div>
+</article>
