@@ -1,10 +1,10 @@
-current_promo: livestreams/hero-promo.html
-auth_promo: livestreams/hero-promo.html
+current_promo: articles/ai-mockup-magic.html
+auth_promo: articles/ai-mockup-magic.html
 
 # Live Stream
 # Set true/false (lowercase).
 # Note: true overrides current/auth promo heros
-live_stream: true
+live_stream: false
 
 # Source
 # Set twitch/youtube (lowercase)
