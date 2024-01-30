@@ -10,11 +10,14 @@ This repo serves as CMS for some of the static content on our Open EdX site. Con
 ## Getting started
 
 - clone this repo.
+
+---
 [Docker Compose V1][1]
 - run `docker-compose up` in the repo root.
+---
 [Docker Compose V2][1]
 - run `docker compose up` in the repo root.
-
+---
 - Wait patiently for stuff to load & compile.
 - navigate to [http://localhost:4000](http://localhost:4000) to see the build status.
 - Get busy making beautiful things!
