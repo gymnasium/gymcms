@@ -5,6 +5,9 @@ description: "Watch it here on our homepage:"
 # date: "Tuesday, January 30"
 date: "Today"
 time: "10 AM EST / 4 PM CET"
+recording: true
+cta: "Watch the Recording"
+cta_url: "https://www.youtube.com/watch?v=9bMjt4fJR-M"
 alt_text: "Two engineers build a custom ChatGPT bot from wooden blocks."
 artwork:
   1: /fill-in-the-blanks-768w.jpg

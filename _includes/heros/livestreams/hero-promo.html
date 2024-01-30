@@ -24,8 +24,15 @@
             </p>
             <h1>{{ hero.title }}</h1>
           </hgroup>
+          {%- if hero.recording == false -%}
           <p>{{ hero.description }} <time datetime="2024-01-30" class="block"><b>{{ hero.date }}</b> at <b>{{ hero.time }}</b></time></p>
+          {%- endif -%}
         </header>
+        {%- if hero.recording == true -%}
+        <div class="cta">
+          <a class="gym-button natural" href="{{ hero.cta_url }}"><b>{{ hero.cta }}</b></a>
+        </div>
+        {%- endif -%}
       </div>
     </div>
   </div>
