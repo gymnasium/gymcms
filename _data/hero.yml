@@ -4,7 +4,7 @@ auth_promo: livestreams/hero-promo.html
 # Live Stream
 # Set true/false (lowercase).
 # Note: true overrides current/auth promo heros
-live_stream: false
+live_stream: true
 
 # Source
 # Set twitch/youtube (lowercase)
@@ -21,7 +21,7 @@ byline: "with Andrew Miller and Jeremy Osborn"
 twitch_channel: "andrewpmiller"
 
 # youtube
-youtube_video_ID: "pMt7PnJBslo"
+youtube_video_ID: "9bMjt4fJR-M"
 
 # Aspect Ratio 16:19
 embed_width: "854"
