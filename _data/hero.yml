@@ -14,7 +14,7 @@ embed_source: "youtube"
 # Content
 # Update per live stream, if needed
 title: "Livestream"
-short_description: "Fill in the Blanks"
+short_description: "Fill in the Blanks: Demonstrating How to Build a Custom GPT"
 byline: "with Andrew Miller and Jeremy Osborn"
 
 # twitch
