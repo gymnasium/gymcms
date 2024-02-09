@@ -9,12 +9,16 @@
   <div class="container">
     <div class="content">
       <div class="image">
+        {%- if hero.recording or hero.recording == true -%}
         <a href="{{ hero.cta_url }}">
+        {%- endif -%}
           <picture decoding="async" fetchpriority="high">
             <source srcset="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[1] }}?{{ site.time | date:'%s' }}" width="768" height="714" media="(min-width: 1200px)">
             <img alt="{{ hero.alt_text }}" src="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[2] }}?{{ site.time | date:'%s' }}" width="1280" height="720">
           </picture>
+        {%- if hero.recording or hero.recording == true -%}
         </a>
+        {%- endif -%}
       </div>
       <div class="text">
         <header>
