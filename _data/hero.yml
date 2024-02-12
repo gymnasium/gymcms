@@ -14,14 +14,14 @@ embed_source: "youtube"
 # Content
 # Update per live stream, if needed
 title: "Livestream"
-short_description: "Fill in the Blanks: Demonstrating How to Build a Custom GPT"
+short_description: "Take Note: Transcribing Images with ChatGPT"
 byline: "with Andrew Miller and Jeremy Osborn"
 
 # twitch
 twitch_channel: "andrewpmiller"
 
 # youtube
-youtube_video_ID: "9bMjt4fJR-M"
+youtube_video_ID: ""
 
 # Aspect Ratio 16:19
 embed_width: "854"
