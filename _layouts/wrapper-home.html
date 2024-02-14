@@ -8,7 +8,7 @@
 
 <div id="main" class="home">
 
-  {%- if hero.live_stream == true -%}
+  {%- if hero.livestream == true -%}
     <!-- Display live coding on both hero includes -->
     {%- include heros/hero-live-stream.html -%}
   {%- elsif page.permalink contains "home/index-auth/" and hero.auth_promo -%}

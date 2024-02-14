@@ -1,10 +1,10 @@
 current_promo: livestreams/hero-promo.html
 auth_promo: livestreams/hero-promo.html
 
-# Live Stream
+# Livestream
 # Set true/false (lowercase).
 # Note: true overrides current/auth promo heros
-live_stream: true
+livestream: true
 
 # Source
 # Set twitch/youtube (lowercase)

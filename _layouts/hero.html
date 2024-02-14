@@ -3,7 +3,7 @@
 ---
 {%- assign hero = site.data.hero -%}
 
-{%- if hero.live_stream == true -%}
+{%- if hero.livestream == true -%}
 <!-- Display live coding on both hero includes -->
 {%- include heros/hero-live-stream.html -%}
     {%- elsif page.permalink contains "hero-auth" and hero.auth_promo -%}
