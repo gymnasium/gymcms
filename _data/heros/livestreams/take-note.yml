@@ -2,7 +2,8 @@ id: take-note
 subhead: "New Livestream"
 title: "Take Note: Transcribing Images with ChatGPT"
 description: "Watch it here on our homepage:"
-date: "Wednesday, February 14"
+# date: "Wednesday, February 14"
+date: "Today"
 time: "10 AM EST / 4 PM CET"
 recording: false
 cta: "Watch the Recording"
