@@ -2,10 +2,9 @@ id: take-note
 subhead: "New Livestream"
 title: "Take Note: Transcribing Images with ChatGPT"
 description: "Watch it here on our homepage:"
-# date: "Wednesday, February 14"
-date: "Today"
+date: "Wednesday, February 14"
 time: "10 AM EST / 4 PM CET"
-recording: false
+recording: true
 cta: "Watch the Recording"
 cta_url: "https://www.youtube.com/watch?v=K7lF3oihwMI"
 alt_text: "Two pastel-colored Valentine’s Day candy hearts with the words Take and Note."
