@@ -5,7 +5,7 @@ gymurl: https://courses.gymna.si
 aqassetsurl: https://assets.aquent.com
 timezone: America/New_York
 environment: staging
-banner: true
+banner: false
 
 # Building
 
@@ -42,7 +42,7 @@ kramdown:
 sass:
   sass_dir: _sass
   style: compressed
-  
+
 ## Additional Plugins
 plugins:
   - jekyll-get-json
