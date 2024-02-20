@@ -2,7 +2,7 @@
 Use _config.yml (and per-environment) file(s) to define whether or not the banner shows site-wide. Adding a banner: false to a page meta front-matter will exclude the banner from that page. The current behavior is to hide the utility nav when the banner is active via CSS; see `systemStatus()` in `js/gymnasium.js` for additional display behavior.
 {%- endcomment -%}
 {%- assign banner_active = site.banner -%}
-<div id="system-status-helper" class="hide" data-active="{{ banner_active }}">
+<div id="system-status-helper" class="hide" data-active="<!-- {{ banner_active }} -->">
   <div class="container">
     <p><span aria-label="Waving Hand emoji" role="img">&#128075;</span> Learn why <b>Inclusive Design Efforts Fail (And What to Do About It)</b> on <a href="https://www.linkedin.com/events/7161792676114223104/about/" target="_blank" rel="noopener">LinkedIn Live</a> Tuesday, February 20 at 2 PM EST.</p>
   </div>
