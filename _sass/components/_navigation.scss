@@ -223,12 +223,12 @@
 
 @include breakpoint(48em, min) {
   .utility-nav {
-    display: none; // add block (if active)
+    display: block;
   }
 
   @supports (display: grid) {
     .utility-nav {
-      display: none; // add grid (if active)
+      display: grid;
 
       ul {
         display: inherit;
