@@ -982,6 +982,7 @@ https://github.com/gymnasium/tracker/issues/40
     background-color: $gym-white;
     padding: 1em;
     border: 1px solid $gym-black;
+    pointer-events: none;
   }
 
   @include breakpoint(medium, max) {
