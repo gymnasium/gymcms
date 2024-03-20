@@ -11,6 +11,8 @@ banner: false
 
 exclude:
   - 'docker-compose.yml'
+  - 'Dockerfile'
+  - 'docker-entrypoint.sh'
   - 'Gemfile'
   - 'Gemfile.lock'
   - 'README.md'
