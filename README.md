@@ -9,18 +9,24 @@ This repo serves as CMS for some of the static content on our Open EdX site. Con
 
 ## Getting started
 
-- clone this repo.
-[Docker Compose V1][1]
-- run `docker-compose up` in the repo root.
-[Docker Compose V2][1]
-- run `docker compose up` in the repo root.
+1. Clone this repo
+2. Build the Docker image [^1]
+   - run `docker build -t jekyll-serve .`
+3. Start Jekyll
+     - Either:
+        - run `docker compose up` 
+        - _or_ run `docker run -p 4000:4000 -v $(pwd):/site jekyll-serve`
+4. Get busy making beautiful things!
 
-- Wait patiently for stuff to load & compile.
-- navigate to [http://localhost:4000](http://localhost:4000) to see the build status.
-- Get busy making beautiful things!
+### Notes
+
+1. The resulting Docker image is configured specifically for local development of this repo. 
+2. Special thanks to Bret Fisher for his [workaround](https://github.com/BretFisher/jekyll-serve) to address issues with the official Jekyll images  that are ostensibly unmaintained.
+
 
 ## Static Content Site Map
 - [http://localhost:4000/sitemap](http://localhost:4000/sitemap)
 
-## References
-[1]: https://docs.docker.com/compose/migrate/ "Migrate to Docker Compose V2"
+
+
+[^1]: You don't need to build the Docker image _every_ time you work. However  rebuilding assures that the gems are current.
