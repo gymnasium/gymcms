@@ -1,7 +1,6 @@
-version: '3.2'
 services:
   jekyll:
-    image: jekyll/jekyll:latest
+    image: jekyll:latest
     environment:
         - JEKYLL_ENV=local
     command: jekyll serve --watch --force_polling --config _local_config.yml
