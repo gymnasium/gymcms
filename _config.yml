@@ -10,6 +10,7 @@ banner: false
 # Building
 
 exclude:
+  - 'Dockerfile'
   - 'docker-compose.yml'
   - 'Gemfile'
   - 'Gemfile.lock'
