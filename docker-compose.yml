@@ -1,10 +1,10 @@
-version: '3.2'
 services:
   jekyll:
-    image: jekyll/jekyll:latest
+    image: jekyll:latest
     environment:
         - JEKYLL_ENV=local
     command: jekyll serve --watch --force_polling --config _local_config.yml
+    platform: linux/amd64
     ports:
         - 4000:4000
         - 35729:35729

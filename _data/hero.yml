@@ -1,5 +1,5 @@
-current_promo: articles/hero-article.html
-auth_promo: articles/hero-article.html
+current_promo: livestreams/hero-promo.html
+auth_promo: livestreams/hero-promo.html
 
 # Livestream
 # Set true/false (lowercase).
@@ -14,8 +14,8 @@ embed_source: "youtube"
 # Content
 # Update per live stream, if needed
 title: "Livestream"
-short_description: "Take Note: Transcribing Images with ChatGPT"
-byline: "with Andrew Miller and Jeremy Osborn"
+short_description: "Level Up Your Job Search with ChatGPT"
+byline: "with Special Guest, Feridoon Malekzadeh"
 
 # twitch
 twitch_channel: "andrewpmiller"

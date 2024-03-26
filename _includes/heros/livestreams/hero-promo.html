@@ -1,4 +1,4 @@
-{%- assign hero = site.data.heros.livestreams.take-note -%}
+{%- assign hero = site.data.heros.livestreams.level-up-job-search -%}
 {%- assign img_path = "/home/img/heros/livestreams/" -%}
 <link rel="stylesheet" href="{{ site.url }}/css/heros/hero-article.css?{{ site.time | date:'%s' }}" fetchpriority="high">
 <link rel="preload" href="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[2] }}?{{ site.time | date:'%s' }}" as="image" media="(max-width: 75em)" fetchpriority="high">
@@ -27,6 +27,9 @@
               <b>{{ hero.subhead }}</b>
             </p>
             <h1>{{ hero.title }}</h1>
+             {%- if hero.guest -%}
+             <p class="guest">{{ hero.guest }}</p>
+             {%- endif -%}
           </hgroup>
           {%- if hero.recording != true -%}
           <p>{{ hero.description }} <time datetime="2024-01-30" class="block"><b>{{ hero.date }}</b> at <b>{{ hero.time }}</b></time></p>
