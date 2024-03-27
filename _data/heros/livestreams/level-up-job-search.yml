@@ -3,12 +3,11 @@ subhead: "New Livestream"
 title: "Level Up Your Job Search with ChatGPT"
 guest: "with Feridoon Malekzadeh"
 description: "Watch the livestream here on our homepage:"
-# date: "Wednesday, March 27"
-date: "Today"
+date: "Wednesday, March 27"
 time: "3 PM PST / 6 PM EDT"
 recording: false
 cta: "Watch the Recording"
-cta_url: "https://www.youtube.com/watch?v="
+cta_url: "https://www.youtube.com/watch?v=iKqXRFiD7W4"
 alt_text: "A job seeker and wizard searching for work, aided by magic to shed light on their quest."
 artwork:
   1: /level-up-job-search-768w.jpg
