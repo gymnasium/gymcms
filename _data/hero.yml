@@ -4,7 +4,7 @@ auth_promo: livestreams/hero-promo.html
 # Livestream
 # Set true/false (lowercase).
 # Note: true overrides current/auth promo heros
-livestream: false
+livestream: true
 
 # Source
 # Set twitch/youtube (lowercase)
@@ -15,13 +15,13 @@ embed_source: "youtube"
 # Update per live stream, if needed
 title: "Livestream"
 short_description: "Level Up Your Job Search with ChatGPT"
-byline: "with Special Guest, Feridoon Malekzadeh"
+byline: "with Jeremy Osborn, Andrew Miller, and Feridoon Malekzadeh"
 
 # twitch
 twitch_channel: "andrewpmiller"
 
 # youtube
-youtube_video_ID: "K7lF3oihwMI"
+youtube_video_ID: "iKqXRFiD7W4"
 
 # Aspect Ratio 16:19
 embed_width: "854"
