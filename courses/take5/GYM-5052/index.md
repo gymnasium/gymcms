@@ -55,7 +55,7 @@ So this statement is not a conversation starter. Let’s take a look at a more i
 For more information, check out our [**Resources**](#tutorial-resources) section for links to articles and other tutorials. And thanks for watching. Be sure to check out our other [Take 5 videos][4] as well as the entire [course catalog][5] here at Gymnasium.
 
 [1]: https://www.amandabaughan.com/pubs/2020CHI_KeepItSimple.pdf
-[2]: http://mina.codes
+[2]: https://mina.codes
 [3]: https://una.im
 [4]: https://thegymnasium.com/courses/take5
 [5]: https://thegymnasium.com/courses

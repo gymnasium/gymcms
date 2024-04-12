@@ -5,7 +5,7 @@ date: 2019-11-06T00:00:00-04:00
 course_type: take5
 url: /courses/take5/GYM-5013/
 poster_art: /img/take5/posters/gym-5013.jpg
-live: true
+live: false
 instructor: "Jeremy Osborn"
 instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic: "UX"
@@ -23,7 +23,7 @@ related_content:
 - label: "Official Invision Studio documentation for Advanced Animation"
   url: "https://support.invisionapp.com/hc/en-us/articles/360027857151"
 - label: "The Basics of Easing by Paul Lewis"
-  url: "https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing"
+  url: "https://web.dev/articles/the-basics-of-easing"
 - label: "Transitional Interfaces by Pasquale D’Silva"
   url: "https://medium.com/@pasql/transitional-interfaces-926eb80d64e3"
 skill_level: "Beginner"
