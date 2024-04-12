@@ -43,5 +43,3 @@ I wanted to leave you with a story. The reason this video exists is because a st
 Here’s the thing, creative people are usually super busy and self-promotion often becomes a low priority. But suddenly, it’s been five years since you updated your website. So I’m going to ask something of you *right here*, *right now*. Set a timer for five minutes and get started on one of the things we talked about. *Ready?* **Go!**
 
 [1]: https://owltastic.com
-
-

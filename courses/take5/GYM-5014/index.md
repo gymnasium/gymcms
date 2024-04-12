@@ -23,6 +23,6 @@ You can do it by hand, or if you want to make sure it’s a true square. You can
 *Preview* again, and now you’ll be able to *drag* that handle, and if you let go at any point the animation snaps into place, which adds a little bit of realism to the whole thing. And again, I’m doing this on a **Desktop Preview**, but Adobe XD has a **Device Preview** feature that will let you interact with this on a phone or tablet, which is very cool. *Thanks for watching.* Be sure to [check out our other Take 5 tutorials][3], as well as [the rest of our full course catalog at Gymnasium][4].
 
 [1]: https://gymnasium.github.io/take5/gym-5014.zip
-[2]: https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing
+[2]: https://web.dev/articles/the-basics-of-easing
 [3]: https://thegymnasium.com/courses/take5
 [4]: https://thegymnasium.com/courses
