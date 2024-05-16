@@ -41,7 +41,7 @@ So I hope you learned a little more about CSS generated content than you knew be
 Finally, be sure to [check out the rest of our Take 5 tutorials][4], as well as [the entire course catalog at Gymnasium][5].
 
 [1]: https://codepen.io/josborn/pen/arwyMP
-[2]: https://unicode-table.com
+[2]: https://symbl.cc/en/
 [3]: https://codepen.io/josborn/pen/byYLGG
 [4]: https://thegymnasium.com/courses/take5
 [5]: https://thegymnasium.com/courses

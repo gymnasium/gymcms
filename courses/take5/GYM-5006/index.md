@@ -86,6 +86,6 @@ In this example, you note that 42 people agreed that the items “Patient Billin
 *That’s the basics of conducting a card sort.* Be sure to [check out the rest of the series][3] and [the rest of the course catalog at Gymnasium][4]. *Take care.*
 
 [1]: https://www.interaction-design.org/literature/article/the-pros-and-cons-of-card-sorting-in-ux-research
-[2]: https://www.optimalworkshop.com/optimalsort
+[2]: https://www.optimalworkshop.com/optimalsort/
 [3]: https://thegymnasium.com/courses/take5
 [4]: https://thegymnasium.com/courses

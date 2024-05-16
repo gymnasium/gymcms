@@ -1,4 +1,4 @@
-{%- assign hero = site.data.heros.livestreams.level-up-job-search -%}
+{%- assign hero = site.data.heros.livestreams.take-note-redo -%}
 {%- assign img_path = "/home/img/heros/livestreams/" -%}
 <link rel="stylesheet" href="{{ site.url }}/css/heros/hero-article.css?{{ site.time | date:'%s' }}" fetchpriority="high">
 <link rel="preload" href="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[2] }}?{{ site.time | date:'%s' }}" as="image" media="(max-width: 75em)" fetchpriority="high">
@@ -14,7 +14,7 @@
         {%- endif -%}
           <picture decoding="async" fetchpriority="high">
             <source srcset="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[1] }}?{{ site.time | date:'%s' }}" width="768" height="714" media="(min-width: 1200px)">
-            <img alt="{{ hero.alt_text }}" src="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[2] }}?{{ site.time | date:'%s' }}" width="1280" height="720">
+            <img alt="{{ hero.alt_text }}" src="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[2] }}?{{ site.time | date:'%s' }}" width="1280" height="720" decoding="async">
           </picture>
         {%- if hero.recording or hero.recording == true -%}
         </a>
@@ -32,7 +32,7 @@
              {%- endif -%}
           </hgroup>
           {%- if hero.recording != true -%}
-          <p>{{ hero.description }} <time datetime="2024-01-30" class="block"><b>{{ hero.date }}</b> at <b>{{ hero.time }}</b></time></p>
+          <p>{{ hero.description }} {% if hero.linkedin %}<a href="{{ hero.linkedin_cta }}" target="_blank" rel="noopener">{{ hero.linkedin }}</a>{% endif %} {%if hero.homepage %} {{ hero.homepage }}{% endif %}<time datetime="2024-01-30" class="block"><b>{{ hero.date }}</b> at <b>{{ hero.time }}</b></time></p>
         </header>
         {%- else -%}
         <div class="cta">
