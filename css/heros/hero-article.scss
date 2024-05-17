@@ -23,10 +23,6 @@
     }
   }
 
-//   div[class] a {
-//     border: 0;
-//   }
-
   // content text / cta
 
   .text {
@@ -75,6 +71,10 @@
       .guest,
       time {
         color: $gym-white;
+      }
+
+      a:visited {
+        border-bottom: inherit;
       }
     }
 
