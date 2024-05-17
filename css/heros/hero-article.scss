@@ -23,10 +23,6 @@
     }
   }
 
-//   div[class] a {
-//     border: 0;
-//   }
-
   // content text / cta
 
   .text {
@@ -62,7 +58,7 @@
       .guest,
       & > p {
         font-size: 1.4em;
-        line-height: 1.45;
+        line-height: 1.5;
         color: $gym-gray-2;
         margin-top: 1.6rem;
       }
@@ -75,6 +71,10 @@
       .guest,
       time {
         color: $gym-white;
+      }
+
+      a:visited {
+        border-bottom: inherit;
       }
     }
 
