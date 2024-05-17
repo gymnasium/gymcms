@@ -14,7 +14,7 @@
         {%- endif -%}
           <picture decoding="async" fetchpriority="high">
             <source srcset="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[1] }}?{{ site.time | date:'%s' }}" width="768" height="714" media="(min-width: 1200px)">
-            <img alt="{{ hero.alt_text }}" src="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[2] }}?{{ site.time | date:'%s' }}" width="1280" height="720" decoding="async" loading="lazy">
+            <img alt="{{ hero.alt_text }}" src="{{ site.url }}{{ img_path }}{{ hero.id }}{{ hero.artwork[2] }}?{{ site.time | date:'%s' }}" width="1280" height="720" decoding="async">
           </picture>
         {%- if hero.recording or hero.recording == true -%}
         </a>
