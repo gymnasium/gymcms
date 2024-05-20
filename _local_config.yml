@@ -5,7 +5,7 @@ gymurl: https://courses.gymna.si
 aqassetsurl: https://assets.aquent.com
 timezone: America/New_York
 environment: local
-banner: true
+banner: false
 
 # Building
 
