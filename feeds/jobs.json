@@ -8,7 +8,7 @@ This component spews out a statically-generated fallback feed for the jobs modul
 {%- capture aq_feed_url -%}{{ site.aqassetsurl }}/apps/gym/{%- endcapture -%}
 {%- capture gym_feed_url -%}{{ site.gymurl }}/feeds/{%- endcapture -%}
 {%- if site.data.jobs -%}
-{%- assign jobs = site.data.jobs | replace: "=>", ":" -%}
+{%- assign jobs = site.data.jobs | replace: "=>", ":" | replace: "nil", "null" -%}
 {%- assign jobs = jobs | replace: aq_feed_url, gym_feed_url -%}
 {%- assign jobs = jobs | replace: "Aquent Job Feed for Gymnasium", "Fallback Job Feed" -%}
 {{ jobs }}

@@ -6,7 +6,7 @@ permalink: /feeds/markets.json
 This component spits out a statically-generated fallback feed for the Aquent markets(just in case dynamic JSON loading doesn't work)
 {%- endcomment -%}
 {%- if site.data.markets -%}
-{{ site.data.markets | replace: "=>", ":" }}
+{{ site.data.markets | replace: "=>", ":" | replace: "nil", "null" }}
 {%- else -%}
 {"error": "no JSON feed found!"}
 {%- endif -%}
