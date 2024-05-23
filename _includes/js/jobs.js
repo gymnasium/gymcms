@@ -285,8 +285,8 @@ function gymJobs() {
           for (var i = 0; i < limit; i++) {
             var el = items[i];
             var postDate = el.posted_date;
-            var modDate = el.modDate;
-            const jobUrl = `${window.JOB_URLS[el.country]}${el.job_id}`;
+            var modDate = el.cw_modified_date;
+            const jobUrl = `${window.JOB_URLS[el.country_code]}${el.id}`;
 
             outputDebug(
               `[job module] job id: ${el.id}\n   remote type: ${
@@ -296,9 +296,9 @@ function gymJobs() {
 
             list += "<li>";
             list += `<a href="${decodeURI(jobUrl)}${utms}" title="${
-              el.job_title
+              el.title
             }"><span class="job-title">${
-              el.job_title
+              el.title
             } </span><span class="job-location"> ${el.city}</span></a>`;
             list += "</li>";
           }

@@ -33,46 +33,56 @@
   {%- assign opt_limit = 10 -%}
 {%- endunless -%}
 
-<form id="location" class="location">
-  <select name="m" id="m" class="form-control">
+<form id="location-select" class="location-select">
+  <select name="location" id="location" class="form-control">
     <option value="">Select a location nearest you</option>
     <option value="remote">Remote, all locations</option>
     <optgroup label="Australia">
       {%- for market in markets_au -%}
-        <option value="{{market.id}}">{{market.name}}</option>
+        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="Canada">
       {%- for market in markets_ca -%}
-        <option value="{{market.id}}">{{market.name}}</option>
+        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="Europe">
       {%- for market in markets_nl -%}
-        <option value="{{market.id}}">{{market.name}}</option>
+        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
       {%- for market in markets_de -%}
-        <option value="{{market.id}}">{{market.city}}</option>
+        <option value="{{market.cloudwall_id}}">{{market.city}}</option>
       {%- endfor -%}
       {%- for market in markets_uk -%}
-        <option value="{{market.id}}">{{market.name}}</option>
+        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
       {%- for market in markets_fr -%}
-        <option value="{{market.id}}">{{market.name}}</option>
+        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="Japan">
       {%- for market in markets_jp -%}
-        <option value="{{market.id}}">{{market.name}}</option>
+        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="United States">
       {%- for market in markets_us -%}
-        <option value="{{market.id}}">{{market.name}}</option>
+        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
   </select>
 </form>
+<script>var JOB_URLS = {
+  "AU": "https://aquent.com.au/find-work/",
+  "CA": "https://aquent.com/find-work/",
+  "DE": "https://aquent.de/find-work/",
+  "FR": "https://aquent.fr/nos-offres/",
+  "GB": "https://aquent.co.uk/find-work/",
+  "JP": "https://aquent.co.jp/jobs/",
+  "NL": "https://aquent.nl/find-work/",
+  "US": "https://aquent.com/find-work/"
+}</script>
 <div id="messages">
   <div id="loading" class="loading">
     <p>Please wait while we find you some jobs…</p>
