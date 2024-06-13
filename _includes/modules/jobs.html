@@ -39,36 +39,36 @@
     <option value="remote">Remote, all locations</option>
     <optgroup label="Australia">
       {%- for market in markets_au -%}
-        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="Canada">
       {%- for market in markets_ca -%}
-        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="Europe">
       {%- for market in markets_nl -%}
-        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
       {%- for market in markets_de -%}
-        <option value="{{market.cloudwall_id}}">{{market.city}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.city}}</option>
       {%- endfor -%}
       {%- for market in markets_uk -%}
-        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
       {%- for market in markets_fr -%}
-        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="Japan">
       {%- for market in markets_jp -%}
-        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="United States">
       {%- for market in markets_us -%}
-        <option value="{{market.cloudwall_id}}">{{market.name}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
   </select>
