@@ -620,7 +620,7 @@ css: [/css/hub-pages.css]
           <hr>
         </header>
         {%- comment -%} Get our jobs module {%- endcomment -%}
-        {%- assign opt_category = "development" -%}
+        {%- assign feed_params = "&roles[]=web-development" -%}
         {%- include /modules/jobs.html -%}
 
       </div><!-- .section-content -->
