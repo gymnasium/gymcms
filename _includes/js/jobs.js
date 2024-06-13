@@ -210,21 +210,8 @@ function gymJobs() {
 
         outputDebug(`[job module] ${items.length} total jobs available.`);
 
-        // Do we have a specific category?
-        // TODO: this is currently broken in the new endpoint
-        var category = opts.category ?? false;
-
         // Set iteration limits
         var limit = opts.limit ? parseInt(opts.limit) : 10;
-
-        // TODO: this is currently broken in the new endpoint
-        if (category) {
-          items = items.filter((item) => item.category === category);
-
-          outputDebug(
-            `[job module] showing ${items.length} jobs for category: ${category}.`
-          );
-        }
 
         // Filter the jobs by market if we have a market param
         if (
