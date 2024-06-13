@@ -89,12 +89,6 @@
   </div>
 </div>
 {%- assign base_params = "?pageSize=10" -%}
-{%- if roles -%}
-  {%- capture feed_params -%}
-    {%- for role in roles -%}&roles[]={{ role }}{%- endfor -%}
-  {% endcapture -%}
-{%- endif -%}
-
 {%- if feed_params -%}
   {%- capture params -%}{{ base_params }}{{ feed_params }}{%- endcapture -%}
 {%- else -%}
