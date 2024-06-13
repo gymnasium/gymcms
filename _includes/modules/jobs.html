@@ -73,16 +73,6 @@
     </optgroup>
   </select>
 </form>
-<script>var JOB_URLS = {
-  "AU": "https://aquent.com.au/find-work/",
-  "CA": "https://aquent.com/find-work/",
-  "DE": "https://aquent.de/find-work/",
-  "FR": "https://aquent.fr/nos-offres/",
-  "GB": "https://aquent.co.uk/find-work/",
-  "JP": "https://aquent.co.jp/find-work/",
-  "NL": "https://aquent.nl/find-work/",
-  "US": "https://aquent.com/find-work/"
-}</script>
 <div id="messages">
   <div id="loading" class="loading">
     <p>Please wait while we find you some jobs…</p>
@@ -98,4 +88,18 @@
     <p>Continue exploring jobs at <a href="https://aquent.com/find-work/?{{utm}}" target="_blank" rel="noopener">Aquent</a>.</p>
   </div>
 </div>
-<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-utm="{{utm}}" data-feed="{{jobs_endpoint}}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
+{%- assign base_params = "?pageSize=10" -%}
+{%- if roles -%}
+  {%- capture feed_params -%}
+    {%- for role in roles -%}&roles[]={{ role }}{%- endfor -%}
+  {% endcapture -%}
+{%- endif -%}
+
+{%- if feed_params -%}
+  {%- capture params -%}{{ base_params }}{{ feed_params }}{%- endcapture -%}
+{%- else -%}
+  {%- assign params = base_params -%}
+{%- endif -%}
+{%- assign job_urls = site.data['job-options'].urls | jsonify -%}
+
+<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-utm="{{utm}}" data-feed="{{ jobs_endpoint }}{{ params | safe }}" data-urls="{{ job_urls | escape }}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
