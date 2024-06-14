@@ -48,17 +48,17 @@
       {%- endfor -%}
     </optgroup>
     <optgroup label="Europe">
-      {%- for market in markets_nl -%}
-        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
+      {%- for market in markets_fr -%}
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.country}}</option>
       {%- endfor -%}
       {%- for market in markets_de -%}
-        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.city}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.country}}</option>
+      {%- endfor -%}
+      {%- for market in markets_nl -%}
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.country}}</option>
       {%- endfor -%}
       {%- for market in markets_uk -%}
-        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
-      {%- endfor -%}
-      {%- for market in markets_fr -%}
-        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.country}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="Japan">
