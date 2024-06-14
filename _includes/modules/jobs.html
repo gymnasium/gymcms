@@ -96,4 +96,4 @@
 {%- endif -%}
 {%- assign job_urls = site.data['job-options'].urls | jsonify -%}
 
-<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-utm="{{utm}}" data-feed="{{ jobs_endpoint }}{{ params | safe }}" data-urls="{{ job_urls | escape }}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
+<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="limit:{{opt_limit}};" data-utm="{{utm}}" data-feed="{{ jobs_endpoint }}{{ params | safe }}" data-urls="{{ job_urls | escape }}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
