@@ -40,7 +40,7 @@ But let’s fast forward 24 hours later. And you’ve sent it to all four other 
 
 [1]: https://slack.com
 [2]: https://support.google.com/a/users/answer/9308990
-[3]: https://thegymnasium.com/courses/GYM/001/0/about
+[3]: https://thegymnasium.com/courses/course-v1:GYM+001+0/about
 [4]: https://doodle.com
 [5]: https://thegymnasium.com/courses/take5
 [6]: https://thegymnasium.com/courses
