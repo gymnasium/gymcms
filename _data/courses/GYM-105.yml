@@ -6,7 +6,7 @@ course_type: full
 live: false
 retired_message:
   1: "<strong>This course has been retired.</strong>"
-url: /courses/GYM/105/0/about
+url: /courses/course-v1:GYM+105+0/about
 poster_art: /img/course-artwork/png/gym-105.png
 topic: "Career Skills"
 short_description: "This course has been retired."
