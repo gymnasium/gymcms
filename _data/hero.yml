@@ -1,5 +1,5 @@
-current_promo: evergreen/hero-take5-campaign.html
-auth_promo: evergreen/hero-take5-campaign.html
+current_promo: articles/hero-article.html
+auth_promo: articles/hero-article.html
 
 # Livestream
 # Set true/false (lowercase).
@@ -14,14 +14,14 @@ embed_source: "youtube"
 # Content
 # Update per live stream, if needed
 title: "Livestream"
-short_description: "Become a Better Writer with ChatGPT"
+short_description: "Take Note: Transcribing Images with ChatGPT"
 byline: "with Jeremy Osborn and Andrew Miller"
 
 # twitch
 twitch_channel: "andrewpmiller"
 
 # youtube
-youtube_video_ID: "JXSpx385gbo"
+youtube_video_ID: "gr4Ml1t5PYM"
 
 # Aspect Ratio 16:19
 embed_width: "854"
