@@ -58,7 +58,7 @@
       .guest,
       & > p {
         font-size: 1.4em;
-        line-height: 1.5;
+        line-height: 1.45;
         color: $gym-gray-2;
         margin-top: 1.6rem;
       }
@@ -91,6 +91,10 @@
 }
 
 // artwork background placeholders
+
+#crafting-resumes-ai .image {
+  background-color: #008080;
+}
 
 #ai-mockup-magic .image {
   background: #183b65;
