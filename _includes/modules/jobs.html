@@ -1,19 +1,16 @@
 {%- unless jobs_endpoint -%}
-  {%- assign jobs_endpoint = "/apps/gym/jobs.json" | prepend: site.aqassetsurl -%}
-{%- endunless -%}
-{%- unless jobs_fallback -%}
-  {%- assign jobs_fallback = "/feeds/jobs.jsonp" | prepend: site.url -%}
+  {%- assign jobs_endpoint = "https://aquentllc.wpengine.com/wp-json/aq-central/v1/gymnasium/listing" -%}
 {%- endunless -%}
 {%- assign utm = "utm_source=gymnasium&utm_medium=web&utm_campaign=job-module&utm_content=textlink" -%}
 
-{%- assign markets_au = site.data.markets.items | where: "countryCode", "AU" -%}
-{%- assign markets_ca = site.data.markets.items | where: "countryCode", "CA" -%}
-{%- assign markets_de = site.data.markets.items | where: "countryCode", "DE" -%}
-{%- assign markets_fr = site.data.markets.items | where: "countryCode", "FR" -%}
-{%- assign markets_jp = site.data.markets.items | where: "countryCode", "JP" -%}
-{%- assign markets_nl = site.data.markets.items | where: "countryCode", "NL" -%}
-{%- assign markets_uk = site.data.markets.items | where: "countryCode", "UK" -%}
-{%- assign markets_us = site.data.markets.items | where: "countryCode", "US" -%}
+{%- assign markets_au = site.data.markets | where: "country", "Australia" -%}
+{%- assign markets_ca = site.data.markets | where: "country", "Canada" -%}
+{%- assign markets_de = site.data.markets | where: "country", "Germany" -%}
+{%- assign markets_fr = site.data.markets | where: "country", "France" -%}
+{%- assign markets_jp = site.data.markets | where: "country", "Japan" -%}
+{%- assign markets_nl = site.data.markets | where: "country", "Netherlands" -%}
+{%- assign markets_uk = site.data.markets | where: "country", "United Kingdom" -%}
+{%- assign markets_us = site.data.markets | where: "country", "United States" -%}
 
 {%- unless jobs_module_class -%}
   {%- assign jobs_module_class = "list-hr" -%}
@@ -36,42 +33,42 @@
   {%- assign opt_limit = 10 -%}
 {%- endunless -%}
 
-<form id="location" class="location">
-  <select name="m" id="m" class="form-control">
+<form id="location-select" class="location-select">
+  <select name="location" id="location" class="form-control">
     <option value="">Select a location nearest you</option>
     <option value="remote">Remote, all locations</option>
     <optgroup label="Australia">
       {%- for market in markets_au -%}
-        <option value="{{market.id}}">{{market.title}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="Canada">
       {%- for market in markets_ca -%}
-        <option value="{{market.id}}">{{market.title}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="Europe">
-      {%- for market in markets_nl -%}
-        <option value="{{market.id}}">{{market.title}}</option>
+      {%- for market in markets_fr -%}
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.country}}</option>
       {%- endfor -%}
       {%- for market in markets_de -%}
-        <option value="{{market.id}}">{{market.city}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.country}}</option>
+      {%- endfor -%}
+      {%- for market in markets_nl -%}
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.country}}</option>
       {%- endfor -%}
       {%- for market in markets_uk -%}
-        <option value="{{market.id}}">{{market.title}}</option>
-      {%- endfor -%}
-      {%- for market in markets_fr -%}
-        <option value="{{market.id}}">{{market.title}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.country}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="Japan">
       {%- for market in markets_jp -%}
-        <option value="{{market.id}}">{{market.title}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
     <optgroup label="United States">
       {%- for market in markets_us -%}
-        <option value="{{market.id}}">{{market.title}}</option>
+        <option data-slug="{{market.id}}" value="{{market.cloudwall_id}}">{{market.name}}</option>
       {%- endfor -%}
     </optgroup>
   </select>
@@ -91,4 +88,12 @@
     <p>Continue exploring jobs at <a href="https://aquent.com/find-work/?{{utm}}" target="_blank" rel="noopener">Aquent</a>.</p>
   </div>
 </div>
-<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="heading:{{opt_heading}};category:{{opt_category | downcase}};limit:{{opt_limit}};" data-utm="{{utm}}" data-script="{{jobs_endpoint}}?limit=1500&callback=processJobs" data-script-fallback="{{jobs_fallback}}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->
+{%- assign base_params = "?pageSize=10" -%}
+{%- if feed_params -%}
+  {%- capture params -%}{{ base_params }}{{ feed_params }}{%- endcapture -%}
+{%- else -%}
+  {%- assign params = base_params -%}
+{%- endif -%}
+{%- assign job_urls = site.data['job-options'].urls | jsonify -%}
+
+<div id="jobs-container" class="jobs-container {{jobs_module_class}}" data-options="limit:{{opt_limit}};" data-utm="{{utm}}" data-feed="{{ jobs_endpoint }}{{ params | safe }}" data-urls="{{ job_urls | escape }}"></div><!-- #jobs-container.jobs-container.{{jobs_module_class}} -->

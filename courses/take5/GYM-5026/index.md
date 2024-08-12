@@ -90,7 +90,7 @@ Your changes will be pushed and shortly you will see the updates again. You’ll
 [1]: https://github.com
 [2]: https://desktop.github.com
 [3]: https://code.visualstudio.com
-[4]: https://thegymnasium.com/courses/GYM/006/0/about
+[4]: https://thegymnasium.com/courses/course-v1:GYM+006+0/about
 [5]: https://en.wikipedia.org/wiki/Shoebill
 [6]: https://thegymnasium.com/courses/take5
 [7]: https://thegymnasium.com/courses

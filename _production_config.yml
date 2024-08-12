@@ -56,6 +56,6 @@ plugins:
 ## JSON Fetch
 jekyll_get_json:
   - data: jobs
-    json: 'https://assets.aquent.com/apps/gym/jobs.json?limit=1500'
+    json: 'https://aquentllc.wpengine.com/wp-json/aq-central/v1/gymnasium/listing'
   - data: markets
-    json: 'https://assets.aquent.com/apps/gym/markets.json'
+    json: 'https://aquentllc.wpengine.com/feeds/gymnasium-markets.json'
