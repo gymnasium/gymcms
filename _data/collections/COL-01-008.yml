@@ -5,6 +5,7 @@ topic: "Career Skills"
 short_description: "From prompting to prototyping, leverage LLMs and GPT tools in your workflow."
 url: https://thegymnasium.com/generative-ai
 order: 1
+exclude: true
 
 featured:
   links:
