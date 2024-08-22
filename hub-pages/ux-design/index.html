@@ -116,16 +116,27 @@ css: [/css/hub-pages.css]
       <div class="section-content">
         <script type="application/ld+json">
           {
-            "@context":"http://schema.org",
+            "@context": "http://schema.org",
             "@type": "ItemList",
             "itemListElement": [
               {
                 "@type": "Course",
                 "name": "UX Fundamentals",
                 "description": "Learn how to apply user-centered design principles to improve your website and mobile app design. A must-take course for anyone working in design and development.",
-                "image": "{{ site.url }}/img/social/courses/gym-103-social.png",
-                "url": "https://thegymnasium.com/courses/course-v1:GYM+103+0/about",
-                "position": 1,
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": [
+                    "MOOC",
+                    "online"
+                  ],
+                  "offers": {
+                    "@type": "Offer",
+                    "offeredBy": "Gymnasium",
+                    "price": "free"
+                  }
+                },
+                "image": "https://thegymnasium.com/img/og/courses/gym-103.png",
+                "url": "https://thegymnasium.com/courses/ux-fundamentals/",
                 "provider": {
                   "@type": "School",
                   "name": "Gymnasium",
@@ -135,10 +146,21 @@ css: [/css/hub-pages.css]
               {
                 "@type": "Course",
                 "name": "Working with Atomic Design and Pattern Lab",
-                "description": "Learn how to use Atomic Design methodology within Pattern Lab in order to create reusable user interface components.",
-                "image": "{{ site.url }}/img/social/courses/gym-014-social.png",
-                "url": "https://thegymnasium.com/courses/course-v1:GYM+014+0/about",
-                "position": 2,
+                "description": "Learn how to use Atomic Design methodology within Pattern Lab to create reusable user interface components.",
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": [
+                    "MOOC",
+                    "online"
+                  ],
+                  "offers": {
+                    "@type": "Offer",
+                    "offeredBy": "Gymnasium",
+                    "price": "free"
+                  }
+                },
+                "image": "https://thegymnasium.com/img/og/courses/gym-014.png",
+                "url": "https://thegymnasium.com/courses/working-with-atomic-design-and-pattern-lab/",
                 "provider": {
                   "@type": "School",
                   "name": "Gymnasium",
@@ -149,9 +171,20 @@ css: [/css/hub-pages.css]
                 "@type": "Course",
                 "name": "Prototyping for Digital Products and Websites",
                 "description": "Learn how to use prototypes as a communication and collaboration device for building digital products and websites.",
-                "image": "{{ site.url }}/img/social/courses/gym-015-social.png",
-                "url": "https://thegymnasium.com/courses/course-v1:GYM+015+0/about",
-                "position": 3,
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": [
+                    "MOOC",
+                    "online"
+                  ],
+                  "offers": {
+                    "@type": "Offer",
+                    "offeredBy": "Gymnasium",
+                    "price": "free"
+                  }
+                },
+                "image": "https://thegymnasium.com/img/og/courses/gym-015.png",
+                "url": "https://thegymnasium.com/courses/prototyping-for-digital-products-and-websites/",
                 "provider": {
                   "@type": "School",
                   "name": "Gymnasium",
