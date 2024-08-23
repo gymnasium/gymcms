@@ -1,3 +1,6 @@
+{% comment %}
+Depends on a `course_list` array being passed in
+{% endcomment %}
 <ul>
   {%- for num in course_list -%}
     {%- assign course_id = num | prepend: "GYM-" -%}
