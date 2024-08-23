@@ -6,37 +6,29 @@ Depends on a `course_list` array being passed in
   "@context": "http://schema.org",
   "@type": "ItemList",
   "itemListElement": [
-    {%- for num in course_list -%}
-      {%- assign course_id = num | prepend: "GYM-" -%}
-      {%- assign item = site.data.courses[course_id] -%}
-      {%- assign link = item.url | prepend: "https://thegymnasium.com" -%}
-      {%- assign bio = site.data.bios[item.instructor] -%}
-      {%- assign png = num | prepend: "/img/social/courses/gym-" | append: "-social.png" -%}
+  {%- for num in course_list -%}
+    {%- assign course_id = num | prepend: "GYM-" -%}
+    {%- assign item = site.data.courses[course_id] -%}
+    {%- assign link = item.url | prepend: "https://thegymnasium.com" -%}
+    {%- assign bio = site.data.bios[item.instructor] -%}
+    {%- assign img = num | prepend: "/img/social/courses/gym-" | append: "-social.png" %}
     {
-      "@type": "Course",
-      "name": "{{ item.title }}",
-      "description": "{{ item.short_description }}",
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": [
-          "MOOC",
-          "online"
-        ],
-        "offers": {
-          "@type": "Offer",
-          "offeredBy": "Gymnasium",
-          "price": "free"
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "item": {
+        "@type": "Course",
+        "name": "{{ item.title }}",
+        "description": "{{ item.short_description }}",
+        "image": "{{ site.url }}{{ image }}",
+        "url": "{{ link }}",
+        "provider": {
+          "@type": "School",
+          "name": "Gymnasium",
+          "sameAs": "https://thegymnasium.com"
         }
-      },
-      "image": "{{ site.url }}{{ png }}",
-      "url": "{{ link }}",
-      "provider": {
-        "@type": "School",
-        "name": "Gymnasium",
-        "sameAs": "https://thegymnasium.com"
       }
-    }{% unless forloop.last %},{% endunless -%}
-    {% endfor %}
+    }{%- unless forloop.last %},{% endunless %}
+  {%- endfor %}
   ]
 }
 </script>
