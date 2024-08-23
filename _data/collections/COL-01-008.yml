@@ -1,0 +1,126 @@
+---
+collection_ID: COL-008
+title: "Generative AI"
+topic: "Career Skills"
+short_description: "From prompting to prototyping, leverage LLMs and GPT tools in your workflow."
+url: https://thegymnasium.com/generative-ai
+order: 1
+exclude: true
+
+featured:
+  links:
+  - url: https://www.youtube.com/watch?v=JXSpx385gbo
+    heading: Livestreams
+    label: "Become a Better Writer with ChatGPT"
+    img: /home/img/heros/livestreams/become-a-better-writer/become-a-better-writer-1280w.jpg
+    cta: Watch Now
+  - url: https://medium.com/gymnasium/crafting-r%C3%A9sum%C3%A9s-in-the-age-of-ai-2662f0728594
+    heading: Articles
+    label: "Crafting Résumés in the Age of AI"
+    img: /home/img/heros/articles/crafting-resumes-ai/crafting-resumes-ai-1280w.png
+    cta: Read Now
+  - url: https://brand.aquent.com/ai-whitepaper
+    heading: Resources
+    label: "Using Generative AI for Design: Legal Considerations and Best Practices"
+    img: /img/hub-pages/generative-ai/featured/using-generative-ai-for-design.jpg
+    cta: Learn More
+
+livestreams:
+  header: "Livestreams"
+  description: "Develop your generative AI superpowers with industry experts."
+  links:
+  - url: JXSpx385gbo
+    label: "Become a Better Writer with ChatGPT"
+    img: become-a-better-writer/become-a-better-writer-1280w.jpg
+  - url: gr4Ml1t5PYM
+    label: "Take Note: Transcribing Images with ChatGPT"
+    img: take-note-redo/take-note-redo-1280w.jpg
+  - url: iKqXRFiD7W4
+    label: "Level Up Your Job Search with ChatGPT"
+    img: level-up-your-job-search/level-up-your-job-search-1280w.jpg
+  - url: 9bMjt4fJR-M
+    label: "Fill in the Blanks: Demonstrating How to Build a Custom GPT"
+    img: fill-in-the-blanks/fill-in-the-blanks-1280w.jpg
+  - url: pMt7PnJBslo
+    label: "Coding in the Kitchen with ChatGPT"
+    img: coding-in-the-kitchen/coding-in-the-kitchen-1280w.jpg
+  - url: Ii_4MC5KuiQ
+    label: "Picture Perfect: Using AI to Enhance Images"
+    img: picture-perfect/picture-perfect-1280w.jpg
+  - url: S5ySexy58kI
+    label: "Testing the Limits of LLMs"
+    img: testing-the-limits-of-llms/testing-the-limits-of-llms-1280w.jpg
+  - url: zMmzJ481ukE
+    label: "AI-Powered Mockup Magic: Prototyping Landing Pages with ChatGPT and Midjourney"
+    img: ai-powered-mockup-magic/ai-powered-mockup-magic-1280w.jpg
+
+articles:
+  header: "Articles"
+  description: "Read bookmark-worthy blog posts on generative AI."
+  links:
+  - url: https://medium.com/gymnasium/crafting-r%C3%A9sum%C3%A9s-in-the-age-of-ai-2662f0728594
+    label: "Crafting Résumés in the Age of AI"
+    description: "Learn how to use AI-suggested content to showcase your value without compromising your personal brand or getting your résumé flagged."
+  - url: https://medium.com/gymnasium/ai-mockup-magic-prototyping-landing-pages-with-llms-3765bef6a84c
+    label: "AI Mockup Magic: Prototyping Landing Pages with LLMs"
+    description: "Learn how to turn a prompt into productivity to magically prototype faster and better without gray boxes or lorem ipsum."
+  - url: https://ia.net/topics/turning-the-tables-on-ai
+    label: "Turning the Tables on AI"
+    description: "Artificial Intelligence has assimilated Microsoft, Facebook, Google, and now Apple. There is no escape: As soon as you open your computer you’re invited to skip thinking and let the machine fill the void. But what if we used AI not to think less but <em>more</em>?"
+  - url: https://aquentstudios.com/blog/ai-writing-tools-are-the-next-big-thing/
+    label: "AI writing tools are the new thesaurus and so much more."
+    description: "Enhance your marketing strategies through automated writing."
+  - url: https://aquenttalent.com/blog/a-growth-mindset-is-key-to-generative-ai-expertise
+    label: "A growth mindset is key to generative AI expertise."
+    description: "Adopting and harnessing the power of AI for growth and innovation requires a dynamic, adaptable mindset that embraces experimentation, learning, and change."
+  - url: https://aquent.com/blog/in-an-ai-driven-world-humans-are-still-irreplaceable
+    label: "In an AI-driven world, humans are still irreplaceable."
+    description: "AI offers opportunities and risks, including the possibility that it will replace humans if we do not prioritize integration and application into our workflows."
+  - url: https://aquentstudios.com/blog/top-three-ai-tools-design-teams-need-to-use-in-the-new-year/
+    label: "Top three AI tools design teams need to use in the New Year."
+    description: "Discover how you can use generative AI tools."
+  - url: https://aquentstudios.com/blog/our-designers-used-ai-plugins-to-power-up-production/
+    label: "Our Designers used AI plugins to power up production."
+    description: "Their findings may surprise you."
+
+
+resources:
+  header: "Resources"
+  description: "All the basics and tools to get started with generative AI."
+
+basics:
+  header: "Learning the Basics"
+  links:
+  - url: https://www.ibm.com/topics/generative-ai
+    label: What is generative AI?
+    description: Generative AI, sometimes called gen AI, is artificial intelligence (AI) that can create original content—such as text, images, video, audio or software code—in response to a user’s prompt or request.
+
+guides:
+  header: "In-Depth Guides"
+  links:
+  - url: https://brand.aquent.com/ai-whitepaper
+    label: "Using Generative AI for Design: Legal Considerations and Best Practices"
+    description: Learn how generative AI comes with the potential for big opportunities, but also intellectual property and privacy concerns with Aquent Studios’ Whitepaper.
+  - url: https://brand.aquent.com/ai-recruiting-worksheet
+    label: "AI Tools for Diversity Recruiting"
+    description: Evaluate the effectiveness and potential biases of AI recruitment tools to mitigate risks and maximize advantages for a more diverse and inclusive hiring process, with the help of Jenn Tardy’s worksheet.
+  - url: https://ai.google.dev/responsible
+    label: "Google: Responsible Generative AI Toolkit"
+    description: Tools and guidance to design, build and evaluate open AI models responsibly.
+
+tools:
+  header: "Generative AI Tools"
+  links:
+  - url: https://openai.com
+    label: "OpenAI: ChatGPT"
+    description: ChatGPT helps you get answers, find inspiration and be more productive.
+  - url: https://chatgpt.com/g/g-YMTYaHUGy-merlin-the-job-application-wizard
+    label: Merlin GPT
+    description: Merlin, the Job Application Wizard, by Feridoon Malekzadeh.
+  - url: https://www.midjourney.com
+    label: Midjourney
+    description: An AI-powered platform that generates high-quality, unique images based on user-provided text prompts.
+  - url: https://www.bing.com/images/create
+    label: Image Creator from Microsoft Designer
+    description: Create images from words using Image Creator in Bing.
+---

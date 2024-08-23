@@ -30,8 +30,6 @@ video_ID: {{ webinar.video_ID }}
 {%- elsif webinar.register -%}
   {%- assign page_title = "Webinar Registration | The Gymnasium" -%}
 {% endif %}
-<!-- TODO: this page title does nothing to the theme front end, and should probably be removed -->
-<title>{{ page_title }}</title>
 
 <link rel="stylesheet" href="{{ site.url }}/css/webinars.css?{{ site.time | date:'%s' }}">
 
@@ -39,83 +37,82 @@ video_ID: {{ webinar.video_ID }}
   <div class="row">
     <div class="col-md-12">
 
+      <div class="container">
+        <main class="content webinar-content" id="main" role="main">
 
-<div class="container">
-  <main class="content webinar-content" id="main" role="main">
+          <article>
 
-    <article>
+            <header class="main-header event-header">
+              <h1>Webinar</h1>
+              {% if webinar.video %}
+              <h2>Recording</h2>
+              {% else %}
+              <h2>Registration</h2>
+              {% endif %}
+            </header>
 
-      <header class="main-header event-header">
-        <h1>Webinar</h1>
-        {% if webinar.video %}
-        <h2>Recording</h2>
-        {% else %}
-        <h2>Registration</h2>
-        {% endif %}
-      </header>
+            <header class="event-banner-hero event-theme-{{ webinar.content_category }}">
+            <h1>{{ webinar.event_title }}</h1>
+            <h2>{{ webinar.event_guests }}</h2>
 
-      <header class="event-banner-hero event-theme-{{ webinar.content_category }}">
-      <h1>{{ webinar.event_title }}</h1>
-      <h2>{{ webinar.event_guests }}</h2>
+            {% if webinar.video %}
+              <h3 class="datetime">{{ webinar.event_date | date: "%B %-d, %Y"}}</h3>
+            {% else %}
+              <h3 class="datetime">{{ webinar.event_date | date: "%A, %B %-d, %Y at " }}{{ webinar.event_time }}</h3>
+            {% endif %}
+          </header>
 
-      {% if webinar.video %}
-        <h3 class="datetime">{{ webinar.event_date | date: "%B %-d, %Y"}}</h3>
-      {% else %}
-        <h3 class="datetime">{{ webinar.event_date | date: "%A, %B %-d, %Y at " }}{{ webinar.event_time }}</h3>
-      {% endif %}
-    </header>
+            <p class="call-out">{{ webinar.short_description }}</p>
 
-      <p class="call-out">{{ webinar.short_description }}</p>
+            {% if webinar.register %}
+              {% include webinar-registration-form.html %}
 
-      {% if webinar.register %}
-        {% include webinar-registration-form.html %}
+            {% else %}
+                {% if webinar.video and webinar.video_ID %}
+                  <p><strong>This webinar recording is now available.</strong>
+                  {% include event-video.html %}
+                {% else %}
+                  <p class="call-out"><strong>This webinar recording will be available soon…</strong>
+                {% endif %}
 
-      {% else %}
-          {% if webinar.video and webinar.video_ID %}
-            <p><strong>This webinar recording is now available.</strong>
-            {% include event-video.html %}
-          {% else %}
-            <p class="call-out"><strong>This webinar recording will be available soon…</strong>
-          {% endif %}
+            {% endif %}
 
-      {% endif %}
+            {% if webinar.resources and webinar.video and webinar.video_ID %}
+              {% include webinar-resources.html %}
+            {% else %}
+              <!-- There are no resources for this webinar -->
+            {% endif %}
 
-      {% if webinar.resources and webinar.video and webinar.video_ID %}
-        {% include webinar-resources.html %}
-      {% else %}
-        <!-- There are no resources for this webinar -->
-      {% endif %}
+            {{ content }}
 
-      {{ content }}
+          </article>
 
-    </article>
+          <!-- sidebar -->
 
-    <!-- sidebar -->
+          <aside>
 
-    <aside>
+            {%- capture headcount -%}{{ webinar.speaker | size }}{%- endcapture -%}
+            <header>
+              {%- if headcount == "1"  -%}
+              <h1>Guest Speaker</h1>
+              {%- else -%}
+              <h1>Guest Speakers</h1>
+              {%- endif -%}
+            </header>
+            {% for speaker in webinar.speaker %}
+              {%- include webinar-bio.html bio=speaker -%}
+            {% endfor %}
 
-      {%- capture headcount -%}{{ webinar.speaker | size }}{%- endcapture -%}
-      <header>
-        {%- if headcount == "1"  -%}
-        <h1>Guest Speaker</h1>
-        {%- else -%}
-        <h1>Guest Speakers</h1>
-        {%- endif -%}
-      </header>
-      {% for speaker in webinar.speaker %}
-        {%- include webinar-bio.html bio=speaker -%}
-      {% endfor %}
+            <header>
+              <h1>Host</h1>
+            </header>
+            {% for host in webinar.host %}
+              {%- include webinar-bio.html bio=host -%}
+            {% endfor %}
+          </aside>
 
-      <header>
-        <h1>Host</h1>
-      </header>
-      {% for host in webinar.host %}
-        {%- include webinar-bio.html bio=host -%}
-      {% endfor %}
-    </aside>
-
-  </main>
-</div>
+        </main>
+      </div>
 
     </div><!-- .col-md-12 -->
   </div><!-- .row -->
