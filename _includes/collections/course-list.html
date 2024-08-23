@@ -1,0 +1,18 @@
+<ul>
+  {%- for num in course_list -%}
+    {%- assign course_id = num | prepend: "GYM-" -%}
+    {%- assign item = site.data.courses[course_id] -%}
+    {%- assign link = item.url | prepend: "https://thegymnasium.com" -%}
+    {%- assign bio = site.data.bios[item.instructor] -%}
+    {%- assign svg = num | prepend: "/img/course-artwork/svg/gym-" | append: ".svg" -%}
+    {%- assign png = num | prepend: "/img/course-artwork/png/gym-" | append: ".png" -%}
+  <li>
+    <figure class="course-artwork bg-{{ item.color }}">
+      <a class="img-link" href="{{ link }}" title="Get Started">
+        <img alt="{{ item.title }} with {{ bio.name }} {{ bio.subtitle }}" srcset="{{ site.url }}{{ svg }}" src="{{ site.url }}{{ png }}" width="574" height="488">
+      </a>
+    </figure>
+    <h3><a href="{{ link }}">{{ item.title }}</a></h3>
+  </li>
+  {%- endfor -%}
+</ul>

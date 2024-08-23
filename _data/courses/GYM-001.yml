@@ -2,6 +2,7 @@
 course_ID: GYM-001
 title: "Defeating Busy"
 date: 2019-10-28T00:00:00-04:00
+color: green
 course_type: short
 url: /courses/course-v1:GYM+001+0/about
 poster_art: /img/course-artwork/png/gym-001.png
