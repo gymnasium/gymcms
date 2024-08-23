@@ -2,6 +2,7 @@
 course_ID: GYM-107
 title: "Modern Web Design"
 date: 2019-10-28T00:00:00-04:00
+color: magenta
 course_type: full
 live: true
 url: /courses/course-v1:GYM+107+0/about

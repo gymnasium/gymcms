@@ -4,6 +4,8 @@ permalink: /design-systems/
 css: [/css/hub-pages.css]
 ---
 {%- assign main = site.data.pages.courses -%}
+{%- assign course_list = "018,019,020,017" -%}
+{%- assign course_list = course_list | split: "," -%}
 
 {%- include partials/nav-courses-format.html page_active = "collections" -%}
 
@@ -36,6 +38,7 @@ css: [/css/hub-pages.css]
     </div>
   </section>
   <div class="main-content container-fluid">
+    {%- include schema.html -%}
     <div class="container">
       <div class="row">
         <div class="col-md-12">

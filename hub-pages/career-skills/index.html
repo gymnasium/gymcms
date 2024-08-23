@@ -4,6 +4,8 @@ permalink: /career-skills/
 css: [/css/hub-pages.css]
 ---
 {%- assign main = site.data.pages.courses -%}
+{%- assign course_list = "001,017" -%}
+{%- assign course_list = course_list | split: "," -%}
 {%- assign career_skills = site.data.collections.COL-07-007 -%}
 
 {%- include partials/nav-courses-format.html page_active = "collections" -%}
@@ -96,63 +98,13 @@ css: [/css/hub-pages.css]
 
     <section class="section" id="courses">
       <div class="section-content">
-        <script type="application/ld+json">
-          {
-            "@context":"http://schema.org",
-            "@type": "ItemList",
-            "itemListElement": [
-              {
-                "@type": "Course",
-                "name": "Defeating Busy",
-                "description": "Learn how to estimate, plan, track, and manage your time in order to complete projects. Being busy isn’t a bad thing, but not being in control of your own time is.",
-                "image": "{{ site.url }}/img/social/courses/gym-001-social.png",
-                "url": "https://thegymnasium.com/courses/course-v1:GYM+001+0/about",
-                "position": 1,
-                "provider": {
-                  "@type": "School",
-                  "name": "Gymnasium",
-                  "sameAs": "https://thegymnasium.com"
-                }
-              },
-              {
-                "@type": "Course",
-                "name": "Design Systems for Everyone",
-                "description": "Learn how to effectively integrate pattern libraries and design systems into your organization’s workflow. ",
-                "image": "{{ site.url }}/img/social/courses/gym-017-social.png",
-                "url": "https://thegymnasium.com/courses/course-v1:GYM+017+0/about",
-                "position": 2,
-                "provider": {
-                  "@type": "School",
-                  "name": "Gymnasium",
-                  "sameAs": "https://thegymnasium.com"
-                }
-              }
-            ]
-          }
-        </script>
+        {%- include schema.html -%}
         <header>
           <h2 class="all-caps">Courses</h2>
           <p>Learn career skills from industry experts at your own pace.</p>
         </header>
         <div class="cols cols-max-2 cols-hr">
-          <ul>
-            <li>
-              <figure class="course-artwork bg-career-skills">
-                <a class="img-link" href="https://thegymnasium.com/courses/course-v1:GYM+017+0/about" title="Get Started">
-                  <img alt="Design Systems for Everyone" srcset="{{ site.url }}/img/course-artwork/svg/gym-017.svg" src="{{ site.url }}/img/course-artwork/png/gym-017.png" width="574" height="488" decoding="async">
-                </a>
-              </figure>
-              <h3><a href="https://thegymnasium.com/courses/course-v1:GYM+017+0/about">Design Systems for Everyone</a></h3>
-            </li>
-            <li>
-              <figure class="course-artwork bg-career-skills">
-                <a class="img-link" href="https://thegymnasium.com/courses/course-v1:GYM+001+0/about" title="Get Started">
-                  <img alt="Defeating Busy" srcset="{{ site.url }}/img/course-artwork/svg/gym-001.svg" src="{{ site.url }}/img/course-artwork/png/gym-001.png" width="574" height="488" decoding="async">
-                </a>
-              </figure>
-              <h3><a href="https://thegymnasium.com/courses/course-v1:GYM+001+0/about">Defeating Busy</a></h3>
-            </li>
-          </ul>
+          {% include collections/course-list.html %}
         </div>
         <div class="cta">
           <a class="gym-button" href="https://thegymnasium.com/courses"><b>View More Courses</b></a>

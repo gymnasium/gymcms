@@ -4,6 +4,8 @@ permalink: /prototyping/
 css: [/css/hub-pages.css]
 ---
 {%- assign main = site.data.pages.courses -%}
+{%- assign course_list = "103,015" -%}
+{%- assign course_list = course_list | split: "," -%}
 
 {%- include partials/nav-courses-format.html page_active = "collections" -%}
 
@@ -94,85 +96,13 @@ css: [/css/hub-pages.css]
 
     <section class="section" id="courses">
       <div class="section-content">
-        <script type="application/ld+json">
-          {
-            "@context": "http://schema.org",
-            "@type": "ItemList",
-            "itemListElement": [
-              {
-                "@type": "Course",
-                "name": "UX Fundamentals",
-                "description": "Learn how to apply user-centered design principles to improve your website and mobile app design. A must-take course for anyone working in design and development.",
-                "hasCourseInstance": {
-                  "@type": "CourseInstance",
-                  "courseMode": [
-                    "MOOC",
-                    "online"
-                  ],
-                  "offers": {
-                    "@type": "Offer",
-                    "offeredBy": "Gymnasium",
-                    "price": "free"
-                  }
-                },
-                "image": "{{ site.url }}/img/social/courses/gym-103-social.png",
-                "url": "https://thegymnasium.com/courses/course-v1:GYM+103+0/about",
-                "provider": {
-                  "@type": "School",
-                  "name": "Gymnasium",
-                  "sameAs": "https://thegymnasium.com"
-                }
-              },
-              {
-                "@type": "Course",
-                "name": "Prototyping for Digital Products and Websites",
-                "description": "Learn how to use prototypes as a communication and collaboration device for building digital products and websites.",
-                "hasCourseInstance": {
-                  "@type": "CourseInstance",
-                  "courseMode": [
-                    "MOOC",
-                    "online"
-                  ],
-                  "offers": {
-                    "@type": "Offer",
-                    "offeredBy": "Gymnasium",
-                    "price": "free"
-                  }
-                },
-                "image": "{{ site.url }}/img/social/courses/gym-015-social.png",
-                "url": "https://thegymnasium.com/courses/course-v1:GYM+015+0/about",
-                "provider": {
-                  "@type": "School",
-                  "name": "Gymnasium",
-                  "sameAs": "https://thegymnasium.com"
-                }
-              }
-            ]
-          }
-        </script>
+        {%- include schema.html -%}
         <header>
           <h2 class="all-caps">Prototyping Courses</h2>
           <p>Learn prototyping with industry experts.</p>
         </header>
         <div class="cols cols-max-2 cols-hr">
-          <ul>
-            <li>
-              <figure class="course-artwork bg-ux-design">
-                <a href="https://thegymnasium.com/courses/course-v1:GYM+103+0/about" title="Get Started">
-                  <img alt="UX Fundamentals" srcset="{{ site.url }}/img/course-artwork/svg/gym-103.svg" src="{{ site.url }}/img/course-artwork/png/gym-103.png" width="574" height="488">
-                </a>
-              </figure>
-              <h3><a href="https://thegymnasium.com/courses/course-v1:GYM+103+0/about">UX Fundamentals</a></h3>
-            </li>
-            <li>
-              <figure class="course-artwork bg-ux-design">
-                <a class="img-link" href="https://thegymnasium.com/courses/course-v1:GYM+015+0/about" title="Get Started">
-                  <img alt="Prototyping for Digital Products and Websites" srcset="{{ site.url }}/img/course-artwork/svg/gym-015.svg" src="{{ site.url }}/img/course-artwork/png/gym-015.png" width="574" height="488">
-                </a>
-              </figure>
-              <h3><a href="https://thegymnasium.com/courses/course-v1:GYM+015+0/about">Prototyping for Digital Products and Websites</a></h3>
-            </li>
-          </ul>
+          {% include collections/course-list.html %}
         </div>
         <div class="cta">
           <a class="gym-button" href="https://thegymnasium.com/courses"><b>View More Courses</b></a>
