@@ -25,6 +25,17 @@ Depends on a `course_list` array being passed in
           "@type": "School",
           "name": "Gymnasium",
           "sameAs": "https://thegymnasium.com"
+        },
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": [
+            "MOOC",
+            "online"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "price": "free"
+          }
         }
       }
     }{%- unless forloop.last %},{% endunless %}
