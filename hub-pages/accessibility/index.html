@@ -4,6 +4,8 @@ permalink: /accessibility/
 css: [/css/hub-pages.css]
 ---
 {%- assign main = site.data.pages.courses -%}
+{%- assign course_list = "016,007" -%}
+{%- assign course_list = course_list | split: "," -%}
 
 {%- include partials/nav-courses-format.html page_active = "collections" -%}
 
@@ -103,76 +105,14 @@ css: [/css/hub-pages.css]
 
           <section class="section" id="courses">
             <div class="section-content">
-            <script type="application/ld+json">
-              {
-                "@context": "http://schema.org",
-                "@type": "ItemList",
-                "itemListElement": [
-                  {
-                    "@type": "Course",
-                    "name": "Designing Accessible and Responsive Websites",
-                    "description": "Learn accessible and responsive design best practices to help make a more user-friendly web for everyone.",
-                    "hasCourseInstance": {
-                      "@type": "CourseInstance",
-                      "courseMode": [
-                        "MOOC",
-                        "online"
-                      ],
-                      "offers": {
-                        "@type": "Offer",
-                        "offeredBy": "Gymnasium",
-                        "price": "free"
-                      }
-                    },
-                    "image": "{{ site.url }}/img/social/courses/gym-016-social.png",
-                    "url": "https://thegymnasium.com/courses/course-v1:GYM+016+0/about",
-                    "provider": {
-                      "@type": "School",
-                      "name": "Gymnasium",
-                      "sameAs": "https://thegymnasium.com"
-                    }
-                  },
-                  {
-                    "@type": "Course",
-                    "name": "Structuring and Organizing HTML5 Forms",
-                    "description": "Learn some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes.",
-                    "hasCourseInstance": {
-                      "@type": "CourseInstance",
-                      "courseMode": [
-                        "MOOC",
-                        "online"
-                      ],
-                      "offers": {
-                        "@type": "Offer",
-                        "offeredBy": "Gymnasium",
-                        "price": "free"
-                      }
-                    },
-                    "image": "{{ site.url }}/img/social/courses/gym-007-social.png",
-                    "url": "https://thegymnasium.com/courses/course-v1:GYM+007+0/about",
-                    "provider": {
-                      "@type": "School",
-                      "name": "Gymnasium",
-                      "sameAs": "https://thegymnasium.com"
-                    }
-                  }
-                ]
-              }
-            </script>
+              {%- include schema.html -%}
               <header>
                 <h2 class="all-caps">Accessibility Courses</h2>
               </header>
               <div class="list-hr">
-                <ul>
-                <li>
-                  <h3><a href="https://thegymnasium.com/courses/course-v1:GYM+016+0/about">Designing Accessible and Responsive Websites</a></h3>
-                  <p>Learn accessible and responsive web design best practices for free with Ethan Marcotte.</p>
-                </li>
-                <li>
-                  <h3><a href="https://thegymnasium.com/courses/course-v1:GYM+007+0/about">Structuring and Organizing HTML5 Forms</a></h3>
-                  <p>Learn some of the latest standards and usability best practices around coding HTML forms.</p>
-                </li>
-              </ul>
+                {% assign hide_image = true %}
+                {% assign include_description = true %}
+                {% include collections/course-list.html %}
               </div>
             </div>
             <div class="to-top-link">

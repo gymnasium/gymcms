@@ -2,6 +2,7 @@
 course_ID: GYM-003
 title: "Grid Layout in Bootstrap 3"
 date: 2022-05-26T00:00:00-04:00
+color: grey
 course_type: short
 live: false
 retired_message:
