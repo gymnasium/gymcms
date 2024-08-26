@@ -24,5 +24,6 @@ audience:
   - label: "Content Strategists"
 lessons_duration:
 completion_duration:
+duration_8601_format:
 skill_level: "Beginner"
 ---

@@ -22,6 +22,6 @@ audience:
   - label: "Anyone interested in design systems work"
 lessons_duration: "1 hour"
 completion_duration: "Up to 1.5 hours"
-duration_8601_format: 
+duration_8601_format: PT1.5H
 skill_level: "Beginner"
 ---
