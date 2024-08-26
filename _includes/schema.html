@@ -15,6 +15,7 @@ Depends on a `course_list` array being passed in
     {
       "@type": "ListItem",
       "position": {{ forloop.index }},
+      "url": "{{ link }}",
       "item": {
         "@type": "Course",
         "name": "{{ item.title }}",
@@ -32,7 +33,7 @@ Depends on a `course_list` array being passed in
             "Online",
             "MOOC"
           ],
-          "courseWorkload": "",
+          "courseWorkload": "{{ item.duration_8601_format }}",
           "offers": {
             "@type": "Offer",
             "price": "free"
