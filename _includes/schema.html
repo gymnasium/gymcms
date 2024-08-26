@@ -29,7 +29,8 @@ Depends on a `course_list` array being passed in
         "hasCourseInstance": {
           "@type": "CourseInstance",
           "courseMode": "Online",
-          "courseWorkload": "{{ item.duration_8601_format }}"
+          "courseWorkload": "{{ item.duration_8601_format }}",
+          "educationalLevel": "{{ item.skill_level }}"
         },
         "offers": {
           "@type": "Offer",
