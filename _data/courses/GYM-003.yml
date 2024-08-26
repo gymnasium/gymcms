@@ -23,5 +23,6 @@ audience:
   - label: "UX Designers"
 lessons_duration: "1 hour"
 completion_duration: "Up to 2 hours"
+duration_8601_format: 
 skill_level: "Intermediate"
 ---

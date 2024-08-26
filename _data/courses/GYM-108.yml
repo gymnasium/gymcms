@@ -23,5 +23,6 @@ audience:
   - label: "Full Stack Developers"
 lessons_duration: "3 hours"
 completion_duration: "Up to 12 hours"
+duration_8601_format: 
 skill_level: "Intermediate"
 ---
