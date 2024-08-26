@@ -22,5 +22,6 @@ audience:
   - label: "Front-End Developers"
 lessons_duration: "6 hours"
 completion_duration: "Up to 24 hours"
+duration_8601_format: PT24H
 skill_level: "Beginner"
 ---

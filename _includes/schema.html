@@ -28,14 +28,12 @@ Depends on a `course_list` array being passed in
         },
         "hasCourseInstance": {
           "@type": "CourseInstance",
-          "courseMode": [
-            "MOOC",
-            "online"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "price": "free"
-          }
+          "courseMode": "Online",
+          "courseWorkload": "{{ item.duration_8601_format }}"
+        },
+        "offers": {
+          "@type": "Offer",
+          "category": "Free"
         }
       }
     }{%- unless forloop.last %},{% endunless %}
