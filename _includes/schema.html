@@ -30,7 +30,13 @@ Depends on a `course_list` array being passed in
           "@type": "CourseInstance",
           "courseMode": "Online",
           "courseWorkload": "{{ item.duration_8601_format }}",
-          "educationalLevel": "{{ item.skill_level }}"
+          "educationalLevel": "{{ item.skill_level }}",
+          "instructor": [{
+            "@type": "Person",
+            "name": "{{ bio.name }}",
+            "description": "{{ bio.description | strip_html }}",
+            "image": "{{ site.url }}/img/webinar-bio-headshots/{{ bio.headshot }}"
+          }]
         },
         "offers": {
           "@type": "Offer",
