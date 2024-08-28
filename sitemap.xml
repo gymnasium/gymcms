@@ -40,14 +40,10 @@ permalink: sitemap.xml
 
 {%- assign catalog = "" | split: ',' -%}
 
-{% comment %}
-<!-- TODO: uncomment this chunk once we've set up about pages for the courses
 {%- assign courses = site.data.courses -%}
 {%- for course_hash in courses -%}
     {%- assign catalog = catalog | push: course_hash -%}
 {%- endfor -%}
- -->
-{% endcomment %}
 
 {%- assign take5_courses = site.data.take5 -%}
 {%- for course_hash in take5_courses -%}
@@ -86,12 +82,14 @@ permalink: sitemap.xml
         {%- assign priority = 0.7 -%}
     {%- endif -%}
 
+    {%- if item.live -%}
     <url>
       <loc>{{ url }}</loc>
       <lastmod>{{ lastmod }}</lastmod>
       <changefreq>{{ changefreq }}</changefreq>
       <priority>{{ priority }}</priority>
     </url>
+    {%- endif -%}
 {%- endfor -%}
 
 <url>
