@@ -25,6 +25,13 @@ permalink: sitemap.xml
 </url>
 
 <url>
+  <loc>https://thegymnasium.com/career-skills</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
   <loc>https://thegymnasium.com/collections</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
@@ -107,6 +114,13 @@ permalink: sitemap.xml
 </url>
 
 <url>
+  <loc>https://thegymnasium.com/login</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.1</priority>
+</url>
+
+<url>
   <loc>https://thegymnasium.com/jobs</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>daily</changefreq>
@@ -121,14 +135,28 @@ permalink: sitemap.xml
 </url>
 
 <url>
-  <loc>https://thegymnasium.com/prototyping</loc>
+  <loc>https://thegymnasium.com/privacy-policy/california-privacy-rights</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.7</priority>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
 </url>
 
 <url>
-  <loc>https://thegymnasium.com/career-skills</loc>
+  <loc>https://thegymnasium.com/privacy-policy/european-rights</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+
+<url>
+  <loc>https://thegymnasium.com/privacy-policy/privacy-shield-notice</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.3</priority>
+</url>
+
+<url>
+  <loc>https://thegymnasium.com/prototyping</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.7</priority>
