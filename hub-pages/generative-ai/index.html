@@ -40,7 +40,7 @@ css: [/css/hub-pages.css]
                       </div>
                     </div>
                     <footer class="card-cta">
-                      <a href="#livestreams"><b>View More {{ item.heading }}</b></a>
+                      <a href="#{{ item.heading | downcase }}"><b>View More {{ item.heading }}</b></a>
                     </footer>
                   </article>
                 </li>
@@ -78,7 +78,7 @@ css: [/css/hub-pages.css]
                   </a>
                 </h3>
                 </header>
-              <section>
+              </section>
             </li>
             {%- endfor -%}
           </ul>
