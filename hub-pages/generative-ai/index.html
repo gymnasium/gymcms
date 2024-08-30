@@ -30,7 +30,7 @@ css: [/css/hub-pages.css]
                         </header>
                         <figure class="full-width">
                           <a href="{{ item.url }}" target="_blank" rel="noopener">
-                            <img alt="Cover artwork for {{ item.label }}" src="{{ site.url }}{{ item.img }}" width="1280" height="720" decoding="async" fetchpriority="important">
+                            <img alt="Cover artwork for {{ item.label }}" src="{{ site.url }}{{ item.img }}" width="1280" height="720" decoding="async" fetchpriority="high">
                           </a>
                         </figure>
                       <h3 class="all-caps">{{ item.label }}</h3>
@@ -68,7 +68,7 @@ css: [/css/hub-pages.css]
               <section class="livestream">
                 <figure>
                   <a class="img-link" href="{{ item.url | prepend: 'https://www.youtube.com/watch?v=' }}" target="_blank" rel="noopener">
-                    <img alt="Cover artwork for {{ item.img }}" src="{{ site.url }}/home/img/heros/livestreams/{{ item.img }}" width="1280" height="720" decoding="async" fetchpriority="important">
+                    <img alt="Cover artwork for {{ item.img }}" src="{{ site.url }}/home/img/heros/livestreams/{{ item.img }}" width="1280" height="720" decoding="async" fetchpriority="high">
                   </a>
                 </figure>
                 <header>
