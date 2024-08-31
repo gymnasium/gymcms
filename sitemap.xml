@@ -114,6 +114,13 @@ permalink: sitemap.xml
 </url>
 
 <url>
+  <loc>https://thegymnasium.com/generative-ai</loc>
+  <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.7</priority>
+</url>
+
+<url>
   <loc>https://thegymnasium.com/login</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>monthly</changefreq>
