@@ -9,6 +9,7 @@
   position: relative;
   font-size: 16px;
   background-color: #2c2c2c;
+  overflow: hidden;
 
   // structural spacing
   .container {
@@ -21,12 +22,23 @@
       display: block;
       content: "";
       height: 100%;
-      background-color: $gym-magenta-dark;
-      border-top: 2.5em solid $gym-magenta;
-      border-bottom: 1.25em solid $gym-magenta-darker;
+      background-color: $gym-orange-dark;
+      border-top: 2.5em solid $gym-orange;
+      border-bottom: 1.25em solid $gym-orange-darker;
       padding-top: 1.875em;
     }
 
+    &.development:before {
+      background-color: $gym-magenta-dark;
+      border-top-color: $gym-magenta;
+      border-bottom-color: $gym-magenta-darker;
+    }
+
+    &.career-skills:before {
+      background-color: $gym-green-dark;
+      border-top-color: $gym-green;
+      border-bottom-color: $gym-green-darker;
+    }
   }
 }
 
@@ -51,9 +63,19 @@
         top: 0;
         left: 0;
         height: 100%;
-        border-left: 6em solid $gym-magenta-dark;
-        border-right: 4em solid $gym-magenta-darker;
+        border-left: 6em solid $gym-orange-dark;
+        border-right: 4em solid $gym-orange-darker;
       }
+    }
+
+    &.development :after {
+      border-left-color: $gym-magenta-dark;
+      border-right-color: $gym-magenta-darker;
+    }
+
+    &.career-skills :after {
+      border-left-color: $gym-green-dark;
+      border-right-color: $gym-green-darker;
     }
 
     &:before {
@@ -64,7 +86,15 @@
       top: 0;
       width: 50%;
       height: 100%;
+      background-color: $gym-orange;
+    }
+
+    &.development:before {
       background-color: $gym-magenta;
+    }
+
+    &.career-skills:before {
+      background-color: $gym-green;
     }
   }
   .hero-promo-content {
