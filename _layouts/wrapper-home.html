@@ -10,7 +10,7 @@
 
   {%- if hero.livestream == true -%}
     <!-- Display live coding on both hero includes -->
-    {%- include heros/hero-live-stream.html -%}
+    {%- include heros/hero-livestream.html -%}
   {%- elsif page.permalink contains "home/index-auth/" and hero.auth_promo -%}
     <!-- Display something specific on the authenticated hero include -->
     {%- include {{hero.auth_promo | prepend: "/heros/"}} -%}

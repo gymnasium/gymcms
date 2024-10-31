@@ -116,7 +116,7 @@ tools:
   - url: https://chatgpt.com/g/g-YMTYaHUGy-merlin-the-job-application-wizard
     label: Merlin GPT
     description: Merlin, the Job Application Wizard, by Feridoon Malekzadeh.
-  - url: https://www.midjourney.com
+  - url: https://www.midjourney.com/home
     label: Midjourney
     description: An AI-powered platform that generates high-quality, unique images based on user-provided text prompts.
   - url: https://www.bing.com/images/create

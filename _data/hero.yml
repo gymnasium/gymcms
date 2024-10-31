@@ -1,5 +1,5 @@
-current_promo: articles/hero-article.html
-auth_promo: articles/hero-article.html
+current_promo: hero-generative-ai.html
+auth_promo: hero-generative-ai.html
 
 # Livestream
 # Set true/false (lowercase).
