@@ -1,5 +1,5 @@
-current_promo: hero-generative-ai.html
-auth_promo: hero-generative-ai.html
+current_promo: livestreams/hero-promo.html
+auth_promo: livestreams/hero-promo.html
 
 # Livestream
 # Set true/false (lowercase).
@@ -14,7 +14,7 @@ embed_source: "youtube"
 # Content
 # Update per livestream, if needed
 title: "Livestream"
-short_description: "Become a Better Writer with ChatGPT"
+short_description: "AI Reality Check: 2024 Year in Review"
 byline: "with Jeremy Osborn and Andrew Miller"
 
 # twitch
