@@ -1,0 +1,17 @@
+id: ai-reality-check
+subhead: "New Livestream"
+title: "AI Reality Check: 2024 Year in Review"
+description: "Watch the livestream on"
+linkedin: "LinkedIn"
+linkedin_cta: "https://www.linkedin.com/events/7259982599769542657/about/"
+homepage: "or here on our homepage"
+date: "Tuesday, November 12"
+time: "10AM EST / 4PM CET"
+datetime: "2024-11-12T10:00-04:00"
+recording: false
+cta: "Watch the Recording"
+cta_url: "https://www.youtube.com/watch?v="
+alt_text: "A collage of poster images from our 2024 AI livestreams."
+artwork:
+  1: /ai-reality-check-768w.jpg
+  2: /ai-reality-check-1280w.jpg

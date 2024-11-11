@@ -60,6 +60,7 @@
         font-size: 1.4em;
         line-height: 1.45;
         color: $gym-gray-2;
+        text-wrap: pretty;
         margin-top: 1.6rem;
       }
 
@@ -113,10 +114,10 @@
 
 @include breakpoint(large, min) {
 
- #ai-mockup-magic .image {
-   background: #1036bd;
-   background: radial-gradient(#5eb5f8, #1036bd);
- }
+  #ai-mockup-magic .image {
+    background: #1036bd;
+    background: radial-gradient(#5eb5f8, #1036bd);
+  }
 
   #meet-the-metaverse .image {
     background: #ae9880;
