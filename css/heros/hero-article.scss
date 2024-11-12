@@ -49,9 +49,12 @@
         line-height: 1.15;
         letter-spacing: 0.1rem;
         color: $gym-white;
-        text-wrap: balance;
         margin-top: 0;
         margin-bottom: 0;
+
+        span {
+          display: inline-block;
+        }
       }
 
       // livestreams-related (guest / time)
@@ -60,7 +63,7 @@
         font-size: 1.4em;
         line-height: 1.45;
         color: $gym-gray-2;
-        text-wrap: pretty;
+        text-wrap: balance;
         margin-top: 1.6rem;
       }
 
