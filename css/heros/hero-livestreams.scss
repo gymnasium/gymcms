@@ -6,21 +6,29 @@
 #live-stream {
   font-size: 16px;
   background-color: $gym-dark-gray-2;
-  border-bottom: 3.4em solid $gym-dark-gray-2;
+  border-bottom: 3.4em dashed transparent;
 
   header {
     color: $gym-white;
     padding: 1.6em 0;
 
     h2 {
+      display: inline-block;
+      text-indent: 0.125ex;
+      padding: 0.375rem 0.625rem;
+      border: 2px solid $gym-orange;
       margin-top: 0;
-      margin-bottom: 0;
+      margin-bottom: 1rem;
     }
 
     p {
       font-size: 1em;
       margin-top: 1em;
       margin-bottom: 0;
+
+      span {
+        display: inline-block;
+      }
     }
 
     h2 + p {
@@ -30,7 +38,11 @@
     @include breakpoint(medium, min) {
 
       & *:not(.container) {
-        display: inline;
+        display: inline-block;
+      }
+
+      h2 {
+        margin-bottom: 0;
       }
 
       p,
