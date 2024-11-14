@@ -115,6 +115,10 @@
   background: linear-gradient(135deg, $gym-white 0%, $gym-gray-2 40%, #1ea4ef 100%);
 }
 
+#asa-elevate-award-2024 .image {
+  background-color: inherit;
+}
+
 @include breakpoint(large, min) {
 
   #ai-mockup-magic .image {
