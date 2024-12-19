@@ -4,7 +4,7 @@ auth_promo: articles/hero-article.html
 # Livestream
 # Set true/false (lowercase).
 # Note: true overrides current/auth promo heros
-livestream: false
+livestream: true
 
 # Source
 # Set twitch/youtube (lowercase)
@@ -14,14 +14,14 @@ embed_source: "youtube"
 # Content
 # Update per livestream, if needed
 title: "Livestream"
-short_description: "AI Reality Check: 2024 Year in Review"
+short_description: "Generative AI On the Fly"
 byline: "with Jeremy Osborn and Andrew Miller"
 
 # twitch
 twitch_channel: "andrewpmiller"
 
 # youtube
-youtube_video_ID: "GTQcUE0NNfo"
+youtube_video_ID: "V-6wCUmm4fI"
 
 # Aspect Ratio 16:19
 embed_width: "854"
