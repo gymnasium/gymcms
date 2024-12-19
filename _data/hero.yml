@@ -4,7 +4,7 @@ auth_promo: articles/hero-article.html
 # Livestream
 # Set true/false (lowercase).
 # Note: true overrides current/auth promo heros
-livestream: true
+livestream: false
 
 # Source
 # Set twitch/youtube (lowercase)
