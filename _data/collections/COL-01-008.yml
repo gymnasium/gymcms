@@ -28,6 +28,9 @@ livestreams:
   header: "Livestreams"
   description: "Watch livestream recordings exploring topics from AI prompting to image generation."
   links:
+  - url: V-6wCUmm4fI
+    label: "Generative AI on the Fly"
+    img: generative-ai-on-the-fly/generative-ai-on-the-fly-1280w.jpg
   - url: GTQcUE0NNfo
     label: "AI Reality Check: 2024 Year in Review"
     img: ai-reality-check/ai-reality-check-1280w.jpg
