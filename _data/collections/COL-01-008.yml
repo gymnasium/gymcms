@@ -28,6 +28,9 @@ livestreams:
   header: "Livestreams"
   description: "Watch livestream recordings exploring topics from AI prompting to image generation."
   links:
+  - url: V-6wCUmm4fI
+    label: "Generative AI on the Fly"
+    img: generative-ai-on-the-fly/generative-ai-on-the-fly-1280w.jpg
   - url: GTQcUE0NNfo
     label: "AI Reality Check: 2024 Year in Review"
     img: ai-reality-check/ai-reality-check-1280w.jpg
@@ -60,7 +63,9 @@ articles:
   header: "Articles"
   description: "Read bookmark-worthy blog posts on leveraging AI without losing your own voice."
   links:
-  - url: https://medium.com/gymnasium/crafting-r%C3%A9sum%C3%A9s-in-the-age-of-ai-2662f0728594
+  - url: https://www.linkedin.com/pulse/ai-revolution-hype-reality-gymnasium-lfjte/
+    label: "The AI Revolution: Hype or Reality"
+  - url: https://www.linkedin.com/pulse/crafting-résumés-age-ai-gymnasium-1fa5e/
     label: "Crafting Résumés in the Age of AI"
     description: "Learn how to use AI-suggested content to showcase your value without compromising your personal brand or getting your résumé flagged."
   - url: https://medium.com/gymnasium/ai-mockup-magic-prototyping-landing-pages-with-llms-3765bef6a84c
