@@ -296,29 +296,29 @@ class Gymnasium {
     }
   }
 
-  systemStatus() {
-    const helper = document.getElementById('system-status-helper');
-    var banner = document.getElementById('system-status');
-    var bannerExclude = document.querySelector('meta[name="banner-exclude"]');
-    var exclude = false;
+  // systemStatus() {
+  //   const helper = document.getElementById('system-status-helper');
+  //   var banner = document.getElementById('system-status');
+  //   var bannerExclude = document.querySelector('meta[name="banner-exclude"]');
+  //   var exclude = false;
 
-    function showBanner() {
-      banner.innerHTML = helper.innerHTML;
-      banner.classList.remove('hide');
-      banner.classList.add('active');
-      console.log('[gym] system status banner active!');
-    }
+  //   function showBanner() {
+  //     banner.innerHTML = helper.innerHTML;
+  //     banner.classList.remove('hide');
+  //     banner.classList.add('active');
+  //     console.log('[gym] system status banner active!');
+  //   }
 
-    // Method 1: Is there a meta tag for banner exclusion?
-    if (typeof bannerExclude !== 'undefined' && bannerExclude !== null) {
-      // console.log(`bannerExclude.content: ${bannerExclude.content}`);
-      exclude = true;
-    }
+  //   // Method 1: Is there a meta tag for banner exclusion?
+  //   if (typeof bannerExclude !== 'undefined' && bannerExclude !== null) {
+  //     // console.log(`bannerExclude.content: ${bannerExclude.content}`);
+  //     exclude = true;
+  //   }
 
-    if (helper.getAttribute('data-active') === 'true' && exclude !== true) {
-      showBanner();
-    }
-  }
+  //   if (helper.getAttribute('data-active') === 'true' && exclude !== true) {
+  //     showBanner();
+  //   }
+  // }
 }
 
 // Initialize
@@ -337,7 +337,7 @@ gym.dropdownCaret();
 gym.ieCheck();
 
 // Adds dynamic system status banner
-gym.systemStatus();
+// gym.systemStatus();
 
 document.onreadystatechange = function() {
   if (document.readyState === 'complete') {
